@@ -1,0 +1,26 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.gameserver.network.l2.c2s;
+
+import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
+
+public class NetPing
+extends L2GameClientPacket {
+    private int unk;
+    private int unk2;
+    private int unk3;
+
+    @Override
+    protected void runImpl() {
+    }
+
+    @Override
+    protected boolean readImpl() {
+        this.unk = this.readD();
+        this.unk2 = this.readD();
+        this.unk3 = this.readD();
+        return true;
+    }
+}
+

@@ -1,0 +1,29 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  org.apache.commons.lang3.StringUtils
+ */
+package l2s.gameserver.network.l2.s2c;
+
+import l2s.gameserver.model.Player;
+import l2s.gameserver.network.l2.s2c.L2GameServerPacket;
+import org.apache.commons.lang3.StringUtils;
+
+public class RecipeShopMsgPacket
+extends L2GameServerPacket {
+    private int _objectId;
+    private String _storeName;
+
+    public RecipeShopMsgPacket(Player player, boolean showName) {
+        this._objectId = player.getObjectId();
+        this._storeName = showName ? StringUtils.defaultString((String)player.getManufactureName()) : "";
+    }
+
+    @Override
+    protected final void writeImpl() {
+        this.writeD(this._objectId);
+        this.writeS(this._storeName);
+    }
+}
+

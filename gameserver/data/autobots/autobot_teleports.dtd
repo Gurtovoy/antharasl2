@@ -1,0 +1,7 @@
+<!ELEMENT autobot_teleports (location*)>
+<!ELEMENT location EMPTY>
+<!ATTLIST location name CDATA #REQUIRED>
+<!ATTLIST location x CDATA #REQUIRED>
+<!ATTLIST location y CDATA #REQUIRED>
+<!ATTLIST location z CDATA #REQUIRED>
+<!ATTLIST location type CDATA #IMPLIED>

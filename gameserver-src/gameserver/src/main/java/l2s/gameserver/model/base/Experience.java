@@ -1,0 +1,68 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  org.slf4j.Logger
+ *  org.slf4j.LoggerFactory
+ */
+package l2s.gameserver.model.base;
+
+import l2s.gameserver.Config;
+import l2s.gameserver.data.xml.holder.ExperienceDataHolder;
+import l2s.gameserver.templates.ExperienceData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class Experience {
+    private static final Logger _log = LoggerFactory.getLogger(Experience.class);
+
+    public static double penaltyModifier(long count, double percents) {
+        return Math.max(1.0 - (double)count * percents / 100.0, 0.0);
+    }
+
+    public static int getMaxLevel() {
+        return Config.ALT_MAX_LEVEL;
+    }
+
+    public static int getMaxSubLevel() {
+        return Config.ALT_MAX_SUB_LEVEL;
+    }
+
+    public static int getMaxAvailableLevel() {
+        return ExperienceDataHolder.getInstance().getMaxLevel();
+    }
+
+    public static int getLevel(long thisExp) {
+        int level = 0;
+        for (int i = 1; i <= Experience.getMaxAvailableLevel(); ++i) {
+            if (thisExp < ExperienceDataHolder.getInstance().getData(i).getExp()) continue;
+            level = i;
+        }
+        if (level == 0) {
+            _log.warn("Cannot find level for [" + thisExp + "] experience!");
+            return 1;
+        }
+        return level;
+    }
+
+    public static long getExpForLevel(int lvl) {
+        ExperienceData data = ExperienceDataHolder.getInstance().getData(lvl);
+        if (data == null) {
+            return 0L;
+        }
+        return data.getExp();
+    }
+
+    public static double getTrainingRate(int lvl) {
+        ExperienceData data = ExperienceDataHolder.getInstance().getData(lvl);
+        if (data == null) {
+            return 1.0;
+        }
+        return data.getTrainingRate();
+    }
+
+    public static double getExpPercent(int level, long exp) {
+        return Math.min(0.99999997019767, (double)(exp - Experience.getExpForLevel(level)) / ((double)(Experience.getExpForLevel(level + 1) - Experience.getExpForLevel(level)) / 100.0) * 0.01);
+    }
+}
+

@@ -1,0 +1,1381 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "option_data.dtd">
+<list>
+	<option_data id="60200">
+		<for>
+			<!--Маг. Защ. +10, Физ. Защ. +18, шанс блока щитом + 2\\n0%, Защита Щитом +10%-->
+			<add order="0x60" stat="mDef" value="10"/>
+			<add order="0x60" stat="pDef" value="18"/>	
+			<mul order="0x60" stat="rShld" value="1.2"/>	
+			<mul order="0x60" stat="sDef" value="1.1"/>					
+		</for>
+	</option_data>
+	<option_data id="60201">
+		<for>
+			<!--Маг. Защ. +12, Физ. Защ. +24, шанс блока щитом + 3\\n0%, Защита Щитом +15%-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="24"/>	
+			<mul order="0x60" stat="rShld" value="1.3"/>	
+			<mul order="0x60" stat="sDef" value="1.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60202">
+		<for>
+			<!--Маг. Защ. +14, Физ. Защ. +29, шанс блока щитом + 4\\n0%, Защита Щитом +20%-->
+			<add order="0x60" stat="mDef" value="14"/>
+			<add order="0x60" stat="pDef" value="29"/>	
+			<mul order="0x60" stat="rShld" value="1.4"/>	
+			<mul order="0x60" stat="sDef" value="1.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60203">
+		<for>
+			<!--Маг. Защ. +16, Физ. Защ. +35, шанс блока щитом + 5\\n0%, Защита Щитом +25%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pDef" value="35"/>	
+			<mul order="0x60" stat="rShld" value="1.5"/>	
+			<mul order="0x60" stat="sDef" value="1.25"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60204">
+		<for>
+			<!--Маг. Защ. +18, Физ. Защ. +43, шанс блока щитом + 6\\n0%, Защита Щитом +30%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mDef" value="18"/>
+			<add order="0x60" stat="pDef" value="43"/>	
+			<mul order="0x60" stat="rShld" value="1.6"/>	
+			<mul order="0x60" stat="sDef" value="1.3"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60205">
+		<for>
+			<!--Маг. Защ. +20, Физ. Защ. +54, шанс блока щитом + 7\\n0%, Защита Щитом +35%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mDef" value="20"/>
+			<add order="0x60" stat="pDef" value="54"/>	
+			<mul order="0x60" stat="rShld" value="1.7"/>	
+			<mul order="0x60" stat="sDef" value="1.35"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>
+		</for>
+	</option_data>
+	<option_data id="60206">
+		<for>
+			<!--Маг. Защ. +22, Физ. Защ. +61, шанс блока щитом + 8\\n0%, Защита Щитом +40%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mDef" value="22"/>
+			<add order="0x60" stat="pDef" value="61"/>	
+			<mul order="0x60" stat="rShld" value="1.8"/>	
+			<mul order="0x60" stat="sDef" value="1.4"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>			
+		</for>
+	</option_data>
+	<option_data id="60207">
+		<for>
+			<!--Маг. Защ. +25, Физ. Защ. +66, шанс блока щитом + 9\\n0%, Защита Щитом +45%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mDef" value="25"/>
+			<add order="0x60" stat="pDef" value="66"/>	
+			<mul order="0x60" stat="rShld" value="1.9"/>	
+			<mul order="0x60" stat="sDef" value="1.45"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60208">
+		<for>
+			<!--Маг. Защ. +28, Физ. Защ. +71, шанс блока щитом + 1\\n00%, Защита Щитом +50%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mDef" value="28"/>
+			<add order="0x60" stat="pDef" value="71"/>	
+			<mul order="0x60" stat="rShld" value="2"/>	
+			<mul order="0x60" stat="sDef" value="1.5"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60209">
+		<for>
+			<!--Маг. Защ. +6, Физ. Защ. +11, шанс блока щитом + 10\\n%, Защита Щитом +3%-->
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pDef" value="11"/>	
+			<mul order="0x60" stat="rShld" value="1.1"/>	
+			<mul order="0x60" stat="sDef" value="1.03"/>					
+		</for>
+	</option_data>
+	<option_data id="60210">
+		<for>
+			<!--Маг. Защ. +8, Физ. Защ. +14, шанс блока щитом + 15\\n%, Защита Щитом +6%-->
+			<add order="0x60" stat="mDef" value="8"/>
+			<add order="0x60" stat="pDef" value="14"/>	
+			<mul order="0x60" stat="rShld" value="1.15"/>	
+			<mul order="0x60" stat="sDef" value="1.06"/>				
+		</for>
+	</option_data>
+	<option_data id="60211">
+		<for>
+			<!--Маг. Защ. +10, Физ. Защ. +18, шанс блока щитом + 2\\n0%, Защита Щитом +10%-->
+			<add order="0x60" stat="mDef" value="10"/>
+			<add order="0x60" stat="pDef" value="18"/>	
+			<mul order="0x60" stat="rShld" value="1.2"/>	
+			<mul order="0x60" stat="sDef" value="1.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60212">
+		<for>
+			<!--Маг. Защ. +12, Физ. Защ. +24, шанс блока щитом + 3\\n0%, Защита Щитом +15%-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="24"/>	
+			<mul order="0x60" stat="rShld" value="1.3"/>	
+			<mul order="0x60" stat="sDef" value="1.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60213">
+		<for>
+			<!--Маг. Защ. +14, Физ. Защ. +29, шанс блока щитом + 4\\n0%, Защита Щитом +20%-->
+			<add order="0x60" stat="mDef" value="14"/>
+			<add order="0x60" stat="pDef" value="29"/>	
+			<mul order="0x60" stat="rShld" value="1.4"/>	
+			<mul order="0x60" stat="sDef" value="1.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60214">
+		<for>
+			<!--Маг. Защ. +16, Физ. Защ. +35, шанс блока щитом + 5\\n0%, Защита Щитом +25%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pDef" value="35"/>	
+			<mul order="0x60" stat="rShld" value="1.5"/>	
+			<mul order="0x60" stat="sDef" value="1.25"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60215">
+		<for>
+			<!--Маг. Защ. +18, Физ. Защ. +43, шанс блока щитом + 6\\n0%, Защита Щитом +30%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mDef" value="18"/>
+			<add order="0x60" stat="pDef" value="43"/>	
+			<mul order="0x60" stat="rShld" value="1.6"/>	
+			<mul order="0x60" stat="sDef" value="1.3"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60216">
+		<for>
+			<!--Маг. Защ. +20, Физ. Защ. +54, шанс блока щитом + 7\\n0%, Защита Щитом +35%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mDef" value="20"/>
+			<add order="0x60" stat="pDef" value="54"/>	
+			<mul order="0x60" stat="rShld" value="1.7"/>	
+			<mul order="0x60" stat="sDef" value="1.35"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60217">
+		<for>
+			<!--Маг. Защ. +22, Физ. Защ. +61, шанс блока щитом + 8\\n0%, Защита Щитом +40%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mDef" value="22"/>
+			<add order="0x60" stat="pDef" value="61"/>	
+			<mul order="0x60" stat="rShld" value="1.8"/>	
+			<mul order="0x60" stat="sDef" value="1.4"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60218">
+		<for>
+			<!--Маг. Защ. +25, Физ. Защ. +66, шанс блока щитом + 9\\n0%, Защита Щитом +45%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mDef" value="25"/>
+			<add order="0x60" stat="pDef" value="66"/>	
+			<mul order="0x60" stat="rShld" value="1.9"/>	
+			<mul order="0x60" stat="sDef" value="1.45"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60219">
+		<for>
+			<!--Маг. Защ. +28, Физ. Защ. +71, шанс блока щитом + 1\\n00%, Защита Щитом +50%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mDef" value="28"/>
+			<add order="0x60" stat="pDef" value="71"/>	
+			<mul order="0x60" stat="rShld" value="2"/>	
+			<mul order="0x60" stat="sDef" value="1.5"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60220">
+		<for>
+			<!--в течение 5 сек. поглощает до 202 ед. урона. Время\\n перезарядки: 90 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60221">
+		<for>
+			<!--в течение 6 сек. поглощает до 302 ед. урона. Время\\n перезарядки: 90 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60222">
+		<for>
+			<!--в течение 7 сек. поглощает до 406 ед. урона. Время\\n перезарядки: 90 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60223">
+		<for>
+			<!--в течение 8 сек. поглощает до 516 ед. урона. Время\\n перезарядки: 90 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60224">
+		<for>
+			<!--в течение 9 сек. поглощает до 782 ед. урона. Время\\n перезарядки: 80 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60225">
+		<for>
+			<!--в течение 10 сек. поглощает до 1059 ед. урона. Вре\\nмя перезарядки: 80 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60226">
+		<for>
+			<!--в течение 11 сек. поглощает до 1348 ед. урона. Вре\\nмя перезарядки: 70 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60227">
+		<for>
+			<!--в течение 12 сек. поглощает до 1649 ед. урона. Вре\\nмя перезарядки: 70 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60228">
+		<for>
+			<!--в течение 13 сек. поглощает до 2045 ед. урона. Вре\\nмя перезарядки: 70 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60229">
+		<for>
+			<!--в течение 14 сек. поглощает до 2457 ед. урона. Вре\\nмя перезарядки: 60 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60230">
+		<for>
+			<!--в течение 15 сек. поглощает до 2883 ед. урона. Вре\\nмя перезарядки: 50 сек.-->
+		</for>
+	</option_data>
+	<option_data id="60231">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>	
+		</for>
+	</option_data>
+	<option_data id="60232">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +3%.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.03"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.03"/>				
+		</for>
+	</option_data>
+	<option_data id="60233">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +7%.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>				
+		</for>
+	</option_data>
+	<option_data id="60234">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +7%, Физ. / Маг. Защ. +1%. При ат\\nаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>
+			<mul order="0x60" stat="mDef" value="1.01"/>
+			<mul order="0x60" stat="pDef" value="1.01"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>				
+		</for>
+	</option_data>
+	<option_data id="60235">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +2%. При а\\nтаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>
+			<mul order="0x60" stat="mDef" value="1.02"/>
+			<mul order="0x60" stat="pDef" value="1.02"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>				
+		</for>
+	</option_data>
+	<option_data id="60236">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +3%, Макс \\nHP / MP / CP + 1%. При атаке активирует Силу Грани\\nц Ур. 2.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>
+			<mul order="0x60" stat="mDef" value="1.03"/>
+			<mul order="0x60" stat="pDef" value="1.03"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>				
+		</for>
+	</option_data>
+	<option_data id="60237">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +4%, Макс \\nHP / MP / CP + 2%. При атаке активирует Силу Грани\\nц Ур. 3.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>
+			<mul order="0x60" stat="mDef" value="1.04"/>
+			<mul order="0x60" stat="pDef" value="1.04"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>				
+		</for>
+	</option_data>
+	<option_data id="60238">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +5%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 4, возвращает врагу 3% от полученного урона.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>
+			<mul order="0x60" stat="mDef" value="1.05"/>
+			<mul order="0x60" stat="pDef" value="1.05"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>				
+		</for>
+	</option_data>
+	<option_data id="60239">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 5. Возвращает врагу 5% от полученного урона.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.25"/>				
+		</for>
+	</option_data>
+	<option_data id="60240">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 4%, При атаке активирует Силу Грани\\nц Ур. 6. Возвращает врагу 7% от полученного урона.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>
+			<mul order="0x60" stat="mDef" value="1.05"/>
+			<mul order="0x60" stat="pDef" value="1.05"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>				
+		</for>
+	</option_data>
+	<option_data id="60241">
+		<for>
+			<!--Физ. Защ. +12, Маг. Защ. +4, HP / MP / CP +3, Скор\\n. Атк. / Маг. Атк. + 2.-->
+			<!--Бонус опыта / SP +30%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 5%, При атаке активирует Силу Грани\\nц Ур. 7. Возвращает врагу 10% от полученного урона\\n.-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="4"/>
+			<add order="0x60" stat="maxHp" value="3"/>
+			<add order="0x60" stat="maxMp" value="3"/>		
+			<add order="0x60" stat="maxCp" value="3"/>	
+			<add order="0x60" stat="pAtkSpd" value="2"/>
+			<add order="0x60" stat="mAtkSpd" value="2"/>
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60242">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+		</for>
+	</option_data>
+	<option_data id="60243">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +3%.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.03"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.03"/>				
+		</for>
+	</option_data>
+	<option_data id="60244">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +7%.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>					
+		</for>
+	</option_data>
+	<option_data id="60245">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +7%, Физ. / Маг. Защ. +1%. При ат\\nаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<mul order="0x60" stat="mDef" value="1.01"/>
+			<mul order="0x60" stat="pDef" value="1.01"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>					
+		</for>
+	</option_data>
+	<option_data id="60246">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +2%. При а\\nтаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<mul order="0x60" stat="mDef" value="1.02"/>
+			<mul order="0x60" stat="pDef" value="1.02"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>				
+		</for>
+	</option_data>
+	<option_data id="60247">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +3%, Макс \\nHP / MP / CP + 1%. При атаке активирует Силу Грани\\nц Ур. 2.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<mul order="0x60" stat="mDef" value="1.03"/>
+			<mul order="0x60" stat="pDef" value="1.03"/>		
+			<mul order="0x60" stat="maxHp" value="1.01"/>
+			<mul order="0x60" stat="maxMp" value="1.01"/>		
+			<mul order="0x60" stat="maxCp" value="1.01"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>			
+		</for>
+	</option_data>
+	<option_data id="60248">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +4%, Макс \\nHP / MP / CP + 2%. При атаке активирует Силу Грани\\nц Ур. 3.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<mul order="0x60" stat="mDef" value="1.04"/>
+			<mul order="0x60" stat="pDef" value="1.04"/>
+			<mul order="0x60" stat="maxHp" value="1.02"/>
+			<mul order="0x60" stat="maxMp" value="1.02"/>		
+			<mul order="0x60" stat="maxCp" value="1.02"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>			
+		</for>
+	</option_data>
+	<option_data id="60249">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +5%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 4, возвращает врагу 3% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<mul order="0x60" stat="mDef" value="1.05"/>
+			<mul order="0x60" stat="pDef" value="1.05"/>	
+			<mul order="0x60" stat="maxHp" value="1.03"/>
+			<mul order="0x60" stat="maxMp" value="1.03"/>		
+			<mul order="0x60" stat="maxCp" value="1.03"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>			
+		</for>
+	</option_data>
+	<option_data id="60250">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 5. Возвращает врагу 5% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>	
+			<mul order="0x60" stat="maxHp" value="1.03"/>
+			<mul order="0x60" stat="maxMp" value="1.03"/>		
+			<mul order="0x60" stat="maxCp" value="1.03"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.25"/>			
+		</for>
+	</option_data>
+	<option_data id="60251">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 4%, При атаке активирует Силу Грани\\nц Ур. 6. Возвращает врагу 7% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>
+			<mul order="0x60" stat="maxHp" value="1.04"/>
+			<mul order="0x60" stat="maxMp" value="1.04"/>		
+			<mul order="0x60" stat="maxCp" value="1.04"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.25"/>			
+		</for>
+	</option_data>
+	<option_data id="60252">
+		<for>
+			<!--Физ. Защ. +14, Маг. Защ. +6, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +15, Скор. Атк. / Маг.\\n Атк. + 5, Скорость +2 .-->
+			<!--Бонус опыта / SP +30%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 5%, При атаке активирует Силу Грани\\nц Ур. 7. Возвращает врагу 10% от полученного урона\\n.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="15"/>
+			<add order="0x60" stat="maxMp" value="15"/>		
+			<add order="0x60" stat="maxCp" value="15"/>	
+			<add order="0x60" stat="pAtkSpd" value="5"/>
+			<add order="0x60" stat="mAtkSpd" value="5"/>	
+			<add order="0x60" stat="runSpd" value="2"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>
+			<mul order="0x60" stat="maxHp" value="1.05"/>
+			<mul order="0x60" stat="maxMp" value="1.05"/>		
+			<mul order="0x60" stat="maxCp" value="1.05"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.30"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.30"/>				
+		</for>
+	</option_data>
+	<option_data id="60253">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>							
+		</for>
+	</option_data>
+	<option_data id="60254">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +3%.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.03"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.03"/>			
+		</for>
+	</option_data>
+	<option_data id="60255">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +7%.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>				
+		</for>
+	</option_data>
+	<option_data id="60256">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +7%, Физ. / Маг. Защ. +1%. При ат\\nаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<mul order="0x60" stat="mDef" value="1.01"/>
+			<mul order="0x60" stat="pDef" value="1.01"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>				
+		</for>
+	</option_data>
+	<option_data id="60257">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +2%. При а\\nтаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<mul order="0x60" stat="mDef" value="1.02"/>
+			<mul order="0x60" stat="pDef" value="1.02"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>				
+		</for>
+	</option_data>
+	<option_data id="60258">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +3%, Макс \\nHP / MP / CP + 1%. При атаке активирует Силу Грани\\nц Ур. 2.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<mul order="0x60" stat="mDef" value="1.03"/>
+			<mul order="0x60" stat="pDef" value="1.03"/>		
+			<mul order="0x60" stat="maxHp" value="1.01"/>
+			<mul order="0x60" stat="maxMp" value="1.01"/>		
+			<mul order="0x60" stat="maxCp" value="1.01"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>				
+		</for>
+	</option_data>
+	<option_data id="60259">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +4%, Макс \\nHP / MP / CP + 2%. При атаке активирует Силу Грани\\nц Ур. 3.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<mul order="0x60" stat="mDef" value="1.04"/>
+			<mul order="0x60" stat="pDef" value="1.04"/>		
+			<mul order="0x60" stat="maxHp" value="1.02"/>
+			<mul order="0x60" stat="maxMp" value="1.02"/>		
+			<mul order="0x60" stat="maxCp" value="1.02"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>				
+		</for>
+	</option_data>
+	<option_data id="60260">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +5%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 4, возвращает врагу 3% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<mul order="0x60" stat="mDef" value="1.05"/>
+			<mul order="0x60" stat="pDef" value="1.05"/>		
+			<mul order="0x60" stat="maxHp" value="1.03"/>
+			<mul order="0x60" stat="maxMp" value="1.03"/>		
+			<mul order="0x60" stat="maxCp" value="1.03"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>				
+		</for>
+	</option_data>
+	<option_data id="60261">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 5. Возвращает врагу 5% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>		
+			<mul order="0x60" stat="maxHp" value="1.03"/>
+			<mul order="0x60" stat="maxMp" value="1.03"/>		
+			<mul order="0x60" stat="maxCp" value="1.03"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.25"/>				
+		</for>
+	</option_data>
+	<option_data id="60262">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 4%, При атаке активирует Силу Грани\\nц Ур. 6. Возвращает врагу 7% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>		
+			<mul order="0x60" stat="maxHp" value="1.04"/>
+			<mul order="0x60" stat="maxMp" value="1.04"/>		
+			<mul order="0x60" stat="maxCp" value="1.04"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.25"/>				
+		</for>
+	</option_data>
+	<option_data id="60263">
+		<for>
+			<!--Физ. Защ. +17, Маг. Защ. +8, Уклонение от миз. / м\\nаг. умений +1, HP / MP / CP +20, Скор. Атк. / Маг.\\n Атк. + 7, Скорость +3.-->
+			<!--Бонус опыта / SP +30%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 5%, При атаке активирует Силу Грани\\nц Ур. 7. Возвращает врагу 10% от полученного урона\\n.-->
+			<add order="0x60" stat="pDef" value="14"/>	
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="20"/>
+			<add order="0x60" stat="maxMp" value="20"/>		
+			<add order="0x60" stat="maxCp" value="20"/>	
+			<add order="0x60" stat="pAtkSpd" value="7"/>
+			<add order="0x60" stat="mAtkSpd" value="7"/>	
+			<add order="0x60" stat="runSpd" value="3"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>		
+			<mul order="0x60" stat="maxHp" value="1.05"/>
+			<mul order="0x60" stat="maxMp" value="1.05"/>		
+			<mul order="0x60" stat="maxCp" value="1.05"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.30"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.30"/>				
+		</for>
+	</option_data>
+	<option_data id="60264">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>					
+		</for>
+	</option_data>
+	<option_data id="60265">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +3%.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.03"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.03"/>				
+		</for>
+	</option_data>
+	<option_data id="60266">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +7%.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>					
+		</for>
+	</option_data>
+	<option_data id="60267">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +7%, Физ. / Маг. Защ. +1%. При ат\\nаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<mul order="0x60" stat="mDef" value="1.01"/>
+			<mul order="0x60" stat="pDef" value="1.01"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>				
+		</for>
+	</option_data>
+	<option_data id="60268">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +2%. При а\\nтаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<mul order="0x60" stat="mDef" value="1.02"/>
+			<mul order="0x60" stat="pDef" value="1.02"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>				
+		</for>
+	</option_data>
+	<option_data id="60269">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +3%, Макс \\nHP / MP / CP + 1%. При атаке активирует Силу Грани\\nц Ур. 2.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<mul order="0x60" stat="mDef" value="1.03"/>
+			<mul order="0x60" stat="pDef" value="1.03"/>
+			<mul order="0x60" stat="maxHp" value="1.01"/>
+			<mul order="0x60" stat="maxMp" value="1.01"/>		
+			<mul order="0x60" stat="maxCp" value="1.01"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>				
+		</for>
+	</option_data>
+	<option_data id="60270">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +4%, Макс \\nHP / MP / CP + 2%. При атаке активирует Силу Грани\\nц Ур. 3.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<mul order="0x60" stat="mDef" value="1.04"/>
+			<mul order="0x60" stat="pDef" value="1.04"/>
+			<mul order="0x60" stat="maxHp" value="1.02"/>
+			<mul order="0x60" stat="maxMp" value="1.02"/>		
+			<mul order="0x60" stat="maxCp" value="1.02"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>				
+		</for>
+	</option_data>
+	<option_data id="60271">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +5%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 4, возвращает врагу 3% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<mul order="0x60" stat="mDef" value="1.05"/>
+			<mul order="0x60" stat="pDef" value="1.05"/>
+			<mul order="0x60" stat="maxHp" value="1.03"/>
+			<mul order="0x60" stat="maxMp" value="1.03"/>		
+			<mul order="0x60" stat="maxCp" value="1.03"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>				
+		</for>
+	</option_data>
+	<option_data id="60272">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 5. Возвращает врагу 5% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>
+			<mul order="0x60" stat="maxHp" value="1.03"/>
+			<mul order="0x60" stat="maxMp" value="1.03"/>		
+			<mul order="0x60" stat="maxCp" value="1.03"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.25"/>				
+		</for>
+	</option_data>
+	<option_data id="60273">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 4%, При атаке активирует Силу Грани\\nц Ур. 6. Возвращает врагу 7% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>
+			<mul order="0x60" stat="maxHp" value="1.04"/>
+			<mul order="0x60" stat="maxMp" value="1.04"/>		
+			<mul order="0x60" stat="maxCp" value="1.04"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.25"/>				
+		</for>
+	</option_data>
+	<option_data id="60274">
+		<for>
+			<!--Физ. Защ. +22, Маг. Защ. +11, Уклонение от миз. / \\nмаг. умений +1, HP / MP / CP +80, Скор. Атк. / Маг\\n. Атк. + 9, Скорость +4.-->
+			<!--Бонус опыта / SP +30%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 5%, При атаке активирует Силу Грани\\nц Ур. 7. Возвращает врагу 10% от полученного урона\\n.-->
+			<add order="0x60" stat="pDef" value="22"/>	
+			<add order="0x60" stat="mDef" value="11"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="pEvasRate" value="1"/>
+			<add order="0x60" stat="maxHp" value="80"/>
+			<add order="0x60" stat="maxMp" value="80"/>		
+			<add order="0x60" stat="maxCp" value="80"/>	
+			<add order="0x60" stat="pAtkSpd" value="9"/>
+			<add order="0x60" stat="mAtkSpd" value="9"/>	
+			<add order="0x60" stat="runSpd" value="4"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>
+			<mul order="0x60" stat="maxHp" value="1.05"/>
+			<mul order="0x60" stat="maxMp" value="1.05"/>		
+			<mul order="0x60" stat="maxCp" value="1.05"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>			
+		</for>
+	</option_data>
+	<option_data id="60275">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>						
+		</for>
+	</option_data>
+	<option_data id="60276">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +3%.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60277">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +7%.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>				
+		</for>
+	</option_data>
+	<option_data id="60278">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +7%, Физ. / Маг. Защ. +1%. При ат\\nаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<mul order="0x60" stat="mDef" value="1.01"/>
+			<mul order="0x60" stat="pDef" value="1.01"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.07"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.07"/>				
+		</for>
+	</option_data>
+	<option_data id="60279">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +2%. При а\\nтаке активирует Силу Границ Ур. 1.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<mul order="0x60" stat="mDef" value="1.02"/>
+			<mul order="0x60" stat="pDef" value="1.02"/>			
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>				
+		</for>
+	</option_data>
+	<option_data id="60280">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +12%, Физ. / Маг. Защ. +3%, Макс \\nHP / MP / CP + 1%. При атаке активирует Силу Грани\\nц Ур. 2.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<mul order="0x60" stat="mDef" value="1.03"/>
+			<mul order="0x60" stat="pDef" value="1.03"/>
+			<mul order="0x60" stat="maxHp" value="1.01"/>
+			<mul order="0x60" stat="maxMp" value="1.01"/>		
+			<mul order="0x60" stat="maxCp" value="1.01"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.12"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.12"/>				
+		</for>
+	</option_data>
+	<option_data id="60281">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +4%, Макс \\nHP / MP / CP + 2%. При атаке активирует Силу Грани\\nц Ур. 3.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<mul order="0x60" stat="mDef" value="1.04"/>
+			<mul order="0x60" stat="pDef" value="1.04"/>
+			<mul order="0x60" stat="maxHp" value="1.02"/>
+			<mul order="0x60" stat="maxMp" value="1.02"/>		
+			<mul order="0x60" stat="maxCp" value="1.02"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>			
+		</for>
+	</option_data>
+	<option_data id="60282">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +17%, Физ. / Маг. Защ. +5%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 4, возвращает врагу 3% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<mul order="0x60" stat="mDef" value="1.05"/>
+			<mul order="0x60" stat="pDef" value="1.05"/>
+			<mul order="0x60" stat="maxHp" value="1.03"/>
+			<mul order="0x60" stat="maxMp" value="1.03"/>		
+			<mul order="0x60" stat="maxCp" value="1.03"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.17"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.17"/>				
+		</for>
+	</option_data>
+	<option_data id="60283">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 3%, При атаке активирует Силу Грани\\nц Ур. 5. Возвращает врагу 5% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>
+			<mul order="0x60" stat="maxHp" value="1.03"/>
+			<mul order="0x60" stat="maxMp" value="1.03"/>		
+			<mul order="0x60" stat="maxCp" value="1.03"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.25"/>				
+		</for>
+	</option_data>
+	<option_data id="60284">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +25%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 4%, При атаке активирует Силу Грани\\nц Ур. 6. Возвращает врагу 7% от полученного урона.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>
+			<mul order="0x60" stat="maxHp" value="1.04"/>
+			<mul order="0x60" stat="maxMp" value="1.04"/>		
+			<mul order="0x60" stat="maxCp" value="1.04"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.25"/>				
+		</for>
+	</option_data>
+	<option_data id="60285">
+		<for>
+			<!--Физ. Защ. +30, Маг. Защ. +16, Уклонение от миз. / \\nмаг. умений +2, HP / MP / CP +120, Скор. Атк. / Ма\\nг. Атк. + 12, Скорость +5.-->
+			<!--Бонус опыта / SP +30%, Физ. / Маг. Защ. +6%, Макс \\nHP / MP / CP + 5%, При атаке активирует Силу Грани\\nц Ур. 7. Возвращает врагу 10% от полученного урона\\n.-->
+			<add order="0x60" stat="pDef" value="30"/>	
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="pEvasRate" value="2"/>
+			<add order="0x60" stat="maxHp" value="120"/>
+			<add order="0x60" stat="maxMp" value="120"/>		
+			<add order="0x60" stat="maxCp" value="120"/>	
+			<add order="0x60" stat="pAtkSpd" value="12"/>
+			<add order="0x60" stat="mAtkSpd" value="12"/>	
+			<add order="0x60" stat="runSpd" value="5"/>		
+			<mul order="0x60" stat="mDef" value="1.06"/>
+			<mul order="0x60" stat="pDef" value="1.06"/>
+			<mul order="0x60" stat="maxHp" value="1.05"/>
+			<mul order="0x60" stat="maxMp" value="1.05"/>		
+			<mul order="0x60" stat="maxCp" value="1.05"/>				
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>			
+		</for>
+	</option_data>
+	<option_data id="60286">
+		<!--Активное: Зачистка Границ-->
+		<skills>
+			<skill id="35025" level="1"/> 
+		</skills>	
+	</option_data>
+	<option_data id="60287">
+		<!--Активное: Благословление Границ-->
+		<skills>
+			<skill id="35026" level="1"/> 
+		</skills>	
+	</option_data>
+</list>

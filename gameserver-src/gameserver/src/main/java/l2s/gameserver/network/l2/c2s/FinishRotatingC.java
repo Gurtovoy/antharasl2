@@ -1,0 +1,32 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.gameserver.network.l2.c2s;
+
+import l2s.gameserver.model.Player;
+import l2s.gameserver.network.l2.GameClient;
+import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
+import l2s.gameserver.network.l2.s2c.FinishRotatingPacket;
+
+public class FinishRotatingC
+extends L2GameClientPacket {
+    private int _degree;
+    private int _unknown;
+
+    @Override
+    protected boolean readImpl() {
+        this._degree = this.readD();
+        this._unknown = this.readD();
+        return true;
+    }
+
+    @Override
+    protected void runImpl() {
+        Player activeChar = ((GameClient)this.getClient()).getActiveChar();
+        if (activeChar == null) {
+            return;
+        }
+        activeChar.broadcastPacket(new FinishRotatingPacket(activeChar, this._degree, 0));
+    }
+}
+

@@ -1,0 +1,55 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  l2s.commons.util.Rnd
+ */
+package l2s.gameserver.skills.skillclasses;
+
+import l2s.commons.util.Rnd;
+import l2s.gameserver.model.Creature;
+import l2s.gameserver.model.Skill;
+import l2s.gameserver.network.l2.components.IBroadcastPacket;
+import l2s.gameserver.network.l2.components.SystemMsg;
+import l2s.gameserver.stats.Stats;
+import l2s.gameserver.templates.StatsSet;
+
+public class Continuous
+extends Skill {
+    private final int _lethal1;
+    private final int _lethal2;
+
+    public Continuous(StatsSet set) {
+        super(set);
+        this._lethal1 = set.getInteger("lethal1", 0);
+        this._lethal2 = set.getInteger("lethal2", 0);
+    }
+
+    @Override
+    protected void useSkill(Creature activeChar, Creature target, boolean reflected) {
+        Creature realTarget = reflected ? activeChar : target;
+        double mult = 0.01 * realTarget.getStat().calc(Stats.DEATH_VULNERABILITY, activeChar, this);
+        double lethal1 = (double)this._lethal1 * mult;
+        double lethal2 = (double)this._lethal2 * mult;
+        if (lethal1 > 0.0 && Rnd.chance((double)lethal1)) {
+            if (realTarget.isPlayer()) {
+                realTarget.reduceCurrentHp(realTarget.getCurrentHp() / 2.0 + realTarget.getCurrentCp(), activeChar, this, true, true, false, true, false, false, true);
+                realTarget.sendPacket((IBroadcastPacket)SystemMsg.LETHAL_STRIKE);
+                activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+            } else if (realTarget.isNpc() && !realTarget.isLethalImmune()) {
+                realTarget.reduceCurrentHp(realTarget.getCurrentHp() / 2.0, activeChar, this, true, true, false, true, false, false, true);
+                activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+            }
+        } else if (lethal2 > 0.0 && Rnd.chance((double)lethal2)) {
+            if (realTarget.isPlayer()) {
+                realTarget.reduceCurrentHp(realTarget.getCurrentHp() + realTarget.getCurrentCp() - 1.0, activeChar, this, true, true, false, true, false, false, true);
+                realTarget.sendPacket((IBroadcastPacket)SystemMsg.LETHAL_STRIKE);
+                activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+            } else if (realTarget.isNpc() && !realTarget.isLethalImmune()) {
+                realTarget.reduceCurrentHp(realTarget.getCurrentHp() - 1.0, activeChar, this, true, true, false, true, false, false, true);
+                activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOUR_LETHAL_STRIKE_WAS_SUCCESSFUL);
+            }
+        }
+    }
+}
+

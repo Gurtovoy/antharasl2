@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="18564" levels="1" name="Shiny Jewelry Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="18566" levels="5" name="Garnet">
+		<table name="#resist">3 5 8 11 20</table>
+		<set name="icon" value="icon.etc_bm_jewel_garnet"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_defence_trait name="shock" value="#resist"/>
+			<p_defence_trait name="pull" value="#resist"/>
+			<p_defence_trait name="shock" value="#resist"/>
+			<p_defence_trait name="paralyze" value="#resist"/>
+			<p_defence_trait name="derangement" value="#resist"/>
+		</for>
+	</skill>
+	<skill id="18567" levels="2" name="Garnet - Special Ability">
+		<table name="#abnormal_level">1 2</table>
+		<table name="#abnormal_time">5 15</table>
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.etc_bm_jewel_garnet"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="target_type" value="SELF"/>
+		<set name="affect_scope" value="SINGLE"/>
+		<set name="affect_object" value="FRIEND"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect>
+				<add stat="resist_abnormal_debuff" value="-100"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="18571" levels="1" name="Hero\'s Basics - I">
+		<set name="icon" value="icon.skill18571"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="18572" levels="1" name="Hero\'s Basics - II">
+		<set name="icon" value="icon.skill18572"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="18573" levels="1" name="Hero\'s Basics - III">
+		<set name="icon" value="icon.skill18573"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="18575" levels="1" name="Call to Hunt - I">
+		<set name="icon" value="icon.skill18575"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="18576" levels="1" name="Call to Hunt - II">
+		<set name="icon" value="icon.skill18576"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="18577" levels="1" name="Call to Battle">
+		<set name="icon" value="icon.skill18577"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="18578" levels="1" name="Song Contest">
+		<set name="icon" value="icon.skill18578"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="18588" levels="1" name="Fortune Brooch">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

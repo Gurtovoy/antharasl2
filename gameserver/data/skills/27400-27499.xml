@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="27440" levels="5" name="Cat\'s Eye">
+		<set name="icon" value="icon.bm_jewel_red_catseye"/>
+		<table name="#power">2 4 6 8 15</table>
+		<set name="operate_type" value="P"/>
+		<for>
+			<p_critical_damage value="#power" type="per"/>
+			<p_magic_critical_dmg value="#power" type="per"/>
+		</for>
+	</skill>
+</list>

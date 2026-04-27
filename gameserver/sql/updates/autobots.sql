@@ -1,0 +1,38 @@
+CREATE TABLE IF NOT EXISTS `autobots` (
+  `obj_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(35) NOT NULL,
+  `level` INT UNSIGNED NOT NULL DEFAULT 1,
+  `classid` INT NOT NULL DEFAULT 0,
+  `base_class` INT NOT NULL DEFAULT 0,
+  `race` INT NOT NULL DEFAULT 0,
+  `sex` INT NOT NULL DEFAULT 0,
+  `face` INT NOT NULL DEFAULT 0,
+  `hair_style` INT NOT NULL DEFAULT 0,
+  `hair_color` INT NOT NULL DEFAULT 0,
+  `x` INT NOT NULL DEFAULT 0,
+  `y` INT NOT NULL DEFAULT 0,
+  `z` INT NOT NULL DEFAULT 0,
+  `heading` INT NOT NULL DEFAULT 0,
+  `title` VARCHAR(35) DEFAULT '',
+  `combat_prefs` LONGTEXT DEFAULT NULL,
+  `social_prefs` LONGTEXT DEFAULT NULL,
+  `activity_prefs` LONGTEXT DEFAULT NULL,
+  `skill_prefs` LONGTEXT DEFAULT NULL,
+  `is_online` TINYINT(1) NOT NULL DEFAULT 0,
+  `creation_date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`obj_id`),
+  UNIQUE KEY `name` (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `autobot_schedules` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `bot_id` INT UNSIGNED NOT NULL DEFAULT 0,
+  `spawn_hour` INT NOT NULL DEFAULT 0,
+  `spawn_minute` INT NOT NULL DEFAULT 0,
+  `despawn_hour` INT NOT NULL DEFAULT 23,
+  `despawn_minute` INT NOT NULL DEFAULT 59,
+  `days_of_week` VARCHAR(20) DEFAULT '1,2,3,4,5,6,7',
+  `enabled` TINYINT(1) NOT NULL DEFAULT 1,
+  PRIMARY KEY (`id`),
+  KEY `bot_id` (`bot_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

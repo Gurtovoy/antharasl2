@@ -1,0 +1,6 @@
+<!ELEMENT autobot_buffs (class_buffs*)>
+<!ELEMENT class_buffs (buff*)>
+<!ATTLIST class_buffs classId CDATA #REQUIRED>
+<!ELEMENT buff EMPTY>
+<!ATTLIST buff skillId CDATA #REQUIRED>
+<!ATTLIST buff skillLevel CDATA #REQUIRED>

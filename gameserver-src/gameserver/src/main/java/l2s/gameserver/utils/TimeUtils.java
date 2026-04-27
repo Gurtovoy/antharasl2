@@ -1,0 +1,40 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  l2s.commons.time.cron.SchedulingPattern
+ */
+package l2s.gameserver.utils;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import l2s.commons.time.cron.SchedulingPattern;
+
+public class TimeUtils {
+    public static final SimpleDateFormat SIMPLE_FORMAT = new SimpleDateFormat("HH:mm dd.MM.yyyy");
+    public static final SchedulingPattern DAILY_DATE_PATTERN = new SchedulingPattern("30 6 * * *");
+
+    public static String toSimpleFormat(Calendar cal) {
+        return SIMPLE_FORMAT.format(cal.getTime());
+    }
+
+    public static String toSimpleFormat(long cal) {
+        return SIMPLE_FORMAT.format(cal);
+    }
+
+    public static Calendar getCalendarFromString(String datetime, String format) {
+        SimpleDateFormat df = new SimpleDateFormat(format);
+        try {
+            Date time = df.parse(datetime);
+            Calendar calendar = Calendar.getInstance();
+            calendar.setTime(time);
+            return calendar;
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+}
+

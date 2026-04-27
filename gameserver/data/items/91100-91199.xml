@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "item.dtd">
+<list>
+	<armor id="91138" name="Reinforced Antharas\' Earring">
+		<set name="crystal_type" value="NONE"/>
+		<set name="icon" value="icon.accessory_earring_of_antaras_i01"/>
+		<set name="type" value="NONE"/>
+		<set name="weight" value="150"/>
+		<equip>
+			<slot id="RIGHT_EAR"/>
+			<slot id="LEFT_EAR"/>
+		</equip>
+		<skills>
+            <skill id="3558" level="13"/>
+        </skills>
+		<for>
+			<add stat="mDef" order="0x10" value="84"/>
+			<add stat="maxMp" order="0x60" value="34"/>
+		</for>
+	</armor>
+</list>

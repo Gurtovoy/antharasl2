@@ -1,0 +1,81 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  org.dom4j.Element
+ *  org.slf4j.Logger
+ *  org.slf4j.LoggerFactory
+ */
+package l2s.gameserver.templates.fakeplayer;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import l2s.gameserver.model.base.ClassType;
+import l2s.gameserver.model.base.Race;
+import l2s.gameserver.templates.fakeplayer.FakePlayerActionsHolder;
+import l2s.gameserver.templates.fakeplayer.FarmZoneTemplate;
+import l2s.gameserver.templates.fakeplayer.actions.OrdinaryActions;
+import org.dom4j.Element;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class FakePlayerAITemplate {
+    private static final Logger _log = LoggerFactory.getLogger(FakePlayerAITemplate.class);
+    private final Race _race;
+    private final ClassType _type;
+    private final OrdinaryActions _onCreateAction;
+    private final List<FarmZoneTemplate> _farmZones = new ArrayList<FarmZoneTemplate>();
+
+    public FakePlayerAITemplate(Race race, ClassType type, OrdinaryActions onCreateAction) {
+        this._race = race;
+        this._type = type;
+        this._onCreateAction = onCreateAction;
+    }
+
+    public Race getRace() {
+        return this._race;
+    }
+
+    public ClassType getType() {
+        return this._type;
+    }
+
+    public OrdinaryActions getOnCreateAction() {
+        return this._onCreateAction;
+    }
+
+    public void addFarmZone(FarmZoneTemplate farmZone) {
+        this._farmZones.add(farmZone);
+    }
+
+    public List<FarmZoneTemplate> getFarmZones() {
+        return this._farmZones;
+    }
+
+    public static FakePlayerAITemplate parse(Element element) {
+        Element charCreateElement = element.element("on_character_create");
+        if (charCreateElement == null) {
+            _log.warn("Cannot find \"on_character_create\" element!");
+            return null;
+        }
+        FakePlayerActionsHolder actionsHolder = new FakePlayerActionsHolder();
+        Race race = Race.valueOf(element.attributeValue("race").toUpperCase());
+        ClassType type = ClassType.valueOf(element.attributeValue("type").toUpperCase());
+        OrdinaryActions onCreateAction = OrdinaryActions.parse(actionsHolder, charCreateElement);
+        FakePlayerAITemplate template = new FakePlayerAITemplate(race, type, onCreateAction);
+        Iterator iterator = element.elementIterator("farm");
+        while (iterator.hasNext()) {
+            template.addFarmZone(FarmZoneTemplate.parse(actionsHolder, (Element)iterator.next()));
+        }
+        iterator = element.elementIterator("action");
+        while (iterator.hasNext()) {
+            Element e = (Element)iterator.next();
+            int actionId = Integer.parseInt(e.attributeValue("id"));
+            OrdinaryActions action = OrdinaryActions.parse(actionsHolder, e);
+            actionsHolder.addAction(actionId, action);
+        }
+        return template;
+    }
+}
+

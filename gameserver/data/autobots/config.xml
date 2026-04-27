@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autobots_config>
+    <setting name="thinkIterationMs" value="350"/>
+    <setting name="defaultTitle" value=""/>
+    <setting name="defaultTargetingRange" value="2000"/>
+    <setting name="defaultAttackPlayerType" value="NONE"/>
+    <setting name="defaultTargetingPreference" value="RANDOM"/>
+    <setting name="useManaPots" value="false"/>
+    <setting name="useHealingPots" value="false"/>
+    <setting name="useCpPots" value="false"/>
+    <setting name="manaPotThreshold" value="0.3"/>
+    <setting name="healingPotThreshold" value="0.3"/>
+    <setting name="cpPotThreshold" value="0.3"/>
+    <setting name="maxActiveBots" value="100"/>
+    <setting name="spawnDelayMs" value="1000"/>
+</autobots_config>

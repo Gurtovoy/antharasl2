@@ -1,0 +1,2544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<territory name="aden22_2519_09">
+		<add x="166332" y="60416" zmin="-4144" zmax="-3344"/>
+		<add x="169612" y="57564" zmin="-4144" zmax="-3344"/>
+		<add x="171180" y="57928" zmin="-4144" zmax="-3344"/>
+		<add x="171784" y="59884" zmin="-4144" zmax="-3344"/>
+		<add x="168484" y="62112" zmin="-4144" zmax="-3344"/>
+	</territory>
+	<spawn name="aden22_2519_09" count="4" respawn="27">
+		<territory name="aden22_2519_09"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_09" count="3" respawn="27">
+		<territory name="aden22_2519_09"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_07">
+		<add x="163928" y="51916" zmin="-3844" zmax="-3244"/>
+		<add x="164816" y="51716" zmin="-3844" zmax="-3244"/>
+		<add x="165248" y="53408" zmin="-3844" zmax="-3244"/>
+		<add x="165176" y="55716" zmin="-3844" zmax="-3244"/>
+		<add x="163948" y="55884" zmin="-3844" zmax="-3244"/>
+	</territory>
+	<spawn name="aden22_2519_07" count="1" respawn="27">
+		<territory name="aden22_2519_07"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_07" count="1" respawn="27">
+		<territory name="aden22_2519_07"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_07" count="1" respawn="27">
+		<territory name="aden22_2519_07"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_08">
+		<add x="163960" y="56092" zmin="-4168" zmax="-3368"/>
+		<add x="165016" y="55956" zmin="-4168" zmax="-3368"/>
+		<add x="166272" y="60084" zmin="-4168" zmax="-3368"/>
+		<add x="165224" y="60168" zmin="-4168" zmax="-3368"/>
+		<add x="163948" y="59128" zmin="-4168" zmax="-3368"/>
+	</territory>
+	<spawn name="aden22_2519_08" count="1" respawn="27">
+		<territory name="aden22_2519_08"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_08" count="1" respawn="27">
+		<territory name="aden22_2519_08"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_08" count="1" respawn="27">
+		<territory name="aden22_2519_08"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_05">
+		<add x="168096" y="45832" zmin="-3924" zmax="-3524"/>
+		<add x="169904" y="46720" zmin="-3924" zmax="-3524"/>
+		<add x="170416" y="47984" zmin="-3924" zmax="-3524"/>
+		<add x="169632" y="49344" zmin="-3924" zmax="-3524"/>
+		<add x="167196" y="48172" zmin="-3924" zmax="-3524"/>
+	</territory>
+	<spawn name="aden22_2519_05" count="2" respawn="27">
+		<territory name="aden22_2519_05"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_05" count="2" respawn="27">
+		<territory name="aden22_2519_05"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_05" count="3" respawn="27">
+		<territory name="aden22_2519_05"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_03">
+		<add x="164072" y="42384" zmin="-3804" zmax="-3204"/>
+		<add x="166584" y="42176" zmin="-3804" zmax="-3204"/>
+		<add x="166688" y="44096" zmin="-3804" zmax="-3204"/>
+		<add x="163980" y="45784" zmin="-3804" zmax="-3204"/>
+	</territory>
+	<spawn name="aden22_2519_03" count="2" respawn="27">
+		<territory name="aden22_2519_03"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_03" count="3" respawn="27">
+		<territory name="aden22_2519_03"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_03" count="3" respawn="27">
+		<territory name="aden22_2519_03"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_04">
+		<add x="163944" y="45916" zmin="-3860" zmax="-3060"/>
+		<add x="166488" y="44228" zmin="-3860" zmax="-3060"/>
+		<add x="168092" y="45724" zmin="-3860" zmax="-3060"/>
+		<add x="167156" y="48180" zmin="-3860" zmax="-3060"/>
+		<add x="163912" y="46896" zmin="-3860" zmax="-3060"/>
+	</territory>
+	<spawn name="aden22_2519_04" count="2" respawn="27">
+		<territory name="aden22_2519_04"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_04" count="3" respawn="27">
+		<territory name="aden22_2519_04"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_04" count="3" respawn="27">
+		<territory name="aden22_2519_04"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_01">
+		<add x="165860" y="33740" zmin="-4044" zmax="-3544"/>
+		<add x="167020" y="34432" zmin="-4044" zmax="-3544"/>
+		<add x="168032" y="36124" zmin="-4044" zmax="-3544"/>
+		<add x="167468" y="36736" zmin="-4044" zmax="-3544"/>
+		<add x="167000" y="36704" zmin="-4044" zmax="-3544"/>
+		<add x="165840" y="34896" zmin="-4044" zmax="-3544"/>
+	</territory>
+	<spawn name="aden22_2519_01" count="1" respawn="27">
+		<territory name="aden22_2519_01"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_01" count="1" respawn="27">
+		<territory name="aden22_2519_01"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_01" count="1" respawn="27">
+		<territory name="aden22_2519_01"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_02">
+		<add x="163932" y="38340" zmin="-3832" zmax="-3232"/>
+		<add x="166888" y="38216" zmin="-3832" zmax="-3232"/>
+		<add x="167236" y="38952" zmin="-3832" zmax="-3232"/>
+		<add x="166684" y="41752" zmin="-3832" zmax="-3232"/>
+		<add x="165228" y="41804" zmin="-3832" zmax="-3232"/>
+		<add x="163960" y="41568" zmin="-3832" zmax="-3232"/>
+	</territory>
+	<spawn name="aden22_2519_02" count="3" respawn="27">
+		<territory name="aden22_2519_02"/>
+		<npc id="20679"/><!--Болотный Сталкер-->
+	</spawn>
+	<spawn name="aden22_2519_02" count="3" respawn="27">
+		<territory name="aden22_2519_02"/>
+		<npc id="20680"/><!--Болотный Дрейк-->
+	</spawn>
+	<spawn name="aden22_2519_02" count="3" respawn="27">
+		<territory name="aden22_2519_02"/>
+		<npc id="21017"/><!--Падший Орк-->
+	</spawn>
+	<territory name="aden22_2519_16">
+		<add x="176428" y="37512" zmin="-4908" zmax="-4308"/>
+		<add x="178024" y="37168" zmin="-4908" zmax="-4308"/>
+		<add x="179104" y="37172" zmin="-4908" zmax="-4308"/>
+		<add x="179116" y="38308" zmin="-4908" zmax="-4308"/>
+		<add x="177220" y="38320" zmin="-4908" zmax="-4308"/>
+	</territory>
+	<spawn name="aden22_2519_16" count="1" respawn="27">
+		<territory name="aden22_2519_16"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_16" count="1" respawn="27">
+		<territory name="aden22_2519_16"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_16" count="1" respawn="27">
+		<territory name="aden22_2519_16"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_17">
+		<add x="179140" y="37168" zmin="-4888" zmax="-4488"/>
+		<add x="180808" y="36376" zmin="-4888" zmax="-4488"/>
+		<add x="181864" y="36532" zmin="-4888" zmax="-4488"/>
+		<add x="179668" y="38396" zmin="-4888" zmax="-4488"/>
+		<add x="179140" y="38312" zmin="-4888" zmax="-4488"/>
+	</territory>
+	<spawn name="aden22_2519_17" count="1" respawn="27">
+		<territory name="aden22_2519_17"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_17" count="1" respawn="27">
+		<territory name="aden22_2519_17"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_17" count="1" respawn="27">
+		<territory name="aden22_2519_17"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_14">
+		<add x="171444" y="36920" zmin="-4720" zmax="-4320"/>
+		<add x="173216" y="37400" zmin="-4720" zmax="-4320"/>
+		<add x="174292" y="37916" zmin="-4720" zmax="-4320"/>
+		<add x="173536" y="39396" zmin="-4720" zmax="-4320"/>
+		<add x="171336" y="37688" zmin="-4720" zmax="-4320"/>
+	</territory>
+	<spawn name="aden22_2519_14" count="1" respawn="27">
+		<territory name="aden22_2519_14"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_14" count="1" respawn="27">
+		<territory name="aden22_2519_14"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_14" count="1" respawn="27">
+		<territory name="aden22_2519_14"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_15">
+		<add x="174304" y="37940" zmin="-4804" zmax="-4204"/>
+		<add x="176420" y="37516" zmin="-4804" zmax="-4204"/>
+		<add x="177148" y="38388" zmin="-4804" zmax="-4204"/>
+		<add x="176000" y="39104" zmin="-4804" zmax="-4204"/>
+		<add x="173864" y="39076" zmin="-4804" zmax="-4204"/>
+	</territory>
+	<spawn name="aden22_2519_15" count="1" respawn="27">
+		<territory name="aden22_2519_15"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_15" count="1" respawn="27">
+		<territory name="aden22_2519_15"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_15" count="1" respawn="27">
+		<territory name="aden22_2519_15"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_12">
+		<add x="167388" y="49296" zmin="-4216" zmax="-3716"/>
+		<add x="169596" y="49388" zmin="-4216" zmax="-3716"/>
+		<add x="169124" y="50244" zmin="-4216" zmax="-3716"/>
+		<add x="167792" y="52144" zmin="-4216" zmax="-3716"/>
+		<add x="165712" y="52016" zmin="-4216" zmax="-3716"/>
+		<add x="165556" y="51392" zmin="-4216" zmax="-3716"/>
+	</territory>
+	<spawn name="aden22_2519_12" count="3" respawn="27">
+		<territory name="aden22_2519_12"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_12" count="3" respawn="27">
+		<territory name="aden22_2519_12"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_12" count="1" respawn="27">
+		<territory name="aden22_2519_12"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_12" count="1" respawn="27">
+		<territory name="aden22_2519_12"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_13">
+		<add x="169348" y="36740" zmin="-4568" zmax="-3968"/>
+		<add x="170380" y="36712" zmin="-4568" zmax="-3968"/>
+		<add x="171204" y="37652" zmin="-4568" zmax="-3968"/>
+		<add x="170952" y="37996" zmin="-4568" zmax="-3968"/>
+		<add x="169840" y="37940" zmin="-4568" zmax="-3968"/>
+	</territory>
+	<spawn name="aden22_2519_13" count="1" respawn="27">
+		<territory name="aden22_2519_13"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_13" count="1" respawn="27">
+		<territory name="aden22_2519_13"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_13" count="1" respawn="27">
+		<territory name="aden22_2519_13"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_10">
+		<add x="166304" y="55068" zmin="-4268" zmax="-3668"/>
+		<add x="168292" y="54176" zmin="-4268" zmax="-3668"/>
+		<add x="169664" y="57392" zmin="-4268" zmax="-3668"/>
+		<add x="167432" y="59436" zmin="-4268" zmax="-3668"/>
+		<add x="166384" y="58908" zmin="-4268" zmax="-3668"/>
+		<add x="165424" y="57252" zmin="-4268" zmax="-3668"/>
+	</territory>
+	<spawn name="aden22_2519_10" count="4" respawn="27">
+		<territory name="aden22_2519_10"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_10" count="3" respawn="27">
+		<territory name="aden22_2519_10"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_11">
+		<add x="166280" y="52288" zmin="-4272" zmax="-3872"/>
+		<add x="167896" y="52304" zmin="-4272" zmax="-3872"/>
+		<add x="168808" y="53076" zmin="-4272" zmax="-3872"/>
+		<add x="168236" y="54124" zmin="-4272" zmax="-3872"/>
+		<add x="166356" y="55028" zmin="-4272" zmax="-3872"/>
+	</territory>
+	<spawn name="aden22_2519_11" count="2" respawn="27">
+		<territory name="aden22_2519_11"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_11" count="2" respawn="27">
+		<territory name="aden22_2519_11"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_11" count="1" respawn="27">
+		<territory name="aden22_2519_11"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_11" count="1" respawn="27">
+		<territory name="aden22_2519_11"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_20">
+		<add x="182780" y="36696" zmin="-4060" zmax="-3460"/>
+		<add x="184268" y="37492" zmin="-4060" zmax="-3460"/>
+		<add x="184460" y="39704" zmin="-4060" zmax="-3460"/>
+		<add x="181168" y="39068" zmin="-4060" zmax="-3460"/>
+	</territory>
+	<spawn name="aden22_2519_20" count="2" respawn="27">
+		<territory name="aden22_2519_20"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_20" count="2" respawn="27">
+		<territory name="aden22_2519_20"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_20" count="1" respawn="27">
+		<territory name="aden22_2519_20"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_20" count="1" respawn="27">
+		<territory name="aden22_2519_20"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_25">
+		<add x="173876" y="40948" zmin="-5000" zmax="-4600"/>
+		<add x="176148" y="42236" zmin="-5000" zmax="-4600"/>
+		<add x="175792" y="44880" zmin="-5000" zmax="-4600"/>
+		<add x="173184" y="44264" zmin="-5000" zmax="-4600"/>
+		<add x="172332" y="40752" zmin="-5000" zmax="-4600"/>
+	</territory>
+	<spawn name="aden22_2519_25" count="1" respawn="27">
+		<territory name="aden22_2519_25"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_25" count="2" respawn="27">
+		<territory name="aden22_2519_25"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_25" count="3" respawn="27">
+		<territory name="aden22_2519_25"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_25" count="2" respawn="27">
+		<territory name="aden22_2519_25"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_23">
+		<add x="177768" y="41668" zmin="-3944" zmax="-3444"/>
+		<add x="179416" y="40796" zmin="-3944" zmax="-3444"/>
+		<add x="180248" y="41216" zmin="-3944" zmax="-3444"/>
+		<add x="179112" y="43268" zmin="-3944" zmax="-3444"/>
+		<add x="177852" y="43136" zmin="-3944" zmax="-3444"/>
+	</territory>
+	<spawn name="aden22_2519_23" count="1" respawn="27">
+		<territory name="aden22_2519_23"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_23" count="1" respawn="27">
+		<territory name="aden22_2519_23"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_23" count="1" respawn="27">
+		<territory name="aden22_2519_23"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_24">
+		<add x="181024" y="41644" zmin="-3976" zmax="-3376"/>
+		<add x="181584" y="41976" zmin="-3976" zmax="-3376"/>
+		<add x="181520" y="44032" zmin="-3976" zmax="-3376"/>
+		<add x="180300" y="44148" zmin="-3976" zmax="-3376"/>
+		<add x="180164" y="42920" zmin="-3976" zmax="-3376"/>
+	</territory>
+	<spawn name="aden22_2519_24" count="1" respawn="27">
+		<territory name="aden22_2519_24"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_24" count="1" respawn="27">
+		<territory name="aden22_2519_24"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_24" count="1" respawn="27">
+		<territory name="aden22_2519_24"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_21">
+		<add x="181148" y="39136" zmin="-3884" zmax="-3484"/>
+		<add x="184384" y="39796" zmin="-3884" zmax="-3484"/>
+		<add x="184796" y="40692" zmin="-3884" zmax="-3484"/>
+		<add x="184360" y="41684" zmin="-3884" zmax="-3484"/>
+		<add x="181972" y="42140" zmin="-3884" zmax="-3484"/>
+		<add x="179656" y="40760" zmin="-3884" zmax="-3484"/>
+		<add x="178868" y="39556" zmin="-3884" zmax="-3484"/>
+	</territory>
+	<spawn name="aden22_2519_21" count="4" respawn="27">
+		<territory name="aden22_2519_21"/>
+		<npc id="21018"/><!--Древняя Горгулья-->
+	</spawn>
+	<spawn name="aden22_2519_21" count="4" respawn="27">
+		<territory name="aden22_2519_21"/>
+		<npc id="21019"/><!--Стрелок Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_21" count="1" respawn="27">
+		<territory name="aden22_2519_21"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_21" count="2" respawn="27">
+		<territory name="aden22_2519_21"/>
+		<npc id="21258"/><!--Шаман Падших Орков-->
+	</spawn>
+	<territory name="aden22_2519_22">
+		<add x="176356" y="40588" zmin="-3956" zmax="-3556"/>
+		<add x="178704" y="39708" zmin="-3956" zmax="-3556"/>
+		<add x="179228" y="40748" zmin="-3956" zmax="-3556"/>
+		<add x="177704" y="41576" zmin="-3956" zmax="-3556"/>
+	</territory>
+	<spawn name="aden22_2519_22" count="1" respawn="27">
+		<territory name="aden22_2519_22"/>
+		<npc id="21020"/><!--Шаман Падших Орков-->
+	</spawn>
+	<spawn name="aden22_2519_22" count="1" respawn="27">
+		<territory name="aden22_2519_22"/>
+		<npc id="21021"/><!--Острый Коготь-->
+	</spawn>
+	<spawn name="aden22_2519_22" count="1" respawn="27">
+		<territory name="aden22_2519_22"/>
+		<npc id="21022"/><!--Главный Воин Падших Орков-->
+	</spawn>
+	<spawn name="aden22_qm2519_01" count="1" respawn="300">
+		<territory>
+			<add x="171708" y="43964" zmin="-4972" zmax="-4772"/>
+			<add x="171908" y="43964" zmin="-4972" zmax="-4772"/>
+			<add x="171908" y="44164" zmin="-4972" zmax="-4772"/>
+			<add x="171708" y="44164" zmin="-4972" zmax="-4772"/>
+		</territory>
+		<npc id="27316"/><!--Ледяной Монстр-->
+	</spawn>	
+	<spawn name="aden22_npc2519_02" count="1" respawn="60">
+		<point x="181264" y="36640" z="-4789" h="25000"/>
+		<npc id="31658"/><!--Камень Познания-->
+	</spawn>
+	<territory name="aden23_2519_01">
+		<add x="172467" y="53837" zmin="-6072" zmax="-5572"/>
+		<add x="176223" y="53110" zmin="-6072" zmax="-5572"/>
+		<add x="177496" y="57409" zmin="-6072" zmax="-5572"/>
+		<add x="173992" y="59487" zmin="-6072" zmax="-5572"/>
+		<add x="171647" y="55312" zmin="-6072" zmax="-5572"/>
+	</territory>
+	<spawn name="aden23_2519_01" count="18" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_01"/>
+		<npc id="20965"/><!--Осколок Иллюзии-->
+	</spawn>
+	<spawn name="aden23_2519_01" count="16" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_01"/>
+		<npc id="20970"/><!--Воитель-->
+	</spawn>
+	<spawn name="aden23_2519_01" count="16" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_01"/>
+		<npc id="20966"/><!--Перевоплощенное Создание-->
+	</spawn>
+	<territory name="aden23_2519_04">
+		<add x="188630" y="47013" zmin="-6116" zmax="-5616"/>
+		<add x="187622" y="48613" zmin="-6116" zmax="-5616"/>
+		<add x="189047" y="49729" zmin="-6116" zmax="-5616"/>
+		<add x="187063" y="52435" zmin="-6116" zmax="-5616"/>
+		<add x="182230" y="48533" zmin="-6116" zmax="-5616"/>
+		<add x="187258" y="45770" zmin="-6116" zmax="-5616"/>
+	</territory>
+	<spawn name="aden23_2519_04" count="14" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_04"/>
+		<npc id="20973"/><!--Забытый Древний Житель-->
+	</spawn>
+	<spawn name="aden23_2519_04" count="16" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_04"/>
+		<npc id="20968"/><!--Несуществующий-->
+	</spawn>
+	<spawn name="aden23_2519_04" count="16" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_04"/>
+		<npc id="20969"/><!--Тень Гиганта-->
+	</spawn>
+	<spawn name="aden23_2519_04" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_04"/>
+		<npc id="20971"/><!--Воин-->
+	</spawn>
+	<territory name="aden23_2519_03">
+		<add x="179116" y="51628" zmin="-6112" zmax="-5612"/>
+		<add x="182542" y="48378" zmin="-6112" zmax="-5612"/>
+		<add x="186097" y="51828" zmin="-6112" zmax="-5612"/>
+		<add x="182545" y="55789" zmin="-6112" zmax="-5612"/>
+	</territory>
+	<spawn name="aden23_2519_03" count="10" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20967"/><!--Древняя Тварь-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="10" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20971"/><!--Воин-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="10" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20972"/><!--Шаман-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="8" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20973"/><!--Забытый Древний Житель-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20968"/><!--Несуществующий-->
+	</spawn>
+	<spawn name="aden23_2519_03" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_03"/>
+		<npc id="20969"/><!--Тень Гиганта-->
+	</spawn>
+	<territory name="aden23_2519_02">
+		<add x="175583" y="52825" zmin="-6072" zmax="-5572"/>
+		<add x="179200" y="51623" zmin="-6072" zmax="-5572"/>
+		<add x="182800" y="55943" zmin="-6072" zmax="-5572"/>
+		<add x="177383" y="57572" zmin="-6072" zmax="-5572"/>
+	</territory>
+	<spawn name="aden23_2519_02" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20965"/><!--Осколок Иллюзии-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20970"/><!--Воитель-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20966"/><!--Перевоплощенное Создание-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="12" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20967"/><!--Древняя Тварь-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="6" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20971"/><!--Воин-->
+	</spawn>
+	<spawn name="aden23_2519_02" count="12" respawn="70" respawn_random="15">
+		<territory name="aden23_2519_02"/>
+		<npc id="20972"/><!--Шаман-->
+	</spawn>
+	<spawn name="Defrektor" count="1" respawn_pattern="00 21 * * *">
+		<point x="167928" y="50696" z="-4112" h="21344"/>
+		<npc id="25775"/><!--Злой Орк Дефректор-->
+	</spawn>
+	<spawn name="Muskel" count="1" respawn_pattern="00 21 * * *">
+		<point x="171976" y="55320" z="-5920" h="21344"/>
+		<npc id="25782"/><!--Верховный Шаман Мускель-->
+	</spawn>
+	<spawn name="Varmoni" count="1" respawn_pattern="00 21 * * *">
+		<point x="174808" y="52552" z="-5856" h="21344"/>
+		<npc id="25781"/><!--Вармони-->
+	</spawn>
+	<spawn name="Elborgen" count="1" respawn_pattern="00 21 * * *">
+		<point x="174872" y="58856" z="-5856" h="21344"/>
+		<npc id="25783"/><!--Батус Эльборген-->
+	</spawn>
+	<spawn name="Daumen" count="1" respawn_pattern="00 21 * * *">
+		<point x="183640" y="54136" z="-5760" h="21344"/>
+		<npc id="25784"/><!--Кшана Даумен-->
+	</spawn>
+	<spawn name="Varbasion" count="1" respawn_pattern="00 21 * * *">
+		<point x="180488" y="50328" z="-5872" h="21344"/>
+		<npc id="25780"/><!--Варбасион-->
+	</spawn>
+	<spawn name="Garios" count="1" respawn_pattern="00 21 * * *">
+		<point x="182776" y="47480" z="-5888" h="21344"/>
+		<npc id="25779"/><!--Гариос-->
+	</spawn>
+	<spawn name="Zetal" count="1" respawn="86400" respawn_random="12000">
+		<point x="185048" y="37032" z="-4192" h="21344"/>
+		<npc id="25772"/><!--Злой Орк Зетал-->
+	</spawn>
+	<spawn name="Tabris" count="1" respawn_pattern="00 21 * * *">
+		<point x="173256" y="39128" z="-4640" h="21344"/>
+		<npc id="25773"/><!--Злой Орк Табрис-->
+	</spawn>
+	<spawn name="Turaktion" count="1" respawn_pattern="00 21 * * *">
+		<point x="173128" y="45192" z="-4800" h="21344"/>
+		<npc id="25777"/><!--Орк Амден Турактион-->
+	</spawn>
+	<spawn name="Turahot" count="1" respawn_pattern="00 21 * * *">
+		<point x="175192" y="43576" z="-4816" h="21344"/>
+		<npc id="25776"/><!--Орк Амден Турахот-->
+	</spawn>
+	<spawn name="Darfen" count="1" respawn="86400" respawn_random="12000">
+		<point x="63560" y="39000" z="-3712" h="21344"/>
+		<npc id="25745"/><!--Орк Тимак Дарфен-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="181251" y="50448" z="-4360" h="8423" />
+		<npc id="18017" /><!--Телепорт-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="176691" y="45601" z="-4184" h="6469" />
+		<npc id="34293" /><!--Марис-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175104" y="61184" z="-4368" h="65420" />
+		<npc id="18919" /><!---->
+	</spawn>
+	<!--Пещера Гигантов-->
+	<!--TODO: Перевести в локационный спавн.-->
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182199" y="52089" z="-4352" h="285" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182039" y="52979" z="-4344" h="63384" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182089" y="52513" z="-4368" h="14453" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182380" y="52910" z="-4368" h="41449" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183868" y="52171" z="-4360" h="59304" />
+		<npc id="21058" /><!--Лорд Зверей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184043" y="51845" z="-4344" h="12630" />
+		<npc id="21058" /><!--Лорд Зверей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183244" y="51854" z="-4368" h="7484" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183160" y="51672" z="-4368" h="12872" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183339" y="52568" z="-4360" h="6469" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182205" y="52478" z="-4368" h="26055" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182841" y="52089" z="-4368" h="22311" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182798" y="52314" z="-4368" h="36965" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182806" y="52352" z="-4368" h="50496" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183427" y="52725" z="-4344" h="6839" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182543" y="52008" z="-4360" h="47907" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183833" y="51879" z="-4344" h="50121" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182261" y="52854" z="-4368" h="30810" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182946" y="52248" z="-4368" h="54606" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183069" y="52330" z="-4368" h="17085" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182565" y="52697" z="-4368" h="12021" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183295" y="52789" z="-4344" h="49722" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183642" y="52578" z="-4344" h="40961" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178467" y="55218" z="-3984" h="23303" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179585" y="54033" z="-3984" h="54147" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="180164" y="54980" z="-3968" h="7864" />
+		<npc id="21058" /><!--Лорд Зверей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179363" y="54743" z="-3992" h="51666" />
+		<npc id="21058" /><!--Лорд Зверей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179500" y="55235" z="-3968" h="21473" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178702" y="55033" z="-3992" h="13360" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178853" y="54957" z="-3992" h="63119" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179540" y="55017" z="-3976" h="5962" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178644" y="54412" z="-3992" h="27974" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178744" y="55204" z="-3984" h="13193" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178767" y="54090" z="-3976" h="7146" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179680" y="53879" z="-3968" h="34726" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179080" y="55134" z="-3976" h="63582" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179186" y="53994" z="-3984" h="21960" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179875" y="54160" z="-3968" h="16032" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179932" y="54122" z="-3968" h="49384" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182296" y="53314" z="-4344" h="50195" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="180323" y="54718" z="-3968" h="20176" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186220" y="49260" z="-4352" h="6844" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185503" y="49703" z="-4352" h="5020" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184903" y="49639" z="-4344" h="14978" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185961" y="50111" z="-4344" h="27424" />
+		<npc id="21058" /><!--Лорд Зверей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186050" y="49832" z="-4344" h="1279" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185757" y="50013" z="-4344" h="60701" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186378" y="49415" z="-4344" h="29182" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185445" y="49953" z="-4344" h="33980" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185221" y="49791" z="-4344" h="41588" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185735" y="55039" z="-7232" h="61568" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185291" y="48719" z="-4360" h="16030" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185726" y="47621" z="-4344" h="46401" />
+		<npc id="21058" /><!--Лорд Зверей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185551" y="48698" z="-4368" h="26494" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185796" y="47573" z="-4344" h="52887" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186050" y="47557" z="-4344" h="4245" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185593" y="48273" z="-4360" h="51960" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185473" y="49117" z="-4368" h="51515" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185074" y="49080" z="-4360" h="56827" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185403" y="49119" z="-4368" h="26616" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185107" y="48819" z="-4352" h="33809" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175669" y="54711" z="-4344" h="62544" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174824" y="55019" z="-4368" h="20333" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175087" y="55248" z="-4368" h="23674" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175370" y="55043" z="-4352" h="3019" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174025" y="54692" z="-4344" h="33241" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174037" y="54680" z="-4344" h="29218" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175483" y="54628" z="-4344" h="64423" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="177455" y="54411" z="-3968" h="17663" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178020" y="54534" z="-3984" h="28655" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178110" y="54616" z="-3992" h="50206" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187014" y="57676" z="-7232" h="44693" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186823" y="57943" z="-7232" h="18417" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186791" y="57299" z="-7232" h="56667" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186719" y="57272" z="-4568" h="14508" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187155" y="57695" z="-4568" h="60692" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186575" y="57855" z="-4568" h="47157" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187968" y="61343" z="-4984" h="15717" />
+		<npc id="24020" /><!--Батур-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187967" y="61582" z="-4976" h="18293" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187088" y="61109" z="-4984" h="12579" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187594" y="60388" z="-4984" h="42567" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187286" y="60233" z="-4984" h="54611" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187236" y="60904" z="-4984" h="39392" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186979" y="60597" z="-4984" h="1751" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186972" y="60789" z="-4984" h="24073" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187866" y="59970" z="-4976" h="17458" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188000" y="61058" z="-4984" h="36673" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187151" y="60687" z="-4984" h="14151" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186953" y="61533" z="-7232" h="54213" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186456" y="60819" z="-7232" h="16383" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187520" y="60559" z="-7232" h="10343" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188126" y="60023" z="-7232" h="46345" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187317" y="59802" z="-7232" h="18130" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187037" y="60413" z="-7232" h="4914" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187411" y="60918" z="-7232" h="6197" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186892" y="61062" z="-7232" h="48805" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187527" y="61243" z="-7232" h="60638" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187393" y="61315" z="-4984" h="36125" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186648" y="62459" z="-4976" h="21273" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187599" y="62020" z="-7232" h="47990" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187515" y="61920" z="-4976" h="32550" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187123" y="62506" z="-4976" h="18107" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187187" y="62464" z="-4976" h="20049" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187759" y="62225" z="-7232" h="19445" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187547" y="61825" z="-7232" h="25811" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187569" y="61705" z="-7232" h="9318" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187499" y="61868" z="-7232" h="48679" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187815" y="62789" z="-7232" h="10458" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187093" y="62312" z="-4976" h="27092" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187391" y="62802" z="-4976" h="9844" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186404" y="62788" z="-4976" h="22581" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190160" y="59231" z="-4976" h="12348" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189134" y="61368" z="-6104" h="6738" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189273" y="61201" z="-6104" h="29691" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188817" y="61294" z="-6104" h="50197" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188683" y="61438" z="-6096" h="14804" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189433" y="60906" z="-6096" h="2377" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190117" y="60614" z="-4976" h="11789" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190482" y="61070" z="-4976" h="3411" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188904" y="62715" z="-4976" h="59338" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188322" y="62533" z="-4976" h="57222" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189335" y="62093" z="-6104" h="26922" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188910" y="61746" z="-6104" h="64360" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189220" y="61657" z="-6104" h="21740" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188980" y="61890" z="-6104" h="15438" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189307" y="62022" z="-6104" h="59840" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190196" y="61296" z="-4976" h="47430" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190265" y="62031" z="-6096" h="1780" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189063" y="62439" z="-4976" h="9332" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188867" y="62667" z="-4976" h="41442" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189061" y="62754" z="-4976" h="17265" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189675" y="62373" z="-4976" h="15442" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190821" y="59419" z="-7232" h="38109" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191737" y="59364" z="-7232" h="31613" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190551" y="59306" z="-4976" h="54761" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191126" y="58951" z="-4976" h="11500" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190795" y="59121" z="-4976" h="33980" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190690" y="59461" z="-4976" h="9457" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191812" y="58405" z="-4808" h="18346" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191840" y="58396" z="-4808" h="23095" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191947" y="58275" z="-4808" h="31842" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190999" y="61071" z="-4976" h="1382" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192365" y="60451" z="-7240" h="7788" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191481" y="59689" z="-7232" h="64461" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190717" y="61178" z="-4984" h="59530" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190721" y="61480" z="-6104" h="29115" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191459" y="59840" z="-7232" h="52949" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191858" y="60580" z="-7232" h="37375" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191404" y="60623" z="-7240" h="36550" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190664" y="59352" z="-7232" h="3243" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190722" y="60794" z="-7240" h="23095" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190693" y="61188" z="-7240" h="36992" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190816" y="61244" z="-7240" h="0" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190473" y="61271" z="-7240" h="28087" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191502" y="60323" z="-7232" h="6817" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192171" y="59809" z="-7232" h="40718" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192324" y="61554" z="-6096" h="29288" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192375" y="61419" z="-6096" h="64818" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190714" y="61130" z="-4984" h="20827" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191757" y="60514" z="-4976" h="16483" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192528" y="61127" z="-4976" h="4362" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190488" y="60925" z="-4976" h="61959" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190732" y="60677" z="-4976" h="45088" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191032" y="61310" z="-6104" h="54644" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190876" y="61324" z="-6104" h="7181" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190485" y="61562" z="-6104" h="62481" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191457" y="61720" z="-6096" h="56683" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190499" y="61714" z="-6104" h="3781" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191543" y="62872" z="-4976" h="24237" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191794" y="62033" z="-7232" h="10910" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192098" y="61971" z="-7232" h="4361" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191941" y="61366" z="-7232" h="41936" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191662" y="62064" z="-7232" h="8191" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190658" y="62096" z="-7232" h="37521" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192190" y="62632" z="-6096" h="23095" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192337" y="62860" z="-6096" h="37242" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192173" y="62293" z="-6096" h="30505" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190943" y="61555" z="-4984" h="49384" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190888" y="62747" z="-4976" h="30040" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192107" y="62549" z="-4976" h="63112" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191088" y="62539" z="-4976" h="4362" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191833" y="62819" z="-4976" h="8688" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191484" y="62733" z="-4976" h="54356" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191409" y="61991" z="-6096" h="10445" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190976" y="62203" z="-6096" h="41084" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190644" y="61749" z="-6104" h="51583" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191724" y="61704" z="-6096" h="51792" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191538" y="61591" z="-6096" h="1413" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190860" y="61665" z="-6104" h="57841" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186213" y="57411" z="-7232" h="29480" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185735" y="57785" z="-7232" h="59138" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184519" y="59028" z="-7232" h="22259" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184493" y="58894" z="-7232" h="61959" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185700" y="59089" z="-7232" h="9318" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185336" y="58572" z="-7232" h="33117" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185711" y="59244" z="-7232" h="15400" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185401" y="59231" z="-7232" h="50535" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184240" y="58598" z="-3992" h="40766" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185519" y="59926" z="-7232" h="36207" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184869" y="60651" z="-7232" h="63409" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185124" y="60877" z="-7232" h="1422" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184717" y="60906" z="-7232" h="23849" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185982" y="59772" z="-7232" h="41203" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184406" y="60025" z="-7232" h="33463" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185423" y="59848" z="-7232" h="65419" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185769" y="60214" z="-7232" h="10303" />
+		<npc id="24020" /><!--Батур-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186070" y="61043" z="-7232" h="43083" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186313" y="61308" z="-7232" h="62293" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185967" y="61283" z="-7232" h="14855" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185737" y="62815" z="-4976" h="56111" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186121" y="55924" z="-7232" h="27130" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185921" y="55679" z="-7232" h="61261" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185527" y="55729" z="-7232" h="22228" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185963" y="55933" z="-7232" h="43399" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186279" y="56464" z="-7232" h="47060" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185698" y="56586" z="-7232" h="43573" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186002" y="56844" z="-7232" h="0" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185479" y="55605" z="-4568" h="34152" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185765" y="56330" z="-4568" h="54611" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="185751" y="56745" z="-4568" h="23095" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186144" y="57237" z="-4568" h="4099" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186166" y="56242" z="-4568" h="21219" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186742" y="57121" z="-7232" h="57414" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186917" y="56118" z="-4576" h="4260" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187673" y="56923" z="-7232" h="48921" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187714" y="56059" z="-4568" h="59900" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186966" y="55283" z="-4568" h="33636" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187243" y="56272" z="-7240" h="19976" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187522" y="56824" z="-4568" h="56440" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188115" y="55565" z="-4568" h="64050" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187202" y="55620" z="-7232" h="58581" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187991" y="57197" z="-7232" h="51685" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188165" y="56509" z="-7232" h="33001" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187314" y="55776" z="-7240" h="24818" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187083" y="56076" z="-7240" h="25319" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187319" y="57410" z="-7232" h="51246" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187759" y="55701" z="-7232" h="38327" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186351" y="56928" z="-7232" h="36992" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187432" y="57114" z="-7232" h="60701" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186779" y="56057" z="-7232" h="6370" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187919" y="56551" z="-7232" h="3355" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187816" y="55869" z="-7232" h="45371" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187872" y="56254" z="-7232" h="24582" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187935" y="56524" z="-7232" h="2218" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187447" y="56204" z="-4576" h="56732" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186720" y="56575" z="-4576" h="57128" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188040" y="56633" z="-4568" h="11547" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186715" y="57052" z="-4568" h="64107" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187366" y="56776" z="-4568" h="59979" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186683" y="55952" z="-4576" h="54510" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186713" y="56904" z="-4576" h="52436" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188006" y="56325" z="-4568" h="5538" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184316" y="58936" z="-7232" h="5676" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183992" y="59161" z="-7232" h="18995" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182045" y="58675" z="-3992" h="35507" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184196" y="59033" z="-7232" h="35398" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183974" y="58211" z="-3992" h="42564" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183606" y="57965" z="-3992" h="43898" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182390" y="58943" z="-3992" h="28317" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182915" y="58810" z="-7232" h="44703" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183002" y="58767" z="-7232" h="14954" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183088" y="58915" z="-7232" h="16206" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183034" y="58914" z="-7232" h="28971" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184259" y="58301" z="-3992" h="45896" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183410" y="58401" z="-3992" h="37219" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184116" y="58721" z="-3992" h="18605" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183726" y="57788" z="-3992" h="25935" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183798" y="58413" z="-3992" h="8875" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183582" y="58038" z="-3992" h="60550" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183599" y="57980" z="-3992" h="14970" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183294" y="58522" z="-3992" h="47094" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184136" y="58882" z="-3992" h="56109" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183796" y="58077" z="-3992" h="62924" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183980" y="58315" z="-3992" h="56137" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183714" y="59020" z="-3992" h="11093" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183457" y="59030" z="-3992" h="52224" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183740" y="61146" z="-3992" h="21841" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183858" y="61411" z="-3992" h="38838" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182973" y="59848" z="-7232" h="21571" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183961" y="61281" z="-3992" h="1134" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182649" y="60902" z="-7232" h="53833" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182840" y="61319" z="-7232" h="27698" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182938" y="60975" z="-7232" h="20847" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182325" y="61129" z="-7232" h="56488" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182910" y="60011" z="-7232" h="53833" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183044" y="59988" z="-7232" h="2773" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183113" y="59796" z="-7232" h="44676" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183059" y="59805" z="-7232" h="28544" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183532" y="61158" z="-3992" h="0" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184093" y="60854" z="-3992" h="147" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183795" y="60699" z="-3992" h="4835" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184143" y="60945" z="-3992" h="61959" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183562" y="61352" z="-3992" h="43308" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183281" y="60866" z="-3992" h="15909" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183496" y="60818" z="-3992" h="42168" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183792" y="60946" z="-7232" h="7314" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183954" y="60835" z="-7232" h="3243" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183692" y="60859" z="-7232" h="28544" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183596" y="60865" z="-7232" h="17615" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182427" y="61438" z="-3992" h="51799" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182609" y="62132" z="-3992" h="60050" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184187" y="61529" z="-3992" h="12284" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183517" y="61460" z="-7232" h="1657" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183715" y="62145" z="-3992" h="33007" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182723" y="62484" z="-3992" h="53113" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="184237" y="61934" z="-3992" h="61306" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183373" y="62294" z="-3992" h="60919" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183462" y="61718" z="-3992" h="56299" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="183620" y="62494" z="-3992" h="46769" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182759" y="62421" z="-3992" h="23290" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182725" y="61510" z="-3992" h="63661" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="180407" y="59749" z="-3992" h="2383" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="181892" y="59351" z="-3992" h="29628" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="181739" y="60205" z="-3992" h="29236" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="180534" y="60319" z="-3992" h="34576" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="181832" y="60111" z="-3992" h="44686" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="180595" y="60291" z="-3992" h="1875" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="181009" y="60037" z="-3992" h="32073" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182048" y="61567" z="-3992" h="48689" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182205" y="61352" z="-3992" h="41134" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182078" y="61324" z="-3992" h="28087" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="180505" y="61657" z="-4168" h="10661" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="181939" y="62479" z="-3992" h="63512" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="182064" y="61908" z="-3992" h="11555" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179908" y="60187" z="-3992" h="48979" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179380" y="60191" z="-3992" h="8879" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178964" y="59968" z="-3992" h="32073" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179629" y="61657" z="-4248" h="10540" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179264" y="61657" z="-4288" h="64111" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178318" y="61753" z="-4376" h="42885" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178991" y="61707" z="-4312" h="28544" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178138" y="61737" z="-4392" h="26156" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="176022" y="61323" z="-4368" h="59991" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174586" y="60813" z="-4368" h="22677" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175273" y="61054" z="-4368" h="35550" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175640" y="61250" z="-4368" h="64479" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175175" y="60702" z="-4368" h="57593" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="176088" y="60597" z="-4368" h="54733" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175437" y="60718" z="-4368" h="6796" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174090" y="62094" z="-4368" h="54546" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175692" y="62177" z="-4368" h="21220" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="176118" y="62874" z="-4368" h="8393" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174467" y="62127" z="-4368" h="33232" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175017" y="62654" z="-4368" h="14855" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175765" y="62388" z="-4368" h="14062" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175105" y="61727" z="-4368" h="13708" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173566" y="60613" z="-4368" h="63785" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173550" y="61056" z="-4368" h="51960" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173921" y="60664" z="-4368" h="4099" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173252" y="60988" z="-4368" h="32419" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173719" y="60911" z="-4368" h="40718" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173245" y="63134" z="-4368" h="31729" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173858" y="61861" z="-4368" h="36673" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173414" y="61964" z="-4368" h="38363" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173752" y="63134" z="-4368" h="64898" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173765" y="55620" z="-4368" h="45515" />
+		<npc id="21058" /><!--Лорд Зверей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173641" y="55956" z="-4352" h="20544" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173610" y="55515" z="-4360" h="30494" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173881" y="55893" z="-4360" h="32454" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173630" y="55474" z="-4360" h="55865" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174157" y="55984" z="-4352" h="8191" />
+		<npc id="21058" /><!--Лорд Зверей-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175307" y="56125" z="-4344" h="20457" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175252" y="55751" z="-4360" h="17868" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="175369" y="55396" z="-4352" h="5776" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174765" y="55441" z="-4368" h="14420" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174862" y="55946" z="-4360" h="26755" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173516" y="54683" z="-4344" h="25594" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173645" y="55144" z="-4360" h="4793" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173990" y="55288" z="-4368" h="3742" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="174037" y="54807" z="-4352" h="64361" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="173363" y="54561" z="-4344" h="29002" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="180664" y="58622" z="-3992" h="41741" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="180477" y="59117" z="-3992" h="30810" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="181839" y="59330" z="-3992" h="39378" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="181916" y="59285" z="-3992" h="8953" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="181504" y="58853" z="-3992" h="49153" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179729" y="58820" z="-3992" h="29863" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179729" y="59018" z="-3992" h="34222" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179080" y="58845" z="-3992" h="58825" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179771" y="58666" z="-3992" h="62863" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="180296" y="58983" z="-3992" h="36155" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178873" y="55260" z="-3976" h="40058" />
+		<npc id="20648" /><!--Палиот-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="178574" y="55635" z="-3968" h="30965" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="179043" y="55451" z="-3968" h="29530" />
+		<npc id="20646" /><!--Саблезуб-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187858" y="55228" z="-7232" h="20069" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186598" y="55225" z="-7232" h="0" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187547" y="55001" z="-7232" h="32535" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187300" y="54975" z="-4568" h="9298" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="187416" y="55105" z="-4568" h="5358" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="188334" y="55137" z="-7232" h="27931" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190272" y="53854" z="-4368" h="26953" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190440" y="54022" z="-4368" h="7861" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189777" y="53822" z="-4368" h="30226" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189685" y="53758" z="-4368" h="18107" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193346" y="60600" z="-6104" h="60686" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193351" y="61648" z="-6096" h="55233" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193555" y="61223" z="-4976" h="50056" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193010" y="61157" z="-7240" h="9405" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192608" y="61264" z="-7240" h="39028" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193538" y="61101" z="-7232" h="39573" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193073" y="61323" z="-7240" h="41266" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192830" y="60290" z="-7232" h="64591" />
+		<npc id="24022" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193283" y="61031" z="-7240" h="18172" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192783" y="60720" z="-7240" h="57568" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193567" y="61434" z="-6096" h="53833" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193321" y="60960" z="-6104" h="22903" />
+		<npc id="24016" /><!--Командир Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192652" y="61455" z="-6104" h="44996" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193572" y="61246" z="-6096" h="29990" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193665" y="59663" z="-4976" h="22078" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193348" y="59563" z="-4976" h="49153" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193526" y="59835" z="-4976" h="21064" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193551" y="61159" z="-4976" h="38966" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193500" y="61388" z="-4976" h="56634" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192545" y="60917" z="-4976" h="10268" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193088" y="60133" z="-7232" h="38986" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192758" y="62338" z="-7232" h="31770" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193542" y="62155" z="-7232" h="55222" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193713" y="62142" z="-7232" h="1180" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193058" y="62222" z="-7232" h="64219" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193645" y="61984" z="-6096" h="13699" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192622" y="62691" z="-6104" h="7310" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192305" y="62449" z="-6096" h="46179" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193675" y="61290" z="-6096" h="60856" />
+		<npc id="20653" /><!--Бандит Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192956" y="62417" z="-6104" h="21064" />
+		<npc id="24021" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193119" y="61457" z="-6096" h="33907" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193557" y="62402" z="-4976" h="21021" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192985" y="61929" z="-4984" h="60230" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193092" y="61863" z="-4984" h="42292" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193481" y="61947" z="-4976" h="30486" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193283" y="61537" z="-7240" h="32443" />
+		<npc id="20652" /><!--Леогул-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193296" y="59219" z="-4976" h="41203" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193734" y="58929" z="-4976" h="59683" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191908" y="56423" z="-4680" h="10886" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191878" y="57028" z="-4736" h="61417" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191998" y="56533" z="-4688" h="12642" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191840" y="56372" z="-7624" h="12162" />
+		<npc id="24018" /><!--Хекатон Прайм-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191896" y="55390" z="-4584" h="2212" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191911" y="56261" z="-4664" h="46274" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191990" y="55890" z="-4632" h="31384" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190316" y="54150" z="-4368" h="14000" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193317" y="53229" z="-4368" h="57222" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193885" y="54317" z="-4368" h="49447" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193380" y="54438" z="-4368" h="47134" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193742" y="53962" z="-4368" h="27545" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="194086" y="54201" z="-4368" h="718" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193426" y="53917" z="-4368" h="8420" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190217" y="51835" z="-4368" h="10436" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189631" y="51953" z="-4368" h="12805" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189809" y="52187" z="-4368" h="63195" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="189969" y="52120" z="-4368" h="10052" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190147" y="52480" z="-4368" h="33636" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190191" y="51831" z="-4368" h="17106" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191785" y="52678" z="-4368" h="2124" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190609" y="52789" z="-4368" h="55271" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190735" y="52724" z="-4368" h="25729" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191067" y="52407" z="-4368" h="62843" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192439" y="52532" z="-4368" h="53803" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191816" y="51681" z="-4368" h="45593" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192142" y="52453" z="-4368" h="28475" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192527" y="51623" z="-4368" h="55784" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="194011" y="52645" z="-4368" h="26371" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193282" y="52806" z="-4368" h="42832" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193882" y="53097" z="-4368" h="6991" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193757" y="51816" z="-4368" h="44009" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="194107" y="52612" z="-4368" h="2220" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193384" y="51852" z="-4368" h="29628" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193782" y="52947" z="-4368" h="23839" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="193393" y="51748" z="-4368" h="7961" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192542" y="52393" z="-4368" h="19551" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192415" y="49899" z="-4368" h="28230" />
+		<npc id="20651" /><!--Гамлин-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192373" y="51057" z="-4368" h="32704" />
+		<npc id="20771" /><!--Бариф-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192251" y="50411" z="-4368" h="49151" />
+		<npc id="20658" /><!--Тетрарх Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191650" y="50806" z="-4368" h="44230" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="192442" y="49254" z="-4368" h="33123" />
+		<npc id="20654" /><!--Воитель Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191280" y="50004" z="-4368" h="9566" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191680" y="50683" z="-4368" h="718" />
+		<npc id="20657" /><!--Маг Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190947" y="49400" z="-4368" h="529" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="190740" y="50657" z="-4368" h="63432" />
+		<npc id="20656" /><!--Воин Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="191659" y="50254" z="-4368" h="61097" />
+		<npc id="20655" /><!--Стрелец Младших Гигантов-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186909" y="48437" z="-4344" h="59875" />
+		<npc id="20650" /><!--Медведь Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186405" y="47871" z="-4344" h="39746" />
+		<npc id="20649" /><!--Паук Зомби-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186919" y="48353" z="-4344" h="63013" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+	<spawn count="1" respawn="60" respawn_random="0" period_of_day="none">
+		<point x="186405" y="47711" z="-4344" h="14074" />
+		<npc id="20647" /><!--Око Хаоса-->
+	</spawn>
+</list>

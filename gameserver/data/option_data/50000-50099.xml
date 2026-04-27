@@ -1,0 +1,277 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "option_data.dtd">
+<list>
+	<option_data id="50000">
+		<for>
+			<!--Маг. Защ. +9.-->
+			<add order="0x60" stat="mDef" value="9"/>
+		</for>
+	</option_data>
+	<option_data id="50001">
+		<for>
+			<!--Маг. Защ. +10.-->
+			<add order="0x60" stat="mDef" value="10"/>
+		</for>
+	</option_data>
+	<option_data id="50002">
+		<for>
+			<!--Маг. Защ. +12.-->
+			<add order="0x60" stat="mDef" value="12"/>
+		</for>
+	</option_data>
+	<option_data id="50003">
+		<for>
+			<!--Маг. Защ. +13.-->
+			<add order="0x60" stat="mDef" value="13"/>
+		</for>
+	</option_data>
+	<option_data id="50004">
+		<for>
+			<!--Маг. Защ. +14.-->
+			<!--Бонус опыта и SP +2%.-->
+			<add order="0x60" stat="mDef" value="14"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.02"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.02"/>
+		</for>
+	</option_data>
+	<option_data id="50005">
+		<for>
+			<!--Маг. Защ. +15.-->
+			<!--Бонус опыта и SP +5%.-->
+			<!--Физ / Маг. Атк. +10.-->
+			<add order="0x60" stat="mDef" value="15"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>		
+			<add order="0x60" stat="pAtk" value="10"/>	
+			<add order="0x60" stat="mAtk" value="10"/>	
+		</for>
+	</option_data>
+	<option_data id="50006">
+		<for>
+			<!--Маг. Защ. +16.-->
+			<!--Бонус опыта и SP +10%.-->
+			<!--Физ / Маг. Атк. +20.-->
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>		
+			<add order="0x60" stat="pAtk" value="20"/>	
+			<add order="0x60" stat="mAtk" value="20"/>				
+		</for>
+	</option_data>
+	<option_data id="50007">
+		<for>
+			<!--Маг. Защ. +17.-->
+			<!--Бонус опыта и SP +20%.-->
+			<!--Физ / Маг. Атк. +30.-->
+			<add order="0x60" stat="mDef" value="17"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>		
+			<add order="0x60" stat="pAtk" value="30"/>	
+			<add order="0x60" stat="mAtk" value="30"/>				
+		</for>
+	</option_data>
+	<option_data id="50008">
+		<for>
+			<!--Маг. Защ. +18.-->
+			<!--Бонус опыта и SP +25%.-->
+			<!--Физ / Маг. Атк. +40. Сила Физ. / Маг. Крит. Атк. +\\n5%.-->
+			<add order="0x60" stat="mDef" value="18"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.25"/>		
+			<add order="0x60" stat="pAtk" value="40"/>	
+			<add order="0x60" stat="mAtk" value="40"/>	
+			<add order="0x60" stat="pCritRate" value="5"/>	
+			<add order="0x60" stat="mCritRate" value="5"/>		
+		</for>
+	</option_data>
+	<option_data id="50009">
+		<for>
+			<!--Маг. Защ. +20.-->
+			<!--Бонус опыта и SP +30%.-->
+			<!--Физ / Маг. Атк. +50. Сила Физ. / Маг. Крит. Атк. +\\n5%.-->
+			<add order="0x60" stat="mDef" value="20"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>		
+			<add order="0x60" stat="pAtk" value="50"/>	
+			<add order="0x60" stat="mAtk" value="50"/>	
+			<add order="0x60" stat="pCritRate" value="5"/>	
+			<add order="0x60" stat="mCritRate" value="5"/>					
+		</for>
+	</option_data>
+	<option_data id="50010">
+		<for>
+			<!--Маг. Защ. +21.-->
+			<!--Бонус опыта и SP +30%.-->
+			<!--Физ / Маг. Атк. +60. Сила Физ. / Маг. Крит. Атк. +\\n5%.-->
+			<add order="0x60" stat="mDef" value="21"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>		
+			<add order="0x60" stat="pAtk" value="60"/>	
+			<add order="0x60" stat="mAtk" value="60"/>	
+			<add order="0x60" stat="pCritRate" value="5"/>	
+			<add order="0x60" stat="mCritRate" value="5"/>				
+		</for>
+	</option_data>
+	<option_data id="50011">
+		<!--Активное: Благословение Дракона Огня-->
+		<skills>
+			<skill id="35000" level="1"/> <!--Item Skill: Mystery Skill-->
+		</skills>			
+	</option_data>
+	<option_data id="50012">
+		<!--Активное: Благословение / Покровительство Дракона \\nОгня-->
+		<skills>
+			<skill id="35001" level="1"/>
+		</skills>			
+	</option_data>
+	<option_data id="50013">
+		<for>
+			<!--Маг. Защ. +9.-->
+			<add order="0x60" stat="mDef" value="9"/>
+		</for>
+	</option_data>
+	<option_data id="50014">
+		<for>
+			<!--Маг. Защ. +10.-->
+			<add order="0x60" stat="mDef" value="10"/>
+		</for>
+	</option_data>
+	<option_data id="50015">
+		<for>
+			<!--Маг. Защ. +12.-->
+			<add order="0x60" stat="mDef" value="12"/>
+		</for>
+	</option_data>
+	<option_data id="50016">
+		<for>
+			<!--Маг. Защ. +13.-->
+			<add order="0x60" stat="mDef" value="13"/>
+		</for>
+	</option_data>
+	<option_data id="50017">
+		<for>
+			<!--Маг. Защ. +14.-->
+			<!--Макс. HP +100. Макс. MP +40.-->
+			<add order="0x60" stat="mDef" value="14"/>
+			<add order="0x60" stat="maxHp" value="100"/>
+			<add order="0x60" stat="maxMp" value="40"/>
+		</for>
+	</option_data>
+	<option_data id="50018">
+		<for>
+			<!--Маг. Защ. +15.-->
+			<!--Макс. HP +150. Макс. MP +50.-->
+			<!--Получаемый урон -3%.-->
+			<add order="0x60" stat="mDef" value="15"/>
+			<add order="0x60" stat="maxHp" value="150"/>
+			<add order="0x60" stat="maxMp" value="50"/>			
+			<mul order="0x60" stat="pvpPhysDefenceBonus" value="1.03"/>
+			<mul order="0x60" stat="pvpPhysSkillDefenceBonus" value="1.03"/>
+			<mul order="0x60" stat="pvpMagicSkillDefenceBonus" value="1.03"/>	
+			<mul order="0x60" stat="pvePhysDefenceBonus" value="1.03"/>	
+			<mul order="0x60" stat="pvePhysSkillDefenceBonus" value="1.03"/>	
+			<mul order="0x60" stat="pveMagicSkillDefenceBonus" value="1.03"/>		
+		</for>
+	</option_data>
+	<option_data id="50019">
+		<for>
+			<!--Маг. Защ. +16.-->
+			<!--Макс. HP +200. Макс. MP +60. Макс. CP ++200.-->
+			<!--Получаемый урон -5%.-->
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="maxHp" value="200"/>
+			<add order="0x60" stat="maxMp" value="60"/>	
+			<add order="0x60" stat="maxCp" value="200"/>	
+			<mul order="0x60" stat="pvpPhysDefenceBonus" value="1.05"/>
+			<mul order="0x60" stat="pvpPhysSkillDefenceBonus" value="1.05"/>
+			<mul order="0x60" stat="pvpMagicSkillDefenceBonus" value="1.05"/>	
+			<mul order="0x60" stat="pvePhysDefenceBonus" value="1.05"/>	
+			<mul order="0x60" stat="pvePhysSkillDefenceBonus" value="1.05"/>	
+			<mul order="0x60" stat="pveMagicSkillDefenceBonus" value="1.05"/>				
+		</for>
+	</option_data>
+	<option_data id="50020">
+		<for>
+			<!--Маг. Защ. +17.-->
+			<!--Макс. HP +300. Макс. MP +90. Макс. CP ++300.-->
+			<!--Получаемый урон -10%. Скорость +7.-->
+			<add order="0x60" stat="mDef" value="17"/>
+			<add order="0x60" stat="maxHp" value="300"/>
+			<add order="0x60" stat="maxMp" value="90"/>	
+			<add order="0x60" stat="maxCp" value="300"/>
+			<add order="0x60" stat="runSpd" value="7"/>	
+			<mul order="0x60" stat="pvpPhysDefenceBonus" value="1.1"/>
+			<mul order="0x60" stat="pvpPhysSkillDefenceBonus" value="1.1"/>
+			<mul order="0x60" stat="pvpMagicSkillDefenceBonus" value="1.1"/>	
+			<mul order="0x60" stat="pvePhysDefenceBonus" value="1.1"/>	
+			<mul order="0x60" stat="pvePhysSkillDefenceBonus" value="1.1"/>	
+			<mul order="0x60" stat="pveMagicSkillDefenceBonus" value="1.1"/>			
+		</for>
+	</option_data>
+	<option_data id="50021">
+		<for>
+			<!--Маг. Защ. +18.-->
+			<!--Макс. HP +400. Макс. MP +120. Макс. CP ++400.-->
+			<!--Получаемый урон -20%. Скорость +7.-->
+			<add order="0x60" stat="mDef" value="18"/>
+			<add order="0x60" stat="maxHp" value="400"/>
+			<add order="0x60" stat="maxMp" value="120"/>	
+			<add order="0x60" stat="maxCp" value="400"/>
+			<add order="0x60" stat="runSpd" value="7"/>	
+			<mul order="0x60" stat="pvpPhysDefenceBonus" value="1.2"/>
+			<mul order="0x60" stat="pvpPhysSkillDefenceBonus" value="1.2"/>
+			<mul order="0x60" stat="pvpMagicSkillDefenceBonus" value="1.2"/>	
+			<mul order="0x60" stat="pvePhysDefenceBonus" value="1.2"/>	
+			<mul order="0x60" stat="pvePhysSkillDefenceBonus" value="1.2"/>	
+			<mul order="0x60" stat="pveMagicSkillDefenceBonus" value="1.2"/>				
+		</for>
+	</option_data>
+	<option_data id="50022">
+		<for>
+			<!--Маг. Защ. +20.-->
+			<!--Макс. HP +500. Макс. MP +150. Макс. CP ++500.-->
+			<!--Получаемый урон -20%. Скорость +7.-->
+			<add order="0x60" stat="mDef" value="20"/>
+			<add order="0x60" stat="maxHp" value="500"/>
+			<add order="0x60" stat="maxMp" value="150"/>	
+			<add order="0x60" stat="maxCp" value="500"/>
+			<add order="0x60" stat="runSpd" value="7"/>	
+			<mul order="0x60" stat="pvpPhysDefenceBonus" value="1.2"/>
+			<mul order="0x60" stat="pvpPhysSkillDefenceBonus" value="1.2"/>
+			<mul order="0x60" stat="pvpMagicSkillDefenceBonus" value="1.2"/>	
+			<mul order="0x60" stat="pvePhysDefenceBonus" value="1.2"/>	
+			<mul order="0x60" stat="pvePhysSkillDefenceBonus" value="1.2"/>	
+			<mul order="0x60" stat="pveMagicSkillDefenceBonus" value="1.2"/>				
+		</for>
+	</option_data>
+	<option_data id="50023">
+		<for>
+			<!--Маг. Защ. +21.-->
+			<!--Макс. HP +500. Макс. MP +150. Макс. CP ++500.-->
+			<!--Получаемый урон -20%. Скорость +7.-->
+			<add order="0x60" stat="mDef" value="21"/>
+			<add order="0x60" stat="maxHp" value="500"/>
+			<add order="0x60" stat="maxMp" value="150"/>	
+			<add order="0x60" stat="maxCp" value="500"/>
+			<add order="0x60" stat="runSpd" value="7"/>	
+			<mul order="0x60" stat="pvpPhysDefenceBonus" value="1.2"/>
+			<mul order="0x60" stat="pvpPhysSkillDefenceBonus" value="1.2"/>
+			<mul order="0x60" stat="pvpMagicSkillDefenceBonus" value="1.2"/>	
+			<mul order="0x60" stat="pvePhysDefenceBonus" value="1.2"/>	
+			<mul order="0x60" stat="pvePhysSkillDefenceBonus" value="1.2"/>	
+			<mul order="0x60" stat="pveMagicSkillDefenceBonus" value="1.2"/>				
+		</for>
+	</option_data>
+	<option_data id="50024">
+		<!--Активное: Дыхание Дракона Земли-->
+		<skills>
+			<skill id="35002" level="1"/> <!--Item Skill: Mystery Skill-->
+		</skills>				
+	</option_data>
+	<option_data id="50025">
+		<!--Активное: Дыхание / Защита Дракона Земли-->
+		<skills>
+			<skill id="35003" level="1"/> <!--Item Skill: Mystery Skill-->
+		</skills>				
+	</option_data>
+</list>

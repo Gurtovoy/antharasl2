@@ -1,0 +1,944 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "option_data.dtd">
+<list>
+	<option_data id="60000">
+		<for>
+			<!--Физ. Атк. +4-->
+			<add order="0x60" stat="pAtk" value="4"/>
+		</for>
+	</option_data>
+	<option_data id="60001">
+		<for>
+			<!--Физ. Атк. +6-->
+			<add order="0x60" stat="pAtk" value="6"/>
+		</for>
+	</option_data>
+	<option_data id="60002">
+		<for>
+			<!--Физ. Атк. +8-->
+			<add order="0x60" stat="pAtk" value="8"/>
+		</for>
+	</option_data>
+	<option_data id="60003">
+		<for>
+			<!--Физ. Атк. +12-->
+			<add order="0x60" stat="pAtk" value="12"/>
+		</for>
+	</option_data>
+	<option_data id="60004">
+		<for>
+			<!--Физ. Атк. +19-->
+			<add order="0x60" stat="pAtk" value="19"/>
+		</for>
+	</option_data>
+	<option_data id="60005">
+		<for>
+			<!--Физ. Атк. +28-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="pAtk" value="28"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>			
+		</for>
+	</option_data>
+	<option_data id="60006">
+		<for>
+			<!--Физ. Атк. +35-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="pAtk" value="35"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60007">
+		<for>
+			<!--Физ. Атк. +46-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="pAtk" value="46"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60008">
+		<for>
+			<!--Физ. Атк. +59-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="pAtk" value="59"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60009">
+		<for>
+			<!--Физ. Атк. +63-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="pAtk" value="63"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60010">
+		<for>
+			<!--Физ. Атк. +75-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="pAtk" value="75"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60011">
+		<for>
+			<!--Физ. Атк. +4, сила Физ. Крит. Атк. +26-->
+			<add order="0x60" stat="pAtk" value="4"/>	
+			<p_critical_damage value="26" type="DIFF"/>	
+		</for>
+	</option_data>
+	<option_data id="60012">
+		<for>
+			<!--Физ. Атк. +6, сила Физ. Крит. Атк. +38-->
+			<add order="0x60" stat="pAtk" value="6"/>	
+			<p_critical_damage value="38" type="DIFF"/>				
+		</for>
+	</option_data>
+	<option_data id="60013">
+		<for>
+			<!--Физ. Атк. +8, сила Физ. Крит. Атк. +56-->
+			<add order="0x60" stat="pAtk" value="8"/>	
+			<p_critical_damage value="56" type="DIFF"/>				
+		</for>
+	</option_data>
+	<option_data id="60014">
+		<for>
+			<!--Физ. Атк. +12, сила Физ. Крит. Атк. +78-->
+			<add order="0x60" stat="pAtk" value="12"/>	
+			<p_critical_damage value="78" type="DIFF"/>				
+		</for>
+	</option_data>
+	<option_data id="60015">
+		<for>
+			<!--Физ. Атк. +19, сила Физ. Крит. Атк. +124-->
+			<add order="0x60" stat="pAtk" value="19"/>	
+			<p_critical_damage value="124" type="DIFF"/>				
+		</for>
+	</option_data>
+	<option_data id="60016">
+		<for>
+			<!--Физ. Атк. +28, сила Физ. Крит. Атк. +185-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="pAtk" value="28"/>	
+			<p_critical_damage value="185" type="DIFF"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60017">
+		<for>
+			<!--Физ. Атк. +35, сила Физ. Крит. Атк. +250-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="pAtk" value="35"/>	
+			<p_critical_damage value="250" type="DIFF"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60018">
+		<for>
+			<!--Физ. Атк. +46, сила Физ. Крит. Атк. +307-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="pAtk" value="46"/>	
+			<p_critical_damage value="307" type="DIFF"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60019">
+		<for>
+			<!--Физ. Атк. +59, сила Физ. Крит. Атк. +391-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="pAtk" value="59"/>	
+			<p_critical_damage value="391" type="DIFF"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60020">
+		<for>
+			<!--Физ. Атк. +63, сила Физ. Крит. Атк. +421-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="pAtk" value="63"/>	
+			<p_critical_damage value="421" type="DIFF"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60021">
+		<for>
+			<!--Физ. Атк. +75, сила Физ. Крит. Атк. +498-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="pAtk" value="75"/>	
+			<p_critical_damage value="498" type="DIFF"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60022">
+		<for>
+			<!--Физ. Атк. +4, сила Физ. Крит. Атк. +26, шанс Физ. \\nКрит. Атк. +1%-->
+			<add order="0x60" stat="pAtk" value="4"/>	
+			<p_critical_damage value="26" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.01"/>	
+		</for>
+	</option_data>
+	<option_data id="60023">
+		<for>
+			<!--Физ. Атк. +6, сила Физ. Крит. Атк. +38, шанс Физ. \\nКрит. Атк. +2%-->
+			<add order="0x60" stat="pAtk" value="6"/>	
+			<p_critical_damage value="38" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.02"/>				
+		</for>
+	</option_data>
+	<option_data id="60024">
+		<for>
+			<!--Физ. Атк. +8, сила Физ. Крит. Атк. +56, шанс Физ. \\nКрит. Атк. +3%-->
+			<add order="0x60" stat="pAtk" value="8"/>	
+			<p_critical_damage value="56" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.03"/>				
+		</for>
+	</option_data>
+	<option_data id="60025">
+		<for>
+			<!--Физ. Атк. +12, сила Физ. Крит. Атк. +78, шанс Физ.\\n Крит. Атк. +4%-->
+			<add order="0x60" stat="pAtk" value="12"/>	
+			<p_critical_damage value="78" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.04"/>				
+		</for>
+	</option_data>
+	<option_data id="60026">
+		<for>
+			<!--Физ. Атк. +19, сила Физ. Крит. Атк. +124, шанс Физ\\n. Крит. Атк. +5%-->
+			<add order="0x60" stat="pAtk" value="19"/>	
+			<p_critical_damage value="124" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60027">
+		<for>
+			<!--Физ. Атк. +28, сила Физ. Крит. Атк. +185, шанс Физ\\n. Крит. Атк. +6%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="pAtk" value="28"/>	
+			<p_critical_damage value="185" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.06"/>				
+		</for>
+	</option_data>
+	<option_data id="60028">
+		<for>
+			<!--Физ. Атк. +35, сила Физ. Крит. Атк. +250, шанс Физ\\n. Крит. Атк. +7%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="pAtk" value="35"/>	
+			<p_critical_damage value="250" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.07"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60029">
+		<for>
+			<!--Физ. Атк. +46, сила Физ. Крит. Атк. +307, шанс Физ\\n. Крит. Атк. +8%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="pAtk" value="46"/>	
+			<p_critical_damage value="307" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.08"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60030">
+		<for>
+			<!--Физ. Атк. +59, сила Физ. Крит. Атк. +391, шанс Физ\\n. Крит. Атк. +10%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="pAtk" value="59"/>	
+			<p_critical_damage value="391" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.1"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60031">
+		<for>
+			<!--Физ. Атк. +63, сила Физ. Крит. Атк. +421, шанс Физ\\n. Крит. Атк. +12%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="pAtk" value="63"/>	
+			<p_critical_damage value="421" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.12"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60032">
+		<for>
+			<!--Физ. Атк. +75, сила Физ. Крит. Атк. +498, шанс Физ\\n. Крит. Атк. +15%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="pAtk" value="75"/>	
+			<p_critical_damage value="498" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.5"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60033">
+		<for>
+			<!--Физ. Атк. +4, сила Физ. Крит. Атк. +26, шанс Физ. \\nКрит. Атк. +1%, Физ. Атк. +1%-->
+			<add order="0x60" stat="pAtk" value="4"/>	
+			<p_critical_damage value="26" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.01"/>	
+			<mul order="0x60" stat="pAtk" value="1.01"/>			
+		</for>
+	</option_data>
+	<option_data id="60034">
+		<for>
+			<!--Физ. Атк. +6, сила Физ. Крит. Атк. +38, шанс Физ. \\nКрит. Атк. +2%, Физ. Атк. +1.5%-->
+			<add order="0x60" stat="pAtk" value="6"/>	
+			<p_critical_damage value="38" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.02"/>	
+			<mul order="0x60" stat="pAtk" value="1.015"/>			
+		</for>
+	</option_data>
+	<option_data id="60035">
+		<for>
+			<!--Физ. Атк. +8, сила Физ. Крит. Атк. +56, шанс Физ. \\nКрит. Атк. +3%, Физ. Атк. +2%-->
+			<add order="0x60" stat="pAtk" value="8"/>	
+			<p_critical_damage value="56" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.03"/>	
+			<mul order="0x60" stat="pAtk" value="1.02"/>				
+		</for>
+	</option_data>
+	<option_data id="60036">
+		<for>
+			<!--Физ. Атк. +12, сила Физ. Крит. Атк. +78, шанс Физ.\\n Крит. Атк. +4%, Физ. Атк. +2.5%-->
+			<add order="0x60" stat="pAtk" value="12"/>	
+			<p_critical_damage value="78" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.04"/>	
+			<mul order="0x60" stat="pAtk" value="1.025"/>			
+		</for>
+	</option_data>
+	<option_data id="60037">
+		<for>
+			<!--Физ. Атк. +19, сила Физ. Крит. Атк. +124, шанс Физ\\n. Крит. Атк. +5%, Физ. Атк. +3%-->
+			<add order="0x60" stat="pAtk" value="19"/>	
+			<p_critical_damage value="124" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.05"/>	
+			<mul order="0x60" stat="pAtk" value="1.03"/>			
+		</for>
+	</option_data>
+	<option_data id="60038">
+		<for>
+			<!--Физ. Атк. +28, сила Физ. Крит. Атк. +185, шанс Физ\\n. Крит. Атк. +6%, Физ. Атк. +3.5%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="pAtk" value="28"/>	
+			<p_critical_damage value="185" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.06"/>	
+			<mul order="0x60" stat="pAtk" value="1.035"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60039">
+		<for>
+			<!--Физ. Атк. +35, сила Физ. Крит. Атк. +250, шанс Физ\\n. Крит. Атк. +7%, Физ. Атк. +4%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="pAtk" value="35"/>	
+			<p_critical_damage value="250" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.07"/>	
+			<mul order="0x60" stat="pAtk" value="1.04"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60040">
+		<for>
+			<!--Физ. Атк. +46, сила Физ. Крит. Атк. +307, шанс Физ\\n. Крит. Атк. +8%, Физ. Атк. +4.5%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="pAtk" value="46"/>	
+			<p_critical_damage value="307" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.08"/>	
+			<mul order="0x60" stat="pAtk" value="1.045"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60041">
+		<for>
+			<!--Физ. Атк. +59, сила Физ. Крит. Атк. +391, шанс Физ\\n. Крит. Атк. +10%, Физ. Атк. +5%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="pAtk" value="59"/>	
+			<p_critical_damage value="391" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.1"/>	
+			<mul order="0x60" stat="pAtk" value="1.05"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.20"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.20"/>				
+		</for>
+	</option_data>
+	<option_data id="60042">
+		<for>
+			<!--Физ. Атк. +63, сила Физ. Крит. Атк. +421, шанс Физ\\n. Крит. Атк. +12%, Физ. Атк. +6%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="pAtk" value="63"/>	
+			<p_critical_damage value="421" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.12"/>	
+			<mul order="0x60" stat="pAtk" value="1.06"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.30"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.30"/>					
+		</for>
+	</option_data>
+	<option_data id="60043">
+		<for>
+			<!--Физ. Атк. +75, сила Физ. Крит. Атк. +498, шанс Физ\\n. Крит. Атк. +15%, Физ. Атк. +8%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="pAtk" value="75"/>	
+			<p_critical_damage value="498" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.15"/>	
+			<mul order="0x60" stat="pAtk" value="1.08"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>					
+		</for>
+	</option_data>
+	<option_data id="60044">
+		<for>
+			<!--Физ. Атк. +4, сила Физ. Крит. Атк. +26, шанс Физ. \\nКрит. Атк. +1%, Физ. Атк. +1%, сила Физ. Крит. Атк\\n. +1%-->
+			<add order="0x60" stat="pAtk" value="4"/>	
+			<p_critical_damage value="26" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.01"/>	
+			<mul order="0x60" stat="pAtk" value="1.01"/>		
+			<p_critical_damage value="1" type="PER"/>		
+		</for>
+	</option_data>
+	<option_data id="60045">
+		<for>
+			<!--Физ. Атк. +6, сила Физ. Крит. Атк. +38, шанс Физ. \\nКрит. Атк. +2%, Физ. Атк. +1.5%, сила Физ. Крит. А\\nтк. +2%-->
+			<add order="0x60" stat="pAtk" value="6"/>	
+			<p_critical_damage value="38" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.02"/>	
+			<mul order="0x60" stat="pAtk" value="1.015"/>		
+			<p_critical_damage value="2" type="PER"/>			
+		</for>
+	</option_data>
+	<option_data id="60046">
+		<for>
+			<!--Физ. Атк. +8, сила Физ. Крит. Атк. +56, шанс Физ. \\nКрит. Атк. +3%, Физ. Атк. +2%, сила Физ. Крит. Атк\\n. +3%-->
+			<add order="0x60" stat="pAtk" value="8"/>	
+			<p_critical_damage value="56" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.03"/>	
+			<mul order="0x60" stat="pAtk" value="1.02"/>		
+			<p_critical_damage value="3" type="PER"/>				
+		</for>
+	</option_data>
+	<option_data id="60047">
+		<for>
+			<!--Физ. Атк. +12, сила Физ. Крит. Атк. +78, шанс Физ.\\n Крит. Атк. +4%, Физ. Атк. +2.5%, сила Физ. Крит. \\nАтк. +4%-->
+			<add order="0x60" stat="pAtk" value="12"/>	
+			<p_critical_damage value="78" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.04"/>	
+			<mul order="0x60" stat="pAtk" value="1.025"/>		
+			<p_critical_damage value="4" type="PER"/>				
+		</for>
+	</option_data>
+	<option_data id="60048">
+		<for>
+			<!--Физ. Атк. +19, сила Физ. Крит. Атк. +124, шанс Физ\\n. Крит. Атк. +5%, Физ. Атк. +3%, сила Физ. Крит. А\\nтк. +5%-->
+			<add order="0x60" stat="pAtk" value="19"/>	
+			<p_critical_damage value="124" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.05"/>	
+			<mul order="0x60" stat="pAtk" value="1.03"/>		
+			<p_critical_damage value="5" type="PER"/>				
+		</for>
+	</option_data>
+	<option_data id="60049">
+		<for>
+			<!--Физ. Атк. +28, сила Физ. Крит. Атк. +185, шанс Физ\\n. Крит. Атк. +6%, Физ. Атк. +3.5%, сила Физ. Крит.\\n Атк. +6%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="pAtk" value="28"/>	
+			<p_critical_damage value="185" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.06"/>	
+			<mul order="0x60" stat="pAtk" value="1.035"/>		
+			<p_critical_damage value="6" type="PER"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60050">
+		<for>
+			<!--Физ. Атк. +35, сила Физ. Крит. Атк. +250, шанс Физ\\n. Крит. Атк. +7%, Физ. Атк. +4%, сила Физ. Крит. А\\nтк. +7%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="pAtk" value="35"/>	
+			<p_critical_damage value="250" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.07"/>	
+			<mul order="0x60" stat="pAtk" value="1.04"/>		
+			<p_critical_damage value="7" type="PER"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60051">
+		<for>
+			<!--Физ. Атк. +46, сила Физ. Крит. Атк. +307, шанс Физ\\n. Крит. Атк. +8%, Физ. Атк. +4.5%, сила Физ. Крит.\\n Атк. +9%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="pAtk" value="46"/>	
+			<p_critical_damage value="307" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.08"/>	
+			<mul order="0x60" stat="pAtk" value="1.045"/>		
+			<p_critical_damage value="9" type="PER"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60052">
+		<for>
+			<!--Физ. Атк. +59, сила Физ. Крит. Атк. +391, шанс Физ\\n. Крит. Атк. +10%, Физ. Атк. +5%, сила Физ. Крит. \\nАтк. +11%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="pAtk" value="59"/>	
+			<p_critical_damage value="391" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.1"/>	
+			<mul order="0x60" stat="pAtk" value="1.05"/>		
+			<p_critical_damage value="11" type="PER"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60053">
+		<for>
+			<!--Физ. Атк. +63, сила Физ. Крит. Атк. +421, шанс Физ\\n. Крит. Атк. +12%, Физ. Атк. +6%, сила Физ. Крит. \\nАтк. +13%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="pAtk" value="63"/>	
+			<p_critical_damage value="421" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.12"/>	
+			<mul order="0x60" stat="pAtk" value="1.06"/>		
+			<p_critical_damage value="13" type="PER"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60054">
+		<for>
+			<!--Физ. Атк. +75, сила Физ. Крит. Атк. +498, шанс Физ\\n. Крит. Атк. +15%, Физ. Атк. +8%, сила Физ. Крит. \\nАтк. +15%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="pAtk" value="75"/>	
+			<p_critical_damage value="498" type="DIFF"/>	
+			<mul order="0x60" stat="pCritRate" value="1.15"/>	
+			<mul order="0x60" stat="pAtk" value="1.08"/>		
+			<p_critical_damage value="15" type="PER"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>			
+		</for>
+	</option_data>
+	<option_data id="60055">
+		<for>
+			<!--Маг. Атк. +9-->
+			<add order="0x60" stat="mAtk" value="9"/>
+		</for>
+	</option_data>
+	<option_data id="60056">
+		<for>
+			<!--Маг. Атк. +13-->
+			<add order="0x60" stat="mAtk" value="13"/>
+		</for>
+	</option_data>
+	<option_data id="60057">
+		<for>
+			<!--Маг. Атк. +20-->
+			<add order="0x60" stat="mAtk" value="20"/>
+		</for>
+	</option_data>
+	<option_data id="60058">
+		<for>
+			<!--Маг. Атк. +31-->
+			<add order="0x60" stat="mAtk" value="31"/>
+		</for>
+	</option_data>
+	<option_data id="60059">
+		<for>
+			<!--Маг. Атк. +46-->
+			<add order="0x60" stat="mAtk" value="46"/>
+		</for>
+	</option_data>
+	<option_data id="60060">
+		<for>
+			<!--Маг. Атк. +64-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mAtk" value="64"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60061">
+		<for>
+			<!--Маг. Атк. +84-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mAtk" value="84"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60062">
+		<for>
+			<!--Маг. Атк. +107-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mAtk" value="107"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60063">
+		<for>
+			<!--Маг. Атк. +149-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mAtk" value="149"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60064">
+		<for>
+			<!--Маг. Атк. +160-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mAtk" value="160"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60065">
+		<for>
+			<!--Маг. Атк. +202-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mAtk" value="202"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60066">
+		<for>
+			<!--Маг. Атк. +9, сила Маг. Крит. Атк. +62-->
+			<add order="0x60" stat="mAtk" value="9"/>		
+			<p_magic_critical_dmg value="62" type="DIFF"/>				
+		</for>
+	</option_data>
+	<option_data id="60067">
+		<for>
+			<!--Маг. Атк. +13, сила Маг. Крит. Атк. +89-->
+			<add order="0x60" stat="mAtk" value="13"/>		
+			<p_magic_critical_dmg value="89" type="DIFF"/>					
+		</for>
+	</option_data>
+	<option_data id="60068">
+		<for>
+			<!--Маг. Атк. +20, сила Маг. Крит. Атк. +134-->
+			<add order="0x60" stat="mAtk" value="20"/>		
+			<p_magic_critical_dmg value="134" type="DIFF"/>					
+		</for>
+	</option_data>
+	<option_data id="60069">
+		<for>
+			<!--Маг. Атк. +31, сила Маг. Крит. Атк. +210-->
+			<add order="0x60" stat="mAtk" value="31"/>		
+			<p_magic_critical_dmg value="210" type="DIFF"/>					
+		</for>
+	</option_data>
+	<option_data id="60070">
+		<for>
+			<!--Маг. Атк. +46, сила Маг. Крит. Атк. +307-->
+			<add order="0x60" stat="mAtk" value="46"/>		
+			<p_magic_critical_dmg value="307" type="DIFF"/>					
+		</for>
+	</option_data>
+	<option_data id="60071">
+		<for>
+			<!--Маг. Атк. +64, сила Маг. Крит. Атк. +429-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mAtk" value="64"/>		
+			<p_magic_critical_dmg value="429" type="DIFF"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>			
+		</for>
+	</option_data>
+	<option_data id="60072">
+		<for>
+			<!--Маг. Атк. +84, сила Маг. Крит. Атк. +565-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mAtk" value="84"/>		
+			<p_magic_critical_dmg value="565" type="DIFF"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60073">
+		<for>
+			<!--Маг. Атк. +107, сила Маг. Крит. Атк. +717-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mAtk" value="107"/>		
+			<p_magic_critical_dmg value="717" type="DIFF"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60074">
+		<for>
+			<!--Маг. Атк. +149, сила Маг. Крит. Атк. +992-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mAtk" value="149"/>		
+			<p_magic_critical_dmg value="992" type="DIFF"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60075">
+		<for>
+			<!--Маг. Атк. +160, сила Маг. Крит. Атк. +1065-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mAtk" value="160"/>		
+			<p_magic_critical_dmg value="1065" type="DIFF"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60076">
+		<for>
+			<!--Маг. Атк. +202, сила Маг. Крит. Атк. +1344-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mAtk" value="202"/>		
+			<p_magic_critical_dmg value="1344" type="DIFF"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60077">
+		<for>
+			<!--Маг. Атк. +9, сила Маг. Крит. Атк. +62, шанс Маг. \\nКрит. Атк. +1%-->
+			<add order="0x60" stat="mAtk" value="9"/>		
+			<p_magic_critical_dmg value="62" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.01"/>	
+		</for>
+	</option_data>
+	<option_data id="60078">
+		<for>
+			<!--Маг. Атк. +13, сила Маг. Крит. Атк. +89, шанс Маг.\\n Крит. Атк. +2%-->
+			<add order="0x60" stat="mAtk" value="13"/>		
+			<p_magic_critical_dmg value="89" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.02"/>				
+		</for>
+	</option_data>
+	<option_data id="60079">
+		<for>
+			<!--Маг. Атк. +20, сила Маг. Крит. Атк. +134, шанс Маг\\n. Крит. Атк. +3%-->
+			<add order="0x60" stat="mAtk" value="20"/>		
+			<p_magic_critical_dmg value="134" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.03"/>				
+		</for>
+	</option_data>
+	<option_data id="60080">
+		<for>
+			<!--Маг. Атк. +31, сила Маг. Крит. Атк. +210, шанс Маг\\n. Крит. Атк. +4%-->
+			<add order="0x60" stat="mAtk" value="31"/>		
+			<p_magic_critical_dmg value="210" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.04"/>				
+		</for>
+	</option_data>
+	<option_data id="60081">
+		<for>
+			<!--Маг. Атк. +46, сила Маг. Крит. Атк. +307, шанс Маг\\n. Крит. Атк. +5%-->
+			<add order="0x60" stat="mAtk" value="46"/>		
+			<p_magic_critical_dmg value="307" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60082">
+		<for>
+			<!--Маг. Атк. +64, сила Маг. Крит. Атк. +429, шанс Маг\\n. Крит. Атк. +6%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mAtk" value="64"/>		
+			<p_magic_critical_dmg value="429" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.06"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60083">
+		<for>
+			<!--Маг. Атк. +84, сила Маг. Крит. Атк. +565, шанс Маг\\n. Крит. Атк. +7%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mAtk" value="84"/>		
+			<p_magic_critical_dmg value="565" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.07"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60084">
+		<for>
+			<!--Маг. Атк. +107, сила Маг. Крит. Атк. +717, шанс Ма\\nг. Крит. Атк. +8%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mAtk" value="107"/>		
+			<p_magic_critical_dmg value="717" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.08"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60085">
+		<for>
+			<!--Маг. Атк. +149, сила Маг. Крит. Атк. +992, шанс Ма\\nг. Крит. Атк. +9%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mAtk" value="149"/>		
+			<p_magic_critical_dmg value="992" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.09"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60086">
+		<for>
+			<!--Маг. Атк. +160, сила Маг. Крит. Атк. +1065, шанс М\\nаг. Крит. Атк. +10%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mAtk" value="160"/>		
+			<p_magic_critical_dmg value="1065" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.1"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60087">
+		<for>
+			<!--Маг. Атк. +202, сила Маг. Крит. Атк. +1344, шанс М\\nаг. Крит. Атк. +12%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mAtk" value="202"/>		
+			<p_magic_critical_dmg value="1344" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.12"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60088">
+		<for>
+			<!--Маг. Атк. +9, сила Маг. Крит. Атк. +62, шанс Маг. \\nКрит. Атк. +1%, Маг. Атк. +1%-->
+			<add order="0x60" stat="mAtk" value="9"/>		
+			<p_magic_critical_dmg value="62" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.01"/>		
+			<mul order="0x60" stat="mAtk" value="1.01"/>		
+		</for>
+	</option_data>
+	<option_data id="60089">
+		<for>
+			<!--Маг. Атк. +13, сила Маг. Крит. Атк. +89, шанс Маг.\\n Крит. Атк. +2%, Маг. Атк. +1.5%-->
+			<add order="0x60" stat="mAtk" value="13"/>		
+			<p_magic_critical_dmg value="89" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.02"/>		
+			<mul order="0x60" stat="mAtk" value="1.015"/>			
+		</for>
+	</option_data>
+	<option_data id="60090">
+		<for>
+			<!--Маг. Атк. +20, сила Маг. Крит. Атк. +134, шанс Маг\\n. Крит. Атк. +3%, Маг. Атк. +2%-->
+			<add order="0x60" stat="mAtk" value="20"/>		
+			<p_magic_critical_dmg value="134" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.03"/>		
+			<mul order="0x60" stat="mAtk" value="1.02"/>				
+		</for>
+	</option_data>
+	<option_data id="60091">
+		<for>
+			<!--Маг. Атк. +31, сила Маг. Крит. Атк. +210, шанс Маг\\n. Крит. Атк. +4%, Маг. Атк. +2.5%-->
+			<add order="0x60" stat="mAtk" value="31"/>		
+			<p_magic_critical_dmg value="210" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.04"/>		
+			<mul order="0x60" stat="mAtk" value="1.025"/>				
+		</for>
+	</option_data>
+	<option_data id="60092">
+		<for>
+			<!--Маг. Атк. +46, сила Маг. Крит. Атк. +307, шанс Маг\\n. Крит. Атк. +5%, Маг. Атк. +3%-->
+			<add order="0x60" stat="mAtk" value="46"/>		
+			<p_magic_critical_dmg value="307" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.05"/>		
+			<mul order="0x60" stat="mAtk" value="1.03"/>				
+		</for>
+	</option_data>
+	<option_data id="60093">
+		<for>
+			<!--Маг. Атк. +64, сила Маг. Крит. Атк. +429, шанс Маг\\n. Крит. Атк. +6%, Маг. Атк. +3.5%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mAtk" value="64"/>		
+			<p_magic_critical_dmg value="429" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.06"/>		
+			<mul order="0x60" stat="mAtk" value="1.035"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60094">
+		<for>
+			<!--Маг. Атк. +84, сила Маг. Крит. Атк. +565, шанс Маг\\n. Крит. Атк. +7%, Маг. Атк. +4%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mAtk" value="84"/>		
+			<p_magic_critical_dmg value="565" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.07"/>		
+			<mul order="0x60" stat="mAtk" value="1.04"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60095">
+		<for>
+			<!--Маг. Атк. +107, сила Маг. Крит. Атк. +717, шанс Ма\\nг. Крит. Атк. +8%, Маг. Атк. +5%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mAtk" value="107"/>		
+			<p_magic_critical_dmg value="717" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.08"/>		
+			<mul order="0x60" stat="mAtk" value="1.05"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60096">
+		<for>
+			<!--Маг. Атк. +149, сила Маг. Крит. Атк. +992, шанс Ма\\nг. Крит. Атк. +9%, Маг. Атк. +6%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mAtk" value="149"/>		
+			<p_magic_critical_dmg value="992" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.09"/>		
+			<mul order="0x60" stat="mAtk" value="1.06"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60097">
+		<for>
+			<!--Маг. Атк. +160, сила Маг. Крит. Атк. +1065, шанс М\\nаг. Крит. Атк. +10%, Маг. Атк. +8%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mAtk" value="160"/>		
+			<p_magic_critical_dmg value="1065" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.1"/>		
+			<mul order="0x60" stat="mAtk" value="1.08"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>					
+		</for>
+	</option_data>
+	<option_data id="60098">
+		<for>
+			<!--Маг. Атк. +202, сила Маг. Крит. Атк. +1344, шанс М\\nаг. Крит. Атк. +12%, Маг. Атк. +10%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mAtk" value="202"/>		
+			<p_magic_critical_dmg value="1344" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.12"/>		
+			<mul order="0x60" stat="mAtk" value="1.1"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>					
+		</for>
+	</option_data>
+	<option_data id="60099">
+		<for>
+			<!--Маг. Атк. +9, сила Маг. Крит. Атк. +62, шанс Маг. \\nКрит. Атк. +1%, Маг. Атк. +1%, сила Маг. Крит. Атк\\n. +1%-->
+			<add order="0x60" stat="mAtk" value="9"/>		
+			<p_magic_critical_dmg value="62" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.01"/>		
+			<mul order="0x60" stat="mAtk" value="1.01"/>		
+			<p_magic_critical_dmg value="1" type="PER"/>	
+		</for>
+	</option_data>
+</list>

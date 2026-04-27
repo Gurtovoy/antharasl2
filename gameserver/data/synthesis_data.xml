@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "synthesis_data.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<synthesis item_1_id="90311" item_2_id="90311" chance="-1" success_item="90312-1" fail_item="90311-1" location_id="0"/>	<!--Brooch (Lv. 1) & Brooch (Lv. 1)-->
+	<synthesis item_1_id="90313" item_2_id="90313" chance="-1" success_item="90314-1" fail_item="90313-1" location_id="0"/>	<!--Topaz (Lv. 1) & Topaz (Lv. 1)-->
+	<synthesis item_1_id="90314" item_2_id="90314" chance="-1" success_item="90315-1" fail_item="90314-1" location_id="0"/>	<!--Topaz (Lv. 2) & Topaz (Lv. 2)-->
+	<synthesis item_1_id="90315" item_2_id="90315" chance="-1" success_item="90316-1" fail_item="90315-1" location_id="0"/>	<!--Topaz (Lv. 3) & Topaz (Lv. 3)-->
+	<synthesis item_1_id="90316" item_2_id="90316" chance="-1" success_item="90317-1" fail_item="90316-1" location_id="0"/>	<!--Topaz (Lv. 4) & Topaz (Lv. 4)-->
+	<synthesis item_1_id="90318" item_2_id="90318" chance="60" success_item="90319-1" fail_item="90318-1" location_id="0"/>	<!--Garnet (Lv. 1) & Garnet (Lv. 1)-->
+	<synthesis item_1_id="90319" item_2_id="90319" chance="50" success_item="90320-1" fail_item="90319-1" location_id="0"/>	<!--Garnet (Lv. 2) & Garnet (Lv. 2)-->
+	<synthesis item_1_id="90320" item_2_id="90320" chance="40" success_item="90321-1" fail_item="90320-1" location_id="0"/>	<!--Garnet (Lv. 3) & Garnet (Lv. 3)-->
+	<synthesis item_1_id="90321" item_2_id="90321" chance="30" success_item="90322-1" fail_item="90321-1" location_id="0"/>	<!--Garnet (Lv. 4) & Garnet (Lv. 4)-->
+	<synthesis item_1_id="90323" item_2_id="90323" chance="60" success_item="90324-1" fail_item="90323-1" location_id="0"/>	<!--Jade (Lv. 1) & Jade (Lv. 1)-->
+	<synthesis item_1_id="90324" item_2_id="90324" chance="50" success_item="90325-1" fail_item="90324-1" location_id="0"/>	<!--Jade (Lv. 2) & Jade (Lv. 2)-->
+	<synthesis item_1_id="90325" item_2_id="90325" chance="40" success_item="90326-1" fail_item="90325-1" location_id="0"/>	<!--Jade (Lv. 3) & Jade (Lv. 3)-->
+	<synthesis item_1_id="90326" item_2_id="90326" chance="30" success_item="90327-1" fail_item="90326-1" location_id="0"/>	<!--Jade (Lv. 4) & Jade (Lv. 4)-->
+	<synthesis item_1_id="90328" item_2_id="90328" chance="60" success_item="90329-1" fail_item="90328-1" location_id="0"/>	<!--Ruby (Lv. 1) & Ruby (Lv. 1)-->
+	<synthesis item_1_id="90329" item_2_id="90329" chance="50" success_item="90330-1" fail_item="90329-1" location_id="0"/>	<!--Ruby (Lv. 2) & Ruby (Lv. 2)-->
+	<synthesis item_1_id="90330" item_2_id="90330" chance="40" success_item="90331-1" fail_item="90330-1" location_id="0"/>	<!--Ruby (Lv. 3) & Ruby (Lv. 3)-->
+	<synthesis item_1_id="90331" item_2_id="90331" chance="30" success_item="90332-1" fail_item="90331-1" location_id="0"/>	<!--Ruby (Lv. 4) & Ruby (Lv. 4)-->
+	<synthesis item_1_id="90333" item_2_id="90333" chance="60" success_item="90334-1" fail_item="90333-1" location_id="0"/>	<!--Sapphire (Lv. 1) & Sapphire (Lv. 1)-->
+	<synthesis item_1_id="90334" item_2_id="90334" chance="50" success_item="90335-1" fail_item="90334-1" location_id="0"/>	<!--Sapphire (Lv. 2) & Sapphire (Lv. 2)-->
+	<synthesis item_1_id="90335" item_2_id="90335" chance="40" success_item="90336-1" fail_item="90335-1" location_id="0"/>	<!--Sapphire (Lv. 3) & Sapphire (Lv. 3)-->
+	<synthesis item_1_id="90336" item_2_id="90336" chance="30" success_item="90337-1" fail_item="90336-1" location_id="0"/>	<!--Sapphire (Lv. 4) & Sapphire (Lv. 4)-->
+	<synthesis item_1_id="90338" item_2_id="90338" chance="60" success_item="90339-1" fail_item="90338-1" location_id="0"/>	<!--Diamond (Lv. 1) & Diamond (Lv. 1)-->
+	<synthesis item_1_id="90339" item_2_id="90339" chance="50" success_item="90340-1" fail_item="90339-1" location_id="0"/>	<!--Diamond (Lv. 2) & Diamond (Lv. 2)-->
+	<synthesis item_1_id="90340" item_2_id="90340" chance="40" success_item="90341-1" fail_item="90340-1" location_id="0"/>	<!--Diamond (Lv. 3) & Diamond (Lv. 3)-->
+	<synthesis item_1_id="90341" item_2_id="90341" chance="30" success_item="90342-1" fail_item="90341-1" location_id="0"/>	<!--Diamond (Lv. 4) & Diamond (Lv. 4)-->
+	<synthesis item_1_id="90343" item_2_id="90343" chance="60" success_item="90344-1" fail_item="90343-1" location_id="0"/>	<!--Pearl (Lv. 1) & Pearl (Lv. 1)-->
+	<synthesis item_1_id="90344" item_2_id="90344" chance="50" success_item="90345-1" fail_item="90344-1" location_id="0"/>	<!--Pearl (Lv. 2) & Pearl (Lv. 2)-->
+	<synthesis item_1_id="90345" item_2_id="90345" chance="40" success_item="90346-1" fail_item="90345-1" location_id="0"/>	<!--Pearl (Lv. 3) & Pearl (Lv. 3)-->
+	<synthesis item_1_id="90346" item_2_id="90346" chance="30" success_item="90347-1" fail_item="90346-1" location_id="0"/>	<!--Pearl (Lv. 4) & Pearl (Lv. 4)-->
+	<synthesis item_1_id="90353" item_2_id="90353" chance="60" success_item="90354-1" fail_item="90353-1" location_id="0"/>	<!--Vital Stone (Lv. 1) & Vital Stone (Lv. 1)-->
+	<synthesis item_1_id="90354" item_2_id="90354" chance="50" success_item="90355-1" fail_item="90354-1" location_id="0"/>	<!--Vital Stone (Lv. 2) & Vital Stone (Lv. 2)-->
+	<synthesis item_1_id="90355" item_2_id="90355" chance="40" success_item="90356-1" fail_item="90355-1" location_id="0"/>	<!--Vital Stone (Lv. 3) & Vital Stone (Lv. 3)-->
+	<synthesis item_1_id="90356" item_2_id="90356" chance="30" success_item="90357-1" fail_item="90356-1" location_id="0"/>	<!--Vital Stone (Lv. 4) & Vital Stone (Lv. 4)-->
+	<synthesis item_1_id="29818" item_2_id="29818" chance="60" success_item="29819-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 1 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29819" item_2_id="29818" chance="60" success_item="29820-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 2 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29820" item_2_id="29818" chance="60" success_item="29821-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 3 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29821" item_2_id="29818" chance="60" success_item="29822-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 4 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29822" item_2_id="29818" chance="60" success_item="29823-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 5 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29823" item_2_id="29818" chance="60" success_item="29824-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 6 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29824" item_2_id="29818" chance="60" success_item="29825-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 7 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29825" item_2_id="29818" chance="60" success_item="29826-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 8 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29826" item_2_id="29818" chance="60" success_item="29827-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 9 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29827" item_2_id="29818" chance="60" success_item="29828-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 10 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29828" item_2_id="29818" chance="60" success_item="29829-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 11 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29829" item_2_id="29818" chance="60" success_item="29830-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 12 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29830" item_2_id="29818" chance="-1" success_item="29831-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 13 & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29831" item_2_id="29818" chance="-1" success_item="29832-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 14 (Not in Use) & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29832" item_2_id="29818" chance="-1" success_item="29833-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 15 (Not in Use) & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29833" item_2_id="29818" chance="-1" success_item="29834-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 16 (Not in Use) & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29834" item_2_id="29818" chance="-1" success_item="29835-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 17 (Not in Use) & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29835" item_2_id="29818" chance="-1" success_item="29836-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 18 (Not in Use) & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29836" item_2_id="29818" chance="-1" success_item="29837-1" fail_item="29818-1" location_id="1;2;3;8;9"/>	<!--Sigel’s Rune - Stage 19 (Not in Use) & Sigel’s Rune - Stage 1-->
+	<synthesis item_1_id="29838" item_2_id="29838" chance="60" success_item="29839-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 1 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29839" item_2_id="29838" chance="60" success_item="29840-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 2 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29840" item_2_id="29838" chance="60" success_item="29841-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 3 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29841" item_2_id="29838" chance="60" success_item="29842-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 4 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29842" item_2_id="29838" chance="60" success_item="29843-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 5 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29843" item_2_id="29838" chance="60" success_item="29844-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 6 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29844" item_2_id="29838" chance="60" success_item="29845-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 7 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29845" item_2_id="29838" chance="60" success_item="29846-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 8 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29846" item_2_id="29838" chance="60" success_item="29847-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 9 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29847" item_2_id="29838" chance="60" success_item="29848-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 10 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29848" item_2_id="29838" chance="60" success_item="29849-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 11 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29849" item_2_id="29838" chance="60" success_item="29850-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 12 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29850" item_2_id="29838" chance="-1" success_item="29851-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 13 & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29851" item_2_id="29838" chance="-1" success_item="29852-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 14 (Not in Use) & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29852" item_2_id="29838" chance="-1" success_item="29853-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 15 (Not in Use) & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29853" item_2_id="29838" chance="-1" success_item="29854-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 16 (Not in Use) & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29854" item_2_id="29838" chance="-1" success_item="29855-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 17 (Not in Use) & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29855" item_2_id="29838" chance="-1" success_item="29856-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 18 (Not in Use) & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29856" item_2_id="29838" chance="-1" success_item="29857-1" fail_item="29838-1" location_id="1;2;3;8;9"/>	<!--Tyrr’s Rune - Stage 19 (Not in Use) & Tyrr’s Rune - Stage 1-->
+	<synthesis item_1_id="29858" item_2_id="29858" chance="60" success_item="29859-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 1 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29859" item_2_id="29858" chance="60" success_item="29860-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 2 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29860" item_2_id="29858" chance="60" success_item="29861-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 3 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29861" item_2_id="29858" chance="60" success_item="29862-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 4 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29862" item_2_id="29858" chance="60" success_item="29863-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 5 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29863" item_2_id="29858" chance="60" success_item="29864-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 6 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29864" item_2_id="29858" chance="60" success_item="29865-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 7 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29865" item_2_id="29858" chance="60" success_item="29866-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 8 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29866" item_2_id="29858" chance="60" success_item="29867-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 9 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29867" item_2_id="29858" chance="60" success_item="29868-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 10 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29868" item_2_id="29858" chance="60" success_item="29869-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 11 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29869" item_2_id="29858" chance="60" success_item="29870-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 12 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29870" item_2_id="29858" chance="-1" success_item="29871-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 13 & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29871" item_2_id="29858" chance="-1" success_item="29872-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 14 (Not in Use) & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29872" item_2_id="29858" chance="-1" success_item="29873-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 15 (Not in Use) & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29873" item_2_id="29858" chance="-1" success_item="29874-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 16 (Not in Use) & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29874" item_2_id="29858" chance="-1" success_item="29875-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 17 (Not in Use) & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29875" item_2_id="29858" chance="-1" success_item="29876-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 18 (Not in Use) & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29876" item_2_id="29858" chance="-1" success_item="29877-1" fail_item="29858-1" location_id="1;2;3;8;9"/>	<!--Othell’s Rune - Stage 19 (Not in Use) & Othell’s Rune - Stage 1-->
+	<synthesis item_1_id="29878" item_2_id="29878" chance="60" success_item="29879-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 1 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29879" item_2_id="29878" chance="60" success_item="29880-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 2 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29880" item_2_id="29878" chance="60" success_item="29881-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 3 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29881" item_2_id="29878" chance="60" success_item="29882-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 4 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29882" item_2_id="29878" chance="60" success_item="29883-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 5 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29883" item_2_id="29878" chance="60" success_item="29884-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 6 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29884" item_2_id="29878" chance="60" success_item="29885-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 7 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29885" item_2_id="29878" chance="60" success_item="29886-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 8 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29886" item_2_id="29878" chance="60" success_item="29887-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 9 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29887" item_2_id="29878" chance="60" success_item="29888-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 10 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29888" item_2_id="29878" chance="60" success_item="29889-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 11 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29889" item_2_id="29878" chance="60" success_item="29890-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 12 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29890" item_2_id="29878" chance="-1" success_item="29891-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 13 & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29891" item_2_id="29878" chance="-1" success_item="29892-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 14 (Not in Use) & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29892" item_2_id="29878" chance="-1" success_item="29893-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 15 (Not in Use) & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29893" item_2_id="29878" chance="-1" success_item="29894-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 16 (Not in Use) & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29894" item_2_id="29878" chance="-1" success_item="29895-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 17 (Not in Use) & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29895" item_2_id="29878" chance="-1" success_item="29896-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 18 (Not in Use) & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29896" item_2_id="29878" chance="-1" success_item="29897-1" fail_item="29878-1" location_id="1;2;3;8;9"/>	<!--Yul’s Rune - Stage 19 (Not in Use) & Yul’s Rune - Stage 1-->
+	<synthesis item_1_id="29898" item_2_id="29898" chance="60" success_item="29899-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 1 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29899" item_2_id="29898" chance="60" success_item="29900-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 2 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29900" item_2_id="29898" chance="60" success_item="29901-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 3 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29901" item_2_id="29898" chance="60" success_item="29902-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 4 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29902" item_2_id="29898" chance="60" success_item="29903-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 5 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29903" item_2_id="29898" chance="60" success_item="29904-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 6 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29904" item_2_id="29898" chance="60" success_item="29905-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 7 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29905" item_2_id="29898" chance="60" success_item="29906-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 8 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29906" item_2_id="29898" chance="60" success_item="29907-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 9 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29907" item_2_id="29898" chance="60" success_item="29908-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 10 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29908" item_2_id="29898" chance="60" success_item="29909-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 11 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29909" item_2_id="29898" chance="60" success_item="29910-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 12 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29910" item_2_id="29898" chance="-1" success_item="29911-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 13 & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29911" item_2_id="29898" chance="-1" success_item="29912-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 14 (Not in Use) & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29912" item_2_id="29898" chance="-1" success_item="29913-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 15 (Not in Use) & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29913" item_2_id="29898" chance="-1" success_item="29914-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 16 (Not in Use) & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29914" item_2_id="29898" chance="-1" success_item="29915-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 17 (Not in Use) & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29915" item_2_id="29898" chance="-1" success_item="29916-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 18 (Not in Use) & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29916" item_2_id="29898" chance="-1" success_item="29917-1" fail_item="29898-1" location_id="1;2;3;8;9"/>	<!--Feoh’s Rune - Stage 19 (Not in Use) & Feoh’s Rune - Stage 1-->
+	<synthesis item_1_id="29918" item_2_id="29918" chance="60" success_item="29919-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 1 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29919" item_2_id="29918" chance="60" success_item="29920-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 2 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29920" item_2_id="29918" chance="60" success_item="29921-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 3 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29921" item_2_id="29918" chance="60" success_item="29922-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 4 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29922" item_2_id="29918" chance="60" success_item="29923-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 5 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29923" item_2_id="29918" chance="60" success_item="29924-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 6 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29924" item_2_id="29918" chance="60" success_item="29925-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 7 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29925" item_2_id="29918" chance="60" success_item="29926-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 8 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29926" item_2_id="29918" chance="60" success_item="29927-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 9 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29927" item_2_id="29918" chance="60" success_item="29928-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 10 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29928" item_2_id="29918" chance="60" success_item="29929-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 11 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29929" item_2_id="29918" chance="60" success_item="29930-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 12 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29930" item_2_id="29918" chance="-1" success_item="29931-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 13 & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29931" item_2_id="29918" chance="-1" success_item="29932-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 14 (Not in Use) & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29932" item_2_id="29918" chance="-1" success_item="29933-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 15 (Not in Use) & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29933" item_2_id="29918" chance="-1" success_item="29934-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 16 (Not in Use) & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29934" item_2_id="29918" chance="-1" success_item="29935-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 17 (Not in Use) & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29935" item_2_id="29918" chance="-1" success_item="29936-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 18 (Not in Use) & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29936" item_2_id="29918" chance="-1" success_item="29937-1" fail_item="29918-1" location_id="1;2;3;8;9"/>	<!--Iss’ Rune - Stage 19 (Not in Use) & Iss’ Rune - Stage 1-->
+	<synthesis item_1_id="29938" item_2_id="29938" chance="60" success_item="29939-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 1 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29939" item_2_id="29938" chance="60" success_item="29940-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 2 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29940" item_2_id="29938" chance="60" success_item="29941-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 3 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29941" item_2_id="29938" chance="60" success_item="29942-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 4 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29942" item_2_id="29938" chance="60" success_item="29943-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 5 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29943" item_2_id="29938" chance="60" success_item="29944-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 6 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29944" item_2_id="29938" chance="60" success_item="29945-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 7 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29945" item_2_id="29938" chance="60" success_item="29946-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 8 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29946" item_2_id="29938" chance="60" success_item="29947-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 9 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29947" item_2_id="29938" chance="60" success_item="29948-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 10 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29948" item_2_id="29938" chance="60" success_item="29949-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 11 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29949" item_2_id="29938" chance="60" success_item="29950-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 12 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29950" item_2_id="29938" chance="-1" success_item="29951-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 13 & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29951" item_2_id="29938" chance="-1" success_item="29952-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 14 (Not in Use) & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29952" item_2_id="29938" chance="-1" success_item="29953-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 15 (Not in Use) & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29953" item_2_id="29938" chance="-1" success_item="29954-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 16 (Not in Use) & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29954" item_2_id="29938" chance="-1" success_item="29955-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 17 (Not in Use) & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29955" item_2_id="29938" chance="-1" success_item="29956-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 18 (Not in Use) & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29956" item_2_id="29938" chance="-1" success_item="29957-1" fail_item="29938-1" location_id="1;2;3;8;9"/>	<!--Wynn’s Rune - Stage 19 (Not in Use) & Wynn’s Rune - Stage 1-->
+	<synthesis item_1_id="29958" item_2_id="29958" chance="60" success_item="29959-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 1 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29959" item_2_id="29958" chance="60" success_item="29960-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 2 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29960" item_2_id="29958" chance="60" success_item="29961-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 3 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29961" item_2_id="29958" chance="60" success_item="29962-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 4 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29962" item_2_id="29958" chance="60" success_item="29963-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 5 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29963" item_2_id="29958" chance="60" success_item="29964-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 6 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29964" item_2_id="29958" chance="60" success_item="29965-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 7 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29965" item_2_id="29958" chance="60" success_item="29966-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 8 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29966" item_2_id="29958" chance="60" success_item="29967-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 9 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29967" item_2_id="29958" chance="60" success_item="29968-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 10 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29968" item_2_id="29958" chance="60" success_item="29969-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 11 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29969" item_2_id="29958" chance="60" success_item="29970-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 12 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29970" item_2_id="29958" chance="-1" success_item="29971-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 13 & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29971" item_2_id="29958" chance="-1" success_item="29972-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 14 (Not in Use) & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29972" item_2_id="29958" chance="-1" success_item="29973-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 15 (Not in Use) & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29973" item_2_id="29958" chance="-1" success_item="29974-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 16 (Not in Use) & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29974" item_2_id="29958" chance="-1" success_item="29975-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 17 (Not in Use) & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29975" item_2_id="29958" chance="-1" success_item="29976-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 18 (Not in Use) & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="29976" item_2_id="29958" chance="-1" success_item="29977-1" fail_item="29958-1" location_id="1;2;3;8;9"/>	<!--Aeore’s Rune - Stage 19 (Not in Use) & Aeore’s Rune - Stage 1-->
+	<synthesis item_1_id="70434" item_2_id="70434" chance="-1" success_item="70435-1" fail_item="70434-1" location_id="1;2;3;8;9"/>	<!--Brooch (Lv. 1) & Brooch (Lv. 1)-->
+	<synthesis item_1_id="70436" item_2_id="70436" chance="-1" success_item="70437-1" fail_item="70436-1" location_id="1;2;3;8;9"/>	<!--Topaz (Lv. 1) & Topaz (Lv. 1)-->
+	<synthesis item_1_id="70437" item_2_id="70437" chance="-1" success_item="70438-1" fail_item="70437-1" location_id="1;2;3;8;9"/>	<!--Topaz (Lv. 2) & Topaz (Lv. 2)-->
+	<synthesis item_1_id="70438" item_2_id="70438" chance="-1" success_item="70439-1" fail_item="70438-1" location_id="1;2;3;8;9"/>	<!--Topaz (Lv. 3) & Topaz (Lv. 3)-->
+	<synthesis item_1_id="70439" item_2_id="70439" chance="-1" success_item="70440-1" fail_item="70439-1" location_id="1;2;3;8;9"/>	<!--Topaz (Lv. 4) & Topaz (Lv. 4)-->
+	<synthesis item_1_id="70441" item_2_id="70441" chance="60" success_item="70442-1" fail_item="70441-1" location_id="1;2;3;8;9"/>	<!--Garnet (Lv. 1) & Garnet (Lv. 1)-->
+	<synthesis item_1_id="70442" item_2_id="70442" chance="50" success_item="70443-1" fail_item="70442-1" location_id="1;2;3;8;9"/>	<!--Garnet (Lv. 2) & Garnet (Lv. 2)-->
+	<synthesis item_1_id="70443" item_2_id="70443" chance="40" success_item="70444-1" fail_item="70443-1" location_id="1;2;3;8;9"/>	<!--Garnet (Lv. 3) & Garnet (Lv. 3)-->
+	<synthesis item_1_id="70444" item_2_id="70444" chance="30" success_item="70445-1" fail_item="70444-1" location_id="1;2;3;8;9"/>	<!--Garnet (Lv. 4) & Garnet (Lv. 4)-->
+	<synthesis item_1_id="70446" item_2_id="70446" chance="60" success_item="70447-1" fail_item="70446-1" location_id="1;2;3;8;9"/>	<!--Jade (Lv. 1) & Jade (Lv. 1)-->
+	<synthesis item_1_id="70447" item_2_id="70447" chance="50" success_item="70448-1" fail_item="70447-1" location_id="1;2;3;8;9"/>	<!--Jade (Lv. 2) & Jade (Lv. 2)-->
+	<synthesis item_1_id="70448" item_2_id="70448" chance="40" success_item="70449-1" fail_item="70448-1" location_id="1;2;3;8;9"/>	<!--Jade (Lv. 3) & Jade (Lv. 3)-->
+	<synthesis item_1_id="70449" item_2_id="70449" chance="30" success_item="70450-1" fail_item="70449-1" location_id="1;2;3;8;9"/>	<!--Jade (Lv. 4) & Jade (Lv. 4)-->
+	<synthesis item_1_id="70451" item_2_id="70451" chance="60" success_item="70452-1" fail_item="70451-1" location_id="1;2;3;8;9"/>	<!--Ruby (Lv. 1) & Ruby (Lv. 1)-->
+	<synthesis item_1_id="70452" item_2_id="70452" chance="50" success_item="70453-1" fail_item="70452-1" location_id="1;2;3;8;9"/>	<!--Ruby (Lv. 2) & Ruby (Lv. 2)-->
+	<synthesis item_1_id="70453" item_2_id="70453" chance="40" success_item="70454-1" fail_item="70453-1" location_id="1;2;3;8;9"/>	<!--Ruby (Lv. 3) & Ruby (Lv. 3)-->
+	<synthesis item_1_id="70454" item_2_id="70454" chance="30" success_item="70455-1" fail_item="70454-1" location_id="1;2;3;8;9"/>	<!--Ruby (Lv. 4) & Ruby (Lv. 4)-->
+	<synthesis item_1_id="70456" item_2_id="70456" chance="60" success_item="70457-1" fail_item="70456-1" location_id="1;2;3;8;9"/>	<!--Sapphire (Lv. 1) & Sapphire (Lv. 1)-->
+	<synthesis item_1_id="70457" item_2_id="70457" chance="50" success_item="70458-1" fail_item="70457-1" location_id="1;2;3;8;9"/>	<!--Sapphire (Lv. 2) & Sapphire (Lv. 2)-->
+	<synthesis item_1_id="70458" item_2_id="70458" chance="40" success_item="70459-1" fail_item="70458-1" location_id="1;2;3;8;9"/>	<!--Sapphire (Lv. 3) & Sapphire (Lv. 3)-->
+	<synthesis item_1_id="70459" item_2_id="70459" chance="30" success_item="70460-1" fail_item="70459-1" location_id="1;2;3;8;9"/>	<!--Sapphire (Lv. 4) & Sapphire (Lv. 4)-->
+	<synthesis item_1_id="70461" item_2_id="70461" chance="60" success_item="70462-1" fail_item="70461-1" location_id="1;2;3;8;9"/>	<!--Diamond (Lv. 1) & Diamond (Lv. 1)-->
+	<synthesis item_1_id="70462" item_2_id="70462" chance="50" success_item="70463-1" fail_item="70462-1" location_id="1;2;3;8;9"/>	<!--Diamond (Lv. 2) & Diamond (Lv. 2)-->
+	<synthesis item_1_id="70463" item_2_id="70463" chance="40" success_item="70464-1" fail_item="70463-1" location_id="1;2;3;8;9"/>	<!--Diamond (Lv. 3) & Diamond (Lv. 3)-->
+	<synthesis item_1_id="70464" item_2_id="70464" chance="30" success_item="70465-1" fail_item="70464-1" location_id="1;2;3;8;9"/>	<!--Diamond (Lv. 4) & Diamond (Lv. 4)-->
+	<synthesis item_1_id="70466" item_2_id="70466" chance="60" success_item="70467-1" fail_item="70466-1" location_id="1;2;3;8;9"/>	<!--Pearl (Lv. 1) & Pearl (Lv. 1)-->
+	<synthesis item_1_id="70467" item_2_id="70467" chance="50" success_item="70468-1" fail_item="70467-1" location_id="1;2;3;8;9"/>	<!--Pearl (Lv. 2) & Pearl (Lv. 2)-->
+	<synthesis item_1_id="70468" item_2_id="70468" chance="40" success_item="70469-1" fail_item="70468-1" location_id="1;2;3;8;9"/>	<!--Pearl (Lv. 3) & Pearl (Lv. 3)-->
+	<synthesis item_1_id="70469" item_2_id="70469" chance="30" success_item="70470-1" fail_item="70469-1" location_id="1;2;3;8;9"/>	<!--Pearl (Lv. 4) & Pearl (Lv. 4)-->
+	<synthesis item_1_id="70471" item_2_id="70471" chance="60" success_item="70472-1" fail_item="70471-1" location_id="1;2;3;8;9"/>	<!--Vital Stone (Lv. 1) & Vital Stone (Lv. 1)-->
+	<synthesis item_1_id="70472" item_2_id="70472" chance="50" success_item="70473-1" fail_item="70472-1" location_id="1;2;3;8;9"/>	<!--Vital Stone (Lv. 2) & Vital Stone (Lv. 2)-->
+	<synthesis item_1_id="70473" item_2_id="70473" chance="40" success_item="70474-1" fail_item="70473-1" location_id="1;2;3;8;9"/>	<!--Vital Stone (Lv. 3) & Vital Stone (Lv. 3)-->
+	<synthesis item_1_id="70474" item_2_id="70474" chance="30" success_item="70475-1" fail_item="70474-1" location_id="1;2;3;8;9"/>	<!--Vital Stone (Lv. 4) & Vital Stone (Lv. 4)-->
+	<synthesis item_1_id="70520" item_2_id="70520" chance="-1" success_item="70521-1" fail_item="70520-1" location_id="1;2;3;8;9"/>	<!--Aquamarine (Lv. 1) & Aquamarine (Lv. 1)-->
+	<synthesis item_1_id="70521" item_2_id="70521" chance="-1" success_item="70522-1" fail_item="70521-1" location_id="1;2;3;8;9"/>	<!--Aquamarine (Lv. 2) & Aquamarine (Lv. 2)-->
+	<synthesis item_1_id="70522" item_2_id="70522" chance="-1" success_item="70523-1" fail_item="70522-1" location_id="1;2;3;8;9"/>	<!--Aquamarine (Lv. 3) & Aquamarine (Lv. 3)-->
+	<synthesis item_1_id="70523" item_2_id="70523" chance="-1" success_item="70524-1" fail_item="70523-1" location_id="1;2;3;8;9"/>	<!--Aquamarine (Lv. 4) & Aquamarine (Lv. 4)-->
+	<synthesis item_1_id="70811" item_2_id="70811" chance="-1" success_item="70812-1" fail_item="70811-1" location_id="1;2;3;8;9"/>	<!--Red Cat's Eye (Lv. 1) & Red Cat's Eye (Lv. 1)-->
+	<synthesis item_1_id="70812" item_2_id="70812" chance="-1" success_item="70813-1" fail_item="70812-1" location_id="1;2;3;8;9"/>	<!--Red Cat's Eye (Lv. 2) & Red Cat's Eye (Lv. 2)-->
+	<synthesis item_1_id="70813" item_2_id="70813" chance="-1" success_item="70814-1" fail_item="70813-1" location_id="1;2;3;8;9"/>	<!--Red Cat's Eye (Lv. 3) & Red Cat's Eye (Lv. 3)-->
+	<synthesis item_1_id="70814" item_2_id="70814" chance="-1" success_item="70815-1" fail_item="70814-1" location_id="1;2;3;8;9"/>	<!--Red Cat's Eye (Lv. 4) & Red Cat's Eye (Lv. 4)-->
+	<synthesis item_1_id="70816" item_2_id="70816" chance="-1" success_item="70817-1" fail_item="70816-1" location_id="1;2;3;8;9"/>	<!--Blue Cat's Eye (Lv. 1) & Blue Cat's Eye (Lv. 1)-->
+	<synthesis item_1_id="70817" item_2_id="70817" chance="-1" success_item="70818-1" fail_item="70817-1" location_id="1;2;3;8;9"/>	<!--Blue Cat's Eye (Lv. 2) & Blue Cat's Eye (Lv. 2)-->
+	<synthesis item_1_id="70818" item_2_id="70818" chance="-1" success_item="70819-1" fail_item="70818-1" location_id="1;2;3;8;9"/>	<!--Blue Cat's Eye (Lv. 3) & Blue Cat's Eye (Lv. 3)-->
+	<synthesis item_1_id="70819" item_2_id="70819" chance="-1" success_item="70820-1" fail_item="70819-1" location_id="1;2;3;8;9"/>	<!--Blue Cat's Eye (Lv. 4) & Blue Cat's Eye (Lv. 4)-->
+	<synthesis item_1_id="71026" item_2_id="71027" chance="-1" success_item="71028-1" fail_item="71029-1" result_effecttype="1"/>	<!--Matchstick & Match Head-->
+	<synthesis item_1_id="71027" item_2_id="71026" chance="-1" success_item="71028-1" fail_item="71029-1" result_effecttype="1"/>	<!--Match Head & Matchstick-->
+	<synthesis item_1_id="71080" item_2_id="71078" chance="-1" success_item="71081-1" fail_item="71080-1" location_id="3;2"/>	<!--Talisman of Power - Lv. 1 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71081" item_2_id="71078" chance="-1" success_item="71082-1" fail_item="71080-1" location_id="3;2"/>	<!--Talisman of Power - Lv. 2 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71082" item_2_id="71078" chance="-1" success_item="71083-1" fail_item="71080-1" location_id="3;2"/>	<!--Talisman of Power - Lv. 3 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71083" item_2_id="71078" chance="-1" success_item="71084-1" fail_item="71080-1" location_id="3;2"/>	<!--Talisman of Power - Lv. 4 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71085" item_2_id="71078" chance="-1" success_item="71086-1" fail_item="71085-1" location_id="3;2"/>	<!--Talisman of Noble Power - Lv. 1 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71086" item_2_id="71078" chance="-1" success_item="71087-1" fail_item="71085-1" location_id="3;2"/>	<!--Talisman of Noble Power - Lv. 2 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71087" item_2_id="71078" chance="-1" success_item="71088-1" fail_item="71085-1" location_id="3;2"/>	<!--Talisman of Noble Power - Lv. 3 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71088" item_2_id="71078" chance="-1" success_item="71089-1" fail_item="71085-1" location_id="3;2"/>	<!--Talisman of Noble Power - Lv. 4 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71090" item_2_id="71078" chance="-1" success_item="71091-1" fail_item="71090-1" location_id="3;2"/>	<!--Bright Talisman of Power - Lv. 1 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71091" item_2_id="71078" chance="-1" success_item="71092-1" fail_item="71090-1" location_id="3;2"/>	<!--Bright Talisman of Power - Lv. 2 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71092" item_2_id="71078" chance="-1" success_item="71093-1" fail_item="71090-1" location_id="3;2"/>	<!--Bright Talisman of Power - Lv. 3 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71093" item_2_id="71078" chance="-1" success_item="71094-1" fail_item="71090-1" location_id="3;2"/>	<!--Bright Talisman of Power - Lv. 4 & Talisman of Power Fragment-->
+	<synthesis item_1_id="71085" item_2_id="71095" chance="-1" success_item="71086-1" fail_item="71085-1" location_id="3;2"/>	<!--Talisman of Noble Power - Lv. 1 & Stable Talisman of Power Fragment-->
+	<synthesis item_1_id="71086" item_2_id="71095" chance="-1" success_item="71087-1" fail_item="71086-1" location_id="3;2"/>	<!--Talisman of Noble Power - Lv. 2 & Stable Talisman of Power Fragment-->
+	<synthesis item_1_id="71087" item_2_id="71095" chance="-1" success_item="71088-1" fail_item="71087-1" location_id="3;2"/>	<!--Talisman of Noble Power - Lv. 3 & Stable Talisman of Power Fragment-->
+	<synthesis item_1_id="71088" item_2_id="71095" chance="-1" success_item="71089-1" fail_item="71088-1" location_id="3;2"/>	<!--Talisman of Noble Power - Lv. 4 & Stable Talisman of Power Fragment-->
+</list>

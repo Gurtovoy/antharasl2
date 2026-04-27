@@ -1,0 +1,166 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "option_data.dtd">
+<list>
+	<option_data id="30200">
+		<for>
+			<add order="0x60" stat="mDef" value="24"/>
+			<!--Маг. Защ. +24-->
+		</for>
+	</option_data>
+	<option_data id="30201">
+		<for>
+			<add order="0x60" stat="mDef" value="25"/>
+			<!--Маг. Защ. +25-->
+		</for>
+	</option_data>
+	<option_data id="30202">
+		<for>
+			<add order="0x60" stat="mDef" value="26"/>
+			<!--Маг. Защ. +26-->
+		</for>
+	</option_data>
+	<option_data id="30203">
+		<for>
+			<add order="0x60" stat="mDef" value="27"/>
+			<!--Маг. Защ. +27-->
+		</for>
+	</option_data>
+	<option_data id="30204">
+		<for>
+			<add order="0x60" stat="mDef" value="28"/>
+			<!--Маг. Защ. +28-->
+		</for>
+	</option_data>
+	<option_data id="30205">
+		<for>
+			<add order="0x60" stat="mDef" value="29"/>
+			<!--Маг. Защ. +29-->
+		</for>
+	</option_data>
+	<option_data id="30206">
+		<for>
+			<add order="0x60" stat="mDef" value="30"/>
+			<!--Маг. Защ. +30-->
+		</for>
+	</option_data>
+	<option_data id="30207">
+		<for>
+			<add order="0x60" stat="mDef" value="31"/>
+			<!--Маг. Защ. +31-->
+		</for>
+	</option_data>
+	<option_data id="30208">
+		<for>
+			<add order="0x60" stat="mDef" value="32"/>
+			<!--Маг. Защ. +32-->
+		</for>
+	</option_data>
+	<option_data id="30209">
+		<for>
+			<add order="0x60" stat="mDef" value="33"/>
+			<!--Маг. Защ. +33-->
+		</for>
+	</option_data>
+	<option_data id="30210">
+		<for>
+			<add order="0x60" stat="mDef" value="34"/>
+			<!--Маг. Защ. +34-->
+		</for>
+	</option_data>
+	<option_data id="30211">
+		<for>
+			<add order="0x60" stat="mDef" value="35"/>
+			<!--Маг. Защ. +35-->
+		</for>
+	</option_data>
+	<option_data id="30212">
+		<for>
+			<add order="0x60" stat="mDef" value="36"/>
+			<!--Маг. Защ. +36-->
+		</for>
+	</option_data>
+	<option_data id="30213">
+		<for>
+			<add order="0x60" stat="mDef" value="37"/>
+			<!--Маг. Защ. +37-->
+		</for>
+	</option_data>
+	<option_data id="30214">
+		<for>
+			<add order="0x60" stat="mDef" value="38"/>
+			<!--Маг. Защ. +38-->
+		</for>
+	</option_data>
+	<option_data id="30215">
+		<for>
+			<add order="0x60" stat="mDef" value="39"/>
+			<!--Маг. Защ. +39-->
+		</for>
+	</option_data>
+	<option_data id="30216">
+		<for>
+			<add order="0x60" stat="mDef" value="40"/>
+			<!--Маг. Защ. +40-->
+		</for>
+	</option_data>
+	<option_data id="30217">
+		<for>
+			<add order="0x60" stat="mDef" value="41"/>
+			<!--Маг. Защ. +41-->
+		</for>
+	</option_data>
+	<option_data id="30218">
+		<for>
+			<add order="0x60" stat="mDef" value="42"/>
+			<!--Маг. Защ. +42-->
+		</for>
+	</option_data>
+	<option_data id="30219">
+		<for>
+			<add order="0x60" stat="mDef" value="43"/>
+			<!--Маг. Защ. +43-->
+		</for>
+	</option_data>
+	<option_data id="30220">
+		<for>
+			<add order="0x60" stat="mDef" value="44"/>
+			<!--Маг. Защ. +44-->
+		</for>
+	</option_data>
+	<option_data id="30221">
+		<for>
+			<add order="0x60" stat="mDef" value="45"/>
+			<!--Маг. Защ. +45-->
+		</for>
+	</option_data>
+	<option_data id="30222">
+		<for>
+			<add order="0x60" stat="mDef" value="46"/>
+			<!--Маг. Защ. +46-->
+		</for>
+	</option_data>
+	<option_data id="30223">
+		<for>
+			<add order="0x60" stat="mDef" value="47"/>
+			<!--Маг. Защ. +47-->
+		</for>
+	</option_data>
+	<option_data id="30224">
+		<for>
+			<add order="0x60" stat="mDef" value="48"/>
+			<!--Маг. Защ. +48-->
+		</for>
+	</option_data>
+	<option_data id="30225">
+		<for>
+			<add order="0x60" stat="mDef" value="49"/>
+			<!--Маг. Защ. +49-->
+		</for>
+	</option_data>
+	<option_data id="30226">
+		<for>
+			<add order="0x60" stat="mDef" value="50"/>
+			<!--Маг. Защ. +50-->
+		</for>
+	</option_data>
+</list>

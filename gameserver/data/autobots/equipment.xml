@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autobot_equipment>
+    <!-- Default warrior equipment, level 1-19 -->
+    <class_equipment classId="0" minLevel="1" maxLevel="19">
+        <item slot="rhand" itemId="1"/>      <!-- Short Sword -->
+    </class_equipment>
+
+    <!-- Default warrior equipment, level 20-39 -->
+    <class_equipment classId="0" minLevel="20" maxLevel="39">
+        <item slot="rhand" itemId="69"/>     <!-- Bastard Sword -->
+        <item slot="chest" itemId="352"/>    <!-- Leather Tunic -->
+        <item slot="legs" itemId="2378"/>    <!-- Leather Stockings -->
+    </class_equipment>
+
+    <!-- Default warrior equipment, level 40-51 -->
+    <class_equipment classId="0" minLevel="40" maxLevel="51">
+        <item slot="rhand" itemId="150"/>    <!-- Elven Long Sword -->
+        <item slot="chest" itemId="397"/>    <!-- Mithril Shirt -->
+        <item slot="legs" itemId="2387"/>    <!-- Mithril Stockings -->
+        <item slot="gloves" itemId="2452"/>  <!-- Mithril Gloves -->
+        <item slot="feet" itemId="2431"/>    <!-- Mithril Boots -->
+    </class_equipment>
+
+    <!-- Default warrior equipment, level 52-61 -->
+    <class_equipment classId="0" minLevel="52" maxLevel="61">
+        <item slot="rhand" itemId="171"/>    <!-- Deadman's Glory -->
+        <item slot="chest" itemId="2384"/>   <!-- Chain Mail Shirt -->
+        <item slot="legs" itemId="2388"/>    <!-- Chain Gaiters -->
+        <item slot="gloves" itemId="2453"/>  <!-- Chain Gloves -->
+        <item slot="feet" itemId="2432"/>    <!-- Chain Boots -->
+    </class_equipment>
+
+    <!-- Default warrior equipment, level 62-85 -->
+    <class_equipment classId="0" minLevel="62" maxLevel="85">
+        <item slot="rhand" itemId="177"/>    <!-- Caliburs -->
+        <item slot="chest" itemId="358"/>    <!-- Full Plate Armor -->
+        <item slot="gloves" itemId="2454"/>  <!-- Full Plate Gauntlets -->
+        <item slot="feet" itemId="2436"/>    <!-- Full Plate Boots -->
+        <item slot="head" itemId="2414"/>    <!-- Full Plate Helmet -->
+    </class_equipment>
+
+    <!-- Mage equipment (classId 10 = Human Wizard base), level 1-19 -->
+    <class_equipment classId="10" minLevel="1" maxLevel="19">
+        <item slot="rhand" itemId="6"/>      <!-- Apprentice's Wand -->
+    </class_equipment>
+
+    <!-- Mage equipment, level 20-39 -->
+    <class_equipment classId="10" minLevel="20" maxLevel="39">
+        <item slot="rhand" itemId="189"/>    <!-- Staff of Life -->
+        <item slot="chest" itemId="425"/>    <!-- Mithril Tunic -->
+        <item slot="legs" itemId="2378"/>    <!-- Leather Stockings -->
+    </class_equipment>
+
+    <!-- Mage equipment, level 40-61 -->
+    <class_equipment classId="10" minLevel="40" maxLevel="61">
+        <item slot="rhand" itemId="200"/>    <!-- Sage's Staff -->
+        <item slot="chest" itemId="437"/>    <!-- Drake Leather Armor -->
+        <item slot="gloves" itemId="2452"/>  <!-- Mithril Gloves -->
+        <item slot="feet" itemId="2431"/>    <!-- Mithril Boots -->
+    </class_equipment>
+
+    <!-- Mage equipment, level 62-85 -->
+    <class_equipment classId="10" minLevel="62" maxLevel="85">
+        <item slot="rhand" itemId="208"/>    <!-- Arcana Mace -->
+        <item slot="chest" itemId="2392"/>   <!-- Leather Armor of Doom -->
+        <item slot="gloves" itemId="2454"/>  <!-- Full Plate Gauntlets -->
+        <item slot="feet" itemId="2436"/>    <!-- Full Plate Boots -->
+    </class_equipment>
+</autobot_equipment>

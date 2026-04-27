@@ -1,0 +1,25 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.gameserver.stats.conditions;
+
+import l2s.gameserver.stats.Env;
+import l2s.gameserver.stats.conditions.Condition;
+
+public class ConditionPlayerIsClanLeader
+extends Condition {
+    private final boolean _value;
+
+    public ConditionPlayerIsClanLeader(boolean value) {
+        this._value = value;
+    }
+
+    @Override
+    protected boolean testImpl(Env env) {
+        if (!env.character.isPlayer()) {
+            return !this._value;
+        }
+        return env.character.getPlayer().isClanLeader() == this._value;
+    }
+}
+

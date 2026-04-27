@@ -1,0 +1,42 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.gameserver.handler.usercommands.impl;
+
+import l2s.gameserver.geodata.GeoEngine;
+import l2s.gameserver.handler.usercommands.IUserCommandHandler;
+import l2s.gameserver.instancemanager.MapRegionManager;
+import l2s.gameserver.model.Player;
+import l2s.gameserver.network.l2.components.IBroadcastPacket;
+import l2s.gameserver.network.l2.s2c.SystemMessage;
+import l2s.gameserver.templates.mapregion.RestartArea;
+
+public class Loc
+implements IUserCommandHandler {
+    private static final int[] COMMAND_IDS = new int[]{0};
+
+    @Override
+    public boolean useUserCommand(int id, Player activeChar) {
+        int msgId;
+        if (COMMAND_IDS[0] != id) {
+            return false;
+        }
+        RestartArea ra = MapRegionManager.getInstance().getRegionData(RestartArea.class, activeChar);
+        int n = msgId = ra != null ? ra.getRestartPoint().get(activeChar.getRace()).getMsgId() : 0;
+        if (msgId > 0) {
+            activeChar.sendPacket((IBroadcastPacket)new SystemMessage(msgId).addNumber(activeChar.getX()).addNumber(activeChar.getY()).addNumber(activeChar.getZ()));
+        } else {
+            activeChar.sendPacket((IBroadcastPacket)new SystemMessage(1987).addString("Current location : " + activeChar.getX() + ", " + activeChar.getY() + ", " + activeChar.getZ() + ", " + activeChar.getHeading()));
+        }
+        if (activeChar.isGM()) {
+            activeChar.sendMessage("Map: " + GeoEngine.getMapX(activeChar.getX()) + "_" + GeoEngine.getMapY(activeChar.getY()));
+        }
+        return true;
+    }
+
+    @Override
+    public final int[] getUserCommandList() {
+        return COMMAND_IDS;
+    }
+}
+

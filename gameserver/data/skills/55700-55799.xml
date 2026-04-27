@@ -1,0 +1,864 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="55700" levels="1" name="Scroll: Dance of Fire">
+		<table name="#abnormal_time">120</table>
+		<table name="#magicLevel">40</table>
+		<set name="icon" value="icon.skill0274"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="hitTime" value="2500"/>
+		<set name="ride_state" value="NONE"/>
+		<set name="abnormal_time" value="#abnormal_time"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="abnormal_type" value="dance_of_fire"/>
+		<set name="magicLevel" value="#magicLevel"/>
+		<set name="magicType" value="MUSIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="affect_range" value="1000"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>		
+		<for>
+			<effect>
+				<p_critical_damage value="35" type="per"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55701" levels="1" name="Release Agathion\'s Seal - Sin Eater">
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="hitTime" value="3000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="85"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="useSS" value="false"/>
+		<for>
+			<effect name="i_summon_agathion" value="9021"/>
+		</for>
+	</skill>
+	<skill id="55702" levels="1" name="Hour of Penitence">
+		<set name="icon" value="icon.etc_leash_i00"/>
+		<set name="reuseDelay" value="43200000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="1000"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicType" value="ITEM"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="abnormal_time" value="18000"/>
+		<set name="abnormal_type" value="exp_bottle"/>
+		<set name="abnormal_level" value="1"/>
+		<set name="apply_effects_on_summon" value="false"/>
+		<set name="apply_effects_on_pet" value="false"/>
+		<set name="isSelfDispellable" value="false"/>
+		<set name="olympiad_use" value="false"/>
+		<set name="isPreservedOnDeath" value="true"/> 
+		<cond>
+			<player agathion="9021"/>
+		</cond>
+		<for>
+			<effect name="p_get_item_by_exp">
+				<def name="exp" value="200000"/><!--TODO: Check.-->
+				<def name="item_id" value="70807"/>
+				<def name="item_count" value="1"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55703" levels="1" name="Blessed Scroll: Enchant Weapon (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55704" levels="1" name="Blessed Scroll: Enchant Armor (A-grade)">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55705" levels="5" name="Red Cat\'s Eye">
+		<set name="icon" value="icon.bm_jewel_red_catseye"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55706" levels="5" name="Blue Cat\'s Eye">
+		<set name="icon" value="Icon.bm_jewel_blue_catseye"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55707" levels="1" name="Fortune Red Cat\'s Eye Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55708" levels="1" name="Fortune Blue Cat\'s Eye Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55709" levels="1" name="Shining Jewelry Box">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55710" levels="1" name="Put on Lv. 4 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i03"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A1"/>
+	</skill>
+	<skill id="55711" levels="1" name="Remove Lv. 4 Brooch">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A1"/>
+	</skill>
+	<skill id="55712" levels="1" name="Lv. 4 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i03"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<set stat="jewels_limit" value="5"/>
+		</for>
+	</skill>
+	<skill id="55713" levels="1" name="Lv. 4 Brooch - Additional Effect">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i03"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="inventoryLimit" value="12"/>
+		</for>
+	</skill>
+	<skill id="55714" levels="1" name="Shining Golden Boot">
+		<set name="icon" value="icon.card_event_blue_box"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55715" levels="1" name="Chef\'s Fish Stew Box">
+		<set name="icon" value="BranchSys.icon.br_silver_box_i00"/>
+		<set name="reuseDelay" value="1000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55716" levels="1" name="Letter Collector Spell">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.etc_candle_yellow_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55717" levels="1" name="Shilen\'s Treasure Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55718" levels="1" name="XP Rune 50%">
+		<set name="icon" value="icon.skill19226"/>
+		<set name="operate_type" value="P"/>
+		<cond msgId="1902">
+			<and>
+				<player minLevel="1"/>
+				<player max_level="60"/>
+			</and>
+		</cond>
+		<for>
+			<add stat="exp_rate_multiplier" value="0.5"/>
+			<add stat="sp_rate_multiplier" value="0.5"/>
+		</for>
+	</skill>
+	<skill id="55719" levels="1" name="Feather Rune">
+		<set name="icon" value="br_cashtex.item.br_cash_rune_of_feather_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55720" levels="1" name="Irene\' Hourglass - 1 Hour">
+		<set name="icon" value="icon.etc_dragons_blood_i03"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55721" levels="1" name="Storm Power">
+		<set name="icon" value="icon.power_of_storm"/>
+		<set name="reuseDelay" value="7200000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55722" levels="1" name="Facelifting Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55723" levels="1" name="Facelifting Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55724" levels="1" name="Facelifting Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55725" levels="1" name="Dye Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55726" levels="1" name="Dye Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55727" levels="1" name="Dye Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55728" levels="1" name="Dye Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55729" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55730" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55731" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55732" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55733" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55734" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55735" levels="1" name="Hair Style Change Potion">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55736" levels="1" name="Elmoreden Cloak Basic Effect">
+		<set name="icon" value="BranchIcon.icon.g_bm_elmoreden_cloak_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55737" levels="20" name="Elmoreden Cloak Enchant Effect">
+		<table name="#powerPvP">1.003 1.005 1.008 1.01 1.013 1.015 1.018 1.02 1.023 1.025 1.028 1.03 1.033 1.035 1.038 1.04 1.043 1.045 1.048 1.05</table>
+		<table name="#mDef">1 1 1 1 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03</table>
+		<table name="#triglev">1 1 1 1 1 1 1 1 1 1 2 2 2 2 3 3 3 3 4 4</table>
+		<table name="#triglev2">1 1 1 1 1 1 1 1 1 1 1 1 2 3 4 5 6 7 8 9</table>
+		<!--<table name="#HOLD">18лвл если цель обезвдлвиженна урон +10% 19+20% 20+30%</table>-->
+		<table name="#chance">0 0 0 0 0 0 10</table>
+		<table name="#chance2">0 0 0 0 0 0 0 0 0 0 1 2 3 4 5 6 7 8 9 10</table>
+		<set name="icon" value="BranchIcon.icon.g_bm_elmoreden_cloak_normal"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpPhysDmgBonus" value="#powerPvP"/>
+			<mul stat="pvpPhysSkillDmgBonus" value="#powerPvP"/>
+			<mul stat="pvpMagicSkillDmgBonus" value="#powerPvP"/>
+			<mul stat="mDef" value="#mDef"/>
+		</for>
+		<triggers>
+			<trigger id="55748" level="#triglev" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="#chance"/>
+			<trigger id="55749" level="#triglev2" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="#chance2"/>
+		</triggers>
+	</skill>
+	<skill id="55738" levels="1" name="Aden Cloak Basic Effect">
+		<set name="icon" value="BranchIcon.icon.g_bm_aden_cloak_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55739" levels="20" name="Aden Cloak Enchant Effect">
+		<table name="#powerPvE">1.003 1.005 1.008 1.01 1.013 1.015 1.018 1.02 1.023 1.025 1.028 1.03 1.033 1.035 1.038 1.04 1.043 1.045 1.048 1.05</table>
+		<table name="#mAtk">1 1 1 1 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03</table>
+		<table name="#triglev">1 1 1 1 1 1 1 2 3 4 5 6 7 8 9 10 11 12 13 14</table>
+		<table name="#powercrit">0 0 0 0 0 0 0 0 0 0 0 1 2 3 4 5 6 7 8 10</table>
+		<table name="#chance">0 0 0 0 0 0 5</table>
+		<set name="icon" value="BranchIcon.icon.g_bm_aden_cloak_normal"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pveMagicSkillDmgBonus" value="#powerPvE"/>
+			<mul stat="mAtk" value="#mAtk"/>
+			<p_magic_critical_dmg value="#powercrit" type="per"/>
+		</for>
+		<triggers>
+			<trigger id="55750" level="#triglev" type="OFFENSIVE_MAGICAL_SKILL_USE" chance="#chance"/>
+		</triggers>
+	</skill>
+	<skill id="55740" levels="1" name="Elmore Cloak Basic Effect">
+		<set name="icon" value="BranchIcon.icon.g_bm_elmore_cloak_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55741" levels="20" name="Elmore Cloak Enchant Effect">
+		<table name="#powerPvE">1.003 1.005 1.008 1.01 1.013 1.015 1.018 1.02 1.023 1.025 1.028 1.03 1.033 1.035 1.038 1.04 1.043 1.045 1.048 1.05</table>
+		<table name="#pAtk">1 1 1 1 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03</table>
+		<table name="#chance">0 0 0 0 0 0 5</table>
+		<table name="#triglev">1 1 1 1 1 1 1 2 3 4 5 6 7 8 9 10 11 12 13 14</table>
+		<set name="icon" value="BranchIcon.icon.g_bm_elmore_cloak_normal"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvePhysDmgBonus" value="#powerPvE"/>
+			<mul stat="pvePhysSkillDmgBonus" value="#powerPvE"/>
+			<mul stat="pAtk" value="#pAtk"/>
+		</for>
+		<triggers>
+			<trigger id="55751" level="#triglev" type="OFFENSIVE_PHYSICAL_SKILL_USE" chance="#chance"/>
+		</triggers>
+	</skill>
+	<skill id="55742" levels="1" name="Ferios Cloak Basic Effect">
+		<set name="icon" value="BranchIcon.icon.g_bm_perios_cloak_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55743" levels="20" name="Ferios Cloak Enchant Effect">
+		<table name="#ResDam">1.01 1.02 1.03 1.04 1.05 1.06 1.07 1.08 1.09 1.1 1.11 1.12 1.13 1.14 1.15 1.16 1.17 1.18 1.19 1.2</table>
+		<table name="#pDef">1 1 1 1 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03 1.03</table>
+		<!--<table name="#в обездвиж сост урон минус ">0 0 0 0 0 0 -5 7 9 11 13 15 17 18 20 22 24 26 28 30</table>-->
+		<table name="#chance">0 0 0 0 0 0 0 0 0 0 0 5</table>
+		<table name="#chance2">0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 5 5 5</table>
+		<table name="#triglev">1 1 1 1 1 1 1 1 1 1 1 1 2 3 4 5 6 7 8 9</table>
+		<table name="#triglev2">1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 3</table>
+		<set name="icon" value="BranchIcon.icon.g_bm_perios_cloak_normal"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<mul stat="pvpPhysDefenceBonus" value="#ResDam"/>
+			<mul stat="pvpPhysSkillDefenceBonus" value="#ResDam"/>
+			<mul stat="pvpMagicSkillDefenceBonus" value="#ResDam"/>
+			<mul stat="pvePhysDefenceBonus" value="#ResDam"/>
+			<mul stat="pvePhysSkillDefenceBonus" value="#ResDam"/>
+			<mul stat="pveMagicSkillDefenceBonus" value="#ResDam"/>
+			<mul stat="pDef" value="#pDef"/>
+		</for>
+		<triggers>
+			<trigger id="55752" level="#triglev" type="RECEIVE_DAMAGE" chance="#chance"/>
+			<trigger id="55753" level="#triglev2" type="RECEIVE_DAMAGE" chance="#chance"/>
+		</triggers>
+	</skill>
+	<skill id="55744" levels="1" name="Blessing of Elmoreden">
+		<set name="effectPoint" value="867"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_elmoreden_cloak_normal"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55745" levels="1" name="Spirit of Aden">
+		<set name="effectPoint" value="867"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_aden_cloak_normal"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55746" levels="1" name="Spirit of Elmore">
+		<set name="effectPoint" value="867"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_elmore_cloak_normal"/>
+		<set name="reuseDelay" value="1200000"/>
+		<set name="coolTime" value="300"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55747" levels="1" name="Blessing of Ferios">
+		<set name="effectPoint" value="867"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_perios_cloak_normal"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55748" levels="4" name="Elmoreden Spirit Shot">
+		<table name="#power">950 1425 1900 2375</table>
+		<set name="effectPoint" value="-1000"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="PDAM"/>
+		<set name="power" value="#power"/>
+		<set name="static" value="true"/>
+		<set name="directHp" value="true"/>
+		<set name="operate_type" value="A2"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="useSS" value="false"/>
+		<set name="isSkillTimePermanent" value="true"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+	</skill>
+	<skill id="55749" levels="9" name="Wrath of Elmoreden">
+		<table name="#power">0.10 0.15 0.2 0.25 0.3 0.35 0.4 0.45 0.5</table>
+		<set name="effectPoint" value="-1000"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="600"/>
+		<set name="hitTime" value="500"/>
+		<set name="power" value="#power"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="skillType" value="CPDAM"/>
+		<set name="operate_type" value="A2"/>
+	</skill>
+	<skill id="55750" levels="14" name="Wrath of Aden">
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8 9 10 11 12 13 14</table>
+		<table name="#PVE">1.3 1.33 1.36 1.4 1.44 1.48 1.53 1.58 1.64 1.71 1.78 2 2 2</table>
+		<set name="effectPoint" value="867"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_aden_cloak_normal"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<mul stat="pveMagicSkillDmgBonus" value="#PVE"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55751" levels="14" name="Wrath of Elmore">
+		<table name="#abnormal_level">1 2 3 4 5 6 7 8 9 10 11 12 13 14</table>
+		<table name="#PVE">1.3 1.33 1.36 1.4 1.44 1.48 1.53 1.58 1.64 1.71 1.78 2 2 2</table>
+		<set name="effectPoint" value="867"/>
+		<set name="icon" value="icon.skill0917"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="120"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<mul stat="pvePhysDmgBonus" value="#PVE"/>
+				<mul stat="pvePhysSkillDmgBonus" value="#PVE"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55752" levels="9" name="Recovery of Ferios">
+		<table name="#power">30 35 40 45 50 55 60 65 70</table>
+		<set name="effectPoint" value="867"/>
+		<set name="icon" value="icon.etc_bm_jewel_tanzanite"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="300"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicType" value="MAGIC"/>
+		<set name="hitCancelTime" value="500"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HEAL_PERCENT"/>
+		<set name="operate_type" value="A2"/>
+		<for>
+			<effect instant="true" name="RestoreCP" value="#power">
+				<def name="percent" value="true"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55753" levels="3" name="Defense of Ferios">
+		<table name="#abnormal_level">1 2 3</table>
+		<table name="#def">1800 2700 3600</table>
+		<set name="effectPoint" value="689"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_perios_cloak_normal"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="300"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="abnormal_time" value="20"/>
+		<set name="abnormal_level" value="#abnormal_level"/>
+		<set name="abnormal_type" value="vote"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_PARTY"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="buff_slot_type" value="-1"/>
+		<for>
+			<effect>
+				<add stat="pDef" value="#def"/>
+				<add stat="mDef" value="#def"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="55754" levels="8" name="Recovery of Elmoreden">
+		<set name="effectPoint" value="689"/>
+		<set name="icon" value="icon.skill0049"/>
+		<set name="reuseDelay" value="120000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="300"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55755" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55756" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55757" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55758" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55759" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55760" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55761" levels="10" name="Empire Cloak Augmentation">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55762" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55763" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55764" levels="2" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55765" levels="2" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55766" levels="2" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55767" levels="2" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55768" levels="2" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55769" levels="2" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55770" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55771" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55772" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55773" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55774" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55775" levels="10" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55776" levels="9" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55777" levels="9" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55778" levels="9" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55779" levels="9" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55780" levels="9" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55781" levels="9" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55782" levels="9" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55784" levels="9" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55785" levels="9" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55786" levels="3" name="Empire Cloak Augmentation">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55787" levels="3" name="Empire Cloak Augmentation">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55788" levels="3" name="Empire Cloak Augmentation">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55789" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55790" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55791" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55792" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55793" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55794" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55795" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55796" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55797" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55798" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55799" levels="3" name="Empire Cloak Augmentation">
+		<set name="icon" value="BranchIcon.icon.g_bm_cloak_mineral_normal"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

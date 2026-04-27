@@ -1,0 +1,62 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  l2s.commons.string.StringArrayUtils
+ *  l2s.commons.util.Rnd
+ */
+package l2s.gameserver.skills.effects.instant;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import l2s.commons.string.StringArrayUtils;
+import l2s.commons.util.Rnd;
+import l2s.gameserver.model.Creature;
+import l2s.gameserver.model.Skill;
+import l2s.gameserver.network.l2.s2c.MagicSkillUse;
+import l2s.gameserver.skills.SkillEntry;
+import l2s.gameserver.skills.SkillEntryType;
+import l2s.gameserver.skills.effects.instant.i_abstract_effect;
+import l2s.gameserver.templates.skill.EffectTemplate;
+
+public class i_call_random_skill
+extends i_abstract_effect {
+    private final List<SkillEntry> _skills = new ArrayList<SkillEntry>();
+
+    public i_call_random_skill(EffectTemplate template) {
+        super(template);
+        int[][] skills;
+        for (int[] skillArr : skills = StringArrayUtils.stringToIntArray2X((String)this.getParams().getString("skills"), (String)";", (String)"-")) {
+            SkillEntry skillEntry = SkillEntry.makeSkillEntry(SkillEntryType.NONE, skillArr[0], skillArr.length >= 2 ? skillArr[1] : 1);
+            if (skillEntry == null) continue;
+            this._skills.add(skillEntry);
+        }
+    }
+
+    @Override
+    public void instantUse(Creature effector, Creature effected, boolean reflected) {
+        if (this._skills.isEmpty()) {
+            return;
+        }
+        SkillEntry skillEntry = (SkillEntry)Rnd.get(this._skills);
+        if (skillEntry == null) {
+            return;
+        }
+        Skill skill = skillEntry.getTemplate();
+        if (skill.getReuseDelay() > 0 && effector.isSkillDisabled(skill)) {
+            return;
+        }
+        if (skillEntry.checkCondition(effector, effected, true, true, true, false, true)) {
+            Set<Creature> targets = skill.getTargets(skillEntry, effector, effected, false);
+            if (!skill.isNotBroadcastable() && !effector.isCastingNow()) {
+                for (Creature cha : targets) {
+                    effector.broadcastPacket(new MagicSkillUse(effector, cha, skill.getDisplayId(), skill.getDisplayLevel(), 0, 0L));
+                }
+            }
+            effector.callSkill(effected, skillEntry, targets, false, true);
+            effector.disableSkill(skill, skill.getReuseDelay());
+        }
+    }
+}
+

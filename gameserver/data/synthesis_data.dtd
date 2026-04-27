@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT list (synthesis)*>
+
+<!ELEMENT synthesis (#PCDATA)*>
+<!ATTLIST synthesis
+	item_1_id CDATA #REQUIRED
+	item_2_id CDATA #REQUIRED
+	chance CDATA #REQUIRED
+	success_item CDATA #REQUIRED
+	fail_item CDATA #REQUIRED
+	result_effecttype CDATA #IMPLIED
+	location_id CDATA #IMPLIED>

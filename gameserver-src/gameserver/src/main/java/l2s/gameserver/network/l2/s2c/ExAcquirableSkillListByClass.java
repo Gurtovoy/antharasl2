@@ -1,0 +1,63 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.gameserver.network.l2.s2c;
+
+import java.util.ArrayList;
+import java.util.List;
+import l2s.gameserver.model.base.AcquireType;
+import l2s.gameserver.network.l2.s2c.L2GameServerPacket;
+
+public class ExAcquirableSkillListByClass
+extends L2GameServerPacket {
+    private AcquireType _type;
+    private final List<Skill> _skills;
+
+    public ExAcquirableSkillListByClass(AcquireType type, int size) {
+        this._skills = new ArrayList<Skill>(size);
+        this._type = type;
+    }
+
+    public void addSkill(int id, int nextLevel, int maxLevel, int Cost, int requirements, int subUnit) {
+        this._skills.add(new Skill(id, nextLevel, maxLevel, Cost, requirements, subUnit));
+    }
+
+    public void addSkill(int id, int nextLevel, int maxLevel, int Cost, int requirements) {
+        this._skills.add(new Skill(id, nextLevel, maxLevel, Cost, requirements, 0));
+    }
+
+    @Override
+    protected final void writeImpl() {
+        this.writeH(this._type.getId());
+        this.writeH(this._skills.size());
+        for (Skill temp : this._skills) {
+            this.writeD(temp.id);
+            this.writeH(temp.nextLevel);
+            this.writeH(temp.maxLevel);
+            this.writeC(temp.requirements);
+            this.writeQ(temp.cost);
+            this.writeC(1);
+            if (this._type != AcquireType.SUB_UNIT) continue;
+            this.writeH(temp.subUnit);
+        }
+    }
+
+    class Skill {
+        public int id;
+        public int nextLevel;
+        public int maxLevel;
+        public int cost;
+        public int requirements;
+        public int subUnit;
+
+        Skill(int id, int nextLevel, int maxLevel, int cost, int requirements, int subUnit) {
+            this.id = id;
+            this.nextLevel = nextLevel;
+            this.maxLevel = maxLevel;
+            this.cost = cost;
+            this.requirements = requirements;
+            this.subUnit = subUnit;
+        }
+    }
+}
+

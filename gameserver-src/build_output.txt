@@ -1,0 +1,61 @@
+﻿mvn.cmd : WARNING: A restricted method in java.lang.System has been called
+строка:1 знак:53
++ ... erver-src"; & "c:\Users\Night\Desktop\скрипты\gameserver-src\tools\ap ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (WARNING: A rest...has been called:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+WARNING: java.lang.System::load has been called by org.fusesource.jansi.internal.JansiLoader in an unnamed module (file:/C:/Users/Night/Desktop/ёъЁшяЄ√/gameserver-src/tools/apache-maven-3.9.9/lib/jansi-2.4.1.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper (file:/C:/Users/Night/Desktop/ёъЁшяЄ√/gameserver-src/tools/apache-maven-3.9.9/lib/guava-33.2.
+1-jre.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.common.util.concurrent.AbstractFuture$UnsafeAtomicHelper
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------------< l2s:l2s-gameserver >-------------------------
+[INFO] Building l2s-gameserver 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[WARNING] The POM for l2s:l2s-commons:jar:1.0-SNAPSHOT is invalid, transitive dependencies (if any) will not be available: 7 problems were encountered while building the effective model for l2s:l2s-commons:1.0-SNAPSHOT
+[ERROR] 'dependencies.dependency.systemPath' for org.eclipse.jdt.core.compiler:ecj:jar must specify an absolute path but is ${project.basedir}/../../gameserver/lib/ecj-4.6.1.jar @ 
+[ERROR] 'dependencies.dependency.systemPath' for net.sf.trove4j:trove:jar must specify an absolute path but is ${project.basedir}/../../gameserver/lib/trove-3.1a1.jar @ 
+[ERROR] 'dependencies.dependency.systemPath' for org.napile:napile:jar must specify an absolute path but is ${project.basedir}/../../gameserver/lib/napile-1.0.5b.jar @ 
+[ERROR] 'dependencies.dependency.systemPath' for org.javolution:javolution:jar must specify an absolute path but is ${project.basedir}/../../gameserver/lib/javolution-6.1.0.jar @ 
+[ERROR] 'dependencies.dependency.systemPath' for jonelo:jacksum:jar must specify an absolute path but is ${project.basedir}/../../gameserver/lib/jacksum-1.7.0.jar @ 
+[ERROR] 'dependencies.dependency.systemPath' for net.sourceforge.mesp:mesp:jar must specify an absolute path but is ${project.basedir}/../../gameserver/lib/mesp-1.02.jar @ 
+[ERROR] 'dependencies.dependency.systemPath' for com.googlecode.juniversalchardet:juniversalchardet:jar must specify an absolute path but is ${project.basedir}/../../gameserver/lib/juniversalchardet-1.0.3.jar @ 
+
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ l2s-gameserver ---
+[INFO] skip non existing resourceDirectory C:\Users\Night\Desktop\ёъЁшяЄ√\gameserver-src\gameserver\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ l2s-gameserver ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2211 source files with javac [debug target 25] to target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/Night/Desktop/ёъЁшяЄ√/gameserver-src/gameserver/src/main/java/l2s/gameserver/model/Player.java:[4113,5] illegal start of expression
+[ERROR] /C:/Users/Night/Desktop/ёъЁшяЄ√/gameserver-src/gameserver/src/main/java/l2s/gameserver/network/l2/c2s/RequestExReceivePost.java:[154,13] 'finally' without 'try'
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.823 s
+[INFO] Finished at: 2026-04-22T19:07:24+03:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project l2s-gameserver: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/Night/Desktop/ёъЁшяЄ√/gameserver-src/gameserver/src/main/java/l2s/gameserver/model/Player.java:[4113,5] illegal start of expression
+[ERROR] /C:/Users/Night/Desktop/ёъЁшяЄ√/gameserver-src/gameserver/src/main/java/l2s/gameserver/network/l2/c2s/RequestExReceivePost.java:[154,13] 'finally' without 'try'
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

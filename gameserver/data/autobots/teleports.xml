@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autobot_teleports>
+    <!-- Town locations -->
+    <location name="Giran Town" x="83400" y="147943" z="-3404" type="town"/>
+    <location name="Aden Town" x="147450" y="26889" z="-2204" type="town"/>
+    <location name="Gludio Town" x="-14145" y="123540" z="-3121" type="town"/>
+    <location name="Dion Town" x="15670" y="142983" z="-2705" type="town"/>
+    <location name="Oren Town" x="82956" y="53162" z="-1495" type="town"/>
+    <location name="Goddard Town" x="147725" y="-56517" z="-2780" type="town"/>
+    <location name="Hunters Village" x="117166" y="76794" z="-2695" type="town"/>
+    <location name="Talking Island" x="-84318" y="244579" z="-3730" type="town"/>
+
+    <!-- Farm locations -->
+    <location name="Cruma Tower" x="17225" y="114173" z="-3439" type="farm"/>
+    <location name="Dragon Valley" x="73024" y="118485" z="-3720" type="farm"/>
+    <location name="Cemetery" x="170572" y="-17605" z="-3500" type="farm"/>
+    <location name="Plains of Dion" x="17135" y="170434" z="-3500" type="farm"/>
+    <location name="Execution Grounds" x="45402" y="170766" z="-3400" type="farm"/>
+    <location name="Ant Nest" x="-10886" y="75988" z="-3557" type="farm"/>
+</autobot_teleports>

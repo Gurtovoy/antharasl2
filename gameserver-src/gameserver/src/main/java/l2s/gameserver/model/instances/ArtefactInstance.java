@@ -1,0 +1,36 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  l2s.commons.collections.MultiValueSet
+ */
+package l2s.gameserver.model.instances;
+
+import l2s.commons.collections.MultiValueSet;
+import l2s.gameserver.model.Creature;
+import l2s.gameserver.model.instances.NpcInstance;
+import l2s.gameserver.templates.npc.NpcTemplate;
+
+public final class ArtefactInstance
+extends NpcInstance {
+    public ArtefactInstance(int objectId, NpcTemplate template, MultiValueSet<String> set) {
+        super(objectId, template, set);
+        this.setHasChatWindow(false);
+    }
+
+    @Override
+    public boolean isArtefact() {
+        return true;
+    }
+
+    @Override
+    public boolean isAutoAttackable(Creature attacker) {
+        return false;
+    }
+
+    @Override
+    public boolean isAttackable(Creature attacker) {
+        return false;
+    }
+}
+

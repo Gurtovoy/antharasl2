@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<item>
+		<production id="49460" count="1"/>	<!-- Fish Stew: Might Lv. 1 -->
+		<ingredient id="45473" count="5"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90438" count="1"/>	<!-- Fish Stew: Might Lv. 2 -->
+		<ingredient id="45473" count="20"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90439" count="1"/>	<!-- Fish Stew: Might Lv. 3 -->
+		<ingredient id="45473" count="40"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="49461" count="1"/>	<!-- Fish Stew: Shield Lv. 1 -->
+		<ingredient id="45473" count="5"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90440" count="1"/>	<!-- Fish Stew: Shield Lv. 2 -->
+		<ingredient id="45473" count="20"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90441" count="1"/>	<!-- Fish Stew: Shield Lv. 3 -->
+		<ingredient id="45473" count="40"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="49462" count="1"/>	<!-- Fish Stew: Magic Barrier Lv. 1 -->
+		<ingredient id="45473" count="20"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90444" count="1"/>	<!-- Fish Stew: Magic Barrier Lv. 2 -->
+		<ingredient id="45473" count="250"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="49463" count="1"/>	<!-- Fish Stew: Vampiric Rage Lv. 1 -->
+		<ingredient id="45473" count="10"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90445" count="1"/>	<!-- Fish Stew: Vampiric Rage Lv. 2 -->
+		<ingredient id="45473" count="200"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90446" count="1"/>	<!-- Fish Stew: Vampiric Rage Lv. 3 -->
+		<ingredient id="45473" count="250"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="49464" count="1"/>	<!-- Fish Stew: Empower Lv. 1 -->
+		<ingredient id="45473" count="10"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90442" count="1"/>	<!-- Fish Stew: Empower Lv. 2 -->
+		<ingredient id="45473" count="200"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90443" count="1"/>	<!-- Fish Stew: Empower Lv. 3 -->
+		<ingredient id="45473" count="250"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90450" count="1"/>	<!-- Fish Stew: Berserker Spirit Lv. 1 -->
+		<ingredient id="45473" count="200"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90451" count="1"/>	<!-- Fish Stew: Berserker Spirit Lv. 2 -->
+		<ingredient id="45473" count="250"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90452" count="1"/>	<!-- Fish Stew: Decrease Weight Lv. 1 -->
+		<ingredient id="45473" count="30"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90453" count="1"/>	<!-- Fish Stew: Decrease Weight Lv. 2 -->
+		<ingredient id="45473" count="40"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90454" count="1"/>	<!-- Fish Stew: Decrease Weight Lv. 3 -->
+		<ingredient id="45473" count="50"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90447" count="1"/>	<!-- Fish Stew: Greater Might Lv. 1 -->
+		<ingredient id="45473" count="250"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90448" count="1"/>	<!-- Fish Stew: Greater Shield Lv. 1 -->
+		<ingredient id="45473" count="250"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="90449" count="1"/>	<!-- Fish Stew: Wild Magic Lv. 1 -->
+		<ingredient id="45473" count="250"/> <!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="70040" count="1"/>	<!--null-->
+		<ingredient id="45481" count="40"/>	<!-- Fresh Blue Mackerel -->
+	</item>
+	<item>
+		<production id="70041" count="1"/>	<!--null-->
+		<ingredient id="45481" count="40"/>	<!-- Fresh Blue Mackerel -->
+	</item>
+	<item>
+		<production id="70042" count="1"/>	<!--null-->
+		<ingredient id="45481" count="40"/>	<!-- Fresh Blue Mackerel -->
+	</item>
+	<item>
+		<production id="70043" count="1"/>	<!--null-->
+		<ingredient id="45481" count="40"/>	<!-- Fresh Blue Mackerel -->
+	</item>
+	<item>
+		<production id="70044" count="1"/>	<!--null-->
+		<ingredient id="45481" count="40"/>	<!-- Fresh Blue Mackerel -->
+	</item>
+	<item>
+		<production id="70045" count="1"/>	<!--null-->
+		<ingredient id="45481" count="40"/>	<!-- Fresh Blue Mackerel -->
+	</item>
+	<item>
+		<production id="49501" count="1"/>	<!--null-->
+		<ingredient id="45473" count="60"/>	<!-- Blue Mackerel -->
+	</item>
+	<item>
+		<production id="49501" count="1"/>	<!--null-->
+		<ingredient id="45481" count="35"/>	<!-- Fresh Blue Mackerel -->
+	</item>
+</list>

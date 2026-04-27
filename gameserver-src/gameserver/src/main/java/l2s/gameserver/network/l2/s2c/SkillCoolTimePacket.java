@@ -1,0 +1,56 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.gameserver.network.l2.s2c;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+import l2s.gameserver.model.Player;
+import l2s.gameserver.network.l2.s2c.L2GameServerPacket;
+import l2s.gameserver.skills.SkillEntry;
+import l2s.gameserver.skills.TimeStamp;
+
+public class SkillCoolTimePacket
+extends L2GameServerPacket {
+    private List<Skill> _list = Collections.emptyList();
+
+    public SkillCoolTimePacket(Player player) {
+        Collection<TimeStamp> list = player.getSkillReuses();
+        this._list = new ArrayList<Skill>(list.size());
+        for (TimeStamp stamp : list) {
+            SkillEntry skillEntry;
+            if (!stamp.hasNotPassed() || (skillEntry = player.getKnownSkill(stamp.getId())) == null) continue;
+            Skill sk = new Skill();
+            sk.skillId = skillEntry.getId();
+            sk.level = skillEntry.getLevel();
+            sk.reuseBase = (int)Math.round((double)stamp.getReuseBasic() / 1000.0);
+            sk.reuseCurrent = (int)Math.round((double)stamp.getReuseCurrent() / 1000.0);
+            this._list.add(sk);
+        }
+    }
+
+    @Override
+    protected final void writeImpl() {
+        this.writeD(this._list.size());
+        for (int i = 0; i < this._list.size(); ++i) {
+            Skill sk = this._list.get(i);
+            this.writeD(sk.skillId);
+            this.writeD(sk.level);
+            this.writeD(sk.reuseBase);
+            this.writeD(sk.reuseCurrent);
+        }
+    }
+
+    private static class Skill {
+        public int skillId;
+        public int level;
+        public int reuseBase;
+        public int reuseCurrent;
+
+        private Skill() {
+        }
+    }
+}
+

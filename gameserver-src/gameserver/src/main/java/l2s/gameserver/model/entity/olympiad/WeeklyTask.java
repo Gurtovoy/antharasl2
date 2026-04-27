@@ -1,0 +1,25 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  org.slf4j.Logger
+ *  org.slf4j.LoggerFactory
+ */
+package l2s.gameserver.model.entity.olympiad;
+
+import l2s.gameserver.model.entity.olympiad.Olympiad;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class WeeklyTask
+implements Runnable {
+    private static final Logger _log = LoggerFactory.getLogger(WeeklyTask.class);
+
+    @Override
+    public void run() {
+        Olympiad.doWeekTasks();
+        _log.info("Olympiad System: Added weekly points to nobles.");
+        Olympiad.setWeekStartTime(System.currentTimeMillis());
+    }
+}
+

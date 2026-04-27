@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "product_data.dtd">
+<list>
+	<!--
+		category = Supplies		1
+		category = Equipment	2
+		category = VIP			3
+		category = Event		4
+		//category = Award Coins	5
+		points_item_id = -1 - Premium points (ruofflike)
+		points_item_id > 0 - Ingame items (Adena, coints, etc)
+		Base Parameters: <product id="0" name="" category="1" price="120" silver_coin_count="0" gold_coin_count="0" min_vip_level="1" max_vip_level="7" limit="-1" limit_refresh_pattern="30 6 * * *" is_hot="false" is_new="false" on_sale="true" sale_start_date="1980/01/01 08:00" sale_end_date="2037/06/01 08:00" location_id="-1">
+	-->
+	<config points_item_id="-1"/>
+	<product id="100001" name="Ежедневный Подарок - VIP1" category="3" price="0" min_vip_level="1" max_vip_level="1" limit="1" on_sale="true" location_id="8">
+		<component item_id="29001" count="1"/>	<!--Ежедневный Подарок - VIP1-->
+	</product>
+	<product id="100002" name="Ежедневный Подарок - VIP2" category="3" price="0" min_vip_level="2" max_vip_level="2" limit="1" on_sale="true" location_id="8">
+		<component item_id="29002" count="1"/>	<!--Ежедневный Подарок - VIP2-->
+	</product>
+	<product id="100003" name="Ежедневный Подарок - VIP3" category="3" price="0" min_vip_level="3" max_vip_level="3" limit="1" on_sale="true" location_id="8">
+		<component item_id="29003" count="1"/>	<!--Ежедневный Подарок - VIP3-->
+	</product>
+	<product id="100004" name="Ежедневный Подарок - VIP4" category="3" price="0" min_vip_level="4" max_vip_level="4" limit="1" on_sale="true" location_id="8">
+		<component item_id="29004" count="1"/>	<!--Ежедневный Подарок - VIP4-->
+	</product>
+	<product id="100005" name="Ежедневный Подарок - VIP5" category="3" price="0" min_vip_level="5" max_vip_level="5" limit="1" on_sale="true" location_id="8">
+		<component item_id="29005" count="1"/>	<!--Ежедневный Подарок - VIP5-->
+	</product>
+	<product id="100006" name="Ежедневный Подарок - VIP6" category="3" price="0" min_vip_level="6" max_vip_level="6" limit="1" on_sale="true" location_id="8">
+		<component item_id="29006" count="1"/>	<!--Ежедневный Подарок - VIP6-->
+	</product>
+	<product id="100007" name="Ежедневный Подарок - VIP7" category="3" price="0" min_vip_level="7" max_vip_level="7" limit="1" on_sale="true" location_id="8">
+		<component item_id="29007" count="1"/>	<!--Ежедневный Подарок - VIP7-->
+	</product>
+	<product id="100101" name="Свиток EXP/SP(30%)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29008" count="1"/>	<!--Свиток Опыта/SP-->
+	</product>
+	<product id="100102" name="Свиток EXP/SP(40%)" category="3" price="120" min_vip_level="4" on_sale="true" location_id="8">
+		<component item_id="29009" count="1"/>	<!--Свиток Опыта/SP - Обычный-->
+	</product>
+	<product id="100201" name="Свиток Эффектов 1-й Профессии" category="1" price="120" limit="10" on_sale="true" location_id="8">
+		<component item_id="29011" count="1"/>	<!--Свиток Эффектов 1-й Профессии-->
+	</product>
+	<product id="100202" name="Свиток Эффектов 2-й Профессии" category="3" price="120" limit="5" min_vip_level="4" on_sale="true" location_id="8">
+		<component item_id="29012" count="1"/>	<!--Свиток Эффектов 2-й Профессии-->
+	</product>
+	<product id="100301" name="Свиток: Модифицировать Оружие (D)" category="1" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/21 08:00" location_id="8">
+		<component item_id="29015" count="1"/>	<!--Свиток: Модифицировать Оружие (D)-->
+	</product>
+	<product id="100302" name="Свиток: Модифицировать Доспех (D)" category="1" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/21 08:00" location_id="8">
+		<component item_id="29016" count="1"/>	<!--Свиток: Модифицировать Доспех (D)-->
+	</product>
+	<product id="100303" name="Благословенный Свиток: Модифицировать Оружие (D)" category="1" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/21 08:00" location_id="8">
+		<component item_id="29019" count="1"/>	<!--Благословенный Свиток: Модифицировать Оружие (D)-->
+	</product>
+	<product id="100304" name="Благословенный Свиток: Модифицировать Доспех (D)" category="1" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/21 08:00" location_id="8">
+		<component item_id="29020" count="1"/>	<!--Благословенный Свиток: Модифицировать Доспех (D)-->
+	</product>
+	<product id="100305" name="Свиток: Модифицировать Оружие (C)" category="1" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/21 08:00" location_id="8">
+		<component item_id="29017" count="1"/>	<!--Свиток: Модифицировать Оружие (С)-->
+	</product>
+	<product id="100306" name="Свиток: Модифицировать Доспех (C)" category="1" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/21 08:00" location_id="8">
+		<component item_id="29018" count="1"/>	<!--Свиток: Модифицировать Доспех (С)-->
+	</product>
+	<product id="100313" name="Благословенный Свиток: Модифицировать Оружие (C)" category="1" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/21 08:00" location_id="8">
+		<component item_id="29021" count="1"/>	<!--Благословенный Свиток: Модифицировать Оружие (C)-->
+	</product>
+	<product id="100314" name="Благословенный Свиток: Модифицировать Доспех (C)" category="1" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/21 08:00" location_id="8">
+		<component item_id="29022" count="1"/>	<!--Благословенный Свиток: Модифицировать Доспех (C)-->
+	</product>
+	<product id="100401" name="Упаковка: Чудесный Заряд Души: Без Ранга (100 шт.)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29557" count="1"/>	<!--Упаковка: Чудесный Заряд Души: Без Ранга (100 шт.)-->
+	</product>
+	<product id="100402" name="Упаковка: Чудесный Благословенный Заряд Духа: Без Ранга (100 шт.)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29558" count="1"/>	<!--Упаковка: Чудесный Благословенный Заряд Духа: Без Ранга (1000 шт.)-->
+	</product>
+	<product id="100403" name="Упаковка: Чудесный Заряд Души Ранга D (100 шт.)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29559" count="1"/>	<!--Упаковка: Чудесный Заряд Души Ранга D (100 шт.)-->
+	</product>
+	<product id="100404" name="Упаковка: Чудесный Благословенный Заряд Духа Ранга D (100 шт.)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29560" count="1"/>	<!--Упаковка: Чудесный Благословенный Заряд Духа Ранга D (100 шт.)-->
+	</product>
+	<product id="100405" name="Упаковка: Чудесный Заряд Души Ранга С (100 шт.)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29561" count="1"/>	<!--Упаковка: Чудесный Заряд Души Ранга С (100 шт.)-->
+	</product>
+	<product id="100406" name="Упаковка: Чудесный Благословенный Заряд Духа Ранга С (100 шт.)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29562" count="1"/>	<!--Упаковка: Чудесный Благословенный Заряд Духа Ранга С (100 шт.)-->
+	</product>
+	<product id="100407" name="Упаковка: Чудесные Заряды Души - Ранг B (100 шт.)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29748" count="1"/>	<!--Упаковка: Чудесные Заряды Души - Ранг B (100 шт.)-->
+	</product>
+	<product id="100408" name="Упаковка: Чудесные Благ. Заряды Духа - Ранг B (100 шт.)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29749" count="1"/>	<!--Упаковка: Чудесные Благ. Заряды Духа - Ранг B (100 шт.)-->
+	</product>
+	<product id="100501" name="Чудесная Упаковка для Снайпера (Без Ранга)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29531" count="1"/>	<!--Чудесная Упаковка для Снайпера (Без Ранга)-->
+	</product>
+	<product id="100502" name="Чудесная Упаковка для Мистика (Без Ранга)" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29532" count="1"/>	<!--Чудесная Упаковка для Мистика (Без Ранга)-->
+	</product>
+	<product id="100503" name="Чудесная Упаковка для Снайпера - Ранг D" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29533" count="1"/>	<!--Чудесная Упаковка для Снайпера - Ранг D-->
+	</product>
+	<product id="100504" name="Чудесная Упаковка для Мистика - Ранг D" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29534" count="1"/>	<!--Чудесная Упаковка для Мистика - Ранг D-->
+	</product>
+	<product id="100505" name="Чудесная Упаковка для Снайпера - Ранг C" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29535" count="1"/>	<!--Чудесная Упаковка для Снайпера - Ранг С-->
+	</product>
+	<product id="100506" name="Чудесная Упаковка для Мистика - Ранг C" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29536" count="1"/>	<!--Чудесная Упаковка для Мистика - Ранг С-->
+	</product>
+	<product id="100507" name="Чудесная Упаковка для Снайпера - Ранг B" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29750" count="1"/>	<!--Чудесная Упаковка для Снайпера - Ранг B-->
+	</product>
+	<product id="100508" name="Чудесная Упаковка для Мистика - Ранг B" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29751" count="1"/>	<!--Чудесная Упаковка для Мистика - Ранг B-->
+	</product>
+	<product id="100601" name="Быстродействующее Зелье Исцеления" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29031" count="1"/>	<!--Быстродействующее Зелье Исцеления-->
+	</product>
+	<product id="100602" name="Большое Быстродействующее Зелье Исцеления" category="3" price="120" min_vip_level="4" on_sale="true" location_id="8">
+		<component item_id="29032" count="1"/>	<!--Большое Быстродействующее Зелье Исцеления-->
+	</product>
+	<product id="100701" name="Элегантная Красная Модная Шляпа" category="3" price="120" min_vip_level="1" on_sale="true" sale_start_date="2016/04/01 08:00" sale_end_date="2016/04/30 08:00" location_id="8">
+		<component item_id="29036" count="1"/>	<!--Элегантная Красная Модная Шляпа-->
+	</product>
+	<product id="100702" name="Элегантный Обруч Ангела" category="3" price="120" min_vip_level="4" on_sale="true" sale_start_date="2016/05/13 08:00" sale_end_date="2016/06/10 08:00" location_id="8">
+		<component item_id="29037" count="1"/>	<!--[Элегантный Обруч Ангела-->
+	</product>
+	<product id="100703" name="Элегантный Колпак Мага" category="3" price="120" min_vip_level="4" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/11/25 08:00" location_id="8">
+		<component item_id="29038" count="1"/>	<!--Элегантный Колпак Мага-->
+	</product>
+	<product id="100704" name="Шляпа Лэй Фэна" category="3" price="120" min_vip_level="4" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/11/25 08:00" location_id="8">
+		<component item_id="29039" count="1"/>	<!--Шляпа Лэй Фэна-->
+	</product>
+	<product id="100705" name="Шапка Мага" category="3" price="120" min_vip_level="4" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/11/25 08:00" location_id="8">
+		<component item_id="29040" count="1"/>	<!--Шляпа Мага-->
+	</product>
+	<product id="100706" name="Шляпа Зорро" category="3" price="120" min_vip_level="4" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/11/25 08:00" location_id="8">
+		<component item_id="29041" count="1"/>	<!--Шляпа Зорро-->
+	</product>
+	<product id="100801" name="Благословенное Перо" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29148" count="1"/>	<!--Благословенное Перо-->
+	</product>
+	<product id="100802" name="Свиток Благ. Телепорта" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29029" count="1"/>	<!--Свиток Благ. Телепорта-->
+	</product>
+	<product id="100803" name="Свиток Благ. Воскрешения" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29030" count="1"/>	<!--Свиток Благ. Воскрешения-->
+	</product>
+	<product id="100901" name="Телепорт - Деревня Говорящего Острова" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29149" count="1"/>	<!--Свиток Телепорта - Деревня Говорящего Острова-->
+	</product>
+	<product id="100902" name="Телепорт - Эльфийская Деревня" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29150" count="1"/>	<!--Свиток Телепорта - Эльфийская Деревня-->
+	</product>
+	<product id="100903" name="Телепорт - Деревня Темных Эльфов" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29151" count="1"/>	<!--Свиток Телепорта - Деревня Темных Эльфов-->
+	</product>
+	<product id="100904" name="Телепорт - Деревня Орков" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29152" count="1"/>	<!--Свиток Телепорта - Деревня Орков-->
+	</product>
+	<product id="100905" name="Телепорт - Деревня Гномов" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29153" count="1"/>	<!--Свиток Телепорта - Деревня Гномов-->
+	</product>
+	<product id="100906" name="Телепорт - Глудин" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29154" count="1"/>	<!--Свиток Телепорта - Глудин-->
+	</product>
+	<product id="100907" name="Телепорт - Глудио" category="1" price="120" on_sale="true" location_id="8">
+		<component item_id="29155" count="1"/>	<!--Свиток Телепорта - Глудио-->
+	</product>
+	<product id="101001" name="Набор Новичка - Ур.1" category="1" price="120" limit="1" limit_refresh_pattern="30 6 1 * *" on_sale="true" location_id="8">
+		<component item_id="29510" count="1"/>	<!--Набор Новичка - Ур. 1-->
+	</product>
+	<product id="101002" name="Часть Кольца Наследника Хроник" category="3" price="0" limit="1" limit_refresh_pattern="-1" min_vip_level="1" on_sale="true" location_id="8">
+		<component item_id="29551" count="1"/>	<!--Часть Кольца Наследника Хроник-->
+	</product>
+	<product id="101005" name="Пакет Путешественника -  Ур. 1" category="1" price="120" limit="1" limit_refresh_pattern="30 6 1 * *" on_sale="true" location_id="8">
+		<component item_id="29656" count="1"/>	<!--Пакет Путешественника -  Ур. 1-->
+	</product>
+	<product id="101006" name="Упаковка с Особымй Плодом Пиратов" category="1" price="120" on_sale="true" sale_start_date="2016/06/24 08:00" sale_end_date="2016/07/08 08:00" location_id="8">
+		<component item_id="49517" count="1"/>	<!--Сундук с Пиратскими Трофеями-->
+		<component item_id="49518" count="10"/>	<!--Особый Плод Пиратов-->
+	</product>
+	<product id="101007" name="Упаковка с Особымй Плодом Пиратов" category="1" price="120" on_sale="true" sale_start_date="2016/06/24 08:00" sale_end_date="2016/07/08 08:00" location_id="8">
+		<component item_id="49517" count="10"/>	<!--Сундук с Пиратскими Трофеями-->
+		<component item_id="49518" count="100"/>	<!--Особый Плод Пиратов-->
+	</product>
+	<product id="101008" name="Мешочек с Сокровищами Антараса" category="2" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/28 08:00" location_id="8">
+		<component item_id="29744" count="1"/>	<!--Мешочек с Сокровищами Антараса-->
+	</product>
+	<product id="101009" name="Мешочек с Сокровищами Антараса" category="2" price="120" on_sale="true" sale_start_date="2016/09/24 08:00" sale_end_date="2016/10/28 08:00" location_id="8">
+		<component item_id="29744" count="20"/>	<!--Мешочек с Сокровищами Антараса-->
+	</product>
+	<product id="101010" name="Золотой Сундук Русалки для Рыбалки" category="1" price="120" on_sale="true" sale_start_date="2016/11/18 08:00" sale_end_date="2016/12/09 08:00" location_id="8">
+		<component item_id="49583" count="1"/>	<!--Сундук Золотой Русалки для Рыбалки-->
+	</product>
+	<product id="101011" name="Золотой Сундук Русалки для Рыбалки" category="1" price="120" on_sale="true" sale_start_date="2016/11/18 08:00" sale_end_date="2016/12/09 08:00" location_id="8">
+		<component item_id="49583" count="10"/>	<!--Сундук Золотой Русалки для Рыбалки-->
+	</product>
+	<product id="101012" name="Сундук с Подвеской Дракона Огня" category="2" price="120" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29724" count="1"/>	<!--Сундук с Подвеской Дракона Огня-->
+	</product>
+	<product id="101013" name="Сундук с Подвеской Дракона Воды" category="2" price="120" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29725" count="1"/>	<!--Сундук с Подвеской Дракона Воды-->
+	</product>
+	<product id="101014" name="Сундук с Подвеской Дракона Ветра" category="2" price="120" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29726" count="1"/>	<!--Сундук с Подвеской Дракона Ветра-->
+	</product>
+	<product id="101015" name="Сундук с Подвеской Дракона Земли" category="2" price="120" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29727" count="1"/>	<!--Сундук с Подвеской Дракона Земли-->
+	</product>
+	<product id="101016" name="Особый Сундук с Подвеской Дракона Огня" category="2" price="120" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29728" count="1"/>	<!--Особый Сундук с Подвеской Дракона Огня-->
+	</product>
+	<product id="101017" name="Особый Сундук с Подвеской Дракона Воды" category="2" price="120" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29729" count="1"/>	<!--Особый Сундук с Подвеской Дракона Воды-->
+	</product>
+	<product id="101018" name="Особый Сундук с Подвеской Дракона Ветра" category="2" price="120" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29730" count="1"/>	<!--Особый Сундук с Подвеской Дракона Ветра-->
+	</product>
+	<product id="101019" name="Особый Сундук с Подвеской Дракона Земли" category="2" price="120" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29731" count="1"/>	<!--Особый Сундук с Подвеской Дракона Земли-->
+	</product>
+	<product id="101020" name="Упаковка: Блестящая Полировка для Подвески Дракона Огня" category="3" price="120" min_vip_level="5" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29732" count="1"/>	<!--Упаковка: Блестящая Полировка для Подвески Дракона Огня-->
+	</product>
+	<product id="101021" name="Упаковка: Блестящая Полировка для Подвески Дракона Воды" category="3" price="120" min_vip_level="5" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29733" count="1"/>	<!--Упаковка: Блестящая Полировка для Подвески Дракона Воды-->
+	</product>
+	<product id="101022" name="Упаковка: Блестящая Полировка для Подвески Дракона Ветра" category="3" price="120" min_vip_level="5" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29734" count="1"/>	<!--Упаковка: Блестящая Полировка для Подвески Дракона Ветра-->
+	</product>
+	<product id="101023" name="Упаковка: Блестящая Полировка для Подвески Дракона Земли" category="3" price="120" min_vip_level="5" on_sale="true" sale_start_date="2016/07/22 08:00" sale_end_date="2016/08/12 08:00" location_id="8">
+		<component item_id="29735" count="1"/>	<!--Упаковка: Блестящая Полировка для Подвески Дракона Земли-->
+	</product>
+	<product id="101024" name="Сундук с Сокровищами Валакаса" category="2" price="120" on_sale="true" sale_start_date="2016/12/16 08:00" sale_end_date="2017/01/13 08:00" location_id="8">
+		<component item_id="70162" count="1"/>	<!--Сундук с Сокровищами Валакаса-->
+	</product>
+	<product id="101025" name="Сундук с Сокровищами Валакаса" category="2" price="120" on_sale="true" sale_start_date="2016/12/16 08:00" sale_end_date="2017/01/13 08:00" location_id="8">
+		<component item_id="70162" count="20"/>	<!--Сундук с Сокровищами Валакаса-->
+	</product>
+</list>

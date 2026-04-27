@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE list SYSTEM "spawn.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<spawn name="training_camp_scarecrow" count="1" respawn="60" group="training_camp">
+		<point x="-56650" y="135938" z="-2672" h="0"/>
+		<npc id="18912"/><!--Scarecrow-->
+	</spawn>
+</list>

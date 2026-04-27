@@ -1,0 +1,65 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.commons.geometry;
+
+import l2s.commons.geometry.CoordsConverter;
+import l2s.commons.geometry.Point3D;
+import l2s.commons.geometry.Shape;
+
+public abstract class AbstractShape
+implements Shape {
+    protected final Point3D max = new Point3D();
+    protected final Point3D min = new Point3D();
+
+    @Override
+    public boolean isInside(int x, int y, int z, CoordsConverter c) {
+        return this.min.z <= z && this.max.z >= z && this.isInside(x, y, c);
+    }
+
+    @Override
+    public boolean isOnPerimeter(int x, int y, int z, CoordsConverter c) {
+        return this.min.z <= z && this.max.z >= z && this.isOnPerimeter(x, y, c);
+    }
+
+    @Override
+    public int getXmax() {
+        return this.max.x;
+    }
+
+    @Override
+    public int getXmin() {
+        return this.min.x;
+    }
+
+    @Override
+    public int getYmax() {
+        return this.max.y;
+    }
+
+    @Override
+    public int getYmin() {
+        return this.min.y;
+    }
+
+    public AbstractShape setZmax(int z) {
+        this.max.z = z;
+        return this;
+    }
+
+    public AbstractShape setZmin(int z) {
+        this.min.z = z;
+        return this;
+    }
+
+    @Override
+    public int getZmax() {
+        return this.max.z;
+    }
+
+    @Override
+    public int getZmin() {
+        return this.min.z;
+    }
+}
+

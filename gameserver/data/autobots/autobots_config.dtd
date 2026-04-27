@@ -1,0 +1,4 @@
+<!ELEMENT autobots_config (setting*)>
+<!ELEMENT setting EMPTY>
+<!ATTLIST setting name CDATA #REQUIRED>
+<!ATTLIST setting value CDATA #REQUIRED>

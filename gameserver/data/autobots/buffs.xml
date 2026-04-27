@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autobot_buffs>
+    <!-- Warrior buffs (generic for melee classes, classId 0 = default/fallback) -->
+    <class_buffs classId="0">
+        <buff skillId="1007" skillLevel="3"/>  <!-- Chant of Battle (pAtk up) -->
+        <buff skillId="1009" skillLevel="3"/>  <!-- Chant of Shielding (pDef up) -->
+        <buff skillId="1006" skillLevel="3"/>  <!-- Chant of Fire (mDef up) -->
+        <buff skillId="1002" skillLevel="3"/>  <!-- Chant of Flame (casting speed) -->
+        <buff skillId="1005" skillLevel="3"/>  <!-- Pa'agrio's Blessing (pDef up) -->
+        <buff skillId="1008" skillLevel="3"/>  <!-- Pa'agrio's Glory (mDef up) -->
+        <buff skillId="1010" skillLevel="3"/>  <!-- Soul Shield (pDef up) -->
+    </class_buffs>
+
+    <!-- Mage buffs (classId 10 = Human Wizard base) -->
+    <class_buffs classId="10">
+        <buff skillId="1006" skillLevel="3"/>  <!-- Chant of Fire (mDef up) -->
+        <buff skillId="1004" skillLevel="3"/>  <!-- Pa'agrio's Wisdom (casting speed) -->
+        <buff skillId="1009" skillLevel="3"/>  <!-- Chant of Shielding (pDef up) -->
+        <buff skillId="1008" skillLevel="3"/>  <!-- Pa'agrio's Glory (mDef up) -->
+        <buff skillId="1002" skillLevel="3"/>  <!-- Chant of Flame (casting speed) -->
+    </class_buffs>
+
+    <!-- Healer buffs (classId 15 = Cleric base) -->
+    <class_buffs classId="15">
+        <buff skillId="1006" skillLevel="3"/>  <!-- Chant of Fire (mDef up) -->
+        <buff skillId="1009" skillLevel="3"/>  <!-- Chant of Shielding (pDef up) -->
+        <buff skillId="1004" skillLevel="3"/>  <!-- Pa'agrio's Wisdom (casting speed) -->
+        <buff skillId="1005" skillLevel="3"/>  <!-- Pa'agrio's Blessing (pDef up) -->
+        <buff skillId="1008" skillLevel="3"/>  <!-- Pa'agrio's Glory (mDef up) -->
+    </class_buffs>
+
+    <!-- Orc Fighter buffs (classId 31) -->
+    <class_buffs classId="31">
+        <buff skillId="1007" skillLevel="3"/>  <!-- Chant of Battle (pAtk up) -->
+        <buff skillId="1005" skillLevel="3"/>  <!-- Pa'agrio's Blessing (pDef up) -->
+        <buff skillId="1009" skillLevel="3"/>  <!-- Chant of Shielding (pDef up) -->
+        <buff skillId="1003" skillLevel="3"/>  <!-- Pa'agrio's Gift -->
+        <buff skillId="1010" skillLevel="3"/>  <!-- Soul Shield -->
+    </class_buffs>
+</autobot_buffs>

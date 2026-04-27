@@ -1,0 +1,261 @@
+[27.04.26 14:42:49:812]  INFO gameserver.GameServer: =================================================
+[27.04.26 14:42:49:813]  INFO gameserver.GameServer: Project Revision: ........ L2s [31495]
+[27.04.26 14:42:49:813]  INFO gameserver.GameServer: Build Revision: .......... -1
+[27.04.26 14:42:49:813]  INFO gameserver.GameServer: Update: .................. Classic: Saviors (Antharas)
+[27.04.26 14:42:49:813]  INFO gameserver.GameServer: Build date: .............. -1
+[27.04.26 14:42:49:813]  INFO gameserver.GameServer: Compiler version: ........ Maven JAR Plugin 3.4.1
+[27.04.26 14:42:49:813]  INFO gameserver.GameServer: =================================================
+[27.04.26 14:42:49:859]  INFO holder.HostsConfigHolder: HostsConfigHolder: =================================================
+[27.04.26 14:42:49:860]  INFO holder.HostsConfigHolder: HostsConfigHolder: Authserver host info: IP[127.0.0.1], PORT[9014]
+[27.04.26 14:42:49:860]  INFO holder.HostsConfigHolder: HostsConfigHolder: =================================================
+[27.04.26 14:42:49:860]  INFO holder.HostsConfigHolder: HostsConfigHolder: Gameserver host info:
+[27.04.26 14:42:49:862]  INFO holder.HostsConfigHolder: HostsConfigHolder: ID[1], ADDRESS[127.0.0.1], PORT[7777]
+[27.04.26 14:42:49:862]  INFO holder.HostsConfigHolder: HostsConfigHolder: =================================================
+[27.04.26 14:42:49:912]  INFO gameserver.Config: Abuse: Loaded 18 abuse words.
+[27.04.26 14:42:50:225]  INFO database.UpdatesInstaller: UpdatesInstaller: Checking new updates...
+[27.04.26 14:42:50:259]  INFO database.UpdatesInstaller: UpdatesInstaller: No new updates.
+[27.04.26 14:42:50:277]  INFO idfactory.IdFactory: IdFactory: Clear characters online status.
+[27.04.26 14:42:50:392]  INFO idfactory.IdFactory: IdFactory: Cleaned 38 elements from database in 0sec.
+[27.04.26 14:42:50:395]  INFO idfactory.IdFactory: IdFactory: Extracted 116 used id's from characters
+[27.04.26 14:42:50:405]  INFO idfactory.IdFactory: IdFactory: Extracted 1101 used id's from items
+[27.04.26 14:42:50:408]  INFO idfactory.IdFactory: IdFactory: Extracted total 1217 used id's.
+[27.04.26 14:42:50:408]  INFO idfactory.BitSetIDFactory: IdFactory: 102912 id's available.
+[27.04.26 14:42:50:527]  INFO dao.HidenItemsDAO: Hidden items loaded size: 0
+[27.04.26 14:42:50:531]  INFO dao.CustomHeroDAO: CustomHeroDAO: loaded 0 custom heroes.
+[27.04.26 14:42:50:534]  INFO security.HWIDBan: HWIDBan: Black list (Hwid) loaded size: 0
+[27.04.26 14:42:50:550]  INFO scripts.Scripts: Scripts: Loading...
+[27.04.26 14:42:54:129]  INFO scripts.Scripts: Scripts: Loaded 412 classes.
+[27.04.26 14:42:54:221]  INFO geodata.GeoEngine: GeoEngine: Loading Geodata...
+[27.04.26 14:42:56:377]  INFO geodata.GeoEngine: GeoEngine: Loaded 210 map(s), max layers: 21
+[27.04.26 14:42:56:409]  INFO utils.Strings: Loaded 418 translit entries.
+[27.04.26 14:42:56:410]  INFO gameserver.GameTimeController: GameTimeController: initialized. Current time is 22:17 in the day.
+[27.04.26 14:42:56:412]  INFO model.World: World: Creating regions: [256][272][32].
+[27.04.26 14:42:56:415]  INFO htm.HtmCache: HtmCache: Loading HTML's...
+[27.04.26 14:42:56:440]  INFO string.StringsHolder: StringsHolder: load strings: 553 for lang: ENGLISH
+[27.04.26 14:42:56:440]  INFO string.StringsHolder: StringsHolder: load strings: 552 for lang: RUSSIAN
+[27.04.26 14:42:56:512]  INFO string.ItemNameHolder: ItemNameHolder: load item names: 9855 for lang: ENGLISH
+[27.04.26 14:42:56:513]  INFO string.ItemNameHolder: ItemNameHolder: load item names: 9855 for lang: RUSSIAN
+[27.04.26 14:42:56:566]  INFO string.NpcNameHolder: NpcNameHolder: load npc names: 14271 for lang: ENGLISH
+[27.04.26 14:42:56:566]  INFO string.NpcNameHolder: NpcNameHolder: load npc names: 14271 for lang: RUSSIAN
+[27.04.26 14:42:56:621]  INFO string.NpcStringHolder: NpcStringHolder: load npc strings: 11786 for lang: ENGLISH
+[27.04.26 14:42:56:621]  INFO string.NpcStringHolder: NpcStringHolder: load npc strings: 11786 for lang: RUSSIAN
+[27.04.26 14:42:56:814]  INFO string.SkillNameHolder: SkillNameHolder: load skill names: 33427 for lang: ENGLISH
+[27.04.26 14:42:56:814]  INFO string.SkillNameHolder: SkillNameHolder: load skill names: 33427 for lang: RUSSIAN
+[27.04.26 14:42:57:808]  INFO htm.HtmCache: HtmCache: parsing 6711 documents; lang: ENGLISH.
+[27.04.26 14:42:58:032]  INFO holder.SkillHolder: SkillHolder: loaded 33715 skill(s) count.
+[27.04.26 14:42:58:129]  INFO holder.OptionDataHolder: OptionDataHolder: loaded 3864 option data(s) count.
+[27.04.26 14:42:58:147]  INFO holder.VariationDataHolder: VariationDataHolder: loaded 3 variation data(s) count.
+[27.04.26 14:42:58:153]  INFO holder.AgathionHolder: AgathionHolder: loaded 90 agathion(s) count.
+[27.04.26 14:42:58:462]  INFO holder.ItemHolder: ItemHolder: loaded 9935 item(s) count.
+[27.04.26 14:42:58:467]  INFO holder.EnsoulHolder: EnsoulHolder: loaded 416 ensoul(s) count.
+[27.04.26 14:42:58:488]  INFO holder.RecipeHolder: RecipeHolder: loaded 624 recipe(s) count.
+[27.04.26 14:42:58:493]  INFO holder.SynthesisDataHolder: SynthesisDataHolder: loaded 248 synthesis data(s) count.
+[27.04.26 14:42:58:494]  INFO holder.ExperienceDataHolder: ExperienceDataHolder: loaded 86 experience data(s) count.
+[27.04.26 14:42:58:496]  INFO holder.BaseStatsBonusHolder: BaseStatsBonusHolder: loaded 99 base stats bonus(s) count.
+[27.04.26 14:42:58:499]  INFO holder.LevelBonusHolder: LevelBonusHolder: loaded 99 level bonus(s) count.
+[27.04.26 14:42:58:501]  INFO holder.KarmaIncreaseDataHolder: KarmaIncreaseDataHolder: loaded 80 karma increase data(s) count.
+[27.04.26 14:42:58:502]  INFO holder.HitCondBonusHolder: HitCondBonusHolder: loaded 7 hit cond bonus(s) count.
+[27.04.26 14:42:58:515]  INFO holder.PlayerTemplateHolder: PlayerTemplateHolder: loaded 18 player template(s) count.
+[27.04.26 14:42:58:519]  INFO holder.InitialShortCutsHolder: InitialShortCutsHolder: loaded 14 initial short cut(s) count.
+[27.04.26 14:42:58:519]  INFO holder.InitialShortCutsHolder: InitialShortCutsHolder: loaded 1 initial macro(s) count.
+[27.04.26 14:42:58:554]  INFO holder.ClassDataHolder: ClassDataHolder: loaded 89 class data(s) count.
+[27.04.26 14:42:58:566]  INFO holder.TransformTemplateHolder: TransformTemplateHolder: loaded 24 transform template(s) count.
+[27.04.26 14:42:58:980]  INFO htm.HtmCache: HtmCache: parsing 6319 documents; lang: RUSSIAN.
+[27.04.26 14:42:59:040]  INFO holder.NpcHolder: NpcHolder: loaded 5368 npc(s) count.
+[27.04.26 14:42:59:041]  INFO holder.PetDataHolder: PetDataHolder: loaded 0 pet data(s) count.
+[27.04.26 14:42:59:047]  INFO instancemanager.MapRegionManager: MapRegionManager: loaded 272 map region manager(s) count.
+[27.04.26 14:42:59:055]  INFO instancemanager.MapRegionManager: MapRegionManager: loaded 272 map region manager(s) count.
+[27.04.26 14:42:59:058]  INFO holder.StaticObjectHolder: StaticObjectHolder: loaded 25 static object(s) count.
+[27.04.26 14:42:59:107]  INFO holder.DoorHolder: DoorHolder: loaded 805 door(s) count.
+[27.04.26 14:42:59:137]  INFO holder.ZoneHolder: ZoneHolder: loaded 964 zone(s) count.
+[27.04.26 14:42:59:254]  INFO holder.SpawnHolder: SpawnHolder: loaded 15116 spawn(s) count.
+[27.04.26 14:42:59:262]  INFO holder.InstantZoneHolder: InstantZoneHolder: loaded 13 instant zone(s) count.
+[27.04.26 14:43:00:051]  INFO holder.SkillAcquireHolder: SkillAcquireHolder: load 35394 normal learns for 89 classes.
+[27.04.26 14:43:00:051]  INFO holder.SkillAcquireHolder: SkillAcquireHolder: load 0 general skills learns for 89 classes.
+[27.04.26 14:43:00:052]  INFO holder.SkillAcquireHolder: SkillAcquireHolder: load 11 fishing learns.
+[27.04.26 14:43:00:052]  INFO holder.SkillAcquireHolder: SkillAcquireHolder: load 48 pledge learns.
+[27.04.26 14:43:00:052]  INFO holder.SkillAcquireHolder: SkillAcquireHolder: load 0 sub unit learns.
+[27.04.26 14:43:00:052]  INFO holder.SkillAcquireHolder: SkillAcquireHolder: load 5 hero skills learns.
+[27.04.26 14:43:00:052]  INFO holder.SkillAcquireHolder: SkillAcquireHolder: load 1 GM skills learns.
+[27.04.26 14:43:00:052]  INFO holder.SkillAcquireHolder: SkillAcquireHolder: load 0 custom skills learns.
+[27.04.26 14:43:00:055]  INFO holder.ResidenceFunctionsHolder: ResidenceFunctionsHolder: loaded 84 residence functions(s) count.
+[27.04.26 14:43:00:082]  INFO holder.ResidenceHolder: ResidenceHolder: total size: 47
+[27.04.26 14:43:00:084]  INFO holder.ResidenceHolder: ResidenceHolder:  - load 5 castle(s).
+[27.04.26 14:43:00:084]  INFO holder.ResidenceHolder: ResidenceHolder:  - load 42 clanhall(s).
+[27.04.26 14:43:00:087]  INFO holder.ShuttleTemplateHolder: ShuttleTemplateHolder: loaded 1 shuttle template(s) count.
+[27.04.26 14:43:00:100]  INFO instancemanager.RaidBossSpawnManager: RaidBossSpawnManager: Loaded 145 Statuses
+[27.04.26 14:43:00:171]  INFO holder.EventHolder: EventHolder: loaded 56 event(s) count.
+[27.04.26 14:43:00:174]  INFO holder.CubicHolder: CubicHolder: loaded 72 cubic(s) count.
+[27.04.26 14:43:00:248]  INFO holder.BuyListHolder: BuyListHolder: loaded 281 buy list(s) count.
+[27.04.26 14:43:00:272]  INFO holder.MultiSellHolder: MultiSellHolder: loaded 64 multi sell(s) count.
+[27.04.26 14:43:00:273]  INFO parser.ProductDataParser: ProductDataParser: disabled.
+[27.04.26 14:43:00:276]  INFO holder.AttendanceRewardHolder: AttendanceRewardHolder: loaded 56 attendance reward(s) count.
+[27.04.26 14:43:00:284]  INFO holder.HennaHolder: HennaHolder: loaded 372 henna(s) count.
+[27.04.26 14:43:00:285]  INFO holder.EnchantItemHolder: EnchantItemHolder: loaded 53 enchant item(s) count.
+[27.04.26 14:43:00:287]  INFO holder.EnchantStoneHolder: EnchantStoneHolder: loaded 18 enchant stone(s) count.
+[27.04.26 14:43:00:288]  INFO holder.AppearanceStoneHolder: AppearanceStoneHolder: loaded 0 appearance stone(s) count.
+[27.04.26 14:43:00:290]  INFO holder.ArmorSetsHolder: ArmorSetsHolder: loaded 255 armor sets(s) count.
+[27.04.26 14:43:00:293]  INFO holder.FishDataHolder: FishDataHolder: load 3 lure(s).
+[27.04.26 14:43:00:293]  INFO holder.FishDataHolder: FishDataHolder: load 3 lure reward(s).
+[27.04.26 14:43:00:293]  INFO holder.FishDataHolder: FishDataHolder: load 9 rod(s).
+[27.04.26 14:43:00:294]  INFO holder.LevelUpRewardHolder: LevelUpRewardHolder: loaded 0 level up reward(s) count.
+[27.04.26 14:43:00:296]  INFO holder.LuckyGameHolder: LuckyGameHolder: loaded 0 lucky game(s) count.
+[27.04.26 14:43:00:297]  INFO parser.VIPDataParser: VIPDataParser: disabled.
+[27.04.26 14:43:00:298]  INFO holder.PremiumAccountHolder: PremiumAccountHolder: loaded 0 premium account(s) count.
+[27.04.26 14:43:00:299]  INFO holder.PetitionGroupHolder: PetitionGroupHolder: loaded 1 petition group(s) count.
+[27.04.26 14:43:00:300]  INFO holder.BotReportPropertiesHolder: BotReportPropertiesHolder: loaded 7 bot report properties(s) count.
+[27.04.26 14:43:00:304]  INFO holder.DailyMissionsHolder: DailyMissionsHolder: loaded 109 daily missions(s) count.
+[27.04.26 14:43:00:308]  INFO holder.FakeItemHolder: FakeItemHolder: loaded fake items.
+[27.04.26 14:43:00:335]  INFO holder.FakePlayersHolder: FakePlayersHolder: loaded 9 fake players ai(s) count.
+[27.04.26 14:43:00:335]  INFO holder.FakePlayersHolder: FakePlayersHolder: loaded 41 fake players farm zone(s) count.
+[27.04.26 14:43:00:335]  INFO holder.FakePlayersHolder: FakePlayersHolder: loaded 12 fake players town zone(s) count.
+[27.04.26 14:43:00:338]  INFO cache.CrestCache: CrestCache: Loaded 0 crests
+[27.04.26 14:43:00:339]  INFO cache.ImagesCache: ImagesCache: Loading images...
+[27.04.26 14:43:00:349]  INFO tables.SubClassTable: SubClassTable: Loaded 62 sub-classes variations.
+[27.04.26 14:43:00:352]  INFO tables.EnchantHPBonusTable: EnchantHPBonusTable: Loaded bonuses for 11 grades.
+[27.04.26 14:43:00:353]  INFO dao.FencesDAO: FencesDAO: restored 0 fence(s).
+[27.04.26 14:43:00:354]  INFO holder.StaticObjectHolder: StaticObjectHolder: spawned: 19 static object(s).
+[27.04.26 14:43:00:540]  INFO instancemanager.SpawnManager: SpawnManager: spawned 3000 npc for group: NONE
+[27.04.26 14:43:00:601]  INFO instancemanager.SpawnManager: SpawnManager: spawned 4000 npc for group: NONE
+[27.04.26 14:43:00:747]  INFO instancemanager.SpawnManager: SpawnManager: spawned 7000 npc for group: NONE
+[27.04.26 14:43:00:781]  INFO instancemanager.SpawnManager: SpawnManager: spawned 8000 npc for group: NONE
+[27.04.26 14:43:00:903]  INFO instancemanager.SpawnManager: SpawnManager: spawned 10000 npc for group: NONE
+[27.04.26 14:43:01:037]  INFO instancemanager.SpawnManager: SpawnManager: spawned 13000 npc for group: NONE
+[27.04.26 14:43:01:088]  INFO instancemanager.SpawnManager: SpawnManager: spawned 14000 npc for group: NONE
+[27.04.26 14:43:01:131]  INFO instancemanager.SpawnManager: SpawnManager: spawned 15000 npc for group: NONE
+[27.04.26 14:43:01:274]  INFO instancemanager.SpawnManager: SpawnManager: spawned 18000 npc for group: NONE
+[27.04.26 14:43:01:499]  INFO instancemanager.SpawnManager: SpawnManager: spawned 22825 npc; spawns: 11728; group: NONE
+[27.04.26 14:43:01:499]  INFO instancemanager.SpawnManager: SpawnManager: spawned 13 npc; spawns: 13; group: vitamin_manager
+[27.04.26 14:43:01:506]  INFO instancemanager.SpawnManager: SpawnManager: spawned 14 npc; spawns: 14; group: olympiad
+[27.04.26 14:43:01:511]  INFO holder.VoteRewardConfigHolder: VoteRewardConfigHolder: loaded 6 Vote Site(s) count.
+[27.04.26 14:43:01:517]  INFO bosses.AntharasManager: AntharasManager: State of Antharas is NOTSPAWN.
+[27.04.26 14:43:01:534]  INFO bosses.BaiumManager: BaiumManager: State of Baium is NOTSPAWN.
+[27.04.26 14:43:01:537]  INFO bosses.BaiumManager: BaiumManager: Next spawn date: 03:00 01.01.1970
+[27.04.26 14:43:01:557]  INFO bbs.CommunityBoard: CommunityBoard: service loaded.
+[27.04.26 14:43:01:558]  INFO bbs.CommunityClan: CommunityBoard: Clan Community service loaded.
+[27.04.26 14:43:01:559]  INFO bbs.CommunityFavorites: CommunityBoard: Manage Favorites service loaded.
+[27.04.26 14:43:01:559]  INFO bbs.CommunityFriends: CommunityBoard: Manage Friends service loaded.
+[27.04.26 14:43:01:559]  INFO bbs.CommunityMail: CommunityBoard: Private Mail service loaded.
+[27.04.26 14:43:01:559]  INFO bbs.CommunityMemo: CommunityBoard: Manage Memo service loaded.
+[27.04.26 14:43:01:559]  INFO bbs.CommunityRegion: CommunityBoard: Region service loaded.
+[27.04.26 14:43:01:562]  INFO communitybuffer.CommunityBufferHolder: CommunityBufferHolder: loaded 86 available skill(s) count.
+[27.04.26 14:43:01:562]  INFO communitybuffer.CommunityBufferHolder: CommunityBufferHolder: loaded 88 available premium skill(s) count.
+[27.04.26 14:43:01:562]  INFO communitybuffer.CommunityBufferHolder: CommunityBufferHolder: loaded 6 buff set(s) count.
+[27.04.26 14:43:01:580]  INFO services.Bash: Loaded Service: Bash [disabled]
+[27.04.26 14:43:01:583]  INFO totalonline.totalonline: totalonline: Loaded Service: Parse Online [disabled]
+[27.04.26 14:43:01:591]  INFO entity.Hero: Hero System: Loaded 0 Heroes.
+[27.04.26 14:43:01:591]  INFO entity.Hero: Hero System: Loaded 0 all time Heroes.
+[27.04.26 14:43:01:594]  INFO olympiad.Olympiad: Olympiad System: Loading Olympiad System....
+[27.04.26 14:43:01:594]  INFO olympiad.Olympiad: Olympiad System: Currently in Olympiad Period
+[27.04.26 14:43:01:594]  INFO olympiad.Olympiad: Olympiad System: Period Ends....
+[27.04.26 14:43:01:595]  INFO olympiad.Olympiad: Olympiad System: In 3 days, 9 hours and 16 mins.
+[27.04.26 14:43:01:595]  INFO olympiad.Olympiad: Olympiad System: Next Weekly Change is in....
+[27.04.26 14:43:01:595]  INFO olympiad.Olympiad: Olympiad System: In 2 days, 17 hours and 45 mins.
+[27.04.26 14:43:01:595]  INFO olympiad.Olympiad: Olympiad System: Loaded 0 participants.
+[27.04.26 14:43:01:596]  INFO olympiad.Olympiad: Olympiad System: Competition Period Starts in 4 days, 5 hours and 16 mins.
+[27.04.26 14:43:01:602]  INFO olympiad.Olympiad: Olympiad System: Event starts/started: Fri May 01 20:00:00 MSK 2026
+[27.04.26 14:43:01:603]  INFO instancemanager.PetitionManager: Initializing PetitionManager
+[27.04.26 14:43:01:603]  INFO admincommands.AdminCommandHandler: AdminCommandHandler: loaded 367 admin command handler(s) count.
+[27.04.26 14:43:01:603]  INFO usercommands.UserCommandHandler: UserCommandHandler: loaded 16 user command handler(s) count.
+[27.04.26 14:43:01:603]  INFO voicecommands.VoicedCommandHandler: VoicedCommandHandler: loaded 41 voiced command handler(s) count.
+[27.04.26 14:43:01:603]  INFO bbs.BbsHandlerHolder: BbsHandlerHolder: loaded 53 bbs handler(s) count.
+[27.04.26 14:43:01:603]  INFO bypass.BypassHolder: BypassHolder: loaded 36 bypass(s) count.
+[27.04.26 14:43:01:603]  INFO onshiftaction.OnShiftActionHolder: OnShiftActionHolder: loaded 7 on shift action(s) count.
+[27.04.26 14:43:01:606]  INFO gameserver.GameServer: =[Events]=========================================
+[27.04.26 14:43:01:654]  INFO events.CastleNewbieSiegeEvent: CastleNewbieSiegeEvent: Gludio Castle time - 20:00 03.05.2026
+[27.04.26 14:43:01:664]  INFO impl.CastleSiegeEvent: CastleSiegeEvent: Dion Castle time - 20:00 03.05.2026
+[27.04.26 14:43:01:668]  INFO impl.CastleSiegeEvent: CastleSiegeEvent: Giran Castle time - 20:00 03.05.2026
+[27.04.26 14:43:01:673]  INFO impl.CastleSiegeEvent: CastleSiegeEvent: Oren Castle time - 20:00 03.05.2026
+[27.04.26 14:43:01:679]  INFO impl.CastleSiegeEvent: CastleSiegeEvent: Aden Castle time - 20:00 03.05.2026
+[27.04.26 14:43:01:685]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Moonstone Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:686]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Onyx Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:686]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Topaz Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:688]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Ruby Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:689]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Crystal Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:689]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Onyx Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:690]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Sapphire Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:691]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Moonstone Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:692]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Emerald Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:693]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Atramental Barracks time - 15:00 27.04.2026
+[27.04.26 14:43:01:693]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Scarlet Barracks time - 15:00 27.04.2026
+[27.04.26 14:43:01:694]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Viridian Barracks time - 15:00 27.04.2026
+[27.04.26 14:43:01:695]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Golden Chamber time - 15:00 27.04.2026
+[27.04.26 14:43:01:695]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Silver Chamber time - 15:00 27.04.2026
+[27.04.26 14:43:01:696]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Mithril Chamber time - 15:00 27.04.2026
+[27.04.26 14:43:01:697]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Silver Manor time - 15:00 27.04.2026
+[27.04.26 14:43:01:698]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Gold Manor time - 15:00 27.04.2026
+[27.04.26 14:43:01:699]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Bronze Chamber time - 15:00 27.04.2026
+[27.04.26 14:43:01:700]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Golden Chamber time - 15:00 27.04.2026
+[27.04.26 14:43:01:700]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Silver Chamber time - 15:00 27.04.2026
+[27.04.26 14:43:01:702]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Mithril Chamber time - 15:00 27.04.2026
+[27.04.26 14:43:01:703]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: The Bronze Chamber time - 15:00 27.04.2026
+[27.04.26 14:43:01:704]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Silver Manor time - 15:00 27.04.2026
+[27.04.26 14:43:01:704]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Emerald Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:705]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Crystal Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:706]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Sapphire Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:706]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Aquamarine Hall time - 15:00 27.04.2026
+[27.04.26 14:43:01:707]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Blue Barracks time - 15:00 27.04.2026
+[27.04.26 14:43:01:709]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Brown Barracks time - 15:00 27.04.2026
+[27.04.26 14:43:01:709]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Yellow Barracks time - 15:00 27.04.2026
+[27.04.26 14:43:01:710]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: White Barracks time - 15:00 27.04.2026
+[27.04.26 14:43:01:711]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Black Barracks time - 15:00 27.04.2026
+[27.04.26 14:43:01:712]  INFO impl.ClanHallAuctionEvent: ClanHallAuctionEvent: Green Barracks time - 15:00 27.04.2026
+[27.04.26 14:43:01:712]  INFO impl.InstantClanHallAuctionEvent: InstantClanHallAuctionEvent: Orchid Hall time - 00:01 09.05.2026
+[27.04.26 14:43:01:713]  INFO impl.InstantClanHallAuctionEvent: InstantClanHallAuctionEvent: Ellia Hall time - 00:01 09.05.2026
+[27.04.26 14:43:01:713]  INFO impl.InstantClanHallAuctionEvent: InstantClanHallAuctionEvent: Laurell Hall time - 00:01 09.05.2026
+[27.04.26 14:43:01:717]  INFO impl.InstantClanHallAuctionEvent: InstantClanHallAuctionEvent: Orchid Hall time - 00:01 23.05.2026
+[27.04.26 14:43:01:721]  INFO impl.InstantClanHallAuctionEvent: InstantClanHallAuctionEvent: Ellia Hall time - 00:01 23.05.2026
+[27.04.26 14:43:01:723]  INFO impl.InstantClanHallAuctionEvent: InstantClanHallAuctionEvent: Laurell Hall time - 00:01 23.05.2026
+[27.04.26 14:43:01:724]  INFO events.LairOfAntharasEvent: LairOfAntharasEvent: Lair of Antharas time - 20:00 28.04.2026
+[27.04.26 14:43:01:724]  INFO events.TowerOfInsolenceEvent: TowerOfInsolenceEvent: Tower of Insolence time - 20:00 28.04.2026
+[27.04.26 14:43:01:724]  INFO events.FunEvent: FunEvent: In the pursuit of letters time - undefined
+[27.04.26 14:43:01:724]  INFO events.FunEvent: FunEvent: Summer Squash time - undefined
+[27.04.26 14:43:01:725]  INFO events.FunEvent: FunEvent: Cristmas Squash time - undefined
+[27.04.26 14:43:01:725]  INFO impl.PvPEvent: PvPEvent: TvT Relax time - undefined
+[27.04.26 14:43:01:725]  INFO impl.PvPEvent: PvPEvent: TvT Hard time - undefined
+[27.04.26 14:43:01:726]  INFO impl.PvPEvent: PvPEvent: Hasher Relax time - undefined
+[27.04.26 14:43:01:726]  INFO impl.PvPEvent: PvPEvent: Hasher Hard time - undefined
+[27.04.26 14:43:01:726]  INFO gameserver.GameServer: ==================================================
+[27.04.26 14:43:01:726]  INFO data.BoatHolder: BoatHolder: loaded 1 boat(s) count.
+[27.04.26 14:43:01:726]  INFO data.BoatHolder: BoatHolder: Spawning: CrumaTower_Shuttle
+[27.04.26 14:43:01:727]  INFO gameserver.GameServer: IdFactory: Free ObjectID's remaining: 1879023175
+[27.04.26 14:43:01:730]  INFO clansearch.ClanSearchManager: ClanSearchManager: Loading clan search data...
+[27.04.26 14:43:01:732]  INFO clansearch.ClanSearchManager: ClanSearchManager: Loaded 0 registered clans.
+[27.04.26 14:43:01:732]  INFO clansearch.ClanSearchManager: ClanSearchManager: Loaded 0 registered players.
+[27.04.26 14:43:01:734]  INFO instancemanager.BotReportManager: BotReportManager: Loaded 0 bot reports.
+[27.04.26 14:43:01:740]  INFO gameserver.Shutdown: Scheduled server restart in 14h 16m 59s.
+[27.04.26 14:43:01:740]  INFO gameserver.GameServer: GameServer Started
+[27.04.26 14:43:01:740]  INFO gameserver.GameServer: Maximum Numbers of Connected Players: 3000
+[27.04.26 14:43:01:745]  INFO instancemanager.GameBanManager: GameBanManager: Initialized.
+[27.04.26 14:43:01:830]  INFO gameserver.GameServer: Restoring offline traders...
+[27.04.26 14:43:01:832]  INFO gameserver.GameServer: Restored 0 offline traders.
+[27.04.26 14:43:01:835]  INFO authcomm.AuthServerCommunication: Connecting to authserver on 127.0.0.1:9014
+[27.04.26 14:43:01:838]  INFO instancemanager.SpawnManager: SpawnManager: spawned 392 npc; spawns: 269; group: DAY
+[27.04.26 14:43:01:861]  INFO as2gs.AuthResponse: Registered on authserver as 1 [Bartz]
+[27.04.26 14:43:01:882]  INFO gameserver.GameServer: Telnet server is currently disabled.
+[27.04.26 14:43:01:882]  INFO gameserver.GameServer: =================================================
+[27.04.26 14:43:01:897]  INFO gameserver.GameServer: AllowedMemory: ........... 5242880 KB
+[27.04.26 14:43:01:898]  INFO gameserver.GameServer:      Allocated: .......... 3571712 KB (68.125%)
+[27.04.26 14:43:01:898]  INFO gameserver.GameServer:      Non-Allocated: ...... 1671168 KB (31.875%)
+[27.04.26 14:43:01:898]  INFO gameserver.GameServer: AllocatedMemory: ......... 3571712 KB
+[27.04.26 14:43:01:898]  INFO gameserver.GameServer:      Used: ............... 2611200 KB (49.8047%)
+[27.04.26 14:43:01:898]  INFO gameserver.GameServer:      Unused (cached): .... 960512 KB (18.3203%)
+[27.04.26 14:43:01:898]  INFO gameserver.GameServer: UseableMemory: ........... 2631680 KB (50.1953%)
+[27.04.26 14:43:01:898]  INFO gameserver.GameServer: =================================================
+[27.04.26 14:43:01:906]  INFO instancemanager.AutobotsManager: AutobotsManager: Loaded 3 registered autobots.
+[27.04.26 14:43:01:911]  INFO instancemanager.AutobotScheduler: AutobotScheduler: Loaded 0 schedule(s). Checker started (60s interval).
+[27.04.26 14:43:01:913]  INFO instancemanager.StarterPackManager: StarterPackManager: Loaded 375 names.
+[27.04.26 14:43:01:944]  INFO webserver.WebServer: WebServer: Started on 0.0.0.0:8085
+[27.04.26 14:43:02:693]  INFO cache.ImagesCache: ImagesCache: Loaded 305 images
+[27.04.26 14:44:09:130]  WARN l2.GamePacketHandler: Unknown client packet! State: IN_GAME, packet ID: D0:15F
+[27.04.26 14:44:09:130]  WARN l2.GamePacketHandler: Unknown client packet! State: IN_GAME, packet ID: D0:15F
+[27.04.26 15:00:00:012]  INFO instancemanager.SpawnManager: SpawnManager: spawned 414 npc; spawns: 269; group: NIGHT
+[27.04.26 15:13:01:736]  INFO instancemanager.BotReportManager: BotReportManager: Reports saved.
+[27.04.26 15:43:01:735]  INFO instancemanager.BotReportManager: BotReportManager: Reports saved.
+[27.04.26 15:49:58:513]  WARN l2.GamePacketHandler: Unknown client packet! State: IN_GAME, packet ID: D0:15F
+[27.04.26 15:49:58:513]  WARN l2.GamePacketHandler: Unknown client packet! State: IN_GAME, packet ID: D0:15F
+[27.04.26 16:00:00:009]  INFO instancemanager.SpawnManager: SpawnManager: spawned 392 npc; spawns: 269; group: DAY
+[27.04.26 16:13:01:735]  INFO instancemanager.BotReportManager: BotReportManager: Reports saved.
+[27.04.26 16:43:01:735]  INFO instancemanager.BotReportManager: BotReportManager: Reports saved.
+[27.04.26 17:13:01:736]  INFO instancemanager.BotReportManager: BotReportManager: Reports saved.
+[27.04.26 17:43:01:735]  INFO instancemanager.BotReportManager: BotReportManager: Reports saved.

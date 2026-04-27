@@ -1,0 +1,746 @@
+[23.04.26 09:33:12] SUCCESS admin[268461367] admin_admin
+[23.04.26 09:33:13] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 09:33:14] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 09:33:33] SUCCESS admin[268461367] admin_admin
+[23.04.26 09:33:35] FAIL    admin[268461367] admin_events
+[23.04.26 09:33:35] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 09:33:36] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 09:34:31] SUCCESS admin[268461367] admin_admin
+[23.04.26 09:34:32] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 09:34:32] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 09:34:39] SUCCESS admin[268461367] -> 18342 Gremlin admin_admin
+[23.04.26 09:34:40] SUCCESS admin[268461367] -> 18342 Gremlin admin_gmshop
+[23.04.26 09:34:45] SUCCESS admin[268461367] -> 18342 Gremlin admin_invis
+[23.04.26 09:34:47] SUCCESS admin[268461367] -> 18342 Gremlin admin_admin
+[23.04.26 09:34:48] SUCCESS admin[268461367] -> 18342 Gremlin admin_gmshop
+[23.04.26 09:34:49] SUCCESS admin[268461367] -> 18342 Gremlin admin_admin
+[23.04.26 09:34:50] SUCCESS admin[268461367] -> 18342 Gremlin admin_char_manage
+[23.04.26 09:34:50] SUCCESS admin[268461367] -> 18342 Gremlin admin_show_characters 0
+[23.04.26 09:34:51] SUCCESS admin[268461367] -> admin[268461367] admin_character_list admin
+[23.04.26 09:34:53] SUCCESS admin[268461367] -> admin[268461367] admin_edit_character
+[23.04.26 09:34:54] SUCCESS admin[268461367] -> admin[268461367] admin_current_player
+[23.04.26 09:34:55] SUCCESS admin[268461367] -> admin[268461367] admin_show_skills
+[23.04.26 09:34:58] SUCCESS admin[268461367] -> admin[268461367] admin_skill_list
+[23.04.26 09:34:59] SUCCESS admin[268461367] -> admin[268461367] admin_show_html skills/Special/GM_Skills.htm
+[23.04.26 09:35:00] SUCCESS admin[268461367] -> admin[268461367] admin_add_skill 7029 4
+[23.04.26 09:36:44] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 2
+[23.04.26 09:42:21] SUCCESS admin[268461367] -> 20132 Werewolf admin_admin
+[23.04.26 09:42:22] SUCCESS admin[268461367] -> 20132 Werewolf admin_admin
+[23.04.26 09:42:24] SUCCESS admin[268461367] -> 20132 Werewolf admin_show_moves
+[23.04.26 09:42:25] SUCCESS admin[268461367] -> 20132 Werewolf admin_show_html teleports/town.htm
+[23.04.26 09:42:26] SUCCESS admin[268461367] -> 20132 Werewolf admin_show_html teleports/town/ti_starting.htm
+[23.04.26 09:42:27] SUCCESS admin[268461367] admin_move_to -82687 243157 -3734
+[23.04.26 10:17:52] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 15
+[23.04.26 10:19:02] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:04] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:04] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:06] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:07] SUCCESS admin[268461367] -> 20101 Crasher admin_kill
+[23.04.26 10:19:09] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:10] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:16] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:18] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:19] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:26] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:27] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:28] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:29] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:30] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:31] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:35] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:35] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:43] SUCCESS admin[268461367] admin_kill
+[23.04.26 10:19:44] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:48] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:48] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:49] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:50] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:53] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:54] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:19:55] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:19:56] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:20:31] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:20:31] SUCCESS admin[268461367] -> 20113 Undine Elder admin_kill
+[23.04.26 10:20:33] SUCCESS admin[268461367] -> 20113 Undine Elder admin_kill
+[23.04.26 10:20:33] SUCCESS admin[268461367] -> 20110 Undine admin_kill
+[23.04.26 10:20:35] SUCCESS admin[268461367] -> 20113 Undine Elder admin_kill
+[23.04.26 10:20:36] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:20:40] SUCCESS admin[268461367] -> 20110 Undine admin_kill
+[23.04.26 10:20:43] SUCCESS admin[268461367] -> 20110 Undine admin_kill
+[23.04.26 10:20:45] SUCCESS admin[268461367] -> 20113 Undine Elder admin_kill
+[23.04.26 10:20:49] SUCCESS admin[268461367] -> 20113 Undine Elder admin_kill
+[23.04.26 10:20:50] SUCCESS admin[268461367] -> 20113 Undine Elder admin_kill
+[23.04.26 10:20:50] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:20:52] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:20:53] SUCCESS admin[268461367] -> 20110 Undine admin_kill
+[23.04.26 10:20:54] SUCCESS admin[268461367] -> 20110 Undine admin_kill
+[23.04.26 10:20:54] SUCCESS admin[268461367] -> 20110 Undine admin_kill
+[23.04.26 10:21:38] SUCCESS admin[268461367] -> 20113 Undine Elder admin_kill
+[23.04.26 10:21:40] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:21:43] SUCCESS admin[268461367] -> 20113 Undine Elder admin_kill
+[23.04.26 10:21:45] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:21:47] SUCCESS admin[268461367] -> 20115 Undine Noble admin_admin
+[23.04.26 10:21:48] SUCCESS admin[268461367] -> 20115 Undine Noble admin_show_moves
+[23.04.26 10:21:50] SUCCESS admin[268461367] -> 20115 Undine Noble admin_show_html teleports/town.htm
+[23.04.26 10:21:50] SUCCESS admin[268461367] -> 20115 Undine Noble admin_show_html teleports/town/ti_starting.htm
+[23.04.26 10:21:53] SUCCESS admin[268461367] admin_move_to -86475 242946 -3726
+[23.04.26 10:22:29] SUCCESS admin[268461367] -> 20108 Giant Blade Spider admin_kill
+[23.04.26 10:22:57] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:22:58] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:22:58] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:22:58] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:22:59] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:22:59] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:00] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:00] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:01] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:01] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:01] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:02] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:02] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:05] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:23:05] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:23:05] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:23:06] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:23:06] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:23:06] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:23:07] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:23:07] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:23:08] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:23:08] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:09] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:10] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:10] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:10] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:11] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:11] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:12] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:12] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:12] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:13] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:13] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:13] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:14] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:23:15] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:16] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:16] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:16] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:16] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:17] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:17] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:17] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:18] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:18] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:19] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:19] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:20] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:20] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:20] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:21] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:21] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:22] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:22] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:23] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:24] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:26] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:26] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:27] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:23:28] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:24:13] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:13] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:14] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:14] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:15] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:15] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:15] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:16] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:16] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:16] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:17] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:17] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:17] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:18] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:18] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:18] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:19] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:19] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:20] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:20] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:21] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:21] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:21] SUCCESS admin[268461367] admin_spawn 20115
+[23.04.26 10:24:23] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:23] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:24] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:25] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:25] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:26] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:26] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:27] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:27] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:28] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:30] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:30] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:30] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:34] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:34] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:36] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:37] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:38] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:38] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:39] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:42] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:43] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:44] SUCCESS admin[268461367] -> 20113 Undine Elder admin_kill
+[23.04.26 10:24:45] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:24:52] SUCCESS admin[268461367] admin_admin
+[23.04.26 10:24:53] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 10:24:54] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[23.04.26 10:24:55] SUCCESS admin[268461367] admin_show_html teleports/town/ti_starting.htm
+[23.04.26 10:24:57] SUCCESS admin[268461367] admin_move_to -86475 242946 -3726
+[23.04.26 10:25:13] SUCCESS admin[268461367] -> 30001 Lector admin_spawn 20106
+[23.04.26 10:25:13] SUCCESS admin[268461367] -> 30001 Lector admin_spawn 20106
+[23.04.26 10:25:13] SUCCESS admin[268461367] -> 30001 Lector admin_spawn 20106
+[23.04.26 10:25:14] SUCCESS admin[268461367] -> 30001 Lector admin_spawn 20106
+[23.04.26 10:25:15] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:15] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:15] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:16] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:17] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:19] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:25:19] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:25:19] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:25:20] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:25:20] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:25:20] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:25:21] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:25:21] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:25:21] SUCCESS admin[268461367] admin_spawn 20106
+[23.04.26 10:25:22] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:22] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:23] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:23] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:23] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:23] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:24] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:24] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:25] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:25] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:25] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:26] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:26] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:26] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:27] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:27] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:28] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:28] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:28] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:29] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:29] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:30] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:30] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:30] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:31] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:31] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:31] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:31] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:32] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:32] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:32] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:33] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:33] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:34] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:34] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:34] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:35] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:35] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:35] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:35] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:35] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:36] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:37] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:37] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:37] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20106
+[23.04.26 10:25:38] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:38] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:39] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:39] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:39] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:40] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:40] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:41] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:41] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:42] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:42] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:42] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:43] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:43] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:43] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:44] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:44] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:44] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:44] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:45] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:45] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:46] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:46] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:46] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:46] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:47] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:47] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:48] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:48] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:48] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:48] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:25:50] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:50] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:50] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:51] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:51] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_spawn 20115
+[23.04.26 10:25:52] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:52] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:53] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:53] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:53] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:53] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:54] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:54] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:25:55] SUCCESS admin[268461367] -> 30001 Lector admin_kill
+[23.04.26 10:25:59] SUCCESS admin[268461367] -> 30001 Lector admin_res
+[23.04.26 10:26:03] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:03] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:03] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:04] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:04] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:05] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:05] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:05] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:06] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:06] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:07] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:07] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:07] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:08] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:08] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:08] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:09] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:09] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:10] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:10] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:11] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:12] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:12] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:13] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:13] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:14] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:14] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:14] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:15] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:15] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:15] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:16] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:16] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:17] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:18] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:18] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:20] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:20] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:21] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:21] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:21] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:26:25] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:27] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:28] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:28] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:29] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:29] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:30] SUCCESS admin[268461367] -> 20115 Undine Noble admin_kill
+[23.04.26 10:26:55] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 19
+[23.04.26 10:27:13] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:27:13] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:27:14] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:27:14] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_kill
+[23.04.26 10:28:42] SUCCESS admin[268461367] admin_admin
+[23.04.26 10:28:43] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 10:28:44] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 10:28:45] SUCCESS admin[268461367] -> qwert[268461428] admin_character_list qwert
+[23.04.26 10:28:47] SUCCESS admin[268461367] -> qwert[268461428] admin_character_actions
+[23.04.26 10:28:49] SUCCESS admin[268461367] admin_teleportto qwert
+[23.04.26 10:29:02] SUCCESS admin[268461367] -> qwert[268461428] admin_admin
+[23.04.26 10:29:03] SUCCESS admin[268461367] -> qwert[268461428] admin_char_manage
+[23.04.26 10:29:04] SUCCESS admin[268461367] -> qwert[268461428] admin_show_characters 0
+[23.04.26 10:29:06] SUCCESS admin[268461367] -> 123[268461443] admin_character_list 123
+[23.04.26 10:29:10] SUCCESS admin[268461367] -> 123[268461443] admin_character_actions
+[23.04.26 10:29:10] SUCCESS admin[268461367] admin_teleportto 123
+[23.04.26 11:01:58] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:01:59] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 11:02:00] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 11:02:13] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:02:14] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 11:02:15] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[23.04.26 11:02:16] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[23.04.26 11:02:16] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 11:02:34] SUCCESS admin[268461367] admin_loc
+[23.04.26 11:04:03] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:04:08] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 11:04:08] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 11:04:10] SUCCESS admin[268461367] -> test1[268461497] admin_character_list test1
+[23.04.26 11:04:11] SUCCESS admin[268461367] -> test1[268461497] admin_show_characters 0
+[23.04.26 11:04:13] SUCCESS admin[268461367] -> test1[268461497] admin_character_list test1
+[23.04.26 11:04:15] SUCCESS admin[268461367] -> test1[268461497] admin_character_actions
+[23.04.26 11:04:16] SUCCESS admin[268461367] admin_teleportto test1
+[23.04.26 11:05:06] SUCCESS admin[268461367] -> 18342 Gremlin admin_admin
+[23.04.26 11:05:07] SUCCESS admin[268461367] -> 18342 Gremlin admin_char_manage
+[23.04.26 11:05:08] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 11:05:11] SUCCESS admin[268461367] -> 123[268461443] admin_character_list 123
+[23.04.26 11:05:12] SUCCESS admin[268461367] -> 123[268461443] admin_character_actions
+[23.04.26 11:05:13] SUCCESS admin[268461367] admin_teleportto 123
+[23.04.26 11:05:59] SUCCESS admin[268461367] -> 123[268461443] admin_invis
+[23.04.26 11:06:36] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:06:37] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 11:06:38] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[23.04.26 11:06:38] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[23.04.26 11:06:39] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 11:06:57] SUCCESS admin[268461367] admin_loc
+[23.04.26 11:07:23] SUCCESS admin[268461367] admin_loc
+[23.04.26 11:08:49] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:08:50] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 11:08:50] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 11:08:51] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:08:53] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 11:08:53] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[23.04.26 11:08:54] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[23.04.26 11:08:55] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 11:09:04] SUCCESS admin[268461367] admin_loc
+[23.04.26 11:09:26] SUCCESS admin[268461367] admin_loc
+[23.04.26 11:16:49] SUCCESS admin[268461367] -> qwert[268461428] admin_admin
+[23.04.26 11:16:50] SUCCESS admin[268461367] -> qwert[268461428] admin_char_manage
+[23.04.26 11:16:50] SUCCESS admin[268461367] -> qwert[268461428] admin_show_characters 0
+[23.04.26 11:16:53] SUCCESS admin[268461367] -> 123[268461443] admin_character_list 123
+[23.04.26 11:16:55] SUCCESS admin[268461367] -> 123[268461443] admin_character_actions
+[23.04.26 11:16:58] SUCCESS admin[268461367] admin_teleportto 123
+[23.04.26 11:17:01] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:18:05] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:18:07] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 11:18:07] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[23.04.26 11:18:08] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[23.04.26 11:18:09] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 11:18:15] SUCCESS admin[268461367] -> qwert[268461428] admin_admin
+[23.04.26 11:18:16] SUCCESS admin[268461367] -> qwert[268461428] admin_itemcreate
+[23.04.26 11:18:25] SUCCESS admin[268461367] -> admin[268461367] admin_create_item 57 11111111111
+[23.04.26 11:18:43] SUCCESS admin[268461367] -> qwert[268461428] admin_invis
+[23.04.26 11:40:48] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:40:49] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 11:40:49] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 11:41:22] SUCCESS admin[268461367] admin_admin
+[23.04.26 11:41:23] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 11:41:23] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 11:41:33] SUCCESS admin[268461367] -> qwert[268461428] admin_admin
+[23.04.26 11:41:34] SUCCESS admin[268461367] -> qwert[268461428] admin_char_manage
+[23.04.26 11:41:34] SUCCESS admin[268461367] -> qwert[268461428] admin_show_characters 0
+[23.04.26 11:42:25] SUCCESS admin[268461367] -> qwert[268461428] admin_admin
+[23.04.26 11:42:26] SUCCESS admin[268461367] -> qwert[268461428] admin_char_manage
+[23.04.26 11:42:26] SUCCESS admin[268461367] -> qwert[268461428] admin_show_characters 0
+[23.04.26 11:42:29] SUCCESS admin[268461367] -> test1[268461497] admin_character_list test1
+[23.04.26 11:42:48] SUCCESS admin[268461367] -> qwert[268461428] admin_admin
+[23.04.26 11:42:49] SUCCESS admin[268461367] -> qwert[268461428] admin_itemcreate
+[23.04.26 11:43:05] SUCCESS admin[268461367] -> admin[268461367] admin_create_item 4037 11111
+[23.04.26 11:46:11] SUCCESS admin[268461367] -> qwert[268461428] admin_admin
+[23.04.26 11:46:12] SUCCESS admin[268461367] -> qwert[268461428] admin_char_manage
+[23.04.26 11:46:13] SUCCESS admin[268461367] -> qwert[268461428] admin_show_characters 0
+[23.04.26 11:46:15] SUCCESS admin[268461367] -> 123[268461443] admin_character_list 123
+[23.04.26 12:05:28] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:05:29] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 12:05:30] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 12:05:31] SUCCESS admin[268461367] -> 123[268461443] admin_character_list 123
+[23.04.26 12:05:53] SUCCESS admin[268461367] -> 123[268461443] admin_edit_character
+[23.04.26 12:06:10] SUCCESS admin[268461367] -> qwert[268461428] admin_invis
+[23.04.26 12:06:50] SUCCESS admin[268461367] -> test1[268461497] admin_admin
+[23.04.26 12:06:51] SUCCESS admin[268461367] -> test1[268461497] admin_show_moves
+[23.04.26 12:06:52] SUCCESS admin[268461367] -> test1[268461497] admin_show_html teleports/town.htm
+[23.04.26 12:06:52] SUCCESS admin[268461367] -> test1[268461497] admin_show_html teleports/town/giran.htm
+[23.04.26 12:06:53] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 12:26:00] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:26:01] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 12:26:02] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 12:26:22] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:26:23] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 12:26:24] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 12:26:26] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:26:27] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 12:26:27] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[23.04.26 12:26:28] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[23.04.26 12:26:29] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 12:30:11] SUCCESS admin[268461367] -> test1[268461497] admin_admin
+[23.04.26 12:30:12] SUCCESS admin[268461367] -> test1[268461497] admin_itemcreate
+[23.04.26 12:30:16] SUCCESS admin[268461367] -> test1[268461497] admin_create_item 4037 11
+[23.04.26 12:30:29] SUCCESS admin[268461367] -> qwert[268461428] admin_admin
+[23.04.26 12:30:30] SUCCESS admin[268461367] -> qwert[268461428] admin_itemcreate
+[23.04.26 12:30:32] SUCCESS admin[268461367] -> qwert[268461428] admin_create_item 321
+[23.04.26 12:31:37] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:31:38] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 12:31:40] SUCCESS admin[268461367] admin_show_html teleports/clanhall/provisional.htm
+[23.04.26 12:31:42] SUCCESS admin[268461367] admin_move_to -122328 -121624 -5852
+[23.04.26 12:31:45] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:31:47] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 12:31:48] SUCCESS admin[268461367] admin_show_html teleports/raid.htm
+[23.04.26 12:31:49] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_20.htm
+[23.04.26 12:31:51] SUCCESS admin[268461367] admin_move_to -54096 84288 -3512
+[23.04.26 12:31:55] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:32:20] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:32:21] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 12:32:22] SUCCESS admin[268461367] admin_show_html teleports/raid.htm
+[23.04.26 12:32:22] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_20.htm
+[23.04.26 12:32:25] SUCCESS admin[268461367] admin_move_to -3456 112864 -3456
+[23.04.26 12:32:30] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:32:32] SUCCESS admin[268461367] admin_gmshop
+[23.04.26 12:32:33] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:32:37] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 12:32:39] SUCCESS admin[268461367] admin_server admserver.htm
+[23.04.26 12:32:41] SUCCESS admin[268461367] admin_show_html reload.htm
+[23.04.26 12:32:41] SUCCESS admin[268461367] admin_server admserver.htm
+[23.04.26 12:32:42] SUCCESS admin[268461367] admin_gmshop
+[23.04.26 12:32:44] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:32:47] FAIL    admin[268461367] admin_events
+[23.04.26 12:32:50] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:32:59] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 12:33:00] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 12:33:01] SUCCESS admin[268461367] -> admin[268461367] admin_character_list admin
+[23.04.26 12:33:03] SUCCESS admin[268461367] -> admin[268461367] admin_show_effects
+[23.04.26 12:33:08] SUCCESS admin[268461367] -> admin[268461367] admin_invis
+[23.04.26 12:33:10] SUCCESS admin[268461367] -> admin[268461367] admin_invul
+[23.04.26 12:33:53] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[23.04.26 12:33:55] SUCCESS admin[268461367] -> admin[268461367] admin_enchant
+[23.04.26 12:33:57] SUCCESS admin[268461367] -> admin[268461367] admin_setew 111
+[23.04.26 12:34:07] SUCCESS admin[268461367] -> 25357 Sukar Ratman Chief admin_kill
+[23.04.26 12:34:11] SUCCESS admin[268461367] -> 25357 Sukar Ratman Chief admin_admin
+[23.04.26 12:34:12] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 12:34:13] SUCCESS admin[268461367] admin_show_html teleports/raid.htm
+[23.04.26 12:34:15] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_20.htm
+[23.04.26 12:34:17] SUCCESS admin[268461367] admin_move_to -60428 188264 -4512
+[23.04.26 12:34:29] SUCCESS admin[268461367] -> 20613 Lafi Lizardman admin_admin
+[23.04.26 12:34:30] SUCCESS admin[268461367] -> 20613 Lafi Lizardman admin_show_moves
+[23.04.26 12:34:31] SUCCESS admin[268461367] -> 20613 Lafi Lizardman admin_show_html teleports/raid.htm
+[23.04.26 12:34:32] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_20.htm
+[23.04.26 12:34:34] SUCCESS admin[268461367] admin_move_to -21800 152000 -2900
+[23.04.26 12:35:00] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:35:05] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 12:35:07] SUCCESS admin[268461367] admin_show_html teleports/raid.htm
+[23.04.26 12:35:08] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_30.htm
+[23.04.26 12:35:11] SUCCESS admin[268461367] admin_move_to 127076 214973 -3100
+[23.04.26 12:35:15] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:35:16] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 12:35:17] SUCCESS admin[268461367] admin_show_html teleports/raid.htm
+[23.04.26 12:35:19] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_30.htm
+[23.04.26 12:35:22] SUCCESS admin[268461367] admin_move_to 17696 179056 -3520
+[23.04.26 12:35:48] SUCCESS admin[268461367] -> 25128 Vuku Grand Priest Gharmash admin_admin
+[23.04.26 12:35:49] SUCCESS admin[268461367] -> 25128 Vuku Grand Priest Gharmash admin_show_moves
+[23.04.26 12:35:50] SUCCESS admin[268461367] -> 25128 Vuku Grand Priest Gharmash admin_show_html teleports/town.htm
+[23.04.26 12:35:51] SUCCESS admin[268461367] -> 25128 Vuku Grand Priest Gharmash admin_show_html teleports/town/giran.htm
+[23.04.26 12:35:51] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 12:36:26] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:36:28] SUCCESS admin[268461367] admin_gmshop
+[23.04.26 12:36:29] SUCCESS admin[268461367] admin_show_html gmstore/gear/weapons.htm
+[23.04.26 12:36:30] SUCCESS admin[268461367] admin_buy 9002
+[23.04.26 12:36:49] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:36:55] SUCCESS admin[268461367] -> 30300 Pushkin admin_gmshop
+[23.04.26 12:36:56] SUCCESS admin[268461367] -> 30300 Pushkin admin_show_html gmstore/gear/weapons.htm
+[23.04.26 12:36:58] SUCCESS admin[268461367] -> 30300 Pushkin admin_buy 9002
+[23.04.26 12:37:35] SUCCESS admin[268461367] -> 30300 Pushkin admin_admin
+[23.04.26 12:37:37] SUCCESS admin[268461367] -> 30300 Pushkin admin_gmshop
+[23.04.26 12:37:38] SUCCESS admin[268461367] -> 30300 Pushkin admin_show_html gmstore/gear/weapons.htm
+[23.04.26 12:37:39] SUCCESS admin[268461367] -> 30300 Pushkin admin_buy 9002
+[23.04.26 12:38:23] SUCCESS admin[268461367] -> 30300 Pushkin admin_admin
+[23.04.26 12:38:26] SUCCESS admin[268461367] -> admin[268461367] admin_enchant
+[23.04.26 12:38:28] SUCCESS admin[268461367] -> admin[268461367] admin_setew 111
+[23.04.26 12:39:34] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:39:35] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 12:39:35] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[23.04.26 12:39:36] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[23.04.26 12:39:37] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 12:40:00] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:40:01] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 12:40:02] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[23.04.26 12:40:03] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[23.04.26 12:40:03] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 12:40:21] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:40:21] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 12:40:22] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 12:40:25] SUCCESS admin[268461367] admin_character_list 123
+[23.04.26 12:40:27] SUCCESS admin[268461367] admin_character_actions
+[23.04.26 12:40:47] SUCCESS admin[268461367] admin_admin
+[23.04.26 12:40:48] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 12:40:49] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 12:40:50] SUCCESS admin[268461367] admin_character_list test1
+[23.04.26 12:40:52] SUCCESS admin[268461367] admin_character_actions
+[23.04.26 13:43:00] SUCCESS admin[268461367] admin_admin
+[23.04.26 13:43:01] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 13:43:03] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 13:43:04] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 13:43:05] SUCCESS admin[268461367] -> test1[268461497] admin_character_list test1
+[23.04.26 13:43:07] SUCCESS admin[268461367] -> test1[268461497] admin_admin
+[23.04.26 13:43:08] SUCCESS admin[268461367] -> test1[268461497] admin_char_manage
+[23.04.26 13:43:09] SUCCESS admin[268461367] -> test1[268461497] admin_show_characters 0
+[23.04.26 13:43:09] SUCCESS admin[268461367] -> test1[268461497] admin_admin
+[23.04.26 13:43:10] SUCCESS admin[268461367] -> test1[268461497] admin_show_moves
+[23.04.26 13:43:11] SUCCESS admin[268461367] -> test1[268461497] admin_show_html teleports/town.htm
+[23.04.26 13:43:11] SUCCESS admin[268461367] -> test1[268461497] admin_show_html teleports/town/giran.htm
+[23.04.26 13:43:12] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 13:44:57] SUCCESS admin[268461367] -> 123[268461443] admin_admin
+[23.04.26 13:44:58] SUCCESS admin[268461367] -> 123[268461443] admin_char_manage
+[23.04.26 13:44:59] SUCCESS admin[268461367] -> 123[268461443] admin_show_characters 0
+[23.04.26 13:45:01] SUCCESS admin[268461367] -> 123[268461443] admin_admin
+[23.04.26 13:45:02] SUCCESS admin[268461367] -> 123[268461443] admin_show_moves
+[23.04.26 13:45:03] SUCCESS admin[268461367] -> 123[268461443] admin_show_html teleports/town.htm
+[23.04.26 13:45:04] SUCCESS admin[268461367] -> 123[268461443] admin_show_html teleports/town/giran.htm
+[23.04.26 13:45:05] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[23.04.26 14:51:59] SUCCESS admin[268461367] admin_admin
+[23.04.26 14:52:02] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 14:52:03] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 14:52:05] SUCCESS admin[268461367] -> VoidZero[268461689] admin_character_list VoidZero
+[23.04.26 14:52:07] SUCCESS admin[268461367] -> VoidZero[268461689] admin_character_actions
+[23.04.26 14:52:08] SUCCESS admin[268461367] admin_teleportto VoidZero
+[23.04.26 14:52:53] SUCCESS admin[268461367] -> VoidZone[268461928] admin_admin
+[23.04.26 14:52:54] SUCCESS admin[268461367] -> VoidZone[268461928] admin_char_manage
+[23.04.26 14:52:55] SUCCESS admin[268461367] -> VoidZone[268461928] admin_show_characters 0
+[23.04.26 14:52:58] SUCCESS admin[268461367] -> VoidZone[268461928] admin_show_characters 2
+[23.04.26 14:53:00] SUCCESS admin[268461367] -> BloodClaw[268461545] admin_character_list BloodClaw
+[23.04.26 14:53:01] SUCCESS admin[268461367] -> BloodClaw[268461545] admin_character_actions
+[23.04.26 14:53:02] SUCCESS admin[268461367] admin_teleportto BloodClaw
+[23.04.26 14:54:15] SUCCESS admin[268461367] -> CrimsonFury[268462491] admin_admin
+[23.04.26 14:54:18] SUCCESS admin[268461367] -> CrimsonFury[268462491] admin_char_manage
+[23.04.26 14:54:19] SUCCESS admin[268461367] -> CrimsonFury[268462491] admin_show_characters 0
+[23.04.26 14:54:20] SUCCESS admin[268461367] -> CrimsonFury[268462491] admin_show_characters 4
+[23.04.26 14:54:21] SUCCESS admin[268461367] -> CrimsonFury[268462491] admin_show_characters 5
+[23.04.26 14:54:29] SUCCESS admin[268461367] -> CrimsonFury[268462491] admin_show_characters 4
+[23.04.26 14:54:32] SUCCESS admin[268461367] -> ThunderZone[268462351] admin_character_list ThunderZone
+[23.04.26 14:54:33] SUCCESS admin[268461367] -> ThunderZone[268462351] admin_character_actions
+[23.04.26 14:54:34] SUCCESS admin[268461367] admin_teleportto ThunderZone
+[23.04.26 14:54:40] SUCCESS admin[268461367] admin_admin
+[23.04.26 14:54:41] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 14:54:42] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 14:54:46] SUCCESS admin[268461367] -> NeonFury[268462107] admin_character_list NeonFury
+[23.04.26 14:54:48] SUCCESS admin[268461367] -> NeonFury[268462107] admin_character_actions
+[23.04.26 14:54:48] SUCCESS admin[268461367] admin_teleportto NeonFury
+[23.04.26 14:58:00] SUCCESS admin[268461367] -> 18342 Gremlin admin_admin
+[23.04.26 14:58:01] SUCCESS admin[268461367] -> 18342 Gremlin admin_char_manage
+[23.04.26 14:58:02] SUCCESS admin[268461367] -> 18342 Gremlin admin_show_characters 0
+[23.04.26 14:58:05] SUCCESS admin[268461367] -> DarkNova[268461793] admin_character_list DarkNova
+[23.04.26 14:58:06] SUCCESS admin[268461367] -> DarkNova[268461793] admin_character_actions
+[23.04.26 14:58:07] SUCCESS admin[268461367] admin_teleportto DarkNova
+[23.04.26 14:58:42] SUCCESS admin[268461367] admin_admin
+[23.04.26 14:58:43] SUCCESS admin[268461367] admin_server admserver.htm
+[23.04.26 14:58:45] SUCCESS admin[268461367] admin_server_shutdown
+[23.04.26 14:58:46] SUCCESS admin[268461367] admin_server_restart 2
+[23.04.26 15:00:22] SUCCESS admin[268461367] -> GhostZone[268462452] admin_admin
+[23.04.26 15:00:23] SUCCESS admin[268461367] -> GhostZone[268462452] admin_char_manage
+[23.04.26 15:00:24] SUCCESS admin[268461367] -> GhostZone[268462452] admin_show_characters 0
+[23.04.26 15:00:26] SUCCESS admin[268461367] -> AlphaRiderX[268462489] admin_character_list AlphaRiderX
+[23.04.26 15:00:28] SUCCESS admin[268461367] -> AlphaRiderX[268462489] admin_character_actions
+[23.04.26 15:00:28] SUCCESS admin[268461367] admin_teleportto AlphaRiderX
+[23.04.26 15:01:02] SUCCESS admin[268461367] -> 18342 Gremlin admin_admin
+[23.04.26 15:01:05] SUCCESS admin[268461367] -> 18342 Gremlin admin_char_manage
+[23.04.26 15:01:07] SUCCESS admin[268461367] -> 18342 Gremlin admin_show_characters 0
+[23.04.26 15:01:09] SUCCESS admin[268461367] -> 18342 Gremlin admin_show_characters 2
+[23.04.26 15:01:11] SUCCESS admin[268461367] -> SteelCore[268463432] admin_character_list SteelCore
+[23.04.26 15:01:13] SUCCESS admin[268461367] -> SteelCore[268463432] admin_character_actions
+[23.04.26 15:01:14] SUCCESS admin[268461367] admin_teleportto SteelCore
+[23.04.26 15:04:05] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:04:07] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 15:04:07] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 15:04:11] SUCCESS admin[268461367] admin_show_characters 1
+[23.04.26 15:04:13] SUCCESS admin[268461367] admin_show_characters 2
+[23.04.26 15:04:15] SUCCESS admin[268461367] admin_show_characters 3
+[23.04.26 15:04:37] SUCCESS admin[268461367] admin_show_characters 3
+[23.04.26 15:04:38] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 15:04:42] SUCCESS admin[268461367] -> AlphaRiderX[268462489] admin_character_list AlphaRiderX
+[23.04.26 15:04:43] SUCCESS admin[268461367] -> AlphaRiderX[268462489] admin_character_actions
+[23.04.26 15:04:44] SUCCESS admin[268461367] admin_teleportto AlphaRiderX
+[23.04.26 15:05:17] SUCCESS admin[268461367] -> CyberZero[268462546] admin_admin
+[23.04.26 15:05:18] SUCCESS admin[268461367] -> CyberZero[268462546] admin_char_manage
+[23.04.26 15:05:19] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 0
+[23.04.26 15:05:22] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 3
+[23.04.26 15:06:19] SUCCESS admin[268461367] -> CyberZero[268462546] admin_admin
+[23.04.26 15:06:20] SUCCESS admin[268461367] -> CyberZero[268462546] admin_char_manage
+[23.04.26 15:06:21] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 0
+[23.04.26 15:06:23] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 1
+[23.04.26 15:06:26] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 2
+[23.04.26 15:06:27] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 3
+[23.04.26 15:06:58] SUCCESS admin[268461367] -> CyberZero[268462546] admin_admin
+[23.04.26 15:07:00] SUCCESS admin[268461367] -> CyberZero[268462546] admin_char_manage
+[23.04.26 15:07:01] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 0
+[23.04.26 15:07:04] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 1
+[23.04.26 15:07:07] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 2
+[23.04.26 15:07:10] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 3
+[23.04.26 15:08:51] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 3
+[23.04.26 15:08:53] SUCCESS admin[268461367] -> CyberZero[268462546] admin_show_characters 0
+[23.04.26 15:09:02] SUCCESS admin[268461367] -> RogueZone[268463849] admin_set_level 4
+[23.04.26 15:09:16] SUCCESS admin[268461367] -> ChaosSting[268463875] admin_show_characters 1
+[23.04.26 15:10:05] SUCCESS admin[268461367] -> ChaosSting[268463875] admin_admin
+[23.04.26 15:10:08] SUCCESS admin[268461367] -> ChaosSting[268463875] admin_admin
+[23.04.26 15:10:09] SUCCESS admin[268461367] -> ChaosSting[268463875] admin_show_moves
+[23.04.26 15:10:10] SUCCESS admin[268461367] -> ChaosSting[268463875] admin_show_html teleports/town.htm
+[23.04.26 15:10:11] SUCCESS admin[268461367] -> ChaosSting[268463875] admin_show_html teleports/town/ti_starting.htm
+[23.04.26 15:10:12] SUCCESS admin[268461367] admin_move_to -82687 243157 -3734
+[23.04.26 15:10:26] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:10:27] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 15:10:28] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 15:10:31] SUCCESS admin[268461367] admin_show_characters 1
+[23.04.26 15:10:33] SUCCESS admin[268461367] admin_show_characters 2
+[23.04.26 15:10:37] SUCCESS admin[268461367] admin_show_characters 3
+[23.04.26 15:10:39] SUCCESS admin[268461367] -> RogueZone[268463849] admin_character_list RogueZone
+[23.04.26 15:14:19] SUCCESS admin[268461367] -> RogueZone[268463849] admin_admin
+[23.04.26 15:14:20] SUCCESS admin[268461367] -> RogueZone[268463849] admin_server admserver.htm
+[23.04.26 15:14:21] SUCCESS admin[268461367] -> RogueZone[268463849] admin_server_shutdown
+[23.04.26 15:14:23] SUCCESS admin[268461367] -> RogueZone[268463849] admin_server_restart 2
+[23.04.26 15:15:00] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:15:10] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:15:11] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 15:15:12] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 15:15:13] SUCCESS admin[268461367] -> ShadowSting[268462644] admin_character_list ShadowSting
+[23.04.26 15:15:15] SUCCESS admin[268461367] -> ShadowSting[268462644] admin_character_actions
+[23.04.26 15:15:15] SUCCESS admin[268461367] admin_teleportto ShadowSting
+[23.04.26 15:15:23] SUCCESS admin[268461367] -> ShadowSting[268462644] admin_set_level 4
+[23.04.26 15:15:41] SUCCESS admin[268461367] -> ShadowSting[268462644] admin_admin
+[23.04.26 15:15:43] SUCCESS admin[268461367] -> ShadowSting[268462644] admin_char_manage
+[23.04.26 15:15:43] SUCCESS admin[268461367] -> ShadowSting[268462644] admin_show_characters 0
+[23.04.26 15:15:45] SUCCESS admin[268461367] -> ShadowX[268462321] admin_character_list ShadowX
+[23.04.26 15:15:47] SUCCESS admin[268461367] -> ShadowX[268462321] admin_character_actions
+[23.04.26 15:15:48] SUCCESS admin[268461367] admin_teleportto ShadowX
+[23.04.26 15:15:56] SUCCESS admin[268461367] -> VoidEdge[268462904] admin_set_level 4
+[23.04.26 15:16:04] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:16:05] SUCCESS admin[268461367] admin_show_moves
+[23.04.26 15:16:06] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:16:07] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 15:16:08] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 15:16:10] SUCCESS admin[268461367] -> MysticHunter[268463169] admin_character_list MysticHunter
+[23.04.26 15:16:11] SUCCESS admin[268461367] -> MysticHunter[268463169] admin_character_actions
+[23.04.26 15:16:12] SUCCESS admin[268461367] admin_teleportto MysticHunter
+[23.04.26 15:16:16] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:16:17] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 15:16:18] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 15:16:20] SUCCESS admin[268461367] -> BloodHunter[268463286] admin_character_list BloodHunter
+[23.04.26 15:16:21] SUCCESS admin[268461367] -> BloodHunter[268463286] admin_character_actions
+[23.04.26 15:16:22] SUCCESS admin[268461367] admin_teleportto BloodHunter
+[23.04.26 15:16:30] SUCCESS admin[268461367] -> CyberX[268463087] admin_set_level 4
+[23.04.26 15:29:27] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:29:28] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 15:29:29] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 15:29:31] SUCCESS admin[268461367] admin_show_characters 2
+[23.04.26 15:29:46] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:29:47] SUCCESS admin[268461367] admin_server admserver.htm
+[23.04.26 15:29:48] SUCCESS admin[268461367] admin_server_shutdown
+[23.04.26 15:29:49] SUCCESS admin[268461367] admin_server_restart 1
+[23.04.26 15:30:59] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:31:04] SUCCESS admin[268461367] admin_admin
+[23.04.26 15:31:06] SUCCESS admin[268461367] admin_char_manage
+[23.04.26 15:31:07] SUCCESS admin[268461367] admin_show_characters 0
+[23.04.26 15:31:12] SUCCESS admin[268461367] admin_show_characters 1
+[23.04.26 15:31:16] SUCCESS admin[268461367] admin_show_characters 2
+[23.04.26 15:32:53] SUCCESS admin[268461367] -> NeonRider[268464644] admin_admin
+[23.04.26 15:32:55] SUCCESS admin[268461367] -> NeonRider[268464644] admin_char_manage
+[23.04.26 15:32:56] SUCCESS admin[268461367] -> NeonRider[268464644] admin_show_characters 0
+[23.04.26 15:32:59] SUCCESS admin[268461367] -> SavageRider[268464753] admin_character_list SavageRider
+[23.04.26 15:33:01] SUCCESS admin[268461367] -> SavageRider[268464753] admin_character_actions
+[23.04.26 15:33:02] SUCCESS admin[268461367] admin_teleportto SavageRider
+[23.04.26 15:34:07] SUCCESS admin[268461367] -> RogueHunter[268465015] admin_invis

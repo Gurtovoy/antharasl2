@@ -1,0 +1,194 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.commons.dbutils;
+
+import java.io.IOException;
+import java.io.LineNumberReader;
+import java.io.PrintWriter;
+import java.io.Reader;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class ScriptRunner {
+    private static final String DEFAULT_DELIMITER = ";";
+    public static final Pattern delimP = Pattern.compile("^\\s*(--)?\\s*delimiter\\s*=?\\s*([^\\s]+)+\\s*.*$", 2);
+    private final Connection connection;
+    private final boolean stopOnError;
+    private final boolean autoCommit;
+    private PrintWriter logWriter = null;
+    private PrintWriter errorLogWriter = null;
+    private String delimiter = ";";
+    private boolean fullLineDelimiter = false;
+
+    public ScriptRunner(Connection connection, boolean autoCommit, boolean stopOnError) {
+        this.connection = connection;
+        this.autoCommit = autoCommit;
+        this.stopOnError = stopOnError;
+    }
+
+    public void setDelimiter(String delimiter, boolean fullLineDelimiter) {
+        this.delimiter = delimiter;
+        this.fullLineDelimiter = fullLineDelimiter;
+    }
+
+    public void setLogWriter(PrintWriter logWriter) {
+        this.logWriter = logWriter;
+    }
+
+    public void setErrorLogWriter(PrintWriter errorLogWriter) {
+        this.errorLogWriter = errorLogWriter;
+    }
+
+    public void runScript(Reader reader) throws IOException, SQLException {
+        try {
+            boolean originalAutoCommit = this.connection.getAutoCommit();
+            try {
+                if (originalAutoCommit != this.autoCommit) {
+                    this.connection.setAutoCommit(this.autoCommit);
+                }
+                this.runScript(this.connection, reader);
+            }
+            finally {
+                this.connection.setAutoCommit(originalAutoCommit);
+            }
+        }
+        catch (IOException | SQLException e) {
+            throw e;
+        }
+        catch (Exception e) {
+            throw new RuntimeException("Error running script.  Cause: " + e, e);
+        }
+    }
+
+    private void runScript(Connection conn, Reader reader) throws IOException, SQLException {
+        StringBuffer command = null;
+        try {
+            String line;
+            LineNumberReader lineReader = new LineNumberReader(reader);
+            while ((line = lineReader.readLine()) != null) {
+                if (command == null) {
+                    command = new StringBuffer();
+                }
+                String trimmedLine = line.trim();
+                Matcher delimMatch = delimP.matcher(trimmedLine);
+                if (trimmedLine.length() < 1 || trimmedLine.startsWith("//")) continue;
+                if (delimMatch.matches()) {
+                    this.setDelimiter(delimMatch.group(2), false);
+                    continue;
+                }
+                if (trimmedLine.startsWith("--")) {
+                    this.println(trimmedLine);
+                    continue;
+                }
+                if (trimmedLine.length() < 1 || trimmedLine.startsWith("--")) continue;
+                if (!this.fullLineDelimiter && trimmedLine.endsWith(this.getDelimiter()) || this.fullLineDelimiter && trimmedLine.equals(this.getDelimiter())) {
+                    command.append(line.substring(0, line.lastIndexOf(this.getDelimiter())));
+                    command.append(" ");
+                    this.execCommand(conn, command, lineReader);
+                    command = null;
+                    continue;
+                }
+                command.append(line);
+                command.append("\n");
+            }
+            if (command != null) {
+                this.execCommand(conn, command, lineReader);
+            }
+            if (!this.autoCommit) {
+                conn.commit();
+            }
+        }
+        catch (IOException e) {
+            throw new IOException(String.format("Error executing '%s': %s", command, e.getMessage()), e);
+        }
+        finally {
+            conn.rollback();
+            this.flush();
+        }
+    }
+
+    private void execCommand(Connection conn, StringBuffer command, LineNumberReader lineReader) throws SQLException {
+        boolean hasResults;
+        Statement statement;
+        block9: {
+            statement = conn.createStatement();
+            this.println(command);
+            hasResults = false;
+            try {
+                hasResults = statement.execute(command.toString());
+            }
+            catch (SQLException e) {
+                String errText = String.format("Error executing '%s' (line %d): %s", command, lineReader.getLineNumber(), e.getMessage());
+                this.printlnError(errText);
+                System.err.println(errText);
+                if (!this.stopOnError) break block9;
+                throw new SQLException(errText, e);
+            }
+        }
+        if (this.autoCommit && !conn.getAutoCommit()) {
+            conn.commit();
+        }
+        ResultSet rs = statement.getResultSet();
+        if (hasResults && rs != null) {
+            int i;
+            ResultSetMetaData md = rs.getMetaData();
+            int cols = md.getColumnCount();
+            for (i = 1; i <= cols; ++i) {
+                String name = md.getColumnLabel(i);
+                this.print(name + "\t");
+            }
+            this.println("");
+            while (rs.next()) {
+                for (i = 1; i <= cols; ++i) {
+                    String value = rs.getString(i);
+                    this.print(value + "\t");
+                }
+                this.println("");
+            }
+        }
+        try {
+            statement.close();
+        }
+        catch (Exception e) {
+            // empty catch block
+        }
+    }
+
+    private String getDelimiter() {
+        return this.delimiter;
+    }
+
+    private void print(Object o) {
+        if (this.logWriter != null) {
+            this.logWriter.print(o);
+        }
+    }
+
+    private void println(Object o) {
+        if (this.logWriter != null) {
+            this.logWriter.println(o);
+        }
+    }
+
+    private void printlnError(Object o) {
+        if (this.errorLogWriter != null) {
+            this.errorLogWriter.println(o);
+        }
+    }
+
+    private void flush() {
+        if (this.logWriter != null) {
+            this.logWriter.flush();
+        }
+        if (this.errorLogWriter != null) {
+            this.errorLogWriter.flush();
+        }
+    }
+}
+

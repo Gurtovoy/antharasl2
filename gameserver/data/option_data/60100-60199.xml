@@ -1,0 +1,988 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "option_data.dtd">
+<list>
+	<option_data id="60100">
+		<for>
+			<!--Маг. Атк. +13, сила Маг. Крит. Атк. +89, шанс Маг.\\n Крит. Атк. +2%, Маг. Атк. +1.5%, сила Маг. Крит. \\nАтк. +2%-->
+			<add order="0x60" stat="mAtk" value="13"/>		
+			<p_magic_critical_dmg value="89" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.02"/>		
+			<mul order="0x60" stat="mAtk" value="1.015"/>		
+			<p_magic_critical_dmg value="2" type="PER"/>				
+		</for>
+	</option_data>
+	<option_data id="60101">
+		<for>
+			<!--Маг. Атк. +20, сила Маг. Крит. Атк. +134, шанс Маг\\n. Крит. Атк. +3%, Маг. Атк. +2%, сила Маг. Крит. А\\nтк. +3%-->
+			<add order="0x60" stat="mAtk" value="20"/>		
+			<p_magic_critical_dmg value="134" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.03"/>		
+			<mul order="0x60" stat="mAtk" value="1.02"/>		
+			<p_magic_critical_dmg value="3" type="PER"/>				
+		</for>
+	</option_data>
+	<option_data id="60102">
+		<for>
+			<!--Маг. Атк. +31, сила Маг. Крит. Атк. +210, шанс Маг\\n. Крит. Атк. +4%, Маг. Атк. +2.5%, сила Маг. Крит.\\n Атк. +4%-->
+			<add order="0x60" stat="mAtk" value="31"/>		
+			<p_magic_critical_dmg value="210" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.04"/>		
+			<mul order="0x60" stat="mAtk" value="1.025"/>		
+			<p_magic_critical_dmg value="4" type="PER"/>				
+		</for>
+	</option_data>
+	<option_data id="60103">
+		<for>
+			<!--Маг. Атк. +46, сила Маг. Крит. Атк. +307, шанс Маг\\n. Крит. Атк. +5%, Маг. Атк. +3%, сила Маг. Крит. А\\nтк. +5%-->
+			<add order="0x60" stat="mAtk" value="46"/>		
+			<p_magic_critical_dmg value="307" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.05"/>		
+			<mul order="0x60" stat="mAtk" value="1.03"/>		
+			<p_magic_critical_dmg value="5" type="PER"/>				
+		</for>
+	</option_data>
+	<option_data id="60104">
+		<for>
+			<!--Маг. Атк. +64, сила Маг. Крит. Атк. +429, шанс Маг\\n. Крит. Атк. +6%, Маг. Атк. +3.5%, сила Маг. Крит.\\n Атк. +6%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mAtk" value="64"/>		
+			<p_magic_critical_dmg value="429" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.06"/>		
+			<mul order="0x60" stat="mAtk" value="1.035"/>		
+			<p_magic_critical_dmg value="6" type="PER"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60105">
+		<for>
+			<!--Маг. Атк. +84, сила Маг. Крит. Атк. +565, шанс Маг\\n. Крит. Атк. +7%, Маг. Атк. +4%, сила Маг. Крит. А\\nтк. +7%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mAtk" value="84"/>		
+			<p_magic_critical_dmg value="565" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.07"/>		
+			<mul order="0x60" stat="mAtk" value="1.04"/>		
+			<p_magic_critical_dmg value="7" type="PER"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60106">
+		<for>
+			<!--Маг. Атк. +107, сила Маг. Крит. Атк. +717, шанс Ма\\nг. Крит. Атк. +8%, Маг. Атк. +5%, сила Маг. Крит. \\nАтк. +9%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mAtk" value="107"/>		
+			<p_magic_critical_dmg value="717" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.08"/>		
+			<mul order="0x60" stat="mAtk" value="1.05"/>		
+			<p_magic_critical_dmg value="9" type="PER"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60107">
+		<for>
+			<!--Маг. Атк. +149, сила Маг. Крит. Атк. +992, шанс Ма\\nг. Крит. Атк. +9%, Маг. Атк. +6%, сила Маг. Крит. \\nАтк. +11%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mAtk" value="149"/>		
+			<p_magic_critical_dmg value="992" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.09"/>		
+			<mul order="0x60" stat="mAtk" value="1.06"/>		
+			<p_magic_critical_dmg value="11" type="PER"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60108">
+		<for>
+			<!--Маг. Атк. +160, сила Маг. Крит. Атк. +1065, шанс М\\nаг. Крит. Атк. +10%, Маг. Атк. +8%, сила Маг. Крит\\n. Атк. +13%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mAtk" value="160"/>		
+			<p_magic_critical_dmg value="1065" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.1"/>		
+			<mul order="0x60" stat="mAtk" value="1.08"/>		
+			<p_magic_critical_dmg value="13" type="PER"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60109">
+		<for>
+			<!--Маг. Атк. +202, сила Маг. Крит. Атк. +1344, шанс М\\nаг. Крит. Атк. +12%, Маг. Атк. +10%, сила Маг. Кри\\nт. Атк. +15%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mAtk" value="202"/>		
+			<p_magic_critical_dmg value="1344" type="DIFF"/>			
+			<mul order="0x60" stat="mCritRate" value="1.12"/>		
+			<mul order="0x60" stat="mAtk" value="1.1"/>		
+			<p_magic_critical_dmg value="15" type="PER"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60110">
+		<for>
+			<!--MP 21-->
+			<add order="0x60" stat="maxMp" value="21"/>
+		</for>
+	</option_data>
+	<option_data id="60111">
+		<for>
+			<!--MP 33-->
+			<add order="0x60" stat="maxMp" value="33"/>
+		</for>
+	</option_data>
+	<option_data id="60112">
+		<for>
+			<!--MP 42-->
+			<add order="0x60" stat="maxMp" value="42"/>
+		</for>
+	</option_data>
+	<option_data id="60113">
+		<for>
+			<!--MP 52-->
+			<add order="0x60" stat="maxMp" value="52"/>
+		</for>
+	</option_data>
+	<option_data id="60114">
+		<for>
+			<!--MP 63-->
+			<add order="0x60" stat="maxMp" value="63"/>
+		</for>
+	</option_data>
+	<option_data id="60115">
+		<for>
+			<!--MP 75-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="maxMp" value="75"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60116">
+		<for>
+			<!--MP 96-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="maxMp" value="96"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>					
+		</for>
+	</option_data>
+	<option_data id="60117">
+		<for>
+			<!--MP 113-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="maxMp" value="113"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60118">
+		<for>
+			<!--MP 127-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="maxMp" value="127"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60119">
+		<for>
+			<!--MP 139-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="maxMp" value="139"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60120">
+		<for>
+			<!--MP 156-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="maxMp" value="156"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60121">
+		<for>
+			<!--MP 21, HP 31-->
+			<add order="0x60" stat="maxMp" value="21"/>
+			<add order="0x60" stat="maxHp" value="31"/>
+		</for>
+	</option_data>
+	<option_data id="60122">
+		<for>
+			<!--MP 33, HP 50-->
+			<add order="0x60" stat="maxMp" value="33"/>
+			<add order="0x60" stat="maxHp" value="50"/>			
+		</for>
+	</option_data>
+	<option_data id="60123">
+		<for>
+			<!--MP 42, HP 78-->
+			<add order="0x60" stat="maxMp" value="42"/>
+			<add order="0x60" stat="maxHp" value="78"/>			
+		</for>
+	</option_data>
+	<option_data id="60124">
+		<for>
+			<!--MP 52, HP 121-->
+			<add order="0x60" stat="maxMp" value="52"/>
+			<add order="0x60" stat="maxHp" value="121"/>			
+		</for>
+	</option_data>
+	<option_data id="60125">
+		<for>
+			<!--MP 63, HP 153-->
+			<add order="0x60" stat="maxMp" value="63"/>
+			<add order="0x60" stat="maxHp" value="153"/>			
+		</for>
+	</option_data>
+	<option_data id="60126">
+		<for>
+			<!--MP 75, HP 186-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="maxMp" value="75"/>
+			<add order="0x60" stat="maxHp" value="186"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>			
+		</for>
+	</option_data>
+	<option_data id="60127">
+		<for>
+			<!--MP 96, HP 215-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="maxMp" value="96"/>
+			<add order="0x60" stat="maxHp" value="215"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60128">
+		<for>
+			<!--MP 113, HP 243-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="maxMp" value="113"/>
+			<add order="0x60" stat="maxHp" value="243"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60129">
+		<for>
+			<!--MP 127, HP 267-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="maxMp" value="127"/>
+			<add order="0x60" stat="maxHp" value="267"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60130">
+		<for>
+			<!--MP 139, HP 293-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="maxMp" value="139"/>
+			<add order="0x60" stat="maxHp" value="293"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60131">
+		<for>
+			<!--MP 156, HP 316-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="maxMp" value="156"/>
+			<add order="0x60" stat="maxHp" value="316"/>		
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60132">
+		<for>
+			<!--MP 21, HP 31, восстановление HP +1.8, восстановлен\\nие MP +0.5-->
+			<add order="0x60" stat="maxMp" value="21"/>
+			<add order="0x60" stat="maxHp" value="31"/>	
+			<add order="0x60" stat="regHp" value="1.8"/>
+			<add order="0x60" stat="regMp" value="0.5"/>			
+		</for>
+	</option_data>
+	<option_data id="60133">
+		<for>
+			<!--MP 33, HP 50, восстановление HP +1.9, восстановлен\\nие MP +0.7-->
+			<add order="0x60" stat="maxMp" value="33"/>
+			<add order="0x60" stat="maxHp" value="50"/>	
+			<add order="0x60" stat="regHp" value="1.9"/>
+			<add order="0x60" stat="regMp" value="0.7"/>				
+		</for>
+	</option_data>
+	<option_data id="60134">
+		<for>
+			<!--MP 42, HP 78, восстановление HP +2.1, восстановлен\\nие MP +1-->
+			<add order="0x60" stat="maxMp" value="42"/>
+			<add order="0x60" stat="maxHp" value="78"/>	
+			<add order="0x60" stat="regHp" value="2.1"/>
+			<add order="0x60" stat="regMp" value="1"/>			
+		</for>
+	</option_data>
+	<option_data id="60135">
+		<for>
+			<!--MP 52, HP 121, восстановление HP +2.3, восстановле\\nние MP +1.1-->
+			<add order="0x60" stat="maxMp" value="52"/>
+			<add order="0x60" stat="maxHp" value="121"/>	
+			<add order="0x60" stat="regHp" value="2.3"/>
+			<add order="0x60" stat="regMp" value="1.1"/>			
+		</for>
+	</option_data>
+	<option_data id="60136">
+		<for>
+			<!--MP 63, HP 153, восстановление HP +3.1, восстановле\\nние MP +1.3-->
+			<add order="0x60" stat="maxMp" value="63"/>
+			<add order="0x60" stat="maxHp" value="153"/>	
+			<add order="0x60" stat="regHp" value="3.1"/>
+			<add order="0x60" stat="regMp" value="1.3"/>			
+		</for>
+	</option_data>
+	<option_data id="60137">
+		<for>
+			<!--MP 75, HP 186, восстановление HP +4.2, восстановле\\nние MP +1.5-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="maxMp" value="75"/>
+			<add order="0x60" stat="maxHp" value="186"/>	
+			<add order="0x60" stat="regHp" value="4.2"/>
+			<add order="0x60" stat="regMp" value="1.5"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60138">
+		<for>
+			<!--MP 96, HP 215, восстановление HP +4.7, восстановле\\nние MP +1.8-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="maxMp" value="96"/>
+			<add order="0x60" stat="maxHp" value="215"/>	
+			<add order="0x60" stat="regHp" value="4.7"/>
+			<add order="0x60" stat="regMp" value="1.8"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60139">
+		<for>
+			<!--MP 113, HP 243, восстановление HP +4.9, восстановл\\nение MP +1.9-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="maxMp" value="113"/>
+			<add order="0x60" stat="maxHp" value="243"/>	
+			<add order="0x60" stat="regHp" value="4.9"/>
+			<add order="0x60" stat="regMp" value="1.9"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60140">
+		<for>
+			<!--MP 127, HP 267, восстановление HP +6.2, восстановл\\nение MP +2.2-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="maxMp" value="127"/>
+			<add order="0x60" stat="maxHp" value="267"/>	
+			<add order="0x60" stat="regHp" value="6.2"/>
+			<add order="0x60" stat="regMp" value="2.2"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60141">
+		<for>
+			<!--MP 139, HP 293, восстановление HP +6.8, восстановл\\nение MP +2.4-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="maxMp" value="139"/>
+			<add order="0x60" stat="maxHp" value="293"/>	
+			<add order="0x60" stat="regHp" value="6.8"/>
+			<add order="0x60" stat="regMp" value="2.4"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60142">
+		<for>
+			<!--MP 156, HP 316, восстановление HP +7.4, восстановл\\nение MP +2.8-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="maxMp" value="156"/>
+			<add order="0x60" stat="maxHp" value="316"/>	
+			<add order="0x60" stat="regHp" value="7.4"/>
+			<add order="0x60" stat="regMp" value="2.8"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60143">
+		<for>
+			<!--MP 21, HP 31, восстановление HP +1.8, восстановлен\\nие MP +0.5, при использовании умений дает шанс 1% \\nвосстановить 12 MP.-->
+			<add order="0x60" stat="maxMp" value="21"/>
+			<add order="0x60" stat="maxHp" value="31"/>	
+			<add order="0x60" stat="regHp" value="1.8"/>
+			<add order="0x60" stat="regMp" value="0.5"/>				
+		</for>
+	</option_data>
+	<option_data id="60144">
+		<for>
+			<!--MP 33, HP 50, восстановление HP +1.9, восстановлен\\nие MP +0.7, при использовании умений дает шанс 2% \\nвосстановить 12 MP.-->
+			<add order="0x60" stat="maxMp" value="33"/>
+			<add order="0x60" stat="maxHp" value="50"/>	
+			<add order="0x60" stat="regHp" value="1.9"/>
+			<add order="0x60" stat="regMp" value="0.7"/>				
+		</for>
+	</option_data>
+	<option_data id="60145">
+		<for>
+			<!--MP 42, HP 78, восстановление HP +2.1, восстановлен\\nие MP +1, при использовании умений дает шанс 4% во\\nсстановить 12 MP.-->
+			<add order="0x60" stat="maxMp" value="42"/>
+			<add order="0x60" stat="maxHp" value="78"/>	
+			<add order="0x60" stat="regHp" value="2.1"/>
+			<add order="0x60" stat="regMp" value="1"/>				
+		</for>
+	</option_data>
+	<option_data id="60146">
+		<for>
+			<!--MP 52, HP 121, восстановление HP +2.3, восстановле\\nние MP +1.1, при использовании умений дает шанс 6%\\n восстановить 12 MP.-->
+			<add order="0x60" stat="maxMp" value="52"/>
+			<add order="0x60" stat="maxHp" value="121"/>	
+			<add order="0x60" stat="regHp" value="2.3"/>
+			<add order="0x60" stat="regMp" value="2.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60147">
+		<for>
+			<!--MP 63, HP 153, восстановление HP +3.1, восстановле\\nние MP +1.3, при использовании умений дает шанс 8%\\n восстановить 12 MP.-->
+			<add order="0x60" stat="maxMp" value="63"/>
+			<add order="0x60" stat="maxHp" value="153"/>	
+			<add order="0x60" stat="regHp" value="3.1"/>
+			<add order="0x60" stat="regMp" value="1.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60148">
+		<for>
+			<!--MP 75, HP 186, восстановление HP +4.2, восстановле\\nние MP +1.5, при использовании умений дает шанс 10\\n% восстановить 12 MP.-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="maxMp" value="75"/>
+			<add order="0x60" stat="maxHp" value="186"/>	
+			<add order="0x60" stat="regHp" value="4.2"/>
+			<add order="0x60" stat="regMp" value="1.5"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>					
+		</for>
+	</option_data>
+	<option_data id="60149">
+		<for>
+			<!--MP 96, HP 215, восстановление HP +4.7, восстановле\\nние MP +1.8, при использовании умений дает шанс 12\\n% восстановить 12 MP.-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="maxMp" value="96"/>
+			<add order="0x60" stat="maxHp" value="215"/>	
+			<add order="0x60" stat="regHp" value="4.7"/>
+			<add order="0x60" stat="regMp" value="1.8"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>			
+		</for>
+	</option_data>
+	<option_data id="60150">
+		<for>
+			<!--MP 113, HP 243, восстановление HP +4.9, восстановл\\nение MP +1.9, при использовании умений дает шанс 1\\n4% восстановить 12 MP.-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="maxMp" value="113"/>
+			<add order="0x60" stat="maxHp" value="243"/>	
+			<add order="0x60" stat="regHp" value="4.9"/>
+			<add order="0x60" stat="regMp" value="1.9"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60151">
+		<for>
+			<!--MP 127, HP 267, восстановление HP +6.2, восстановл\\nение MP +2.2, при использовании умений дает шанс 1\\n6% восстановить 12 MP.-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="maxMp" value="127"/>
+			<add order="0x60" stat="maxHp" value="267"/>	
+			<add order="0x60" stat="regHp" value="6.2"/>
+			<add order="0x60" stat="regMp" value="2.2"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60152">
+		<for>
+			<!--MP 139, HP 293, восстановление HP +6.8, восстановл\\nение MP +2.4, при использовании умений дает шанс 2\\n0% восстановить 12 MP.-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="maxMp" value="139"/>
+			<add order="0x60" stat="maxHp" value="293"/>	
+			<add order="0x60" stat="regHp" value="6.8"/>
+			<add order="0x60" stat="regMp" value="2.4"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60153">
+		<for>
+			<!--MP 156, HP 316, восстановление HP +7.4, восстановл\\nение MP +2.8, при использовании умений дает шанс 2\\n4% восстановить 12 MP.-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="maxMp" value="156"/>
+			<add order="0x60" stat="maxHp" value="316"/>	
+			<add order="0x60" stat="regHp" value="7.4"/>
+			<add order="0x60" stat="regMp" value="2.8"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60154">
+		<for>
+			<!--MP 21, HP 31, восстановление HP +1.8, восстановлен\\nие MP +0.5, при использовании умений дает шанс 1% \\nвосстановить 12 MP., расход MP для магии -3%-->
+			<add order="0x60" stat="maxMp" value="21"/>
+			<add order="0x60" stat="maxHp" value="31"/>	
+			<add order="0x60" stat="regHp" value="1.8"/>
+			<add order="0x60" stat="regMp" value="0.5"/>	
+			<mul order="0x60" stat="mpConsum" value="0.97"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.97"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.97"/>	
+		</for>
+	</option_data>
+	<option_data id="60155">
+		<for>
+			<!--MP 33, HP 50, восстановление HP +1.9, восстановлен\\nие MP +0.7, при использовании умений дает шанс 2% \\nвосстановить 12 MP., расход MP для магии -5%-->
+			<add order="0x60" stat="maxMp" value="33"/>
+			<add order="0x60" stat="maxHp" value="50"/>	
+			<add order="0x60" stat="regHp" value="1.9"/>
+			<add order="0x60" stat="regMp" value="0.7"/>	
+			<mul order="0x60" stat="mpConsum" value="0.95"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.95"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.95"/>				
+		</for>
+	</option_data>
+	<option_data id="60156">
+		<for>
+			<!--MP 42, HP 78, восстановление HP +2.1, восстановлен\\nие MP +1, при использовании умений дает шанс 4% во\\nсстановить 12 MP., расход MP для магии -7%-->
+			<add order="0x60" stat="maxMp" value="42"/>
+			<add order="0x60" stat="maxHp" value="78"/>	
+			<add order="0x60" stat="regHp" value="2.1"/>
+			<add order="0x60" stat="regMp" value="1"/>	
+			<mul order="0x60" stat="mpConsum" value="0.93"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.93"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.93"/>				
+		</for>
+	</option_data>
+	<option_data id="60157">
+		<for>
+			<!--MP 52, HP 121, восстановление HP +2.3, восстановле\\nние MP +1.1, при использовании умений дает шанс 6%\\n восстановить 12 MP., расход MP для магии -9%-->
+			<add order="0x60" stat="maxMp" value="52"/>
+			<add order="0x60" stat="maxHp" value="121"/>	
+			<add order="0x60" stat="regHp" value="2.3"/>
+			<add order="0x60" stat="regMp" value="1.1"/>	
+			<mul order="0x60" stat="mpConsum" value="0.91"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.91"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.91"/>				
+		</for>
+	</option_data>
+	<option_data id="60158">
+		<for>
+			<!--MP 63, HP 153, восстановление HP +3.1, восстановле\\nние MP +1.3, при использовании умений дает шанс 8%\\n восстановить 12 MP., расход MP для магии -11%-->
+			<add order="0x60" stat="maxMp" value="63"/>
+			<add order="0x60" stat="maxHp" value="153"/>	
+			<add order="0x60" stat="regHp" value="3.1"/>
+			<add order="0x60" stat="regMp" value="1.3"/>	
+			<mul order="0x60" stat="mpConsum" value="0.89"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.89"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.89"/>				
+		</for>
+	</option_data>
+	<option_data id="60159">
+		<for>
+			<!--MP 75, HP 186, восстановление HP +4.2, восстановле\\nние MP +1.5, при использовании умений дает шанс 10\\n% восстановить 12 MP., расход MP для магии -13%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="maxMp" value="75"/>
+			<add order="0x60" stat="maxHp" value="186"/>	
+			<add order="0x60" stat="regHp" value="4.2"/>
+			<add order="0x60" stat="regMp" value="1.5"/>	
+			<mul order="0x60" stat="mpConsum" value="0.87"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.87"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.87"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>			
+		</for>
+	</option_data>
+	<option_data id="60160">
+		<for>
+			<!--MP 96, HP 215, восстановление HP +4.7, восстановле\\nние MP +1.8, при использовании умений дает шанс 12\\n% восстановить 12 MP., расход MP для магии -15%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="maxMp" value="96"/>
+			<add order="0x60" stat="maxHp" value="215"/>	
+			<add order="0x60" stat="regHp" value="4.7"/>
+			<add order="0x60" stat="regMp" value="1.8"/>	
+			<mul order="0x60" stat="mpConsum" value="0.85"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.85"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.85"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60161">
+		<for>
+			<!--MP 113, HP 243, восстановление HP +4.9, восстановл\\nение MP +1.9, при использовании умений дает шанс 1\\n4% восстановить 12 MP., расход MP для магии -17%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="maxMp" value="113"/>
+			<add order="0x60" stat="maxHp" value="243"/>	
+			<add order="0x60" stat="regHp" value="4.9"/>
+			<add order="0x60" stat="regMp" value="1.9"/>	
+			<mul order="0x60" stat="mpConsum" value="0.83"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.83"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.83"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60162">
+		<for>
+			<!--MP 127, HP 267, восстановление HP +6.2, восстановл\\nение MP +2.2, при использовании умений дает шанс 1\\n6% восстановить 12 MP., расход MP для магии -20%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="maxMp" value="127"/>
+			<add order="0x60" stat="maxHp" value="267"/>	
+			<add order="0x60" stat="regHp" value="6.2"/>
+			<add order="0x60" stat="regMp" value="2.2"/>	
+			<mul order="0x60" stat="mpConsum" value="0.8"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.8"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.8"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60163">
+		<for>
+			<!--MP 139, HP 293, восстановление HP +6.8, восстановл\\nение MP +2.4, при использовании умений дает шанс 2\\n0% восстановить 12 MP., расход MP для магии -30%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="maxMp" value="139"/>
+			<add order="0x60" stat="maxHp" value="293"/>	
+			<add order="0x60" stat="regHp" value="6.8"/>
+			<add order="0x60" stat="regMp" value="2.4"/>	
+			<mul order="0x60" stat="mpConsum" value="0.7"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.7"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.7"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60164">
+		<for>
+			<!--MP 156, HP 316, восстановление HP +7.4, восстановл\\nение MP +2.8, при использовании умений дает шанс 2\\n4% восстановить 12 MP., расход MP для магии -40%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="maxMp" value="156"/>
+			<add order="0x60" stat="maxHp" value="316"/>	
+			<add order="0x60" stat="regHp" value="7.4"/>
+			<add order="0x60" stat="regMp" value="2.8"/>	
+			<mul order="0x60" stat="mpConsum" value="0.6"/>
+			<mul order="0x60" stat="mpConsumePhysical" value="0.6"/>
+			<mul order="0x60" stat="mpDanceConsume" value="0.6"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>			
+		</for>
+	</option_data>
+	<option_data id="60165">
+		<for>
+			<!--Маг. Защ. +6-->
+			<add order="0x60" stat="mDef" value="6"/>
+		</for>
+	</option_data>
+	<option_data id="60166">
+		<for>
+			<!--Маг. Защ. +8-->
+			<add order="0x60" stat="mDef" value="8"/>
+		</for>
+	</option_data>
+	<option_data id="60167">
+		<for>
+			<!--Маг. Защ. +10-->
+			<add order="0x60" stat="mDef" value="10"/>
+		</for>
+	</option_data>
+	<option_data id="60168">
+		<for>
+			<!--Маг. Защ. +12-->
+			<add order="0x60" stat="mDef" value="12"/>
+		</for>
+	</option_data>
+	<option_data id="60169">
+		<for>
+			<!--Маг. Защ. +14-->
+			<add order="0x60" stat="mDef" value="14"/>
+		</for>
+	</option_data>
+	<option_data id="60170">
+		<for>
+			<!--Маг. Защ. +16-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60171">
+		<for>
+			<!--Маг. Защ. +18-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mDef" value="18"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60172">
+		<for>
+			<!--Маг. Защ. +20-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mDef" value="20"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60173">
+		<for>
+			<!--Маг. Защ. +22-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mDef" value="22"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>					
+		</for>
+	</option_data>
+	<option_data id="60174">
+		<for>
+			<!--Маг. Защ. +25-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mDef" value="25"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60175">
+		<for>
+			<!--Маг. Защ. +28-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mDef" value="28"/>
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60176">
+		<for>
+			<!--Маг. Защ. +6, Физ. Защ. +11-->
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pDef" value="11"/>
+		</for>
+	</option_data>
+	<option_data id="60177">
+		<for>
+			<!--Маг. Защ. +8, Физ. Защ. +14-->
+			<add order="0x60" stat="mDef" value="8"/>
+			<add order="0x60" stat="pDef" value="14"/>			
+		</for>
+	</option_data>
+	<option_data id="60178">
+		<for>
+			<!--Маг. Защ. +10, Физ. Защ. +18-->
+			<add order="0x60" stat="mDef" value="10"/>
+			<add order="0x60" stat="pDef" value="18"/>				
+		</for>
+	</option_data>
+	<option_data id="60179">
+		<for>
+			<!--Маг. Защ. +12, Физ. Защ. +24-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="24"/>				
+		</for>
+	</option_data>
+	<option_data id="60180">
+		<for>
+			<!--Маг. Защ. +14, Физ. Защ. +29-->
+			<add order="0x60" stat="mDef" value="14"/>
+			<add order="0x60" stat="pDef" value="29"/>				
+		</for>
+	</option_data>
+	<option_data id="60181">
+		<for>
+			<!--Маг. Защ. +16, Физ. Защ. +35-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pDef" value="35"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60182">
+		<for>
+			<!--Маг. Защ. +18, Физ. Защ. +43-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mDef" value="18"/>
+			<add order="0x60" stat="pDef" value="43"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60183">
+		<for>
+			<!--Маг. Защ. +20, Физ. Защ. +54-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mDef" value="20"/>
+			<add order="0x60" stat="pDef" value="54"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60184">
+		<for>
+			<!--Маг. Защ. +22, Физ. Защ. +61-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mDef" value="22"/>
+			<add order="0x60" stat="pDef" value="61"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60185">
+		<for>
+			<!--Маг. Защ. +25, Физ. Защ. +66-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mDef" value="25"/>
+			<add order="0x60" stat="pDef" value="66"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60186">
+		<for>
+			<!--Маг. Защ. +28, Физ. Защ. +71-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mDef" value="28"/>
+			<add order="0x60" stat="pDef" value="71"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60187">
+		<for>
+			<!--Маг. Защ. +6, Физ. Защ. +11, шанс блока щитом + 10\\n%-->
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pDef" value="11"/>	
+			<mul order="0x60" stat="rShld" value="1.1"/>	
+		</for>
+	</option_data>
+	<option_data id="60188">
+		<for>
+			<!--Маг. Защ. +8, Физ. Защ. +14, шанс блока щитом + 15\\n%-->
+			<add order="0x60" stat="mDef" value="8"/>
+			<add order="0x60" stat="pDef" value="14"/>	
+			<mul order="0x60" stat="rShld" value="1.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60189">
+		<for>
+			<!--Маг. Защ. +10, Физ. Защ. +18, шанс блока щитом + 2\\n0%-->
+			<add order="0x60" stat="mDef" value="10"/>
+			<add order="0x60" stat="pDef" value="18"/>	
+			<mul order="0x60" stat="rShld" value="1.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60190">
+		<for>
+			<!--Маг. Защ. +12, Физ. Защ. +24, шанс блока щитом + 3\\n0%-->
+			<add order="0x60" stat="mDef" value="12"/>
+			<add order="0x60" stat="pDef" value="24"/>	
+			<mul order="0x60" stat="rShld" value="1.3"/>					
+		</for>
+	</option_data>
+	<option_data id="60191">
+		<for>
+			<!--Маг. Защ. +14, Физ. Защ. +29, шанс блока щитом + 4\\n0%-->
+			<add order="0x60" stat="mDef" value="14"/>
+			<add order="0x60" stat="pDef" value="29"/>	
+			<mul order="0x60" stat="rShld" value="1.4"/>					
+		</for>
+	</option_data>
+	<option_data id="60192">
+		<for>
+			<!--Маг. Защ. +16, Физ. Защ. +35, шанс блока щитом + 5\\n0%-->
+			<!--Бонус опыта / SP +5%.-->
+			<add order="0x60" stat="mDef" value="16"/>
+			<add order="0x60" stat="pDef" value="35"/>	
+			<mul order="0x60" stat="rShld" value="1.5"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.05"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.05"/>				
+		</for>
+	</option_data>
+	<option_data id="60193">
+		<for>
+			<!--Маг. Защ. +18, Физ. Защ. +43, шанс блока щитом + 6\\n0%-->
+			<!--Бонус опыта / SP +10%.-->
+			<add order="0x60" stat="mDef" value="18"/>
+			<add order="0x60" stat="pDef" value="43"/>	
+			<mul order="0x60" stat="rShld" value="1.6"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.1"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.1"/>				
+		</for>
+	</option_data>
+	<option_data id="60194">
+		<for>
+			<!--Маг. Защ. +20, Физ. Защ. +54, шанс блока щитом + 7\\n0%-->
+			<!--Бонус опыта / SP +15%.-->
+			<add order="0x60" stat="mDef" value="20"/>
+			<add order="0x60" stat="pDef" value="54"/>	
+			<mul order="0x60" stat="rShld" value="1.7"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.15"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.15"/>				
+		</for>
+	</option_data>
+	<option_data id="60195">
+		<for>
+			<!--Маг. Защ. +22, Физ. Защ. +61, шанс блока щитом + 8\\n0%-->
+			<!--Бонус опыта / SP +20%.-->
+			<add order="0x60" stat="mDef" value="22"/>
+			<add order="0x60" stat="pDef" value="61"/>	
+			<mul order="0x60" stat="rShld" value="1.8"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.2"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.2"/>				
+		</for>
+	</option_data>
+	<option_data id="60196">
+		<for>
+			<!--Маг. Защ. +25, Физ. Защ. +66, шанс блока щитом + 9\\n0%-->
+			<!--Бонус опыта / SP +30%.-->
+			<add order="0x60" stat="mDef" value="25"/>
+			<add order="0x60" stat="pDef" value="66"/>	
+			<mul order="0x60" stat="rShld" value="1.9"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.3"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.3"/>				
+		</for>
+	</option_data>
+	<option_data id="60197">
+		<for>
+			<!--Маг. Защ. +28, Физ. Защ. +71, шанс блока щитом + 1\\n00%-->
+			<!--Бонус опыта / SP +40%.-->
+			<add order="0x60" stat="mDef" value="28"/>
+			<add order="0x60" stat="pDef" value="71"/>	
+			<mul order="0x60" stat="rShld" value="2"/>	
+			<add order="0x60" stat="exp_rate_multiplier" value="0.4"/>
+			<add order="0x60" stat="sp_rate_multiplier" value="0.4"/>				
+		</for>
+	</option_data>
+	<option_data id="60198">
+		<for>
+			<!--Маг. Защ. +6, Физ. Защ. +11, шанс блока щитом + 10\\n%, Защита Щитом +3%-->
+			<add order="0x60" stat="mDef" value="6"/>
+			<add order="0x60" stat="pDef" value="11"/>	
+			<mul order="0x60" stat="rShld" value="1.1"/>	
+			<mul order="0x60" stat="sDef" value="1.03"/>	
+		</for>
+	</option_data>
+	<option_data id="60199">
+		<for>
+			<!--Маг. Защ. +8, Физ. Защ. +14, шанс блока щитом + 15\\n%, Защита Щитом +6%-->
+			<add order="0x60" stat="mDef" value="8"/>
+			<add order="0x60" stat="pDef" value="14"/>	
+			<mul order="0x60" stat="rShld" value="1.15"/>	
+			<mul order="0x60" stat="sDef" value="1.06"/>				
+		</for>
+	</option_data>
+</list>

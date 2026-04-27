@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L2 Autobot Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- API Key Modal -->
+        <div id="apikey-modal" class="modal-overlay" style="display:none;">
+            <div class="modal">
+                <h2>&#128274; API Key Required</h2>
+                <p>Enter your server API key to continue.</p>
+                <input type="password" id="apikey-input" placeholder="Enter API Key..." autocomplete="off">
+                <button class="btn btn-primary" onclick="saveApiKey()">Connect</button>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h1>&#9876; L2 Autobots</h1>
+                <span class="version">Control Panel</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#dashboard" data-route="dashboard"><span class="nav-icon">&#9632;</span> Dashboard</a></li>
+                <li><a href="#bots" data-route="bots"><span class="nav-icon">&#9823;</span> Bots</a></li>
+                <li><a href="#create" data-route="create"><span class="nav-icon">&#10010;</span> Create Bot</a></li>
+                <li><a href="#scheduler" data-route="scheduler"><span class="nav-icon">&#9200;</span> Scheduler</a></li>
+                <li><a href="#trade" data-route="trade"><span class="nav-icon">&#9878;</span> Trade</a></li>
+                <li><a href="#starterpack" data-route="starterpack"><span class="nav-icon">&#9876;</span> Starter Pack</a></li>
+                <li><a href="#settings" data-route="settings"><span class="nav-icon">&#9881;</span> Settings</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <div id="connection-status" class="status-indicator offline">
+                    <span class="status-dot"></span> <span id="conn-text">Disconnected</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main id="content">
+            <div id="view" class="view-container"></div>
+        </main>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container"></div>
+
+    <!-- Confirm Modal -->
+    <div id="confirm-modal" class="modal-overlay" style="display:none;">
+        <div class="modal">
+            <h3 id="confirm-title">Confirm</h3>
+            <p id="confirm-message"></p>
+            <div class="modal-actions">
+                <button class="btn btn-secondary" onclick="closeConfirm()">Cancel</button>
+                <button class="btn btn-danger" id="confirm-ok">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

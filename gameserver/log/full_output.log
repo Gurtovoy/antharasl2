@@ -1,0 +1,37 @@
+﻿[23:54:11]  INFO =================================================
+[23:54:11]  INFO Project Revision: ........ L2s [31495]
+[23:54:11]  INFO Build Revision: .......... -1
+[23:54:11]  INFO Update: .................. Classic: Saviors (Antharas)
+[23:54:11]  INFO Build date: .............. -1
+[23:54:11]  INFO Compiler version: ........ Maven JAR Plugin 3.4.1
+[23:54:11]  INFO =================================================
+[23:54:11]  INFO HostsConfigHolder: =================================================
+[23:54:11]  INFO HostsConfigHolder: Authserver host info: IP[127.0.0.1], PORT[9014]
+[23:54:11]  INFO HostsConfigHolder: =================================================
+[23:54:11]  INFO HostsConfigHolder: Gameserver host info:
+[23:54:11]  INFO HostsConfigHolder: ID[1], ADDRESS[127.0.0.1], PORT[7777]
+[23:54:11]  INFO HostsConfigHolder: =================================================
+[23:54:11]  INFO Abuse: Loaded 18 abuse words.
+[23:54:11]  INFO UpdatesInstaller: Checking new updates...
+[23:54:11]  INFO UpdatesInstaller: No new updates.
+[23:54:11]  INFO IdFactory: Clear characters online status.
+[23:54:11]  INFO IdFactory: Cleaned 0 elements from database in 0sec.
+[23:54:11]  INFO IdFactory: Extracted total 0 used id's.
+[23:54:11]  INFO IdFactory: 102912 id's available.
+[23:54:11]  INFO Hidden items loaded size: 0
+[23:54:11]  INFO CustomHeroDAO: loaded 0 custom heroes.
+[23:54:11]  INFO HWIDBan: Black list (Hwid) loaded size: 0
+[23:54:11]  INFO Scripts: Loading...
+java : Exception in thread "main" java.lang.Error: Failed loading scripts!
+строка:1 знак:47
++ ... gameserver; java -server "-Dfile.encoding=UTF-8" -Xms512m -Xmx1g "--a ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Exception in th...oading scripts! 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+	at l2s.gameserver.scripts.Scripts.load(Scripts.java:72)
+	at l2s.gameserver.scripts.Scripts.<init>(Scripts.java:65)
+	at l2s.gameserver.scripts.Scripts.<clinit>(Scripts.java:55)
+	at l2s.gameserver.GameServer.<init>(GameServer.java:207)
+	at l2s.gameserver.GameServer.main(GameServer.java:392)

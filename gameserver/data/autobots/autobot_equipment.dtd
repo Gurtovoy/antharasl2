@@ -1,0 +1,8 @@
+<!ELEMENT autobot_equipment (class_equipment*)>
+<!ELEMENT class_equipment (item*)>
+<!ATTLIST class_equipment classId CDATA #REQUIRED>
+<!ATTLIST class_equipment minLevel CDATA #IMPLIED>
+<!ATTLIST class_equipment maxLevel CDATA #IMPLIED>
+<!ELEMENT item EMPTY>
+<!ATTLIST item slot CDATA #REQUIRED>
+<!ATTLIST item itemId CDATA #REQUIRED>

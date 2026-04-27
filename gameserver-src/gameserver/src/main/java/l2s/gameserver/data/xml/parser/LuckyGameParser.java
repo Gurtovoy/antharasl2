@@ -1,0 +1,95 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  l2s.commons.data.xml.AbstractHolder
+ *  l2s.commons.data.xml.AbstractParser
+ *  org.dom4j.Element
+ */
+package l2s.gameserver.data.xml.parser;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import l2s.commons.data.xml.AbstractHolder;
+import l2s.commons.data.xml.AbstractParser;
+import l2s.gameserver.Config;
+import l2s.gameserver.data.xml.holder.LuckyGameHolder;
+import l2s.gameserver.templates.luckygame.LuckyGameData;
+import l2s.gameserver.templates.luckygame.LuckyGameItem;
+import l2s.gameserver.templates.luckygame.LuckyGameType;
+import org.dom4j.Element;
+
+public final class LuckyGameParser
+extends AbstractParser<LuckyGameHolder> {
+    private static final LuckyGameParser _instance = new LuckyGameParser();
+
+    public static LuckyGameParser getInstance() {
+        return _instance;
+    }
+
+    protected LuckyGameParser() {
+        super(LuckyGameHolder.getInstance());
+    }
+
+    public File getXMLPath() {
+        return new File(Config.DATAPACK_ROOT, "data/lucky_game_data.xml");
+    }
+
+    public String getDTDFileName() {
+        return "lucky_game_data.dtd";
+    }
+
+    protected void readData(Element rootElement) throws Exception {
+        Element configElement = rootElement.element("config");
+        if (configElement != null) {
+            Config.ALLOW_LUCKY_GAME_EVENT = Boolean.parseBoolean(configElement.attributeValue("allow"));
+            Config.LUCKY_GAME_UNIQUE_REWARD_GAMES_COUNT = Integer.parseInt(configElement.attributeValue("unique_reward_games_count"));
+            Config.LUCKY_GAME_ADDITIONAL_REWARD_GAMES_COUNT = Integer.parseInt(configElement.attributeValue("additional_rewards_games_count"));
+        }
+        if (!Config.ALLOW_LUCKY_GAME_EVENT) {
+            return;
+        }
+        Iterator iterator = rootElement.elementIterator("game");
+        while (iterator.hasNext()) {
+            Element element = (Element)iterator.next();
+            LuckyGameType type = LuckyGameType.valueOf(element.attributeValue("type").toUpperCase());
+            int feeItemId = Integer.parseInt(element.attributeValue("fee_item_id"));
+            long feeItemCount = Integer.parseInt(element.attributeValue("fee_item_count"));
+            int gamesLimit = element.attributeValue("games_limit") == null ? -1 : Integer.parseInt(element.attributeValue("games_limit"));
+            String reuse = element.attributeValue("reuse") == null ? null : element.attributeValue("reuse");
+            LuckyGameData data = new LuckyGameData(type, feeItemId, feeItemCount, gamesLimit, reuse);
+            Iterator secondIterator = element.elementIterator();
+            while (secondIterator.hasNext()) {
+                Element secondElement = (Element)secondIterator.next();
+                if (secondElement.getName().equals("common_rewards")) {
+                    data.addCommonRewards(LuckyGameParser.parseRewards(secondElement));
+                    continue;
+                }
+                if (secondElement.getName().equals("unique_rewards")) {
+                    data.addUniqueRewards(LuckyGameParser.parseRewards(secondElement));
+                    continue;
+                }
+                if (!secondElement.getName().equals("additional_rewards")) continue;
+                data.addAdditionalRewards(LuckyGameParser.parseRewards(secondElement));
+            }
+            ((LuckyGameHolder)this.getHolder()).addData(data);
+        }
+    }
+
+    private static List<LuckyGameItem> parseRewards(Element element) {
+        ArrayList<LuckyGameItem> rewards = new ArrayList<LuckyGameItem>();
+        Iterator iterator = element.elementIterator("item");
+        while (iterator.hasNext()) {
+            Element itemElement = (Element)iterator.next();
+            int itemId = Integer.parseInt(itemElement.attributeValue("id"));
+            long minCount = Long.parseLong(itemElement.attributeValue("min_count"));
+            long maxCount = Long.parseLong(itemElement.attributeValue("max_count"));
+            double chance = Double.parseDouble(itemElement.attributeValue("chance"));
+            rewards.add(new LuckyGameItem(itemId, minCount, maxCount, chance));
+        }
+        return rewards;
+    }
+}
+

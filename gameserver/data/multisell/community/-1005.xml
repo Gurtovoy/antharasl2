@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE list SYSTEM "multisell.dtd">
+<list>
+	<config show_all="true" no_tax="true" keep_enchanted="false" />
+	<item>
+		<production id="887" count="1"/>	<!--Adamantite Ring-->
+		<ingredient id="4037" count="5"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="856" count="1"/>	<!--Adamantite Earring-->
+		<ingredient id="4037" count="6"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="918" count="1"/>	<!--Adamantite Necklace-->
+		<ingredient id="4037" count="8"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="895" count="1"/>	<!--Black Ore Ring-->
+		<ingredient id="4037" count="7"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="864" count="1"/>	<!--Black Ore Earring-->
+		<ingredient id="4037" count="8"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="926" count="1"/>	<!--Black Ore Necklace-->
+		<ingredient id="4037" count="10"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="902" count="1"/>	<!--Phoenix Ring-->
+		<ingredient id="4037" count="15"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="871" count="1"/>	<!--Phoenix Earring-->
+		<ingredient id="4037" count="16"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="933" count="1"/>	<!--Phoenix Necklace-->
+		<ingredient id="4037" count="18"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="893" count="1"/>	<!--Majestic Ring-->
+		<ingredient id="4037" count="17"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="862" count="1"/>	<!--Majestic Earring-->
+		<ingredient id="4037" count="18"/>	<!--Coin of Luck-->
+	</item>
+	<item>
+		<production id="924" count="1"/>	<!--Majestic Necklace-->
+		<ingredient id="4037" count="20"/>	<!--Coin of Luck-->
+	</item>
+</list>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="13652" levels="1" name="Put on Lv. 3 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i03"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="13653" levels="1" name="Remove Lv. 3 Brooch">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="13654" levels="1" name="Put on Lv. 2 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i01"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A1"/>
+	</skill>
+	<skill id="13655" levels="1" name="Remove Lv. 2 Brooch">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A1"/>
+	</skill>
+	<skill id="13656" levels="1" name="Lv. 1 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i00"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<set stat="jewels_limit" value="2"/>
+		</for>
+	</skill>
+	<skill id="13657" levels="1" name="Lv. 2 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i01"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<set stat="jewels_limit" value="3"/>
+		</for>
+	</skill>
+	<skill id="13658" levels="1" name="Lv. 3 Brooch">
+		<set name="icon" value="icon.etc_bm_brooch_lavianrose_i03"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<set stat="jewels_limit" value="4"/>
+		</for>
+	</skill>
+	<skill id="13661" levels="3" name="Lv. 2 Brooch - Additional Effect">
+		<table name="#icon">icon.etc_bm_brooch_lavianrose_i00 icon.etc_bm_brooch_lavianrose_i01 icon.etc_bm_brooch_lavianrose_i03</table>
+		<table name="#inventoryLimit">5 9</table>
+		<set name="icon" value="#icon"/>
+		<set name="operate_type" value="P"/>
+		<for>
+			<add stat="inventoryLimit" value="#inventoryLimit"/>
+		</for>
+	</skill>
+</list>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "agathions.dtd">
+<!--AUTHOR: Bonux-->
+<list>
+	<agathion npc_id="16049" id="8" item_ids="13340;70933"/>
+	<agathion npc_id="16056" id="11" item_ids="13025;90833;90896;90897"/>
+	<agathion npc_id="16063" id="18" item_ids="70407;70972" delay="300" max_count="300" use_up="INCREASE_DELAY" power="1026" target_type="MASTER">
+		<time_skill id="6121" level="1" target_type="MASTER" delay="600"/>	<!--Agathion's New Year's Gift 1-->
+		<time_skill id="6122" level="1" target_type="MASTER" delay="4200"/>	<!--Agathion's New Year's Gift 2-->
+		<time_skill id="6123" level="1" target_type="MASTER" delay="660"/>	<!--Agathion's New Year's Wish-->
+	</agathion>
+	<agathion npc_id="16073" id="24" item_ids="71063;71064;90909" delay="300" max_count="30000" use_up="INCREASE_DELAY" power="1026" target_type="MASTER"/>
+	<agathion npc_id="16078" id="29" item_ids="17270;70934"/>
+
+	<agathion npc_id="1513" id="513" item_ids="70401;70966"/>
+	<agathion npc_id="1514" id="514" item_ids="70403;70968"/>
+	<agathion npc_id="1523" id="523" item_ids="70405;70970"/>
+	<agathion npc_id="1533" id="533" item_ids="20662;70935"/>
+	<agathion npc_id="1539" id="539" item_ids="70978;70413" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1540" id="540" item_ids="70979;70414" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1541" id="541" item_ids="70980;70415" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1542" id="542" item_ids="70981;70416" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1543" id="543" item_ids="70982;70417" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1544" id="544" item_ids="70983;70418" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1545" id="545" item_ids="70984;70419" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1546" id="546" item_ids="70985;70420" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1547" id="547" item_ids="70986;70421" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1548" id="548" item_ids="70987;70422" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1549" id="549" item_ids="70988;70423" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1550" id="550" item_ids="70989;70424" energy="100000" max_energy="100000"/>
+	<agathion npc_id="1551" id="551" item_ids="70404;70969"/>
+	<agathion npc_id="1552" id="552" item_ids="70408;70973" delay="13" max_count="300" use_up="INCREASE_DELAY" power="0" target_type="HEAL">
+		<skill chance="100" id="23126" level="1">  <!--Gwanseum Nyang Nyang Agathion Special Skill - Blessing of Mercy-->
+			<chance min_hp_percent="0" max_hp_percent="30" value="53"/>
+			<chance min_hp_percent="31" max_hp_percent="60" value="33"/>
+			<chance min_hp_percent="61" max_hp_percent="90" value="13"/>
+		</skill>
+	</agathion>
+	<agathion npc_id="1553" id="553" item_ids="70409;70974" delay="13" max_count="300" use_up="INCREASE_DELAY" power="0" target_type="HEAL">
+		<skill chance="100" id="23128" level="1">  <!--Blue Opera Agathion Special Skill - Sword of Recovery-->
+			<chance min_hp_percent="0" max_hp_percent="30" value="53"/>
+			<chance min_hp_percent="31" max_hp_percent="60" value="33"/>
+			<chance min_hp_percent="61" max_hp_percent="90" value="13"/>
+		</skill>
+	</agathion>
+	<agathion npc_id="1554" id="554" item_ids="70410;70975" delay="10" max_count="300" use_up="INCREASE_DELAY" power="82" target_type="TARGET">
+		<op_cond type="GREATER" hp_percent="33" hp="1000"/>
+		<skill chance="100" id="23131" level="1" use_chance="12"/>  <!--Red Opera Agathion Special Skill - Spear of Flames-->
+	</agathion>
+	<agathion npc_id="1556" id="556" item_ids="70411;70976"/>
+	<agathion npc_id="1574" id="574" item_ids="70406;70971"/>
+	<agathion npc_id="1586" id="586" item_ids="70412;70977"/>
+	<agathion npc_id="1592" id="592" item_ids="70333;70965"/>
+	<agathion npc_id="1594" id="594" item_ids="29587;49000;49002;70114;90885;90886;70960;70961;70962;70963"/>
+	<agathion npc_id="1595" id="595" item_ids="21165;70402;70967"/>
+
+	<agathion npc_id="1539" id="613" item_ids="23152;70978" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1540" id="614" item_ids="23153;70979" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1541" id="615" item_ids="23154;70980" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1542" id="616" item_ids="23155;70981" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1543" id="617" item_ids="23156;70982" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1544" id="618" item_ids="23157;70983" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1545" id="619" item_ids="23158;70984" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1546" id="620" item_ids="23159;70985" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1547" id="621" item_ids="23160;70986" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1548" id="622" item_ids="23161;70987" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1549" id="623" item_ids="23162;70988" energy="200000" max_energy="200000"/>
+	<agathion npc_id="1550" id="624" item_ids="23163;70989" energy="200000" max_energy="200000"/>
+	<agathion npc_id="16055" id="625" item_ids="29667;70964;71123" delay="300" max_count="300" use_up="INCREASE_DELAY" power="1026" target_type="MASTER">
+		<time_skill id="23566" level="1" target_type="MASTER" delay="600" reuse="DAILY"/>	<!--Blessed Griffin Egg-->
+	</agathion>
+
+	<agathion npc_id="9017" id="9017" item_ids="70565;70566;70567;70996;70997;70998"/>
+	<agathion npc_id="9018" id="9018" item_ids="70559;70560;70561;70990;70991;70992"/>
+	<agathion npc_id="9019" id="9019" item_ids="70562;70563;70564;70993;70994;70995"/>
+	<agathion npc_id="9021" id="9021" item_ids="70806;91004"/>
+	<agathion npc_id="9032" id="9032" item_ids="71121"/>
+	<agathion npc_id="9033" id="9033" item_ids="71122"/>
+	<agathion npc_id="9035" id="9035" item_ids="71133"/>
+	<agathion npc_id="9036" id="9036" item_ids="71157"/>
+	<agathion npc_id="9036" id="9036" item_ids="71158"/>
+	<agathion npc_id="9038" id="9038" item_ids="71159"/>
+	<agathion npc_id="9039" id="9039" item_ids="71184;71193;71202"/>
+	<agathion npc_id="9040" id="9040" item_ids="71185;71193;71203;71194"/>
+	<agathion npc_id="9041" id="9041" item_ids="71186;71195;71204;71237"/>
+	<agathion npc_id="9042" id="9042" item_ids="71187;71196;71205"/>
+	<agathion npc_id="9043" id="9043" item_ids="71188;71197;71206"/>
+	<agathion npc_id="9044" id="9044" item_ids="71189;71198;71207"/>
+	<agathion npc_id="9045" id="9045" item_ids="71190;71199;71208"/>
+	<agathion npc_id="9046" id="9046" item_ids="71191;71200;71209"/>
+	<agathion npc_id="9047" id="9047" item_ids="71192;71201;71210"/>
+	<agathion npc_id="13408" id="13408" item_ids="29073;29074;48056"/>
+
+	<agathion npc_id="13410" id="13410" item_ids="29057;29058;48048"/>
+	<agathion npc_id="13411" id="13411" item_ids="49514;49515;49516;29063;29064;90894;90895"/>
+	<agathion npc_id="13412" id="13412" item_ids="29059;29060;48049"/>
+	<agathion npc_id="13413" id="13413" item_ids="29069;29070;48054"/>
+	<agathion npc_id="13414" id="13414" item_ids="29067;29068;48053"/>
+	<agathion npc_id="13415" id="13415" item_ids="29061;29062;48050"/>
+	<agathion npc_id="13416" id="13416" item_ids="29077;29078;48058"/>
+	<agathion npc_id="13417" id="13417" item_ids="29071;48055"/>
+	<agathion npc_id="13418" id="13418" item_ids="29065;29066;48052"/>
+	<agathion npc_id="13499" id="13499" item_ids="29079;29080;49459;90903;91112"/>
+
+	<agathion npc_id="13553" id="13553" item_ids="29057;29058;71303"/>
+	<agathion npc_id="13554" id="13554" item_ids="29059;29060;71304"/>
+	<agathion npc_id="13555" id="13555" item_ids="29061;29062;71305"/>
+	<agathion npc_id="13556" id="13556" item_ids="29063;29064"/>
+	<agathion npc_id="13557" id="13557" item_ids="29065;29066;71306"/>
+	<agathion npc_id="13558" id="13558" item_ids="29067;29068;71307"/>
+	<agathion npc_id="13559" id="13559" item_ids="29069;29070;71308"/>
+	<agathion npc_id="13560" id="13560" item_ids="29071;29072;71309"/>
+	<agathion npc_id="13561" id="13561" item_ids="29073;29074;71310"/>	
+	<agathion npc_id="13562" id="13562" item_ids="29075;29076;49458;90902;91111"/>
+	<agathion npc_id="13563" id="13563" item_ids="29077;29078;71311"/>
+	<agathion npc_id="13582" id="13582" item_ids="91129"/>
+	<agathion npc_id="13583" id="13583" item_ids="91130"/>
+	<agathion npc_id="13584" id="13584" item_ids="91131"/>
+	<agathion npc_id="13585" id="13585" item_ids="91132"/>
+	
+	<!-- Not in use -->
+	<agathion npc_id="13409" id="13409"/>
+	<agathion npc_id="13407" id="13407"/>
+</list>

@@ -1,0 +1,19 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.gameserver.templates.npc;
+
+public enum WalkerRouteType {
+    LENGTH,
+    ROUND,
+    RANDOM,
+    DELETE,
+    FINISH;
+
+    public static final WalkerRouteType[] VALUES;
+
+    static {
+        VALUES = WalkerRouteType.values();
+    }
+}
+

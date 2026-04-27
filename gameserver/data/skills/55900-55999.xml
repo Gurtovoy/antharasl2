@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="55900" levels="1" name="Match Girls\' Gratitude">
+		<set name="icon" value="icon.etc_candle_white_i00"/>
+		<set name="reuseDelay" value="5000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55901" levels="2" name="Cooking Ingredient">
+		<table name="#icon">icon.skill11775 icon.skill0000</table>
+		<table name="#hitTime">1500 1000</table>
+		<set name="effectPoint" value="-1"/>
+		<set name="icon" value="#icon"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="100"/>
+		<set name="hitTime" value="#hitTime"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55902" levels="1" name="Match Girls\' Blessing">
+		<set name="icon" value="BranchSys.icon.br_xmas_miracle_i00"/>
+		<set name="castRange" value="1200"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55903" levels="1" name="Christmas Talisman: P. Skill Critical Damage">
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55904" levels="1" name="Christmas Talisman: M. Skill Critical Damage">
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55905" levels="1" name="Christmas Talisman: Ultimate Defense">
+		<set name="effectPoint" value="532"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="500"/>
+		<set name="mp_consume" value="50"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55906" levels="1" name="Christmas Talisman: Debuff Resistance">
+		<set name="effectPoint" value="532"/>
+		<set name="icon" value="icon.etc_talisman_i01"/>
+		<set name="reuseDelay" value="600000"/>
+		<set name="hitTime" value="500"/>
+		<set name="mp_consume" value="50"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55907" levels="1" name="Christmas Talisman: P. Atk.">
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55908" levels="1" name="Christmas Talisman: M. Atk.">
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55909" levels="1" name="Christmas Talisman: P. Def.">
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55910" levels="1" name="Christmas Talisman: M. Def.">
+		<set name="icon" value="icon.etc_talisman_i02"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55911" levels="1" name="Sealbook: One-eyed ParaPara Cat">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55912" levels="1" name="Sealbook: Smiling ParaPara Cat">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55913" levels="1" name="Sealbook: Charming ParaPara Cat">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55914" levels="1" name="Sealbook: Ferocious ParaPara Cat">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55915" levels="1" name="Sealbook: Merchant ParaPara Cat">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55916" levels="1" name="Transform: One-eyed ParaPara Cat">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55917" levels="1" name="Transform: Smiling ParaPara Cat">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55918" levels="1" name="Transform: Charming ParaPara Cat">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55919" levels="1" name="Transform: Ferocious ParaPara Cat">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55920" levels="1" name="Transform: Merchant ParaPara Cat">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skilltransform1"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55921" levels="3" name="Fishermen\'s Guild Support Certificate">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.event_orc_memo"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55922" levels="1" name="Christmas Surprise Sox">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55923" levels="1" name="Rudolph\'s Blessed Resurrection">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skill5662"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55924" levels="1" name="Rudolph\'s Blessing">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skill19226"/>
+		<set name="reuseDelay" value="3600000"/>
+		<set name="coolTime" value="500"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55925" levels="1" name="Rudolph\'s Power">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="BranchSys2.icon.event_lbracelet_rudolph"/>
+		<set name="reuseDelay" value="14400000"/>
+		<set name="castRange" value="400"/>
+		<set name="hitTime" value="1000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55926" levels="1" name="Summon Agathion - Rudolph">
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55927" levels="1" name="Blessing of Protection">
+		<set name="icon" value="icon.skill0194"/>
+		<set name="castRange" value="700"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55928" levels="1" name="Glittering Enchant Scroll of Border">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55929" levels="1" name="Highest Grade Talisman of Border Sealed Case">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55930" levels="1" name="Talisman of Border Lucky Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55931" levels="1" name="Fire Dragon Pendant Lucky Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55932" levels="1" name="Water Dragon Pendant Lucky Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55933" levels="1" name="Wind Dragon Pendant Lucky Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55934" levels="1" name="Earth Dragon Pendant Lucky Chest">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="coolTime" value="500"/>
+		<set name="hitTime" value="500"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55935" levels="1" name="Highest Grade Fire Dragon Pendant Sealed Case">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55936" levels="1" name="Highest Grade Water Dragon Pendant Sealed Case">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55937" levels="1" name="Highest Grade Wind Dragon Pendant Sealed Case">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55938" levels="1" name="Highest Grade Earth Dragon Pendant Sealed Case">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55989" levels="2" name="Uldie\'s Full Buff">
+		<table name="#castRange">900 -1</table>
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="BranchSys.icon.br_sevenlove_girlpresent_i00"/>
+		<set name="castRange" value="#castRange"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55990" levels="1" name="Bracelet of Power">
+		<set name="icon" value="icon.ertheia_bracelet_i01"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55991" levels="15" name="Talisman of Power">
+		<table name="#icon">icon.sayhas_talisman_g_Lv1 icon.sayhas_talisman_g_Lv2 icon.sayhas_talisman_g_Lv3 icon.sayhas_talisman_g_Lv4 icon.sayhas_talisman_g_lv5 icon.sayhas_talisman_pve_Lv1 icon.sayhas_talisman_pve_Lv2 icon.sayhas_talisman_pve_Lv3 icon.sayhas_talisman_pve_Lv4 icon.sayhas_talisman_pve_lv5 icon.sayhas_talisman_pvp_Lv1 icon.sayhas_talisman_pvp_Lv2 icon.sayhas_talisman_pvp_Lv3 icon.sayhas_talisman_pvp_Lv4 icon.sayhas_talisman_pvp_lv5</table>
+		<set name="icon" value="#icon"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55992" levels="2" name="Power of Shunaiman">
+		<table name="#icon">icon.sayhas_talisman_pvp_Lv1 icon.sayhas_talisman_pvp_Lv2</table>
+		<set name="icon" value="#icon"/>
+		<set name="reuseDelay" value="300000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55993" levels="1" name="Summon Big Wedding Cake">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55994" levels="1" name="Summon Your Spouse">
+		<set name="effectPoint" value="1000"/>
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="reuseDelay" value="86400000"/>
+		<set name="castRange" value="-2"/>
+		<set name="hitTime" value="10000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55995" levels="1" name="Agathion Cute Trick">
+		<set name="icon" value="icon.skill_agathion_cute"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55996" levels="1" name="Summon Agathion - Bugbear">
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55997" levels="1" name="Summon Agathion - Dryad">
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55998" levels="1" name="Summon Agathion - Griffin">
+		<set name="icon" value="icon.etc_summon_aga_agit_i00"/>
+		<set name="hitTime" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="55999" levels="1" name="Irene\' Hourglass - 1 Hour">
+		<set name="icon" value="icon.etc_dragons_blood_i03"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>

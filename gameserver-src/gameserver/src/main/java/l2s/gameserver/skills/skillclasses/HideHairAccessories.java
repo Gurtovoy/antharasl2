@@ -1,0 +1,59 @@
+/*
+ * Decompiled with CFR 0.152.
+ */
+package l2s.gameserver.skills.skillclasses;
+
+import l2s.gameserver.model.Creature;
+import l2s.gameserver.model.Player;
+import l2s.gameserver.model.Skill;
+import l2s.gameserver.model.items.ItemInstance;
+import l2s.gameserver.model.items.PcInventory;
+import l2s.gameserver.network.l2.components.IBroadcastPacket;
+import l2s.gameserver.network.l2.components.SystemMsg;
+import l2s.gameserver.network.l2.s2c.SystemMessagePacket;
+import l2s.gameserver.skills.SkillEntry;
+import l2s.gameserver.templates.StatsSet;
+
+public class HideHairAccessories
+extends Skill {
+    public HideHairAccessories(StatsSet set) {
+        super(set);
+    }
+
+    @Override
+    public boolean checkCondition(SkillEntry skillEntry, Creature activeChar, Creature target, boolean forceUse, boolean dontMove, boolean first, boolean sendMsg, boolean trigger) {
+        if (!super.checkCondition(skillEntry, activeChar, target, forceUse, dontMove, first, sendMsg, trigger)) {
+            return false;
+        }
+        if (!activeChar.isPlayer()) {
+            return false;
+        }
+        PcInventory inventory = activeChar.getPlayer().getInventory();
+        ItemInstance item = inventory.getPaperdollItem(15);
+        if (item == null) {
+            item = inventory.getPaperdollItem(16);
+        }
+        if (item == null) {
+            activeChar.sendPacket((IBroadcastPacket)SystemMsg.PLEASE_EQUIP_THE_HAIR_ACCESSORY_AND_TRY_AGAIN);
+            activeChar.sendPacket((IBroadcastPacket)new SystemMessagePacket(SystemMsg.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS).addSkillName(this));
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    protected void useSkill(Creature activeChar, Creature target, boolean reflected) {
+        Player player = target.getPlayer();
+        if (player == null) {
+            return;
+        }
+        player.setHideHeadAccessories(!player.hideHeadAccessories());
+        player.sendUserInfo(true);
+        if (player.hideHeadAccessories()) {
+            player.sendPacket((IBroadcastPacket)SystemMsg.HAIR_ACCESSORIES_WILL_NO_LONGER_BE_DISPLAYED);
+        } else {
+            player.sendPacket((IBroadcastPacket)SystemMsg.HAIR_ACCESSORIES_WILL_BE_DISPLAYED_FROM_NOW_ON);
+        }
+    }
+}
+

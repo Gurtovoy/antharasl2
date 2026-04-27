@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="17107" levels="1" name="Snowman\'s Buff">
+		<set name="debuff" value="true"/>
+		<set name="effectPoint" value="-2"/>
+		<set name="icon" value="icon.weapon_snowman_stick_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="17108" levels="1" name="Christmas Blessing">
+		<set name="effectPoint" value="100"/>
+		<set name="icon" value="icon.weapon_snowman_stick_i00"/>
+		<set name="reuseDelay" value="30000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="17109" levels="1" name="-">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="17110" levels="1" name="Snowy Squash Nectar">
+		<set name="effectPoint" value="-150"/>
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="castRange" value="200"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="37543"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="target_type" value="OTHERS"/>
+		<set name="affect_scope" value="SINGLE"/>
+		<set name="affect_object" value="FRIEND"/>
+		<set name="target" value="TARGET_ONE"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+	</skill>
+	<skill id="17111" levels="1" name="Snowy Squash Seed">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="37552"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="isHandler" value="true"/>
+		<set name="target_type" value="SELF"/>
+		<set name="affect_scope" value="SINGLE"/>
+		<set name="affect_object" value="FRIEND"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="npcId" value="13399"/>
+		<set name="lifeTime" value="-1"/>
+		<set name="random_offset_on_spawn" value="true"/>
+		<set name="summonType" value="NPC"/>
+	</skill>
+	<skill id="17112" levels="1" name="Large Snowy Squash Seed">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="10000"/>
+		<set name="hitTime" value="1500"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="itemConsumeId" value="37553"/>
+		<set name="itemConsumeCount" value="1"/>
+		<set name="hitCancelTime" value="1500"/>
+		<set name="isHandler" value="true"/>
+		<set name="target_type" value="SELF"/>
+		<set name="affect_scope" value="SINGLE"/>
+		<set name="affect_object" value="FRIEND"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="SUMMON"/>
+		<set name="operate_type" value="A2"/>
+		<set name="npcId" value="13403"/>
+		<set name="lifeTime" value="-1"/>
+		<set name="random_offset_on_spawn" value="true"/>
+		<set name="summonType" value="NPC"/>
+	</skill>
+	<skill id="17113" levels="1" name="Christmas Buff Set 2015">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="17154" levels="1" name="Love Potion">
+		<set name="effectPoint" value="100"/>
+		<set name="icon" value="icon.etc_whiteday_herb"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="hitTime" value="100"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="17192" levels="1" name="Change Hair Accessory">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skill0810"/>
+		<set name="reuseDelay" value="180000"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HIDE_HAIR_ACCESSORIES"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="isSkillTimePermanent" value="true"/>
+	</skill>
+</list>

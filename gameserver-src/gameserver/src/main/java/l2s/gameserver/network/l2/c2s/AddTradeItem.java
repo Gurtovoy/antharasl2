@@ -1,0 +1,108 @@
+/*
+ * Decompiled with CFR 0.152.
+ * 
+ * Could not load the following classes:
+ *  l2s.commons.math.SafeMath
+ */
+package l2s.gameserver.network.l2.c2s;
+
+import java.util.List;
+import l2s.commons.math.SafeMath;
+import l2s.gameserver.model.Player;
+import l2s.gameserver.model.Request;
+import l2s.gameserver.model.items.ItemInstance;
+import l2s.gameserver.model.items.TradeItem;
+import l2s.gameserver.network.l2.GameClient;
+import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
+import l2s.gameserver.network.l2.components.IBroadcastPacket;
+import l2s.gameserver.network.l2.components.SystemMsg;
+import l2s.gameserver.network.l2.s2c.TradeDonePacket;
+import l2s.gameserver.network.l2.s2c.TradeOtherAddPacket;
+import l2s.gameserver.network.l2.s2c.TradeOwnAddPacket;
+import l2s.gameserver.network.l2.s2c.TradeUpdatePacket;
+
+public class AddTradeItem
+extends L2GameClientPacket {
+    private int _tradeId;
+    private int _objectId;
+    private long _amount;
+
+    @Override
+    protected boolean readImpl() {
+        this._tradeId = this.readD();
+        this._objectId = this.readD();
+        this._amount = this.readQ();
+        return true;
+    }
+
+    @Override
+    protected void runImpl() {
+        Player parthner1 = ((GameClient)this.getClient()).getActiveChar();
+        if (parthner1 == null || this._amount < 1L) {
+            return;
+        }
+        Request request = parthner1.getRequest();
+        if (request == null || !request.isTypeOf(Request.L2RequestType.TRADE)) {
+            parthner1.sendActionFailed();
+            return;
+        }
+        if (!request.isInProgress()) {
+            request.cancel(TradeDonePacket.FAIL);
+            parthner1.sendActionFailed();
+            return;
+        }
+        if (parthner1.isOutOfControl()) {
+            request.cancel(TradeDonePacket.FAIL);
+            parthner1.sendActionFailed();
+            return;
+        }
+        Player parthner2 = request.getOtherPlayer(parthner1);
+        if (parthner2 == null) {
+            request.cancel(TradeDonePacket.FAIL);
+            parthner1.sendPacket((IBroadcastPacket)SystemMsg.THAT_PLAYER_IS_NOT_ONLINE);
+            parthner1.sendActionFailed();
+            return;
+        }
+        if (parthner2.getRequest() != request) {
+            request.cancel(TradeDonePacket.FAIL);
+            parthner1.sendActionFailed();
+            return;
+        }
+        if (request.isConfirmed(parthner1) || request.isConfirmed(parthner2)) {
+            parthner1.sendPacket((IBroadcastPacket)SystemMsg.YOU_MAY_NO_LONGER_ADJUST_ITEMS_IN_THE_TRADE_BECAUSE_THE_TRADE_HAS_BEEN_CONFIRMED);
+            parthner1.sendActionFailed();
+            return;
+        }
+        ItemInstance item = parthner1.getInventory().getItemByObjectId(this._objectId);
+        if (item == null || !item.canBeTraded(parthner1)) {
+            parthner1.sendPacket((IBroadcastPacket)SystemMsg.THIS_ITEM_CANNOT_BE_TRADED_OR_SOLD);
+            return;
+        }
+        long count = Math.min(this._amount, item.getCount());
+        List<TradeItem> tradeList = parthner1.getTradeList();
+        TradeItem tradeItem = null;
+        try {
+            for (TradeItem ti : parthner1.getTradeList()) {
+                if (ti.getObjectId() != this._objectId) continue;
+                count = SafeMath.addAndCheck((long)count, (long)ti.getCount());
+                count = Math.min(count, item.getCount());
+                ti.setCount(count);
+                tradeItem = ti;
+                break;
+            }
+        }
+        catch (ArithmeticException ae) {
+            parthner1.sendPacket((IBroadcastPacket)SystemMsg.INCORRECT_ITEM_COUNT);
+            return;
+        }
+        if (tradeItem == null) {
+            tradeItem = new TradeItem(item);
+            tradeItem.setCount(count);
+            tradeList.add(tradeItem);
+        }
+        parthner1.sendPacket(new TradeOwnAddPacket(1, tradeItem, tradeItem.getCount()), new TradeOwnAddPacket(2, tradeItem, tradeItem.getCount()));
+        parthner1.sendPacket(new TradeUpdatePacket(1, tradeItem, item.getCount() - tradeItem.getCount()), new TradeUpdatePacket(2, tradeItem, item.getCount() - tradeItem.getCount()));
+        parthner2.sendPacket(new TradeOtherAddPacket(1, tradeItem, tradeItem.getCount()), new TradeOtherAddPacket(2, tradeItem, tradeItem.getCount()));
+    }
+}
+

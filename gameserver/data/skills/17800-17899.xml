@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE list SYSTEM "skill.dtd">
+<list>
+	<skill id="17814" levels="4" name="Ruby">
+		<table name="#power">102 103 122 123</table>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target_type" value="SELF"/>
+		<set name="affect_scope" value="SINGLE"/>
+		<set name="affect_object" value="FRIEND"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_soul_shot">
+				<def name="power" value="#power"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17815" levels="2" name="Ruby">
+		<table name="#power">105 125</table>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target_type" value="SELF"/>
+		<set name="affect_scope" value="SINGLE"/>
+		<set name="affect_object" value="FRIEND"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_soul_shot">
+				<def name="power" value="#power"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17816" levels="2" name="Ruby">
+		<table name="#power">108 128</table>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target_type" value="SELF"/>
+		<set name="affect_scope" value="SINGLE"/>
+		<set name="affect_object" value="FRIEND"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_soul_shot">
+				<def name="power" value="#power"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17817" levels="2" name="Ruby">
+		<table name="#power">112 132</table>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target_type" value="SELF"/>
+		<set name="affect_scope" value="SINGLE"/>
+		<set name="affect_object" value="FRIEND"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_soul_shot">
+				<def name="power" value="#power"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17818" levels="4" name="Sapphire">
+		<table name="#power">102 103 302 303</table>
+		<table name="#unk_spiritshot_parameter">40</table>	<!--TODO: Check.-->
+		<table name="#heal_bonus">1.0 1.0 2.4 2.4</table>	<!--TODO: Check.-->
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="#power"/>
+				<def name="unk_spiritshot_parameter" value="#unk_spiritshot_parameter"/>
+				<def name="heal_bonus" value="#heal_bonus"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17819" levels="2" name="Sapphire">
+		<table name="#power">105 305</table>
+		<table name="#unk_spiritshot_parameter">40</table>	<!--TODO: Check.-->
+		<table name="#heal_bonus">1.0 2.4</table>	<!--TODO: Check.-->
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="#power"/>
+				<def name="unk_spiritshot_parameter" value="#unk_spiritshot_parameter"/>
+				<def name="heal_bonus" value="#heal_bonus"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17820" levels="2" name="Sapphire">
+		<table name="#power">108 308</table>
+		<table name="#unk_spiritshot_parameter">40</table>	<!--TODO: Check.-->
+		<table name="#heal_bonus">1.0 2.4</table>	<!--TODO: Check.-->
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="#power"/>
+				<def name="unk_spiritshot_parameter" value="#unk_spiritshot_parameter"/>
+				<def name="heal_bonus" value="#heal_bonus"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17821" levels="2" name="Sapphire">
+		<table name="#power">112 312</table>
+		<table name="#unk_spiritshot_parameter">40</table>	<!--TODO: Check.-->
+		<table name="#heal_bonus">1.0 2.4</table>	<!--TODO: Check.-->
+		<set name="icon" value="icon.etc_bm_jewel_sapphire_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_spirit_shot">
+				<def name="power" value="#power"/>
+				<def name="unk_spiritshot_parameter" value="#unk_spiritshot_parameter"/>
+				<def name="heal_bonus" value="#heal_bonus"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17823" levels="5" name="Aquamarine">
+		<set name="icon" value="icon.etc_bm_jewel_aquamarine_i00"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="17824" levels="5" name="Aquamarine - Mana Drain">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="3000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+	<skill id="17888" levels="2" name="Ruby">
+		<table name="#power">102 103</table>
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_summon_soul_shot">
+				<def name="power" value="#power"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17889" levels="1" name="Ruby">
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_summon_soul_shot">
+				<def name="power" value="105"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17890" levels="1" name="Ruby">
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_summon_soul_shot">
+				<def name="power" value="108"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17891" levels="1" name="Ruby">
+		<set name="icon" value="icon.etc_bm_jewel_ruby_i00"/>
+		<set name="ride_state" value="NONE;STRIDER;WYVERN;WOLF"/>
+		<set name="magicLevel" value="1"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="BUFF"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isHandler" value="true"/>
+		<for>
+			<effect name="i_summon_soul_shot">
+				<def name="power" value="112"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="17896" levels="1" name="Orc Recovery Ban">
+		<set name="icon" value="icon.skill0000"/>
+		<set name="reuseDelay" value="8000"/>
+		<set name="hitTime" value="2000"/>
+		<set name="target" value="TARGET_NONE"/>
+		<set name="skillType" value="NOTUSED"/>
+		<set name="operate_type" value="P"/>
+	</skill>
+</list>
