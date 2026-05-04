@@ -1,15 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.configuration.ExProperties
- *  l2s.commons.util.Rnd
- *  org.dom4j.Document
- *  org.dom4j.Element
- *  org.dom4j.io.SAXReader
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
- */
 package l2s.authserver;
 
 import java.io.File;
@@ -44,6 +32,8 @@ public class Config {
     public static int DATABASE_MAX_CONNECTIONS;
     public static int DATABASE_MAX_IDLE_TIMEOUT;
     public static int DATABASE_IDLE_TEST_PERIOD;
+    /** Milliseconds to wait for a free DB connection; {@code <= 0} = wait indefinitely (legacy). */
+    public static long DATABASE_MAX_WAIT_MS;
     public static String DATABASE_URL;
     public static String DATABASE_LOGIN;
     public static String DATABASE_PASSWORD;
@@ -141,6 +131,7 @@ public class Config {
         DATABASE_MAX_CONNECTIONS = serverSettings.getProperty("MaximumDbConnections", 3);
         DATABASE_MAX_IDLE_TIMEOUT = serverSettings.getProperty("MaxIdleConnectionTimeout", 600);
         DATABASE_IDLE_TEST_PERIOD = serverSettings.getProperty("IdleConnectionTestPeriod", 60);
+        DATABASE_MAX_WAIT_MS = serverSettings.getProperty("DatabaseMaxWaitMillis", 30000L);
         LOGIN_BLOWFISH_KEYS = serverSettings.getProperty("BlowFishKeys", 20);
         LOGIN_RSA_KEYPAIRS = serverSettings.getProperty("RSAKeyPairs", 10);
         ACCEPT_NEW_GAMESERVER = serverSettings.getProperty("AcceptNewGameServer", true);

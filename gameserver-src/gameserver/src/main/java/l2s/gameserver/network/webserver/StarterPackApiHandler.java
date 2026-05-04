@@ -6,6 +6,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import l2s.gameserver.Config;
 import l2s.gameserver.instancemanager.StarterPackManager;
+import l2s.gameserver.model.autobot.StarterPackFarmProgression;
+import l2s.gameserver.model.autobot.StarterBotState;
+import l2s.gameserver.model.base.ClassId;
+import l2s.gameserver.model.base.Race;
 
 public class StarterPackApiHandler extends ApiHandler
 {
@@ -43,16 +47,105 @@ public class StarterPackApiHandler extends ApiHandler
 	{
 		StarterPackManager mgr = StarterPackManager.getInstance();
 		Map<String, Integer> counts = mgr.getStatusCounts();
+		Map<String, Integer> raceCounts = new LinkedHashMap<>();
+		Map<String, Integer> stageCounts = new LinkedHashMap<>();
+		Map<String, Integer> raceStageCounts = new LinkedHashMap<>();
+		Map<String, Integer> raceStateCounts = new LinkedHashMap<>();
+		Map<String, Object> raceStageDetails = new LinkedHashMap<>();
+
+		for(StarterBotState state : mgr.getActiveBots().values())
+		{
+			String raceKey = "unknown";
+			if(state.getClassId() >= 0 && state.getClassId() < ClassId.VALUES.length && ClassId.VALUES[state.getClassId()] != null)
+				raceKey = ClassId.VALUES[state.getClassId()].getRace().toString().toLowerCase();
+
+			String stageKey = toStageKey(state.getFarmStage());
+			String stateKey = state.getCurrentState().toString().toLowerCase();
+
+			inc(raceCounts, raceKey);
+			inc(stageCounts, stageKey);
+			inc(raceStageCounts, raceKey + ":" + stageKey);
+			inc(raceStateCounts, raceKey + ":" + stateKey);
+			raceStageDetails.put(raceKey + ":" + stageKey, buildStageDetails(raceKey, state.getFarmStage()));
+		}
 
 		Map<String, Object> response = new LinkedHashMap<>();
 		response.put("total", counts.get("total"));
 		response.put("farming", counts.get("farming"));
 		response.put("walking", counts.get("walking"));
 		response.put("inTown", counts.get("inTown"));
+		response.put("byRace", raceCounts);
+		response.put("byFarmStage", stageCounts);
+		response.put("byRaceAndStage", raceStageCounts);
+		response.put("byRaceAndStageDetails", raceStageDetails);
+		response.put("byRaceAndState", raceStateCounts);
 		response.put("maxBots", Config.STARTER_PACK_MAX_BOTS);
 		response.put("enabled", Config.STARTER_PACK_ENABLED);
 
 		sendJson(exchange, 200, response);
+	}
+
+	private static String toStageKey(int farmStage)
+	{
+		switch(farmStage)
+		{
+			case 0:
+				return "starter";
+			case 1:
+				return "outskirts";
+			default:
+				return "stage_" + farmStage;
+		}
+	}
+
+	private static void inc(Map<String, Integer> map, String key)
+	{
+		map.put(key, map.getOrDefault(key, 0) + 1);
+	}
+
+	private static Map<String, Object> buildStageDetails(String raceKey, int farmStage)
+	{
+		Map<String, Object> details = new LinkedHashMap<>();
+		details.put("stage", farmStage);
+		details.put("stageKey", toStageKey(farmStage));
+
+		Race race = parseRace(raceKey);
+		if(race == null)
+			return details;
+
+		StarterPackFarmProgression.RaceFarmStage stage;
+		if(farmStage <= 0)
+		{
+			// For starter stage show next xml progression step (usually [1]) instead of empty placeholders.
+			stage = StarterPackFarmProgression.getNextStage(race, 0, 1);
+			details.put("source", "next_after_starter");
+		}
+		else
+		{
+			stage = StarterPackFarmProgression.getCurrentStage(race, farmStage);
+			details.put("source", "current_stage");
+		}
+		if(stage == null)
+			return details;
+
+		details.put("minLevel", stage.minLevel);
+		details.put("maxLevel", stage.maxLevel);
+		details.put("farmName", stage.farmName);
+		details.put("xmlFile", stage.sourceFile);
+		details.put("spawnPoints", stage.getSpawnCount());
+		return details;
+	}
+
+	private static Race parseRace(String raceKey)
+	{
+		try
+		{
+			return Race.valueOf(raceKey.toUpperCase());
+		}
+		catch(Exception e)
+		{
+			return null;
+		}
 	}
 
 	private void handleStart(HttpExchange exchange) throws IOException

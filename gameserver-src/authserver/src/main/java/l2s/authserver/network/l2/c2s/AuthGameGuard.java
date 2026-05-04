@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- */
 package l2s.authserver.network.l2.c2s;
 
 import l2s.authserver.network.l2.L2LoginClient;

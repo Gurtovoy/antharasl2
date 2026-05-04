@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -29,7 +26,9 @@ public class CastleHiredGuardDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void load(Castle r) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -60,7 +59,9 @@ public class CastleHiredGuardDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(Residence residence, int itemId, Location loc) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -87,7 +88,9 @@ public class CastleHiredGuardDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(Residence residence, ItemInstance item) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -114,7 +117,9 @@ public class CastleHiredGuardDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(Residence residence) {
         Connection con = null;
         PreparedStatement statement = null;

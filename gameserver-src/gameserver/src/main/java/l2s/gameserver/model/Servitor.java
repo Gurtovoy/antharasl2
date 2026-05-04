@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model;
 
 import gnu.trove.iterator.TIntObjectIterator;
@@ -145,7 +142,9 @@ extends Playable {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public ServitorAI getAI() {
         if (this._ai == null) {
@@ -658,7 +657,9 @@ extends Playable {
 
     public abstract double getExpPenalty();
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public ServitorStatsChangeRecorder getStatsRecorder() {
         if (this._statsRecorder == null) {
             Servitor servitor = this;

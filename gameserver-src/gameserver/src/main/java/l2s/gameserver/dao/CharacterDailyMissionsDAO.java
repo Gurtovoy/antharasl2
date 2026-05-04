@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -29,7 +26,9 @@ public class CharacterDailyMissionsDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void restore(Player owner, Map<Integer, DailyMission> map) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -64,7 +63,9 @@ public class CharacterDailyMissionsDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean store(Player owner, Collection<DailyMission> missions) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -97,7 +98,9 @@ public class CharacterDailyMissionsDAO {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean insert(Player owner, DailyMission mission) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -127,7 +130,9 @@ public class CharacterDailyMissionsDAO {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private boolean delete(Player owner, int missionId) {
         Connection con = null;
         PreparedStatement statement = null;

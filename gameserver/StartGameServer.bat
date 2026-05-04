@@ -5,7 +5,7 @@ title L2-Scripts Classic: Saviors (Antharas) (Game Server)
 echo Starting GameServer.
 echo.
 
-java -server -Dfile.encoding=UTF-8 -Xms2g -Xmx5g ^
+java -server -Dfile.encoding=UTF-8 -Xms2g -Xmx16g ^
  --add-opens java.base/java.lang=ALL-UNNAMED ^
  --add-opens java.base/java.lang.reflect=ALL-UNNAMED ^
  --add-opens java.base/java.io=ALL-UNNAMED ^

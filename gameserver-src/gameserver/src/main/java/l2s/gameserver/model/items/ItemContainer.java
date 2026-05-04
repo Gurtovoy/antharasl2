@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.items;
 
 import java.util.ArrayList;
@@ -80,7 +77,9 @@ public abstract class ItemContainer {
         this.readLock.unlock();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public ItemInstance getItemByObjectId(int objectId) {
         this.readLock();
         try {
@@ -97,7 +96,9 @@ public abstract class ItemContainer {
         return null;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public ItemInstance getItemByItemId(int itemId) {
         this.readLock();
         try {
@@ -114,7 +115,9 @@ public abstract class ItemContainer {
         return null;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<ItemInstance> getItemsByItemId(int itemId) {
         ArrayList<ItemInstance> result = new ArrayList<ItemInstance>();
         this.readLock();
@@ -131,7 +134,9 @@ public abstract class ItemContainer {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public long getCountOf(int itemId) {
         long count = 0L;
         this.readLock();
@@ -148,7 +153,9 @@ public abstract class ItemContainer {
         return count;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public ItemInstance addItem(int itemId, long count, int enchantLevel) {
         ItemInstance item;
         block8: {
@@ -183,7 +190,9 @@ public abstract class ItemContainer {
         return this.addItem(itemId, count, 0);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public ItemInstance addItem(ItemInstance item) {
         if (item == null) {
             return null;
@@ -219,7 +228,9 @@ public abstract class ItemContainer {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public ItemInstance removeItemByObjectId(int objectId, long count) {
         ItemInstance result;
         if (count < 1L) {
@@ -243,7 +254,9 @@ public abstract class ItemContainer {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public ItemInstance removeItemByItemId(int itemId, long count) {
         ItemInstance result;
         if (count < 1L) {
@@ -267,7 +280,9 @@ public abstract class ItemContainer {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public ItemInstance removeItem(ItemInstance item, long count) {
         if (item == null) {
             return null;
@@ -319,7 +334,9 @@ public abstract class ItemContainer {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean destroyItemByObjectId(int objectId, long count) {
         this.writeLock();
         try {
@@ -339,7 +356,9 @@ public abstract class ItemContainer {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean destroyItemByItemId(int itemId, long count) {
         this.writeLock();
         try {
@@ -359,7 +378,9 @@ public abstract class ItemContainer {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean destroyItem(ItemInstance item, long count) {
         if (item == null) {
             return false;

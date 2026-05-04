@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -29,7 +26,9 @@ public class GameBansDAO {
         return INSTANCE;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void select(Map<String, BanInfo> bans, BanBindType bindType) {
         if (!bindType.isGame()) {
             return;
@@ -63,7 +62,9 @@ public class GameBansDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean insert(BanBindType bindType, String bindValue, BanInfo banInfo) {
         if (!bindType.isGame()) {
             return false;
@@ -96,7 +97,9 @@ public class GameBansDAO {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean delete(BanBindType bindType, String bindValue) {
         if (!bindType.isGame()) {
             return false;
@@ -127,7 +130,9 @@ public class GameBansDAO {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void cleanUp() {
         Connection con = null;
         PreparedStatement statement = null;

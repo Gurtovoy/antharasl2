@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.instancemanager;
 
 import java.sql.Connection;
@@ -53,7 +50,9 @@ public class PCCafeCouponManager {
         return codes;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public String generateCode(int type, String value) {
         this._lock.lock();
         try {
@@ -114,7 +113,9 @@ public class PCCafeCouponManager {
         return null;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean requestEnterCode(Player player, String couponCode) {
         block17: {
             this._lock.lock();
@@ -188,7 +189,9 @@ public class PCCafeCouponManager {
         return false;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private boolean useCoupon(Player player, String couponCode, int type, String value) {
         block11: {
             this._lock.lock();

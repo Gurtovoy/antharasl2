@@ -78,6 +78,7 @@ l2s\gameserver\skills\skillclasses\DefuseTrap.class
 l2s\gameserver\utils\Files.class
 l2s\gameserver\model\entity\events\EventOwner.class
 l2s\gameserver\model\entity\events\objects\PvPEventArenaObject$WinComparator.class
+l2s\gameserver\model\autobot\StarterPackFarmProgression$RaceFarmStage.class
 l2s\gameserver\model\autobot\AutobotScheduleInfo.class
 l2s\gameserver\listener\actor\OnDeathFromUndyingListener.class
 l2s\gameserver\model\actor\instances\player\DailyMission.class
@@ -88,6 +89,7 @@ l2s\gameserver\network\l2\s2c\ExServerPrimitivePacket$Point.class
 l2s\gameserver\model\actor\instances\creature\AbnormalList.class
 l2s\gameserver\templates\npc\NpcTemplate.class
 l2s\gameserver\data\xml\parser\EnsoulParser.class
+l2s\gameserver\data\xml\holder\StarterPackLoadoutHolder.class
 l2s\gameserver\model\entity\residence\clanhall\SiegeableClanHall.class
 l2s\gameserver\network\l2\s2c\FlyToLocationPacket.class
 l2s\gameserver\network\l2\s2c\ExCuriousHouseState.class
@@ -660,6 +662,7 @@ l2s\gameserver\templates\HennaTemplate.class
 l2s\gameserver\skills\skillclasses\Sweep.class
 l2s\gameserver\network\l2\c2s\AttackRequest.class
 l2s\gameserver\templates\npc\MinionData.class
+l2s\gameserver\network\webserver\DashboardMetricsApiHandler.class
 l2s\gameserver\network\authcomm\as2gs\KickPlayer.class
 l2s\gameserver\network\l2\s2c\ExEnchantTwoRemoveFail.class
 l2s\gameserver\network\l2\s2c\ExNotifyPremiumItem.class
@@ -973,6 +976,7 @@ l2s\gameserver\data\xml\holder\AttendanceRewardHolder.class
 l2s\gameserver\network\l2\s2c\TradePressOtherOkPacket.class
 l2s\gameserver\network\l2\s2c\GMViewQuestInfoPacket.class
 l2s\gameserver\templates\ShuttleTemplate.class
+l2s\gameserver\network\webserver\WebMetricsCollector.class
 l2s\gameserver\utils\XMLUtil.class
 l2s\gameserver\network\l2\c2s\RequestMagicSkillUse.class
 l2s\gameserver\model\mail\Attachment.class
@@ -1148,6 +1152,7 @@ l2s\gameserver\model\entity\events\objects\SpawnSimpleObject.class
 l2s\gameserver\network\l2\s2c\SunRise.class
 l2s\gameserver\network\l2\c2s\RequestShowAgitSiegeInfo.class
 l2s\gameserver\network\l2\c2s\SetPrivateStoreBuyList.class
+l2s\gameserver\network\webserver\ServerShutdownApiHandler.class
 l2s\gameserver\network\l2\c2s\RequestExDeletePostFriendForPostBox.class
 l2s\gameserver\network\l2\c2s\RequestSendMsnChatLog.class
 l2s\gameserver\network\l2\c2s\RequestExSendPost.class
@@ -1178,6 +1183,7 @@ l2s\gameserver\ai\DefaultAI$TaskComparator.class
 l2s\gameserver\network\l2\s2c\ExTimeOverPartySubstitute.class
 l2s\gameserver\network\l2\s2c\ExBlockUpSetList$TeamList.class
 l2s\gameserver\data\xml\holder\FakePlayersHolder.class
+l2s\gameserver\network\l2\c2s\ExSendClientINI2.class
 l2s\gameserver\skills\effects\instant\i_call_skill.class
 l2s\gameserver\dao\SiegeClanDAO.class
 l2s\gameserver\network\l2\s2c\SendStatus.class
@@ -1588,6 +1594,7 @@ l2s\gameserver\network\l2\s2c\ExBalthusEvent.class
 l2s\gameserver\dao\HidenItemsDAO.class
 l2s\gameserver\model\clansearch\ClanSearchPlayer.class
 l2s\gameserver\network\telnet\commands\TelnetConfig$1.class
+l2s\gameserver\network\webserver\WebMetricsCollector$Sample.class
 l2s\gameserver\stats\conditions\ConditionPlayerCastingSkillId.class
 l2s\gameserver\handler\admincommands\impl\AdminPolymorph.class
 l2s\gameserver\model\actor\instances\player\Macro.class
@@ -1821,6 +1828,7 @@ l2s\gameserver\handler\items\impl\SoulShotItemHandler.class
 l2s\gameserver\stats\StatFunctions$FuncPAtkSpdLimit.class
 l2s\gameserver\templates\item\ItemTemplate.class
 l2s\gameserver\templates\cubic\CubicTargetType$4.class
+l2s\gameserver\model\autobot\StarterPackFarmProgression.class
 l2s\gameserver\network\l2\s2c\ExBasicActionList.class
 l2s\gameserver\network\l2\s2c\PartySmallWindowAllPacket$PartySmallWindowMemberInfo.class
 l2s\gameserver\network\l2\s2c\SayPacket2$1.class
@@ -2229,8 +2237,10 @@ l2s\gameserver\model\entity\events\EventType.class
 l2s\gameserver\network\l2\s2c\ExDivideAdenaDone.class
 l2s\gameserver\network\l2\s2c\AbstractMaskPacket.class
 l2s\gameserver\network\l2\s2c\MyPetSummonInfoPacket.class
+l2s\gameserver\instancemanager\PlayerMessageStack$1.class
 l2s\gameserver\stats\conditions\ConditionPlayerClassId.class
 l2s\gameserver\data\xml\holder\DoorHolder.class
+l2s\gameserver\model\autobot\StarterPackTownPaths.class
 l2s\gameserver\network\l2\s2c\SurrenderPledgeWar.class
 l2s\gameserver\listener\EventListener.class
 l2s\gameserver\listener\actor\player\OnQuestFinishListener.class
@@ -2746,6 +2756,7 @@ l2s\gameserver\network\l2\c2s\RequestRegistWaitingSubstitute.class
 l2s\gameserver\network\l2\c2s\RequestShapeShiftingItem.class
 l2s\gameserver\network\l2\s2c\NewCharacterSuccessPacket.class
 l2s\gameserver\stats\conditions\ConditionInventory.class
+l2s\gameserver\data\xml\parser\StarterPackLoadoutParser.class
 l2s\gameserver\network\webserver\AutobotsApiHandler.class
 l2s\gameserver\network\l2\s2c\ExBuySellListPacket$SellRefundList.class
 l2s\gameserver\model\entity\events\impl\BoatWayEvent.class

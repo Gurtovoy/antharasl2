@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -26,7 +23,9 @@ public class CastleDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void select(Castle castle) {
         ResultSet rset;
         PreparedStatement statement;
@@ -70,7 +69,9 @@ public class CastleDAO {
         this.update0(residence);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void update0(Castle castle) {
         Connection con = null;
         PreparedStatement statement = null;

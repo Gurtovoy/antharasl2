@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -38,7 +35,9 @@ public class CharacterPrivateStoreDAO {
         return INSTANCE;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<TradeItem> selectBuys(Player owner) {
         ArrayList<TradeItem> result = new ArrayList<TradeItem>();
         Connection con = null;
@@ -76,7 +75,9 @@ public class CharacterPrivateStoreDAO {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Map<Integer, TradeItem> selectSells(Player owner, boolean packageType) {
         LinkedHashMap<Integer, TradeItem> result = new LinkedHashMap<Integer, TradeItem>();
         Connection con = null;
@@ -117,7 +118,9 @@ public class CharacterPrivateStoreDAO {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Map<Integer, ManufactureItem> selectManufactures(Player owner) {
         LinkedHashMap<Integer, ManufactureItem> result = new LinkedHashMap<Integer, ManufactureItem>();
         Connection con = null;
@@ -149,7 +152,9 @@ public class CharacterPrivateStoreDAO {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean insertBuys(Player owner, List<TradeItem> buyList) {
         PreparedStatement statement;
         Connection con;
@@ -206,7 +211,9 @@ public class CharacterPrivateStoreDAO {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean insertSells(Player owner, Map<Integer, TradeItem> sellList, boolean packageType) {
         PreparedStatement statement;
         Connection con;
@@ -264,7 +271,9 @@ public class CharacterPrivateStoreDAO {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean insertManufactures(Player owner, Map<Integer, ManufactureItem> manufactureList) {
         PreparedStatement statement;
         Connection con;
@@ -319,7 +328,9 @@ public class CharacterPrivateStoreDAO {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean deleteBuys(Player owner) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -346,7 +357,9 @@ public class CharacterPrivateStoreDAO {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean deleteSells(Player owner, boolean packageType) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -374,7 +387,9 @@ public class CharacterPrivateStoreDAO {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean deleteManufactures(Player owner) {
         Connection con = null;
         PreparedStatement statement = null;

@@ -1,17 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  l2s.commons.net.utils.Net
- *  l2s.commons.net.utils.NetList
- *  org.apache.commons.lang3.tuple.ImmutablePair
- *  org.apache.commons.lang3.tuple.Pair
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.HashIntObjectMap
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
- */
 package l2s.authserver.accounts;
 
 import java.sql.Connection;

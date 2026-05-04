@@ -1,14 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.ban.BanBindType
- *  l2s.commons.ban.BanInfo
- *  l2s.commons.dbutils.DbUtils
- *  org.apache.commons.lang3.StringUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
- */
 package l2s.authserver.dao;
 
 import java.sql.Connection;

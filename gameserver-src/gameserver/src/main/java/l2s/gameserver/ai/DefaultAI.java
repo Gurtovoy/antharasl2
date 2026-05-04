@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.ai;
 
 import java.util.Arrays;
@@ -675,7 +672,9 @@ extends NpcAI {
         return this.chooseTaskAndTargets(null, target, actor.getDistance(target));
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     protected void onEvtThink() {
         NpcInstance actor = this.getActor();

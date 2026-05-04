@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.actor.instances.player;
 
 import java.sql.Connection;
@@ -237,7 +234,9 @@ public class Mount {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void store() {
         if (this._controlItemObjId == 0) {
             return;

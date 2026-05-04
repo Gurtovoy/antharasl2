@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.actor.instances.player;
 
 import java.sql.Connection;
@@ -133,7 +130,9 @@ public class BookMarkList {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void store() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -170,7 +169,9 @@ public class BookMarkList {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public synchronized void restore() {
         if (this.getCapacity() == 0) {
             this.elementData.clear();

@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.network.l2.s2c;
 
 import java.sql.Connection;
@@ -140,7 +137,9 @@ extends L2GameServerPacket {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static CharSelectInfoPackage[] loadCharacterSelectInfo(String loginName) {
         ArrayList<CharSelectInfoPackage> characterList = new ArrayList<CharSelectInfoPackage>();
         Connection con = null;
@@ -167,7 +166,9 @@ extends L2GameServerPacket {
         return characterList.toArray(new CharSelectInfoPackage[characterList.size()]);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private static int restoreBaseClassId(int objId) {
         int classId = 0;
         Connection con = null;
@@ -197,7 +198,9 @@ extends L2GameServerPacket {
         return classId;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private static String restoreChangedOldName(int objId) {
         ResultSet rset;
         PreparedStatement statement;

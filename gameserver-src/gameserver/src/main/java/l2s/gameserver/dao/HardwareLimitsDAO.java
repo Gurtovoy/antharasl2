@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -26,7 +23,9 @@ public class HardwareLimitsDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int[] select(String hardware) {
         ResultSet rset;
         PreparedStatement statement;
@@ -71,7 +70,9 @@ public class HardwareLimitsDAO {
         return limits;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(String hardware) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -97,7 +98,9 @@ public class HardwareLimitsDAO {
         this._cache.remove(hardware);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(String hardware, int limit, int expire) {
         Connection con = null;
         PreparedStatement statement = null;

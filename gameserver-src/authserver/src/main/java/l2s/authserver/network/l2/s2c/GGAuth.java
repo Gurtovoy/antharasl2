@@ -1,10 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
- */
 package l2s.authserver.network.l2.s2c;
 
 import l2s.authserver.network.l2.s2c.L2LoginServerPacket;

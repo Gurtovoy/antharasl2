@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.instancemanager.clansearch;
 
 import gnu.trove.map.TIntObjectMap;
@@ -54,7 +51,9 @@ public class ClanSearchManager {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void load() {
         _log.info(this.getClass().getSimpleName() + ": Loading clan search data...");
         Connection con = null;
@@ -144,7 +143,9 @@ public class ClanSearchManager {
         return (ClanSearchClan)this._registeredClans.get(clanId);
     }
 
-    
+    /*
+     * Enabled aggressive block sorting
+     */
     public List<ClanSearchClan> listClans(int paginationLimit, ClanSearchParams params) {
         int currentIndex;
         ArrayList<ClanSearchClan> clanList = new ArrayList<ClanSearchClan>();

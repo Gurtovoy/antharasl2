@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="[%d{HH:mm:ss}]%5p %m%n"/>
+		</Console>
+		<RollingRandomAccessFile name="FILE" fileName="log/java.log" filePattern="log/java-%d{yyyy-MM-dd}.log" append="false">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss:SSS}]%5p %logger{2}: %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<RollingRandomAccessFile name="GAME" fileName="log/game.log" filePattern="log/game.log.%d{yyyy-MM-dd}" append="true">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss}] %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<RollingRandomAccessFile name="CHAT" fileName="log/chat.log" filePattern="log/chat.log.%d{yyyy-MM-dd}" append="true">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss}] %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<RollingRandomAccessFile name="ITEM" fileName="log/item.log" filePattern="log/item.log.%d{yyyy-MM-dd}" append="true">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss}] %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<RollingRandomAccessFile name="GMACTIONS" fileName="log/gmactions.log" filePattern="log/gmactions.log.%d{yyyy-MM-dd}" append="true">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss}] %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<RollingRandomAccessFile name="FLOODPROTECTOR" fileName="log/floodprotector.log" filePattern="log/floodprotector.log.%d{yyyy-MM-dd}" append="true">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss}] %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<RollingRandomAccessFile name="DEBUG" fileName="log/debug.log" filePattern="log/debug-%d{yyyy-MM-dd}.log" append="false">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss:SSS}] %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<RollingRandomAccessFile name="MULTISELL" fileName="log/multisell.log" filePattern="log/multisell-%d{yyyy-MM-dd}.log" append="false">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss:SSS}] %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<RollingRandomAccessFile name="BANS" fileName="log/bans.log" filePattern="log/bans.log.%d{yyyy-MM-dd}" append="true">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss}] %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<Async name="FILEASYNC" blocking="false">
+			<AppenderRef ref="FILE"/>
+		</Async>
+		<Async name="GAMEASYNC" blocking="false" bufferSize="512">
+			<AppenderRef ref="GAME"/>
+		</Async>
+		<Async name="CHATASYNC" blocking="false" bufferSize="256">
+			<AppenderRef ref="CHAT"/>
+		</Async>
+		<Async name="ITEMASYNC" blocking="false" bufferSize="512">
+			<AppenderRef ref="ITEM"/>
+		</Async>
+	</Appenders>
+	<Loggers>
+		<Logger name="game" level="info" additivity="false">
+			<AppenderRef ref="GAMEASYNC"/>
+		</Logger>
+		<Logger name="chat" level="info" additivity="false">
+			<AppenderRef ref="CHATASYNC"/>
+		</Logger>
+		<Logger name="item" level="info" additivity="false">
+			<AppenderRef ref="ITEMASYNC"/>
+		</Logger>
+		<Logger name="gmactions" level="info" additivity="false">
+			<AppenderRef ref="GMACTIONS"/>
+		</Logger>
+		<Logger name="floodprotector" level="info" additivity="false">
+			<AppenderRef ref="FLOODPROTECTOR"/>
+		</Logger>
+		<Logger name="debug" level="debug" additivity="false">
+			<AppenderRef ref="DEBUG"/>
+		</Logger>
+		<Logger name="multisell" level="info" additivity="false">
+			<AppenderRef ref="MULTISELL"/>
+		</Logger>
+		<Logger name="bans" level="info" additivity="false">
+			<AppenderRef ref="BANS"/>
+		</Logger>
+		<Logger name="org.hibernate" level="warn"/>
+		<Root level="info">
+			<AppenderRef ref="CONSOLE"/>
+			<AppenderRef ref="FILEASYNC"/>
+		</Root>
+	</Loggers>
+</Configuration>

@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.ai;
 
 import java.util.ArrayList;
@@ -431,7 +428,9 @@ extends CharacterAI {
         return this._haveWalkerRoute;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     protected boolean lookNeighbor(int range, boolean force) {
         if (!this.isActive()) {
             return false;

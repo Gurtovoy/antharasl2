@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.data.string;
 
 import gnu.trove.map.TIntObjectMap;
@@ -71,7 +68,9 @@ extends AbstractHolder {
         return this.getSkillName(player, SkillHolder.getInstance().getHashCode(id, level));
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void load() {
         for (Language lang : Language.VALUES) {
             this._skillNames.put(lang, (TIntObjectMap<String>)new TIntObjectHashMap());

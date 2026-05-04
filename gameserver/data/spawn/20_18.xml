@@ -553,7 +553,7 @@
 		</territory>
 		<npc id="31034"/><!--Караульный-->
 	</spawn>
-	<spawn name="oren23_qm2018_00" count="35" respawn="15">
+	<spawn name="oren23_qm2018_00" count="45" respawn="15">
 		<territory>
 			<add x="27820" y="10364" zmin="-4268" zmax="-4068"/>
 			<add x="29036" y="10356" zmin="-4268" zmax="-4068"/>

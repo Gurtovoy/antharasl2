@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -27,7 +24,9 @@ public class ClanLeaderRequestDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public IntObjectMap<ClanChangeLeaderRequest> select() {
         HashIntObjectMap requestList = new HashIntObjectMap();
         Connection con = null;
@@ -56,7 +55,9 @@ public class ClanLeaderRequestDAO {
         return requestList;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(ClanChangeLeaderRequest changeLeaderRequest) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -79,7 +80,9 @@ public class ClanLeaderRequestDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(ClanChangeLeaderRequest request) {
         Connection con = null;
         PreparedStatement statement = null;

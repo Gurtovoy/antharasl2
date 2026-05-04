@@ -1,0 +1,11 @@
+[01.05.26 18:10:52] SUCCESS admin[268461367] -> admin[268461367] admin_invis
+[01.05.26 18:11:37] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[01.05.26 18:11:38] SUCCESS admin[268461367] -> admin[268461367] admin_show_moves
+[01.05.26 18:11:39] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/town.htm
+[01.05.26 18:11:40] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/town/giran.htm
+[01.05.26 18:11:41] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[01.05.26 18:12:43] SUCCESS admin[268461367] -> 32478 Dimensional Merchant admin_admin
+[01.05.26 18:20:59] SUCCESS admin[268461367] admin_admin
+[01.05.26 18:21:01] SUCCESS admin[268461367] admin_server admserver.htm
+[01.05.26 18:21:01] SUCCESS admin[268461367] admin_server_shutdown
+[01.05.26 18:21:02] SUCCESS admin[268461367] admin_server_restart 1

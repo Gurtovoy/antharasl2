@@ -8,6 +8,7 @@ import l2s.gameserver.Config;
 import l2s.gameserver.GameServer;
 import l2s.gameserver.dao.AutobotsDAO;
 import l2s.gameserver.instancemanager.AutobotsManager;
+import l2s.gameserver.model.World;
 
 public class ServerStatusApiHandler extends ApiHandler
 {
@@ -24,6 +25,9 @@ public class ServerStatusApiHandler extends ApiHandler
 		int onlineBots = AutobotsManager.getInstance().getActiveBotCount();
 		int offlineBots = totalBots - onlineBots;
 
+		int[] ws = World.getStats();
+		int playersOnline = Math.max(0, ws[12] - ws[13]);
+
 		long uptimeMs = 0;
 		GameServer gs = GameServer.getInstance();
 		if(gs != null)
@@ -37,6 +41,8 @@ public class ServerStatusApiHandler extends ApiHandler
 		result.put("offlineBots", offlineBots);
 		result.put("webServerPort", Config.WEB_SERVER_PORT);
 		result.put("serverUptime", uptimeMs);
+		result.put("uptimeSeconds", uptimeMs / 1000L);
+		result.put("playersOnline", playersOnline);
 
 		sendJson(exchange, 200, result);
 	}

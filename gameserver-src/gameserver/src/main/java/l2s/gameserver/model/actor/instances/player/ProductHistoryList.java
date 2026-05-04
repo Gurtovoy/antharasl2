@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.actor.instances.player;
 
 import java.util.ArrayList;
@@ -159,7 +156,9 @@ public class ProductHistoryList {
         return "ProductHistoryList[owner=" + this._owner.getName() + "]";
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void startTask() {
         if (!Config.EX_USE_PRIME_SHOP) {
             return;
@@ -201,7 +200,9 @@ public class ProductHistoryList {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void refreshLimits() {
         this.writeLock();
         try {
@@ -217,7 +218,9 @@ public class ProductHistoryList {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void onPurchaseProduct(ProductItem product, int count) {
         this.writeLock();
         try {

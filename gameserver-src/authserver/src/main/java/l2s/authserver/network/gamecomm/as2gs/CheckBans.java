@@ -1,10 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.ban.BanBindType
- *  l2s.commons.ban.BanInfo
- */
 package l2s.authserver.network.gamecomm.as2gs;
 
 import java.util.Map;

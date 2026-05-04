@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.utils;
 
 import java.sql.Connection;
@@ -206,7 +203,9 @@ public final class TradeHelper {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static int restoreOfflineTraders() throws Exception {
         int count = 0;
         Connection con = null;
@@ -261,7 +260,9 @@ public final class TradeHelper {
         return GameObjectsStorage.getOfflinePlayers().size();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static int restoreOfflineBuffers() throws Exception {
         int count = 0;
         Connection con = null;

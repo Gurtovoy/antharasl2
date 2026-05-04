@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- */
 package l2s.authserver.network.gamecomm.gs2as;
 
 import l2s.authserver.accounts.SessionManager;

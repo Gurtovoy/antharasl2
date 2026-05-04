@@ -221,6 +221,27 @@ label {
     gap: 16px;
     margin-bottom: 28px;
 }
+
+/* Dashboard charts */
+.dashboard-charts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+@media (max-width: 960px) {
+    .dashboard-charts { grid-template-columns: 1fr; }
+}
+.chart-canvas-wrap {
+    position: relative;
+    height: 260px;
+    width: 100%;
+}
+.dashboard-charts-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
 .stat-card {
     background: var(--bg-card);
     border: 1px solid var(--border);

@@ -14,6 +14,8 @@ public class StarterBotState
 	private int classId;
 	private int sex;
 	private State currentState = State.FARMING;
+	/** 0 = starter village farm; 1 = outskirts (race lvl 3–8 zone); higher reserved */
+	private int farmStage = 0;
 	private long spawnTime;
 	private int[] townLocation; // pre-calculated with random offset
 
@@ -69,6 +71,16 @@ public class StarterBotState
 	public void setCurrentState(State currentState)
 	{
 		this.currentState = currentState;
+	}
+
+	public int getFarmStage()
+	{
+		return farmStage;
+	}
+
+	public void setFarmStage(int farmStage)
+	{
+		this.farmStage = farmStage;
 	}
 
 	public long getSpawnTime()

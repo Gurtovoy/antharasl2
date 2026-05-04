@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.instancemanager;
 
 import java.sql.Connection;
@@ -39,7 +36,9 @@ public class CoupleManager {
         ThreadPoolManager.getInstance().scheduleAtFixedRate(new StoreTask(), 600000L, 600000L);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void load() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -123,7 +122,9 @@ public class CoupleManager {
         return this._deletedCouples;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void store() {
         Connection con = null;
         PreparedStatement statement = null;

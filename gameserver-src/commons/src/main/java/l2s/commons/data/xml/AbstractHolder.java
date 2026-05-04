@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- */
 package l2s.commons.data.xml;
 
 import l2s.commons.logging.LoggerObject;

@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.pledge;
 
 import java.sql.Connection;
@@ -236,7 +233,9 @@ implements Iterable<UnitMember> {
         return this.getSubUnit(unitType).getLeader();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void flush() {
         for (UnitMember member : this) {
             this.removeClanMember(member.getObjectId());
@@ -366,7 +365,9 @@ implements Iterable<UnitMember> {
         return false;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void updateClanAttendanceInfoInDB() {
         if (this.getClanId() == 0) {
             _log.warn("updateClanAttendanceInDB with empty ClanId");
@@ -399,7 +400,9 @@ implements Iterable<UnitMember> {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void updateClanScoreInDB() {
         if (this.getClanId() == 0) {
             _log.warn("updateClanScoreInDB with empty ClanId");
@@ -429,7 +432,9 @@ implements Iterable<UnitMember> {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void updateClanInDB() {
         if (this.getLeaderId() == 0) {
             _log.warn("updateClanInDB with empty LeaderId");
@@ -475,7 +480,9 @@ implements Iterable<UnitMember> {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void store() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -518,7 +525,9 @@ implements Iterable<UnitMember> {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static Clan restore(int clanId) {
         ResultSet rset;
         PreparedStatement statement;
@@ -828,7 +837,9 @@ implements Iterable<UnitMember> {
         return inc;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void restoreSkills() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -864,7 +875,9 @@ implements Iterable<UnitMember> {
         return this._skills.valueCollection();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public SkillEntry addSkill(SkillEntry newSkillEntry, boolean store) {
         SkillEntry oldSkillEntry = null;
         if (newSkillEntry != null) {
@@ -954,7 +967,9 @@ implements Iterable<UnitMember> {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void removeSkill(int skill, boolean store) {
         if (this._skills.remove(skill) == null) {
             return;
@@ -1030,7 +1045,9 @@ implements Iterable<UnitMember> {
         return (SubUnit)this._subUnits.get(pledgeType);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public final void addSubUnit(SubUnit sp, boolean updateDb) {
         this._subUnits.put(sp.getType(), sp);
         if (updateDb) {
@@ -1130,7 +1147,9 @@ implements Iterable<UnitMember> {
         return pledgeType;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void restoreSubPledges() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -1233,7 +1252,9 @@ implements Iterable<UnitMember> {
         return this.getSubUnit(pledgeType).size();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void restoreRankPrivs() {
         if (this._privs == null) {
             this.initializePrivs();
@@ -1307,7 +1328,9 @@ implements Iterable<UnitMember> {
         return ret;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void setRankPrivs(int rank, int privs) {
         if (rank < 1 || rank > 9) {
             _log.warn("Requested set of invalid rank value: " + rank);

@@ -3,6 +3,9 @@
 <list>
 	<residence id="3" name="Giran" impl="Castle">
 		<available_functions>
+			<function type="ITEM_CREATE" level="11"/>
+			<function type="ITEM_CREATE" level="12"/>
+			<function type="ITEM_CREATE" level="13"/>
 			<function type="RESTORE_HP" level="25"/>
 			<function type="RESTORE_HP" level="30"/>
 			<function type="RESTORE_MP" level="18"/>

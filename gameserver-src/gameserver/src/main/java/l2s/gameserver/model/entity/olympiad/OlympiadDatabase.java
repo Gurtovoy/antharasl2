@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.entity.olympiad;
 
 import java.sql.Connection;
@@ -31,7 +28,9 @@ import org.slf4j.LoggerFactory;
 public class OlympiadDatabase {
     private static final Logger _log = LoggerFactory.getLogger(OlympiadDatabase.class);
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static synchronized void loadParticipantsRank() {
         Olympiad._participantRank.clear();
         HashIntIntMap tmpPlace = new HashIntIntMap();
@@ -140,7 +139,9 @@ public class OlympiadDatabase {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static synchronized List<StatsSet> computeHeroesToBe() {
         if (Olympiad._period != 1) {
             return Collections.emptyList();

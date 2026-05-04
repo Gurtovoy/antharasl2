@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.items;
 
 import java.util.ArrayList;
@@ -24,7 +21,9 @@ extends ItemContainer {
 
     public abstract ItemInstance.ItemLocation getItemLocation();
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public ItemInstance[] getItems() {
         ArrayList<ItemInstance> result = new ArrayList<ItemInstance>();
@@ -74,7 +73,9 @@ extends ItemContainer {
         item.delete();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void restore() {
         int ownerId = this.getOwnerId();
         this.writeLock();

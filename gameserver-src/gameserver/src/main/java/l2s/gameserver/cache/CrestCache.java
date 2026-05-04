@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.cache;
 
 import gnu.trove.iterator.TIntIntIterator;
@@ -46,7 +43,9 @@ public class CrestCache {
         this.load();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void load() {
         int count = 0;
         Connection con = null;
@@ -186,7 +185,9 @@ public class CrestCache {
         return crestId;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int getPledgeIdByCrestLargeId(int crestId) {
         int pledgeId;
         block4: {
@@ -221,7 +222,9 @@ public class CrestCache {
         return crestId;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void removePledgeCrest(int pledgeId) {
         this.writeLock.lock();
         try {
@@ -252,7 +255,9 @@ public class CrestCache {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void removePledgeCrestLarge(int pledgeId) {
         this.writeLock.lock();
         try {
@@ -282,7 +287,9 @@ public class CrestCache {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void removeAllyCrest(int pledgeId) {
         this.writeLock.lock();
         try {
@@ -313,7 +320,9 @@ public class CrestCache {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int savePledgeCrest(int pledgeId, byte[] crest) {
         int crestId = CrestCache.getCrestId(pledgeId, crest);
         this.writeLock.lock();
@@ -347,7 +356,9 @@ public class CrestCache {
         return crestId;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int savePledgeCrestLarge(int pledgeId, int crestPart, int crestTotalSize, byte[] data) {
         int crestId;
         block11: {
@@ -417,7 +428,9 @@ public class CrestCache {
         return crestId;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int saveAllyCrest(int pledgeId, byte[] crest) {
         int crestId = CrestCache.getCrestId(pledgeId, crest);
         this.writeLock.lock();

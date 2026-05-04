@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.io.Serializable;
@@ -76,7 +73,9 @@ implements JdbcDAO<Integer, ItemInstance> {
         return this.stats;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private ItemInstance load0(int objectId) throws SQLException {
         ItemInstance item = null;
         Connection con = null;
@@ -144,7 +143,9 @@ implements JdbcDAO<Integer, ItemInstance> {
         statement.setInt(17, item.getVisualId());
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void save0(ItemInstance item) throws SQLException {
         Connection con = null;
         PreparedStatement statement = null;
@@ -166,7 +167,9 @@ implements JdbcDAO<Integer, ItemInstance> {
         statement.setInt(1, item.getObjectId());
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void delete0(ItemInstance item) throws SQLException {
         Connection con = null;
         PreparedStatement statement = null;
@@ -204,7 +207,9 @@ implements JdbcDAO<Integer, ItemInstance> {
         statement.setInt(17, item.getObjectId());
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void update0(ItemInstance item) throws SQLException {
         Connection con = null;
         PreparedStatement statement = null;
@@ -347,7 +352,9 @@ implements JdbcDAO<Integer, ItemInstance> {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Collection<ItemInstance> getItemsByOwnerIdAndLoc(int ownerId, ItemInstance.ItemLocation loc) {
         List<Integer> objectIds = Collections.emptyList();
         Connection con = null;
@@ -379,7 +386,9 @@ implements JdbcDAO<Integer, ItemInstance> {
         return this.load(objectIds);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void glovalRemoveItem(int itemId, String description) {
         Connection con = null;
         PreparedStatement statement = null;

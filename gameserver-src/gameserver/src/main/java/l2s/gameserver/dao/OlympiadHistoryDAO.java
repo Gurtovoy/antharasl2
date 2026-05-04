@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -30,7 +27,9 @@ public class OlympiadHistoryDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Map<Boolean, List<OlympiadHistory>> select() {
         Map<Boolean, List<OlympiadHistory>> map = null;
         Connection con = null;
@@ -70,7 +69,9 @@ public class OlympiadHistoryDAO {
         return map;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(OlympiadHistory history) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -103,7 +104,9 @@ public class OlympiadHistoryDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void switchData() {
         Connection con = null;
         Statement statement = null;

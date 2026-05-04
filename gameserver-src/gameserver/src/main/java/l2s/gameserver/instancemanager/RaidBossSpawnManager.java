@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.instancemanager;
 
 import java.sql.Connection;
@@ -56,7 +53,9 @@ public class RaidBossSpawnManager {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void loadStatus() {
         _storedInfo = new CHashIntObjectMap();
         Connection con = null;
@@ -97,7 +96,9 @@ public class RaidBossSpawnManager {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void updateStatusDb(NpcInstance npc) {
         long deathTime;
         if (npc.isReflectionBoss()) {

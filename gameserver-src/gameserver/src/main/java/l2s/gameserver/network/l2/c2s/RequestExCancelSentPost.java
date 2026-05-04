@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.network.l2.c2s;
 
 import l2s.commons.math.SafeMath;
@@ -26,7 +23,9 @@ extends L2GameClientPacket {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     protected void runImpl() {
         Player activeChar = ((GameClient)this.getClient()).getActiveChar();
@@ -88,6 +87,7 @@ extends L2GameClientPacket {
                 synchronized (attachments) {
                     ItemInstance[] items = mail.getAttachments().toArray(new ItemInstance[attachments.size()]);
                     attachments.clear();
+                    // ** MonitorExit[var8_8] (shouldn't be in output)
                     for (ItemInstance item : items) {
                         activeChar.sendPacket((IBroadcastPacket)((SystemMessagePacket)new SystemMessagePacket(SystemMsg.YOU_HAVE_ACQUIRED_S2_S1).addItemName(item.getItemId())).addLong(item.getCount()));
                         Log.LogItem(activeChar, "PostCancel", item);

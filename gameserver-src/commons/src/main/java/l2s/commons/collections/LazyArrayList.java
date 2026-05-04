@@ -1,11 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.apache.commons.pool.ObjectPool
- *  org.apache.commons.pool.PoolableObjectFactory
- *  org.apache.commons.pool.impl.GenericObjectPool
- */
 package l2s.commons.collections;
 
 import java.lang.reflect.Array;

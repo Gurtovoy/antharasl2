@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -29,7 +26,9 @@ public class CharacterHennaDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<Henna> select(Player owner) {
         ArrayList<Henna> list = new ArrayList<Henna>();
         Connection con = null;
@@ -73,7 +72,9 @@ public class CharacterHennaDAO {
         return list;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean insert(Player owner, Henna henna) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -108,7 +109,9 @@ public class CharacterHennaDAO {
         return this.delete(owner, henna.getTemplate().getSymbolId(), henna.getDrawTime(), henna.isPremium());
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private boolean delete(Player owner, int symbolId, int drawTime, boolean premium) {
         Connection con = null;
         PreparedStatement statement = null;

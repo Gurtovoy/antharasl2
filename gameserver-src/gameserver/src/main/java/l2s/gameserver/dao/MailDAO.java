@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.io.Serializable;
@@ -84,7 +81,9 @@ implements JdbcDAO<Integer, Mail> {
         return this.stats;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void save0(Mail mail) throws SQLException {
         Connection con = null;
         PreparedStatement statement = null;
@@ -143,7 +142,9 @@ implements JdbcDAO<Integer, Mail> {
         this.insert.incrementAndGet();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private Mail load0(int messageId) throws SQLException {
         Mail mail = null;
         Connection con = null;
@@ -192,7 +193,9 @@ implements JdbcDAO<Integer, Mail> {
         return mail;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void update0(Mail mail) throws SQLException {
         Connection con = null;
         PreparedStatement statement = null;
@@ -230,7 +233,9 @@ implements JdbcDAO<Integer, Mail> {
         this.update.incrementAndGet();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void delete0(Mail mail) throws SQLException {
         Connection con = null;
         PreparedStatement statement = null;
@@ -258,7 +263,9 @@ implements JdbcDAO<Integer, Mail> {
         this.delete.incrementAndGet();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private List<Mail> getMailByOwnerId(int ownerId, boolean sent) {
         List<Integer> messageIds = Collections.emptyList();
         Connection con = null;
@@ -290,7 +297,9 @@ implements JdbcDAO<Integer, Mail> {
         return this.load(messageIds);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private boolean deleteMailByOwnerIdAndMailId(int ownerId, int messageId, boolean sent) {
         boolean bl;
         Connection con = null;
@@ -354,7 +363,9 @@ implements JdbcDAO<Integer, Mail> {
         return this.deleteMailByOwnerIdAndMailId(senderId, messageId, true);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<Mail> getExpiredMail(int expireTime) {
         List<Integer> messageIds = Collections.emptyList();
         Connection con = null;

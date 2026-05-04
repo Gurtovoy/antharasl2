@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -27,7 +24,9 @@ public class ItemsEnsoulDAO {
         return instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void restore(ItemInstance item) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -65,7 +64,9 @@ public class ItemsEnsoulDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(int objectId, int type, int id) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -90,7 +91,9 @@ public class ItemsEnsoulDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(int objectId) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -113,7 +116,9 @@ public class ItemsEnsoulDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(int objectId, int type, int id, int ensoulId) {
         Connection con = null;
         PreparedStatement statement = null;

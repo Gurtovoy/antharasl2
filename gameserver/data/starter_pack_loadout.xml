@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE starter_pack_loadout SYSTEM "starter_pack_loadout.dtd">
+<starter_pack_loadout>
+	<settings level="10"/>
+
+	<loadout role="WARRIOR">
+		<weapons>
+			<item id="1"/>
+			<item id="4"/>
+			<item id="11"/>
+			<item id="13"/>
+			<item id="3"/>
+			<item id="152"/>
+			<item id="12"/>
+			<item id="9"/>
+			<item id="176"/>
+			<item id="244"/>
+		</weapons>
+		<armors>
+			<pack type="LIGHT">
+				<item id="23"/>
+				<item id="2386"/>
+				<item id="43"/>
+			</pack>
+		</armors>
+		<accessorys>
+			<item id="115"/>
+			<item id="115"/>
+			<item id="877"/>
+			<item id="877"/>
+			<item id="908"/>
+		</accessorys>
+		<consumable>
+			<warrior_hit id="5789" count="10000"/>
+			<mage_hit id="5790" count="3000"/>
+			<rebuff_scroll id="29011" count="20" cooldown_ms="10000"/>
+		</consumable>
+	</loadout>
+
+	<loadout role="MAGE">
+		<weapons>
+			<item id="9"/>
+			<item id="176"/>
+		</weapons>
+		<armors>
+			<pack type="MAGIC">
+				<item id="1101"/>
+				<item id="1104"/>
+				<item id="44"/>
+			</pack>
+		</armors>
+		<accessorys>
+			<item id="115"/>
+			<item id="115"/>
+			<item id="877"/>
+			<item id="877"/>
+			<item id="908"/>
+		</accessorys>
+		<consumable>
+			<warrior_hit id="5789" count="10000"/>
+			<mage_hit id="5790" count="3000"/>
+			<rebuff_scroll id="29011" count="20" cooldown_ms="10000"/>
+		</consumable>
+	</loadout>
+</starter_pack_loadout>

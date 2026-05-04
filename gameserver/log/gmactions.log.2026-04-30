@@ -1,0 +1,37 @@
+[30.04.26 18:20:26] SUCCESS admin[268461367] admin_admin
+[30.04.26 18:20:28] SUCCESS admin[268461367] admin_find_mammon
+[30.04.26 18:20:29] SUCCESS admin[268461367] admin_admin
+[30.04.26 18:20:30] SUCCESS admin[268461367] admin_show_moves
+[30.04.26 18:20:31] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[30.04.26 18:20:33] SUCCESS admin[268461367] admin_show_html teleports/town/gludio.htm
+[30.04.26 18:20:34] SUCCESS admin[268461367] admin_move_to -14225 123540 -3121
+[30.04.26 18:20:50] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[30.04.26 18:20:51] SUCCESS admin[268461367] -> admin[268461367] admin_show_moves
+[30.04.26 18:20:52] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/townarea.htm
+[30.04.26 18:20:54] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/townarea/aden.htm
+[30.04.26 18:20:55] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/townarea/aden-toi.htm
+[30.04.26 18:21:00] SUCCESS admin[268461367] admin_move_to 112787 14158 10077
+[30.04.26 18:21:16] SUCCESS admin[268461367] -> 31862 Angelic Vortex admin_admin
+[30.04.26 18:21:17] SUCCESS admin[268461367] -> 31862 Angelic Vortex admin_show_moves
+[30.04.26 18:21:18] SUCCESS admin[268461367] -> 31862 Angelic Vortex admin_show_html teleports/townarea.htm
+[30.04.26 18:21:20] SUCCESS admin[268461367] -> 31862 Angelic Vortex admin_show_html teleports/townarea/aden.htm
+[30.04.26 18:21:22] SUCCESS admin[268461367] -> 31862 Angelic Vortex admin_show_html teleports/townarea/aden-toi.htm
+[30.04.26 18:21:24] SUCCESS admin[268461367] admin_move_to 114689 11028 -5120
+[30.04.26 18:22:20] SUCCESS admin[268461367] -> 30952 Dimensional Vortex admin_admin
+[30.04.26 18:22:21] SUCCESS admin[268461367] -> 30952 Dimensional Vortex admin_show_moves
+[30.04.26 18:22:23] SUCCESS admin[268461367] -> 30952 Dimensional Vortex admin_show_html teleports/townarea.htm
+[30.04.26 18:22:24] SUCCESS admin[268461367] -> 30952 Dimensional Vortex admin_show_html teleports/townarea/aden.htm
+[30.04.26 18:22:25] SUCCESS admin[268461367] -> 30952 Dimensional Vortex admin_show_html teleports/townarea/aden-toi.htm
+[30.04.26 18:22:27] SUCCESS admin[268461367] admin_move_to 117356 18462 4977
+[30.04.26 18:53:51] SUCCESS admin[268461367] -> 20859 Guardian Angel admin_admin
+[30.04.26 18:53:52] SUCCESS admin[268461367] -> 20859 Guardian Angel admin_show_moves
+[30.04.26 18:53:53] SUCCESS admin[268461367] -> 20859 Guardian Angel admin_show_html teleports/townarea.htm
+[30.04.26 18:53:54] SUCCESS admin[268461367] -> 20859 Guardian Angel admin_show_html teleports/townarea/aden.htm
+[30.04.26 18:53:56] SUCCESS admin[268461367] -> 20859 Guardian Angel admin_show_html teleports/townarea/aden-toi.htm
+[30.04.26 18:53:58] SUCCESS admin[268461367] admin_move_to 114743 19707 1947
+[30.04.26 18:54:46] SUCCESS admin[268461367] -> 20827 Platinum Tribe Warrior admin_admin
+[30.04.26 18:54:47] SUCCESS admin[268461367] -> 20827 Platinum Tribe Warrior admin_show_moves
+[30.04.26 18:54:48] SUCCESS admin[268461367] -> 20827 Platinum Tribe Warrior admin_show_html teleports/townarea.htm
+[30.04.26 18:54:49] SUCCESS admin[268461367] admin_show_html teleports/townarea/aden.htm
+[30.04.26 18:54:51] SUCCESS admin[268461367] admin_show_html teleports/townarea/aden-toi.htm
+[30.04.26 18:54:56] SUCCESS admin[268461367] admin_move_to 114689 11028 -5120

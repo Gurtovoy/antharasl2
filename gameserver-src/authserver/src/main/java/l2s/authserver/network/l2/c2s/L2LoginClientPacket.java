@@ -1,11 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.net.nio.impl.ReceivablePacket
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
- */
 package l2s.authserver.network.l2.c2s;
 
 import l2s.authserver.network.l2.L2LoginClient;

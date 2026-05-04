@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -32,7 +29,9 @@ public class EffectsDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void restoreEffects(Playable playable) {
         int id;
         int objectId;
@@ -88,7 +87,9 @@ public class EffectsDAO {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(Playable playable) {
         Statement statement;
         Connection con;
@@ -147,7 +148,9 @@ public class EffectsDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void deleteBySkillId(int skillId) {
         Connection con = null;
         PreparedStatement statement = null;

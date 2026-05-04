@@ -12,6 +12,7 @@
 			<function type="TELEPORT" level="11"/>
 			<function type="TELEPORT" level="12"/>
 			<function type="SUPPORT" level="15"/>
+			<function type="SUPPORT" level="18"/>
 		</available_functions>
 		<banish_points>
 			<point x="91826" y="-12575" z="-2408"/>

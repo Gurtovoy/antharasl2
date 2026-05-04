@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.instancemanager.games;
 
 import java.sql.Connection;
@@ -34,7 +31,9 @@ public class MiniGameScoreManager {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void load() {
         Connection con = null;
         Statement statement = null;
@@ -62,7 +61,9 @@ public class MiniGameScoreManager {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insertScore(Player player, int score) {
         if (this.addScore(player.getName(), score)) {
             Connection con = null;

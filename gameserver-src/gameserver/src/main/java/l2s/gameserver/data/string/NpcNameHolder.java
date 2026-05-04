@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.data.string;
 
 import java.io.File;
@@ -51,7 +48,9 @@ extends AbstractHolder {
         return this.getNpcName(lang, npcId);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void load() {
         for (Language lang : Language.VALUES) {
             this.npcNames.put(lang, new HashMap());

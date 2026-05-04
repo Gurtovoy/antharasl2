@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.entity.residence.clanhall;
 
 import l2s.gameserver.instancemanager.PlayerMessageStack;
@@ -123,11 +120,6 @@ extends NormalClanHall {
                 this.changeOwner(null);
             }
         }
-    }
-
-    @Override
-    public int getVisibleFunctionLevel(int level) {
-        return level;
     }
 
     @Override

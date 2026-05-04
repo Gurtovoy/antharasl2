@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model;
 
 import gnu.trove.iterator.TIntObjectIterator;
@@ -42,7 +39,9 @@ public class AggroList {
         this._npc = npc;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void addDamageHate(Creature attacker, int damage, int aggro) {
         if ((damage = Math.max(damage, 0)) == 0 && aggro == 0) {
             return;
@@ -80,7 +79,9 @@ public class AggroList {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void reduceHate(Creature target, int hate) {
         this.writeLock.lock();
         try {
@@ -107,7 +108,9 @@ public class AggroList {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int getHate(Creature target) {
         int hate = 0;
         this.writeLock.lock();
@@ -134,7 +137,9 @@ public class AggroList {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void remove(int objectId, boolean onlyHate) {
         this.writeLock.lock();
         try {
@@ -164,7 +169,9 @@ public class AggroList {
         this.clear(false);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void clear(boolean onlyHate) {
         this.writeLock.lock();
         try {
@@ -311,7 +318,9 @@ public class AggroList {
         return mostHated;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Creature getTopDamager(Creature defaultDamager) {
         PartyDamage[] partyDmg;
         AggroInfo[] hated;
@@ -374,7 +383,9 @@ public class AggroList {
         return topDamager;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Map<Creature, HateInfo> getCharMap() {
         if (this.isEmpty()) {
             return Collections.emptyMap();
@@ -401,7 +412,9 @@ public class AggroList {
         return aggroMap;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Map<Playable, HateInfo> getPlayableMap() {
         if (this.isEmpty()) {
             return Collections.emptyMap();
@@ -452,7 +465,9 @@ public class AggroList {
         return damages;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void copy(AggroList aggroList) {
         this.writeLock.lock();
         try {

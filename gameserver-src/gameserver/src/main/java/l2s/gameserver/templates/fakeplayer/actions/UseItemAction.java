@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.templates.fakeplayer.actions;
 
 import l2s.gameserver.ai.FakeAI;
@@ -19,7 +16,9 @@ extends AbstractAction {
         this._itemId = itemId;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public boolean performAction(FakeAI ai) {
         Player player = ai.getActor();

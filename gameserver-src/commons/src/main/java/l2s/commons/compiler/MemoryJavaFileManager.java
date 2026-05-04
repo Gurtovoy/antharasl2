@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- */
 package l2s.commons.compiler;
 
 import java.io.IOException;

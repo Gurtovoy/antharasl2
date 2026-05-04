@@ -9,6 +9,14 @@ const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 let refreshTimer = null;
 let currentRoute = '';
+let dashboardCharts = [];
+
+function destroyDashboardCharts() {
+    while (dashboardCharts.length) {
+        const ch = dashboardCharts.pop();
+        try { ch.destroy(); } catch (e) { /* ignore */ }
+    }
+}
 
 // ─── API Client ────────────────────────────────────────────
 
@@ -59,7 +67,12 @@ function showConfirm(title, message) {
         document.getElementById('confirm-message').textContent = message;
         document.getElementById('confirm-modal').style.display = '';
         confirmCb = resolve;
-        document.getElementById('confirm-ok').onclick = () => { closeConfirm(); resolve(true); };
+        document.getElementById('confirm-ok').onclick = () => {
+            document.getElementById('confirm-modal').style.display = 'none';
+            const cb = confirmCb;
+            confirmCb = null;
+            if (cb) cb(true);
+        };
     });
 }
 function closeConfirm() {
@@ -102,6 +115,7 @@ async function checkConnection() {
 
 function route() {
     if (refreshTimer) { clearInterval(refreshTimer); refreshTimer = null; }
+    destroyDashboardCharts();
     const hash = location.hash.slice(1) || 'dashboard';
     currentRoute = hash;
     // highlight nav
@@ -113,6 +127,7 @@ function route() {
     const param = hash.split('/').slice(1).join('/');
     switch (base) {
         case 'dashboard': renderDashboard(view); break;
+        case 'server':    renderServerControl(view); break;
         case 'bots':      renderBotsList(view); break;
         case 'bot':        renderBotDetail(view, param); break;
         case 'create':     renderCreateBot(view); break;
@@ -151,6 +166,182 @@ function statusBadge(online) {
 }
 function pad2(n) { return String(n).padStart(2, '0'); }
 
+function dashChartBaseOptions() {
+    return {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+            legend: { labels: { color: '#8888aa', font: { size: 11 } } },
+            tooltip: {
+                titleColor: '#e0e0f0',
+                bodyColor: '#c8c8e8',
+                backgroundColor: 'rgba(30,30,54,0.96)',
+                borderColor: '#2a2a4a',
+                borderWidth: 1
+            }
+        },
+        scales: {
+            x: {
+                ticks: { color: '#5a5a7a', maxTicksLimit: 14, font: { size: 10 } },
+                grid: { color: 'rgba(42,42,74,0.55)' }
+            }
+        }
+    };
+}
+
+function dashPrepareMetrics(payload) {
+    const samples = payload && Array.isArray(payload.samples) ? payload.samples : [];
+    const labels = samples.length
+        ? samples.map(s => {
+            const d = new Date(s.t);
+            return `${pad2(d.getHours())}:${pad2(d.getMinutes())}`;
+        })
+        : ['—'];
+    const online = samples.length ? samples.map(s => s.online) : [0];
+    const heap = samples.length ? samples.map(s => s.heapMb) : [0];
+    const cpu = samples.length
+        ? samples.map(s => (typeof s.cpuPercent === 'number' && s.cpuPercent >= 0 ? s.cpuPercent : null))
+        : [null];
+    return { samples, labels, online, heap, cpu, empty: samples.length === 0 };
+}
+
+function dashApplyMetricsToCharts(metricsPayload) {
+    if (typeof Chart === 'undefined') return;
+    const { labels, online, heap, cpu } = dashPrepareMetrics(metricsPayload);
+    if (dashboardCharts[0]) {
+        dashboardCharts[0].data.labels = labels;
+        dashboardCharts[0].data.datasets[0].data = online;
+        dashboardCharts[0].update('none');
+    }
+    if (dashboardCharts[1]) {
+        dashboardCharts[1].data.labels = labels;
+        dashboardCharts[1].data.datasets[0].data = heap;
+        dashboardCharts[1].data.datasets[1].data = cpu;
+        dashboardCharts[1].update('none');
+    }
+}
+
+function dashMountChartsCard(metricsPayload) {
+    const card = h('div', { className: 'card' },
+        h('div', { className: 'card-header' }, h('h3', null, 'Графики')),
+        h('div', { className: 'dashboard-charts' })
+    );
+    const row = card.querySelector('.dashboard-charts');
+    if (typeof Chart === 'undefined') {
+        row.append(h('p', { style: 'color:var(--text-muted);padding:8px;' }, 'Не удалось загрузить Chart.js с CDN — проверьте интернет или разрешите скрипт.'));
+        return card;
+    }
+    const { labels, online, heap, cpu, empty } = dashPrepareMetrics(metricsPayload);
+
+    const mkWrap = (title) => {
+        const titleEl = h('h4', { style: 'font-size:0.85rem;color:var(--text-secondary);margin-bottom:8px;font-weight:600;' }, title);
+        const inner = document.createElement('div');
+        inner.className = 'chart-canvas-wrap';
+        const canvas = document.createElement('canvas');
+        inner.appendChild(canvas);
+        return { block: h('div', null, titleEl, inner), canvas };
+    };
+
+    const a = mkWrap('Игроки онлайн (мир)');
+    const b = mkWrap('Heap (MB) и CPU процесса (%)');
+    row.append(a.block, b.block);
+
+    const opt = dashChartBaseOptions();
+    const ch1 = new Chart(a.canvas.getContext('2d'), {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [{
+                label: 'Игроки',
+                data: online,
+                borderColor: 'rgb(0, 212, 255)',
+                backgroundColor: 'rgba(0, 212, 255, 0.12)',
+                fill: true,
+                tension: 0.25,
+                pointRadius: 0,
+                borderWidth: 2
+            }]
+        },
+        options: {
+            ...opt,
+            scales: {
+                ...opt.scales,
+                y: {
+                    beginAtZero: true,
+                    ticks: { color: '#8888aa', font: { size: 10 } },
+                    grid: { color: 'rgba(42,42,74,0.55)' }
+                }
+            }
+        }
+    });
+    dashboardCharts.push(ch1);
+
+    const ch2 = new Chart(b.canvas.getContext('2d'), {
+        type: 'line',
+        data: {
+            labels,
+            datasets: [
+                {
+                    label: 'Heap MB',
+                    data: heap,
+                    borderColor: 'rgb(0, 230, 118)',
+                    backgroundColor: 'rgba(0, 230, 118, 0.08)',
+                    fill: true,
+                    tension: 0.25,
+                    pointRadius: 0,
+                    borderWidth: 2,
+                    yAxisID: 'y'
+                },
+                {
+                    label: 'CPU %',
+                    data: cpu,
+                    borderColor: 'rgb(255, 170, 0)',
+                    backgroundColor: 'rgba(255, 170, 0, 0.05)',
+                    fill: false,
+                    tension: 0.25,
+                    pointRadius: 0,
+                    borderWidth: 2,
+                    spanGaps: true,
+                    yAxisID: 'y1'
+                }
+            ]
+        },
+        options: {
+            ...opt,
+            scales: {
+                ...opt.scales,
+                y: {
+                    type: 'linear',
+                    position: 'left',
+                    beginAtZero: true,
+                    title: { display: true, text: 'MB', color: '#00e676' },
+                    ticks: { color: '#8888aa' },
+                    grid: { color: 'rgba(42,42,74,0.55)' }
+                },
+                y1: {
+                    type: 'linear',
+                    position: 'right',
+                    beginAtZero: true,
+                    title: { display: true, text: 'CPU %', color: '#ffaa00' },
+                    ticks: { color: '#aa8866' },
+                    grid: { drawOnChartArea: false }
+                }
+            }
+        }
+    });
+    dashboardCharts.push(ch2);
+
+    if (empty) {
+        card.append(h('p', { className: 'dashboard-charts-note', style: 'padding:0 16px 14px;' },
+            'История накапливается: замер каждые 10 с, до 1 ч (~360 точек). Первый сэмпл через несколько секунд после старта веб-сервера.'));
+    } else {
+        card.append(h('p', { className: 'dashboard-charts-note', style: 'padding:0 16px 14px;' },
+            'CPU: com.sun.management (оценка нагрузки процесса). Пустые разрывы — метрика недоступна.'));
+    }
+    return card;
+}
+
 // ─── Dashboard ─────────────────────────────────────────────
 
 async function renderDashboard(view) {
@@ -160,15 +351,22 @@ async function renderDashboard(view) {
         loading()
     );
     try {
-        const status = await api('GET', '/api/server/status');
+        const [status, metrics] = await Promise.all([
+            api('GET', '/api/server/status'),
+            api('GET', '/api/server/metrics/history').catch(() => ({ samples: [] }))
+        ]);
+        const upSec = status.uptimeSeconds != null ? status.uptimeSeconds : Math.floor((status.serverUptime || 0) / 1000);
+        const playersWorld = status.playersOnline != null ? status.playersOnline : '—';
         view.innerHTML = '';
         // Stats
         const grid = h('div', { className: 'stats-grid' },
             statCard('Total Bots', status.totalBots, 'accent'),
-            statCard('Online', status.onlineBots, 'success'),
-            statCard('Offline', status.offlineBots, 'danger'),
-            statCard('Uptime', formatUptime(status.uptimeSeconds), '')
+            statCard('Bot online', status.onlineBots, 'success'),
+            statCard('Bot offline', status.offlineBots, 'danger'),
+            statCard('Players (world)', playersWorld, ''),
+            statCard('Uptime', formatUptime(upSec), '')
         );
+        const chartsCard = dashMountChartsCard(metrics);
         // Quick actions
         const actions = h('div', { className: 'card' },
             h('div', { className: 'card-header' }, h('h3', null, 'Quick Actions')),
@@ -184,9 +382,16 @@ async function renderDashboard(view) {
             h('div', { className: 'card-header' }, h('h3', null, 'Recently Online Bots')),
             loading()
         );
+        const shutdownBanner = h('div', { id: 'dash-shutdown-banner', className: 'card', style: 'display:none;margin-bottom:12px;border-left:3px solid var(--warning);' },
+            h('div', { style: 'padding:10px 14px;font-size:0.9rem;' }, h('span', { id: 'dash-shutdown-text' }, ''))
+        );
         view.append(
             h('div', { className: 'page-header' }, h('h2', null, 'Dashboard')),
-            grid, actions, miniCard
+            shutdownBanner,
+            grid,
+            chartsCard,
+            actions,
+            miniCard
         );
         // Load mini list
         try {
@@ -216,16 +421,39 @@ async function renderDashboard(view) {
             }
         } catch { miniCard.innerHTML = '<p style="color:var(--text-muted);padding:8px;">Could not load bot list.</p>'; }
 
+        async function refreshDashShutdownBanner() {
+            try {
+                const sd = await api('GET', '/api/server/shutdown');
+                const ban = document.getElementById('dash-shutdown-banner');
+                const txt = document.getElementById('dash-shutdown-text');
+                if (ban && txt) {
+                    if (sd.active) {
+                        const modeRu = sd.mode === 'restart' ? 'Рестарт' : 'Выключение';
+                        txt.innerHTML = `<strong>${modeRu}</strong> через ${formatCountdown(sd.secondsRemaining)}. <a href="#server">Открыть вкладку Server</a>`;
+                        ban.style.display = '';
+                    } else ban.style.display = 'none';
+                }
+            } catch { /* ignore */ }
+        }
+        refreshDashShutdownBanner();
+
         // Auto-refresh
         refreshTimer = setInterval(async () => {
             if (currentRoute !== 'dashboard') return;
             try {
                 const s = await api('GET', '/api/server/status');
+                const upSec = s.uptimeSeconds != null ? s.uptimeSeconds : Math.floor((s.serverUptime || 0) / 1000);
                 grid.children[0].querySelector('.stat-value').textContent = s.totalBots;
                 grid.children[1].querySelector('.stat-value').textContent = s.onlineBots;
                 grid.children[2].querySelector('.stat-value').textContent = s.offlineBots;
-                grid.children[3].querySelector('.stat-value').textContent = formatUptime(s.uptimeSeconds);
+                grid.children[3].querySelector('.stat-value').textContent = s.playersOnline != null ? s.playersOnline : '—';
+                grid.children[4].querySelector('.stat-value').textContent = formatUptime(upSec);
             } catch {}
+            try {
+                const m = await api('GET', '/api/server/metrics/history');
+                dashApplyMetricsToCharts(m);
+            } catch {}
+            await refreshDashShutdownBanner();
         }, 10000);
     } catch {
         view.innerHTML = '<p style="color:var(--text-muted);padding:40px 0;">Failed to load dashboard. Check connection.</p>';
@@ -252,6 +480,104 @@ function formatUptime(sec) {
     if (!sec && sec !== 0) return '—';
     const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60);
     return `${h}h ${m}m`;
+}
+
+function formatCountdown(sec) {
+    if (sec == null || sec < 0) return '—';
+    const h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = sec % 60;
+    if (h > 0) return `${h}h ${m}m ${s}s`;
+    if (m > 0) return `${m}m ${s}s`;
+    return `${s}s`;
+}
+
+// ─── Server: scheduled shutdown / restart ──────────────────
+
+async function renderServerControl(view) {
+    view.innerHTML = '';
+    const header = h('div', { className: 'page-header' },
+        h('h2', null, 'Server'),
+        h('p', { className: 'text-muted', style: 'color:var(--text-secondary);font-size:0.9rem;margin-top:6px;max-width:640px;' },
+            'Запланировать выключение или рестарт игрового сервера через заданное число секунд. Игрокам уйдут стандартные объявления (если включены в конфиге). Отмена сбрасывает таймер.')
+    );
+    const statusBox = h('div', { className: 'stat-card', style: 'margin-bottom:16px;' },
+        h('div', { className: 'stat-label' }, 'Текущее расписание'),
+        h('div', { id: 'srv-shutdown-status', className: 'stat-value', style: 'font-size:1rem;' }, '…')
+    );
+    const secondsInp = h('input', { type: 'number', className: 'form-input', min: '0', max: '604800', value: '300', style: 'max-width:200px;' });
+    const formCard = h('div', { className: 'card' },
+        h('div', { className: 'card-header' }, h('h3', null, 'Новое расписание')),
+        h('div', { style: 'display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;padding:4px 0 12px;' },
+            h('label', { style: 'display:flex;flex-direction:column;gap:6px;color:var(--text-secondary);font-size:0.85rem;' }, 'Через, сек',
+                secondsInp),
+            h('div', { className: 'btn-group', style: 'flex-wrap:wrap;' },
+                h('button', { className: 'btn btn-danger', onClick: () => doScheduleShutdown(secondsInp) }, 'Выключить'),
+                h('button', { className: 'btn btn-warning', onClick: () => doScheduleRestart(secondsInp) }, 'Рестарт')
+            )
+        ),
+        h('p', { className: 'text-muted', style: 'color:var(--text-muted);font-size:0.8rem;margin-bottom:8px;' }, '0 = немедленно после первого тика таймера (~1 с). Максимум 7 суток.'),
+        h('button', { className: 'btn btn-secondary', id: 'srv-shutdown-cancel', style: 'display:none;', onClick: doCancelShutdown }, 'Отменить расписание')
+    );
+    view.append(header, statusBox, formCard);
+
+    async function refreshShutdownUi() {
+        if (currentRoute !== 'server') return;
+        try {
+            const st = await api('GET', '/api/server/shutdown');
+            const el = document.getElementById('srv-shutdown-status');
+            const cancelBtn = document.getElementById('srv-shutdown-cancel');
+            if (!el) return;
+            if (st.active) {
+                const modeRu = st.mode === 'restart' ? 'Рестарт' : 'Выключение';
+                el.textContent = `${modeRu} через ${formatCountdown(st.secondsRemaining)}`;
+                cancelBtn.style.display = '';
+            } else {
+                el.textContent = 'Нет активного расписания';
+                cancelBtn.style.display = 'none';
+            }
+        } catch {
+            const el = document.getElementById('srv-shutdown-status');
+            if (el) el.textContent = 'Не удалось загрузить';
+        }
+    }
+
+    async function doScheduleShutdown(inp) {
+        const sec = parseInt(inp.value, 10);
+        if (Number.isNaN(sec) || sec < 0) { toast('Укажите неотрицательное число секунд', 'error'); return; }
+        const ok = await showConfirm('Выключение сервера',
+            `Запланировать ПОЛНОЕ ВЫКЛЮЧЕНИЕ через ${sec} с? Игроки будут отключены по таймеру.`);
+        if (!ok) return;
+        try {
+            await api('POST', '/api/server/shutdown', { seconds: sec, mode: 'shutdown' });
+            toast('Выключение запланировано');
+            refreshShutdownUi();
+        } catch {}
+    }
+
+    async function doScheduleRestart(inp) {
+        const sec = parseInt(inp.value, 10);
+        if (Number.isNaN(sec) || sec < 0) { toast('Укажите неотрицательное число секунд', 'error'); return; }
+        const ok = await showConfirm('Рестарт сервера',
+            `Запланировать РЕСТАРТ процесса через ${sec} с? (код выхода 2 — как у стандартного рестарта.)`);
+        if (!ok) return;
+        try {
+            await api('POST', '/api/server/shutdown', { seconds: sec, mode: 'restart' });
+            toast('Рестарт запланирован');
+            refreshShutdownUi();
+        } catch {}
+    }
+
+    async function doCancelShutdown() {
+        const ok = await showConfirm('Отмена', 'Снять запланированное выключение / рестарт?');
+        if (!ok) return;
+        try {
+            await api('POST', '/api/server/shutdown/cancel');
+            toast('Расписание отменено');
+            refreshShutdownUi();
+        } catch {}
+    }
+
+    await refreshShutdownUi();
+    refreshTimer = setInterval(refreshShutdownUi, 2000);
 }
 
 // ─── Bots List ─────────────────────────────────────────────
@@ -1120,6 +1446,78 @@ async function renderStarterPack(view) {
         h('div', { className: 'sp-progress-bar' }, progressFill)
     );
 
+    // ── Extra breakdowns ──
+    const raceIconByKey = (key) => {
+        const race = String(key || '').split(':')[0].toLowerCase();
+        switch (race) {
+            case 'human': return '🧑';
+            case 'elf': return '🧝';
+            case 'darkelf': return '🧝‍♂️';
+            case 'orc': return '👹';
+            case 'dwarf': return '🛠️';
+            default: return '';
+        }
+    };
+
+    const makeBreakdownList = (title, obj) => {
+        const entries = Object.entries(obj || {});
+        if (!entries.length) {
+            return h('div', { style: 'font-size:.9rem;color:var(--text-muted);' }, `${title}: no data`);
+        }
+        return h('div', { style: 'margin-top:10px;' },
+            h('div', { style: 'font-size:.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;' }, title),
+            h('div', { style: 'display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:8px;' },
+                ...entries
+                    .sort((a, b) => String(a[0]).localeCompare(String(b[0])))
+                    .map(([k, v]) => h('div', {
+                        style: 'border:1px solid var(--border);border-radius:8px;padding:8px 10px;background:rgba(255,255,255,.02);display:flex;justify-content:space-between;gap:8px;'
+                    },
+                        h('span', { style: 'color:var(--text-muted);font-size:.86rem;word-break:break-word;' }, `${raceIconByKey(k)} ${String(k)}`.trim()),
+                        h('strong', null, String(v))
+                    ))
+            )
+        );
+    };
+
+    const makeStageDetails = (obj) => {
+        const entries = Object.entries(obj || {});
+        if (!entries.length) {
+            return h('div', { style: 'font-size:.9rem;color:var(--text-muted);margin-top:10px;' }, 'Stage details: no data');
+        }
+        return h('div', { style: 'margin-top:10px;' },
+            h('div', { style: 'font-size:.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;' }, 'Stage Details (From XML)'),
+            h('div', { style: 'display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px;' },
+                ...entries
+                    .sort((a, b) => String(a[0]).localeCompare(String(b[0])))
+                    .map(([k, d]) => h('div', {
+                        style: 'border:1px solid var(--border);border-radius:8px;padding:10px;background:rgba(255,255,255,.02);'
+                    },
+                        h('div', { style: 'font-weight:700;margin-bottom:6px;' }, `${raceIconByKey(k)} ${k}`.trim()),
+                        h('div', { style: 'font-size:.86rem;color:var(--text-muted);line-height:1.5;' },
+                            `stage=${d?.stageKey || d?.stage || '—'}`,
+                            h('br'),
+                            `level=${d?.minLevel ?? '—'}..${d?.maxLevel ?? '—'}`,
+                            h('br'),
+                            `farm=${d?.farmName || '—'}`,
+                            h('br'),
+                            `file=${d?.xmlFile || '—'}`,
+                            h('br'),
+                            `spawns=${d?.spawnPoints ?? '—'}`,
+                            h('br'),
+                            `source=${d?.source || '—'}`
+                        )
+                    ))
+            )
+        );
+    };
+
+    const breakdownWrap = h('div', { style: 'margin-top:10px;' },
+        makeBreakdownList('By Race', statusData.byRace),
+        makeBreakdownList('By Stage', statusData.byFarmStage),
+        makeBreakdownList('By Race + Stage', statusData.byRaceAndStage),
+        makeStageDetails(statusData.byRaceAndStageDetails)
+    );
+
     // ── Info line ──
     const infoLine = h('div', { className: 'sp-info-line' },
         h('span', null, `Max bots: ${statusData.maxBots}`),
@@ -1136,7 +1534,8 @@ async function renderStarterPack(view) {
         ),
         statusGrid,
         progressBar,
-        infoLine
+        infoLine,
+        breakdownWrap
     );
 
     view.append(
@@ -1168,6 +1567,14 @@ async function renderStarterPack(view) {
                     `System: ${s.enabled ? 'Enabled' : 'Disabled'} `,
                     h('span', { className: s.enabled ? 'sp-enabled' : 'sp-disabled' }, s.enabled ? '\u2713' : '\u2717')
                 )
+            );
+
+            breakdownWrap.innerHTML = '';
+            breakdownWrap.append(
+                makeBreakdownList('By Race', s.byRace),
+                makeBreakdownList('By Stage', s.byFarmStage),
+                makeBreakdownList('By Race + Stage', s.byRaceAndStage),
+                makeStageDetails(s.byRaceAndStageDetails)
             );
 
             // Update button states
@@ -1215,7 +1622,8 @@ function renderSettings(view) {
             h('button', { className: 'btn btn-secondary', onClick: async () => {
                 try {
                     const s = await api('GET', '/api/server/status');
-                    toast(`Connected! ${s.onlineBots} bots online, uptime ${formatUptime(s.uptimeSeconds)}`);
+                    const up = s.uptimeSeconds != null ? s.uptimeSeconds : Math.floor((s.serverUptime || 0) / 1000);
+                    toast(`Connected! ${s.onlineBots} bots online, uptime ${formatUptime(up)}`);
                 } catch { toast('Connection failed', 'error'); }
             }}, 'Test Connection')
         )

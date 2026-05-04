@@ -4,7 +4,9 @@ import com.sun.net.httpserver.HttpContext;
 import com.sun.net.httpserver.HttpServer;
 import java.io.File;
 import java.net.InetSocketAddress;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 import l2s.gameserver.Config;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -15,6 +17,7 @@ public class WebServer
 	private static final WebServer _instance = new WebServer();
 
 	private HttpServer _server;
+	private ExecutorService _executor;
 
 	public static WebServer getInstance()
 	{
@@ -27,15 +30,22 @@ public class WebServer
 
 	public void init()
 	{
+		ExecutorService newExecutor = null;
 		try
 		{
+			if(_server != null)
+			{
+				shutdown();
+			}
+
 			InetSocketAddress addr = new InetSocketAddress(Config.WEB_SERVER_BIND_ADDRESS, Config.WEB_SERVER_PORT);
-			_server = HttpServer.create(addr, 0);
-			_server.setExecutor(Executors.newFixedThreadPool(4, r -> {
+			newExecutor = Executors.newFixedThreadPool(4, r -> {
 				Thread t = new Thread(r, "WebServer-Worker");
 				t.setDaemon(true);
 				return t;
-			}));
+			});
+			_server = HttpServer.create(addr, 0);
+			_server.setExecutor(newExecutor);
 
 			WebAuthFilter authFilter = new WebAuthFilter();
 
@@ -56,6 +66,14 @@ public class WebServer
 			HttpContext statusCtx = _server.createContext("/api/server/status", new ServerStatusApiHandler());
 			statusCtx.getFilters().add(authFilter);
 
+			// Server shutdown / restart (prefix matches /api/server/shutdown/cancel)
+			HttpContext shutdownCtx = _server.createContext("/api/server/shutdown", new ServerShutdownApiHandler());
+			shutdownCtx.getFilters().add(authFilter);
+
+			// Dashboard metrics: GET /api/server/metrics/history
+			HttpContext metricsCtx = _server.createContext("/api/server/metrics", new DashboardMetricsApiHandler());
+			metricsCtx.getFilters().add(authFilter);
+
 			// Starter Pack API
 			HttpContext starterPackCtx = _server.createContext("/api/starterpack", new StarterPackApiHandler());
 			starterPackCtx.getFilters().add(authFilter);
@@ -70,10 +88,30 @@ public class WebServer
 			_server.createContext("/", new StaticFileHandler());
 
 			_server.start();
+			_executor = newExecutor;
+			newExecutor = null;
+			WebMetricsCollector.getInstance().start();
 			_log.info("WebServer: Started on " + Config.WEB_SERVER_BIND_ADDRESS + ":" + Config.WEB_SERVER_PORT);
 		}
 		catch(Exception e)
 		{
+			if(_server != null)
+			{
+				try
+				{
+					_server.stop(0);
+				}
+				catch(Exception stopEx)
+				{
+					_log.debug("WebServer: stop during failed init: " + stopEx.getMessage());
+				}
+				_server = null;
+			}
+			if(newExecutor != null)
+			{
+				newExecutor.shutdownNow();
+			}
+			_executor = null;
 			_log.error("WebServer: Failed to start: " + e.getMessage(), e);
 		}
 	}
@@ -83,7 +121,29 @@ public class WebServer
 		if(_server != null)
 		{
 			_server.stop(1);
-			_log.info("WebServer: Stopped.");
+			_server = null;
 		}
+		if(_executor != null)
+		{
+			_executor.shutdown();
+			try
+			{
+				if(!_executor.awaitTermination(30L, TimeUnit.SECONDS))
+				{
+					_executor.shutdownNow();
+					_executor.awaitTermination(10L, TimeUnit.SECONDS);
+				}
+			}
+			catch(InterruptedException e)
+			{
+				Thread.currentThread().interrupt();
+				_executor.shutdownNow();
+			}
+			finally
+			{
+				_executor = null;
+			}
+		}
+		_log.info("WebServer: Stopped.");
 	}
 }

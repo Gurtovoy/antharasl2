@@ -1,12 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.eclipse.jdt.internal.compiler.tool.EclipseCompiler
- *  org.eclipse.jdt.internal.compiler.tool.EclipseFileManager
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
- */
 package l2s.commons.compiler;
 
 import java.io.File;

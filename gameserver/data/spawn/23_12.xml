@@ -199,7 +199,7 @@
 		<point x="115020" y="-179728" z="-880" h="0"/>
 		<npc id="32478"/><!--Менеджер Витаминов-->
 	</spawn>
-	<spawn name="schttgart07_qm2312_00" count="35" respawn="15">
+	<spawn name="schttgart07_qm2312_00" count="45" respawn="15">
 		<territory>
 			<add x="108756" y="-175200" zmin="-604" zmax="-304"/>
 			<add x="109716" y="-174268" zmin="-604" zmax="-304"/>

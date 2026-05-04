@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.entity.boat;
 
 import java.util.ArrayList;
@@ -73,7 +70,9 @@ extends Creature {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void addPlayer(Player player, Location boatLoc) {
         Set<Player> set = this._players;
         synchronized (set) {
@@ -144,7 +143,9 @@ extends Creature {
         this.getCurrentWay().moveNext();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void oustPlayer(Player player, Location loc, boolean teleport) {
         Set<Player> set = this._players;
         synchronized (set) {
@@ -166,7 +167,9 @@ extends Creature {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void removePlayer(Player player) {
         Set<Player> set = this._players;
         synchronized (set) {

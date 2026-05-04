@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -28,7 +25,9 @@ public class SummonsDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<SummonInstance.RestoredSummon> restore(Player player) {
         ArrayList<SummonInstance.RestoredSummon> result = new ArrayList<SummonInstance.RestoredSummon>();
         Connection con = null;
@@ -68,7 +67,9 @@ public class SummonsDAO {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(SummonInstance summon) {
         Statement statement;
         Connection con;

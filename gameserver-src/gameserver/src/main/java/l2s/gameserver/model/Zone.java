@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model;
 
 import java.util.List;
@@ -338,7 +335,9 @@ extends EventOwner {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<Player> getInsidePlayers() {
         LazyArrayList result = new LazyArrayList();
         this.readLock.lock();
@@ -355,7 +354,9 @@ extends EventOwner {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<Playable> getInsidePlayables() {
         LazyArrayList result = new LazyArrayList();
         this.readLock.lock();
@@ -372,7 +373,9 @@ extends EventOwner {
         return result;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<NpcInstance> getInsideNpcs() {
         LazyArrayList result = new LazyArrayList();
         this.readLock.lock();

@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.handler.dailymissions.impl;
 
 import l2s.commons.time.cron.SchedulingPattern;

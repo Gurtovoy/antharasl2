@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.quest;
 
 import gnu.trove.map.TIntObjectMap;
@@ -179,7 +176,9 @@ implements OnInitScriptListener {
         vars.add(new QuestNpcLogInfo(null, varName, max, npcStringId));
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void updateQuestVarInDb(QuestState qs, String var, String value) {
         Player player = qs.getPlayer();
         if (player == null) {
@@ -209,7 +208,9 @@ implements OnInitScriptListener {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void deleteQuestInDb(QuestState qs) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -233,7 +234,9 @@ implements OnInitScriptListener {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void deleteQuestVarInDb(QuestState qs, String var) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -258,7 +261,9 @@ implements OnInitScriptListener {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void restoreQuestStates(Player player) {
         ResultSet rset;
         PreparedStatement statement;

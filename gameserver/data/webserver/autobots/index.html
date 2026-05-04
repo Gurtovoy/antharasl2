@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>L2 Autobot Manager</title>
+    <title>L2 Server Panel</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,12 +21,13 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h1>&#9876; L2 Autobots</h1>
-                <span class="version">Control Panel</span>
+                <h1>&#9876; L2 Server</h1>
+                <span class="version">Web Panel</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#dashboard" data-route="dashboard"><span class="nav-icon">&#9632;</span> Dashboard</a></li>
-                <li><a href="#bots" data-route="bots"><span class="nav-icon">&#9823;</span> Bots</a></li>
+                <li><a href="#server" data-route="server"><span class="nav-icon">&#9889;</span> Server</a></li>
+                <li><a href="#bots" data-route="bots"><span class="nav-icon">&#9823;</span> Autobots</a></li>
                 <li><a href="#create" data-route="create"><span class="nav-icon">&#10010;</span> Create Bot</a></li>
                 <li><a href="#scheduler" data-route="scheduler"><span class="nav-icon">&#9200;</span> Scheduler</a></li>
                 <li><a href="#trade" data-route="trade"><span class="nav-icon">&#9878;</span> Trade</a></li>
@@ -61,6 +62,7 @@
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 </html>

@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.instancemanager.clansearch;
 
 import gnu.trove.list.TIntList;
@@ -59,7 +56,9 @@ implements Runnable {
         this._removalApplicants.add(playerId);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public void run() {
         Connection con = null;

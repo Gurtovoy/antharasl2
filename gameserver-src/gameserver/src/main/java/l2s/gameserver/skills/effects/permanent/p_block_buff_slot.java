@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.skills.effects.permanent;
 
 import gnu.trove.set.TIntSet;

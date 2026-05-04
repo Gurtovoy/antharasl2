@@ -286,7 +286,7 @@
 		</territory>
 		<npc id="31033"/><!--Часовой-->
 	</spawn>
-	<spawn name="oren02_qm2119_00" count="35" respawn="15">
+	<spawn name="oren02_qm2119_00" count="45" respawn="15">
 		<territory>
 			<add x="44656" y="40896" zmin="-3552" zmax="-3352"/>
 			<add x="47488" y="41148" zmin="-3552" zmax="-3352"/>

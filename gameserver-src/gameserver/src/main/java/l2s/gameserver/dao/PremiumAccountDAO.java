@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -23,7 +20,9 @@ public class PremiumAccountDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int[] select(String account) {
         ResultSet rset;
         PreparedStatement statement;
@@ -60,7 +59,9 @@ public class PremiumAccountDAO {
         return new int[]{bonus, time};
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(String account) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -83,7 +84,9 @@ public class PremiumAccountDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(String account, int bonus, int endTime) {
         Connection con = null;
         PreparedStatement statement = null;

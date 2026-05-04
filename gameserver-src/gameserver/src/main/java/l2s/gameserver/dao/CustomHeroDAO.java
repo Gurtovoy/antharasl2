@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -31,7 +28,9 @@ public class CustomHeroDAO {
         return _instance;
     }
 
-
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void deleteExpiredHeroes() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -54,7 +53,9 @@ public class CustomHeroDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void loadCustomHeroes() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -83,7 +84,9 @@ public class CustomHeroDAO {
         _log.info("CustomHeroDAO: loaded " + this._heroes.size() + " custom heroes.");
     }
 
-
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void addCustomHero(int objectId, int time) {
         if (time != -1 && this._heroes.get(objectId) > time) {
             return;
@@ -113,6 +116,10 @@ public class CustomHeroDAO {
         this._heroes.put(objectId, time);
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     * Loose catch block
+     */
     public void removeCustomHero(int objectId) {
         if (this._heroes.containsKey(objectId) || Hero.getInstance().isHero(objectId)) {
             return;
@@ -153,3 +160,4 @@ public class CustomHeroDAO {
         return result.toArray();
     }
 }
+

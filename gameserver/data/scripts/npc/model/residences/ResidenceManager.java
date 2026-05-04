@@ -240,8 +240,9 @@ public abstract class ResidenceManager extends MerchantInstance
 				}
 
 				int level = getResidence().getVisibleFunctionLevel(function.getLevel());
+				String fileName = "residence/" + getDialogsPrefix() + "Buff_" + level + ".htm";
 				HtmlMessage html = new HtmlMessage(this);
-				html.setFile("residence/" + getDialogsPrefix() + "Buff_" + level + ".htm");
+				html.setFile(fileName);
 				html.replace("<?MPLeft?>", String.valueOf(Math.round(getCurrentMp())));
 				sendHtmlMessage(player, html);
 			}
@@ -419,7 +420,6 @@ public abstract class ResidenceManager extends MerchantInstance
 				id = SkillUtils.getSkillIdFromPTSLongHash(reply);
 				level = SkillUtils.getSkillLevelFromPTSLongHash(reply);
 			}
-			System.out.println("support " + id + " " + level);
 			onBypassFeedback(player, "support " + id + " " + level);
 		}
 		else

@@ -415,7 +415,9 @@ public class ChamberlainInstance extends ResidenceManager
 			player.sendPacket(html);
 		}
 		else
+		{
 			super.onBypassFeedback(player, command);
+		}
 	}
 
 	@Override
@@ -480,6 +482,15 @@ public class ChamberlainInstance extends ResidenceManager
 			{
 				onBypassFeedback(player, "manage");
 			}
+			else if(reply == 107)
+			{
+				onBypassFeedback(player, "functions support");
+			}
+			else
+			{
+				super.onMenuSelect(player, ask, reply, state);
+				return;
+			}
 		}
 		else if(ask == -204)
 		{
@@ -497,7 +508,9 @@ public class ChamberlainInstance extends ResidenceManager
 			MultiSellHolder.getInstance().SeparateAndSend((int) reply, player, 0);
 		}
 		else
+		{
 			super.onMenuSelect(player, ask, reply, state);
+		}
 	}
 
 	@Override

@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model;
 
 import gnu.trove.iterator.TIntLongIterator;
@@ -1179,7 +1176,9 @@ implements PlayerGroup {
         this.removeQuestState(quest.getId());
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Quest[] getAllActiveQuests() {
         ArrayList<Quest> quests = new ArrayList<Quest>(this._quests.size());
         this.questRead.lock();
@@ -2430,7 +2429,9 @@ implements PlayerGroup {
         this.broadcastPickUpMsg(item);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public void doPickupItem(GameObject object) {
         ItemInstance item;
@@ -2734,7 +2735,9 @@ implements PlayerGroup {
         return (FlagItemAttachment)item.getAttachment();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     protected void doPKPVPManage(Creature killer) {
         boolean isPvP;
         FlagItemAttachment attachment = this.getActiveWeaponFlagAttachment();
@@ -3660,7 +3663,9 @@ implements PlayerGroup {
         this.updateOnlineStatus();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void updateOnlineStatus() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -3685,7 +3690,9 @@ implements PlayerGroup {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void storeLastIpAndHWID(String ip, String hwid) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -3784,7 +3791,10 @@ implements PlayerGroup {
         return player;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     * Unable to fully structure code
+     */
     public static Player restore(int objectId, boolean fake) {
         Player player = null;
         Connection con = null;
@@ -4049,7 +4059,9 @@ implements PlayerGroup {
         return player;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void store(boolean fast) {
         block12: {
             if (!this._storeLock.tryLock()) {
@@ -4161,7 +4173,9 @@ implements PlayerGroup {
         return this.removeSkill(skillInfo.getId(), fromDB);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public SkillEntry removeSkill(int id, boolean fromDB) {
         SkillEntry oldSkillEntry = this.removeSkillById(id);
         if (!fromDB) {
@@ -4193,7 +4207,9 @@ implements PlayerGroup {
         return oldSkillEntry;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void storeSkill(SkillEntry newSkillEntry) {
         if (newSkillEntry == null) {
             _log.warn("could not store new skill. its NULL");
@@ -4223,7 +4239,9 @@ implements PlayerGroup {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void restoreSkills() {
         ResultSet rset;
         PreparedStatement statement;
@@ -4280,7 +4298,9 @@ implements PlayerGroup {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void storeDisableSkills() {
         Statement statement;
         Connection con;
@@ -4328,7 +4348,9 @@ implements PlayerGroup {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void restoreDisableSkills() {
         this._skillReuses.clear();
         Connection con = null;
@@ -5744,7 +5766,9 @@ implements PlayerGroup {
         this.ask(cd, new SummonAnswerListener(this, loc, summonConsumeCrystal));
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void updateNoChannel(long time) {
         this.setNoChannel(time);
         Connection con = null;
@@ -5855,7 +5879,9 @@ implements PlayerGroup {
         return Experience.getMaxLevel();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private synchronized void changeClassInDb(int oldclass, int newclass) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -5991,7 +6017,9 @@ implements PlayerGroup {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean modifySubClass(int oldClassId, int newClassId, boolean safeExpSp) {
         TrainingCamp trainingCamp;
         SubClass originalClass = this.getSubClassList().getByClassId(oldClassId);
@@ -7015,7 +7043,12 @@ implements PlayerGroup {
         return this._pcBangPoints;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     * Enabled aggressive block sorting
+     * Enabled unnecessary exception pruning
+     * Enabled aggressive exception aggregation
+     */
     public void setPcBangPoints(int val, boolean store) {
         this._pcBangPoints = val;
         if (!store) return;
@@ -7214,7 +7247,9 @@ implements PlayerGroup {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void restoreRecipeBook() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -7493,7 +7528,9 @@ implements PlayerGroup {
         this.reName(name, false);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public final void saveNameToDB() {
         Connection con = null;
         PreparedStatement st = null;
@@ -7680,7 +7717,9 @@ implements PlayerGroup {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public PlayerListenerList getListeners() {
         if (this.listeners == null) {
@@ -7694,7 +7733,9 @@ implements PlayerGroup {
         return (PlayerListenerList)this.listeners;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public PlayerStatsChangeRecorder getStatsRecorder() {
         if (this._statsRecorder == null) {
             Player player = this;
@@ -8124,7 +8165,9 @@ implements PlayerGroup {
         return this._instancesReuses;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void loadInstanceReuses() {
         Connection con = null;
         PreparedStatement offline = null;
@@ -8355,7 +8398,9 @@ implements PlayerGroup {
         this._npcDialogEndTime = val;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public boolean useItem(ItemInstance item, boolean ctrl, boolean sendMsg) {
         if (!this._isUsingItem.compareAndSet(false, true)) {

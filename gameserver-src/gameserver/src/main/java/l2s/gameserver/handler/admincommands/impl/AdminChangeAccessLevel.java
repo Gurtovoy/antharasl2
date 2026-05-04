@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.handler.admincommands.impl;
 
 import java.io.BufferedReader;
@@ -221,7 +218,9 @@ implements IAdminCommandHandler {
         activeChar.sendPacket((IBroadcastPacket)reply);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private static String getPlayerNameByObjId(int oid) {
         ResultSet rset;
         PreparedStatement statement;

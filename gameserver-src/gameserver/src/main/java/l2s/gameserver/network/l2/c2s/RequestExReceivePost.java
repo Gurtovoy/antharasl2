@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.network.l2.c2s;
 
 import l2s.commons.dao.JdbcEntityState;
@@ -32,6 +29,15 @@ extends L2GameClientPacket {
         return true;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     * Unable to fully structure code
+     * Enabled aggressive block sorting
+     * Enabled unnecessary exception pruning
+     * Enabled aggressive exception aggregation
+     * Converted monitor instructions to comments
+     * Lifted jumps to return sites
+     */
     @Override
     protected void runImpl() {
         Player activeChar = null;
@@ -89,6 +95,7 @@ extends L2GameClientPacket {
                             var6_6 = attachments;
                             // MONITORENTER : attachments
                             if (!mail.getAttachments().isEmpty()) break block26;
+                            // MONITOREXIT : var6_6
                             activeChar.getInventory().writeUnlock();
                             return;
                         }
@@ -102,11 +109,13 @@ extends L2GameClientPacket {
                         }
                         if (activeChar.getInventory().validateWeight(weight)) break block27;
                         activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+                        // MONITOREXIT : var6_6
                         activeChar.getInventory().writeUnlock();
                         return;
                     }
                     if (activeChar.getInventory().validateCapacity(slots)) break block28;
                     activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOU_COULD_NOT_RECEIVE_BECAUSE_YOUR_INVENTORY_IS_FULL);
+                    // MONITOREXIT : var6_6
                     activeChar.getInventory().writeUnlock();
                     return;
                 }
@@ -114,6 +123,7 @@ extends L2GameClientPacket {
                     safePost = true;
                     if (!activeChar.reduceAdena(mail.getPrice(), true)) {
                         activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOU_CANNOT_RECEIVE_BECAUSE_YOU_DONT_HAVE_ENOUGH_ADENA);
+                        // MONITOREXIT : var6_6
                         activeChar.getInventory().writeUnlock();
                         return;
                     }
@@ -129,6 +139,7 @@ extends L2GameClientPacket {
                     } catch (ArithmeticException var3_4) {}
                 }
                 attachments.clear();
+                // MONITOREXIT : var6_6
                 mail.setJdbcState(JdbcEntityState.UPDATED);
                 if (StringUtils.isEmpty((CharSequence)mail.getBody())) {
                     mail.delete();
@@ -150,3 +161,4 @@ extends L2GameClientPacket {
         activeChar.sendPacket((IBroadcastPacket)new ExShowReceivedPostList(activeChar));
     }
 }
+

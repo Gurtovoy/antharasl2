@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -31,7 +28,9 @@ public class SiegeClanDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<SiegeClanObject> load(Residence residence, String name) {
         List<SiegeClanObject> siegeClans = Collections.emptyList();
         Connection con = null;
@@ -70,7 +69,9 @@ public class SiegeClanDAO {
         return siegeClans;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(Residence residence, SiegeClanObject siegeClan) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -97,7 +98,9 @@ public class SiegeClanDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(Residence residence, SiegeClanObject siegeClan) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -122,7 +125,9 @@ public class SiegeClanDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(Residence residence) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -145,7 +150,9 @@ public class SiegeClanDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void update(Residence residence, SiegeClanObject siegeClan) {
         Connection con = null;
         PreparedStatement statement = null;

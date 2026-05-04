@@ -1,0 +1,82 @@
+[03.05.26 18:46:19] SUCCESS admin[268461367] admin_admin
+[03.05.26 18:46:20] SUCCESS admin[268461367] admin_itemcreate
+[03.05.26 18:46:25] SUCCESS admin[268461367] admin_create_item 23173
+[03.05.26 18:46:33] SUCCESS admin[268461367] admin_create_item 23226
+[03.05.26 18:46:43] SUCCESS admin[268461367] admin_create_item 23458
+[03.05.26 18:46:47] SUCCESS admin[268461367] admin_create_item 23459
+[03.05.26 18:46:57] SUCCESS admin[268461367] admin_create_item 23877
+[03.05.26 18:47:01] SUCCESS admin[268461367] admin_create_item 23879
+[03.05.26 18:47:13] SUCCESS admin[268461367] admin_create_item 26254
+[03.05.26 18:47:24] SUCCESS admin[268461367] admin_create_item 26326
+[03.05.26 18:47:31] SUCCESS admin[268461367] admin_create_item 26354
+[03.05.26 18:47:55] SUCCESS admin[268461367] admin_create_item 29752
+[03.05.26 18:48:06] SUCCESS admin[268461367] admin_create_item 37534
+[03.05.26 18:48:15] SUCCESS admin[268461367] admin_create_item 37725
+[03.05.26 18:48:24] SUCCESS admin[268461367] admin_create_item 47231
+[03.05.26 18:48:32] SUCCESS admin[268461367] admin_create_item 47826
+[03.05.26 18:48:42] SUCCESS admin[268461367] admin_create_item 48016
+[03.05.26 18:48:48] SUCCESS admin[268461367] admin_create_item 48022
+[03.05.26 18:48:59] SUCCESS admin[268461367] admin_create_item 48765
+[03.05.26 18:49:03] SUCCESS admin[268461367] admin_create_item 48766
+[03.05.26 18:49:14] SUCCESS admin[268461367] admin_create_item 49120
+[03.05.26 18:49:24] SUCCESS admin[268461367] admin_create_item 49529
+[03.05.26 18:49:36] SUCCESS admin[268461367] admin_create_item 49531
+[03.05.26 18:49:42] SUCCESS admin[268461367] admin_create_item 49532
+[03.05.26 18:49:52] SUCCESS admin[268461367] admin_create_item 49544
+[03.05.26 18:50:00] SUCCESS admin[268461367] admin_create_item 49545
+[03.05.26 18:50:28] SUCCESS admin[268461367] admin_create_item 49546
+[03.05.26 18:50:33] SUCCESS admin[268461367] admin_create_item 49547
+[03.05.26 18:50:42] SUCCESS admin[268461367] admin_create_item 49548
+[03.05.26 18:50:49] SUCCESS admin[268461367] admin_create_item 49549
+[03.05.26 18:50:58] SUCCESS admin[268461367] admin_create_item 49551
+[03.05.26 18:51:04] SUCCESS admin[268461367] admin_create_item 49552
+[03.05.26 18:51:11] SUCCESS admin[268461367] admin_create_item 49553
+[03.05.26 18:51:16] SUCCESS admin[268461367] admin_create_item 49554
+[03.05.26 18:51:33] SUCCESS admin[268461367] admin_create_item 49556
+[03.05.26 18:51:54] SUCCESS admin[268461367] admin_create_item 49557
+[03.05.26 18:52:17] SUCCESS admin[268461367] admin_create_item 49803
+[03.05.26 18:52:25] SUCCESS admin[268461367] admin_create_item 6408
+[03.05.26 18:52:34] SUCCESS admin[268461367] admin_create_item 70895
+[03.05.26 18:52:42] SUCCESS admin[268461367] admin_create_item 70896
+[03.05.26 18:52:52] SUCCESS admin[268461367] admin_create_item 70898
+[03.05.26 18:53:00] SUCCESS admin[268461367] admin_create_item 70903
+[03.05.26 18:53:05] SUCCESS admin[268461367] admin_create_item 70904
+[03.05.26 18:53:14] SUCCESS admin[268461367] admin_create_item 70905
+[03.05.26 18:53:22] SUCCESS admin[268461367] admin_create_item 71098
+[03.05.26 18:53:30] SUCCESS admin[268461367] admin_create_item 90731
+[03.05.26 18:53:37] SUCCESS admin[268461367] admin_invis
+[03.05.26 18:55:49] SUCCESS admin[268461367] admin_invis
+[03.05.26 18:57:25] SUCCESS admin[268461367] admin_admin
+[03.05.26 18:57:27] SUCCESS admin[268461367] admin_itemcreate
+[03.05.26 18:57:30] SUCCESS admin[268461367] admin_create_item 70877
+[03.05.26 18:58:02] SUCCESS admin[268461367] admin_admin
+[03.05.26 18:58:03] SUCCESS admin[268461367] admin_itemcreate
+[03.05.26 18:58:06] SUCCESS admin[268461367] admin_create_item 70879
+[03.05.26 18:58:15] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[03.05.26 18:58:16] SUCCESS admin[268461367] -> admin[268461367] admin_enchant
+[03.05.26 18:58:21] SUCCESS admin[268461367] -> admin[268461367] admin_setba 10
+[03.05.26 18:58:46] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[03.05.26 18:58:48] SUCCESS admin[268461367] -> admin[268461367] admin_itemcreate
+[03.05.26 18:58:52] SUCCESS admin[268461367] -> admin[268461367] admin_create_item 70884
+[03.05.26 18:58:58] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[03.05.26 18:58:59] SUCCESS admin[268461367] -> admin[268461367] admin_enchant
+[03.05.26 18:59:01] SUCCESS admin[268461367] -> admin[268461367] admin_setba 10
+[03.05.26 18:59:10] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[03.05.26 18:59:11] SUCCESS admin[268461367] -> admin[268461367] admin_itemcreate
+[03.05.26 18:59:15] SUCCESS admin[268461367] -> admin[268461367] admin_create_item 70883
+[03.05.26 18:59:18] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[03.05.26 18:59:20] SUCCESS admin[268461367] -> admin[268461367] admin_enchant
+[03.05.26 18:59:22] SUCCESS admin[268461367] -> admin[268461367] admin_setba 10
+[03.05.26 18:59:35] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[03.05.26 18:59:36] SUCCESS admin[268461367] -> admin[268461367] admin_itemcreate
+[03.05.26 18:59:39] SUCCESS admin[268461367] -> admin[268461367] admin_create_item 70881
+[03.05.26 18:59:55] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[03.05.26 18:59:56] SUCCESS admin[268461367] -> admin[268461367] admin_itemcreate
+[03.05.26 19:00:00] SUCCESS admin[268461367] -> admin[268461367] admin_create_item 90978
+[03.05.26 21:22:16] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 888
+[03.05.26 21:22:22] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[03.05.26 21:22:23] SUCCESS admin[268461367] -> admin[268461367] admin_show_moves
+[03.05.26 21:22:24] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/town.htm
+[03.05.26 21:22:25] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/town/aden.htm
+[03.05.26 21:22:26] SUCCESS admin[268461367] admin_move_to 147450 27064 -2208
+[03.05.26 21:24:33] SUCCESS admin[268461367] -> 30012 Fishing Guildsman admin_invis

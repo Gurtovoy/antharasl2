@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -25,7 +22,9 @@ public class ClanHallDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void select(ClanHall clanHall) {
         ResultSet rset;
         PreparedStatement statement;
@@ -72,7 +71,9 @@ public class ClanHallDAO {
         this.update0(c);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void update0(ClanHall c) {
         Connection con = null;
         PreparedStatement statement = null;

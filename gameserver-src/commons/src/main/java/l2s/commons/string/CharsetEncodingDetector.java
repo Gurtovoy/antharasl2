@@ -1,9 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.mozilla.universalchardet.UniversalDetector
- */
 package l2s.commons.string;
 
 import java.io.File;

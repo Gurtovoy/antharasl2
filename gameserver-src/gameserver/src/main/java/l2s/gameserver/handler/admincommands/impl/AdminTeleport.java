@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.handler.admincommands.impl;
 
 import java.sql.Connection;
@@ -54,7 +51,7 @@ implements IAdminCommandHandler {
                 this.teleportToCharacter(activeChar, activeChar.getTarget());
                 break;
             }
-            case admin_teleport_to:
+            case admin_teleport_to: 
             case admin_teleportto: {
                 if (wordList.length < 2) {
                     activeChar.sendMessage("USAGE: //teleportto charName");
@@ -79,8 +76,8 @@ implements IAdminCommandHandler {
                     return false;
                 }
             }
-            case admin_move_to:
-            case admin_moveto:
+            case admin_move_to: 
+            case admin_moveto: 
             case admin_teleport: {
                 if (wordList.length < 2) {
                     activeChar.sendMessage("USAGE: //teleport x y z [ref]");
@@ -105,11 +102,11 @@ implements IAdminCommandHandler {
                     return false;
                 }
             }
-            case admin_gonorth:
-            case admin_gosouth:
-            case admin_goeast:
-            case admin_gowest:
-            case admin_goup:
+            case admin_gonorth: 
+            case admin_gosouth: 
+            case admin_goeast: 
+            case admin_gowest: 
+            case admin_goup: 
             case admin_godown: {
                 int val = wordList.length < 2 ? 150 : Integer.parseInt(wordList[1]);
                 int x = activeChar.getX();
@@ -136,8 +133,8 @@ implements IAdminCommandHandler {
                 this.showTeleportWindow(activeChar);
                 break;
             }
-            case admin_teleto:
-            case admin_tele_to:
+            case admin_teleto: 
+            case admin_tele_to: 
             case admin_instant_move: {
                 if (wordList.length > 1 && wordList[1].equalsIgnoreCase("r")) {
                     activeChar.setTeleMode(2);
@@ -150,7 +147,7 @@ implements IAdminCommandHandler {
                 activeChar.setTeleMode(1);
                 break;
             }
-            case admin_tonpc:
+            case admin_tonpc: 
             case admin_to_npc: {
                 List<NpcInstance> npcs;
                 if (wordList.length < 2) {
@@ -360,6 +357,10 @@ implements IAdminCommandHandler {
         this.teleportTo(activeChar, (Player)target, Cords, activeChar.getReflectionId());
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     * Loose catch block
+     */
     private void teleportCharacter_offline(int obj_id, Location loc) {
         if (obj_id == 0) {
             return;
@@ -436,3 +437,4 @@ implements IAdminCommandHandler {
 
     }
 }
+

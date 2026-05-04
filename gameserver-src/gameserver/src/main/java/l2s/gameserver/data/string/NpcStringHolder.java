@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.data.string;
 
 import gnu.trove.map.TIntObjectMap;
@@ -53,7 +50,9 @@ extends AbstractHolder {
         return this.getNpcString(lang, npcStringId);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void load() {
         for (Language lang : Language.VALUES) {
             this._npcStrings.put(lang, (TIntObjectMap<String>)new TIntObjectHashMap());

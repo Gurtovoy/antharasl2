@@ -1,10 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.list.array.TIntArrayList
- *  gnu.trove.map.hash.TIntObjectHashMap
- */
 package l2s.commons.util;
 
 import gnu.trove.list.array.TIntArrayList;

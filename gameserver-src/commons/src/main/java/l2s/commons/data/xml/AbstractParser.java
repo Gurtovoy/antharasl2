@@ -1,14 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.apache.commons.io.FileUtils
- *  org.apache.commons.io.filefilter.FileFilterUtils
- *  org.apache.commons.io.filefilter.IOFileFilter
- *  org.dom4j.Document
- *  org.dom4j.Element
- *  org.dom4j.io.SAXReader
- */
 package l2s.commons.data.xml;
 
 import java.io.File;

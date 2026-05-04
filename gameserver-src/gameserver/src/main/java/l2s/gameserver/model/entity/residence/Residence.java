@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.entity.residence;
 
 import gnu.trove.map.TIntObjectMap;
@@ -199,7 +196,9 @@ implements JdbcEntity {
         }
     }
 
-
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     protected void loadFunctions() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -248,6 +247,11 @@ implements JdbcEntity {
         return this._activeFunctions.get(type);
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     * Enabled force condition propagation
+     * Lifted jumps to return sites
+     */
     public boolean updateFunctions(ResidenceFunctionType type, int level) {
         Clan clan = this.getOwner();
         if (clan == null) {
@@ -309,7 +313,9 @@ implements JdbcEntity {
         return true;
     }
 
-
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void removeFunction(ResidenceFunctionType type) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -334,7 +340,9 @@ implements JdbcEntity {
         this._activeFunctions.remove(type);
     }
 
-
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void removeFunctions() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -559,3 +567,4 @@ implements JdbcEntity {
         }
     }
 }
+

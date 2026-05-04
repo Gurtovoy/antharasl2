@@ -1,10 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.threading.RejectedExecutionHandlerImpl
- *  l2s.commons.threading.RunnableWrapper
- */
 package l2s.authserver;
 
 import java.util.concurrent.LinkedBlockingQueue;

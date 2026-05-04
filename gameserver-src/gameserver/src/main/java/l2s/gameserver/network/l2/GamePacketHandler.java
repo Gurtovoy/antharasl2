@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.network.l2;
 
 import java.nio.BufferUnderflowException;
@@ -33,6 +30,7 @@ import l2s.gameserver.network.l2.c2s.EnterWorld;
 import l2s.gameserver.network.l2.c2s.ExPCCafeRequestOpenWindowWithoutNPC;
 import l2s.gameserver.network.l2.c2s.ExRequestVipInfo;
 import l2s.gameserver.network.l2.c2s.ExSendClientINI;
+import l2s.gameserver.network.l2.c2s.ExSendClientINI2;
 import l2s.gameserver.network.l2.c2s.ExSendSelectedQuestZoneID;
 import l2s.gameserver.network.l2.c2s.FinishRotatingC;
 import l2s.gameserver.network.l2.c2s.GotoLobby;
@@ -2671,6 +2669,10 @@ IMMOExecutor<GameClient> {
                                 case 350: {
                                     break block1;
                                 }
+                                case 351: {
+                                    msg = new ExSendClientINI2();
+                                    break block1;
+                                }
                             }
                             client.onUnknownPacket();
                             _log.warn("Unknown client packet! State: IN_GAME, packet ID: " + Integer.toHexString(id).toUpperCase() + ":" + Integer.toHexString(id3).toUpperCase());
@@ -2695,4 +2697,3 @@ IMMOExecutor<GameClient> {
         ThreadPoolManager.getInstance().execute(r);
     }
 }
-

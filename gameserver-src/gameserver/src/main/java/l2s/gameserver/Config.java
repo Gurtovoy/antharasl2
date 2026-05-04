@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver;
 
 import gnu.trove.map.TIntObjectMap;
@@ -93,6 +90,8 @@ public class Config {
     public static int DATABASE_MAX_CONNECTIONS;
     public static int DATABASE_MAX_IDLE_TIMEOUT;
     public static int DATABASE_IDLE_TEST_PERIOD;
+    /** Milliseconds to wait for a free DB connection from the pool; {@code <= 0} = wait indefinitely (legacy). */
+    public static long DATABASE_MAX_WAIT_MS;
     public static String DATABASE_URL;
     public static String DATABASE_LOGIN;
     public static String DATABASE_PASSWORD;
@@ -238,6 +237,8 @@ public class Config {
     public static boolean ALT_DEBUG_PVE_ENABLED;
     public static int SCHEDULED_THREAD_POOL_SIZE;
     public static int EXECUTOR_THREAD_POOL_SIZE;
+    /** Upper bound for the main executor pool size (never less than {@link #EXECUTOR_THREAD_POOL_SIZE}). */
+    public static int EXECUTOR_THREAD_POOL_MAXIMUM;
     public static SelectorConfig SELECTOR_CONFIG;
     public static boolean AUTO_LOOT;
     public static boolean AUTO_LOOT_HERBS;
@@ -986,9 +987,21 @@ public class Config {
     public static int WEB_SERVER_PORT;
     public static String WEB_SERVER_API_KEY;
     public static String WEB_SERVER_BIND_ADDRESS;
+    /** If true, API key may be passed as {@code apiKey} query parameter (less secure). */
+    public static boolean WEB_SERVER_API_KEY_ALLOW_QUERY;
+    /** Max distinct offline character IDs in {@link l2s.gameserver.instancemanager.PlayerMessageStack}; {@code <= 0} = unlimited. */
+    public static int OFFLINE_MESSAGE_STACK_MAX_CHAR_IDS;
     public static boolean STARTER_PACK_ENABLED;
     public static int STARTER_PACK_MAX_BOTS;
     public static int STARTER_PACK_TARGET_LEVEL;
+    /** After first town visit, teleport to race outskirts farm (data from fake_player farm zones). */
+    public static boolean STARTER_PACK_PROGRESSION_ENABLED;
+    /** When starter bot reaches this level on outskirts, walk to town again. */
+    public static int STARTER_PACK_OUTSKIRTS_END_LEVEL;
+    /** Milliseconds in town before teleport to outskirts (progression stage 2). */
+    public static int STARTER_PACK_TOWN_MS_BEFORE_OUTSKIRTS;
+    /** Max monster level while farming outskirts (matches ~lvl 3–8 zones). */
+    public static int STARTER_PACK_OUTSKIRTS_MAX_MOB_LEVEL;
     public static boolean BOTREPORT_ENABLED;
     public static int BOTREPORT_REPORT_DELAY;
     public static String BOTREPORT_REPORTS_RESET_TIME;
@@ -1248,12 +1261,17 @@ public class Config {
         DATABASE_MAX_CONNECTIONS = serverSettings.getProperty("MaximumDbConnections", 10);
         DATABASE_MAX_IDLE_TIMEOUT = serverSettings.getProperty("MaxIdleConnectionTimeout", 600);
         DATABASE_IDLE_TEST_PERIOD = serverSettings.getProperty("IdleConnectionTestPeriod", 60);
+        DATABASE_MAX_WAIT_MS = serverSettings.getProperty("DatabaseMaxWaitMillis", 30000L);
         USER_INFO_INTERVAL = serverSettings.getProperty("UserInfoInterval", 100L);
         BROADCAST_STATS_INTERVAL = serverSettings.getProperty("BroadcastStatsInterval", true);
         BROADCAST_CHAR_INFO_INTERVAL = serverSettings.getProperty("BroadcastCharInfoInterval", 100L);
         EFFECT_TASK_MANAGER_COUNT = serverSettings.getProperty("EffectTaskManagers", 2);
         SCHEDULED_THREAD_POOL_SIZE = serverSettings.getProperty("ScheduledThreadPoolSize", NCPUS * 4);
         EXECUTOR_THREAD_POOL_SIZE = serverSettings.getProperty("ExecutorThreadPoolSize", NCPUS * 2);
+        EXECUTOR_THREAD_POOL_MAXIMUM = serverSettings.getProperty("ExecutorThreadPoolMaximum", Math.min(2048, Math.max(256, NCPUS * 16)));
+        if (EXECUTOR_THREAD_POOL_MAXIMUM < EXECUTOR_THREAD_POOL_SIZE) {
+            EXECUTOR_THREAD_POOL_MAXIMUM = EXECUTOR_THREAD_POOL_SIZE;
+        }
         Config.SELECTOR_CONFIG.SLEEP_TIME = serverSettings.getProperty("SelectorSleepTime", 10L);
         Config.SELECTOR_CONFIG.INTEREST_DELAY = serverSettings.getProperty("InterestDelay", 30L);
         Config.SELECTOR_CONFIG.MAX_SEND_PER_PASS = serverSettings.getProperty("MaxSendPerPass", 32);
@@ -1327,9 +1345,15 @@ public class Config {
         WEB_SERVER_PORT = serverSettings.getProperty("WebServerPort", 8085);
         WEB_SERVER_BIND_ADDRESS = serverSettings.getProperty("WebServerBindAddress", "0.0.0.0");
         WEB_SERVER_API_KEY = serverSettings.getProperty("WebServerApiKey", "CHANGE_ME_TO_RANDOM_KEY");
+        WEB_SERVER_API_KEY_ALLOW_QUERY = serverSettings.getProperty("WebServerApiKeyAllowInQuery", false);
+        OFFLINE_MESSAGE_STACK_MAX_CHAR_IDS = serverSettings.getProperty("OfflineMessageStackMaxCharIds", 10000);
         STARTER_PACK_ENABLED = serverSettings.getProperty("StarterPackEnabled", true);
-        STARTER_PACK_MAX_BOTS = serverSettings.getProperty("StarterPackMaxBots", 250);
+        STARTER_PACK_MAX_BOTS = serverSettings.getProperty("StarterPackMaxBots", 1000);
         STARTER_PACK_TARGET_LEVEL = serverSettings.getProperty("StarterPackTargetLevel", 4);
+        STARTER_PACK_PROGRESSION_ENABLED = serverSettings.getProperty("StarterPackProgressionEnabled", true);
+        STARTER_PACK_OUTSKIRTS_END_LEVEL = serverSettings.getProperty("StarterPackOutskirtsEndLevel", 9);
+        STARTER_PACK_TOWN_MS_BEFORE_OUTSKIRTS = serverSettings.getProperty("StarterPackTownMsBeforeOutskirts", 10000);
+        STARTER_PACK_OUTSKIRTS_MAX_MOB_LEVEL = serverSettings.getProperty("StarterPackOutskirtsMaxMobLevel", 9);
     }
 
     public static void loadTelnetConfig() {
@@ -2241,7 +2265,9 @@ public class Config {
     private Config() {
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void abuseLoad() {
         BufferedReader lnr = null;
         try {

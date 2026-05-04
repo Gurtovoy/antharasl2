@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -23,7 +20,9 @@ public class CastleDoorUpgradeDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int load(int doorId) {
         ResultSet rset;
         PreparedStatement statement;
@@ -58,7 +57,9 @@ public class CastleDoorUpgradeDAO {
         return 0;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(int uId, int val) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -82,7 +83,9 @@ public class CastleDoorUpgradeDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(int uId) {
         Connection con = null;
         PreparedStatement statement = null;

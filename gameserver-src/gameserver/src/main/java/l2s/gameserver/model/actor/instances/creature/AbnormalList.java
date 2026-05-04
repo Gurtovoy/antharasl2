@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.actor.instances.creature;
 
 import gnu.trove.set.TIntSet;
@@ -215,7 +212,12 @@ implements Iterable<Abnormal> {
         return abnormalType1 == abnormalType2;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     * Enabled aggressive block sorting
+     * Enabled unnecessary exception pruning
+     * Enabled aggressive exception aggregation
+     */
     public boolean add(Abnormal abnormal) {
         if (!abnormal.isTimeLeft()) {
             return false;

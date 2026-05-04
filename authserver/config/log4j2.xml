@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+	<Appenders>
+		<Console name="CONSOLE" target="SYSTEM_OUT">
+			<PatternLayout pattern="[%d{HH:mm:ss}]%5p %m%n"/>
+		</Console>
+		<RollingRandomAccessFile name="FILE" fileName="log/java.log" filePattern="log/java-%d{yyyy-MM-dd}.log" append="false">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss:SSS}]%5p %logger{2}: %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<RollingRandomAccessFile name="AUTH" fileName="log/auth.log" filePattern="log/auth.log.%d{yyyy-MM-dd}" append="true">
+			<PatternLayout pattern="[%d{dd.MM.yy HH:mm:ss}] %m%n"/>
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+			</Policies>
+		</RollingRandomAccessFile>
+		<Async name="AUTHASYNC" blocking="false" bufferSize="512">
+			<AppenderRef ref="AUTH"/>
+		</Async>
+	</Appenders>
+	<Loggers>
+		<Logger name="auth" level="info" additivity="false">
+			<AppenderRef ref="AUTHASYNC"/>
+		</Logger>
+		<Root level="info">
+			<AppenderRef ref="CONSOLE"/>
+			<AppenderRef ref="FILE"/>
+		</Root>
+	</Loggers>
+</Configuration>

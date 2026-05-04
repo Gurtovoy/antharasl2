@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.actor.instances.player;
 
 import java.sql.Connection;
@@ -84,7 +81,9 @@ public class MacroList {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void registerMacroInDb(Macro macro) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -123,7 +122,9 @@ public class MacroList {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private void deleteMacroFromDb(Macro macro) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -147,7 +148,9 @@ public class MacroList {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void restore() {
         this._macroses.clear();
         Connection con = null;

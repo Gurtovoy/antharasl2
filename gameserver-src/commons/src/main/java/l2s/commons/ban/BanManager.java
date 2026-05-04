@@ -1,9 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.apache.commons.lang3.StringUtils
- */
 package l2s.commons.ban;
 
 import java.util.HashMap;

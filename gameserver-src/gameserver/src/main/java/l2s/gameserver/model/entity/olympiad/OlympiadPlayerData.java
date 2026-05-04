@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.entity.olympiad;
 
 import l2s.gameserver.model.entity.olympiad.Olympiad;

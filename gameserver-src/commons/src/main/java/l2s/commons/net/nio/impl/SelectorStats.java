@@ -1,6 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- */
 package l2s.commons.net.nio.impl;
 
 import java.util.concurrent.atomic.AtomicLong;

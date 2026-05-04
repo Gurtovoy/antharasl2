@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver;
 
 import java.util.concurrent.LinkedBlockingQueue;
@@ -14,6 +11,7 @@ import l2s.commons.threading.PriorityThreadFactory;
 import l2s.commons.threading.RejectedExecutionHandlerImpl;
 import l2s.commons.threading.RunnableWrapper;
 import l2s.gameserver.Config;
+import l2s.gameserver.database.DatabaseFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,19 +30,30 @@ public class ThreadPoolManager {
     private ThreadPoolManager() {
         this._scheduledExecutor.setRejectedExecutionHandler((RejectedExecutionHandler)new RejectedExecutionHandlerImpl());
         this._scheduledExecutor.prestartAllCoreThreads();
-        this._executor = new ThreadPoolExecutor(Config.EXECUTOR_THREAD_POOL_SIZE, Integer.MAX_VALUE, 5L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(100000), (ThreadFactory)new PriorityThreadFactory("ThreadPoolExecutor", 5), new RejectedExecutionHandler() {
+        int coreThreads = Config.EXECUTOR_THREAD_POOL_SIZE;
+        int maxThreads = Math.max(coreThreads, Config.EXECUTOR_THREAD_POOL_MAXIMUM);
+        this._executor = new ThreadPoolExecutor(coreThreads, maxThreads, 5L, TimeUnit.SECONDS, new LinkedBlockingQueue<Runnable>(100000), (ThreadFactory)new PriorityThreadFactory("ThreadPoolExecutor", 5), new RejectedExecutionHandler() {
             @Override
             public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
-                _log.warn("ThreadPool queue full! Task rejected: " + r.toString());
-                if (!executor.isShutdown()) {
-                    r.run();
+                if (executor.isShutdown()) {
+                    return;
                 }
+                _log.error("ThreadPool queue full ({} queued); task dropped: {}", executor.getQueue().size(), r);
             }
         });
         this._executor.prestartAllCoreThreads();
         this.scheduleAtFixedRate(() -> {
             this._scheduledExecutor.purge();
             this._executor.purge();
+            if (_log.isDebugEnabled()) {
+                try {
+                    int busy = DatabaseFactory.getInstance().getBusyConnectionCount();
+                    int idle = DatabaseFactory.getInstance().getIdleConnectionCount();
+                    _log.debug("DB pool: active={}, idle={}", busy, idle);
+                }
+                catch (Exception ignored) {
+                }
+            }
         }, 5L, 5L, TimeUnit.MINUTES);
     }
 

@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import gnu.trove.map.TIntObjectMap;
@@ -24,7 +21,9 @@ public class CharacterBlockListDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public TIntObjectMap<Block> select(Player owner) {
         TIntObjectHashMap map = new TIntObjectHashMap();
         Connection con = null;
@@ -57,7 +56,9 @@ public class CharacterBlockListDAO {
         return map;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void insert(Player owner, int blockedObjectId) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -81,7 +82,9 @@ public class CharacterBlockListDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(Player owner, int blockedObjectId) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -105,7 +108,9 @@ public class CharacterBlockListDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean updateMemo(Player owner, int blockedObjectId, String memo) {
         Connection con = null;
         PreparedStatement statement = null;

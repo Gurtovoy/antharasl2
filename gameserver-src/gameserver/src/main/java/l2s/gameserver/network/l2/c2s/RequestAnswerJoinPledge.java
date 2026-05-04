@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.network.l2.c2s;
 
 import l2s.gameserver.model.Player;
@@ -31,7 +28,9 @@ extends L2GameClientPacket {
         RequestAnswerJoinPledge.answerJoinPledge(player, this._response != 0);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void answerJoinPledge(Player player, boolean confirm) {
         Request request = player.getRequest();
         if (request == null || !request.isTypeOf(Request.L2RequestType.CLAN)) {

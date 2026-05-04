@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.items;
 
 import java.util.Collection;
@@ -66,7 +63,9 @@ extends Inventory {
         this.getOwner().sendPacket((IBroadcastPacket)new PetInventoryUpdatePacket().addRemovedItem(item));
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public void restore() {
         int ownerId = this.getOwnerId();

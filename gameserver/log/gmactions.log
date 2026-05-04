@@ -1,93 +1,692 @@
-[27.04.26 14:44:25] SUCCESS admin[268461367] -> 20537 Elder Red Keltir admin_admin
-[27.04.26 14:44:27] SUCCESS admin[268461367] -> 20537 Elder Red Keltir admin_show_moves
-[27.04.26 14:44:28] SUCCESS admin[268461367] -> 20537 Elder Red Keltir admin_show_html teleports/raid.htm
-[27.04.26 14:44:29] SUCCESS admin[268461367] -> 20537 Elder Red Keltir admin_show_html teleports/raid/raid_30.htm
-[27.04.26 14:44:31] SUCCESS admin[268461367] admin_move_to 90384 125568 -2128
-[27.04.26 14:45:01] SUCCESS admin[268461367] admin_admin
-[27.04.26 14:45:04] SUCCESS admin[268461367] -> admin[268461367] admin_enchant
-[27.04.26 14:45:06] SUCCESS admin[268461367] -> admin[268461367] admin_setew 111
-[27.04.26 14:45:53] SUCCESS admin[268461367] -> 20270 Breka Orc Prefect admin_admin
-[27.04.26 14:45:54] SUCCESS admin[268461367] -> 20270 Breka Orc Prefect admin_show_moves
-[27.04.26 14:45:55] SUCCESS admin[268461367] -> 20270 Breka Orc Prefect admin_show_html teleports/raid.htm
-[27.04.26 14:45:57] SUCCESS admin[268461367] -> 20270 Breka Orc Prefect admin_show_html teleports/raid/raid_40.htm
-[27.04.26 14:45:59] SUCCESS admin[268461367] admin_move_to 125789 207644 -3752
-[27.04.26 14:46:02] SUCCESS admin[268461367] admin_admin
-[27.04.26 14:46:03] SUCCESS admin[268461367] admin_show_moves
-[27.04.26 14:46:11] SUCCESS admin[268461367] admin_show_html teleports/raid.htm
-[27.04.26 14:46:15] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_special.htm
-[27.04.26 14:46:16] SUCCESS admin[268461367] admin_move_to -21610 181594 -5734
-[27.04.26 14:47:00] SUCCESS admin[268461367] -> 29001 Queen Ant admin_kill
-[27.04.26 14:47:16] SUCCESS admin[268461367] -> 29004 Escort Ant admin_admin
-[27.04.26 14:47:19] SUCCESS admin[268461367] -> 29004 Escort Ant admin_show_moves
-[27.04.26 14:47:22] SUCCESS admin[268461367] -> 29004 Escort Ant admin_show_html teleports/raid.htm
-[27.04.26 14:47:22] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_special.htm
-[27.04.26 14:47:24] SUCCESS admin[268461367] admin_move_to 55024 17368 -5412
-[27.04.26 14:47:32] SUCCESS admin[268461367] -> 29014 Orfen admin_kill
-[27.04.26 14:47:52] SUCCESS admin[268461367] -> 29014 Orfen admin_admin
-[27.04.26 14:47:53] SUCCESS admin[268461367] -> 29014 Orfen admin_show_moves
-[27.04.26 14:47:54] SUCCESS admin[268461367] -> 29014 Orfen admin_show_html teleports/raid.htm
-[27.04.26 14:47:55] SUCCESS admin[268461367] -> 29014 Orfen admin_show_html teleports/raid/raid_special.htm
-[27.04.26 14:47:56] SUCCESS admin[268461367] admin_move_to 17723 108915 -6493
-[27.04.26 14:48:04] SUCCESS admin[268461367] -> 29006 Core admin_kill
-[27.04.26 14:48:22] SUCCESS admin[268461367] admin_admin
-[27.04.26 14:48:23] SUCCESS admin[268461367] admin_show_moves
-[27.04.26 14:48:23] SUCCESS admin[268461367] admin_show_html teleports/town.htm
-[27.04.26 14:48:24] SUCCESS admin[268461367] admin_show_html teleports/town/aden.htm
-[27.04.26 14:48:25] SUCCESS admin[268461367] admin_move_to 147450 27064 -2208
-[27.04.26 14:49:29] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 40
-[27.04.26 14:57:43] SUCCESS admin[268461367] -> 25756 Gross Dre Vanul admin_kill
-[27.04.26 16:31:51] SUCCESS admin[268461367] -> 21653 Ikedit admin_admin
-[27.04.26 16:31:52] SUCCESS admin[268461367] -> 21653 Ikedit admin_char_manage
-[27.04.26 16:31:53] SUCCESS admin[268461367] -> 21653 Ikedit admin_show_characters 0
-[27.04.26 16:31:54] SUCCESS admin[268461367] -> admin[268461367] admin_character_list admin
-[27.04.26 16:31:57] SUCCESS admin[268461367] -> admin[268461367] admin_character_actions
-[27.04.26 16:31:58] SUCCESS admin[268461367] -> admin[268461367] admin_current_player
-[27.04.26 16:31:59] SUCCESS admin[268461367] -> admin[268461367] admin_admin
-[27.04.26 16:32:00] SUCCESS admin[268461367] -> admin[268461367] admin_show_html pledgemanage.htm
-[27.04.26 16:32:01] SUCCESS admin[268461367] -> admin[268461367] admin_admin
-[27.04.26 16:32:03] SUCCESS admin[268461367] -> admin[268461367] admin_show_html setclass.htm
-[27.04.26 16:32:04] SUCCESS admin[268461367] -> admin[268461367] admin_show_html classes/setclass_human.htm
-[27.04.26 16:32:15] SUCCESS admin[268461367] -> admin[268461367] admin_setclass 8
-[27.04.26 16:32:37] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 60
-[27.04.26 16:33:22] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 85
-[27.04.26 16:33:29] SUCCESS admin[268461367] -> admin[268461367] admin_admin
-[27.04.26 16:33:30] SUCCESS admin[268461367] -> admin[268461367] admin_char_manage
-[27.04.26 16:33:31] SUCCESS admin[268461367] -> admin[268461367] admin_show_characters 0
-[27.04.26 16:33:32] SUCCESS admin[268461367] -> admin[268461367] admin_character_list admin
-[27.04.26 16:33:33] SUCCESS admin[268461367] -> admin[268461367] admin_show_skills
-[27.04.26 16:33:34] SUCCESS admin[268461367] -> admin[268461367] admin_give_all_skills
-[27.04.26 16:34:02] SUCCESS admin[268461367] -> admin[268461367] admin_admin
-[27.04.26 16:34:05] SUCCESS admin[268461367] -> admin[268461367] admin_show_html setclass.htm
-[27.04.26 16:34:06] SUCCESS admin[268461367] -> admin[268461367] admin_show_html classes/setclass_human.htm
-[27.04.26 16:34:10] SUCCESS admin[268461367] -> admin[268461367] admin_setclass 93
-[27.04.26 16:34:53] SUCCESS admin[268461367] -> 21651 Flame Drake admin_admin
-[27.04.26 16:35:13] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 99
-[27.04.26 16:35:20] SUCCESS admin[268461367] -> admin[268461367] admin_admin
-[27.04.26 16:35:23] SUCCESS admin[268461367] -> admin[268461367] admin_char_manage
-[27.04.26 16:35:23] SUCCESS admin[268461367] -> admin[268461367] admin_show_characters 0
-[27.04.26 16:35:25] SUCCESS admin[268461367] -> admin[268461367] admin_character_list admin
-[27.04.26 16:35:26] SUCCESS admin[268461367] -> admin[268461367] admin_show_skills
-[27.04.26 16:35:27] SUCCESS admin[268461367] -> admin[268461367] admin_give_all_skills
-[27.04.26 16:36:47] SUCCESS admin[268461367] admin_admin
-[27.04.26 16:36:48] SUCCESS admin[268461367] admin_show_moves
-[27.04.26 16:36:49] SUCCESS admin[268461367] admin_show_html teleports/town.htm
-[27.04.26 16:36:49] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
-[27.04.26 16:36:51] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
-[27.04.26 16:41:25] SUCCESS admin[268461367] -> [Door 21240006] admin_open 268435868
-[27.04.26 16:44:20] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 76
-[27.04.26 16:44:28] SUCCESS admin[268461367] -> 29022 Zaken admin_kill
-[27.04.26 16:44:46] SUCCESS admin[268461367] -> 29022 Zaken admin_admin
-[27.04.26 16:44:47] SUCCESS admin[268461367] -> 29022 Zaken admin_show_moves
-[27.04.26 16:44:49] SUCCESS admin[268461367] -> 29022 Zaken admin_show_html teleports/town.htm
-[27.04.26 16:44:49] SUCCESS admin[268461367] -> 29022 Zaken admin_show_html teleports/town/giran.htm
-[27.04.26 16:44:50] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
-[27.04.26 17:11:39] SUCCESS admin[268461367] admin_admin
-[27.04.26 17:11:41] SUCCESS admin[268461367] admin_show_html pledgemanage.htm
-[27.04.26 17:11:44] FAIL    admin[268461367] admin_pledge create 123
-[27.04.26 17:11:49] SUCCESS admin[268461367] -> admin[268461367] admin_admin
-[27.04.26 17:11:53] SUCCESS admin[268461367] -> admin[268461367] admin_show_html pledgemanage.htm
-[27.04.26 17:11:59] SUCCESS admin[268461367] -> admin[268461367] admin_pledge create 12345
-[27.04.26 17:12:00] SUCCESS admin[268461367] -> admin[268461367] admin_admin
-[27.04.26 17:12:03] SUCCESS admin[268461367] -> admin[268461367] admin_show_html pledgemanage.htm
-[27.04.26 17:12:06] SUCCESS admin[268461367] -> admin[268461367] admin_pledge setlevel 6
-[27.04.26 17:12:41] SUCCESS admin[268461367] -> 33359 Kerry admin_admin
+[04.05.26 12:43:56] SUCCESS admin[268461367] admin_spawn 20106
+[04.05.26 12:43:56] SUCCESS admin[268461367] admin_spawn 20106
+[04.05.26 12:43:57] SUCCESS admin[268461367] admin_spawn 20106
+[04.05.26 12:43:58] SUCCESS admin[268461367] admin_spawn 20106
+[04.05.26 12:43:58] SUCCESS admin[268461367] admin_spawn 20106
+[04.05.26 12:43:59] SUCCESS admin[268461367] admin_spawn 20106
+[04.05.26 12:44:00] SUCCESS admin[268461367] admin_spawn 20106
+[04.05.26 12:55:27] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_admin
+[04.05.26 12:55:29] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_list_spawns
+[04.05.26 12:55:30] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_admin
+[04.05.26 12:55:34] SUCCESS admin[268461367] -> 20106 Giant Fang Spider admin_show_spawns
+[04.05.26 12:55:42] SUCCESS admin[268461367] admin_delete
+[04.05.26 12:55:46] SUCCESS admin[268461367] admin_delete
+[04.05.26 14:10:46] SUCCESS admin[268461367] admin_admin
+[04.05.26 14:10:48] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 14:10:56] SUCCESS admin[268461367] admin_show_html teleports/townarea.htm
+[04.05.26 14:10:57] SUCCESS admin[268461367] admin_show_html teleports/townarea/aden.htm
+[04.05.26 14:11:00] SUCCESS admin[268461367] admin_show_html teleports/townarea/aden-toi.htm
+[04.05.26 14:11:03] SUCCESS admin[268461367] admin_move_to 114552 12354 2957
+[04.05.26 14:12:05] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 70
+[04.05.26 14:12:35] SUCCESS admin[268461367] -> 20829 Platinum Tribe Prefect admin_admin
+[04.05.26 14:12:36] SUCCESS admin[268461367] -> 20829 Platinum Tribe Prefect admin_show_moves
+[04.05.26 14:12:40] SUCCESS admin[268461367] -> 20829 Platinum Tribe Prefect admin_show_html teleports/townarea.htm
+[04.05.26 14:12:41] SUCCESS admin[268461367] -> 20829 Platinum Tribe Prefect admin_show_html teleports/townarea/aden.htm
+[04.05.26 14:12:43] SUCCESS admin[268461367] -> 20829 Platinum Tribe Prefect admin_show_html teleports/townarea/aden-toi.htm
+[04.05.26 14:12:45] SUCCESS admin[268461367] admin_move_to 114605 19371 -645
+[04.05.26 14:18:59] SUCCESS admin[268461367] -> 20821 Erin Ediunce admin_admin
+[04.05.26 14:19:00] SUCCESS admin[268461367] -> 20821 Erin Ediunce admin_show_moves
+[04.05.26 14:19:02] SUCCESS admin[268461367] -> 20821 Erin Ediunce admin_show_html teleports/town.htm
+[04.05.26 14:19:03] SUCCESS admin[268461367] -> 20821 Erin Ediunce admin_show_html teleports/town/giran.htm
+[04.05.26 14:19:05] SUCCESS admin[268461367] admin_move_to 79711 145488 -3499
+[04.05.26 19:19:38] SUCCESS admin[268461367] admin_admin
+[04.05.26 19:19:39] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 19:19:41] SUCCESS admin[268461367] admin_show_html teleports/townarea.htm
+[04.05.26 19:19:43] SUCCESS admin[268461367] admin_show_html teleports/townarea/talkingisland.htm
+[04.05.26 19:19:45] SUCCESS admin[268461367] admin_move_to -99746 237538 -3572
+[04.05.26 19:19:59] SUCCESS admin[268461367] admin_invis
+[04.05.26 19:20:20] SUCCESS admin[268461367] admin_admin
+[04.05.26 19:20:21] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 19:20:22] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 19:20:23] SUCCESS admin[268461367] -> 21[268463263] admin_character_list 21
+[04.05.26 19:20:25] SUCCESS admin[268461367] -> 21[268463263] admin_character_actions
+[04.05.26 19:20:26] SUCCESS admin[268461367] -> 21[268463263] admin_recall 21
+[04.05.26 20:06:42] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:06:43] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 20:06:44] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[04.05.26 20:06:47] SUCCESS admin[268461367] admin_show_html teleports/town/ti_starting.htm
+[04.05.26 20:06:50] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[04.05.26 20:06:52] SUCCESS admin[268461367] admin_show_html teleports/town/elven_starting.htm
+[04.05.26 20:06:53] SUCCESS admin[268461367] admin_move_to 45873 49288 -3064
+[04.05.26 20:08:14] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:08:15] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 20:08:17] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[04.05.26 20:08:19] SUCCESS admin[268461367] admin_show_html teleports/town/dwarf_starting.htm
+[04.05.26 20:08:21] SUCCESS admin[268461367] admin_move_to 116551 -182493 -1525
+[04.05.26 20:08:54] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:14:28] SUCCESS admin[268461367] -> ChaosSting[268465542] admin_admin
+[04.05.26 20:14:29] SUCCESS admin[268461367] -> ChaosSting[268465542] admin_char_manage
+[04.05.26 20:14:29] SUCCESS admin[268461367] -> ChaosSting[268465542] admin_show_characters 0
+[04.05.26 20:14:34] SUCCESS admin[268461367] -> ChaosSting[268465542] admin_show_characters 10
+[04.05.26 20:14:37] SUCCESS admin[268461367] -> SkullCrusher[268462012] admin_character_list SkullCrusher
+[04.05.26 20:14:38] SUCCESS admin[268461367] -> SkullCrusher[268462012] admin_character_actions
+[04.05.26 20:14:39] SUCCESS admin[268461367] admin_teleportto SkullCrusher
+[04.05.26 20:14:52] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:14:54] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 20:14:55] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 20:14:57] SUCCESS admin[268461367] -> VoidSniper[268462428] admin_character_list VoidSniper
+[04.05.26 20:14:59] SUCCESS admin[268461367] -> VoidSniper[268462428] admin_character_actions
+[04.05.26 20:15:00] SUCCESS admin[268461367] admin_teleportto VoidSniper
+[04.05.26 20:23:05] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:23:06] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 20:23:22] SUCCESS admin[268461367] admin_move_to 46056 42088 -3472
+[04.05.26 20:25:46] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:25:47] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 20:25:48] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 20:25:51] SUCCESS admin[268461367] admin_show_characters 4
+[04.05.26 20:25:55] SUCCESS admin[268461367] admin_show_characters 12
+[04.05.26 20:25:58] SUCCESS admin[268461367] admin_show_characters 10
+[04.05.26 20:26:01] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 20:26:04] SUCCESS admin[268461367] admin_show_characters 1
+[04.05.26 20:26:07] SUCCESS admin[268461367] -> SkullPulse[268464627] admin_character_list SkullPulse
+[04.05.26 20:26:08] SUCCESS admin[268461367] -> SkullPulse[268464627] admin_character_actions
+[04.05.26 20:26:09] SUCCESS admin[268461367] admin_teleportto SkullPulse
+[04.05.26 20:26:21] SUCCESS admin[268461367] -> BloodClawX[268465946] admin_admin
+[04.05.26 20:26:22] SUCCESS admin[268461367] -> BloodClawX[268465946] admin_list_announcements
+[04.05.26 20:26:24] SUCCESS admin[268461367] -> BloodClawX[268465946] admin_admin
+[04.05.26 20:26:25] SUCCESS admin[268461367] -> BloodClawX[268465946] admin_show_moves
+[04.05.26 20:26:26] SUCCESS admin[268461367] -> BloodClawX[268465946] admin_show_html teleports/town.htm
+[04.05.26 20:26:27] SUCCESS admin[268461367] admin_show_html teleports/town/dwarf_starting.htm
+[04.05.26 20:26:28] SUCCESS admin[268461367] admin_move_to 116551 -182493 -1525
+[04.05.26 20:26:49] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:26:50] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 20:26:51] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[04.05.26 20:26:52] SUCCESS admin[268461367] admin_show_html teleports/town/ti_starting.htm
+[04.05.26 20:26:53] SUCCESS admin[268461367] admin_move_to -82687 243157 -3734
+[04.05.26 20:40:26] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:40:27] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 20:40:28] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 20:40:30] SUCCESS admin[268461367] -> BlazeRider[268462228] admin_character_list BlazeRider
+[04.05.26 20:40:31] SUCCESS admin[268461367] -> BlazeRider[268462228] admin_character_actions
+[04.05.26 20:40:33] SUCCESS admin[268461367] admin_teleportto BlazeRider
+[04.05.26 20:40:40] SUCCESS admin[268461367] -> RapidVenom[268462856] admin_set_level 6
+[04.05.26 20:42:23] SUCCESS admin[268461367] -> RapidVenom[268462856] admin_admin
+[04.05.26 20:42:24] SUCCESS admin[268461367] -> RapidVenom[268462856] admin_show_moves
+[04.05.26 20:42:25] SUCCESS admin[268461367] -> RapidVenom[268462856] admin_admin
+[04.05.26 20:42:26] SUCCESS admin[268461367] -> RapidVenom[268462856] admin_char_manage
+[04.05.26 20:42:27] SUCCESS admin[268461367] -> RapidVenom[268462856] admin_show_characters 0
+[04.05.26 20:42:33] SUCCESS admin[268461367] -> PhantomStrike[268464062] admin_character_list PhantomStrike
+[04.05.26 20:42:34] SUCCESS admin[268461367] -> PhantomStrike[268464062] admin_character_actions
+[04.05.26 20:42:35] SUCCESS admin[268461367] admin_teleportto PhantomStrike
+[04.05.26 20:42:43] SUCCESS admin[268461367] -> PhantomStrike[268464062] admin_set_level 6
+[04.05.26 20:50:13] SUCCESS admin[268461367] -> PhantomStrike[268464062] admin_admin
+[04.05.26 20:50:15] SUCCESS admin[268461367] -> PhantomStrike[268464062] admin_char_manage
+[04.05.26 20:50:16] SUCCESS admin[268461367] -> PhantomStrike[268464062] admin_show_characters 0
+[04.05.26 20:50:16] SUCCESS admin[268461367] -> PhantomStrike[268464062] admin_show_characters 2
+[04.05.26 20:50:19] SUCCESS admin[268461367] -> DeathPulse[268462481] admin_character_list DeathPulse
+[04.05.26 20:50:20] SUCCESS admin[268461367] -> DeathPulse[268462481] admin_character_actions
+[04.05.26 20:50:21] SUCCESS admin[268461367] admin_teleportto DeathPulse
+[04.05.26 20:51:38] SUCCESS admin[268461367] -> RogueShadow[268463754] admin_kill
+[04.05.26 20:56:21] SUCCESS admin[268461367] admin_invis
+[04.05.26 20:57:32] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:57:33] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 20:57:34] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 20:57:35] SUCCESS admin[268461367] admin_admin
+[04.05.26 20:57:36] SUCCESS admin[268461367] admin_server admserver.htm
+[04.05.26 20:57:37] SUCCESS admin[268461367] admin_server_shutdown
+[04.05.26 20:57:38] SUCCESS admin[268461367] admin_server_restart 1
+[04.05.26 20:58:29] SUCCESS admin[268461367] admin_invis
+[04.05.26 21:18:41] SUCCESS admin[268461367] admin_admin
+[04.05.26 21:18:42] SUCCESS admin[268461367] admin_gmshop
+[04.05.26 21:18:45] SUCCESS admin[268461367] admin_show_html gmstore/consumables.htm
+[04.05.26 21:18:47] SUCCESS admin[268461367] admin_buy 9938
+[04.05.26 21:18:58] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:08:50] SUCCESS admin[268461367] -> IronSerpent[268464750] admin_admin
+[04.05.26 22:08:51] SUCCESS admin[268461367] -> IronSerpent[268464750] admin_char_manage
+[04.05.26 22:08:52] SUCCESS admin[268461367] -> IronSerpent[268464750] admin_show_characters 0
+[04.05.26 22:08:55] SUCCESS admin[268461367] -> LunarWisp[268469215] admin_character_list LunarWisp
+[04.05.26 22:08:56] SUCCESS admin[268461367] -> LunarWisp[268469215] admin_character_actions
+[04.05.26 22:08:57] SUCCESS admin[268461367] admin_teleportto LunarWisp
+[04.05.26 22:10:03] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:10:05] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 22:11:27] SUCCESS admin[268461367] -> RapidFang[268468406] admin_admin
+[04.05.26 22:12:34] SUCCESS admin[268461367] -> RapidFang[268468406] admin_admin
+[04.05.26 22:12:35] SUCCESS admin[268461367] -> RapidFang[268468406] admin_show_moves
+[04.05.26 22:12:36] SUCCESS admin[268461367] -> RapidFang[268468406] admin_show_html teleports/town.htm
+[04.05.26 22:12:37] SUCCESS admin[268461367] -> RapidFang[268468406] admin_show_html teleports/town/ti_starting.htm
+[04.05.26 22:12:38] SUCCESS admin[268461367] admin_move_to -82687 243157 -3734
+[04.05.26 22:14:02] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:14:02] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 22:14:03] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 22:14:06] SUCCESS admin[268461367] admin_show_characters 50
+[04.05.26 22:14:09] SUCCESS admin[268461367] -> StormThorn[268466276] admin_character_list StormThorn
+[04.05.26 22:14:10] SUCCESS admin[268461367] -> StormThorn[268466276] admin_character_actions
+[04.05.26 22:14:11] SUCCESS admin[268461367] admin_teleportto StormThorn
+[04.05.26 22:14:50] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:50] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:51] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:51] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:51] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:52] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:52] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:52] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:52] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:53] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:53] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:53] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:53] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:53] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:54] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:54] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:54] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:54] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:55] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:55] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:55] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:55] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:55] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:56] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:56] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:56] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:56] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:57] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:57] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:57] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:57] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:58] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:58] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:58] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:58] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:58] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:59] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:59] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:59] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:14:59] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:01] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:01] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:01] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:04] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:04] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:04] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:04] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:10] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:10] SUCCESS admin[268461367] -> KexWolf[268480060] admin_spawn 18342
+[04.05.26 22:15:10] SUCCESS admin[268461367] -> KexWolf[268480060] admin_spawn 18342
+[04.05.26 22:15:11] SUCCESS admin[268461367] -> KexWolf[268480060] admin_spawn 18342
+[04.05.26 22:15:11] SUCCESS admin[268461367] -> KexWolf[268480060] admin_spawn 18342
+[04.05.26 22:15:11] SUCCESS admin[268461367] -> KexWolf[268480060] admin_spawn 18342
+[04.05.26 22:15:11] SUCCESS admin[268461367] -> KexWolf[268480060] admin_spawn 18342
+[04.05.26 22:15:12] SUCCESS admin[268461367] -> KexWolf[268480060] admin_spawn 18342
+[04.05.26 22:15:12] SUCCESS admin[268461367] -> KexWolf[268480060] admin_spawn 18342
+[04.05.26 22:15:13] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:14] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:14] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:14] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:14] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:18] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:18] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:18] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:18] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:19] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:19] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:19] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:19] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:19] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:20] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:20] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:20] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:21] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:21] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:21] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:21] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:22] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:22] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:22] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:23] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:23] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:23] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:23] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:24] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:24] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:24] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:24] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:26] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:26] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:26] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:26] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:31] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:31] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:31] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:32] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:32] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:32] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:33] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:33] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:33] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:33] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:34] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:34] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:34] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:34] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:35] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:15:37] SUCCESS admin[268461367] admin_show_spawns
+[04.05.26 22:15:43] SUCCESS admin[268461367] admin_spawn_monster 18342
+[04.05.26 22:15:45] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:15:47] SUCCESS admin[268461367] admin_show_spawns
+[04.05.26 22:15:48] SUCCESS admin[268461367] admin_spawn_monster
+[04.05.26 22:15:54] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:15:54] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:15:57] SUCCESS admin[268461367] admin_list_spawns
+[04.05.26 22:15:59] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:15:59] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:01] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:01] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:01] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:01] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:04] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:04] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:04] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:10] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:10] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:10] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:10] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:10] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:11] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:11] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:11] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:12] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:12] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:12] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:12] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:13] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:13] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:13] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:13] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:13] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:14] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:14] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:14] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:18] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:18] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:18] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:18] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:18] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:19] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:19] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:19] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:19] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:20] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:20] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:20] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:20] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:16:20] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:30:17] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:30:18] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 22:30:29] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 22:30:34] SUCCESS admin[268461367] admin_find_character shadowspark
+[04.05.26 22:30:48] SUCCESS admin[268461367] admin_find_character RioCreek
+[04.05.26 22:30:50] SUCCESS admin[268461367] admin_character_list RioCreek
+[04.05.26 22:30:51] SUCCESS admin[268461367] admin_character_actions
+[04.05.26 22:31:01] SUCCESS admin[268461367] -> 30218 Kendell admin_admin
+[04.05.26 22:31:02] SUCCESS admin[268461367] -> 30218 Kendell admin_char_manage
+[04.05.26 22:31:04] SUCCESS admin[268461367] -> 30218 Kendell admin_show_characters 0
+[04.05.26 22:31:08] SUCCESS admin[268461367] -> 30218 Kendell admin_find_character rio
+[04.05.26 22:31:14] SUCCESS admin[268461367] -> 30218 Kendell admin_find_character riocreeck
+[04.05.26 22:31:26] SUCCESS admin[268461367] admin_find_character steelcore
+[04.05.26 22:31:31] SUCCESS admin[268461367] admin_find_character steelcore
+[04.05.26 22:31:40] SUCCESS admin[268461367] admin_find_character stormblade
+[04.05.26 22:31:40] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:31:41] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 22:31:42] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 22:31:47] SUCCESS admin[268461367] admin_character_list SkullGrove
+[04.05.26 22:31:48] SUCCESS admin[268461367] admin_character_actions
+[04.05.26 22:31:50] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:31:51] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 22:31:52] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 22:31:56] SUCCESS admin[268461367] -> RuneRage[268477703] admin_character_list RuneRage
+[04.05.26 22:31:57] SUCCESS admin[268461367] -> RuneRage[268477703] admin_character_actions
+[04.05.26 22:31:58] SUCCESS admin[268461367] admin_teleportto RuneRage
+[04.05.26 22:32:03] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:32:03] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 22:32:04] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 22:32:09] SUCCESS admin[268461367] admin_show_characters 45
+[04.05.26 22:32:14] SUCCESS admin[268461367] admin_character_list ApexCrest
+[04.05.26 22:32:15] SUCCESS admin[268461367] admin_character_actions
+[04.05.26 22:32:28] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:32:30] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 22:32:30] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[04.05.26 22:32:32] SUCCESS admin[268461367] admin_show_html teleports/town/dwarf_starting.htm
+[04.05.26 22:32:33] SUCCESS admin[268461367] admin_move_to 116551 -182493 -1525
+[04.05.26 22:32:58] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:32:59] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 22:33:13] SUCCESS admin[268461367] admin_move_to 119864 -18896 -4000
+[04.05.26 22:33:24] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:33:25] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 22:33:39] SUCCESS admin[268461367] admin_move_to 120360 -187768 -4000
+[04.05.26 22:34:31] SUCCESS admin[268461367] -> 31035 Protector admin_admin
+[04.05.26 22:34:32] SUCCESS admin[268461367] -> 31035 Protector admin_show_moves
+[04.05.26 22:34:33] SUCCESS admin[268461367] -> 31035 Protector admin_show_html teleports/town.htm
+[04.05.26 22:34:34] SUCCESS admin[268461367] -> 31035 Protector admin_show_html teleports/town/orc_starting.htm
+[04.05.26 22:34:35] SUCCESS admin[268461367] admin_move_to -44133 -113911 -244
+[04.05.26 22:35:24] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:26] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:26] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:26] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:30] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:30] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:30] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:30] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:31] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:31] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:31] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:31] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:32] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:32] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:32] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:32] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:32] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:33] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:33] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:33] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:34] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:34] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:34] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:34] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:35] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:35] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:35] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:35] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:36] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:36] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:36] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:36] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:37] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:37] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:37] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:37] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:38] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:38] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:38] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:38] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:38] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:39] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:39] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:39] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:39] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:40] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:40] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:40] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:40] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:41] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:41] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:41] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:41] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:41] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:42] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:42] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:42] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:42] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:43] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:43] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:43] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:43] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:44] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:44] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:44] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:45] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:45] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:45] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:45] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:45] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:46] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:46] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:46] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:46] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:47] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:47] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:47] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:48] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:48] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:48] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:50] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:50] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:50] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:51] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:51] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:51] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:52] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:52] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:53] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:53] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:53] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:54] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:54] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:55] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:55] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:55] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:55] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:56] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:56] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:57] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:57] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:57] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:58] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:35:59] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:00] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:01] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:01] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:02] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:03] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:04] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:04] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:05] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:06] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:07] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:08] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:09] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:10] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:11] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:11] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:11] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:12] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:12] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:12] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:12] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:13] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:13] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:13] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:14] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:14] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:15] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:16] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:17] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:24] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:24] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:25] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:26] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:26] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:27] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:28] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:29] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:30] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:30] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:31] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:31] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:32] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:33] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:34] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:35] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:36] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:37] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:38] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:39] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:40] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:41] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:42] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:43] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:44] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:36:45] SUCCESS admin[268461367] admin_spawn 18342
+[04.05.26 22:37:04] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:37:05] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 22:37:06] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 22:37:11] SUCCESS admin[268461367] admin_show_characters 25
+[04.05.26 22:37:16] SUCCESS admin[268461367] admin_character_list VexStone
+[04.05.26 22:37:17] SUCCESS admin[268461367] admin_character_actions
+[04.05.26 22:58:31] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:58:33] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 22:58:34] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 22:58:40] SUCCESS admin[268461367] admin_show_characters 1
+[04.05.26 22:58:45] SUCCESS admin[268461367] -> NightGrove[268463635] admin_character_list NightGrove
+[04.05.26 22:58:46] SUCCESS admin[268461367] -> NightGrove[268463635] admin_character_actions
+[04.05.26 22:58:47] SUCCESS admin[268461367] admin_teleportto NightGrove
+[04.05.26 22:58:53] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:58:55] SUCCESS admin[268461367] admin_show_moves
+[04.05.26 22:58:56] SUCCESS admin[268461367] admin_admin
+[04.05.26 22:58:58] FAIL    admin[268461367] admin_events
+[04.05.26 22:58:59] SUCCESS admin[268461367] admin_char_manage
+[04.05.26 22:59:01] SUCCESS admin[268461367] admin_show_characters 0
+[04.05.26 22:59:07] SUCCESS admin[268461367] admin_find_character NightCrove
+[04.05.26 22:59:12] SUCCESS admin[268461367] admin_find_character Night
+[04.05.26 22:59:15] SUCCESS admin[268461367] -> NightGrove[268463635] admin_character_list NightGrove
+[04.05.26 22:59:16] SUCCESS admin[268461367] -> NightGrove[268463635] admin_character_actions
+[04.05.26 22:59:17] SUCCESS admin[268461367] admin_teleportto NightGrove

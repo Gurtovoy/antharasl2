@@ -1,14 +1,14 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.database;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Time;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -55,19 +55,52 @@ public abstract class mysql {
 
     public static void setVars(PreparedStatement statement, Object ... vars) throws SQLException {
         for (int i = 0; i < vars.length; ++i) {
-            if (vars[i] instanceof Number) {
-                double double_val;
-                Number n = (Number)vars[i];
-                long long_val = n.longValue();
-                if ((double)long_val == (double_val = n.doubleValue())) {
-                    statement.setLong(i + 1, long_val);
-                    continue;
-                }
-                statement.setDouble(i + 1, double_val);
+            Object v = vars[i];
+            int idx = i + 1;
+            if (v == null) {
+                statement.setObject(idx, null);
                 continue;
             }
-            if (!(vars[i] instanceof String)) continue;
-            statement.setString(i + 1, (String)vars[i]);
+            if (v instanceof Number) {
+                double double_val;
+                Number n = (Number)v;
+                long long_val = n.longValue();
+                if ((double)long_val == (double_val = n.doubleValue())) {
+                    statement.setLong(idx, long_val);
+                    continue;
+                }
+                statement.setDouble(idx, double_val);
+                continue;
+            }
+            if (v instanceof Boolean) {
+                statement.setBoolean(idx, (Boolean)v);
+                continue;
+            }
+            if (v instanceof String) {
+                statement.setString(idx, (String)v);
+                continue;
+            }
+            if (v instanceof byte[]) {
+                statement.setBytes(idx, (byte[])v);
+                continue;
+            }
+            if (v instanceof Timestamp) {
+                statement.setTimestamp(idx, (Timestamp)v);
+                continue;
+            }
+            if (v instanceof Date) {
+                statement.setDate(idx, (Date)v);
+                continue;
+            }
+            if (v instanceof Time) {
+                statement.setTime(idx, (Time)v);
+                continue;
+            }
+            if (v instanceof java.util.Date) {
+                statement.setTimestamp(idx, new Timestamp(((java.util.Date)v).getTime()));
+                continue;
+            }
+            throw new SQLException("mysql.setVars: unsupported type at index " + i + ": " + v.getClass().getName());
         }
     }
 

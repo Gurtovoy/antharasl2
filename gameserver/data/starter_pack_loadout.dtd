@@ -1,0 +1,36 @@
+<!ELEMENT starter_pack_loadout (settings?, loadout+)>
+
+<!ELEMENT settings EMPTY>
+<!ATTLIST settings
+	level CDATA #IMPLIED>
+
+<!ELEMENT loadout (weapons?, armors?, accessorys?, consumable?)>
+<!ATTLIST loadout
+	role (WARRIOR|MAGE) #REQUIRED>
+
+<!ELEMENT weapons (item*)>
+<!ELEMENT armors (pack*)>
+<!ELEMENT pack (item*)>
+<!ATTLIST pack
+	type (LIGHT|MAGIC) #REQUIRED>
+
+<!ELEMENT accessorys (item*)>
+
+<!ELEMENT consumable (warrior_hit?, mage_hit?, rebuff_scroll?)>
+<!ELEMENT warrior_hit EMPTY>
+<!ATTLIST warrior_hit
+	id CDATA #REQUIRED
+	count CDATA #IMPLIED>
+<!ELEMENT mage_hit EMPTY>
+<!ATTLIST mage_hit
+	id CDATA #REQUIRED
+	count CDATA #IMPLIED>
+<!ELEMENT rebuff_scroll EMPTY>
+<!ATTLIST rebuff_scroll
+	id CDATA #REQUIRED
+	count CDATA #IMPLIED
+	cooldown_ms CDATA #IMPLIED>
+
+<!ELEMENT item EMPTY>
+<!ATTLIST item
+	id CDATA #REQUIRED>

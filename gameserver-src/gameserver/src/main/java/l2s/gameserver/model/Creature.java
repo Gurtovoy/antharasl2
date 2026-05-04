@@ -1,6 +1,3 @@
-/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model;
 
 import gnu.trove.set.TIntSet;
@@ -613,13 +610,13 @@ extends GameObject {
     public void useTriggers(GameObject target, Set<Creature> targets, TriggerType type, Skill ex, Skill owner, StatTemplate triggersOwner, double damage) {
         Set<TriggerInfo> triggers = null;
         switch (type) {
-            case ON_START_CAST:
-            case ON_TICK_CAST:
-            case ON_END_CAST:
-            case ON_FINISH_CAST:
-            case ON_START_EFFECT:
-            case ON_EXIT_EFFECT:
-            case ON_FINISH_EFFECT:
+            case ON_START_CAST: 
+            case ON_TICK_CAST: 
+            case ON_END_CAST: 
+            case ON_FINISH_CAST: 
+            case ON_START_EFFECT: 
+            case ON_EXIT_EFFECT: 
+            case ON_FINISH_EFFECT: 
             case ON_REVIVE: {
                 if (triggersOwner == null) break;
                 triggers = new CopyOnWriteArraySet();
@@ -833,8 +830,8 @@ extends GameObject {
         AttackPacket attack = new AttackPacket(this, target, ssEnabled, ssGrade);
         this.setHeading(PositionUtils.calculateHeadingFrom(this, target), false);
         switch (this.getBaseStats().getAttackType()) {
-            case BOW:
-            case CROSSBOW:
+            case BOW: 
+            case CROSSBOW: 
             case TWOHANDCROSSBOW: {
                 this.doAttackHitByBow(attack, target, sAtk);
                 break;
@@ -843,9 +840,9 @@ extends GameObject {
                 this.doAttackHitByPole(attack, target, sAtk);
                 break;
             }
-            case DUAL:
-            case DUALFIST:
-            case DUALDAGGER:
+            case DUAL: 
+            case DUALFIST: 
+            case DUALDAGGER: 
             case DUALBLUNT: {
                 this.doAttackHitByDual(attack, target, sAtk);
                 break;
@@ -1476,6 +1473,9 @@ extends GameObject {
         this.broadcastPacket(this.stopMovePacket());
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int[] getWaterZ() {
         int[] waterZ = new int[]{Integer.MIN_VALUE, Integer.MAX_VALUE};
         if (!this.isInWater()) {
@@ -1511,6 +1511,9 @@ extends GameObject {
         return new MTLPacket(this);
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void updateZones() {
         if (this.isTeleporting()) {
             return;
@@ -1584,6 +1587,9 @@ extends GameObject {
         return this.isInZone(Zone.ZoneType.peace_zone) && !this.isInZoneBattle();
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean isHaveZoneParam(String param) {
         this.zonesRead.lock();
         try {
@@ -1624,6 +1630,9 @@ extends GameObject {
         return this.isInZone(Zone.ZoneType.ssq_zone);
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean isInDangerArea() {
         this.zonesRead.lock();
         try {
@@ -1640,6 +1649,9 @@ extends GameObject {
         return false;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean isInZone(Zone.ZoneType type) {
         this.zonesRead.lock();
         try {
@@ -1656,6 +1668,9 @@ extends GameObject {
         return false;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public List<Event> getZoneEvents() {
         List<Event> e = Collections.emptyList();
         this.zonesRead.lock();
@@ -1675,6 +1690,9 @@ extends GameObject {
         return e;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean isInZone(String name) {
         this.zonesRead.lock();
         try {
@@ -1702,6 +1720,9 @@ extends GameObject {
         }
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Zone getZone(Zone.ZoneType type) {
         this.zonesRead.lock();
         try {
@@ -1722,6 +1743,9 @@ extends GameObject {
         return this._zones;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Location getRestartPoint() {
         this.zonesRead.lock();
         try {
@@ -1739,6 +1763,9 @@ extends GameObject {
         return null;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public Location getPKRestartPoint() {
         this.zonesRead.lock();
         try {
@@ -2116,9 +2143,13 @@ extends GameObject {
         return this._ai != null;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public CharacterAI getAI() {
         if (this._ai == null) {
-            synchronized (this) {
+            Creature creature = this;
+            synchronized (creature) {
                 if (this._ai == null) {
                     this._ai = new CharacterAI(this);
                 }
@@ -2127,12 +2158,16 @@ extends GameObject {
         return this._ai;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void setAI(CharacterAI newAI) {
         if (newAI == null) {
             return;
         }
         CharacterAI oldAI = this._ai;
-        synchronized (this) {
+        Creature creature = this;
+        synchronized (creature) {
             this._ai = newAI;
         }
         if (oldAI != null && oldAI.isActive()) {
@@ -2753,9 +2788,13 @@ extends GameObject {
         return this.getBaseStats().getCollisionHeight();
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public AbnormalList getAbnormalList() {
         if (this._effectList == null) {
-            synchronized (this) {
+            Creature creature = this;
+            synchronized (creature) {
                 if (this._effectList == null) {
                     this._effectList = new AbnormalList(this);
                 }
@@ -3053,6 +3092,9 @@ extends GameObject {
         return this.setXYZ(x, y, z, false);
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean setXYZ(int x, int y, int z, boolean stopMove) {
         if (!stopMove) {
             this.getMovement().stopMove();
@@ -3144,9 +3186,13 @@ extends GameObject {
 
     public abstract WeaponTemplate getSecondaryWeaponTemplate();
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public CharListenerList getListeners() {
         if (this.listeners == null) {
-            synchronized (this) {
+            Creature creature = this;
+            synchronized (creature) {
                 if (this.listeners == null) {
                     this.listeners = new CharListenerList(this);
                 }
@@ -3163,9 +3209,13 @@ extends GameObject {
         return this.getListeners().remove(listener);
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public CharStatsChangeRecorder<? extends Creature> getStatsRecorder() {
         if (this._statsRecorder == null) {
-            synchronized (this) {
+            Creature creature = this;
+            synchronized (creature) {
                 if (this._statsRecorder == null) {
                     this._statsRecorder = new CharStatsChangeRecorder<Creature>(this);
                 }
@@ -3565,9 +3615,13 @@ extends GameObject {
         return true;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public BasicPropertyResist getBasicPropertyResist(BasicProperty basicProperty) {
         if (this._basicPropertyResists == null) {
-            synchronized (this) {
+            Creature creature = this;
+            synchronized (creature) {
                 if (this._basicPropertyResists == null) {
                     this._basicPropertyResists = new ConcurrentHashMap<BasicProperty, BasicPropertyResist>();
                 }
@@ -3628,6 +3682,9 @@ extends GameObject {
         private RegenTask() {
         }
 
+        /*
+         * WARNING - Removed try catching itself - possible behaviour change.
+         */
         @Override
         public void run() {
             if (Creature.this.isAlikeDead() || Creature.this.getRegenTick() == 0L) {
@@ -3749,3 +3806,4 @@ extends GameObject {
         }
     }
 }
+

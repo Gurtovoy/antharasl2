@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.utils;
 
 import java.io.BufferedReader;
@@ -8,27 +5,35 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.LineNumberReader;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import l2s.commons.util.Rnd;
 import l2s.gameserver.Config;
 import l2s.gameserver.ThreadPoolManager;
 import l2s.gameserver.ai.FakeAI;
 import l2s.gameserver.data.xml.holder.FakeItemHolder;
+import l2s.gameserver.data.xml.holder.SkillAcquireHolder;
 import l2s.gameserver.data.xml.holder.ItemHolder;
 import l2s.gameserver.handler.items.IItemHandler;
 import l2s.gameserver.handler.items.impl.BlessedSpiritShotItemHandler;
 import l2s.gameserver.handler.items.impl.SoulShotItemHandler;
 import l2s.gameserver.handler.items.impl.SpiritShotItemHandler;
+import l2s.gameserver.model.Playable;
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.SkillLearn;
+import l2s.gameserver.model.base.AcquireType;
 import l2s.gameserver.model.base.ClassId;
 import l2s.gameserver.model.base.SoulShotType;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.items.PcInventory;
 import l2s.gameserver.network.l2.c2s.Say2C;
+import l2s.gameserver.skills.SkillEntry;
+import l2s.gameserver.skills.SkillEntryType;
 import l2s.gameserver.network.l2.components.ChatType;
 import l2s.gameserver.templates.item.ItemGrade;
 import l2s.gameserver.templates.item.ItemTemplate;
 import l2s.gameserver.templates.item.WeaponTemplate;
+import l2s.gameserver.templates.item.data.ItemData;
 import l2s.gameserver.utils.ItemFunctions;
 import org.apache.commons.lang3.StringUtils;
 import org.napile.primitive.collections.IntCollection;
@@ -54,7 +59,9 @@ public class FakePlayerUtils {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void checkInventory(FakeAI ai) {
         Player player = ai.getActor();
         player.getInventory().writeLock();
@@ -139,7 +146,9 @@ public class FakePlayerUtils {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static boolean addEquip(FakeAI ai, int itemId) {
         ItemTemplate item = ItemHolder.getInstance().getTemplate(itemId);
         if (item == null) {
@@ -247,6 +256,73 @@ public class FakePlayerUtils {
         }
     }
 
+    /**
+     * Learns NORMAL skill-tree skills that match the fake player's level (same rules as a class trainer),
+     * including non-{@code autoGet} entries. Repeats until no more skills are available at the current
+     * level. SP and spellbooks are subsidized when missing so progression does not stall.
+     */
+    public static void learnNormalClassSkillsForFake(Player player) {
+        if (!player.isFakePlayer()) {
+            return;
+        }
+        int round = 0;
+        while (round++ < 512) {
+            Collection<SkillLearn> learns = SkillAcquireHolder.getInstance().getAvailableSkills(player, AcquireType.NORMAL);
+            if (learns == null || learns.isEmpty()) {
+                break;
+            }
+            int progressed = 0;
+            for (SkillLearn sl : learns) {
+                if (sl.getMinLevel() > player.getLevel()) {
+                    continue;
+                }
+                SkillEntry skillEntry = SkillEntry.makeSkillEntry(SkillEntryType.NONE, sl.getId(), sl.getLevel());
+                if (skillEntry == null) {
+                    continue;
+                }
+                if (!SkillAcquireHolder.getInstance().isSkillPossible(player, null, skillEntry.getTemplate(), AcquireType.NORMAL)) {
+                    continue;
+                }
+                int curLvl = player.getSkillLevel(sl.getId(), 0);
+                if (curLvl != sl.getLevel() - 1) {
+                    continue;
+                }
+                boolean haveItems = true;
+                for (ItemData item : sl.getRequiredItemsForLearn(AcquireType.NORMAL)) {
+                    if (!ItemFunctions.haveItem(player, item.getId(), item.getCount())) {
+                        haveItems = false;
+                        break;
+                    }
+                }
+                if (!haveItems) {
+                    continue;
+                }
+                player.getInventory().writeLock();
+                try {
+                    for (ItemData item : sl.getRequiredItemsForLearn(AcquireType.NORMAL)) {
+                        ItemFunctions.deleteItem((Playable)player, item.getId(), item.getCount(), true);
+                    }
+                }
+                finally {
+                    player.getInventory().writeUnlock();
+                }
+                long cost = sl.getCost();
+                if (player.getSp() < cost) {
+                    player.setSp(player.getSp() + cost);
+                }
+                player.setSp(player.getSp() - cost);
+                player.addSkill(skillEntry, true);
+                progressed++;
+            }
+            if (progressed == 0) {
+                break;
+            }
+            player.updateStats();
+        }
+        player.rewardSkills(false, true, true, false);
+        player.checkSkills();
+    }
+
     public static void setProf(Player player) {
         List<Integer> allowClassIds = FakePlayerUtils.getAllowClassIds(player);
         if (!allowClassIds.isEmpty()) {
@@ -285,7 +361,9 @@ public class FakePlayerUtils {
         return allowClassId;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     static {
         String msg;
         String line;

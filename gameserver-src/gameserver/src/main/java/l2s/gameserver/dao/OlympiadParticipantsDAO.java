@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -31,7 +28,9 @@ public class OlympiadParticipantsDAO {
         return _instance;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void select() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -67,7 +66,9 @@ public class OlympiadParticipantsDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void replace(int participantId) {
         OlympiadParticipiantData data = Olympiad.getParticipantInfo(participantId);
         if (data == null) {
@@ -103,7 +104,9 @@ public class OlympiadParticipantsDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void delete(int participantId) {
         Connection con = null;
         PreparedStatement statement = null;

@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver;
 
 import java.util.Timer;
@@ -100,133 +97,133 @@ extends Thread {
 
     @Override
     public void run() {
-        System.out.println("Shutting down LS/GS communication...");
+        _log.info("Shutting down LS/GS communication...");
         AuthServerCommunication.getInstance().shutdown();
-        System.out.println("Disconnecting players...");
+        _log.info("Disconnecting players...");
         this.disconnectAllPlayers();
         GameServer gameServer = GameServer.getInstance();
         if (gameServer != null) {
             gameServer.getListeners().onShutdown();
         }
-        System.out.println("Saving data...");
+        _log.info("Saving data...");
         this.saveData();
         try {
-            System.out.println("Shutting down thread pool...");
+            _log.info("Shutting down thread pool...");
             ThreadPoolManager.getInstance().shutdown();
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("Thread pool shutdown failed", e);
         }
-        System.out.println("Shutting down selector...");
+        _log.info("Shutting down selector...");
         if (gameServer != null) {
             for (SelectorThread<GameClient> st : gameServer.getSelectorThreads()) {
                 try {
                     st.shutdown();
                 }
                 catch (Exception e) {
-                    e.printStackTrace();
+                    _log.error("Selector shutdown failed: " + st, e);
                 }
             }
         }
         try {
-            System.out.println("Shutting down database communication...");
+            _log.info("Shutting down database communication...");
             DatabaseFactory.getInstance().shutdown();
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("Database shutdown failed", e);
         }
-        System.out.println("Shutdown finished.");
+        _log.info("Shutdown finished.");
     }
 
     private void saveData() {
         try {
             AutobotScheduler.getInstance().shutdown();
-            System.out.println("AutobotScheduler: Shutdown complete.");
+            _log.info("AutobotScheduler: Shutdown complete.");
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("AutobotScheduler shutdown failed", e);
         }
         try {
             AutobotsManager.getInstance().shutdown();
-            System.out.println("AutobotsManager: All bots despawned.");
+            _log.info("AutobotsManager: All bots despawned.");
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("AutobotsManager shutdown failed", e);
         }
         try {
             StarterPackManager.getInstance().shutdown();
-            System.out.println("StarterPackManager: All starter bots despawned.");
+            _log.info("StarterPackManager: All starter bots despawned.");
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("StarterPackManager shutdown failed", e);
         }
         try {
             WebServer.getInstance().shutdown();
-            System.out.println("WebServer: Stopped.");
+            _log.info("WebServer: Stopped.");
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("WebServer shutdown failed", e);
         }
         try {
             RaidBossSpawnManager.getInstance().updateAllStatusDb();
-            System.out.println("RaidBossSpawnManager: Data saved.");
+            _log.info("RaidBossSpawnManager: Data saved.");
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("RaidBossSpawnManager save failed", e);
         }
         if (Config.ENABLE_OLYMPIAD) {
             try {
                 OlympiadDatabase.save();
-                System.out.println("Olympiad: Data saved.");
+                _log.info("Olympiad: Data saved.");
             }
             catch (Exception e) {
-                e.printStackTrace();
+                _log.error("Olympiad save failed", e);
             }
         }
         if (Config.ALLOW_WEDDING) {
             try {
                 CoupleManager.getInstance().store();
-                System.out.println("CoupleManager: Data saved.");
+                _log.info("CoupleManager: Data saved.");
             }
             catch (Exception e) {
-                e.printStackTrace();
+                _log.error("CoupleManager save failed", e);
             }
         }
         try {
             Hero.getInstance().shutdown();
-            System.out.println("Hero: Data saved.");
+            _log.info("Hero: Data saved.");
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("Hero shutdown failed", e);
         }
         try {
             ClanTable.getInstance().storeClanWars();
-            System.out.println("Clan War: Data saved.");
+            _log.info("Clan War: Data saved.");
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("Clan war save failed", e);
         }
         try {
             ClanTable.getInstance().saveClanHuntingProgress();
-            System.out.println("Clan Data: Hunting progress saved.");
+            _log.info("Clan Data: Hunting progress saved.");
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("Clan hunting progress save failed", e);
         }
         try {
             ClanSearchManager.getInstance().save();
-            System.out.println("ClanSearchManager: Data saved.");
+            _log.info("ClanSearchManager: Data saved.");
         }
         catch (Exception e) {
-            e.printStackTrace();
+            _log.error("ClanSearchManager save failed", e);
         }
         if (Config.BOTREPORT_ENABLED) {
             try {
                 BotReportManager.getInstance().saveReportedCharData();
-                System.out.println("BotReportManager: Data saved.");
+                _log.info("BotReportManager: Data saved.");
             }
             catch (Exception e) {
-                e.printStackTrace();
+                _log.error("BotReportManager save failed", e);
             }
         }
     }
@@ -237,11 +234,10 @@ extends Thread {
                 player.logout();
             }
             catch (Exception e) {
-                System.out.println("Error while disconnecting: " + player + "!");
-                e.printStackTrace();
+                _log.error("Error while disconnecting player: {}", player, e);
             }
         }
-        System.out.println("All players disconnected.");
+        _log.info("All players disconnected.");
     }
 
     private class ShutdownCounter

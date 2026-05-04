@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.instancemanager;
 
 import java.sql.Connection;
@@ -25,7 +22,9 @@ public class ServerVariables {
         return server_vars;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private static void LoadFromDB() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -51,7 +50,9 @@ public class ServerVariables {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rs);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private static void SaveToDB(String name) {
         Connection con = null;
         PreparedStatement statement = null;

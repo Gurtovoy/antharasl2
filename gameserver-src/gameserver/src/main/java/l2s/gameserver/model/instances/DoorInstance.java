@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.instances;
 
 import java.util.ArrayList;
@@ -151,7 +148,9 @@ extends Creature {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public DoorAI getAI() {
         if (this._ai == null) {

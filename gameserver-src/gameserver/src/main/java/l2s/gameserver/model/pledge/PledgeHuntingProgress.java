@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.pledge;
 
 import java.sql.Connection;
@@ -41,7 +38,9 @@ implements JdbcEntity {
         return this._jdbcEntityState;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void update() {
         if (!this.getJdbcState().isUpdatable()) {
             return;

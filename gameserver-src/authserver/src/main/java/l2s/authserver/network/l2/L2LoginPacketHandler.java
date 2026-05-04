@@ -1,10 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.net.nio.impl.IPacketHandler
- *  l2s.commons.net.nio.impl.ReceivablePacket
- */
 package l2s.authserver.network.l2;
 
 import java.nio.ByteBuffer;

@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.actor.instances.player;
 
 import java.util.Collection;
@@ -42,7 +39,9 @@ public class AttendanceRewards {
         this._owner = owner;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void restore() {
         this.writeLock();
         try {
@@ -103,7 +102,9 @@ public class AttendanceRewards {
         return this.getReceivedRewardIndex() == this.getNextRewardIndex();
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean receiveReward() {
         this.writeLock();
         try {

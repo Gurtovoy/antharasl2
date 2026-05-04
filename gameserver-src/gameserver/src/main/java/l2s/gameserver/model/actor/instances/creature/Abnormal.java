@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.actor.instances.creature;
 
 import java.util.Collection;
@@ -275,7 +272,9 @@ Comparable<Abnormal> {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void suspend() {
         if (this.setState(0, -1)) {
             this.startEffectTask();
@@ -287,7 +286,9 @@ Comparable<Abnormal> {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void start() {
         if (this.setState(-1, 1)) {
             Abnormal abnormal = this;
@@ -304,7 +305,9 @@ Comparable<Abnormal> {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public void run() {
         --this._timeLeft;
@@ -362,7 +365,9 @@ Comparable<Abnormal> {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void exit() {
         if (this.setState(0, 2)) {
             this.getEffected().getAbnormalList().remove(this);

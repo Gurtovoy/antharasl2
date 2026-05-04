@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.instances;
 
 import java.util.ArrayList;
@@ -379,7 +376,9 @@ extends NpcInstance {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public boolean takeSweep(Player player) {
         this.sweepLock.lock();
         try {

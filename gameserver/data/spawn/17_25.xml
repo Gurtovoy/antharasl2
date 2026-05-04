@@ -360,7 +360,7 @@
 		<point x="-91008" y="248016" z="-3568" h="6000"/>
 		<npc id="30017"/><!--Галлинт-->
 	</spawn>
-	<spawn name="gludio32_qm1725_01" count="30" respawn="15">
+	<spawn name="gludio32_qm1725_01" count="45" respawn="15">
 		<territory>
 			<add x="-91080" y="248292" zmin="-3648" zmax="-3448"/>
 			<add x="-90792" y="247860" zmin="-3648" zmax="-3448"/>
@@ -369,7 +369,7 @@
 		</territory>
 		<npc id="18342"/><!--Гремлин-->
 	</spawn>
-	<spawn name="gludio32_qm1725_00" count="30" respawn="15">
+	<spawn name="gludio32_qm1725_00" count="45" respawn="15">
 		<territory>
 			<add x="-71944" y="258332" zmin="-3148" zmax="-2948"/>
 			<add x="-71316" y="257772" zmin="-3148" zmax="-2948"/>

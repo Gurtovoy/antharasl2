@@ -1,10 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.apache.commons.math3.random.MersenneTwister
- *  org.apache.commons.math3.random.RandomGenerator
- */
 package l2s.commons.util;
 
 import java.util.List;

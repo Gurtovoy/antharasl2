@@ -1,9 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.util.Rnd
- */
 package l2s.authserver.network.l2;
 
 import l2s.authserver.Config;

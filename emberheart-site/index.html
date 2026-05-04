@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emberheart Classic x3 — Lineage II Classic Server</title>
+    <meta name="description" content="Lineage II Classic сервер с хрониками Classic и рейтами x3. Присоединяйся к битве!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-ember"></div>
+        <div class="preloader-text">Загрузка мира...</div>
+    </div>
+
+    <!-- Language Switcher -->
+    <div class="lang-switch">
+        <button class="lang-btn active">RU</button>
+        <button class="lang-btn">EN</button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- Side Navigation -->
+    <nav class="sidenav" id="sidenav">
+        <a href="#hero" class="sidenav-logo" aria-label="Home">
+            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+            </svg>
+        </a>
+        <div class="sidenav-divider"></div>
+        <ul class="sidenav-list">
+            <li class="sidenav-item">
+                <a href="#hero" class="sidenav-link active">
+                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
+                    </svg>
+                    <span class="sidenav-label">Главная</span>
+                </a>
+            </li>
+            <li class="sidenav-item">
+                <a href="#servers" class="sidenav-link">
+                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="8" rx="2"/>
+                        <rect x="2" y="14" width="20" height="8" rx="2"/>
+                        <line x1="6" y1="6" x2="6.01" y2="6"/>
+                        <line x1="6" y1="18" x2="6.01" y2="18"/>
+                    </svg>
+                    <span class="sidenav-label">Сервера</span>
+                </a>
+            </li>
+            <li class="sidenav-item">
+                <a href="#news" class="sidenav-link">
+                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                        <polyline points="14 2 14 8 20 8"/>
+                        <line x1="16" y1="13" x2="8" y2="13"/>
+                        <line x1="16" y1="17" x2="8" y2="17"/>
+                        <polyline points="10 9 9 9 8 9"/>
+                    </svg>
+                    <span class="sidenav-label">Новости</span>
+                </a>
+            </li>
+            <li class="sidenav-item">
+                <a href="#downloads" class="sidenav-link">
+                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7 10 12 15 17 10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    <span class="sidenav-label">Файлы</span>
+                </a>
+            </li>
+            <li class="sidenav-item">
+                <a href="#about" class="sidenav-link">
+                    <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="16" x2="12" y2="12"/>
+                        <line x1="12" y1="8" x2="12.01" y2="8"/>
+                    </svg>
+                    <span class="sidenav-label">О сервере</span>
+                </a>
+            </li>
+        </ul>
+        <div class="sidenav-bottom">
+            <a href="#" class="sidenav-social" aria-label="Discord">
+                <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </a>
+            <a href="#" class="sidenav-social" aria-label="Telegram">
+                <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-grid"></div>
+            <div class="hero-embers" id="embers"></div>
+            <div class="hero-vignette"></div>
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span class="hero-badge-text">Скоро открытие</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="hero-title-line1">Emberheart</span>
+                    <span class="hero-title-line2">Classic x3</span>
+                </h1>
+                <p class="hero-subtitle">Классическая Lineage II в огне вечной битвы. Хроники Classic, рейты x3, ностальгия без компромиссов.</p>
+                <div class="hero-actions">
+                    <a href="#downloads" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Начать игру
+                    </a>
+                    <a href="#about" class="btn btn-ghost">Подробнее</a>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-value" id="statOnline">2,847</div>
+                    <div class="hero-stat-label">Онлайн</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">x3</div>
+                    <div class="hero-stat-label">Рейты</div>
+                </div>
+                <div class="hero-stat">
+                    <div class="hero-stat-value">Classic</div>
+                    <div class="hero-stat-label">Хроники</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servers Section -->
+        <section class="section servers" id="servers">
+            <div class="section-header reveal">
+                <div class="section-label">Статус миров</div>
+                <h2 class="section-title">Игровые <span>сервера</span></h2>
+            </div>
+            <div class="servers-grid">
+                <div class="server-card reveal reveal-delay-1">
+                    <div class="server-header">
+                        <div class="server-icon">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <div class="server-info">
+                            <div class="server-name">Ignis x3</div>
+                            <div class="server-chronicle">Lineage II Classic</div>
+                        </div>
+                        <div class="server-status online">Online</div>
+                    </div>
+                    <div class="server-stats">
+                        <div class="server-stat">
+                            <div class="server-stat-value" id="server1Online">1,542</div>
+                            <div class="server-stat-label">Онлайн</div>
+                        </div>
+                        <div class="server-stat">
+                            <div class="server-stat-value">245</div>
+                            <div class="server-stat-label">Торговцы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="server-card reveal reveal-delay-2">
+                    <div class="server-header">
+                        <div class="server-icon">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                        </div>
+                        <div class="server-info">
+                            <div class="server-name">Cinder PvP x50</div>
+                            <div class="server-chronicle">Lineage II Classic</div>
+                        </div>
+                        <div class="server-status online">Online</div>
+                    </div>
+                    <div class="server-stats">
+                        <div class="server-stat">
+                            <div class="server-stat-value">892</div>
+                            <div class="server-stat-label">Онлайн</div>
+                        </div>
+                        <div class="server-stat">
+                            <div class="server-stat-value">67</div>
+                            <div class="server-stat-label">Торговцы</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="server-card reveal reveal-delay-3">
+                    <div class="server-header">
+                        <div class="server-icon">
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        </div>
+                        <div class="server-info">
+                            <div class="server-name">Ash x1</div>
+                            <div class="server-chronicle">Lineage II Classic</div>
+                        </div>
+                        <div class="server-status online">Online</div>
+                    </div>
+                    <div class="server-stats">
+                        <div class="server-stat">
+                            <div class="server-stat-value">413</div>
+                            <div class="server-stat-label">Онлайн</div>
+                        </div>
+                        <div class="server-stat">
+                            <div class="server-stat-value">89</div>
+                            <div class="server-stat-label">Торговцы</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- News Section -->
+        <section class="section news" id="news">
+            <div class="section-header reveal">
+                <div class="section-label">События</div>
+                <h2 class="section-title">Последние <span>новости</span></h2>
+            </div>
+            <div class="news-grid">
+                <article class="news-card reveal reveal-delay-1">
+                    <div class="news-image" style="background-image: url('images/news-castle.png')">
+                        <span class="news-tag">Важное</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">27 апреля 2026</div>
+                        <h3 class="news-title">Открытие сервера Emberheart Classic x3</h3>
+                        <p class="news-excerpt">Долгожданное открытие основного игрового мира. Уникальная экономика, классический геймплей и огненные битвы ждут вас.</p>
+                        <a href="#" class="news-link">
+                            Читать далее
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </article>
+                <article class="news-card reveal reveal-delay-2">
+                    <div class="news-image" style="background-image: url('images/news-battle.png')">
+                        <span class="news-tag">Событие</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">25 апреля 2026</div>
+                        <h3 class="news-title">Бонусный старт для новых игроков</h3>
+                        <p class="news-excerpt">Всем новым персонажам: премиум-аккаунт на 7 дней, руна опыта +50% и стартовый набор экипировки D-grade.</p>
+                        <a href="#" class="news-link">
+                            Читать далее
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </article>
+                <article class="news-card reveal reveal-delay-3">
+                    <div class="news-image" style="background-image: url('images/news-dragon.png')">
+                        <span class="news-tag">Обновление</span>
+                    </div>
+                    <div class="news-body">
+                        <div class="news-date">20 апреля 2026</div>
+                        <h3 class="news-title">Техническое обновление клиента</h3>
+                        <p class="news-excerpt">Оптимизация производительности, исправление визуальных багов и улучшение стабильности соединения.</p>
+                        <a href="#" class="news-link">
+                            Читать далее
+                            <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Downloads Section -->
+        <section class="section downloads" id="downloads">
+            <div class="section-header reveal">
+                <div class="section-label">Начни играть</div>
+                <h2 class="section-title">Файлы для <span>игры</span></h2>
+            </div>
+            <div class="downloads-grid">
+                <div class="download-card reveal reveal-delay-1">
+                    <div class="download-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3 class="download-name">Игровой клиент</h3>
+                    <p class="download-desc">Пропатченный клиент Lineage II Classic с нашими настройками и оптимизациями.</p>
+                    <a href="#" class="download-btn">Скачать</a>
+                </div>
+                <div class="download-card reveal reveal-delay-2">
+                    <div class="download-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3 class="download-name">Патч сервера</h3>
+                    <p class="download-desc">Актуальный патч с файлами сервера для подключения к игровым мирам.</p>
+                    <a href="#" class="download-btn">Скачать</a>
+                </div>
+                <div class="download-card reveal reveal-delay-3">
+                    <div class="download-icon">
+                        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 21h5v-5"/></svg>
+                    </div>
+                    <h3 class="download-name">Updater</h3>
+                    <p class="download-desc">Автоматическое обновление клиента и патчей в один клик.</p>
+                    <a href="#" class="download-btn">Скачать</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section about" id="about">
+            <div class="about-grid">
+                <div class="about-visual reveal">
+                    <div class="about-frame">
+                        <img src="images/about-warrior.png" alt="Warrior" loading="lazy">
+                    </div>
+                </div>
+                <div class="about-content reveal reveal-delay-1">
+                    <div class="about-subtitle">О сервере</div>
+                    <h2 class="about-title">Окунитесь в мир <em>классической битвы</em></h2>
+                    <p class="about-text">Emberheart Classic — это возвращение к истокам Lineage II. Мы сохранили аутентичный игровой процесс хроник Classic с комфортными рейтами x3, убрав излишнюю гриндовость, но оставив все вызовы оригинала.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <span class="about-feature-text">Защита от ботов и читов</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <span class="about-feature-text">Стабильный онлайн 24/7</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <span class="about-feature-text">Активное комьюнити</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">
+                                <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+                            </div>
+                            <span class="about-feature-text">Регулярные обновления</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+                        Регистрация
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">Emberheart <span>Classic</span></div>
+                    <p class="footer-desc">Классический Lineage II сервер с рейтами x3. Аутентичный геймплей, честная экономика, живое комьюнити.</p>
+                </div>
+                <div>
+                    <div class="footer-heading">Навигация</div>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Главная</a></li>
+                        <li><a href="#servers">Сервера</a></li>
+                        <li><a href="#news">Новости</a></li>
+                        <li><a href="#downloads">Файлы</a></li>
+                        <li><a href="#about">О сервере</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <div class="footer-heading">Сообщество</div>
+                    <ul class="footer-links">
+                        <li><a href="#">Личный кабинет</a></li>
+                        <li><a href="#">Форум</a></li>
+                        <li><a href="#">Поддержка</a></li>
+                        <li><a href="#">Правила сервера</a></li>
+                    </ul>
+                    <div class="footer-socials">
+                        <a href="#" class="footer-social" aria-label="Discord">
+                            <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                        </a>
+                        <a href="#" class="footer-social" aria-label="Telegram">
+                            <svg viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                        </a>
+                        <a href="#" class="footer-social" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">&copy; 2026 Emberheart Classic. Все права защищены.</div>
+                <div class="footer-legal">
+                    <a href="#">Правила</a>
+                    <a href="#">Политика конфиденциальности</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

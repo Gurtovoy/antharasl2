@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.geodata;
 
 import gnu.trove.iterator.TIntIntIterator;
@@ -24,7 +21,9 @@ public class PathFindBuffers {
     private static int[] sizes = new int[0];
     private static Lock lock = new ReentrantLock();
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private static PathFindBuffer create(int mapSize) {
         lock.lock();
         try {
@@ -49,7 +48,9 @@ public class PathFindBuffers {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private static PathFindBuffer get(int mapSize) {
         lock.lock();
         try {
@@ -103,7 +104,9 @@ public class PathFindBuffers {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static StrTable getStats() {
         StrTable table = new StrTable("PathFind Buffers Stats");
         lock.lock();

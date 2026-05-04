@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.network.l2;
 
 import java.nio.ByteBuffer;
@@ -91,7 +88,9 @@ extends MMOClient<MMOConnection<GameClient>> {
     protected void onForcedDisconnection() {
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void markRestoredChar(int charslot) throws Exception {
         int objid = this.getObjectIdForSlot(charslot);
         if (objid < 0) {
@@ -121,7 +120,9 @@ extends MMOClient<MMOConnection<GameClient>> {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void markToDeleteChar(int charslot) throws Exception {
         int objid = this.getObjectIdForSlot(charslot);
         if (objid < 0) {

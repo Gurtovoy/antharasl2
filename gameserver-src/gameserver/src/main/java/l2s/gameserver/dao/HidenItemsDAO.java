@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.dao;
 
 import java.sql.Connection;
@@ -18,7 +15,9 @@ public class HidenItemsDAO {
     private static final Logger _log = LoggerFactory.getLogger(HidenItemsDAO.class);
     private static ArrayList<Integer> _l = new ArrayList();
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void LoadAllHiddenItems() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -49,7 +48,9 @@ public class HidenItemsDAO {
         _log.info("Hidden items loaded size: " + _l.size() + "");
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void addHiddenItem(ItemInstance item) {
         if (_l.contains(item.getObjectId())) {
             return;

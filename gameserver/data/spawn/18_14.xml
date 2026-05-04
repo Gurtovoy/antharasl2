@@ -49,7 +49,7 @@
 		</territory>
 		<npc id="31036"/><!--Центурион-->
 	</spawn>
-	<spawn name="rhion07_qm1814_00" count="35" respawn="15">
+	<spawn name="rhion07_qm1814_00" count="45" respawn="15">
 		<territory>
 			<add x="-56808" y="-113944" zmin="-716" zmax="-516"/>
 			<add x="-55732" y="-113948" zmin="-716" zmax="-516"/>

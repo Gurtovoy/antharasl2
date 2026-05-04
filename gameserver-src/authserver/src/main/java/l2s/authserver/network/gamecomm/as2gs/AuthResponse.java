@@ -1,9 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.net.HostInfo
- */
 package l2s.authserver.network.gamecomm.as2gs;
 
 import l2s.authserver.Config;

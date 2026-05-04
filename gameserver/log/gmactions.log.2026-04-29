@@ -1,0 +1,240 @@
+[29.04.26 16:40:48] SUCCESS admin[268461367] admin_admin
+[29.04.26 16:40:50] SUCCESS admin[268461367] admin_char_manage
+[29.04.26 16:40:52] SUCCESS admin[268461367] admin_show_characters 0
+[29.04.26 16:40:54] SUCCESS admin[268461367] -> admin[268461367] admin_character_list admin
+[29.04.26 16:40:55] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[29.04.26 16:40:57] SUCCESS admin[268461367] -> admin[268461367] admin_show_html pledgemanage.htm
+[29.04.26 16:44:11] SUCCESS admin[268461367] -> 20655 Lesser Giant Shooter admin_admin
+[29.04.26 16:44:13] SUCCESS admin[268461367] -> 20655 Lesser Giant Shooter admin_show_moves
+[29.04.26 16:44:14] SUCCESS admin[268461367] admin_show_html teleports/castle.htm
+[29.04.26 16:44:16] SUCCESS admin[268461367] admin_show_html teleports/castle/aden.htm
+[29.04.26 16:44:17] SUCCESS admin[268461367] admin_move_to 147446 4652 -340
+[29.04.26 16:44:30] SUCCESS admin[268461367] admin_admin
+[29.04.26 16:44:36] SUCCESS admin[268461367] -> admin[268461367] admin_residence_list
+[29.04.26 16:44:38] SUCCESS admin[268461367] -> admin[268461367] admin_residence 5
+[29.04.26 16:44:48] SUCCESS admin[268461367] -> admin[268461367] admin_set_owner 5 12345
+[29.04.26 16:45:12] SUCCESS admin[268461367] -> 35276 Eldon admin_admin
+[29.04.26 16:45:14] SUCCESS admin[268461367] -> 35276 Eldon admin_show_moves
+[29.04.26 16:45:15] SUCCESS admin[268461367] -> 35276 Eldon admin_show_html teleports/town.htm
+[29.04.26 16:45:17] SUCCESS admin[268461367] -> 35276 Eldon admin_show_html teleports.htm
+[29.04.26 16:45:17] SUCCESS admin[268461367] -> 35276 Eldon admin_show_html teleports/castle.htm
+[29.04.26 16:45:19] SUCCESS admin[268461367] -> 35276 Eldon admin_show_html teleports/castle/oren.htm
+[29.04.26 16:45:20] SUCCESS admin[268461367] admin_move_to 82576 37189 -2290
+[29.04.26 16:45:25] SUCCESS admin[268461367] admin_admin
+[29.04.26 16:45:28] SUCCESS admin[268461367] -> admin[268461367] admin_residence_list
+[29.04.26 16:45:30] SUCCESS admin[268461367] -> admin[268461367] admin_residence 5
+[29.04.26 16:45:33] SUCCESS admin[268461367] -> admin[268461367] admin_set_owner 5 NPC
+[29.04.26 16:45:34] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[29.04.26 16:45:35] SUCCESS admin[268461367] -> admin[268461367] admin_residence_list
+[29.04.26 16:45:37] SUCCESS admin[268461367] -> admin[268461367] admin_residence 4
+[29.04.26 16:45:40] SUCCESS admin[268461367] -> admin[268461367] admin_set_owner 4 12345
+[29.04.26 17:03:53] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_admin
+[29.04.26 17:03:54] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_server admserver.htm
+[29.04.26 17:03:55] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_server_shutdown
+[29.04.26 17:03:56] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_server_restart 1
+[29.04.26 17:05:06] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_admin
+[29.04.26 17:05:07] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_residence_list
+[29.04.26 17:05:10] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_residence 29
+[29.04.26 17:05:13] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_set_owner 29 12345
+[29.04.26 17:05:19] SUCCESS admin[268461367] admin_kill
+[29.04.26 17:05:56] SUCCESS admin[268461367] -> [Door 17220012] admin_admin
+[29.04.26 17:05:57] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 17:05:58] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[29.04.26 17:05:58] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[29.04.26 17:05:59] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[29.04.26 17:06:20] SUCCESS admin[268461367] -> [Door 22220010] admin_open 268436065
+[29.04.26 17:09:39] SUCCESS admin[268461367] -> 30767 Auctioneer admin_admin
+[29.04.26 17:09:40] SUCCESS admin[268461367] -> 30767 Auctioneer admin_residence_list
+[29.04.26 17:09:43] SUCCESS admin[268461367] -> 30767 Auctioneer admin_residence 29
+[29.04.26 17:09:51] SUCCESS admin[268461367] -> 30767 Auctioneer admin_set_owner 29 NPC
+[29.04.26 17:09:52] SUCCESS admin[268461367] -> 30767 Auctioneer admin_admin
+[29.04.26 17:09:55] SUCCESS admin[268461367] -> 30767 Auctioneer admin_residence_list
+[29.04.26 17:10:26] SUCCESS admin[268461367] -> [Door 22220005] admin_open 268436074
+[29.04.26 17:10:34] SUCCESS admin[268461367] -> [Door 22220006] admin_open 268436071
+[29.04.26 17:36:31] SUCCESS admin[268461367] admin_admin
+[29.04.26 17:36:32] SUCCESS admin[268461367] admin_server admserver.htm
+[29.04.26 17:36:33] SUCCESS admin[268461367] admin_server_shutdown
+[29.04.26 17:36:34] SUCCESS admin[268461367] admin_server_restart 1
+[29.04.26 17:37:14] SUCCESS admin[268461367] admin_admin
+[29.04.26 17:37:26] SUCCESS admin[268461367] admin_admin
+[29.04.26 17:37:28] SUCCESS admin[268461367] admin_residence_list
+[29.04.26 17:37:30] SUCCESS admin[268461367] admin_residence 30
+[29.04.26 17:37:33] SUCCESS admin[268461367] admin_set_owner 30 12345
+[29.04.26 17:37:36] SUCCESS admin[268461367] admin_kill
+[29.04.26 17:38:08] SUCCESS admin[268461367] -> 35400 Horner admin_admin
+[29.04.26 17:38:29] SUCCESS admin[268461367] -> 35401 Amiel admin_admin
+[29.04.26 17:38:32] SUCCESS admin[268461367] -> 35401 Amiel admin_show_moves
+[29.04.26 17:38:33] SUCCESS admin[268461367] -> 35401 Amiel admin_show_html teleports/town.htm
+[29.04.26 17:38:34] SUCCESS admin[268461367] -> 35401 Amiel admin_show_html teleports/town/giran.htm
+[29.04.26 17:38:35] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[29.04.26 17:38:53] SUCCESS admin[268461367] -> 30767 Auctioneer admin_admin
+[29.04.26 17:38:55] SUCCESS admin[268461367] -> 30767 Auctioneer admin_residence_list
+[29.04.26 17:38:57] SUCCESS admin[268461367] -> 30767 Auctioneer admin_residence 30
+[29.04.26 17:39:02] SUCCESS admin[268461367] -> 30767 Auctioneer admin_set_owner 30 NPC
+[29.04.26 17:39:03] SUCCESS admin[268461367] -> 30767 Auctioneer admin_admin
+[29.04.26 17:39:03] SUCCESS admin[268461367] -> 30767 Auctioneer admin_admin
+[29.04.26 17:39:04] SUCCESS admin[268461367] -> 30767 Auctioneer admin_residence_list
+[29.04.26 17:39:24] SUCCESS admin[268461367] -> 30767 Auctioneer admin_admin
+[29.04.26 17:39:25] SUCCESS admin[268461367] -> 30767 Auctioneer admin_residence_list
+[29.04.26 17:39:48] SUCCESS admin[268461367] -> 30767 Auctioneer admin_residence 68
+[29.04.26 17:39:53] SUCCESS admin[268461367] -> 30767 Auctioneer admin_set_owner 68 12345
+[29.04.26 17:39:56] SUCCESS admin[268461367] admin_kill
+[29.04.26 17:40:15] SUCCESS admin[268461367] -> 36727 Arinas admin_admin
+[29.04.26 17:40:19] SUCCESS admin[268461367] admin_kill
+[29.04.26 17:56:46] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_admin
+[29.04.26 17:56:47] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_server admserver.htm
+[29.04.26 17:56:48] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_server_shutdown
+[29.04.26 17:57:44] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_admin
+[29.04.26 17:57:48] SUCCESS admin[268461367] admin_kill
+[29.04.26 18:09:54] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_invis
+[29.04.26 18:10:48] SUCCESS admin[268461367] admin_kill
+[29.04.26 18:11:42] SUCCESS admin[268461367] -> 36727 Arinas admin_admin
+[29.04.26 18:11:44] SUCCESS admin[268461367] -> 36727 Arinas admin_show_moves
+[29.04.26 18:11:45] SUCCESS admin[268461367] -> 36727 Arinas admin_show_html teleports/town.htm
+[29.04.26 18:11:46] SUCCESS admin[268461367] -> 36727 Arinas admin_show_html teleports/town/oren.htm
+[29.04.26 18:11:47] SUCCESS admin[268461367] -> 36727 Arinas admin_show_html teleports/town.htm
+[29.04.26 18:11:48] SUCCESS admin[268461367] -> 36727 Arinas admin_admin
+[29.04.26 18:11:49] SUCCESS admin[268461367] -> 36727 Arinas admin_show_moves
+[29.04.26 18:11:51] SUCCESS admin[268461367] -> 36727 Arinas admin_show_html teleports/castle.htm
+[29.04.26 18:11:52] SUCCESS admin[268461367] -> 36727 Arinas admin_show_html teleports/castle/oren.htm
+[29.04.26 18:11:52] SUCCESS admin[268461367] admin_move_to 82576 37189 -2290
+[29.04.26 18:38:30] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_invis
+[29.04.26 18:38:54] SUCCESS admin[268461367] admin_kill
+[29.04.26 18:39:51] SUCCESS admin[268461367] -> 36727 Arinas admin_admin
+[29.04.26 18:39:54] SUCCESS admin[268461367] -> admin[268461367] admin_show_moves
+[29.04.26 18:39:55] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/castle.htm
+[29.04.26 18:39:56] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/castle/oren.htm
+[29.04.26 18:39:57] SUCCESS admin[268461367] admin_move_to 82576 37189 -2290
+[29.04.26 18:45:30] SUCCESS admin[268461367] admin_kill
+[29.04.26 18:46:07] SUCCESS admin[268461367] -> 36727 Arinas admin_admin
+[29.04.26 18:46:10] SUCCESS admin[268461367] -> 36727 Arinas admin_show_moves
+[29.04.26 18:46:11] SUCCESS admin[268461367] -> 36727 Arinas admin_show_html teleports/castle.htm
+[29.04.26 18:46:12] SUCCESS admin[268461367] -> 36727 Arinas admin_show_html teleports/castle/oren.htm
+[29.04.26 18:46:13] SUCCESS admin[268461367] admin_move_to 82576 37189 -2290
+[29.04.26 19:03:30] SUCCESS admin[268461367] admin_kill
+[29.04.26 19:05:57] SUCCESS admin[268461367] -> 36727 Arinas admin_admin
+[29.04.26 19:05:59] SUCCESS admin[268461367] -> 36727 Arinas admin_show_moves
+[29.04.26 19:06:00] SUCCESS admin[268461367] -> 36727 Arinas admin_show_html teleports/castle.htm
+[29.04.26 19:06:01] SUCCESS admin[268461367] -> 36727 Arinas admin_show_html teleports/castle/oren.htm
+[29.04.26 19:06:02] SUCCESS admin[268461367] admin_move_to 82576 37189 -2290
+[29.04.26 19:06:58] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_admin
+[29.04.26 19:06:59] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_show_moves
+[29.04.26 19:07:00] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_show_html teleports/raid.htm
+[29.04.26 19:07:01] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_show_html teleports/raid/raid_special.htm
+[29.04.26 19:07:03] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_show_html teleports.htm
+[29.04.26 19:07:04] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_show_html teleports/raid.htm
+[29.04.26 19:07:05] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_show_html teleports/raid/raid_80.htm
+[29.04.26 19:07:06] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_admin
+[29.04.26 19:07:09] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_show_moves
+[29.04.26 19:07:11] SUCCESS admin[268461367] -> 35226 Chamberlain of Light admin_show_html teleports/others.htm
+[29.04.26 19:07:17] SUCCESS admin[268461367] admin_move_to -112959 -251147 -2992
+[29.04.26 19:07:26] SUCCESS admin[268461367] admin_admin
+[29.04.26 19:07:27] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 19:07:28] SUCCESS admin[268461367] admin_show_html teleports/raid.htm
+[29.04.26 19:07:29] SUCCESS admin[268461367] admin_admin
+[29.04.26 19:07:30] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 19:07:30] SUCCESS admin[268461367] admin_show_html teleports/others.htm
+[29.04.26 19:07:31] SUCCESS admin[268461367] admin_move_to 106545 -175091 1300
+[29.04.26 19:07:55] SUCCESS admin[268461367] admin_admin
+[29.04.26 19:07:56] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 19:07:58] SUCCESS admin[268461367] admin_show_html teleports/others.htm
+[29.04.26 19:07:59] SUCCESS admin[268461367] admin_show_html teleports.htm
+[29.04.26 19:08:00] SUCCESS admin[268461367] admin_show_html teleports/arena.htm
+[29.04.26 19:08:01] SUCCESS admin[268461367] admin_show_html teleports.htm
+[29.04.26 19:08:03] SUCCESS admin[268461367] admin_show_html teleports/clanhall/clanhall.htm
+[29.04.26 19:08:06] SUCCESS admin[268461367] admin_move_to 140997 -123379 -1911
+[29.04.26 19:08:18] SUCCESS admin[268461367] -> [Door 24140004] admin_open 268435737
+[29.04.26 19:08:37] SUCCESS admin[268461367] -> [Door 24140003] admin_admin
+[29.04.26 19:08:38] SUCCESS admin[268461367] -> [Door 24140003] admin_show_moves
+[29.04.26 19:08:40] SUCCESS admin[268461367] -> [Door 24140003] admin_show_html teleports/clanhall/clanhall.htm
+[29.04.26 19:08:43] SUCCESS admin[268461367] admin_move_to 86575 -19745 -1936
+[29.04.26 19:08:59] SUCCESS admin[268461367] admin_admin
+[29.04.26 19:09:01] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 19:09:01] SUCCESS admin[268461367] admin_show_html teleports/clanhall/clanhall.htm
+[29.04.26 19:09:02] SUCCESS admin[268461367] admin_move_to 45556 109807 -1995
+[29.04.26 19:09:40] SUCCESS admin[268461367] -> 20210 Ol Mahum Lieutenant admin_admin
+[29.04.26 19:09:42] SUCCESS admin[268461367] -> 20210 Ol Mahum Lieutenant admin_show_moves
+[29.04.26 19:09:43] SUCCESS admin[268461367] -> 20210 Ol Mahum Lieutenant admin_show_html teleports/raid.htm
+[29.04.26 19:09:44] SUCCESS admin[268461367] -> 20210 Ol Mahum Lieutenant admin_show_html teleports/raid/raid_70.htm
+[29.04.26 19:09:46] SUCCESS admin[268461367] -> 20210 Ol Mahum Lieutenant admin_admin
+[29.04.26 19:09:47] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 19:09:48] SUCCESS admin[268461367] admin_show_html teleports/raid.htm
+[29.04.26 19:09:49] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_60.htm
+[29.04.26 19:09:51] SUCCESS admin[268461367] admin_move_to 155000 85400 -3200
+[29.04.26 19:10:13] SUCCESS admin[268461367] admin_admin
+[29.04.26 19:10:14] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 19:10:15] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[29.04.26 19:10:17] SUCCESS admin[268461367] admin_show_html teleports/town/oren.htm
+[29.04.26 19:10:18] SUCCESS admin[268461367] admin_move_to 82321 55139 -1529
+[29.04.26 19:11:16] SUCCESS admin[268461367] -> 25743 Priest Orfen Lord Ipos admin_kill
+[29.04.26 19:11:30] SUCCESS admin[268461367] admin_admin
+[29.04.26 19:11:31] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 19:11:32] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[29.04.26 19:11:33] SUCCESS admin[268461367] admin_show_html teleports/town/dion.htm
+[29.04.26 19:11:34] SUCCESS admin[268461367] admin_move_to 18748 145437 -3132
+[29.04.26 19:13:11] SUCCESS admin[268461367] -> 27139 Secret Keeper Tree admin_admin
+[29.04.26 19:13:13] SUCCESS admin[268461367] -> 27139 Secret Keeper Tree admin_show_moves
+[29.04.26 19:13:16] SUCCESS admin[268461367] admin_tonpc 27139
+[29.04.26 19:14:00] SUCCESS admin[268461367] -> 25742 Priest of Core Decar admin_kill
+[29.04.26 19:14:04] SUCCESS admin[268461367] -> 25742 Priest of Core Decar admin_admin
+[29.04.26 19:14:05] SUCCESS admin[268461367] -> 25742 Priest of Core Decar admin_show_moves
+[29.04.26 19:14:05] SUCCESS admin[268461367] -> 25742 Priest of Core Decar admin_show_html teleports/town.htm
+[29.04.26 19:14:07] SUCCESS admin[268461367] -> 25742 Priest of Core Decar admin_show_html teleports/town/giran.htm
+[29.04.26 19:14:08] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[29.04.26 19:15:20] SUCCESS admin[268461367] -> 25739 Angel Priest of Baium admin_kill
+[29.04.26 19:15:27] SUCCESS admin[268461367] admin_admin
+[29.04.26 19:15:28] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 19:15:29] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[29.04.26 19:15:30] SUCCESS admin[268461367] admin_show_html teleports/town/gludio.htm
+[29.04.26 19:15:31] SUCCESS admin[268461367] admin_move_to -14225 123540 -3121
+[29.04.26 19:16:08] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[29.04.26 19:16:11] SUCCESS admin[268461367] -> admin[268461367] admin_enchant
+[29.04.26 19:16:20] SUCCESS admin[268461367] -> admin[268461367] admin_setew 127
+[29.04.26 19:16:48] SUCCESS admin[268461367] -> 25738 Queen Ant Drone Priest admin_kill
+[29.04.26 19:16:52] SUCCESS admin[268461367] -> 25738 Queen Ant Drone Priest admin_admin
+[29.04.26 19:16:53] SUCCESS admin[268461367] -> 25738 Queen Ant Drone Priest admin_show_moves
+[29.04.26 19:16:54] SUCCESS admin[268461367] -> 25738 Queen Ant Drone Priest admin_show_html teleports/castle.htm
+[29.04.26 19:16:54] SUCCESS admin[268461367] -> 25738 Queen Ant Drone Priest admin_admin
+[29.04.26 19:16:55] SUCCESS admin[268461367] admin_show_moves
+[29.04.26 19:16:56] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[29.04.26 19:16:57] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[29.04.26 19:16:59] SUCCESS admin[268461367] admin_move_to 77528 148183 -3596
+[29.04.26 19:17:44] SUCCESS admin[268461367] -> 30300 Pushkin admin_admin
+[29.04.26 19:17:45] SUCCESS admin[268461367] -> 30300 Pushkin admin_gmshop
+[29.04.26 19:17:46] SUCCESS admin[268461367] -> 30300 Pushkin admin_show_html gmstore/gear/armor.htm
+[29.04.26 19:17:47] SUCCESS admin[268461367] -> 30300 Pushkin admin_buy 9955
+[29.04.26 19:17:58] SUCCESS admin[268461367] -> 30300 Pushkin admin_admin
+[29.04.26 19:18:00] SUCCESS admin[268461367] -> 30300 Pushkin admin_enchant
+[29.04.26 19:18:04] SUCCESS admin[268461367] -> 30300 Pushkin admin_setdha 11
+[29.04.26 19:18:12] SUCCESS admin[268461367] -> 30300 Pushkin admin_seteg 11
+[29.04.26 19:18:13] SUCCESS admin[268461367] -> 30300 Pushkin admin_seteh 11
+[29.04.26 19:18:15] SUCCESS admin[268461367] -> 30300 Pushkin admin_setec 11
+[29.04.26 19:18:22] SUCCESS admin[268461367] -> admin[268461367] admin_seteg 11
+[29.04.26 19:18:26] SUCCESS admin[268461367] -> admin[268461367] admin_setec 11
+[29.04.26 19:18:28] SUCCESS admin[268461367] -> admin[268461367] admin_seteh 11
+[29.04.26 19:18:33] SUCCESS admin[268461367] -> admin[268461367] admin_seteb 11
+[29.04.26 19:18:44] SUCCESS admin[268461367] -> admin[268461367] admin_invis
+[29.04.26 19:19:07] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[29.04.26 19:19:09] SUCCESS admin[268461367] -> admin[268461367] admin_enchant
+[29.04.26 19:19:10] SUCCESS admin[268461367] -> admin[268461367] admin_seteh 6
+[29.04.26 19:19:16] SUCCESS admin[268461367] -> admin[268461367] admin_seteh 7
+[29.04.26 19:19:23] SUCCESS admin[268461367] -> admin[268461367] admin_seteh 8
+[29.04.26 19:19:31] SUCCESS admin[268461367] -> admin[268461367] admin_seteh 9
+[29.04.26 19:19:37] SUCCESS admin[268461367] -> admin[268461367] admin_seteh 10
+[29.04.26 22:10:12] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[29.04.26 22:10:14] SUCCESS admin[268461367] -> admin[268461367] admin_show_moves
+[29.04.26 22:10:16] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/townarea.htm
+[29.04.26 22:10:18] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/townarea/aden.htm
+[29.04.26 22:10:24] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/townarea.htm
+[29.04.26 22:10:25] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/townarea/giran.htm
+[29.04.26 22:10:27] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/townarea.htm
+[29.04.26 22:10:28] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[29.04.26 22:10:28] SUCCESS admin[268461367] -> admin[268461367] admin_show_moves
+[29.04.26 22:10:29] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/town.htm
+[29.04.26 22:10:31] SUCCESS admin[268461367] -> admin[268461367] admin_show_html teleports/town/aden.htm
+[29.04.26 22:10:32] SUCCESS admin[268461367] admin_move_to 147450 27064 -2208
+[29.04.26 22:12:51] SUCCESS admin[268461367] -> 21736 Ketra Priest admin_admin
+[29.04.26 22:12:52] SUCCESS admin[268461367] -> 21736 Ketra Priest admin_show_moves
+[29.04.26 22:12:53] SUCCESS admin[268461367] -> 21736 Ketra Priest admin_show_html teleports/town.htm
+[29.04.26 22:12:53] SUCCESS admin[268461367] -> 21736 Ketra Priest admin_show_html teleports/town/giran.htm
+[29.04.26 22:12:54] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473

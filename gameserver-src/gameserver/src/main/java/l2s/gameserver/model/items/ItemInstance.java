@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.items;
 
 import java.util.ArrayList;
@@ -1092,7 +1089,9 @@ implements JdbcEntity {
         return (this.customFlags & 8) == 8;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void onEquip(int slot, Playable actor) {
         if (!this.isEquipped() && !this.getTemplate().isRune()) {
             return;
@@ -1119,7 +1118,9 @@ implements JdbcEntity {
         this.onEquip(this.getEquipSlot(), actor);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void onUnequip(int slot, Playable actor, boolean refreshEquip) {
         if (!this.isEquipable() && !this.getTemplate().isRune()) {
             return;
@@ -1156,7 +1157,9 @@ implements JdbcEntity {
         this.onUnequip(this.getEquipSlot(), actor);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public int onRefreshEquip(Playable actor, boolean update) {
         if (!this.isEquipped() && !this.getTemplate().isRune()) {
             return 0;

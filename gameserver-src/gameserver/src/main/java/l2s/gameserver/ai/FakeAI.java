@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.ai;
 
 import java.util.ArrayList;
@@ -105,6 +102,7 @@ OnPlayerChatMessageReceive {
             this.planActions(this._aiTemplate.getOnCreateAction());
         }
         actor.setActive();
+        FakePlayerUtils.learnNormalClassSkillsForFake(actor);
         this.startActionTask();
         FakePlayerUtils.checkAutoShots(this);
     }
@@ -177,7 +175,9 @@ OnPlayerChatMessageReceive {
         return result;
     }
 
-    
+    /*
+     * Enabled aggressive block sorting
+     */
     private synchronized boolean performNextAction(boolean force) {
         if (this.deleted.get()) {
             return false;
@@ -672,7 +672,9 @@ OnPlayerChatMessageReceive {
         return (Skill)Rnd.get(skills);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     protected void onEvtAttacked(Creature attacker, Skill skill, int damage) {
         FakeAI fakeAI = this;
@@ -730,6 +732,7 @@ OnPlayerChatMessageReceive {
     public void onLevelChange(Player player, int oldLvl, int newLvl) {
         if (player.isFakePlayer()) {
             FakePlayerUtils.setProf(player);
+            FakePlayerUtils.learnNormalClassSkillsForFake(player);
             this.todoEquip = FakePlayerUtils.checkEquip(this);
         }
         if (player.getLevel() == Config.ALT_MAX_LEVEL) {
@@ -749,7 +752,9 @@ OnPlayerChatMessageReceive {
         CharacterDAO.getInstance().deleteCharByObjId(objectId);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public void onTeleport(Player player, int x, int y, int z, Reflection reflection) {
         FakeAI fakeAI = this;

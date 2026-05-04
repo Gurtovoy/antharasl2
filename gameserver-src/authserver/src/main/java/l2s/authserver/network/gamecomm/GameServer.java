@@ -1,14 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  l2s.commons.dbutils.DbUtils
- *  l2s.commons.net.HostInfo
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
- */
 package l2s.authserver.network.gamecomm;
 
 import gnu.trove.map.TIntObjectMap;

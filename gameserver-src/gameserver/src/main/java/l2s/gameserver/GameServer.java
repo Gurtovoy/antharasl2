@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver;
 
 import gnu.trove.set.TIntSet;
@@ -213,6 +210,7 @@ public class GameServer {
         Scripts.getInstance().init();
         Announcements.getInstance();
         PlayerMessageStack.getInstance();
+        ThreadPoolManager.getInstance().scheduleAtFixedDelay(() -> PlayerMessageStack.getInstance().cleanup(), 3600000L, 3600000L);
         if (Config.AUTODESTROY_ITEM_AFTER > 0) {
             ItemsAutoDestroy.getInstance();
         }
@@ -315,7 +313,9 @@ public class GameServer {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private static boolean checkFreePort(String hostname, int port) {
         ServerSocket ss = null;
         try {
@@ -334,7 +334,9 @@ public class GameServer {
         return true;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private static boolean checkOpenPort(String ip, int port) {
         Socket socket = null;
         try {

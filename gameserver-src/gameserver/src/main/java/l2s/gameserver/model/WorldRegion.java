@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model;
 
 import java.util.Iterator;
@@ -153,7 +150,9 @@ implements Iterable<GameObject> {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void addObject(GameObject obj) {
         if (obj == null) {
             return;
@@ -178,7 +177,9 @@ implements Iterable<GameObject> {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void removeObject(GameObject obj) {
         if (obj == null) {
             return;

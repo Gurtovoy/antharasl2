@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.data.xml;
 
 import l2s.gameserver.ThreadPoolManager;
@@ -55,6 +52,7 @@ import l2s.gameserver.data.xml.parser.ShuttleTemplateParser;
 import l2s.gameserver.data.xml.parser.SkillAcquireParser;
 import l2s.gameserver.data.xml.parser.SkillParser;
 import l2s.gameserver.data.xml.parser.SpawnParser;
+import l2s.gameserver.data.xml.parser.StarterPackLoadoutParser;
 import l2s.gameserver.data.xml.parser.StaticObjectParser;
 import l2s.gameserver.data.xml.parser.SynthesisDataParser;
 import l2s.gameserver.data.xml.parser.TransformTemplateParser;
@@ -123,6 +121,7 @@ public abstract class Parsers {
         DailyMissionsParser.getInstance().load();
         FakeItemParser.getInstance().load();
         FakePlayersParser.getInstance().load();
+        StarterPackLoadoutParser.getInstance().load();
     }
 }
 

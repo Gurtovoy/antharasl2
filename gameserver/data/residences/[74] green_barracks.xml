@@ -23,6 +23,8 @@
 			<function type="CURTAIN" level="2"/>
 			<function type="PLATFORM" level="1"/>
 			<function type="PLATFORM" level="2"/>
+			<function type="SUPPORT" level="15"/>
+			<function type="SUPPORT" level="18"/>
 		</available_functions>
 		<banish_points>
 			<point x="18072" y="170488" z="-3526"/>

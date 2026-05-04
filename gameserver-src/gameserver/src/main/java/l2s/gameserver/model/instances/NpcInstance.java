@@ -1,6 +1,3 @@
-/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.instances;
 
 import gnu.trove.map.hash.TIntObjectHashMap;
@@ -241,10 +238,14 @@ extends Creature {
         return (HardReference<NpcInstance>) super.getRef();
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public NpcAI getAI() {
         if (this._ai == null) {
-            synchronized (this) {
+            NpcInstance npcInstance = this;
+            synchronized (npcInstance) {
                 if (this._ai == null) {
                     this._ai = this.getTemplate().getNewAI(this);
                 }
@@ -1259,12 +1260,12 @@ extends Creature {
                 this.showChatWindow(player, "teleporter/" + this.getNpcId() + "-no.htm", false, new Object[0]);
                 return false;
             }
-            case 32864:
-            case 32865:
-            case 32866:
-            case 32867:
-            case 32868:
-            case 32869:
+            case 32864: 
+            case 32865: 
+            case 32866: 
+            case 32867: 
+            case 32868: 
+            case 32869: 
             case 32870: {
                 if (player.getLevel() >= 80) break;
                 this.showChatWindow(player, "teleporter/" + this.getNpcId() + "-no.htm", false, new Object[0]);
@@ -1617,10 +1618,14 @@ extends Creature {
         this._showName = value;
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     @Override
     public NpcListenerList getListeners() {
         if (this.listeners == null) {
-            synchronized (this) {
+            NpcInstance npcInstance = this;
+            synchronized (npcInstance) {
                 if (this.listeners == null) {
                     this.listeners = new NpcListenerList(this);
                 }
@@ -1637,9 +1642,13 @@ extends Creature {
         return this.getListeners().remove(listener);
     }
 
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public NpcStatsChangeRecorder getStatsRecorder() {
         if (this._statsRecorder == null) {
-            synchronized (this) {
+            NpcInstance npcInstance = this;
+            synchronized (npcInstance) {
                 if (this._statsRecorder == null) {
                     this._statsRecorder = new NpcStatsChangeRecorder(this);
                 }
@@ -2134,3 +2143,4 @@ extends Creature {
         }
     }
 }
+

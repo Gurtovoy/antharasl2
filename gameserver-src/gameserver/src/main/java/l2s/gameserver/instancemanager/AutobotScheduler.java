@@ -36,6 +36,23 @@ public class AutobotScheduler
 
 	public void init()
 	{
+		if(_executor != null && !_executor.isShutdown())
+		{
+			_executor.shutdownNow();
+			try
+			{
+				if(!_executor.awaitTermination(30L, TimeUnit.SECONDS))
+				{
+					_log.warn("AutobotScheduler: Previous executor did not terminate within 30s");
+				}
+			}
+			catch(InterruptedException e)
+			{
+				Thread.currentThread().interrupt();
+			}
+			_executor = null;
+		}
+
 		synchronized(_schedules)
 		{
 			_schedules.clear();
@@ -76,6 +93,7 @@ public class AutobotScheduler
 		{
 			_executor.shutdownNow();
 		}
+		_executor = null;
 
 		// Despawn all bots that were spawned by the scheduler
 		for(int botId : new ArrayList<>(_spawnedByScheduler))

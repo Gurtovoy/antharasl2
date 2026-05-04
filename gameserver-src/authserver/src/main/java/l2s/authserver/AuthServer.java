@@ -1,17 +1,3 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.net.nio.impl.IAcceptFilter
- *  l2s.commons.net.nio.impl.IClientFactory
- *  l2s.commons.net.nio.impl.IMMOExecutor
- *  l2s.commons.net.nio.impl.IPacketHandler
- *  l2s.commons.net.nio.impl.SelectorConfig
- *  l2s.commons.net.nio.impl.SelectorStats
- *  l2s.commons.net.nio.impl.SelectorThread
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
- */
 package l2s.authserver;
 
 import java.io.File;

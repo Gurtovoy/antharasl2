@@ -28,9 +28,9 @@ public class WebAuthFilter extends Filter
 			return;
 		}
 
-		// Check API key from header or query param
+		// Prefer header; query param is optional (leaks via Referer / logs — disabled by default)
 		String apiKey = exchange.getRequestHeaders().getFirst("X-Api-Key");
-		if(apiKey == null || apiKey.isEmpty())
+		if(Config.WEB_SERVER_API_KEY_ALLOW_QUERY && (apiKey == null || apiKey.isEmpty()))
 		{
 			apiKey = getQueryParam(exchange, "apiKey");
 		}

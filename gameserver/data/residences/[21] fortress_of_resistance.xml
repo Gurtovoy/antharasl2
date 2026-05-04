@@ -14,6 +14,8 @@
 			<function type="RESTORE_EXP" level="20"/>
 			<function type="TELEPORT" level="11"/>
 			<function type="TELEPORT" level="12"/>
+			<function type="SUPPORT" level="15"/>
+			<function type="SUPPORT" level="18"/>
 		</available_functions>
 		<banish_points>
 			<point x="51952" y="111060" z="-1970"/>

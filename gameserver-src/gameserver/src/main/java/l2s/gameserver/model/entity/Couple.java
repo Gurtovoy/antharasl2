@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.entity;
 
 import java.sql.Connection;
@@ -51,7 +48,9 @@ public class Couple {
         CoupleManager.getInstance().getDeletedCouples().add(this);
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public void store(Connection con) {
         PreparedStatement statement = null;
         try {

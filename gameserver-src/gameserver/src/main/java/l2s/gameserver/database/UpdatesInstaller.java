@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.database;
 
 import java.io.BufferedReader;
@@ -24,7 +21,9 @@ import org.slf4j.LoggerFactory;
 public class UpdatesInstaller {
     private static final Logger _log = LoggerFactory.getLogger(UpdatesInstaller.class);
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public static void checkAndInstall() {
         if (!Config.DATABASE_AUTOUPDATE) {
             _log.info("UpdatesInstaller: Disabled.");

@@ -1,0 +1,93 @@
+[27.04.26 14:44:25] SUCCESS admin[268461367] -> 20537 Elder Red Keltir admin_admin
+[27.04.26 14:44:27] SUCCESS admin[268461367] -> 20537 Elder Red Keltir admin_show_moves
+[27.04.26 14:44:28] SUCCESS admin[268461367] -> 20537 Elder Red Keltir admin_show_html teleports/raid.htm
+[27.04.26 14:44:29] SUCCESS admin[268461367] -> 20537 Elder Red Keltir admin_show_html teleports/raid/raid_30.htm
+[27.04.26 14:44:31] SUCCESS admin[268461367] admin_move_to 90384 125568 -2128
+[27.04.26 14:45:01] SUCCESS admin[268461367] admin_admin
+[27.04.26 14:45:04] SUCCESS admin[268461367] -> admin[268461367] admin_enchant
+[27.04.26 14:45:06] SUCCESS admin[268461367] -> admin[268461367] admin_setew 111
+[27.04.26 14:45:53] SUCCESS admin[268461367] -> 20270 Breka Orc Prefect admin_admin
+[27.04.26 14:45:54] SUCCESS admin[268461367] -> 20270 Breka Orc Prefect admin_show_moves
+[27.04.26 14:45:55] SUCCESS admin[268461367] -> 20270 Breka Orc Prefect admin_show_html teleports/raid.htm
+[27.04.26 14:45:57] SUCCESS admin[268461367] -> 20270 Breka Orc Prefect admin_show_html teleports/raid/raid_40.htm
+[27.04.26 14:45:59] SUCCESS admin[268461367] admin_move_to 125789 207644 -3752
+[27.04.26 14:46:02] SUCCESS admin[268461367] admin_admin
+[27.04.26 14:46:03] SUCCESS admin[268461367] admin_show_moves
+[27.04.26 14:46:11] SUCCESS admin[268461367] admin_show_html teleports/raid.htm
+[27.04.26 14:46:15] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_special.htm
+[27.04.26 14:46:16] SUCCESS admin[268461367] admin_move_to -21610 181594 -5734
+[27.04.26 14:47:00] SUCCESS admin[268461367] -> 29001 Queen Ant admin_kill
+[27.04.26 14:47:16] SUCCESS admin[268461367] -> 29004 Escort Ant admin_admin
+[27.04.26 14:47:19] SUCCESS admin[268461367] -> 29004 Escort Ant admin_show_moves
+[27.04.26 14:47:22] SUCCESS admin[268461367] -> 29004 Escort Ant admin_show_html teleports/raid.htm
+[27.04.26 14:47:22] SUCCESS admin[268461367] admin_show_html teleports/raid/raid_special.htm
+[27.04.26 14:47:24] SUCCESS admin[268461367] admin_move_to 55024 17368 -5412
+[27.04.26 14:47:32] SUCCESS admin[268461367] -> 29014 Orfen admin_kill
+[27.04.26 14:47:52] SUCCESS admin[268461367] -> 29014 Orfen admin_admin
+[27.04.26 14:47:53] SUCCESS admin[268461367] -> 29014 Orfen admin_show_moves
+[27.04.26 14:47:54] SUCCESS admin[268461367] -> 29014 Orfen admin_show_html teleports/raid.htm
+[27.04.26 14:47:55] SUCCESS admin[268461367] -> 29014 Orfen admin_show_html teleports/raid/raid_special.htm
+[27.04.26 14:47:56] SUCCESS admin[268461367] admin_move_to 17723 108915 -6493
+[27.04.26 14:48:04] SUCCESS admin[268461367] -> 29006 Core admin_kill
+[27.04.26 14:48:22] SUCCESS admin[268461367] admin_admin
+[27.04.26 14:48:23] SUCCESS admin[268461367] admin_show_moves
+[27.04.26 14:48:23] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[27.04.26 14:48:24] SUCCESS admin[268461367] admin_show_html teleports/town/aden.htm
+[27.04.26 14:48:25] SUCCESS admin[268461367] admin_move_to 147450 27064 -2208
+[27.04.26 14:49:29] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 40
+[27.04.26 14:57:43] SUCCESS admin[268461367] -> 25756 Gross Dre Vanul admin_kill
+[27.04.26 16:31:51] SUCCESS admin[268461367] -> 21653 Ikedit admin_admin
+[27.04.26 16:31:52] SUCCESS admin[268461367] -> 21653 Ikedit admin_char_manage
+[27.04.26 16:31:53] SUCCESS admin[268461367] -> 21653 Ikedit admin_show_characters 0
+[27.04.26 16:31:54] SUCCESS admin[268461367] -> admin[268461367] admin_character_list admin
+[27.04.26 16:31:57] SUCCESS admin[268461367] -> admin[268461367] admin_character_actions
+[27.04.26 16:31:58] SUCCESS admin[268461367] -> admin[268461367] admin_current_player
+[27.04.26 16:31:59] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[27.04.26 16:32:00] SUCCESS admin[268461367] -> admin[268461367] admin_show_html pledgemanage.htm
+[27.04.26 16:32:01] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[27.04.26 16:32:03] SUCCESS admin[268461367] -> admin[268461367] admin_show_html setclass.htm
+[27.04.26 16:32:04] SUCCESS admin[268461367] -> admin[268461367] admin_show_html classes/setclass_human.htm
+[27.04.26 16:32:15] SUCCESS admin[268461367] -> admin[268461367] admin_setclass 8
+[27.04.26 16:32:37] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 60
+[27.04.26 16:33:22] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 85
+[27.04.26 16:33:29] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[27.04.26 16:33:30] SUCCESS admin[268461367] -> admin[268461367] admin_char_manage
+[27.04.26 16:33:31] SUCCESS admin[268461367] -> admin[268461367] admin_show_characters 0
+[27.04.26 16:33:32] SUCCESS admin[268461367] -> admin[268461367] admin_character_list admin
+[27.04.26 16:33:33] SUCCESS admin[268461367] -> admin[268461367] admin_show_skills
+[27.04.26 16:33:34] SUCCESS admin[268461367] -> admin[268461367] admin_give_all_skills
+[27.04.26 16:34:02] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[27.04.26 16:34:05] SUCCESS admin[268461367] -> admin[268461367] admin_show_html setclass.htm
+[27.04.26 16:34:06] SUCCESS admin[268461367] -> admin[268461367] admin_show_html classes/setclass_human.htm
+[27.04.26 16:34:10] SUCCESS admin[268461367] -> admin[268461367] admin_setclass 93
+[27.04.26 16:34:53] SUCCESS admin[268461367] -> 21651 Flame Drake admin_admin
+[27.04.26 16:35:13] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 99
+[27.04.26 16:35:20] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[27.04.26 16:35:23] SUCCESS admin[268461367] -> admin[268461367] admin_char_manage
+[27.04.26 16:35:23] SUCCESS admin[268461367] -> admin[268461367] admin_show_characters 0
+[27.04.26 16:35:25] SUCCESS admin[268461367] -> admin[268461367] admin_character_list admin
+[27.04.26 16:35:26] SUCCESS admin[268461367] -> admin[268461367] admin_show_skills
+[27.04.26 16:35:27] SUCCESS admin[268461367] -> admin[268461367] admin_give_all_skills
+[27.04.26 16:36:47] SUCCESS admin[268461367] admin_admin
+[27.04.26 16:36:48] SUCCESS admin[268461367] admin_show_moves
+[27.04.26 16:36:49] SUCCESS admin[268461367] admin_show_html teleports/town.htm
+[27.04.26 16:36:49] SUCCESS admin[268461367] admin_show_html teleports/town/giran.htm
+[27.04.26 16:36:51] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[27.04.26 16:41:25] SUCCESS admin[268461367] -> [Door 21240006] admin_open 268435868
+[27.04.26 16:44:20] SUCCESS admin[268461367] -> admin[268461367] admin_set_level 76
+[27.04.26 16:44:28] SUCCESS admin[268461367] -> 29022 Zaken admin_kill
+[27.04.26 16:44:46] SUCCESS admin[268461367] -> 29022 Zaken admin_admin
+[27.04.26 16:44:47] SUCCESS admin[268461367] -> 29022 Zaken admin_show_moves
+[27.04.26 16:44:49] SUCCESS admin[268461367] -> 29022 Zaken admin_show_html teleports/town.htm
+[27.04.26 16:44:49] SUCCESS admin[268461367] -> 29022 Zaken admin_show_html teleports/town/giran.htm
+[27.04.26 16:44:50] SUCCESS admin[268461367] admin_move_to 82698 148638 -3473
+[27.04.26 17:11:39] SUCCESS admin[268461367] admin_admin
+[27.04.26 17:11:41] SUCCESS admin[268461367] admin_show_html pledgemanage.htm
+[27.04.26 17:11:44] FAIL    admin[268461367] admin_pledge create 123
+[27.04.26 17:11:49] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[27.04.26 17:11:53] SUCCESS admin[268461367] -> admin[268461367] admin_show_html pledgemanage.htm
+[27.04.26 17:11:59] SUCCESS admin[268461367] -> admin[268461367] admin_pledge create 12345
+[27.04.26 17:12:00] SUCCESS admin[268461367] -> admin[268461367] admin_admin
+[27.04.26 17:12:03] SUCCESS admin[268461367] -> admin[268461367] admin_show_html pledgemanage.htm
+[27.04.26 17:12:06] SUCCESS admin[268461367] -> admin[268461367] admin_pledge setlevel 6
+[27.04.26 17:12:41] SUCCESS admin[268461367] -> 33359 Kerry admin_admin

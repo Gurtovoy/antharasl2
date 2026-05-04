@@ -1,6 +1,3 @@
-﻿/*
- * This file was originally decompiled from L2S rev.[31495].
- */
 package l2s.gameserver.model.quest;
 
 import java.util.ArrayList;
@@ -114,7 +111,9 @@ public final class QuestState {
         }
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     private boolean exitCurrentQuest(QuestRepeatType repeatType) {
         Player player = this.getPlayer();
         if (player == null) {
@@ -546,7 +545,9 @@ public final class QuestState {
         return this._timers;
     }
 
-    
+    /*
+     * WARNING - Removed try catching itself - possible behaviour change.
+     */
     public long takeItems(int itemId, long count) {
         Player player = this.getPlayer();
         if (player == null) {

@@ -46,7 +46,7 @@
 		<set name="icon" value="icon.london_olympic_bikini"/>
 		<set name="type" value="HEAVY"/>
 		<equip>
-			<slot id="FORMAL_WEAR"/>
+			<slot id="HAIR_ALL"/>
 		</equip>
 	</armor>
 	<etcitem id="49804" name="Ice Crystal Fragment">
