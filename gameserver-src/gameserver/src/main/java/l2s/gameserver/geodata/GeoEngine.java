@@ -1,16 +1,7 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  gnu.trove.set.hash.TIntHashSet
- *  l2s.commons.geometry.CoordsConverter
- *  l2s.commons.geometry.Shape
- *  org.napile.primitive.pair.ByteObjectPair
- *  org.napile.primitive.pair.impl.ByteObjectPairImpl
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
+ * Refactored: replaced synchronized(geodata) global lock with ReentrantReadWriteLock,
+ * fixed string constants, removed CFR decompiler artifacts.
  */
 package l2s.gameserver.geodata;
 
@@ -68,8 +59,8 @@ public class GeoEngine {
         }
     };
     private static final Logger _log = LoggerFactory.getLogger(GeoEngine.class);
-    public static final String L2S_EXTENSION = new String(new byte[]{46, 108, 50, 115});
-    public static final String L2J_EXTENSION = new String(new byte[]{46, 108, 50, 106});
+    public static final String L2S_EXTENSION = ".l2s";
+    public static final String L2J_EXTENSION = ".l2j";
     public static final byte EAST = 1;
     public static final byte WEST = 2;
     public static final byte SOUTH = 4;
@@ -85,6 +76,10 @@ public class GeoEngine {
     public static int MAX_LAYERS = 1;
     private static final TIntObjectMap<Set<GeoControl>> _activeGeoControls = new TIntObjectHashMap();
     private static byte[][][][][] geodata = new byte[9999][][][][];
+
+    private static final java.util.concurrent.locks.ReentrantReadWriteLock _geoLock = new java.util.concurrent.locks.ReentrantReadWriteLock();
+    private static final java.util.concurrent.locks.Lock _geoReadLock = _geoLock.readLock();
+    private static final java.util.concurrent.locks.Lock _geoWriteLock = _geoLock.writeLock();
 
     public static int getMapX(int x) {
         return (x - World.MAP_MIN_X >> 15) + Config.GEO_X_FIRST;
@@ -1426,9 +1421,7 @@ public class GeoEngine {
         return -1;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static byte[] getGeoBlockFromGeoCoords(int geoX, int geoY, int geoIndex, boolean loadIfNotExists) {
         if (!Config.ALLOW_GEODATA) {
             return null;
@@ -1439,11 +1432,10 @@ public class GeoEngine {
             return null;
         }
         if (loadIfNotExists) {
-            byte[][][][][] byArray = geodata;
-            synchronized (geodata) {
+            _geoWriteLock.lock();
+            try {
                 byte[][][][] geodataByRegion = geodata[geoIndex];
                 if (geodataByRegion == null) {
-                    // ** MonitorExit[var6_6] (shouldn't be in output)
                     return null;
                 }
                 byte[][] region = geodataByRegion[ix][iy];
@@ -1451,7 +1443,6 @@ public class GeoEngine {
                     if (geoIndex > 0) {
                         region = geodata[0][ix][iy];
                         if (region == null) {
-                            // ** MonitorExit[var6_6] (shouldn't be in output)
                             return null;
                         }
                         byte[][] newRegion = new byte[region.length][];
@@ -1461,12 +1452,12 @@ public class GeoEngine {
                         GeoEngine.geodata[geoIndex][ix][iy] = newRegion;
                         region = newRegion;
                     } else {
-                        // ** MonitorExit[var6_6] (shouldn't be in output)
                         return null;
                     }
                 }
-                // ** MonitorExit[var6_6] (shouldn't be in output)
                 return region[GeoEngine.getBlockIndex(GeoEngine.getBlock(geoX), GeoEngine.getBlock(geoY))];
+            } finally {
+                _geoWriteLock.unlock();
             }
         }
         byte[][][][] geodataByRegion = geodata[geoIndex];
@@ -1487,9 +1478,6 @@ public class GeoEngine {
         return region[GeoEngine.getBlockIndex(GeoEngine.getBlock(geoX), GeoEngine.getBlock(geoY))];
     }
 
-    /*
-     * WARNING - void declaration
-     */
     public static void load() {
         if (!Config.ALLOW_GEODATA) {
             _log.info("GeoEngine: Disabled.");
@@ -1529,9 +1517,6 @@ public class GeoEngine {
         return GeoEngine.LoadGeodataFile(rx, ry, geoFile, 0);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public static boolean LoadGeodataFile(int rx, int ry, File geoFile, int blobOff) {
         ByteBuffer buff;
         int ix = rx - Config.GEO_X_FIRST;
@@ -1558,15 +1543,14 @@ public class GeoEngine {
         int index = 0;
         int block = 0;
         byte floor = 0;
-        byte[][][][][] byArray = geodata;
-        synchronized (geodata) {
+        _geoWriteLock.lock();
+        try {
             byte[][] blocks = geodata[0][ix][iy];
             if (blocks == null) {
                 byte[][] byArrayArray = new byte[65536][];
                 blocks = byArrayArray;
                 GeoEngine.geodata[0][ix][iy] = byArrayArray;
             }
-            // ** MonitorExit[var12_13] (shouldn't be in output)
             block10: for (block = 0; block < 65536; ++block) {
                 byte type = buff.get(index);
                 ++index;
@@ -1609,18 +1593,17 @@ public class GeoEngine {
                 }
             }
             return true;
+        } finally {
+            _geoWriteLock.unlock();
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public static int createGeoIndex() {
         if (!Config.ALLOW_GEODATA) {
             return 0;
         }
-        byte[][][][][] byArray = geodata;
-        synchronized (geodata) {
+        _geoWriteLock.lock();
+        try {
             int geoIndex = -1;
             for (int i = 1; i < geodata.length; ++i) {
                 if (geodata[i] != null) continue;
@@ -1638,14 +1621,12 @@ public class GeoEngine {
                 geodata = resizedGeodata;
             }
             GeoEngine.geodata[geoIndex] = new byte[World.WORLD_SIZE_X][World.WORLD_SIZE_Y][][];
-            // ** MonitorExit[var0] (shouldn't be in output)
             return geoIndex;
+        } finally {
+            _geoWriteLock.unlock();
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public static void deleteGeoIndex(int geoIndex) {
         if (!Config.ALLOW_GEODATA) {
             return;
@@ -1653,11 +1634,11 @@ public class GeoEngine {
         if (geoIndex == 0) {
             return;
         }
-        byte[][][][][] byArray = geodata;
-        synchronized (geodata) {
+        _geoWriteLock.lock();
+        try {
             GeoEngine.geodata[geoIndex] = null;
-            // ** MonitorExit[var1_1] (shouldn't be in output)
-            return;
+        } finally {
+            _geoWriteLock.unlock();
         }
     }
 
@@ -1702,27 +1683,22 @@ public class GeoEngine {
         return shape.isOnPerimeter(geoX, geoY, WORLD_TO_GEO_COORD_CONVERTER) || shape.isInside(geoX, geoY, WORLD_TO_GEO_COORD_CONVERTER);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public static boolean returnGeoControl(GeoControl control) {
         if (!Config.ALLOW_GEODATA) {
             return false;
         }
-        byte[][][][][] byArray = geodata;
-        synchronized (geodata) {
+        _geoWriteLock.lock();
+        try {
             int geoIndex = control.getGeoControlIndex();
             if (geoIndex == 0) {
                 _log.warn("GeoEngine: Attempt to return geo control with 0 geoControlIndex!");
                 Thread.dumpStack();
-                // ** MonitorExit[var1_1] (shouldn't be in output)
                 return false;
             }
             TIntObjectMap<ByteObjectPair<CeilGeoControlType>> around = control.getGeoAround();
             if (around == null) {
                 _log.warn("GeoEngine: Attempt to return geo control without applyed geo control!");
                 Thread.dumpStack();
-                // ** MonitorExit[var1_1] (shouldn't be in output)
                 return false;
             }
             Shape shape = control.getGeoShape();
@@ -1839,14 +1815,12 @@ public class GeoEngine {
                 }
                 result = true;
             }
-            // ** MonitorExit[var1_1] (shouldn't be in output)
             return result;
+        } finally {
+            _geoWriteLock.unlock();
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public static boolean applyGeoControl(GeoControl control, int geoIndex) {
         if (!Config.ALLOW_GEODATA) {
             return false;
@@ -1856,14 +1830,13 @@ public class GeoEngine {
             Thread.dumpStack();
             return false;
         }
-        byte[][][][][] byArray = geodata;
-        synchronized (geodata) {
+        _geoWriteLock.lock();
+        try {
             int[] around_keys;
             boolean first_time;
             Shape shape = control.getGeoShape();
             if (shape == null) {
                 _log.warn("GeoEngine: no shape for geo control: " + control);
-                // ** MonitorExit[var2_2] (shouldn't be in output)
                 return false;
             }
             TIntObjectMap<ByteObjectPair<CeilGeoControlType>> around = control.getGeoAround();
@@ -2099,8 +2072,9 @@ public class GeoEngine {
                 }
                 result = true;
             }
-            // ** MonitorExit[var2_2] (shouldn't be in output)
             return result;
+        } finally {
+            _geoWriteLock.unlock();
         }
     }
 
@@ -2382,4 +2356,3 @@ public class GeoEngine {
         return false;
     }
 }
-

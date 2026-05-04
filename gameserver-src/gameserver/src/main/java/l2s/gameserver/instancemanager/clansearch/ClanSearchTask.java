@@ -1,16 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.list.TIntList
- *  gnu.trove.list.array.TIntArrayList
- *  gnu.trove.map.TIntLongMap
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntLongHashMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.instancemanager.clansearch;
 
@@ -70,9 +59,7 @@ implements Runnable {
         this._removalApplicants.add(playerId);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     public void run() {
         Connection con = null;

@@ -1,8 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.threading.SteppingRunnableQueueManager
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.taskmanager;
 

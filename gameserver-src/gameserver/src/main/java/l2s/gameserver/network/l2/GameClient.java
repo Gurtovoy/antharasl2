@@ -1,13 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  l2s.commons.net.nio.impl.MMOClient
- *  l2s.commons.net.nio.impl.MMOConnection
- *  l2s.commons.net.nio.impl.SendablePacket
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.l2;
 
@@ -99,9 +91,7 @@ extends MMOClient<MMOConnection<GameClient>> {
     protected void onForcedDisconnection() {
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void markRestoredChar(int charslot) throws Exception {
         int objid = this.getObjectIdForSlot(charslot);
         if (objid < 0) {
@@ -131,9 +121,7 @@ extends MMOClient<MMOConnection<GameClient>> {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void markToDeleteChar(int charslot) throws Exception {
         int objid = this.getObjectIdForSlot(charslot);
         if (objid < 0) {

@@ -1,11 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.lang.reference.HardReference
- *  l2s.commons.lang.reference.HardReferences
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.actor;
 
@@ -270,9 +264,7 @@ public class CreatureMovement {
         return this.followToCharacter(target.getLoc(), target, offset, forestalling);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean followToCharacter(Location loc, Creature target, int offset, boolean forestalling) {
         this.getMoveLock().lock();
         try {
@@ -350,9 +342,7 @@ public class CreatureMovement {
         return this.moveToLocation(x_dest, y_dest, z_dest, offset, pathfinding, cancelNextAction, keyboard, maxDestRange, null);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean moveToLocation(int x_dest, int y_dest, int z_dest, int offset, boolean pathfinding, boolean cancelNextAction, boolean keyboard, int maxDestRange, OnArrivedAction onArrivedAction) {
         this.getMoveLock().lock();
         try {
@@ -407,9 +397,7 @@ public class CreatureMovement {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean updatePosition() {
         this.getMoveLock().lock();
         try {

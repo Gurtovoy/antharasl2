@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.entity;
 
@@ -56,9 +51,7 @@ public class Couple {
         CoupleManager.getInstance().getDeletedCouples().add(this);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void store(Connection con) {
         PreparedStatement statement = null;
         try {

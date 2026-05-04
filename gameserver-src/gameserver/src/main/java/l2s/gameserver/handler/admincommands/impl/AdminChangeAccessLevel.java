@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.handler.admincommands.impl;
 
@@ -226,9 +221,7 @@ implements IAdminCommandHandler {
         activeChar.sendPacket((IBroadcastPacket)reply);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static String getPlayerNameByObjId(int oid) {
         ResultSet rset;
         PreparedStatement statement;

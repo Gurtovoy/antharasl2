@@ -1,11 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.pair.IntObjectPair
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -34,9 +28,7 @@ public class CharacterGroupReuseDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void select(Player player) {
         long curTime = System.currentTimeMillis();
         Connection con = null;
@@ -74,9 +66,7 @@ public class CharacterGroupReuseDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void insert(Player player) {
         PreparedStatement statement;
         Connection con;

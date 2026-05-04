@@ -1,9 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.entity.votereward;
 
@@ -17,9 +13,7 @@ import org.slf4j.LoggerFactory;
 public class VoteApiService {
     private static final Logger LOGGER = LoggerFactory.getLogger(VoteApiService.class);
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static String getApiResponse(String endpoint) {
         HttpURLConnection connection = null;
         try {

@@ -1,11 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.net.HostInfo
- *  org.apache.commons.lang3.StringUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.authcomm;
 
@@ -83,9 +77,7 @@ extends Thread {
         channel.connect(new InetSocketAddress(hostInfo.getAddress(), hostInfo.getPort()));
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void sendPacket(SendablePacket packet) {
         boolean wakeUp;
         if (this.isShutdown()) {
@@ -250,9 +242,7 @@ extends Thread {
         return false;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void write(SelectionKey key) throws IOException {
         boolean done;
         SocketChannel channel = (SocketChannel)key.channel();
@@ -380,9 +370,7 @@ extends Thread {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<GameClient> getWaitingClientsByIP(String ip) {
         ArrayList<GameClient> clients = new ArrayList<GameClient>();
         this.readLock.lock();
@@ -398,9 +386,7 @@ extends Thread {
         return clients;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<GameClient> getWaitingClientsByHWID(String hwid) {
         ArrayList<GameClient> clients = new ArrayList<GameClient>();
         if (StringUtils.isEmpty((CharSequence)hwid)) {
@@ -453,9 +439,7 @@ extends Thread {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<GameClient> getAuthedClientsByIP(String ip) {
         ArrayList<GameClient> clients = new ArrayList<GameClient>();
         this.readLock.lock();
@@ -471,9 +455,7 @@ extends Thread {
         return clients;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<GameClient> getAuthedClientsByHWID(String hwid) {
         ArrayList<GameClient> clients = new ArrayList<GameClient>();
         if (StringUtils.isEmpty((CharSequence)hwid)) {

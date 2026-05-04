@@ -1,14 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.collections.LazyArrayList
- *  l2s.commons.collections.MultiValueSet
- *  l2s.commons.listener.Listener
- *  l2s.commons.listener.ListenerList
- *  l2s.commons.util.Rnd
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model;
 
@@ -347,9 +338,7 @@ extends EventOwner {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<Player> getInsidePlayers() {
         LazyArrayList result = new LazyArrayList();
         this.readLock.lock();
@@ -366,9 +355,7 @@ extends EventOwner {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<Playable> getInsidePlayables() {
         LazyArrayList result = new LazyArrayList();
         this.readLock.lock();
@@ -385,9 +372,7 @@ extends EventOwner {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<NpcInstance> getInsideNpcs() {
         LazyArrayList result = new LazyArrayList();
         this.readLock.lock();

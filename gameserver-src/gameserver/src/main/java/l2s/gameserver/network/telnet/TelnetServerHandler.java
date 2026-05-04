@@ -1,16 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.jboss.netty.channel.ChannelFuture
- *  org.jboss.netty.channel.ChannelFutureListener
- *  org.jboss.netty.channel.ChannelHandlerContext
- *  org.jboss.netty.channel.ChannelStateEvent
- *  org.jboss.netty.channel.ExceptionEvent
- *  org.jboss.netty.channel.MessageEvent
- *  org.jboss.netty.channel.SimpleChannelUpstreamHandler
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.telnet;
 

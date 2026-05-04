@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dao.JdbcEntity
- *  l2s.commons.dao.JdbcEntityState
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.pledge;
 
@@ -48,9 +41,7 @@ implements JdbcEntity {
         return this._jdbcEntityState;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void update() {
         if (!this.getJdbcState().isUpdatable()) {
             return;

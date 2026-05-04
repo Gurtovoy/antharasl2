@@ -1,13 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.napile.primitive.maps.impl.CTreeIntObjectMap
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.pledge;
 
@@ -138,9 +130,7 @@ public class SubUnit {
         return this._members.valueCollection();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void setLeader(UnitMember newLeader, boolean updateDB) {
         UnitMember old = this._leader;
         if (old != null) {
@@ -182,9 +172,7 @@ public class SubUnit {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void setName(String name, boolean updateDB) {
         this._name = name;
         if (updateDB) {
@@ -216,9 +204,7 @@ public class SubUnit {
         return this._leader == null ? "" : this._leader.getName();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public SkillEntry addSkill(SkillEntry newSkillEntry, boolean store) {
         SkillEntry oldSkillEntry = null;
         if (newSkillEntry != null) {
@@ -293,9 +279,7 @@ public class SubUnit {
         return this._skills.valueCollection();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static void removeMemberInDatabase(UnitMember member) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -320,9 +304,7 @@ public class SubUnit {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void restore() {
         ResultSet rset;
         PreparedStatement statement;
@@ -365,9 +347,7 @@ public class SubUnit {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void restoreSkills() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -411,9 +391,7 @@ public class SubUnit {
         return this._upgraded;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void setUpgraded(boolean upgraded, boolean updateInDb) {
         this._upgraded = upgraded;
         if (updateInDb) {

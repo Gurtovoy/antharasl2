@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.entity.residence;
 
@@ -67,9 +62,7 @@ public class ResidenceFunction {
         return this._inDebt;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void updateRentTime(boolean inDebt) {
         this.setEndTimeInMillis(System.currentTimeMillis() + 86400000L);
         Connection con = null;

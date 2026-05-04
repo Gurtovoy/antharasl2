@@ -1,12 +1,7 @@
 /*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.iterator.TIntObjectIterator
- *  gnu.trove.map.hash.TIntIntHashMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  l2s.commons.collections.LazyArrayList
- *  l2s.commons.util.Rnd
+ * This file was originally decompiled from L2S rev.[31495].
+ * Refactored: removed synchronized blocks on CopyOnWriteArrayList (redundant),
+ * removed CFR decompiler artifacts.
  */
 package l2s.gameserver.model;
 
@@ -81,6 +76,8 @@ implements PlayerGroup {
     public static final int ITEM_ORDER = 3;
     public static final int ITEM_ORDER_SPOIL = 4;
     private final List<Player> _members = new CopyOnWriteArrayList<Player>();
+    /** Dedicated lock for loot-order operations that require atomicity (_itemOrder read+modify). */
+    private final Object _lootLock = new Object();
     private int _partyLvl = 0;
     private int _itemDistribution = 0;
     private int _itemOrder = 0;
@@ -157,12 +154,8 @@ implements PlayerGroup {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     private Player getNextLooterInRange(Player player, ItemInstance item, int range) {
-        List<Player> list = this._members;
-        synchronized (list) {
+        synchronized (_lootLock) {
             int antiloop = this._members.size();
             while (--antiloop > 0) {
                 Player ret;
@@ -181,17 +174,11 @@ implements PlayerGroup {
         return this.getPartyLeader() == player;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public Player getPartyLeader() {
-        List<Player> list = this._members;
-        synchronized (list) {
-            if (this._members.size() == 0) {
-                return null;
-            }
-            return this._members.get(0);
+        if (this._members.isEmpty()) {
+            return null;
         }
+        return this._members.get(0);
     }
 
     @Override
@@ -237,16 +224,12 @@ implements PlayerGroup {
         return this._members.indexOf(player);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public boolean addPartyMember(Player player, boolean force) {
         Player leader = this.getPartyLeader();
         if (leader == null) {
             return false;
         }
-        List<Player> list = this._members;
-        synchronized (list) {
+        synchronized (this._members) {
             if (this._members.isEmpty()) {
                 return false;
             }
@@ -322,32 +305,22 @@ implements PlayerGroup {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public void dissolveParty() {
         for (Player p : this._members) {
             p.sendPacket((IBroadcastPacket)PartySmallWindowDeleteAllPacket.STATIC);
             p.setParty(null);
         }
-        List<Player> list = this._members;
-        synchronized (list) {
-            this._members.clear();
-        }
+        this._members.clear();
         this.setCommandChannel(null);
         this.stopUpdatePositionTask();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public boolean removePartyMember(Player player, boolean kick, boolean force) {
         Player leader;
         MatchingRoom room;
         boolean isLeader = this.isLeader(player);
         boolean dissolve = false;
-        List<Player> list = this._members;
-        synchronized (list) {
+        synchronized (this._members) {
             if (!this._members.remove(player)) {
                 return false;
             }
@@ -436,13 +409,9 @@ implements PlayerGroup {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public boolean changePartyLeader(Player player) {
         Player leader = this.getPartyLeader();
-        List<Player> list = this._members;
-        synchronized (list) {
+        synchronized (this._members) {
             int index = this._members.indexOf(player);
             if (index == -1) {
                 return false;
@@ -512,14 +481,11 @@ implements PlayerGroup {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     private void distributeItem0(Player player, ItemInstance item, NpcInstance fromNpc) {
         Player target = null;
         List<Player> ret = null;
         switch (this._itemDistribution) {
-            case 1: 
+            case 1:
             case 2: {
                 ret = new ArrayList<Player>(this._members.size());
                 for (Player member : this._members) {
@@ -529,10 +495,9 @@ implements PlayerGroup {
                 target = ret.isEmpty() ? null : (Player)ret.get(Rnd.get((int)ret.size()));
                 break;
             }
-            case 3: 
+            case 3:
             case 4: {
-                List<Player> list = this._members;
-                synchronized (list) {
+                synchronized (_lootLock) {
                     ret = new CopyOnWriteArrayList<Player>(this._members);
                     while (target == null && !ret.isEmpty()) {
                         Player looterPlayer;
@@ -1093,4 +1058,3 @@ implements PlayerGroup {
         }
     }
 }
-

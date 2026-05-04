@@ -1,11 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dao.JdbcEntityState
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -33,9 +27,7 @@ public class VoteRewardRecordsDAO {
         return INSTANCE;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void restore(Map<String, VoteRewardRecord> records, String site) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -73,9 +65,7 @@ public class VoteRewardRecordsDAO {
         this.save0(voteRewardRecord);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void save0(VoteRewardRecord voteRewardRecord) {
         Connection con = null;
         PreparedStatement ps = null;
@@ -109,9 +99,7 @@ public class VoteRewardRecordsDAO {
         this.update0(voteRewardRecord);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void update0(VoteRewardRecord voteRewardRecord) {
         Connection con = null;
         PreparedStatement ps = null;

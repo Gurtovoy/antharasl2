@@ -1,79 +1,110 @@
 /*
- * Decompiled with CFR 0.152.
+ * This file was originally decompiled from L2S rev.[31495].
+ * Refactored: replaced HashMap+synchronized with ConcurrentHashMap, fixed singleton,
+ * removed CFR decompiler artifacts.
  */
 package l2s.gameserver.instancemanager;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import l2s.gameserver.model.GameObjectsStorage;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
 
-public class PlayerMessageStack {
-    private static PlayerMessageStack _instance;
+public class PlayerMessageStack
+{
+    private static volatile PlayerMessageStack _instance;
     private static final int MAX_MESSAGES_PER_PLAYER = 100;
-    private final Map<Integer, List<IBroadcastPacket>> _stack = new HashMap<Integer, List<IBroadcastPacket>>();
 
-    public static PlayerMessageStack getInstance() {
-        if (_instance == null) {
-            _instance = new PlayerMessageStack();
+    /** Pending messages for offline players. Key = objectId, Value = message queue. */
+    private final ConcurrentHashMap<Integer, List<IBroadcastPacket>> _stack = new ConcurrentHashMap<>();
+
+    public static PlayerMessageStack getInstance()
+    {
+        if (_instance == null)
+        {
+            synchronized (PlayerMessageStack.class)
+            {
+                if (_instance == null)
+                {
+                    _instance = new PlayerMessageStack();
+                }
+            }
         }
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
+    /**
+     * Sends a message to the player immediately if online,
+     * or queues it for delivery when the player logs in.
      */
-    public void mailto(int char_obj_id, IBroadcastPacket message) {
-        Player cha = GameObjectsStorage.getPlayer(char_obj_id);
-        if (cha != null) {
-            cha.sendPacket(message);
+    public void mailto(int charObjId, IBroadcastPacket message)
+    {
+        Player player = GameObjectsStorage.getPlayer(charObjId);
+        if (player != null)
+        {
+            player.sendPacket(message);
             return;
         }
-        Map<Integer, List<IBroadcastPacket>> map = this._stack;
-        synchronized (map) {
-            List<IBroadcastPacket> messages = this._stack.containsKey(char_obj_id) ? this._stack.remove(char_obj_id) : new ArrayList<IBroadcastPacket>();
+        // compute() is atomic in ConcurrentHashMap — no explicit lock needed
+        _stack.compute(charObjId, (id, messages) ->
+        {
+            if (messages == null)
+            {
+                messages = new ArrayList<>();
+            }
             messages.add(message);
-            while (messages.size() > MAX_MESSAGES_PER_PLAYER) {
+            // cap queue size to avoid memory leak for very long offline periods
+            while (messages.size() > MAX_MESSAGES_PER_PLAYER)
+            {
                 messages.remove(0);
             }
-            this._stack.put(char_obj_id, messages);
-        }
+            return messages;
+        });
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
+    /**
+     * Delivers all queued messages to a player who just logged in.
      */
-    public void CheckMessages(Player cha) {
-        List<IBroadcastPacket> messages = null;
-        Map<Integer, List<IBroadcastPacket>> map = this._stack;
-        synchronized (map) {
-            if (!this._stack.containsKey(cha.getObjectId())) {
-                return;
-            }
-            messages = this._stack.remove(cha.getObjectId());
-        }
-        if (messages == null || messages.size() == 0) {
+    public void checkMessages(Player player)
+    {
+        List<IBroadcastPacket> messages = _stack.remove(player.getObjectId());
+        if (messages == null || messages.isEmpty())
+        {
             return;
         }
-        for (IBroadcastPacket message : messages) {
-            cha.sendPacket(message);
+        for (IBroadcastPacket message : messages)
+        {
+            player.sendPacket(message);
         }
     }
 
-    public void cleanup() {
-        synchronized (this._stack) {
-            Iterator<Map.Entry<Integer, List<IBroadcastPacket>>> it = this._stack.entrySet().iterator();
-            while (it.hasNext()) {
-                Map.Entry<Integer, List<IBroadcastPacket>> entry = it.next();
-                if (entry.getValue() == null || entry.getValue().isEmpty()) {
-                    it.remove();
-                }
+    /**
+     * @deprecated Use {@link #checkMessages(Player)} instead.
+     */
+    @Deprecated
+    public void CheckMessages(Player player)
+    {
+        checkMessages(player);
+    }
+
+    /**
+     * Removes empty queues to prevent memory accumulation.
+     */
+    public void cleanup()
+    {
+        Iterator<Map.Entry<Integer, List<IBroadcastPacket>>> it = _stack.entrySet().iterator();
+        while (it.hasNext())
+        {
+            Map.Entry<Integer, List<IBroadcastPacket>> entry = it.next();
+            if (entry.getValue() == null || entry.getValue().isEmpty())
+            {
+                it.remove();
             }
         }
     }
 }
-

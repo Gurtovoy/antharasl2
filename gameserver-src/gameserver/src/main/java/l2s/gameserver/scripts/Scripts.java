@@ -1,17 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.compiler.Compiler
- *  l2s.commons.compiler.MemoryClassLoader
- *  l2s.commons.listener.Listener
- *  l2s.commons.listener.ListenerList
- *  org.apache.commons.io.FileUtils
- *  org.apache.commons.io.filefilter.FileFilterUtils
- *  org.apache.commons.io.filefilter.IOFileFilter
- *  org.apache.commons.lang3.ClassUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.scripts;
 

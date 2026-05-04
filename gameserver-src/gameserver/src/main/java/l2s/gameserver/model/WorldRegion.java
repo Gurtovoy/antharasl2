@@ -1,8 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.lang.ArrayUtils
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model;
 
@@ -156,9 +153,7 @@ implements Iterable<GameObject> {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void addObject(GameObject obj) {
         if (obj == null) {
             return;
@@ -183,9 +178,7 @@ implements Iterable<GameObject> {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void removeObject(GameObject obj) {
         if (obj == null) {
             return;

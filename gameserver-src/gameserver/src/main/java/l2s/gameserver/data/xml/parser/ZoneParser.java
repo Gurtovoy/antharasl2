@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.geometry.Circle
- *  l2s.commons.geometry.Polygon
- *  l2s.commons.geometry.Rectangle
- *  l2s.commons.geometry.Shape
- *  org.dom4j.Element
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.data.xml.parser;
 

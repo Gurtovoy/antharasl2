@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -32,9 +27,7 @@ public class SiegePlayerDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<Integer> select(Residence residence, int clanId) {
         ArrayList<Integer> set = new ArrayList<Integer>();
         Connection con = null;
@@ -64,9 +57,7 @@ public class SiegePlayerDAO {
         return set;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void insert(Residence residence, int clanId, int playerId) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -91,9 +82,7 @@ public class SiegePlayerDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void delete(Residence residence, int clanId, int playerId) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -118,9 +107,7 @@ public class SiegePlayerDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void delete(Residence residence) {
         Connection con = null;
         PreparedStatement statement = null;

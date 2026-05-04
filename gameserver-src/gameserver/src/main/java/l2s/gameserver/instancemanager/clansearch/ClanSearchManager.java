@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.instancemanager.clansearch;
 
@@ -61,9 +54,7 @@ public class ClanSearchManager {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void load() {
         _log.info(this.getClass().getSimpleName() + ": Loading clan search data...");
         Connection con = null;
@@ -153,9 +144,7 @@ public class ClanSearchManager {
         return (ClanSearchClan)this._registeredClans.get(clanId);
     }
 
-    /*
-     * Enabled aggressive block sorting
-     */
+    
     public List<ClanSearchClan> listClans(int paginationLimit, ClanSearchParams params) {
         int currentIndex;
         ArrayList<ClanSearchClan> clanList = new ArrayList<ClanSearchClan>();

@@ -1,19 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  l2s.commons.dbutils.DbUtils
- *  l2s.commons.logging.LogUtils
- *  org.apache.commons.lang3.ArrayUtils
- *  org.apache.commons.lang3.StringUtils
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.napile.primitive.sets.IntSet
- *  org.napile.primitive.sets.impl.HashIntSet
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.quest;
 
@@ -193,9 +179,7 @@ implements OnInitScriptListener {
         vars.add(new QuestNpcLogInfo(null, varName, max, npcStringId));
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void updateQuestVarInDb(QuestState qs, String var, String value) {
         Player player = qs.getPlayer();
         if (player == null) {
@@ -225,9 +209,7 @@ implements OnInitScriptListener {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void deleteQuestInDb(QuestState qs) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -251,9 +233,7 @@ implements OnInitScriptListener {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void deleteQuestVarInDb(QuestState qs, String var) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -278,9 +258,7 @@ implements OnInitScriptListener {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void restoreQuestStates(Player player) {
         ResultSet rset;
         PreparedStatement statement;

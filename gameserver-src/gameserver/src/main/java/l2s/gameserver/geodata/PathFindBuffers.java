@@ -1,13 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.iterator.TIntIntIterator
- *  gnu.trove.map.hash.TIntIntHashMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  l2s.commons.lang.ArrayUtils
- *  l2s.commons.text.StrTable
- *  org.apache.commons.lang3.ArrayUtils
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.geodata;
 
@@ -32,9 +24,7 @@ public class PathFindBuffers {
     private static int[] sizes = new int[0];
     private static Lock lock = new ReentrantLock();
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static PathFindBuffer create(int mapSize) {
         lock.lock();
         try {
@@ -59,9 +49,7 @@ public class PathFindBuffers {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static PathFindBuffer get(int mapSize) {
         lock.lock();
         try {
@@ -115,9 +103,7 @@ public class PathFindBuffers {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static StrTable getStats() {
         StrTable table = new StrTable("PathFind Buffers Stats");
         lock.lock();

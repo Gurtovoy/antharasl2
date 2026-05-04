@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -29,9 +24,7 @@ public class CharacterPremiumItemsDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<PremiumItem> select(Player owner) {
         ArrayList<PremiumItem> list = new ArrayList<PremiumItem>();
         Connection con = null;
@@ -64,9 +57,7 @@ public class CharacterPremiumItemsDAO {
         return list;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean insert(Player owner, PremiumItem item) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -97,9 +88,7 @@ public class CharacterPremiumItemsDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean delete(Player owner, PremiumItem item) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -130,9 +119,7 @@ public class CharacterPremiumItemsDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean update(Player owner, PremiumItem item, long count) {
         Connection con = null;
         PreparedStatement statement = null;

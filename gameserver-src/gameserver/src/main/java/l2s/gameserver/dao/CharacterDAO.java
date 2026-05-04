@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.sets.IntSet
- *  org.napile.primitive.sets.impl.HashIntSet
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -33,9 +26,7 @@ public class CharacterDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void deleteCharByObjId(int objid) {
         if (objid < 0) {
             return;
@@ -61,9 +52,7 @@ public class CharacterDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean insert(Player player) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -117,9 +106,7 @@ public class CharacterDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public int getObjectIdByName(String name) {
         ResultSet rset;
         PreparedStatement statement;
@@ -153,9 +140,7 @@ public class CharacterDAO {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public String getNameByObjectId(int objectId, boolean nullable) {
         ResultSet rset;
         PreparedStatement statement;
@@ -193,9 +178,7 @@ public class CharacterDAO {
         return this.getNameByObjectId(objectId, false);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public String getAccNameByName(String n) {
         ResultSet rset;
         PreparedStatement statement;
@@ -229,9 +212,7 @@ public class CharacterDAO {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public int accountCharNumber(String account) {
         ResultSet rset;
         PreparedStatement statement;
@@ -313,9 +294,7 @@ public class CharacterDAO {
         return this.getPlayersIdByAccount(account, Integer.MIN_VALUE);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public IntSet getAllPlayersObjectIds() {
         HashIntSet set = new HashIntSet();
         Connection con = null;
@@ -343,9 +322,7 @@ public class CharacterDAO {
         return set;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public String getLastIPByName(String n) {
         ResultSet rset;
         PreparedStatement statement;
@@ -379,9 +356,7 @@ public class CharacterDAO {
         return ip != null ? ip : "";
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public String getLastHWIDByName(String n) {
         ResultSet rset;
         PreparedStatement statement;

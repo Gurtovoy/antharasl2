@@ -1,13 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.Containers
- *  org.napile.primitive.lists.IntList
- *  org.napile.primitive.lists.impl.ArrayIntList
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.authcomm.as2gs;
 
@@ -38,9 +30,7 @@ extends ReceivablePacket {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     protected void runImpl() {
         int playerSize = 0;

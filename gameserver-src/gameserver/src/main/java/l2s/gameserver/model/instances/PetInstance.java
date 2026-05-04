@@ -1,14 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dao.JdbcEntityState
- *  l2s.commons.dbutils.DbUtils
- *  l2s.commons.util.Rnd
- *  org.apache.commons.lang3.ArrayUtils
- *  org.apache.commons.lang3.StringUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.instances;
 
@@ -78,9 +69,7 @@ extends Servitor {
     private int _npcState;
     private final int _corpseTime;
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static final PetInstance restore(ItemInstance control, NpcTemplate template, Player owner) {
         ResultSet rset;
         PreparedStatement statement;
@@ -238,9 +227,7 @@ extends Servitor {
         this.addExpAndSp(-this.lostExp, 0L);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void destroyControlItem() {
         if (this.getControlItemObjId() == 0) {
             return;
@@ -280,9 +267,7 @@ extends Servitor {
         this.deathPenalty();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     public void doPickupItem(GameObject object) {
         ItemInstance item;
@@ -528,9 +513,7 @@ extends Servitor {
         this.sendStatusUpdate();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void store() {
         if (this.getControlItemObjId() == 0 || this._exp == 0L) {
             return;
@@ -618,9 +601,7 @@ extends Servitor {
         return this.getObjectId();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     public boolean useItem(ItemInstance item, boolean ctrl, boolean sendMsg) {
         if (!this._isUsingItem.compareAndSet(false, true)) {

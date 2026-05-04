@@ -1,9 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.napile.primitive.sets.IntSet
- *  org.napile.primitive.sets.impl.HashIntSet
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.entity.events.objects;
 

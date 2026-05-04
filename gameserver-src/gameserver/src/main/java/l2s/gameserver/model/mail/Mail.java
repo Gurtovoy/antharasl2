@@ -1,9 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dao.JdbcEntity
- *  l2s.commons.dao.JdbcEntityState
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.mail;
 
@@ -247,9 +243,7 @@ Comparable<Mail> {
         _mailDAO.delete(this);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public Mail reject() {
         Mail mail = new Mail();
         mail.setSenderId(1);

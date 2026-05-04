@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.security;
 
@@ -30,9 +25,7 @@ public class HWIDBan {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void load() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -64,9 +57,7 @@ public class HWIDBan {
         _log.info("HWIDBan: Black list (Hwid) loaded size: " + this._banList.size());
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void addToBlackList(String hwid) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -85,9 +76,7 @@ public class HWIDBan {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void deleteFromBlackList(String hwid) {
         Connection con = null;
         PreparedStatement statement = null;

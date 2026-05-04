@@ -1,19 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.impl.sync.TSynchronizedIntList
- *  gnu.trove.list.TIntList
- *  gnu.trove.list.array.TIntArrayList
- *  l2s.commons.configuration.ExProperties
- *  org.apache.commons.lang3.StringUtils
- *  org.napile.primitive.maps.IntIntMap
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntIntMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.napile.primitive.pair.IntObjectPair
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.entity.olympiad;
 

@@ -1,11 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.geometry.Point2D
- *  l2s.commons.geometry.Shape
- *  l2s.commons.listener.Listener
- *  l2s.commons.util.Rnd
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.instances;
 
@@ -157,9 +151,7 @@ extends Creature {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     public DoorAI getAI() {
         if (this._ai == null) {

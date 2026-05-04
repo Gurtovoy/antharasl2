@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.apache.commons.lang3.StringUtils
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.pair.IntObjectPair
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.l2.c2s;
 

@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.jboss.netty.bootstrap.ServerBootstrap
- *  org.jboss.netty.channel.ChannelFactory
- *  org.jboss.netty.channel.ChannelHandler
- *  org.jboss.netty.channel.ChannelPipelineFactory
- *  org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.telnet;
 

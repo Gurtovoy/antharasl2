@@ -1,13 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dao.JdbcEntityState
- *  l2s.commons.listener.Listener
- *  l2s.commons.listener.ListenerList
- *  org.apache.commons.lang3.ArrayUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.items;
 
@@ -259,9 +251,7 @@ extends ItemContainer {
         this._listeners.remove((Listener)listener);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public ItemInstance setPaperdollItem(int slot, ItemInstance item) {
         ItemInstance old;
         this.writeLock();
@@ -666,9 +656,7 @@ extends ItemContainer {
     public void sendEquipInfo(int slot) {
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     protected void refreshWeight() {
         int weight = 0;
         this.readLock();

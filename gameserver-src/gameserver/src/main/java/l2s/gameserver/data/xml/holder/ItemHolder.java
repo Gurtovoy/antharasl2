@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.iterator.TIntObjectIterator
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  l2s.commons.data.xml.AbstractHolder
- *  l2s.commons.lang.ArrayUtils
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.data.xml.holder;
 

@@ -1,9 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.net.HostInfo
- *  l2s.commons.net.utils.Net
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.authcomm.gs2as;
 

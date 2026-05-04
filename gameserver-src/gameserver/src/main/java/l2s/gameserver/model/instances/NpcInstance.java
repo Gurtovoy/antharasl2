@@ -1,20 +1,5 @@
 /*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  gnu.trove.set.TIntSet
- *  gnu.trove.set.hash.TIntHashSet
- *  l2s.commons.collections.MultiValueSet
- *  l2s.commons.geometry.Circle
- *  l2s.commons.geometry.Shape
- *  l2s.commons.lang.reference.HardReference
- *  l2s.commons.lang.reference.HardReferences
- *  l2s.commons.util.Rnd
- *  org.apache.commons.lang3.StringUtils
- *  org.apache.commons.lang3.tuple.Pair
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.instances;
 
@@ -256,14 +241,10 @@ extends Creature {
         return (HardReference<NpcInstance>) super.getRef();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     @Override
     public NpcAI getAI() {
         if (this._ai == null) {
-            NpcInstance npcInstance = this;
-            synchronized (npcInstance) {
+            synchronized (this) {
                 if (this._ai == null) {
                     this._ai = this.getTemplate().getNewAI(this);
                 }
@@ -1278,12 +1259,12 @@ extends Creature {
                 this.showChatWindow(player, "teleporter/" + this.getNpcId() + "-no.htm", false, new Object[0]);
                 return false;
             }
-            case 32864: 
-            case 32865: 
-            case 32866: 
-            case 32867: 
-            case 32868: 
-            case 32869: 
+            case 32864:
+            case 32865:
+            case 32866:
+            case 32867:
+            case 32868:
+            case 32869:
             case 32870: {
                 if (player.getLevel() >= 80) break;
                 this.showChatWindow(player, "teleporter/" + this.getNpcId() + "-no.htm", false, new Object[0]);
@@ -1636,14 +1617,10 @@ extends Creature {
         this._showName = value;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     @Override
     public NpcListenerList getListeners() {
         if (this.listeners == null) {
-            NpcInstance npcInstance = this;
-            synchronized (npcInstance) {
+            synchronized (this) {
                 if (this.listeners == null) {
                     this.listeners = new NpcListenerList(this);
                 }
@@ -1660,13 +1637,9 @@ extends Creature {
         return this.getListeners().remove(listener);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public NpcStatsChangeRecorder getStatsRecorder() {
         if (this._statsRecorder == null) {
-            NpcInstance npcInstance = this;
-            synchronized (npcInstance) {
+            synchronized (this) {
                 if (this._statsRecorder == null) {
                     this._statsRecorder = new NpcStatsChangeRecorder(this);
                 }
@@ -2161,4 +2134,3 @@ extends Creature {
         }
     }
 }
-

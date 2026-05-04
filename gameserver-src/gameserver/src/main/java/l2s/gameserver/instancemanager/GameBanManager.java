@@ -1,13 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.ban.BanBindType
- *  l2s.commons.ban.BanInfo
- *  l2s.commons.ban.BanManager
- *  org.apache.commons.lang3.StringUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.instancemanager;
 
@@ -65,9 +57,7 @@ extends BanManager {
         this.checkBansTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> this.checkBans(), 0L, interval);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void checkBans() {
         this.lock.lock();
         try {
@@ -86,9 +76,7 @@ extends BanManager {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean giveBan(BanBindType bindType, String bindValue, int endTime, String reason) {
         if (!bindType.isGame()) {
             return false;
@@ -115,9 +103,7 @@ extends BanManager {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean removeBan(BanBindType bindType, String bindValue) {
         if (!bindType.isGame()) {
             return false;

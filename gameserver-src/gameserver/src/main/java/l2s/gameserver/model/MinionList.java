@@ -1,5 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model;
 
@@ -25,9 +25,7 @@ public class MinionList {
         this._master = master;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public MinionSpawner addMinion(MinionData minionData) {
         this.lock.lock();
         try {
@@ -45,9 +43,7 @@ public class MinionList {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public MinionSpawner addMinion(int minionId, String ai, int minionCount, int respawnTime) {
         this.lock.lock();
         try {
@@ -73,9 +69,7 @@ public class MinionList {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean hasAliveMinions() {
         this.lock.lock();
         try {
@@ -93,9 +87,7 @@ public class MinionList {
         return false;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<NpcInstance> getAliveMinions() {
         ArrayList<NpcInstance> result = new ArrayList<NpcInstance>();
         this.lock.lock();

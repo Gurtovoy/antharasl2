@@ -1,5 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.actor.recorder;
 
@@ -75,9 +75,7 @@ public class CharStatsChangeRecorder<T extends Creature> {
         return newValue;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     protected Set<AbnormalEffect> set(int flag, Set<AbnormalEffect> oldValue, Set<AbnormalEffect> newValue) {
         Set<AbnormalEffect> set = oldValue;
         synchronized (set) {

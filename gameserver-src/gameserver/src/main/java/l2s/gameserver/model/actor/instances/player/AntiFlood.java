@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.iterator.TIntLongIterator
- *  gnu.trove.map.TIntLongMap
- *  gnu.trove.map.hash.TIntLongHashMap
- *  gnu.trove.set.TIntSet
- *  gnu.trove.set.hash.TIntHashSet
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.actor.instances.player;
 

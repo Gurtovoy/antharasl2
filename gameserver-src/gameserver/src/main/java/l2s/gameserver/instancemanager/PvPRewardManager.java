@@ -1,9 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  l2s.commons.util.Rnd
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.instancemanager;
 
@@ -216,9 +212,7 @@ public class PvPRewardManager {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static void logCombat(Player killer, Player victim) {
         String kill_name = killer.getName();
         String victim_name = victim.getName();

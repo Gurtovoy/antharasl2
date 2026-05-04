@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CTreeIntObjectMap
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.instancemanager.games;
 
@@ -41,9 +34,7 @@ public class MiniGameScoreManager {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void load() {
         Connection con = null;
         Statement statement = null;
@@ -71,9 +62,7 @@ public class MiniGameScoreManager {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void insertScore(Player player, int score) {
         if (this.addScore(player.getName(), score)) {
             Connection con = null;

@@ -1,16 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.data.xml.AbstractHolder
- *  l2s.commons.data.xml.AbstractParser
- *  l2s.commons.geometry.Polygon
- *  l2s.commons.geometry.Rectangle
- *  l2s.commons.geometry.Shape
- *  org.apache.commons.lang3.tuple.ImmutablePair
- *  org.apache.commons.lang3.tuple.Pair
- *  org.dom4j.Attribute
- *  org.dom4j.Element
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.data.xml.parser;
 

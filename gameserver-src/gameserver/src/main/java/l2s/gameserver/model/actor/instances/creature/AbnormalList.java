@@ -1,11 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.set.TIntSet
- *  gnu.trove.set.hash.TIntHashSet
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.actor.instances.creature;
 
@@ -221,12 +215,7 @@ implements Iterable<Abnormal> {
         return abnormalType1 == abnormalType2;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Enabled aggressive block sorting
-     * Enabled unnecessary exception pruning
-     * Enabled aggressive exception aggregation
-     */
+    
     public boolean add(Abnormal abnormal) {
         if (!abnormal.isTimeLeft()) {
             return false;

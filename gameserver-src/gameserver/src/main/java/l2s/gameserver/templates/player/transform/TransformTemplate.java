@@ -1,13 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.TIntDoubleMap
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntDoubleHashMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  gnu.trove.set.TIntSet
- *  gnu.trove.set.hash.TIntHashSet
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.templates.player.transform;
 

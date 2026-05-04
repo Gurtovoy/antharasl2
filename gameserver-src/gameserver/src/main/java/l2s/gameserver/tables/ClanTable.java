@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.tables;
 
@@ -122,9 +115,7 @@ public class ClanTable {
         return new AbstractMap.SimpleEntry<Clan, Alliance>(charClan, charClan == null ? null : charClan.getAlliance());
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void restoreClans() {
         ArrayList<Integer> clanIds = new ArrayList<Integer>();
         Connection con = null;
@@ -173,9 +164,7 @@ public class ClanTable {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void restoreAllies() {
         ArrayList<Integer> allyIds = new ArrayList<Integer>();
         Connection con = null;
@@ -270,9 +259,7 @@ public class ClanTable {
         this._clans.remove(clan.getClanId());
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void deleteClanFromDb(int clanId, int leaderId) {
         long curtime = System.currentTimeMillis();
         Connection con = null;
@@ -360,9 +347,7 @@ public class ClanTable {
         player.getClan().setDissolvedAlly();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void deleteAllyFromDb(int allyId) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -397,9 +382,7 @@ public class ClanTable {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void storeClanWar0(ClanWar war) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -428,9 +411,7 @@ public class ClanTable {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void storeClanWars() {
         List<ClanWar> list = this._clanWarUpdateCache;
         synchronized (list) {
@@ -441,9 +422,7 @@ public class ClanTable {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void deleteClanWar(ClanWar war) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -467,9 +446,7 @@ public class ClanTable {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void restoreClanWars() {
         Connection con = null;
         PreparedStatement statement = null;

@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.pledge;
 
@@ -155,12 +150,7 @@ public class UnitMember {
         return player == null ? this._title : player.getTitle();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Enabled aggressive block sorting
-     * Enabled unnecessary exception pruning
-     * Enabled aggressive exception aggregation
-     */
+    
     public void setTitle(String title) {
         Player player = this.getPlayer();
         this._title = title;
@@ -212,9 +202,7 @@ public class UnitMember {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void updatePledgeType() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -266,9 +254,7 @@ public class UnitMember {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void updatePowerGrade() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -307,9 +293,7 @@ public class UnitMember {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void updateApprentice() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -345,9 +329,7 @@ public class UnitMember {
         this.updateAttendance();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void updateAttendance() {
         Connection con = null;
         PreparedStatement statement = null;

@@ -1,5 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.l2.c2s;
 
@@ -34,12 +34,7 @@ extends L2GameClientPacket {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Enabled aggressive block sorting
-     * Enabled unnecessary exception pruning
-     * Enabled aggressive exception aggregation
-     */
+    
     @Override
     protected void runImpl() {
         if (!Config.EX_USE_PRIME_SHOP) {

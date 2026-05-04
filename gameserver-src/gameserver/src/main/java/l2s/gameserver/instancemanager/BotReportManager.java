@@ -1,16 +1,7 @@
 /*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  l2s.commons.time.cron.SchedulingPattern
- *  org.napile.primitive.maps.IntLongMap
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.napile.primitive.maps.impl.HashIntLongMap
- *  org.napile.primitive.pair.IntObjectPair
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+ * This file was originally decompiled from L2S rev.[31495].
+ * Refactored: replaced synchronized(this) and synchronized(_charRegistry) with a dedicated
+ * _reportLock object; removed CFR decompiler artifacts.
  */
 package l2s.gameserver.instancemanager;
 
@@ -52,6 +43,7 @@ public final class BotReportManager {
     private static final String SQL_LOAD_REPORTED_CHAR_DATA = "SELECT * FROM bot_reported_char_data";
     private static final String SQL_INSERT_REPORTED_CHAR_DATA = "INSERT INTO bot_reported_char_data VALUES (?,?,?)";
     private static final String SQL_CLEAR_REPORTED_CHAR_DATA = "DELETE FROM bot_reported_char_data";
+    private final Object _reportLock = new Object();
     private final IntLongMap _ipRegistry;
     private final IntObjectMap<ReporterCharData> _charRegistry;
     private final IntObjectMap<ReportedCharData> _reports;
@@ -75,9 +67,6 @@ public final class BotReportManager {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     private void loadReportedCharData() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -123,9 +112,6 @@ public final class BotReportManager {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public void saveReportedCharData() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -158,9 +144,6 @@ public final class BotReportManager {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     public boolean reportBot(Player reporter) {
         if (!Config.BOTREPORT_ENABLED) {
             return false;
@@ -192,8 +175,7 @@ public final class BotReportManager {
         ReportedCharData rcd = (ReportedCharData)this._reports.get(bot.getObjectId());
         ReporterCharData rcdRep = (ReporterCharData)this._charRegistry.get(reporter.getObjectId());
         int reporterId = reporter.getObjectId();
-        BotReportManager botReportManager = this;
-        synchronized (botReportManager) {
+        synchronized (_reportLock) {
             if (this._reports.containsKey(reporterId)) {
                 reporter.sendPacket((IBroadcastPacket)SystemMsg.YOU_HAVE_BEEN_REPORTED_AS_AN_ILLEGAL_PROGRAM_USER_AND_CANNOT_REPORT_OTHER_USERS);
                 return false;
@@ -271,12 +253,8 @@ public final class BotReportManager {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
     private void resetPointsAndSchedule() {
-        IntObjectMap<ReporterCharData> intObjectMap = this._charRegistry;
-        synchronized (intObjectMap) {
+        synchronized (_reportLock) {
             for (ReporterCharData rcd : this._charRegistry.valueCollection()) {
                 rcd.setPoints(7);
             }
@@ -382,4 +360,3 @@ public final class BotReportManager {
         }
     }
 }
-

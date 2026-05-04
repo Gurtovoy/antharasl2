@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.iterator.TIntIntIterator
- *  gnu.trove.map.TIntIntMap
- *  gnu.trove.map.hash.TIntIntHashMap
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.l2.s2c;
 

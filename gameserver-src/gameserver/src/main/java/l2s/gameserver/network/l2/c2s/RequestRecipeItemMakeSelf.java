@@ -1,8 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.util.Rnd
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.l2.c2s;
 
@@ -35,9 +32,7 @@ extends L2GameClientPacket {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     protected void runImpl() {
         Player activeChar = ((GameClient)this.getClient()).getActiveChar();

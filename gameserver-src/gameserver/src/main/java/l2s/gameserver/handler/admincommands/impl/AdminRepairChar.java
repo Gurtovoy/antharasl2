@@ -1,8 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.handler.admincommands.impl;
 
@@ -18,10 +15,6 @@ import l2s.gameserver.model.Player;
 
 public class AdminRepairChar
 implements IAdminCommandHandler {
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Loose catch block
-     */
     @Override
     public boolean useAdminCommand(Enum<?> comm, String[] wordList, String fullString, Player activeChar) {
         int objId;
@@ -96,4 +89,3 @@ implements IAdminCommandHandler {
 
     }
 }
-

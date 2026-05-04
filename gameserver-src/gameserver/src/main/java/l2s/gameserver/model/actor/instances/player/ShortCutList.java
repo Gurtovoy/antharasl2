@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.actor.instances.player;
 
@@ -60,9 +55,7 @@ public class ShortCutList {
         this.registerShortCutInDb(shortcut, oldShortCut);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private synchronized void registerShortCutInDb(ShortCut shortcut, ShortCut oldShortCut) {
         if (oldShortCut != null) {
             this.deleteShortCutFromDb(oldShortCut);
@@ -95,9 +88,7 @@ public class ShortCutList {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void deleteShortCutFromDb(ShortCut shortcut) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -149,9 +140,7 @@ public class ShortCutList {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void restore() {
         this._shortCuts.clear();
         Connection con = null;

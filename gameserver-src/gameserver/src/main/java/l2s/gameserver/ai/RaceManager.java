@@ -1,5 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.ai;
 
@@ -28,9 +28,7 @@ extends DefaultAI {
         this.onEvtThink();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     protected void onEvtThink() {
         RaceManagerInstance actor = this.getActor();

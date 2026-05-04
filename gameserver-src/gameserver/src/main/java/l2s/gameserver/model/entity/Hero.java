@@ -1,13 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.napile.primitive.pair.IntObjectPair
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.entity;
 
@@ -86,9 +78,7 @@ public class Hero {
         e = null;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void init() {
         _heroes = new CHashIntObjectMap();
         _completeHeroes = new CHashIntObjectMap();
@@ -198,9 +188,7 @@ public class Hero {
         return false;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void updateHeroes(int id) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -267,9 +255,7 @@ public class Hero {
         this.updateHeroes(player.getObjectId());
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void loadDiary(int charId) {
         ResultSet rset;
         PreparedStatement statement;
@@ -371,9 +357,7 @@ public class Hero {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void insertHeroDiary(int charId, int action, int param) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -400,9 +384,7 @@ public class Hero {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void loadMessage(int charId) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -434,9 +416,7 @@ public class Hero {
         _heroMessage.put(charId, message);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void saveHeroMessage(int charId) {
         if (_heroMessage.get(charId) == null) {
             return;

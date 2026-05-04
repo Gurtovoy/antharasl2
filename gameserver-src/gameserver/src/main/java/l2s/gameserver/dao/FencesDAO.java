@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -32,9 +27,7 @@ public class FencesDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void restore() {
         int restoredCount = 0;
         Connection con = null;
@@ -73,9 +66,7 @@ public class FencesDAO {
         _log.info("FencesDAO: restored " + restoredCount + " fence(s).");
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean insert(FenceInstance fence) {
         if (!fence.getReflection().isMain()) {
             return false;
@@ -113,9 +104,7 @@ public class FencesDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean update(FenceInstance fence) {
         if (!fence.getReflection().isMain()) {
             return false;
@@ -153,9 +142,7 @@ public class FencesDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean delete(FenceInstance fence) {
         if (!fence.getReflection().isMain()) {
             return false;

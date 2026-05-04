@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -33,9 +26,7 @@ public class CharacterPostFriendDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public IntObjectMap<String> select(Player player) {
         CHashIntObjectMap set = new CHashIntObjectMap();
         Connection con = null;
@@ -64,9 +55,7 @@ public class CharacterPostFriendDAO {
         return set;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void insert(Player player, int val) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -90,9 +79,7 @@ public class CharacterPostFriendDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void delete(Player player, int val) {
         Connection con = null;
         PreparedStatement statement = null;

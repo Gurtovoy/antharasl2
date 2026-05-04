@@ -1,9 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.napile.primitive.maps.IntIntMap
- *  org.napile.primitive.maps.impl.HashIntIntMap
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.utils;
 

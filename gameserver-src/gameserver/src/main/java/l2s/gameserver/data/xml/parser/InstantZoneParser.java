@@ -1,16 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.data.xml.AbstractHolder
- *  l2s.commons.data.xml.AbstractParser
- *  l2s.commons.geometry.Polygon
- *  l2s.commons.geometry.Shape
- *  l2s.commons.time.cron.SchedulingPattern
- *  org.dom4j.Element
- *  org.napile.primitive.Containers
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.HashIntObjectMap
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.data.xml.parser;
 

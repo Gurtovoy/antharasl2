@@ -1,11 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  l2s.commons.dbutils.ScriptRunner
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.database;
 
@@ -30,9 +24,7 @@ import org.slf4j.LoggerFactory;
 public class UpdatesInstaller {
     private static final Logger _log = LoggerFactory.getLogger(UpdatesInstaller.class);
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void checkAndInstall() {
         if (!Config.DATABASE_AUTOUPDATE) {
             _log.info("UpdatesInstaller: Disabled.");

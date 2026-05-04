@@ -1,16 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.collections.MultiValueSet
- *  l2s.commons.listener.Listener
- *  l2s.commons.listener.ListenerList
- *  l2s.commons.logging.LoggerObject
- *  org.napile.primitive.Containers
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.napile.primitive.maps.impl.TreeIntObjectMap
- *  org.napile.primitive.pair.IntObjectPair
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.entity.events;
 

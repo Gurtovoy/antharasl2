@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -38,9 +33,7 @@ public class SpawnsDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<SpawnTemplate> restore() {
         ArrayList<SpawnTemplate> result = new ArrayList<SpawnTemplate>();
         Connection con = null;
@@ -78,9 +71,7 @@ public class SpawnsDAO {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean insert(int npcId, int x, int y, int z, int heading, int respawn, int count) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -113,9 +104,7 @@ public class SpawnsDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean delete(NpcInstance npc) {
         Connection con = null;
         PreparedStatement statement = null;

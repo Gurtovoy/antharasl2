@@ -1,5 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.utils;
 
@@ -117,9 +117,7 @@ public final class ItemFunctions {
         return ItemFunctions.deleteItem(playable, itemId, count, true);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static boolean deleteItem(Playable playable, int itemId, long count, boolean notify) {
         if (playable == null || count < 1L) {
             return false;
@@ -179,9 +177,7 @@ public final class ItemFunctions {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void deleteItemsEverywhere(Playable playable, int itemId) {
         if (playable == null) {
             return;
@@ -264,9 +260,7 @@ public final class ItemFunctions {
         return ItemFunctions.deleteItem(playable, item, count, true);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static boolean deleteItem(Playable playable, ItemInstance item, long count, boolean notify) {
         if (playable == null || count < 1L) {
             return false;

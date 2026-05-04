@@ -1,5 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.actor.instances.player;
 
@@ -30,9 +30,7 @@ public class PremiumItemList {
         this._premiumItemList = CharacterPremiumItemsDAO.getInstance().select(this._owner);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean add(PremiumItem item) {
         this.writeLock();
         try {
@@ -71,9 +69,7 @@ public class PremiumItemList {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public PremiumItem getSame(PremiumItem item) {
         this.readLock();
         try {
@@ -89,9 +85,7 @@ public class PremiumItemList {
         return null;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean remove(PremiumItem item, long count) {
         if (count == 0L) {
             return false;

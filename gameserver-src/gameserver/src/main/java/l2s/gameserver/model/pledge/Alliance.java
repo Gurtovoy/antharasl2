@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.pledge;
 
@@ -138,9 +133,7 @@ public class Alliance {
         return System.currentTimeMillis() - this._expelledMemberTime >= EXPELLED_MEMBER_PENALTY;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void updateAllyInDB() {
         if (this.getLeaderId() == 0) {
             _log.warn("updateAllyInDB with empty LeaderId");
@@ -175,9 +168,7 @@ public class Alliance {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void store() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -207,9 +198,7 @@ public class Alliance {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void storeNewMemberInDatabase(Clan member) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -233,9 +222,7 @@ public class Alliance {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void removeMemberInDatabase(Clan member) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -258,9 +245,7 @@ public class Alliance {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void restore() {
         if (this.getAllyId() == 0) {
             return;

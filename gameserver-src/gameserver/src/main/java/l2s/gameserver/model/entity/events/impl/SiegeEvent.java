@@ -1,19 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.collections.LazyArrayList
- *  l2s.commons.collections.MultiValueSet
- *  l2s.commons.dao.JdbcEntityState
- *  l2s.commons.lang.reference.HardReference
- *  l2s.commons.lang.reference.HardReferences
- *  l2s.commons.time.cron.SchedulingPattern
- *  org.apache.commons.lang3.StringUtils
- *  org.napile.primitive.maps.IntLongMap
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntLongMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.napile.primitive.pair.IntObjectPair
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.entity.events.impl;
 

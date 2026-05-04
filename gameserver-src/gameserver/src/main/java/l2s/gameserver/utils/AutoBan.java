@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.utils;
 
@@ -27,9 +22,7 @@ import org.slf4j.LoggerFactory;
 public final class AutoBan {
     private static final Logger _log = LoggerFactory.getLogger(AutoBan.class);
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static boolean isBanned(int ObjectId) {
         ResultSet rset;
         PreparedStatement statement;
@@ -64,9 +57,7 @@ public final class AutoBan {
         return res;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void Banned(Player actor, int period, String msg, String GM) {
         int endban = 0;
         if (period == -1) {
@@ -112,10 +103,7 @@ public final class AutoBan {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Unable to fully structure code
-     */
+    
     public static boolean Banned(String actor, int acc_level, int period, String msg, String GM) {
         int obj_id = CharacterDAO.getInstance().getObjectIdByName(actor);
         boolean res = obj_id > 0;
@@ -176,9 +164,7 @@ public final class AutoBan {
         return res;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void Karma(Player actor, int karma, String msg, String GM) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -207,12 +193,7 @@ public final class AutoBan {
         AutoBan.Banned(actor, period, msg, "AutoBan");
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Enabled aggressive block sorting
-     * Enabled unnecessary exception pruning
-     * Enabled aggressive exception aggregation
-     */
+    
     public static boolean ChatBan(String actor, int period, String msg, String GM) {
         boolean res = true;
         long NoChannel = period * 60000;
@@ -251,12 +232,7 @@ public final class AutoBan {
         return res;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Enabled aggressive block sorting
-     * Enabled unnecessary exception pruning
-     * Enabled aggressive exception aggregation
-     */
+    
     public static boolean ChatUnBan(String actor, String GM) {
         boolean res = true;
         Player plyr = World.getPlayer(actor);

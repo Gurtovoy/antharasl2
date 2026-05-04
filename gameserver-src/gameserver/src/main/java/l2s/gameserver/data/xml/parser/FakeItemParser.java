@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.data.xml.AbstractHolder
- *  l2s.commons.data.xml.AbstractParser
- *  org.dom4j.Element
- *  org.napile.primitive.lists.IntList
- *  org.napile.primitive.lists.impl.ArrayIntList
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.data.xml.parser;
 

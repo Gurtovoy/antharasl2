@@ -1,16 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.TIntCollection
- *  gnu.trove.impl.sync.TSynchronizedIntList
- *  gnu.trove.impl.sync.TSynchronizedIntObjectMap
- *  gnu.trove.iterator.TIntObjectIterator
- *  gnu.trove.list.TIntList
- *  gnu.trove.list.array.TIntArrayList
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  gnu.trove.set.TIntSet
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.utils;
 

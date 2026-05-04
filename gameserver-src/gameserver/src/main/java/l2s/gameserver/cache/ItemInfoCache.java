@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  net.sf.ehcache.Cache
- *  net.sf.ehcache.CacheManager
- *  net.sf.ehcache.Element
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.cache;
 

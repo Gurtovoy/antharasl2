@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  l2s.commons.math.SafeMath
- *  l2s.commons.string.StringArrayUtils
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.utils;
 
@@ -211,9 +206,7 @@ public final class TradeHelper {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static int restoreOfflineTraders() throws Exception {
         int count = 0;
         Connection con = null;
@@ -268,9 +261,7 @@ public final class TradeHelper {
         return GameObjectsStorage.getOfflinePlayers().size();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static int restoreOfflineBuffers() throws Exception {
         int count = 0;
         Connection con = null;

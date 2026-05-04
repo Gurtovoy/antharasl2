@@ -1,16 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.collections.LazyArrayList
- *  l2s.commons.dao.JdbcEntity
- *  l2s.commons.dao.JdbcEntityState
- *  l2s.commons.listener.Listener
- *  org.napile.primitive.Containers
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.HashIntObjectMap
- *  org.napile.primitive.sets.IntSet
- *  org.napile.primitive.sets.impl.HashIntSet
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.items;
 
@@ -1103,9 +1092,7 @@ implements JdbcEntity {
         return (this.customFlags & 8) == 8;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void onEquip(int slot, Playable actor) {
         if (!this.isEquipped() && !this.getTemplate().isRune()) {
             return;
@@ -1132,9 +1119,7 @@ implements JdbcEntity {
         this.onEquip(this.getEquipSlot(), actor);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void onUnequip(int slot, Playable actor, boolean refreshEquip) {
         if (!this.isEquipable() && !this.getTemplate().isRune()) {
             return;
@@ -1171,9 +1156,7 @@ implements JdbcEntity {
         this.onUnequip(this.getEquipSlot(), actor);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public int onRefreshEquip(Playable actor, boolean update) {
         if (!this.isEquipped() && !this.getTemplate().isRune()) {
             return 0;

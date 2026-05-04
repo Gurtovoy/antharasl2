@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  l2s.commons.data.xml.AbstractHolder
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.data.string;
 
@@ -58,9 +53,7 @@ extends AbstractHolder {
         return this.getItemName(lang, itemId);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void load() {
         for (Language lang : Language.VALUES) {
             this._itemNames.put(lang, (TIntObjectMap<String>)new TIntObjectHashMap());

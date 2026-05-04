@@ -1,14 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dao.JdbcEntityStats
- *  l2s.commons.lang.StatsUtils
- *  l2s.commons.net.nio.impl.SelectorStats
- *  l2s.commons.threading.RunnableStatsManager
- *  net.sf.ehcache.Cache
- *  net.sf.ehcache.statistics.LiveCacheStatistics
- *  org.apache.commons.io.FileUtils
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.telnet.commands;
 

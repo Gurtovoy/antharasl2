@@ -1,22 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.TIntObjectMap
- *  gnu.trove.map.hash.TIntObjectHashMap
- *  gnu.trove.set.TIntSet
- *  gnu.trove.set.hash.TIntHashSet
- *  l2s.commons.configuration.ExProperties
- *  l2s.commons.net.nio.impl.SelectorConfig
- *  l2s.commons.string.StringArrayUtils
- *  l2s.commons.time.cron.SchedulingPattern
- *  org.apache.commons.lang3.ArrayUtils
- *  org.apache.commons.lang3.BooleanUtils
- *  org.apache.commons.lang3.StringUtils
- *  org.apache.commons.lang3.math.NumberUtils
- *  org.apache.commons.lang3.reflect.FieldUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver;
 
@@ -2258,9 +2241,7 @@ public class Config {
     private Config() {
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void abuseLoad() {
         BufferedReader lnr = null;
         try {

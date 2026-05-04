@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.util.Rnd
- *  org.napile.primitive.lists.IntList
- *  org.napile.primitive.sets.IntSet
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.ai;
 
@@ -182,9 +177,7 @@ OnPlayerChatMessageReceive {
         return result;
     }
 
-    /*
-     * Enabled aggressive block sorting
-     */
+    
     private synchronized boolean performNextAction(boolean force) {
         if (this.deleted.get()) {
             return false;
@@ -679,9 +672,7 @@ OnPlayerChatMessageReceive {
         return (Skill)Rnd.get(skills);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     protected void onEvtAttacked(Creature attacker, Skill skill, int damage) {
         FakeAI fakeAI = this;
@@ -758,9 +749,7 @@ OnPlayerChatMessageReceive {
         CharacterDAO.getInstance().deleteCharByObjId(objectId);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     public void onTeleport(Player player, int x, int y, int z, Reflection reflection) {
         FakeAI fakeAI = this;

@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.taskmanager;
 
@@ -56,9 +51,7 @@ implements Runnable {
         ThreadPoolManager.getInstance().schedule(this, 10000L);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private int get_last_payment_id(Connection con) {
         int result;
         ResultSet rset;
@@ -88,9 +81,7 @@ implements Runnable {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     public void run() {
         block9: {
@@ -125,9 +116,7 @@ implements Runnable {
         ThreadPoolManager.getInstance().schedule(this, 10000L);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void addDelayed(int objectId, int itemId, long itemCount, int enchant, String desc) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -154,10 +143,7 @@ implements Runnable {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Unable to fully structure code
-     */
+    
     public int loadDelayed(Player player, boolean notify) {
         if (player == null) {
             return 0;

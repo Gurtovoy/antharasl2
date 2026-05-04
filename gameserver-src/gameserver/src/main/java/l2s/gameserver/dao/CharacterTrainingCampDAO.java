@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -27,9 +22,7 @@ public class CharacterTrainingCampDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void restore(Map<String, TrainingCamp> map) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -56,9 +49,7 @@ public class CharacterTrainingCampDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement, (ResultSet)rset);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean replace(String account, TrainingCamp trainingCamp) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -90,9 +81,7 @@ public class CharacterTrainingCampDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void delete(String account) {
         Connection con = null;
         PreparedStatement statement = null;

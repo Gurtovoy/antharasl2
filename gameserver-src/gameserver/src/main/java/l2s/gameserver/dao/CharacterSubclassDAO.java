@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -32,9 +27,7 @@ public class CharacterSubclassDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean insert(int objId, int classId, long exp, long sp, double curHp, double curMp, double curCp, double maxHp, double maxMp, double maxCp, int level, boolean active, SubClassType type) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -73,9 +66,7 @@ public class CharacterSubclassDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<SubClass> restore(Player player) {
         ArrayList<SubClass> result = new ArrayList<SubClass>();
         Connection con = null;
@@ -113,9 +104,7 @@ public class CharacterSubclassDAO {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean store(Player player) {
         Connection con = null;
         Statement statement = null;

@@ -1,15 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.jboss.netty.channel.ChannelHandler
- *  org.jboss.netty.channel.ChannelPipeline
- *  org.jboss.netty.channel.ChannelPipelineFactory
- *  org.jboss.netty.channel.Channels
- *  org.jboss.netty.handler.codec.frame.DelimiterBasedFrameDecoder
- *  org.jboss.netty.handler.codec.frame.Delimiters
- *  org.jboss.netty.handler.codec.string.StringDecoder
- *  org.jboss.netty.handler.codec.string.StringEncoder
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.telnet;
 

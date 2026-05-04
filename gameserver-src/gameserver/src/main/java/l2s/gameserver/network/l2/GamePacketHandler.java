@@ -1,14 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.net.nio.impl.IClientFactory
- *  l2s.commons.net.nio.impl.IMMOExecutor
- *  l2s.commons.net.nio.impl.IPacketHandler
- *  l2s.commons.net.nio.impl.MMOConnection
- *  l2s.commons.net.nio.impl.ReceivablePacket
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.l2;
 

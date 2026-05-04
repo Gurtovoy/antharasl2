@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.time.cron.SchedulingPattern
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.HashIntObjectMap
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.actor.instances.player;
 
@@ -164,9 +159,7 @@ public class ProductHistoryList {
         return "ProductHistoryList[owner=" + this._owner.getName() + "]";
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void startTask() {
         if (!Config.EX_USE_PRIME_SHOP) {
             return;
@@ -208,9 +201,7 @@ public class ProductHistoryList {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void refreshLimits() {
         this.writeLock();
         try {
@@ -226,9 +217,7 @@ public class ProductHistoryList {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void onPurchaseProduct(ProductItem product, int count) {
         this.writeLock();
         try {

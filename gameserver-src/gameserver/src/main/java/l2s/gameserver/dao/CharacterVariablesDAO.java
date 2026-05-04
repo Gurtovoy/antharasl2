@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -39,9 +34,7 @@ public class CharacterVariablesDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void deleteExpiredVars() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -64,9 +57,7 @@ public class CharacterVariablesDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean delete(int playerObjId, String varName) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -94,9 +85,7 @@ public class CharacterVariablesDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean delete(String varName) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -123,9 +112,7 @@ public class CharacterVariablesDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public boolean insert(int playerObjId, CharacterVariable var) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -155,9 +142,7 @@ public class CharacterVariablesDAO {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<CharacterVariable> restore(int playerObjId) {
         ArrayList<CharacterVariable> result = new ArrayList<CharacterVariable>();
         Connection con = null;
@@ -188,9 +173,7 @@ public class CharacterVariablesDAO {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public String getVarFromPlayer(int playerObjId, String var) {
         ResultSet rset;
         PreparedStatement statement;

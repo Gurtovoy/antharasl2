@@ -1,8 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.hash.TIntObjectHashMap
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.instancemanager;
 
@@ -88,9 +85,7 @@ public class ReflectionManager {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<Reflection> getAllByIzId(int izId) {
         ArrayList<Reflection> reflections = new ArrayList<Reflection>();
         this.readLock.lock();
@@ -106,9 +101,7 @@ public class ReflectionManager {
         return reflections;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public int getCountByIzId(int izId) {
         this.readLock.lock();
         try {

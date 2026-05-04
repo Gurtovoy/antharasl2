@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.util.Rnd
- *  org.apache.commons.lang3.StringUtils
- *  org.napile.primitive.collections.IntCollection
- *  org.napile.primitive.lists.IntList
- *  org.napile.primitive.lists.impl.ArrayIntList
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.utils;
 
@@ -61,9 +54,7 @@ public class FakePlayerUtils {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void checkInventory(FakeAI ai) {
         Player player = ai.getActor();
         player.getInventory().writeLock();
@@ -148,9 +139,7 @@ public class FakePlayerUtils {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static boolean addEquip(FakeAI ai, int itemId) {
         ItemTemplate item = ItemHolder.getInstance().getTemplate(itemId);
         if (item == null) {
@@ -296,9 +285,7 @@ public class FakePlayerUtils {
         return allowClassId;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     static {
         String msg;
         String line;

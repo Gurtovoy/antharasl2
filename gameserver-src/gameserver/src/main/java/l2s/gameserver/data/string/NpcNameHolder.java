@@ -1,8 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.data.xml.AbstractHolder
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.data.string;
 
@@ -54,9 +51,7 @@ extends AbstractHolder {
         return this.getNpcName(lang, npcId);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void load() {
         for (Language lang : Language.VALUES) {
             this.npcNames.put(lang, new HashMap());

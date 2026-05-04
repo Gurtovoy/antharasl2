@@ -1,9 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.apache.commons.lang3.math.NumberUtils
- *  org.apache.commons.lang3.time.DurationFormatUtils
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.telnet.commands;
 

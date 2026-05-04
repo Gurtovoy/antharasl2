@@ -1,5 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.ai;
 
@@ -261,12 +261,7 @@ extends CharacterAI {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Enabled aggressive block sorting
-     * Enabled unnecessary exception pruning
-     * Enabled aggressive exception aggregation
-     */
+    
     @Override
     protected final void onEvtThink() {
         Playable actor = this.getActor();

@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.data.xml.AbstractHolder
- *  org.apache.commons.lang3.tuple.ImmutablePair
- *  org.apache.commons.lang3.tuple.Pair
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.handler.bypass;
 

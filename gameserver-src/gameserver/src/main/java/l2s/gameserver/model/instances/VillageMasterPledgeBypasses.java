@@ -1,8 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  org.apache.commons.lang3.StringUtils
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.instances;
 
@@ -76,9 +73,7 @@ public class VillageMasterPledgeBypasses {
         NpcInstance.showAcquireList(AcquireType.CLAN, player);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public static void levelUpClan(NpcInstance npc, Player player) {
         if (!VillageMasterPledgeBypasses.checkPlayerForClanLeader(npc, player)) {
             return;

@@ -1,11 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.set.hash.TIntHashSet
- *  l2s.commons.dbutils.DbUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.idfactory;
 
@@ -42,9 +36,7 @@ public abstract class IdFactory {
         this.cleanUpDB();
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void resetOnlineStatus() {
         Connection con = null;
         Statement st = null;
@@ -67,9 +59,7 @@ public abstract class IdFactory {
         DbUtils.closeQuietly((Connection)con, (Statement)st);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void globalRemoveItems() {
         TIntHashSet itemsToDelete = new TIntHashSet();
         Connection con = null;
@@ -121,9 +111,7 @@ public abstract class IdFactory {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void cleanUpDB() {
         Connection con = null;
         Statement st = null;
@@ -232,9 +220,7 @@ public abstract class IdFactory {
         DbUtils.closeQuietly((Connection)con, (Statement)st);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     protected int[] extractUsedObjectIDTable() throws SQLException {
         TIntHashSet objectIds = new TIntHashSet();
         Connection con = null;

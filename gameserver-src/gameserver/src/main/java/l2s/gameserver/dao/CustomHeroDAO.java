@@ -1,14 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.maps.IntIntMap
- *  org.napile.primitive.maps.impl.HashIntIntMap
- *  org.napile.primitive.pair.IntIntPair
- *  org.napile.primitive.sets.impl.HashIntSet
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -40,9 +31,7 @@ public class CustomHeroDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+
     private void deleteExpiredHeroes() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -65,9 +54,7 @@ public class CustomHeroDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+
     public void loadCustomHeroes() {
         Connection con = null;
         PreparedStatement statement = null;
@@ -96,9 +83,7 @@ public class CustomHeroDAO {
         _log.info("CustomHeroDAO: loaded " + this._heroes.size() + " custom heroes.");
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+
     public void addCustomHero(int objectId, int time) {
         if (time != -1 && this._heroes.get(objectId) > time) {
             return;
@@ -128,10 +113,6 @@ public class CustomHeroDAO {
         this._heroes.put(objectId, time);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Loose catch block
-     */
     public void removeCustomHero(int objectId) {
         if (this._heroes.containsKey(objectId) || Hero.getInstance().isHero(objectId)) {
             return;
@@ -172,4 +153,3 @@ public class CustomHeroDAO {
         return result.toArray();
     }
 }
-

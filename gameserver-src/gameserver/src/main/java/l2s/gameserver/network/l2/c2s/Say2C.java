@@ -1,17 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  com.graphbuilder.math.Expression
- *  com.graphbuilder.math.ExpressionParseException
- *  com.graphbuilder.math.ExpressionTree
- *  com.graphbuilder.math.VarMap
- *  l2s.commons.ban.BanBindType
- *  l2s.commons.ban.BanInfo
- *  l2s.commons.lang.ArrayUtils
- *  org.apache.commons.lang3.ArrayUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.l2.c2s;
 

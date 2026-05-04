@@ -1,5 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.network.l2.c2s;
 
@@ -118,9 +118,7 @@ extends L2GameClientPacket {
         RequestAquireSkill.learnSimple(player, type, skillLearn, skillEntry, normal);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static void learnSimple(Player player, AcquireType type, SkillLearn skillLearn, SkillEntry skillEntry, boolean normal) {
         if (player.getSp() < (long)skillLearn.getCost()) {
             player.sendPacket((IBroadcastPacket)SystemMsg.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
@@ -151,9 +149,7 @@ extends L2GameClientPacket {
         player.updateSkillShortcuts(skillEntry.getId(), skillEntry.getLevel());
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static void learnClanSkill(Player player, SkillLearn skillLearn, NpcInstance trainer, SkillEntry skillEntry) {
         if (!player.isClanLeader()) {
             player.sendPacket((IBroadcastPacket)SystemMsg.ONLY_THE_CLAN_LEADER_IS_ENABLED);
@@ -187,9 +183,7 @@ extends L2GameClientPacket {
         VillageMasterPledgeBypasses.showClanSkillList(trainer, player);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static void learnSubUnitSkill(Player player, SkillLearn skillLearn, NpcInstance trainer, SkillEntry skillEntry, int id) {
         Clan clan = player.getClan();
         if (clan == null) {

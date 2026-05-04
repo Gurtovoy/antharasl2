@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.map.TIntLongMap
- *  gnu.trove.map.hash.TIntLongHashMap
- *  l2s.commons.data.xml.AbstractHolder
- *  l2s.commons.data.xml.AbstractParser
- *  org.dom4j.Element
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.data.xml.parser;
 

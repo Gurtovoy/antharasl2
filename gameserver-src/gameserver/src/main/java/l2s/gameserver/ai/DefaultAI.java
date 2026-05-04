@@ -1,13 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.collections.LazyArrayList
- *  l2s.commons.lang.reference.HardReference
- *  l2s.commons.math.random.RndSelector
- *  l2s.commons.util.Rnd
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.ai;
 
@@ -683,9 +675,7 @@ extends NpcAI {
         return this.chooseTaskAndTargets(null, target, actor.getDistance(target));
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     @Override
     protected void onEvtThink() {
         NpcInstance actor = this.getActor();

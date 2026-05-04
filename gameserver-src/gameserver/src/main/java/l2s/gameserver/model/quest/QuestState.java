@@ -1,10 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.util.Rnd
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.quest;
 
@@ -119,9 +114,7 @@ public final class QuestState {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private boolean exitCurrentQuest(QuestRepeatType repeatType) {
         Player player = this.getPlayer();
         if (player == null) {
@@ -553,9 +546,7 @@ public final class QuestState {
         return this._timers;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public long takeItems(int itemId, long count) {
         Player player = this.getPlayer();
         if (player == null) {

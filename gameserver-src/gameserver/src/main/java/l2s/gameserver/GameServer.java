@@ -1,23 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.set.TIntSet
- *  gnu.trove.set.hash.TIntHashSet
- *  l2s.commons.lang.StatsUtils
- *  l2s.commons.listener.Listener
- *  l2s.commons.listener.ListenerList
- *  l2s.commons.net.HostInfo
- *  l2s.commons.net.nio.impl.IClientFactory
- *  l2s.commons.net.nio.impl.IMMOExecutor
- *  l2s.commons.net.nio.impl.IPacketHandler
- *  l2s.commons.net.nio.impl.SelectorStats
- *  l2s.commons.net.nio.impl.SelectorThread
- *  l2s.commons.versioning.Version
- *  net.sf.ehcache.CacheManager
- *  org.apache.commons.lang3.StringUtils
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver;
 
@@ -333,9 +315,7 @@ public class GameServer {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static boolean checkFreePort(String hostname, int port) {
         ServerSocket ss = null;
         try {
@@ -354,9 +334,7 @@ public class GameServer {
         return true;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private static boolean checkOpenPort(String ip, int port) {
         Socket socket = null;
         try {

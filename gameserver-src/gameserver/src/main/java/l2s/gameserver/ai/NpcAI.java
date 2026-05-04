@@ -1,8 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.util.Rnd
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.ai;
 
@@ -434,9 +431,7 @@ extends CharacterAI {
         return this._haveWalkerRoute;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     protected boolean lookNeighbor(int range, boolean force) {
         if (!this.isActive()) {
             return false;

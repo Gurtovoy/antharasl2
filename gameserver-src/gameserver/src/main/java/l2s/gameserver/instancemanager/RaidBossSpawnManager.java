@@ -1,14 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.CHashIntObjectMap
- *  org.napile.primitive.sets.IntSet
- *  org.napile.primitive.sets.impl.HashIntSet
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.instancemanager;
 
@@ -65,9 +56,7 @@ public class RaidBossSpawnManager {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void loadStatus() {
         _storedInfo = new CHashIntObjectMap();
         Connection con = null;
@@ -108,9 +97,7 @@ public class RaidBossSpawnManager {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     private void updateStatusDb(NpcInstance npc) {
         long deathTime;
         if (npc.isReflectionBoss()) {

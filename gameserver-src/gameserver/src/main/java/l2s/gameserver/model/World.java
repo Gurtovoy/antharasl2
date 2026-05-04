@@ -1,10 +1,6 @@
 /*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.collections.LazyArrayList
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+ * This file was originally decompiled from L2S rev.[31495].
+ * Refactored: improved getRegion() double-checked locking pattern, removed CFR artifacts.
  */
 package l2s.gameserver.model;
 
@@ -151,23 +147,29 @@ public class World {
         return World.getRegion(World.validX(World.regionX(obj.getX())), World.validY(World.regionY(obj.getY())), World.validZ(World.regionZ(obj.getZ())));
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     * Enabled force condition propagation
-     * Lifted jumps to return sites
+    /**
+     * Returns the WorldRegion at the given region coordinates.
+     * Uses double-checked locking: fast unsynchronized read path,
+     * synchronized creation path to avoid duplicate region construction.
      */
-    private static WorldRegion getRegion(int x, int y, int z) {
-        WorldRegion[][][] regions = World.getRegions();
-        WorldRegion region = null;
-        region = regions[x][y][z];
-        if (region != null) return region;
-        WorldRegion[][][] worldRegionArray = regions;
-        synchronized (regions) {
+    private static WorldRegion getRegion(int x, int y, int z)
+    {
+        WorldRegion[][][] regions = getRegions();
+        WorldRegion region = regions[x][y][z];
+        if (region != null)
+        {
+            return region;
+        }
+        synchronized (regions)
+        {
             region = regions[x][y][z];
-            if (region != null) return region;
-            WorldRegion worldRegion = new WorldRegion(x, y, z);
-            regions[x][y][z] = worldRegion;
-            return worldRegion;
+            if (region != null)
+            {
+                return region;
+            }
+            region = new WorldRegion(x, y, z);
+            regions[x][y][z] = region;
+            return region;
         }
     }
 
@@ -1053,4 +1055,3 @@ public class World {
         return ret;
     }
 }
-

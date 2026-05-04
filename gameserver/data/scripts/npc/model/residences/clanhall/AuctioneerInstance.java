@@ -557,7 +557,21 @@ public class AuctioneerInstance extends NpcInstance
 			HtmlMessage msg = new HtmlMessage(this);
 			msg.setFile("residence2/clanhall/auction_clanhall_register_next.htm");
 			msg.replace("%min_bid%", String.valueOf(clanHall.getBaseMinBid()));
-			msg.replace("%last_bid%", String.valueOf(clanHall.getBaseMinBid()));  //TODO [VISTALL] get last bid
+			// Find the current highest bid among all auction participants
+			ClanHallAuctionEvent auctionEvent = clanHall.getSiegeEvent();
+			long lastBid = clanHall.getBaseMinBid(); // fallback to base min bid
+			if (auctionEvent != null)
+			{
+				List<AuctionSiegeClanObject> bidders = auctionEvent.getObjects(ClanHallAuctionEvent.ATTACKERS);
+				for (AuctionSiegeClanObject bidder : bidders)
+				{
+					if (bidder.getParam() > lastBid)
+					{
+						lastBid = bidder.getParam();
+					}
+				}
+			}
+			msg.replace("%last_bid%", String.valueOf(lastBid));
 
 			player.sendPacket(msg);
 		}

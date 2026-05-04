@@ -1,16 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  gnu.trove.set.hash.TIntHashSet
- *  l2s.commons.listener.Listener
- *  l2s.commons.listener.ListenerList
- *  org.apache.commons.lang3.ArrayUtils
- *  org.napile.primitive.Containers
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.HashIntObjectMap
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.model.entity;
 
@@ -270,9 +259,7 @@ public class Reflection {
         return -1L;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void collapse() {
         if (this._id <= 0) {
             new Exception("Basic reflection " + this._id + " could not be collapsed!").printStackTrace();
@@ -454,9 +441,7 @@ public class Reflection {
         }
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<Player> getPlayers() {
         ArrayList<Player> result = new ArrayList<Player>();
         this.lock.lock();
@@ -472,9 +457,7 @@ public class Reflection {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<Creature> getPlayersAndObservers() {
         ArrayList<Creature> result = new ArrayList<Creature>();
         this.lock.lock();
@@ -490,9 +473,7 @@ public class Reflection {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<Creature> getObservers() {
         ArrayList<Creature> result = new ArrayList<Creature>();
         this.lock.lock();
@@ -508,9 +489,7 @@ public class Reflection {
         return result;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<NpcInstance> getNpcs() {
         ArrayList<NpcInstance> result = new ArrayList<NpcInstance>();
         this.lock.lock();
@@ -530,9 +509,7 @@ public class Reflection {
         return this.getNpcs(onlyAlive, onlyAlive, npcIds);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public List<NpcInstance> getNpcs(boolean onlyAlive, boolean onlySpawned, int ... npcIds) {
         ArrayList<NpcInstance> result = new ArrayList<NpcInstance>();
         this.lock.lock();
@@ -785,9 +762,7 @@ public class Reflection {
         this._visitors.remove(player.getObjectId());
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void setReenterTime(long time, boolean notify) {
         int[] players = null;
         this.lock.lock();

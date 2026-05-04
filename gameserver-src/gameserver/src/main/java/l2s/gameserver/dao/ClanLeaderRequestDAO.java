@@ -1,12 +1,5 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  l2s.commons.dbutils.DbUtils
- *  org.napile.primitive.maps.IntObjectMap
- *  org.napile.primitive.maps.impl.HashIntObjectMap
- *  org.slf4j.Logger
- *  org.slf4j.LoggerFactory
+﻿/*
+ * This file was originally decompiled from L2S rev.[31495].
  */
 package l2s.gameserver.dao;
 
@@ -34,9 +27,7 @@ public class ClanLeaderRequestDAO {
         return _instance;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public IntObjectMap<ClanChangeLeaderRequest> select() {
         HashIntObjectMap requestList = new HashIntObjectMap();
         Connection con = null;
@@ -65,9 +56,7 @@ public class ClanLeaderRequestDAO {
         return requestList;
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void delete(ClanChangeLeaderRequest changeLeaderRequest) {
         Connection con = null;
         PreparedStatement statement = null;
@@ -90,9 +79,7 @@ public class ClanLeaderRequestDAO {
         DbUtils.closeQuietly((Connection)con, (Statement)statement);
     }
 
-    /*
-     * WARNING - Removed try catching itself - possible behaviour change.
-     */
+    
     public void insert(ClanChangeLeaderRequest request) {
         Connection con = null;
         PreparedStatement statement = null;
