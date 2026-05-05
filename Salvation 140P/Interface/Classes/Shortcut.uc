@@ -1,8 +1,9 @@
 class Shortcut extends UICommonAPI;
 
 var bool m_chatstateok;
+var bool m_bSkipMonsterTargetModeInProgress;
 
-//현재 지역 PeaceZone인가
+//???? ???? PeaceZone???
 var int IsPeaceZone;	
 
 const CHAT_WINDOW_NORMAL = 0;
@@ -11,7 +12,7 @@ const CHAT_WINDOW_PARTY = 2;
 const CHAT_WINDOW_CLAN = 3;
 const CHAT_WINDOW_ALLY = 4;
 const CHAT_WINDOW_COUNT = 5;
-const CHAT_WINDOW_SYSTEM = 5;		// 시스템 메시지 창
+const CHAT_WINDOW_SYSTEM = 5;		// ????? ????? ?
 
 const DIALOGID_Gohome = 44420;
 
@@ -20,6 +21,7 @@ function OnRegisterEvent()
 	RegisterEvent( EV_ShortcutCommand );
 	RegisterEvent( EV_StateChanged );		// lpislhy
 	RegisterEvent( EV_ShowWindow );
+	RegisterEvent( EV_NextTargetModeChange );
 
 	RegisterEvent( EV_DialogOK );
 	RegisterEvent( EV_DialogCancel );
@@ -28,6 +30,7 @@ function OnRegisterEvent()
 
 function OnLoad()
 {	
+	EnsureNextTargetModeShortcut();
 }
 
 function OnEvent( int a_EventID, String a_Param )
@@ -45,7 +48,7 @@ function OnEvent( int a_EventID, String a_Param )
 		case EV_ShowWindow:		
 			HandleShortcutKeyEvent( a_Param );
 			break;
-		//메뉴 작업시 추가.
+		//??? ????? ???.
 		case EV_SetRadarZoneCode:
 			ParseInt( a_Param, "ZoneCode", zonetype );		
 			if (zonetype == 12)
@@ -61,8 +64,85 @@ function OnEvent( int a_EventID, String a_Param )
 		case EV_DialogOK:
 			HandleDialogOK();
 			break;
+	case EV_NextTargetModeChange:
+		HandleNextTargetModeChange(a_Param);
+		break;
 		default:
 			break;
+	}
+}
+
+function EnsureNextTargetModeShortcut()
+{
+	local ShortcutCommandItem shortcutItem;
+
+	shortcutItem.sCommand = "NextTargetModeChange";
+	shortcutItem.key = "T";
+	shortcutItem.subkey1 = "Ctrl";
+	shortcutItem.subkey2 = "";
+	shortcutItem.sState = "GamingState";
+	shortcutItem.sAction = "Press";
+
+	class'ShortcutAPI'.static.AssignCommand("GamingStateDefaultShortcut", shortcutItem);
+	class'ShortcutAPI'.static.AssignCommand("GamingStateShortcut", shortcutItem);
+	class'ShortcutAPI'.static.Save();
+}
+
+function HandleNextTargetModeChange(string a_Param)
+{
+	local int mode;
+	local string modeText;
+
+	if (!ParseInt(a_Param, "Mode", mode))
+	{
+		if (!ParseInt(a_Param, "TargetMode", mode))
+		{
+			if (!ParseInt(a_Param, "Type", mode))
+			{
+				if (!ParseInt(a_Param, "Value", mode))
+				{
+					mode = -1;
+				}
+			}
+		}
+	}
+
+	switch (mode)
+	{
+	case 0:
+		modeText = "Target mode: Taunt";
+		break;
+	case 1:
+		modeText = "Target mode: Monster";
+		break;
+	case 2:
+		modeText = "Target mode: PC";
+		break;
+	case 3:
+		modeText = "Target mode: NPC";
+		break;
+	default:
+		modeText = "Target mode changed";
+		break;
+	}
+
+	getInstanceL2Util().showGfxScreenMessage(modeText);
+
+	// Skip monster-only mode from the cycle.
+	if (mode == 1)
+	{
+		if (m_bSkipMonsterTargetModeInProgress)
+		{
+			m_bSkipMonsterTargetModeInProgress = false;
+			return;
+		}
+
+		m_bSkipMonsterTargetModeInProgress = true;
+		ExecuteCommand("NextTargetModeChange");
+	}
+	else
+	{
+		m_bSkipMonsterTargetModeInProgress = false;
 	}
 }
 
@@ -169,56 +249,56 @@ Function HandleShortcutKeyEvent( string a_Param )
 			break;
 		case "SystemMenuWnd":
 			break;
-		//메뉴 리뉴얼로인하여 추가.
-		//우편함
+		//??? ???????????? ???.
+		//??????
 		case "Post":
 			HandleShowPostBoxWnd();
 			break;		
-		//단축키 변경창
+		//????? ?????
 		case "ShortcutAssign":
 			HandleShowShortcutAssignWnd();
 			break;
-		//인스턴스존
+		//?ν??????
 		case "InstancedZone":			 
 			RequestInzoneWaitingTime();
 			break;
-		//동영상 녹화
+		//?????? ???
 		case "Rec":
 			HandleShowMovieCaptureWnd();
 			break;
-		//리플레이 녹화
+		//???÷??? ???
 		case "Replayrec":
 			DoAction( class'UICommonAPI'.static.GetItemID(55) );
 			break;
-		//상품인벤토리
+		//????κ???
 		case "Productinven":
 			HandleShowProductInventory();
 			break;			
-		//판매상점
+		//??????
 		case "ShopSell":
 			DoAction( class'UICommonAPI'.static.GetItemID(10) );
 			break;
-		//구매상점
+		//???????
 		case "ShopBuy":
 			DoAction( class'UICommonAPI'.static.GetItemID(28) );
 			break;
-		//일괄판매상점
+		//?????????
 		case "ShopSellAll":
 			DoAction( class'UICommonAPI'.static.GetItemID(61) );
 			break;
-		//상점검색
+		//???????
 		case "ShopSearch":
 			DoAction( class'UICommonAPI'.static.GetItemID(57) );
 			break;
-		//진정
+		//????
 		case "Petition":
 			HandleShowPetitionBegin();
 			break;	
-		//홈페이지
+		//???????
 		case "Homepage":
 			linkHomepage();
 			break;
-		//PC방 포인트
+		//PC?? ?????
 		case "PcRoom":
 			HandleToggleShowPCCafeEventWnd();
 			break;
@@ -230,21 +310,21 @@ Function HandleShortcutKeyEvent( string a_Param )
 
 
 /* ****************************************************
- * 윈도우 열고 닫기 
+ * ?????? ???? ??? 
  **************************************************** */
 
-// 서버 타입에 의한 윈도우 이름 받기
+// ???? ???? ???? ?????? ??? ???
 function string getWindowNameByServerType( string WNDName )
 {
-	// GFx용 채팅 윈도우 롤백 코드.
+	// GFx?? ??? ?????? ??? ???.
 	if ( WNDName ==  "ChatMessage" ) WNDName = "ChatWnd";
 
-	// 클래식 윈도우
+	// ????? ??????
 	else if ( getInstanceUIData().getisClassicServer() )
 	{
 		WNDName = getClassicWindowName(WNDName);
 	}
-	// 아레나 윈도우
+	// ????? ??????
 	else if ( getInstanceUIData().getIsArenaServer() )
 	{
 		WNDName = getArenaWindowName (WNDName);
@@ -253,7 +333,7 @@ function string getWindowNameByServerType( string WNDName )
 	return WNDName;
 }
 
-// 클래식 윈도우로 따로 만들어져 있는 윈도우들 목록
+// ????? ??????? ???? ??????? ??? ??????? ???
 function string getClassicWindowName ( string WNDName )
 {
 	switch ( WNDName )
@@ -265,22 +345,22 @@ function string getClassicWindowName ( string WNDName )
 	return WNDName;
 }
 
-// 아레나 윈도우로 따로 만들어져 있는 윈도우들 목록
+// ????? ??????? ???? ??????? ??? ??????? ???
 function string getArenaWindowName ( string WNDName )
 {
 	switch ( WNDName )
 	{	
-	// #3038 [아레나] M3 - 사용하지 않는 기능 제거 : 케릭터 정보 창
+	// #3038 [?????] M3 - ??????? ??? ??? ???? : ????? ???? ?
 	case "DetailStatusWnd":
 		return WNDName $ "Classic";
 	}
 	return WNDName;
 }
 
-// 사운드 받기
+// ???? ???
 function getSoundTypeByWndName ( string WndName, out EInterfaceSoundType openSound, out EInterfaceSoundType closeSound ) 
 {
-	switch  (WNDName) //사운드 세팅
+	switch  (WNDName) //???? ????
 	{	
 	case "MagicSkillWnd":
 		openSound = IFST_MAPWND_OPEN;
@@ -332,7 +412,7 @@ function WindowOpenOrClose( string WNDName)
 			else 		
 				class'UIAPI_WINDOW'.static.ShowWindow( WNDName );
 			break;		
-		// 아레나 스코어 보드 
+		// ????? ????? ???? 
 		case "ArenaScoreBoardWnd":			
 			CallGFxFunction( "ArenaScoreBoardWnd", "show", "");
 			break;
@@ -345,7 +425,7 @@ function WindowOpenOrClose( string WNDName)
 		case "OptionWnd":
 			toggleShowOptionWnd();
 			break;
-		// 채팅창에 붙어 있는 월드맵 채트 박스 처리
+		// ?????? ??? ??? ????? ?? ??? ???
 		case "ChatWnd":		
 			if(WNDNameHandle.IsShowWindow())
 			{
@@ -370,19 +450,19 @@ function WindowOpenOrClose( string WNDName)
 		case "ClanWnd":
 		case "ClanWndClassic":
 
-			// 차원 이동 후, 혈맹 창 안나오게..
+			// ???? ??? ??, ???? ? ???????..
 			if ( IsPlayerOnWorldRaidServer() ) 
 			{
 				getInstanceL2Util().showGfxScreenMessage( GetSystemMessage(4047));
 				return;
 			}
 
-			// 클래식
+			// ?????
 			if ( getInstanceUIData().getisClassicServer() )
 			{
 				//GetINIBool ( "Localize", "UsePledgeV2Classic", nUsePledgeV2Classic, "L2.ini" );
 
-				// 혈맹 리뉴얼 UI 사용
+				// ???? ?????? UI ???
 				if (getInstanceL2Util().isClanV2())
 					toggleWindow("ClanGfxWnd", true, true);
 				else
@@ -390,10 +470,10 @@ function WindowOpenOrClose( string WNDName)
 			}
 			else
 			{
-				// 라이브
+				// ?????
 				//GetINIBool ( "Localize", "UsePledgeV2Live", nUsePledgeV2Live, "L2.ini" );
 
-				// 혈맹 리뉴얼 UI 사용
+				// ???? ?????? UI ???
 				//if (nUsePledgeV2Live > 0)
 				//	toggleWindow("ClanGfxWnd", true, true);
 				//else
@@ -411,7 +491,7 @@ function WindowOpenOrClose( string WNDName)
 
 			break;
 
-		// 기본 showhide
+		// ?? showhide
 		Default :
 			if(WNDNameHandle.IsShowWindow())
 			{
@@ -432,23 +512,23 @@ function toggleShowOptionWnd()
 {
 	local OptionWnd win;
 	win = OptionWnd( GetScript("OptionWnd") );
-	win.ToggleOpenMeWnd(false); //옵션창만 열기
+	win.ToggleOpenMeWnd(false); //?????? ????
 }
 
 /**
- * 단축키 창 열기
+ * ????? ? ????
  */
 function HandleShowShortcutAssignWnd()
 {
 	local OptionWnd win;	
 	win = OptionWnd( GetScript("OptionWnd") );
-	win.ToggleOpenMeWnd(true);  //숏컷 창으로 열기 
+	win.ToggleOpenMeWnd(true);  //???? ????? ???? 
 }
 
-// 빌더 명령어에 의해 창을 감추고 보여주는 함수 PC방 포인트
+// ???? ????? ???? ??? ????? ??????? ??? PC?? ?????
 function HandleToggleShowPCCafeEventWnd()
 {
-	//branch GD35_0828 2013-12-06 luciper3 - 해당 클래스에서 처리하도록 한다. 
+	//branch GD35_0828 2013-12-06 luciper3 - ??? ????????? ???????? ???. 
 	local InfoWnd script;
 
 	script = InfoWnd( GetScript( "InfoWnd" ) );
@@ -477,7 +557,7 @@ function HandleToggleShowPCCafeEventWnd()
 }
 
 /**
- * 동영상 녹화 창 열기
+ * ?????? ??? ? ????
  */
 function HandleShowMovieCaptureWnd()
 {
@@ -490,11 +570,11 @@ function HandleShowMovieCaptureWnd()
 
 	tmpBool =IsNowMovieCapturing();
 
-	//켑쳐 되고 있다면
+	//???? ??? ????
 	if(tmpBool)
 	{
 		win.HideWindow();
-		//확장 창이 보여 진다면
+		//??? ??? ???? ?????
 		if ( win.IsShowWindow() )
 		{
 			PlayConsoleSound(IFST_WINDOW_CLOSE);
@@ -507,7 +587,7 @@ function HandleShowMovieCaptureWnd()
 			win.SetFocus();
 		}
 	} 
-	//아니라면 일반 창 열고 닫기
+	//????? ??? ? ???? ???
 	else 
 	{
 		if (win1.IsShowWindow())
@@ -526,7 +606,7 @@ function HandleShowMovieCaptureWnd()
 }
 
 /**
- * 진정 창 열기
+ * ???? ? ????
  */
 function HandleShowPetitionBegin()
 {
@@ -584,7 +664,7 @@ function HandleShowPetitionBegin()
 }
 
 /**
- * 홈페이지 열기
+ * ??????? ????
  */
 function linkHomePage()
 {
@@ -592,7 +672,7 @@ function linkHomePage()
 	class'UICommonAPI'.static.DialogShow( DialogModalType_Modalless, DialogType_OKCancel, GetSystemMessage( 3208 ), string(Self));
 }
 
-//홈페이지 링크(10.1.18 문선준 추가)
+//??????? ???(10.1.18 ?????? ???)
 function HandleDialogOK()
 {	
 	if( ! class'UICommonAPI'.static.DialogIsOwnedBy( string(Self) ) )
@@ -606,7 +686,7 @@ function HandleDialogOK()
 	}
 }
 
-//상품 인벤토리 열기
+//??? ?κ??? ????
 function HandleShowProductInventory()
 {
 	local WindowHandle win;	
@@ -617,13 +697,13 @@ function HandleShowProductInventory()
 	win1 = GetWindowHandle( "ShopWnd" );
 	util = L2Util(GetScript("L2Util"));	
 
-	//보여지면 닫기
+	//???????? ???
 	if( win.isShowWindow())
 	{
 		PlayConsoleSound(IFST_INVENWND_CLOSE);
 		win.HideWindow();
 	}
-	//아니면 열기
+	//???? ????
 	else 
 	{	
 		util.ItemRelationWindowHide( "ProductInventoryWnd" );
@@ -638,7 +718,7 @@ function HandleShowProductInventory()
 }
 
 /**
- * 우폄함 열기
+ * ?????? ????
  */
 function HandleShowPostBoxWnd()
 {
@@ -677,7 +757,7 @@ Function ClosePartyMatchingWnd()
 
 Function HandleShowHelpHtmlWnd()
 {
-	local  AgeWnd script1;	// 등급표시 스크립트 가져오기
+	local  AgeWnd script1;	// ?????? ?????? ????????
 	
 	local string strParam;
 	ParamAdd(strParam, "FilePath", "..\\L2text\\help.htm");
@@ -685,7 +765,7 @@ Function HandleShowHelpHtmlWnd()
 	
 	script1 = AgeWnd( GetScript("AgeWnd") );
 	
-	if(script1.bBlock == false)	script1.startAge();	//등급표시를 켜준다. 
+	if(script1.bBlock == false)	script1.startAge();	//?????ø? ?????. 
 }
 
 Function HandlePartyMatchingOnOff()
@@ -793,8 +873,9 @@ function HandleShortcutCommand( String a_Param )
 			HandlePrintShortcut();
 			break;
 
-		case "getPrevTarget" :if ( getInstanceUIData().getIsArenaServer()) ExecuteCommand("/이전타겟") ; break;
-		case "getNextTarget" :if ( getInstanceUIData().getIsArenaServer()) ExecuteCommand("/다음타겟") ; break;
+		case "getPrevTarget" :if ( getInstanceUIData().getIsArenaServer()) ExecuteCommand("/???????") ; break;
+		case "getNextTarget" :if ( getInstanceUIData().getIsArenaServer()) ExecuteCommand("/???????") ; break;
+		case "NextTargetModeChange" : ExecuteCommand("NextTargetModeChange"); break;
 		case "useRunSkill" : if ( getInstanceUIData().getIsArenaServer()) setUseSkill ( 18651 )  ;break;		
 		case "useBaseRecallSkill" : if ( getInstanceUIData().getIsArenaServer()) setUseSkill ( 18652 ) ; break;
 
@@ -936,7 +1017,7 @@ function HandleShowChatWindow()		// alt + j
 		}
 	}
 
-	/* chatMessage 용
+	/* chatMessage ??
 
 	local WindowHandle handle;
 
@@ -967,9 +1048,9 @@ function HandleSetPrevChatType()		// alt + page up
 	callGFxFunction("ChatMessage","setRemoteTabSelect", "true");
 	*/
 	
-	local ChatWnd chatWndScript;			// 채팅 윈도우 클래스
+	local ChatWnd chatWndScript;			// ??? ?????? ?????
 	
-	chatWndScript = ChatWnd( GetScript("ChatWnd") );	// 스크립트를 가져온다.
+	chatWndScript = ChatWnd( GetScript("ChatWnd") );	// ???????? ?????´?.
 	
 	//debug("chatWndScript.m_chatType" $ chatWndScript.m_chatType);
 	switch (chatWndScript.m_chatType.UI)	
@@ -1030,9 +1111,9 @@ function HandleSetNextChatType()		// alt + page down
 	callGFxFunction("ChatMessage","setRemoteTabSelect", "false");
 	*/
 
-	local ChatWnd chatWndScript;			// 채팅 윈도우 클래스
+	local ChatWnd chatWndScript;			// ??? ?????? ?????
 	
-	chatWndScript = ChatWnd( GetScript("ChatWnd") );	// 스크립트를 가져온다.
+	chatWndScript = ChatWnd( GetScript("ChatWnd") );	// ???????? ?????´?.
 	
 	//debug("chatWndScript.m_chatType" $ chatWndScript.m_chatType);
 	switch (chatWndScript.m_chatType.UI)	
@@ -1099,23 +1180,23 @@ function HandleCloseAllWindow()
 	local RefineryWnd RefineryWndScript;
 
 	/*
-	 *2012.12.12 개인판매 창이 alt W로 닫힐 때 오류 발생
+	 *2012.12.12 ??????? ??? alt W?? ???? ?? ???? ???
 	 */
 	PrivateShopWndScript = PrivateShopWnd( GetScript("PrivateShopWnd") );
 	PrivateShopWndScript.RequestQuit();	
 
 	/*
-	 *2012.12.17 드워프 공방 창이 alt W 로 닫힐 때 다시 열리지 않는 오류 수정 > 
+	 *2012.12.17 ????? ???? ??? alt W ?? ???? ?? ??? ?????? ??? ???? ???? > 
 	 */
 	class'RecipeAPI'.static.RequestRecipeShopManageQuit();
 	
 	/*
-	 *2013.2.4 인첸 창이 alt + W 로 닫힐 때 다시 열리지 않는 오류 수정 > 
+	 *2013.2.4 ??þ ??? alt + W ?? ???? ?? ??? ?????? ??? ???? ???? > 
 	 */
 	class'EnchantAPI'.static.RequestExCancelEnchantItem();
 
 	/*
-	 *2013.2.4 제련 창이 alt + W 로 닫힐 때 다시 열리지 않는 오류 수정 > 
+	 *2013.2.4 ???? ??? alt + W ?? ???? ?? ??? ?????? ??? ???? ???? > 
 	 */
 	RefineryWndScript = RefineryWnd( GetScript("RefineryWnd") );
 	RefineryWndScript.OnClickCancelButton();
@@ -1201,18 +1282,18 @@ function HandleCloseAllWindow()
 	WndList[numOfWnd++] = "unrefineryWnd";
 	WndList[numOfWnd++] = "WarehouseWnd";
 
-	//파티 매칭
+	//??? ???
 	WndList[numOfWnd++] = "PartyMatchWnd";
-	//인맥
+	//?θ?
 	WndList[numOfWnd++] = "PersonalConnectionsWnd";
 	
-	//2012.12.17 창 목록 추가 
+	//2012.12.17 ? ??? ??? 
 	WndList[numOfWnd++] = "NPCDialogWnd";
 	WndList[numOfWnd++] = "PostBoxWnd";						  	
 	WndList[numOfWnd++] = "NewUserPetitionWnd";			
 	WndList[numOfWnd++] = "ProductInventoryWnd";
 
-	//2013.01.03 창 목록 추가 > 언급 된 닫히지 않는 창 목록 입니다.
+	//2013.01.03 ? ??? ??? > ??? ?? ?????? ??? ? ??? ????.
 	WndList[numOfWnd++] = "AuctionWnd";
 	WndList[numOfWnd++] = "BlockCurWnd";						  	
 	WndList[numOfWnd++] = "BlockEnterWnd";
@@ -1225,7 +1306,7 @@ function HandleCloseAllWindow()
 	WndList[numOfWnd++] = "MagicskillGuideWnd";
 	WndList[numOfWnd++] = "miniGame1Wnd";
 	WndList[numOfWnd++] = "NewPetitionWnd";		
-	//해외 사용 여부 확인 필요
+	//??? ??? ???? ??? ???
 	WndList[numOfWnd++] = "PetitionFeedBackWnd";	
 	WndList[numOfWnd++] = "PostWriteWnd";
 	WndList[numOfWnd++] = "PremiumItemGetWnd";
@@ -1235,21 +1316,21 @@ function HandleCloseAllWindow()
 	WndList[numOfWnd++] = "SellingAgencyWnd";
 	WndList[numOfWnd++] = "TeleportBookMarkWnd";
 	WndList[numOfWnd++] = "WebPetitionWnd";
-	//2013.08.22 접속공지창 추가
+	//2013.08.22 ???????? ???
 	WndList[numOfWnd++] = "IngameNoticeWnd";
-	//2013.09.09 쥬엘 인첸 창 추가
+	//2013.09.09 ?꿤 ??þ ? ???
 	WndList[numOfWnd++] = "ItemJewelEnchantWnd";
-	//게임 이용 제한 윈도우
+	//???? ??? ???? ??????
 	WndList[numOfWnd++ ] = "PlayerAgeWnd";
 		// path to awaken 
 	WndList[numOfWnd++ ] = "BR_PathWnd";
-	// 오늘의 할일
+	// ?????? ????
 	WndList[numOfWnd++ ] = "ToDoListWnd";
-	// 오늘의 할일 혈맹
+	// ?????? ???? ????
 	WndList[numOfWnd++ ] = "ToDoListClanWnd";
-	//인벤토리 보기 윈도우
+	//?κ??? ???? ??????
 	WndList[numOfWnd++ ] = "InventoryViewer";
-	// 집혼 
+	// ??? 
 	WndList[numOfWnd++ ] = "EnsoulWnd";
 
 	WndList[numOfWnd++ ] = "AttendCheckWnd";
@@ -1262,7 +1343,7 @@ function HandleCloseAllWindow()
 	WndList[numOfWnd++ ] = "PrivateShopWndHistory";
 	WndList[numOfWnd++ ] = "ItemLockWnd";
 
-	//WndList[79]="ShortcutAssignWnd"; //옵션과 통합 2012.3.27
+	//WndList[79]="ShortcutAssignWnd"; //???? ???? 2012.3.27
 	
 	for (i=0;i<WndList.Length; ++i)
 	{			
@@ -1272,7 +1353,7 @@ function HandleCloseAllWindow()
 			handle.HideWindow();
 	}
 	
-	//2012.12.17 Gfx 창 목록 추가 
+	//2012.12.17 Gfx ? ??? ??? 
 	numOfWnd = 0 ;
 	GFxWndList[ numOfWnd ++ ] = "ClanSearch";
 	GFxWndList[ numOfWnd ++ ] = "InstancedZoneHistoryWnd";
@@ -1305,7 +1386,7 @@ function HandleCloseAllWindow()
 		{
 			if (  GFxWndList[i]  == "AdenaDistributionWnd" )
 			{
-				//아데나 분배 창이 보여 지고 있을 때 alt + W로 취소 하게 되면, 
+				//????? ?й? ??? ???? ???? ???? ?? alt + W?? ??? ??? ???, 
 				callGFxFunction("AdenaDistributionWnd", "RequestDivideAdenaCancel", "");
 			}
 			class'UIAPI_WINDOW'.static.HideWindow( GFxWndList[i] );
@@ -1330,14 +1411,14 @@ function HandleStateChange( String state )
 			class'ShortcutAPI'.static.ActivateGroup("TempStateShortcut");
 		}
 		
-		// 향상된 셰이더 로딩때문에 추가
-		if(scriptShip.isNowActiveFlightShipShortcut) 	// 비행정 조종 모드라면		
+		// ???? ????? ?ε??????? ???
+		if(scriptShip.isNowActiveFlightShipShortcut) 	// ?????? ???? ?????		
 		{
 			if(  GetChatFilterBool ( "Global", "EnterChatting") )	{class'ShortcutAPI'.static.DeactivateGroup("TempStateShortcut");}
 			class'ShortcutAPI'.static.ActivateGroup("FlightStateShortcut");
 			//scriptMain.changeEnterChat( "FlightStateShortcut" );
 		}
-		else if (scriptTrans.isNowActiveFlightTransShortcut ) // 비행 변신체 모드라면
+		else if (scriptTrans.isNowActiveFlightTransShortcut ) // ???? ????? ?????
 		{
 			
 			if(  GetChatFilterBool ( "Global", "EnterChatting") )	{class'ShortcutAPI'.static.DeactivateGroup("TempStateShortcut");}

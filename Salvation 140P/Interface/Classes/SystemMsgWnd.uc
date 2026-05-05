@@ -26,7 +26,7 @@ function OnEvent( int a_EventID, String a_Param )
 	switch( a_EventID )
 	{
 	case EV_GamingStateEnter:
-		//게임에 다시 들어왔을 때 창을 열지 말지 결정함
+		//????? ??? ?????? ?? ??? ???? ???? ??????
 		GetINIBool( "global", "SystemMsgWnd", tempVal, "chatfilter.ini" );
 		//if(class'UIAPI_CHECKBOX'.static.IsChecked( "ChatFilterWnd.ChattingFilterGroup.UseSystemMsgBox" ))
 		if ( tempVal != 0 ) 
@@ -109,8 +109,18 @@ function UpdateResolution()
 
 	if( CurrentChatWidth > CurrentMaxWidth || CurrentChatHeight > CurrentMaxHeight - 15)
 	{
-		Me.GetWindowSize (CurrentChatWidth, CurrentChatHeight );
-		Me.SetWindowSize( 348 , CurrentChatHeight);
+		if (CurrentChatWidth > CurrentMaxWidth)
+			CurrentChatWidth = CurrentMaxWidth;
+		if (CurrentChatHeight > CurrentMaxHeight - 15)
+			CurrentChatHeight = CurrentMaxHeight - 15;
+		if (CurrentChatWidth < 348)
+			CurrentChatWidth = 348;
+		if (CurrentChatHeight < 128)
+			CurrentChatHeight = 128;
+
+		Me.SetWindowSize(CurrentChatWidth, CurrentChatHeight);
+		SetINIInt("global","SystemMsgSizeWidth", CurrentChatWidth, "chatfilter.ini");
+		SetINIInt("global","SystemMsgSizeHeight", CurrentChatHeight, "chatfilter.ini");
 	}
 }
 
@@ -119,16 +129,33 @@ function ReSize(string param)
 	local int w;
 	local int resizeWidth;
 	local int h;
+	local int resizeHeight;
+	local string wName;
 	
 	parseInt(param, "Width", resizeWidth);
+	parseInt(param, "Height", resizeHeight);
+	parseString(param, "WindowName", wName);
+	if (wName != "SystemMsgWnd")
+		return;
 	
 	Me.GetWindowSize(w, h);	
+	if (resizeWidth < 348)
+		resizeWidth = 348;
+	if (resizeHeight > 0)
+	{
+		if (resizeHeight < 128)
+			resizeHeight = 128;
+		h = resizeHeight;
+	}
+
 	Me.SetWindowSize(resizeWidth, h);
+	SetINIInt("global","SystemMsgSizeWidth", resizeWidth, "chatfilter.ini");
+	SetINIInt("global","SystemMsgSizeHeight", h, "chatfilter.ini");
 }
 
 function OnShow()
 {
-	local int useAlpha, tempVal, w, h, sizeW;
+	local int useAlpha, tempVal, w, h, sizeW, sizeH;
 	local string showWndParam;
 
 	if ( GetINIBool("global", "UseAlpha", tempVal, "chatfilter.ini") )
@@ -143,23 +170,35 @@ function OnShow()
 		SetDefaultAlpha(1);
 	}
 	
-	//사이즈 기억
+	//?????? ???
 	Me.GetWindowSize(w, h);
 
-	if(GetINIInt("global","ChatSizeWidth", sizeW, "chatfilter.ini"))
+	if(GetINIInt("global","SystemMsgSizeWidth", sizeW, "chatfilter.ini"))
 	{   
-		Me.SetWindowSize( sizeW , h);
+		if (sizeW < 348)
+			sizeW = 348;
+		if (GetINIInt("global","SystemMsgSizeHeight", sizeH, "chatfilter.ini"))
+		{
+			if (sizeH < 128)
+				sizeH = 128;
+			Me.SetWindowSize(sizeW, sizeH);
+		}
+		else
+		{
+			Me.SetWindowSize(sizeW, h);
+		}
 	}
 	else
 	{	
 		Me.SetWindowSize( w , h);
 	}
+	Me.GetWindowSize(w, h);
 	Me.SetReSizeFrameOffset(348, h);
 	ChangeAnchorEffectButton("SystemMsgWnd");	// lancelot 2006. 7. 10.
 
 	paramAdd(showWndParam, "visible", String(1));
 	/*
-	 * worldChatBox 에 전용창 사용여부 보냄
+	 * worldChatBox ?? ????? ??뿩?? ????
 	 */
 	if(GetINIBool( "global", "UseWorldChatSpeaker", tempVal, "chatfilter.ini" ))
 	{	
@@ -172,7 +211,7 @@ function OnHide()
 {
 	local string showWndParam;
 	//debug("SystemMsgWndtest OnHide");
-	//채팅창 기능 개선으로 필터 윈도우의 앵커를 설정하는 기능은 없어짐
+	//???? ??? ???????? ???? ???????? ??Ŀ?? ??????? ????? ??????
 	//class'UIAPI_WINDOW'.static.SetAnchor( "ChatFilterWnd", "ChatWnd", "TopLeft", "BottomLeft", 0, -5 );
 	ChangeAnchorEffectButton("ChatWnd");		// lancelot 2006. 7. 10.
 

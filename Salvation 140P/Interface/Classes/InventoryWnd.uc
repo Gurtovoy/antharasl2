@@ -1,16 +1,16 @@
 class InventoryWnd extends UICommonAPI;
 
-const DIALOG_USE_RECIPE				= 1111;				// ·¹½ÃÇÇ¸¦ »ç¿ëÇÒ °ÍÀÎÁö¸¦ ¹°À» ¶§
-const DIALOG_POPUP					= 2222;				// ¾ÆÀÌÅÛ»ç¿ë ½Ã ÁöÁ¤µÈ ÆË¾÷¸Ş½ÃÁö¸¦ ¶ç¿ï ¶§
-const DIALOG_DROPITEM				= 3333;				// ¾ÆÀÌÅÛÀ» ¹Ù´Ú¿¡ ¹ö¸± ¶§(ÇÑ°³)
-const DIALOG_DROPITEM_ASKCOUNT		= 4444;				// ¾ÆÀÌÅÛÀ» ¹Ù´Ú¿¡ ¹ö¸± ¶§(¿©·¯°³, °³¼ö¸¦ ¹°¾îº»´Ù)
-const DIALOG_DROPITEM_ALL			= 5555;				// ¾ÆÀÌÅÛÀ» ¹Ù´Ú¿¡ ¹ö¸± ¶§(MoveAll »óÅÂÀÏ ¶§)
-const DIALOG_DESTROYITEM			= 6666;				// ¾ÆÀÌÅÛÀ» ÈŞÁöÅë¿¡ ¹ö¸± ¶§(ÇÑ°³)
-const DIALOG_DESTROYITEM_ALL		= 7777;				// ¾ÆÀÌÅÛÀ» ÈŞÁöÅë¿¡ ¹ö¸± ¶§(MoveAll »óÅÂÀÏ ¶§)
-const DIALOG_DESTROYITEM_ASKCOUNT	= 8888;				// ¾ÆÀÌÅÛÀ» ÈŞÁöÅë¿¡ ¹ö¸± ¶§(¿©·¯°³, °³¼ö¸¦ ¹°¾îº»´Ù)
-const DIALOG_CRYSTALLIZE			= 9999;				// ¾ÆÀÌÅÛÀ» °áÁ¤È­ ÇÒ¶§
-const DIALOG_NOTCRYSTALLIZE		= 9998;				// °áÁ¤È­°¡ ºÒ°¡´ÉÇÏ´Ù´Â °æ°í
-const DIALOG_DROPITEM_PETASKCOUNT	= 10000;			// ÆêÀÎº¥¿¡¼­ ¾ÆÀÌÅÛÀÌ µå·ÓµÇ¾úÀ» ¶§
+const DIALOG_USE_RECIPE				= 1111;				// ?    
+const DIALOG_POPUP					= 2222;				// ?   ??  
+const DIALOG_DROPITEM				= 3333;				//  ??  (?)
+const DIALOG_DROPITEM_ASKCOUNT		= 4444;				//  ??  (,  ?)
+const DIALOG_DROPITEM_ALL			= 5555;				//  ??  (MoveAll  )
+const DIALOG_DESTROYITEM			= 6666;				//  ?  (?)
+const DIALOG_DESTROYITEM_ALL		= 7777;				//  ?  (MoveAll  )
+const DIALOG_DESTROYITEM_ASKCOUNT	= 8888;				//  ?  (,  ?)
+const DIALOG_CRYSTALLIZE			= 9999;				//  ? ?
+const DIALOG_NOTCRYSTALLIZE		= 9998;				// ? ??? 
+const DIALOG_DROPITEM_PETASKCOUNT	= 10000;			// ?  ?? 
 
 const TIMER_REQUEST_ITEMLIST        = 1718;
 const TIMER_REQUEST_ITEMLIST_DELAY  = 5000;
@@ -50,7 +50,7 @@ const EQUIPITEM_Jewel4 = 29;
 const EQUIPITEM_Jewel5 = 30;
 const EQUIPITEM_Jewel6 = 31;
 
-// ¾Æ°¡½Ã¿Â
+// ?
 const EQUIPITEM_AGATHION_MAIN = 32;
 const EQUIPITEM_AGATHION_SUB1 = 33;
 const EQUIPITEM_AGATHION_SUB2 = 34;
@@ -92,7 +92,7 @@ var	ButtonHandle		m_BtnRotateRight;
 //var TextureHandle		m_CloakSlot_Disable;
 var TextureHandle		m_Talisman_Disable[ 6 ];
 
-// º¸¼® ºñÈ°¼ºÈ­ ÅØ½ºÃÄ µé
+//  ?? ? 
 var TextureHandle		m_Jewel_Disable[ 6 ];
 
 var	ItemWindowHandle	m_invenItem_1;
@@ -104,10 +104,10 @@ var	ItemWindowHandle	m_equipItem_Brooch;
 var TextureHandle       m_BroochEquiped;
 
 
-// °¡·Î»çÀÌÁî¸¦2¹èÁõ°¡½ÃÅ°´Â¹öÆ°
+// ??2??
 var ButtonHandle m_BtnWindowExpand;
 
-// 6, 12ÁÙÂ¥¸®ÀÎº¥Åä¸®¹è°æÅØ½ºÃÄ
+// 6, 12???
 var TextureHandle m_InventoryItembg;
 var TextureHandle m_InventoryItembg_expand;
 
@@ -117,23 +117,23 @@ var TextureHandle m_tabbgLine;
 var TextBoxHandle m_itemCount;
 
 
-// ÇöÀçÀÎº¥Åä¸®¼ö
+// ??
 var int currentInvenCol;
 
-// ÀÎº¥Åä¸® ¾ÆÀÌÅÛ ¼ö 
+// ??   
 var int pInventoryItemCount;
 
 var 	CharacterViewportWindowHandle	m_ObjectViewport;
 
-var	array<ItemID>		m_itemOrder;				// ÀÎº¥Åä¸® ¾ÆÀÌÅÛÀÇ ¼ø¼­¸¦ ·ÎÄÃ¿¡ ÀúÀåÇÑ´Ù.
-var	Vector				m_clickLocation;			// ¾ÆÀÌÅÛ µå·ÓÇÒ¶§ ¾îµğ¿¡ µå·ÓÇÒ Áö¸¦ ÀúÀåÇÏ°í ÀÖ´Â´Ù.
+var	array<ItemID>		m_itemOrder;				// ??    ?.
+var	Vector				m_clickLocation;			//  ?    ? ?.
 
 var Array<ItemInfo>		m_EarItemList;
 var Array<ItemInfo>		m_FingerItemLIst;
 var Array<ItemInfo>		m_DecoItemList;
 
-var int m_NormalInvenCount;	// Added by JoeyPark 2010/09/10 ÇöÀç °¡Áö°í ÀÖ´Â ÀÏ¹İÅÛÀÇ °¹¼ö.
-var int m_QuestInvenCount;	// Added by JoeyPark 2010/09/10 ÇöÀç °¡Áö°í ÀÖ´Â Äù½ºÆ®ÅÛÀÇ °¹¼ö.
+var int m_NormalInvenCount;	// Added by JoeyPark 2010/09/10   ? ? .
+var int m_QuestInvenCount;	// Added by JoeyPark 2010/09/10   ? ? .
 var bool m_bCurrentState;
 var int m_MaxInvenCount;
 var int m_MaxQuestItemInvenCount;
@@ -151,58 +151,58 @@ var string lastHandleAddItemParam;
 
 var ButtonHandle        AdenacalculateButton;
 
-//º¸¼® ÇÕ¼º ¿­±â ¹öÆ°
+// ?  ?
 var ButtonHandle        EnchantJewelButton;
-//º¸¼®ÇÔ ¿­±â ¹öÆ°
+//  ?
 var ButtonHandle        JewelButton;
 
-//¿¬±İ¼ú Ã¢ ¿­±â ¹öÆ°
+//?   ?
 var ButtonHandle        AlchemyOpenerBtn;
 
 var bool m_bFirstOpen;
 
-//¸Ó¸®º¸±â
+//?
 var ButtonHandle        ViewHairButton;
-//Çì¾î¾Ç¼¼¼­¸®º¸±â
+//?
 var ButtonHandle        ViewAccessoryButton;
 
 
-//º¸¼® À©µµ¿ì
+// 
 var WindowHandle		JewelWindow;
 
-//¿¬±İ¼ú ¿ÀÇÁ³Ê
+//? 
 var WindowHandle		AlchemyOpenerWindow;
 
 var ButtonHandle        AlchemyMixCubeWndBtn;
 var ButtonHandle        AlchemyItemConversionWndBtn;
 var ButtonHandle        AlchemyItemCreateWndBtn;
 
-//ºäÆ¼˜Ş ÀÏ °æ¿ì ÀÎº¥Åä¸®°¡ ¿­¸®Áö ¾Êµµ·Ï 
+//?   ??  ? 
 var string              cur_state;
 
 var int mainClass ;
 
-var bool bIsPremiumHennaSlot; //branch GD35_0828 2014-2-10 luciper3 - À¯·á¹®½Å »ç¿ë¿©ºÎ
+var bool bIsPremiumHennaSlot; //branch GD35_0828 2014-2-10 luciper3 - ? ?
 
 var QuitReportWnd QuitReportWndScript;
 
 var string m_EquipWindowName;
 var WindowHandle m_EquipWindow;
 
-/**************************************** ¾Æ±â½Ã¿Â ¾ÆÆ® ¼Ò½º **********************************************/
-// ¾Æ°¡½Ã¿Â ¹öÆ°
+/**************************************** ? ? ? **********************************************/
+// ? ?
 var WindowHandle        AgathionWindow;
 
-// ¾Æ°¡½Ã¿Â ¿­°í ´İ±â ¹öÆ°
+// ?  ? ?
 var ButtonHandle        AgathionBtn;
 
-// ¾Æ°¡½Ã¿Â ºñÈ°¼ºÈ­ ÅØ½ºÃÄ µé ( main Æ÷ÇÔ ) 
+// ? ?? ?  ( main  ) 
 var TextureHandle		m_Agathion_Disable[ 5 ];
 
 var L2Util l2UtilScript;
 
 
-// ¾ÆÀÌÅÛ ½º¿Ò ½Ã clear Àü¿¡ itemSwaped ÀÌ true¸é ÀúÀå tt 61481
+//    clear  itemSwaped  true  tt 61481
 var bool bIsSavedLocalItemIdx ;
 var array<int> itemSwapedServerID;
 var array<int> itemSwapedServerID_1;
@@ -217,13 +217,15 @@ var array<int> itemSwapedIdx_3;
 var array<int> itemSwapedIdx_4;
 var array<int> itemSwapedIdx_q;
 
-// ¾ÆÀÌÅÛ ¸®½ºÆ® ¿Ï·á°¡ µÎ¹ø µé¾î ¿À¸ç, 
-// Ã¹¹ø Â°´Â ÀÏ¹İ ¾ÆÀÌÅÛ
-// µÎ¹ø Â°´Â Äù½ºÆ® ¾ÆÀÌÅÛÀÌ µé¾î ¿Â´Ù.
+//  ? ?? ?  , 
+//   ? 
+// ?  ?   .
 var bool bIsQuestItemList;
 
-// Åä±Û·Î ¿©´Â °æ¿ì Á¤·ÄÀ» À§ÇØ ÀúÀå ÇØ µÒ.
+// ?       .
 var bool bIsRequestItemList;
+var bool m_bCtrlAltDeleteEnabled;
+var CheckBoxHandle m_CtrlAltDeleteCheckBox;
 
 /*********************************************************************************************
  * On
@@ -266,11 +268,11 @@ function OnLoad()
 
 	InitHandleCOD();	
 	
-	// * ¼­¹ö ±³Ã¼ ½Ã xml À» ´Ù½Ã ·Îµî ÇÕ´Ï´Ù.
-	// onLoad ½Ã Å¬·¡½Ä ¶óÀÌºê ¼­¹ö¿¡ ¸ÂÃç À©µµ¿ìÀÇ ÇÚµéÀ» °¥¾Æ ³¢¿ò.
+	// *    xml  ? ? ??.
+	// onLoad  ? ?    ?  .
 	setEquipWindowHandle();
 
-	//±âº» À©µµ¿ì ÇÚµé ¼³Á¤
+	//?  ? 
 	getHandles();	
 	
 	InitScrollBar();
@@ -281,10 +283,13 @@ function OnLoad()
 	currentInvenCol = GetOptionInt( "Game", "ItemInventoryCol");
 	//debug("option " @ currentInvenCol);
 
-	// ¾ÆÀÌÅÛÄ­ °¡·Î 6~12, option.ini ÀúÀå °ª : ÃÖÃÊ·Î ½ÇÇà µÇ¾ú°Å³ª Á¶ÀÛ µÇ¾ú´Ù¸é ¹«Á¶°Ç 6À¸·Î ¼¼ÆÃ
+	// ?  6~12, option.ini   : ?  ??  ??  6 
 	if (currentInvenCol != 9 && currentInvenCol != 12) currentInvenCol = 9;
 
 	m_bFirstOpen = false;
+	m_bCtrlAltDeleteEnabled = GetOptionBool("Game", "EnableCtrlAltInventoryDelete");
+	if (m_CtrlAltDeleteCheckBox != none)
+		m_CtrlAltDeleteCheckBox.SetCheck(m_bCtrlAltDeleteEnabled);
 
 	m_BroochEquiped.hideWindow();
 	
@@ -314,12 +319,12 @@ function OnEvent(int Event_ID, string param)
 			HandleAddItem(param);
 			break;
 		case EV_InventoryUpdateItem:    //2610		
-			// ÇØ¿Ü, ¾Æ·¹³ª ¼­¹ö¿¡¼­¸¸ º¸¿©Áöµµ·Ï
+			// ?, ?  
 			if ( GetServerType() == 3 || Language != LANG_Korean ) showItemUpdateEffect( param );
 			HandleUpdateItem(param);
 			break;
-		// ÀÏ¹İ ¾ÆÀÌÅÛ µé¾î¿À°í, ¿Ï·á ÀÌº¥Æ®
-		// Äù½ºÆ® ¾ÆÀÌÅÛ µé¾î¿À°í, ¿Ï·á ÀÌº¥Æ®
+		// ?  , ? ??
+		// ?  , ? ??
 		case EV_InventoryItemListEnd:   //2620		
 			HandleItemListEnd();
 			break;
@@ -392,7 +397,7 @@ function OnShow()
 
 	UpdateHennaInfo();
 	
-	// È®Àå ¿©ºÎ 9 <-> 12 
+	// ?  9 <-> 12 
 	if (currentInvenCol == 9)
 		m_InventoryItembg_expand.HideWindow();	
 	else if (currentInvenCol == 12)		
@@ -472,6 +477,20 @@ function OnSelectItemWithHandle( ItemWindowHandle a_hItemWindow, int a_Index )
 		ItemName = class'UIDATA_ITEM'.static.GetRefineryItemName( info.Name, info.RefineryOp1, info.RefineryOp2 );
 		SetItemTextLink( info.ID, ItemName );
 	}
+
+	if (m_bCtrlAltDeleteEnabled && IsKeyDown(IK_Ctrl) && IsKeyDown(IK_Alt))
+	{
+		if (a_hItemWindow == m_invenItem
+			|| a_hItemWindow == m_invenItem_1
+			|| a_hItemWindow == m_invenItem_2
+			|| a_hItemWindow == m_invenItem_3
+			|| a_hItemWindow == m_invenItem_4)
+		{
+			a_hItemWindow.GetSelectedItem(info);
+			QuickDestroyInventoryItem(info);
+			return;
+		}
+	}
 	
 	switch ( a_hItemWindow ) 
 	{
@@ -493,17 +512,36 @@ function OnSelectItemWithHandle( ItemWindowHandle a_hItemWindow, int a_Index )
 		m_equipItem_Brooch.ClearSelect();
 }
 
+function QuickDestroyInventoryItem(ItemInfo info)
+{
+	local INT64 destroyCount;
+
+	if (info.ID.ServerID == 0)
+		return;
+
+	destroyCount = 1;
+	if (IsStackableItem(info.ConsumeType) && info.ItemNum > 1)
+	{
+		if (info.AllItemCount > 0)
+			destroyCount = info.AllItemCount;
+		else
+			destroyCount = info.ItemNum;
+	}
+
+	RequestDestroyItem(info.ID, destroyCount);
+}
+
 function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 {
 	local int toIndex, fromIndex;
 	local CrystallizationWnd CrystallizationWndScript;		
 	local ItemWindowHandle normalinven;
 
-	// °áÁ¤È­ ¿¬µ¿
+	// ? 
 	CrystallizationWndScript = CrystallizationWnd(GetScript("CrystallizationWnd"));
 	
 
-	// ÀÎº¥Åä¸®¿¡¼­ ¿Â °ÍÀÌ ¾Æ´Ï¸é Ã³¸®ÇÏÁö ¾Ê´Â´Ù.
+	// ??   ?? ?? ?.
 	if(! isDragSrcInventory ( info.DragSrcName )) return ;	
 	
 	if( strTarget == "InventoryItem" || strTarget == "InventoryItem_1" || strTarget == "InventoryItem_2" || strTarget == "InventoryItem_3" || strTarget == "InventoryItem_4" )
@@ -531,7 +569,7 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 		{
 			if( IsStackableItem(info.ConsumeType) && info.ItemNum > 1 )			// Multiple item?
 			{
-				if( info.AllItemCount > 0 )					// ÀüºÎ ¿Å±æ °ÍÀÎ°¡
+				if( info.AllItemCount > 0 )					//  ? ?
 				{
 					if ( CheckItemLimit( info.ID, info.AllItemCount ) )
 					{
@@ -567,13 +605,13 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 			}
 		}
 	}
-	/* ¾Æ°¡½Ã¿Â ¼­ºê¿Í ¸ŞÀÎÀ» ±³Ã¼ "EquipItem" ÀÌÀü¿¡ Ã¼Å© ÇÏµµ·Ï ÇÏÀÚ. */
-	// ¾Æ°¡½Ã¿Â ¸ŞÀÎ¿¡¼­ ¼­ºê·Î ±³Ã¼
+	/* ?    "EquipItem"  ? ? . */
+	// ? ?  
 	//else if( ( -1 != InStr( info.DragSrcName, "AgathionMain" )) && (-1 != InStr( strTarget, "AgathionSub" )) )
 	//{
 	//	handleSwapAgathionSubMain ( strTarget ) ;	
 	//}
-	//// ¾Æ°¡½Ã¿Â ¼­ºê¿¡¼­ ¸ŞÀÎÀ¸·Î ±³Ã¼
+	//// ? ?  
 	//else if( ( -1 != InStr( info.DragSrcName, "AgathionSub" )) && (-1 != InStr( strTarget, "AgathionMain" )) )
 	//{		
 	//	handleSwapAgathionSubMain ( info.DragSrcName ) ;		
@@ -586,7 +624,7 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 		{
 			class'PetAPI'.static.RequestGetItemFromPet( info.ID, 1, true );
 		}
-		else if( -1 != InStr( info.DragSrcName, "EquipItem" ) )	//¾Æ¹«°Íµµ ÇÏÁö ¾Ê´Â´Ù. 
+		else if( -1 != InStr( info.DragSrcName, "EquipItem" ) )	//??  ?. 
 		{
 		}
 		else if( EItemType(info.ItemType) != ITEM_ETCITEM )
@@ -596,7 +634,7 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 	}
 	else if( strTarget == "TrashButton" )					// Destroy item( after confirmation )
 	{
-		//Á¤¿ì±Õ Ãß°¡ 2013.2.6 ¼Ó¼º°­È­Ã¢ ¿­·ÁÀÖÀ¸¸é ¹ö¸®±â ¾ÈµÊ.
+		// ? 2013.2.6 ??   ?.
 		if (IsShowWindow("AttributeEnchantWnd") == true)
 		{
 			AddSystemMessage(4148);
@@ -605,7 +643,7 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 
 		if( IsStackableItem(info.ConsumeType) && info.ItemNum > 1 )			// Multiple item?
 		{
-			if( info.AllItemCount > 0 )				// ÀüºÎ ¹ö¸± °ÍÀÎ°¡
+			if( info.AllItemCount > 0 )				//   ?
 			{				
 				DialogSetID(DIALOG_DESTROYITEM_ALL);
 				DialogSetReservedItemID(info.ID);	// ServerID
@@ -622,7 +660,7 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 		}
 		else																// Single item?
 		{
-			// ÆÄ¼âÇÏ·Á ÇÒ¶§, °áÁ¤È­°¡ °¡´ÉÇÑ »óÈ²ÀÌ¸é ±×³É °áÁ¤È­
+			// ?? ?, ?  ?? ? ?
 			if( class'UIDATA_PLAYER'.static.HasCrystallizeAbility() && class'UIDATA_ITEM'.static.IsCrystallizable(info.ID) )			
 			{
 				// DialogSetID(DIALOG_CRYSTALLIZE);
@@ -641,7 +679,7 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 	}
 	else if( strTarget == "CrystallizeButton" )
 	{
-		//Á¤¿ì±Õ Ãß°¡ 2013.2.6 ¼Ó¼º°­È­Ã¢ ¿­·ÁÀÖÀ¸¸é °áÁ¤È­ ¾ÈµÊ.
+		// ? 2013.2.6 ??  ? ?.
 		if (IsShowWindow("AttributeEnchantWnd") == true)
 		{
 			AddSystemMessage(4148);
@@ -657,9 +695,9 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 			}
 			else
 			{
-				// °áÁ¤È­ Ã¢ÀÌ ¿­·Á ÀÖ´Â °æ¿ì ´İ±â
+				// ? ?  ?  ?
 				CrystallizationWndScript.cancelCystallizeItem();
-				// °áÁ¤È­ ºÒ°¡´É ÇÏ´Ù´Â ¾Ë¶÷ 
+				// ? ? ?? ? 
 				AddSystemMessage(2171);
 			}
 		}
@@ -667,7 +705,7 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 
 	else if( strTarget == "AdenacalculateButton" )
 	{		
-		//µå¶øµÈ ¾ÆÀÌÅÛÀÌ µ·ÀÏ °æ¿ì Ã¢ ¿­±â ½Ãµµ
+		//      
 		
 		if ( IsAdena( info.ID ) && !class'UIAPI_WINDOW'.static.IsShowWindow ("AdenaDistributionWnd") ) 
 		{
@@ -683,19 +721,19 @@ function OnDropItem( String strTarget, ItemInfo info, int x, int y )
 	}
 }
 
-// °°Àº ¾ÆÀÌÅÛ Ã¢¿¡¼­ ¾ÆÀÌÅÛÀ» ¿Å±â´Â °ÍÀº OnDropItem ¿¡¼­ ÇØ°áÇÏµµ·Ï ÇÏ°í ¿©±â¼­´Â ¹Ù´Ú¿¡ ¹ö¸®´Â »óÈ²¸¸ Ã³¸®ÇÑ´Ù.
+//   ?  ?  OnDropItem  ?? ? ? ??  ? ???.
 function OnDropItemSource( String strTarget, ItemInfo info )
 {
 	if ( strTarget != "Console" ) return; 
 	if( !isDragSrcInventory ( info.DragSrcName) ) return;
 	
-	// ÀÎÃ¦Æ® Ã¢ÀÌ ¿­·Á ÀÖ´Ù¸é.. ¾ÆÀÌÅÛ ¹Ù´Ú¿¡ ¶³¾îÆ®¸®±â¸¦ ¸·´Â´Ù.
+	// ? ?  ??..  ?? ?? .
 	if (IsShowWindow("ItemEnchantWnd") == false && IsShowWindow("AttributeEnchantWnd") == false  )
 	{
 		m_clickLocation = GetClickLocation();
-		if( IsStackableItem(info.ConsumeType) && info.ItemNum > 1 )		// ¼ö·®ÀÌ ÀÖ´Â ¾ÆÀÌÅÛ
+		if( IsStackableItem(info.ConsumeType) && info.ItemNum > 1 )		//  ? 
 		{
-			if( info.AllItemCount > 0 )				// ÀüºÎ ¹ö¸± °ÍÀÎ°¡
+			if( info.AllItemCount > 0 )				//   ?
 			{
 				DialogHide();
 				DialogSetID( DIALOG_DROPITEM_ALL );
@@ -703,7 +741,7 @@ function OnDropItemSource( String strTarget, ItemInfo info )
 				DialogSetReservedInt2(info.AllItemCount);
 				DialogShow(DialogModalType_Modalless,DialogType_Warning, MakeFullSystemMsg(GetSystemMessage(1833), info.Name, ""), string(Self));
 			}
-			else												// ¼ıÀÚ¸¦ ¹°¾îº¼ °ÍÀÎ°¡
+			else												// ? ? ?
 			{
 				DialogHide();
 				DialogSetID( DIALOG_DROPITEM_ASKCOUNT );
@@ -720,10 +758,10 @@ function OnDropItemSource( String strTarget, ItemInfo info )
 			DialogShow(DialogModalType_Modalless,DialogType_Warning, MakeFullSystemMsg(GetSystemMessage(400), info.Name, ""), string(Self));
 		}
 	}
-	// "¼Ó¼º °­È­ Áß¿¡´Â ¹ö¸± ¼ö ¾ø...."
+	// "? ? ?   ...."
 	else if (IsShowWindow("AttributeEnchantWnd") == true)
 		AddSystemMessage(4147);
-	// "ÀÎÃ¦Æ® Ã¢ÀÌ ¿­·Á ÀÖ½À´Ï´Ù. ¾ÆÀÌÅÛÀ» ¹ö¸± ¼ö ¾ø½À´Ï´Ù.";
+	// "? ?  ??.    ?.";
 	else
 		AddSystemMessage(3656);
 }
@@ -737,7 +775,7 @@ function OnClickButton( string strID )
 			switch ( m_selectedItemTab  ) 
 			{
 				case INVENTORY_ITEM_TAB:
-					l2UtilScript.SortItem(m_invenItem);	//ÀÎº¥Åä¸® Á¤·Ä
+					l2UtilScript.SortItem(m_invenItem);	//?? 
 					SaveInventoryOrder();
 				break;
 				case INVENTORY_ITEM_1_TAB:
@@ -756,45 +794,45 @@ function OnClickButton( string strID )
 					SortQuestItem();
 				break;				
 				default:
-					l2UtilScript.SortItem(m_invenItem);	//ÀÎº¥Åä¸® Á¤·Ä
+					l2UtilScript.SortItem(m_invenItem);	//?? 
 					SaveInventoryOrder();
 				break;
 			}			
 		break;
-		case "InventoryTab0":	//ÀÎº¥Åä¸® ¾ÆÀÌÅÛ ÅÜ Å¬¸¯			
+		case "InventoryTab0":	//??   ?			
 			m_selectedItemTab = INVENTORY_ITEM_TAB;
 			m_invenItem.SetScrollPosition(0);
 			SetItemCount();			
 			break;
-		case "InventoryTab1":	//ÀÎº¥Åä¸® ¾ÆÀÌÅÛ ÅÜ Å¬¸¯			
+		case "InventoryTab1":	//??   ?			
 			m_selectedItemTab = INVENTORY_ITEM_1_TAB;
 			m_invenItem_1.SetScrollPosition(0);
 			SetItemCount();			
 			break;
-		case "InventoryTab2":	//ÀÎº¥Åä¸® ¾ÆÀÌÅÛ ÅÜ Å¬¸¯			
+		case "InventoryTab2":	//??   ?			
 			m_selectedItemTab = INVENTORY_ITEM_2_TAB;
 			m_invenItem_2.SetScrollPosition(0);
 			SetItemCount();			
 			break;
-		case "InventoryTab3":	//ÀÎº¥Åä¸® ¾ÆÀÌÅÛ ÅÜ Å¬¸¯			
+		case "InventoryTab3":	//??   ?			
 			m_selectedItemTab = INVENTORY_ITEM_3_TAB;
 			m_invenItem_3.SetScrollPosition(0);
 			SetItemCount();			
 			break;
-		case "InventoryTab4":	//ÀÎº¥Åä¸® ¾ÆÀÌÅÛ ÅÜ Å¬¸¯			
+		case "InventoryTab4":	//??   ?			
 			m_selectedItemTab = INVENTORY_ITEM_4_TAB;
 			m_invenItem_4.SetScrollPosition(0);
 			SetItemCount();			
 			break;
-		case "InventoryTab5":	//Äù½ºÆ® ¾ÆÀÌÅÛ ÅÜ Å¬¸¯			
+		case "InventoryTab5":	//?   ?			
 			m_selectedItemTab = QUEST_ITEM_TAB;
 			m_questItem.SetScrollPosition(0);
 			SetItemCount();
 			break;
-		case "BtnWindowExpand" :  // ÀÎº¥Åä¸®°¡·ÎÈ®Àå¹öÆ°
+		case "BtnWindowExpand" :  // ????
 			extendInventory(currentInvenCol == 9);
 			break;			
-		case "AdenacalculateButton" ://¾Æµ¥³ª ºĞ¹è±â ¿­±â ¿äÃ»
+		case "AdenacalculateButton" ://? ?  
 			if ( !class'UIAPI_WINDOW'.static.IsShowWindow ("PrivateShopWndReport") )
 				callGfxFunction("AdenaDistributionWnd", "RequestDivideAdenaStart","");
 			else getInstanceL2Util().showGfxScreenMessage( GetSystemMessage(5104)) ;
@@ -832,8 +870,17 @@ function OnClickButton( string strID )
 	}
 }
 
+function OnClickCheckBox(string strID)
+{
+	if (strID == "CtrlAltDeleteCheckBox")
+	{
+		m_bCtrlAltDeleteEnabled = m_CtrlAltDeleteCheckBox.IsChecked();
+		SetOptionBool("Game", "EnableCtrlAltInventoryDelete", m_bCtrlAltDeleteEnabled);
+	}
+}
+
 /********************************************************************************************
- * ÃÊ±âÈ­ ¹× handle ¼¼ÆÃ
+ * ??  handle 
  * ******************************************************************************************/
 function InitHandleCOD()
 {
@@ -849,6 +896,18 @@ function InitHandleCOD()
 	m_hAdenaTextBox = GetTextBoxHandle( m_WindowName $ ".AdenaText" );
 	m_invenTab	= GetTabHandle(m_WindowName $ ".InventoryTab");
 	m_sortBtn	= GetButtonHandle(m_WindowName $ ".SortButton");
+	m_CtrlAltDeleteCheckBox = GetCheckBoxHandle(m_WindowName $ ".CtrlAltDeleteCheckBox");
+	if (m_CtrlAltDeleteCheckBox != none)
+	{
+		// Place delete toggle to the right of synthesis button and center vertically.
+		m_CtrlAltDeleteCheckBox.SetAnchor(m_WindowName $ ".AlchemyOpenerBtn", "TopLeft", "TopRight", 4, 13);
+		m_CtrlAltDeleteCheckBox.SetWindowSize(14, 14);
+		m_CtrlAltDeleteCheckBox.SetTooltipText("Ctrl+Alt+LMB: irreversible item delete");
+		m_CtrlAltDeleteCheckBox.SetTooltipCustomType(MakeTooltipSimpleText("Ctrl+Alt+LMB: irreversible item delete"));
+		m_CtrlAltDeleteCheckBox.BringToFront();
+		class'UIAPI_WINDOW'.static.SetAlwaysOnTop(m_WindowName $ ".CtrlAltDeleteCheckBox", true);
+		class'UIAPI_WINDOW'.static.BringToFront(m_WindowName $ ".CtrlAltDeleteCheckBox");
+	}
 		
 	AlchemyOpenerWindow = GetWindowHandle(m_WindowName $ ".AlchemyOpener_Window" );
 
@@ -868,7 +927,7 @@ function InitHandleCOD()
 
 	AlchemyOpenerBtn = GetButtonHandle( m_WindowName $ ".AlchemyOpenerBtn" );
 
-	// È®Àå¹öÆ°Ãß°¡
+	// ???
 	m_BtnWindowExpand = GetButtonHandle(m_WindowName $ ".BtnWindowExpand");
 	
 	m_InventoryItembg_expand = GetTextureHandle(m_WindowName $ ".InventoryItembg_expand");
@@ -886,19 +945,19 @@ function InitHandleCOD()
 	m_hPremiumHennaItemWindow = GetItemWindowHandle( m_WindowName$".Equip_Live.PremiumHennaItem" ); //branch121212	
 }
 
-// ÅøÆÁ ¹× ±âº» ÇÚµé ¹ŞÀ½ 
+//   ? ?  
 function getHandles()
 {
 	local string equipWindow ;
 	equipWindow = m_WindowName$"."$ m_EquipWindowName;	
 	
-	//Å¬·¡½Ä ¼­¹ö¿¡¼­ ºüÁö´Â ¾ÆÀÌÅÛ
+	//?   
 	/*
-	 *ºê·ÎÄ¡
-	 *¼ÅÃ÷
-	 *º§Æ® < 151015 ÀÌÈÄ Ãß°¡ µÊ
-	 *¸ÁÅä < 151015 ÀÌÈÄ Ãß°¡ µÊ
-	 *Å»¸®½º¸¸ < ÀÌÈÄ Ãß°¡ µÊ
+	 *?
+	 *
+	 *? < 151015  ? 
+	 * < 151015  ? 
+	 *? <  ? 
 	 *	
 	*/
 	ViewHairButton = GetButtonHandle(equipWindow $ ".HairButton");
@@ -939,7 +998,7 @@ function getHandles()
 
 	m_equipItem[ EQUIPITEM_RBracelet ] = GetItemWindowHandle( equipWindow $ ".EquipItem_RBracelet" );
 
-	//classic¿¡¼­ ÆÒ´øÆ®·Î »ç¿ë µÊ. ºñÆ®¿¬»êÀÌ °°À¸¹Ç·Î ÀÌ¸§À» µÎ°³ µÑ °æ¿ì ´õ Çò°¥¸± ¼ö ÀÖÀ½
+	//classic ??  . ? ? ? ?    ??  
 	m_equipItem[ EQUIPITEM_Underwear ] = GetItemWindowHandle( equipWindow $ ".EquipItem_Underwear" );
 	
 	m_equipItem[ EQUIPITEM_LHand ].SetDisableTex( "L2UI.InventoryWnd.Icon_dualcap" );
@@ -957,10 +1016,10 @@ function getHandles()
 	m_equipItem[ EQUIPITEM_Hair ].SetTooltipText( GetSystemString(1024) );
 	m_equipItem[ EQUIPITEM_Hair2 ].SetTooltipText(  GetSystemString(1024) );
 	m_equipItem[ EQUIPITEM_Neck ].SetTooltipText(  GetSystemString(238) );
-	//¹«±â
+	//
 	m_equipItem[ EQUIPITEM_RHand ].SetTooltipText(  GetSystemString( 2520 ) );
 	m_equipItem[ EQUIPITEM_Chest ].SetTooltipText(  GetSystemString(38) );
-	//¹æÆĞ
+	//
 	m_equipItem[ EQUIPITEM_LHand ].SetTooltipText(  GetSystemString( 231 ) );
 	m_equipItem[ EQUIPITEM_REar ].SetTooltipText(  GetSystemString( 237 ) );
 	m_equipItem[ EQUIPITEM_LEar ].SetTooltipText(  GetSystemString( 237 ) );
@@ -990,15 +1049,15 @@ function getHandles()
 	m_Talisman_Disable[ 4 ].SetTooltipText(  GetSystemString(1638) );
 	m_Talisman_Disable[ 5 ].SetTooltipText(  GetSystemString(1638) );	
 
-	//¼Ó¿Ê Å¬·¡½Ä¿¡¼­´Â Ææ´øÆ®
+	//? ?? ?
 	m_equipItem[ EQUIPITEM_Underwear ].SetTooltipText(  GetSystemString(28) );	
 	m_hHennaItemWindow.SetTooltipText(  GetSystemString(3185) );	
 	setCustomTooltip();
 }
 
 /*
- * ÇÏ´Ü ¹öÆ° ¼ø¼­ ±³Ã¼ ÇÔ¼ö 
- * Å¬·¡½Ä ¶óÀÌºê¿¡ ¸Â´Â Àåºñ ÇÚµé ¹ŞÀ½ 
+ * ? ?   ? 
+ * ? ??   ?  
  */
 function setEquipWindowHandle() 
 {
@@ -1009,11 +1068,11 @@ function setEquipWindowHandle()
 	
 	if ( getInstanceUIData().getIsClassicServer() ) 
 	{   
-		// ÇØ¿Ü Å¬·¡½Ä ¹öÁ¯¿¡¼­ ÇÕ¼º UI »ç¿ëÇÒÁö ¿©ºÎ 
-		// »ç¿ë ½Ã ¹öÆ° ¼ø¼­°¡ "¾Æµ¥³ª ºĞ¹è", "ÇÕ¼º" ÀÌ Ç×½Ã ³ëÃâ µÇ°í, Á¶°Ç( µå¿öÇÁ ÀÏÁ¤ Á÷¾÷ ) ¿¡ µû¶ó "°áÁ¤È­" ³ëÃâ
+		// ? ?  ? UI   
+		//   ?  "? ?", "?"  ?  ?, (    )   "?" 
 		GetINIBool ( "Localize", "UseClassicJewelEnchantBtn", UseClassicJewelEnchantBtn, "L2.ini" );
 
-		// ¾Æ·¹³ª¿¡¼­´Â ÇÕ¼º ¹öÆ° ¾È³ª¿À°Ô
+		// ? ? ? ?
 		if (getInstanceUIData().getIsArenaServer()) UseClassicJewelEnchantBtn = 0;
 
 		if ( UseClassicJewelEnchantBtn == 1 ) 
@@ -1043,7 +1102,7 @@ function setEquipWindowHandle()
 		//Debug("-_-mainSever Equip_Live!!");
 	}
 
-	// ÇÕ¼º º¸¼® ¹öÆ°, À©µµ¿ì
+	// ?  ?, 
 	JewelButton = GetButtonHandle(m_WindowName $ "." $ m_EquipWindowName $ ".JewelButton" );
 	JewelWindow = GetWindowHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Jewel_Window" );
 
@@ -1069,20 +1128,20 @@ function setEquipWindowHandle()
 	m_equipItem_Brooch.SetTooltipText(  GetSystemString(3186) );
 	m_equipItem[ EQUIPITEM_Brooch ].SetTooltipText(  GetSystemString(3186) );
 
-	/******************************************** ¾Æ°¡½Ã¿Â À©µµ¿ì ¼³Á¤ *********************************************/
+	/******************************************** ?   *********************************************/
 	AgathionWindow = GetWindowHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Agathion_Window");
 
-	// ¾Æ°¡½Ã¿Â ¿­°í ´İ±â ¹öÆ°
+	// ?  ? ?
 	AgathionBtn = GetButtonHandle(m_WindowName $ "." $ m_EquipWindowName $ ".AgathionButton");
 
-	// ¾Æ°¡½Ã¿Â ºñÈ°¼ºÈ­ ÅØ½ºÃÄ µé ( main Æ÷ÇÔ ) 
+	// ? ?? ?  ( main  ) 
 	m_Agathion_Disable[ 0 ] = GetTextureHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Agathion_Window.AgathionMain_Disable");
 	m_Agathion_Disable[ 1 ] = GetTextureHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Agathion_Window.Agathion1_Disable");
 	m_Agathion_Disable[ 2 ] = GetTextureHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Agathion_Window.Agathion2_Disable");
 	m_Agathion_Disable[ 3 ] = GetTextureHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Agathion_Window.Agathion3_Disable");
 	m_Agathion_Disable[ 4 ] = GetTextureHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Agathion_Window.Agathion4_Disable");
 	
-	// ¾Æ°¡½Ã¿Â ¾ÆÀÌÅÛ À©µµ¿ì µé
+	// ?   
 	m_equipItem[ EQUIPITEM_AGATHION_MAIN ] = GetItemWindowHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Agathion_Window.EquipItem_AgathionMain");
 	m_equipItem[ EQUIPITEM_AGATHION_SUB1 ] = GetItemWindowHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Agathion_Window.EquipItem_AgathionSub1");
 	m_equipItem[ EQUIPITEM_AGATHION_SUB2 ] = GetItemWindowHandle(m_WindowName $ "." $ m_EquipWindowName $ ".EquipItem_Agathion_Window.EquipItem_AgathionSub2");
@@ -1118,14 +1177,14 @@ function setEquipWindowHandle()
 
 function string getHyphenByLanguage () 
 {	
-	// ÇØ¿Ü ÆùÆ®ÀÇ °æ¿ì À¯´Ï ÄÚµå°¡ ´Ù¸¦ ¼ö ÀÖ½À´Ï´Ù.
-	if (GetLanguage() == LANG_Korean ) return "¡©"; 
+	// ? ?   ?? ?  ??.
+	if (GetLanguage() == LANG_Korean ) return ""; 
 	return "-";
 }
 
 
 /********************************************************************************************
- * ¸®½ºÅ¸Æ® Ã³¸® 
+ * ?  
  * ******************************************************************************************/
 function HandleRestart()
 {
@@ -1138,7 +1197,7 @@ function HandleRestart()
 }
 
 /********************************************************************************************
- * ´ÙÀÌ¾ó·Î±× Ã³¸® 
+ * ??  
  * ******************************************************************************************/
 function HandleDialogOK()
 {
@@ -1165,7 +1224,7 @@ function HandleDialogOK()
 		else if( id == DIALOG_DROPITEM_ASKCOUNT )
 		{
 			if(number == 0) 
-				number = 1;					// ¾Æ¹« ¼ıÀÚµµ ÀÔ·ÂÇÏÁö ¾ÊÀ¸¸é 1°³ µå¶øÀ¸·Î Ã³¸®
+				number = 1;					// ? ? ?  1  
 			RequestDropItem( sID, number, m_clickLocation );
 		}
 		else if( id == DIALOG_DROPITEM_ALL )
@@ -1201,9 +1260,9 @@ function HandleDialogOK()
 
 
 /********************************************************************************************
- * ¾ÆÀÌÅÛ »ç¿ë µî
+ *   
  * ******************************************************************************************/
-// ¾Ç¼¼»ç¸® 
+// ?? 
 function ChangeViewAccessoryFunc()
 {
 	local ItemInfo infItem;
@@ -1211,7 +1270,7 @@ function ChangeViewAccessoryFunc()
 	UseSkill(infItem.ID, int(EShortCutItemType.SCIT_SKILL));
 }
 
-// ÀÏ¹İ ¾ÆÀÌÅÛ
+// ? 
 function UseItem( ItemWindowHandle a_hItemWindow, int index )
 {
 	local ItemInfo	info;
@@ -1220,13 +1279,13 @@ function UseItem( ItemWindowHandle a_hItemWindow, int index )
 	{
 		if( info.bDisabled == 0 )		// lpislhy
 		{
-			if( info.bRecipe )					// Á¦Á¶¹ı(·¹½ÃÇÇ)¸¦ »ç¿ëÇÒ °ÍÀÎÁö ¹°¾îº»´Ù
+			if( info.bRecipe )					// ()   ?
 			{
 				DialogSetReservedItemID(info.ID);	// ServerID
 				DialogSetID(DIALOG_USE_RECIPE);
 				DialogShow(DialogModalType_Modalless,DialogType_Warning, GetSystemMessage(798), string(Self));
 			}
-			else if( info.PopMsgNum > 0 )			// ÆË¾÷ ¸Ş½ÃÁö¸¦ º¸¿©ÁØ´Ù.
+			else if( info.PopMsgNum > 0 )			// ? ? ?.
 			{
 				DialogSetID(DIALOG_POPUP);
 				DialogSetReservedItemID(info.ID);	// ServerID
@@ -1240,7 +1299,7 @@ function UseItem( ItemWindowHandle a_hItemWindow, int index )
 	}
 }
 
-// º¸¼® ¾ÆÀÌÅÛ µå¶ø
+//   
 function handleJewelDropedOnButton(  ItemInfo info ) 
 {
 	local ItemJewelEnchantWnd script;
@@ -1251,18 +1310,18 @@ function handleJewelDropedOnButton(  ItemInfo info )
 
 
 /*
- *¾Æ°¡½Ã¿Â swap Àº ´ÙÀ½ ¹öÁ¯¿¡ 
+ *? swap    
 function handleSwapAgathionSubMain ( string subItemWindowName  ) 
 {
 	local itemInfo mainItem, subItem;
 
 	Debug ( "subItemWindowName 0" @ subItemWindowName );
-	// ¸ŞÀÎ ¾ÆÀÌÅÛ Á¤º¸ 
+	//    
 	m_equipItem[ EQUIPITEM_AGATHION_MAIN].GetItem( 0, mainItem ) ;
 	int64(getAgathionSlotBitTypeString ( "n" ) );
 	
 	Debug ( "subItemWindowName 1" @ subItemWindowName );
-	// ¼­ºê ¾ÆÀÌÅÛ Á¤º¸
+	//   
 	m_equipItem[ EQUIPITEM_AGATHION_MAIN + int(right ( subItemWindowName, 1 )) ].GetItem( 0, subItem ) ;	
 	int64(getAgathionSlotBitTypeString ( right ( subItemWindowName, 1 ) ));
 
@@ -1271,9 +1330,9 @@ function handleSwapAgathionSubMain ( string subItemWindowName  )
 */
 
 /********************************************************************************************
- * ¾ÆÀÌÅÛ ¾÷µ¥ÀÌÆ® 
+ *  ? 
  * ******************************************************************************************/
-// ?? ¾ÆÀÌÅÛ »ç¿ë °¡´É ¼º??
+// ??    ??
 function UpdateItemUsability()
 {
 	m_invenItem.SetItemUsability();
@@ -1284,7 +1343,7 @@ function UpdateItemUsability()
 	m_questItem.SetItemUsability();
 }
 
-// ¾ÆÀÌÅÛ ¾÷µ¥ÀÌÆ®
+//  ?
 function HandleUpdateItem(string param)
 {
 	//local int		Order;
@@ -1323,7 +1382,7 @@ function HandleUpdateItem(string param)
 		{	
 			if( EquipItemFind(info.ID) )		// match found
 			{
-				//debug("ÀÌÇÁ·Î ? " $ param);
+				//debug(" ? " $ param);
 				EquipItemUpdate( info );
 				
 			}
@@ -1387,12 +1446,12 @@ function HandleUpdateItem(string param)
 	SetItemCount();
 }
 
-// ¾ÆÀÌÅÛ ¿Ï·á°¡ µÎ¹ø µé¾î ¿È.
-// ÀÏ¹İ ¾ÆÀÌÅÛ ¿Ï·á
-// Äù½ºÆ® ¿Ï·á
+//  ?? ?  .
+// ?  ?
+// ? ?
 function HandleItemListEnd()
 {	
-	// Ã³À½ ¿Ï·á ½Ã Äù½ºÆ® ¸®½ºÆ®·Î Ã³¸®
+	//  ?  ? ? 
 	if ( !bIsQuestItemList ) 
 	{
 		bIsQuestItemList = true;
@@ -1455,16 +1514,16 @@ function NormalInvenAddItem( ItemInfo newItem )
 	if ( bIsSavedLocalItemIdx ) 	
 		newItem.Order = getLocalItemOrder( newItem.ID.serverID, itemSwapedServerID, itemSwapedIdx, newItem.Order ) ;
 	
-	//ÇØ´ç ÀÚ¸®¿¡ ¾ÆÀÌÅÛÀÌ ÀÖÀ» °æ¿ì
+	//? ?   
 	if(  m_invenItem.GetItem( newItem.Order, curItem ) )
 		if( !IsValidItemID( curItem.ID ) )	
 			FindIdx = newItem.Order;
 	
 	
-	//¾ÆÀÌÅÛÀÌ ¾øÀ» °æ¿ì
+	//  
 	if( FindIdx < 0 )
 		for( idx=0; idx<CurLimit; idx++ )
-			//ºó idx¸¦ Ã£¾Æ¶ó
+			// idx ?
 			if( m_invenItem.GetItem( idx, curItem ) )
 				if( !IsValidItemID( curItem.ID ) )
 				{	
@@ -1479,7 +1538,7 @@ function NormalInvenAddItem( ItemInfo newItem )
 		
 	m_NormalInvenCount++;
 	
-	//¼¼ºÎ ÅÇ¿¡ ºÙÀÌ±â	
+	// ? ?	
 	detailItemWindow = getItemWindowHandleByItemType ( newItem );
 
 	if ( bIsSavedLocalItemIdx ) 
@@ -1545,9 +1604,9 @@ function QuestInvenAddItem( ItemInfo newItem )
 }
 
 /********************************************************************************************
- * Àåºñ Âø¿ë
+ *  
  * ******************************************************************************************/
-// ¾Æ°¡½Ã¿Â Àåºñ Âø¿ë
+// ?  
 function handleAgathionEquip ( itemInfo a_info ) 
 {
 	local int agathionIndex ;
@@ -1562,7 +1621,7 @@ function handleAgathionEquip ( itemInfo a_info )
 	}
 }
 
-// ±Í°ÉÀÌ ¾÷µ¥ÀÌÆ® 
+// ? ? 
 function EarItemUpdate()
 {
 	local int i;
@@ -1589,20 +1648,20 @@ function EarItemUpdate()
 
 	if( -1 != LEarIndex )
 	{
-		//~ debug("¿ŞÂÊ ±Í°ÉÀÌ");
+		//~ debug(" ?");
 		m_equipItem[ EQUIPITEM_LEar ].Clear();
 		m_equipItem[ EQUIPITEM_LEar ].AddItem( m_EarItemList[ LEarIndex ] );
 	}
 
 	if( -1 != REarIndex )
 	{
-		//~ debug("¿À¸¥ÂÊ ±Í°ÉÀÌ");
+		//~ debug(" ?");
 		m_equipItem[ EQUIPITEM_REar ].Clear();
 		m_equipItem[ EQUIPITEM_REar ].AddItem( m_EarItemList[ REarIndex ] );
 	}
 }
 
-// ¹İÁö ¾÷µ¥ÀÌÆ®
+//  ?
 function FingerItemUpdate()
 {
 	local int i;
@@ -1640,7 +1699,7 @@ function FingerItemUpdate()
 	}
 }
 
-// Àåºñ ¾÷µ¥ÀÌÆ®
+//  ?
 function EquipItemUpdate( ItemInfo a_info )
 {
 	local ItemWindowHandle hItemWnd;
@@ -1675,7 +1734,7 @@ function EquipItemUpdate( ItemInfo a_info )
 			}
 		}
 
-		// ¸ø Ã£¾ÒÀ» ¶§¸¸ Ãß°¡
+		//  ?  ?
 		if( i == m_EarItemList.Length )
 		{
 			m_EarItemList.Length = m_EarItemList.Length + 1;
@@ -1700,7 +1759,7 @@ function EquipItemUpdate( ItemInfo a_info )
 			}
 		}
 
-		// ¸ø Ã£¾ÒÀ» ¶§¸¸ Ãß°¡
+		//  ?  ?
 		if( i == m_FingerItemList.Length )
 		{
 			m_FingerItemList.Length = m_FingerItemList.Length + 1;
@@ -1743,19 +1802,19 @@ function EquipItemUpdate( ItemInfo a_info )
 	case 16384:	// SBT_RLHAND
 		hItemWnd = m_equipItem[ EQUIPITEM_RHand ];
 		ClearLHand = true;	
-		// RHand¿¡ Bow°¡ µé¾î¿Ô´Âµ¥, LHand¿¡ È­»ìÀÌ ÀÖ´Â °æ¿ì È­»ìÀ» ±×´ë·Î º¸¿©ÁØ´Ù - NeverDie
+		// RHand Bow ?, LHand ? ?  ? ? ? - NeverDie
 		if( IsBowOrFishingRod( a_Info ) )		
 			if( m_equipItem[ EQUIPITEM_LHand ].GetItem( 0, TheItemInfo ) )			
 				if( IsArrow( TheItemInfo ) )
 					ClearLHand = false;			
 				
-		// º¸¿ì°ÇÀ» Âø¿ëÇßÀ»¶§ À§¿Í °°Àº ¹æ¹ıÀ¸·Î º¼Æ®¸¦ º¸¿©ÁØ´Ù. 
+		//      ? ?. 
 		if( IsBowOrFishingRod( a_Info ) )
 			if( m_equipItem[ EQUIPITEM_LHand ].GetItem( 0, TheItemInfo ) )
 				if( IsArrow( TheItemInfo ) )
 					ClearLHand = false;		
 		
-		//LRHAND °æ¿ì¿¡µµ ex1 , ex2 °¡ ÀÖ´Â°Ô ÀÖ°í ¾ø´Â°Ô ÀÖ¾î¼­ µû·Î Ã³¸®°¡ ÇÊ¿äÇÕ´Ï´Ù. ;; -innowind
+		//LRHAND ? ex1 , ex2  ? ?  ??  ?? ???. ;; -innowind
 		if( ClearLHand )	
 		{
 			if(Len(a_Info.IconNameEx1) !=0)
@@ -1772,9 +1831,9 @@ function EquipItemUpdate( ItemInfo a_info )
 				m_equipItem[ EQUIPITEM_LHand ].Clear();
 				m_equipItem[ EQUIPITEM_LHand ].AddItem( LHand );
 				m_equipItem[ EQUIPITEM_LHand ].DisableWindow();
-				hItemWnd = None;	// ¾ÆÀÌÄÜ ÀÌ¹ÌÁö°¡ º¸ÀÌÁö ¾Êµµ·Ï ±âº» ¼³Á¤À» ¾ø¾ÖÁØ´Ù.
+				hItemWnd = None;	//  ?  ? ?  ?.
 			}
-			// È°ÀÌ³ª Ã¢°°ÀÌ ¾ÆÀÌÄÜÀÌ¹ÌÁö¶û ¶È°°Àº °æ¿ì.
+			// ?? ? ? ? .
 			else	
 			{
 				m_equipItem[ EQUIPITEM_LHand ].Clear();
@@ -1785,13 +1844,13 @@ function EquipItemUpdate( ItemInfo a_info )
 		}
 		break;
 	case 32768:	// SBT_ONEPIECE
-		// »óÀÇ
+		// 
 		hItemWnd = m_equipItem[ EQUIPITEM_Chest ];
-		a_Info.IconIndex = 1; // »óÀÇ ¾ÆÀÌÄÜ
-		// ¹ÙÁö
+		a_Info.IconIndex = 1; //  
+		// 
 		Legs = a_Info;
 		
-		Legs.IconIndex = 2; // ÇÏÀÇ ¾ÆÀÌÄÜÀ» ±×·ÁÁØ´Ù. 
+		Legs.IconIndex = 2; //   ??. 
 		m_equipItem[ EQUIPITEM_Legs ].Clear();
 		m_equipItem[ EQUIPITEM_Legs ].AddItem( Legs );
 		m_equipItem[ EQUIPITEM_Legs ].DisableWindow();
@@ -1801,7 +1860,7 @@ function EquipItemUpdate( ItemInfo a_info )
 		break;
 	case 131072:	// SBT_ALLDRESS
 		hItemWnd = m_equipItem[ EQUIPITEM_Chest ];
-		Hair2 = a_info;	//¿ø·¡´Â head°¡ µû·ÎÀÖ¾î¾ß ÇÏÁö¸¸ ¸Ş¸ğ¸® Àı¾àÂ÷¿ø¿¡¼­ hair2¿¡ ³Ö½À´Ï´Ù. - innowind
+		Hair2 = a_info;	// head ?  ?  hair2 ??. - innowind
 		Gloves = a_info;
 		Legs = a_info;
 		Feet = a_info;
@@ -1851,7 +1910,7 @@ function EquipItemUpdate( ItemInfo a_info )
 		hItemWnd = m_equipItem[ EQUIPITEM_Waist ];
 		break;
 
-	case 536870912: //Brooch ¾ÆÀÌÅÛÀÇ °æ¿ì
+	case 536870912: //Brooch  
 
 		m_equipItem_Brooch.Clear();
 		m_equipItem_Brooch.AddItem( a_info );
@@ -1865,7 +1924,7 @@ function EquipItemUpdate( ItemInfo a_info )
 		break;
 
 	case 1073741824:	//Brooch_Jewel1;	
-		jewelIndex = GetJewelIndex(a_info.Id); /// jewel api ÇÊ¿ä	
+		jewelIndex = GetJewelIndex(a_info.Id); /// jewel api ?	
 		
 		if (jewelIndex != -1)
 		{
@@ -1874,7 +1933,7 @@ function EquipItemUpdate( ItemInfo a_info )
 			m_equipItem[ EQUIPITEM_Jewel1 + jewelIndex ].EnableWindow();
 		}
 		break;
-	// 16³â 12¿ù ¾Æ°¡½Ã¿Â ¸®´º¾ó·Î °³Æí
+	// 16 12 ?  
 	/* case  2097152: 	 //SBT_LBracelet
 		hItemWnd = m_equipItem[ EQUIPITEM_LBracelet ];
 		m_equipItem[ EQUIPITEM_LBracelet ].Clear();
@@ -1886,14 +1945,14 @@ function EquipItemUpdate( ItemInfo a_info )
 		//~ UpdateTalismanSlotActivation();
 		//~ }
 	break;*/
-	case 2097152:	//¾Æ°¡½Ã¿Â ;	
-		//~ debug ("¾ÆÀÌÅÛ ¹øÈ£" @ a_info.ItemType );	
+	case 2097152:	//? ;	
+		//~ debug (" ?" @ a_info.ItemType );	
 		hItemWnd = m_equipItem[ EQUIPITEM_LBracelet ];
 		m_equipItem[ EQUIPITEM_LBracelet ].Clear();
 		m_equipItem[ EQUIPITEM_LBracelet ].AddItem( a_info );
 		m_equipItem[ EQUIPITEM_LBracelet ].EnableWindow();
 		break;
-	//¾Æ°¡½Ã¿Â ¼­ºê ¸ŞÀÎ
+	//?  
 	case 206158430208 : 
 		handleAgathionEquip( a_info ) ;		 		
 		break;
@@ -1907,7 +1966,7 @@ function EquipItemUpdate( ItemInfo a_info )
 	
 }
 
-// ÇÁ¸®¹Ì¾ö ¹®½Å
+// ? 
 function UpdatePremiumHennaInfo(bool clear)
 {
 	local int HennaID;
@@ -1918,7 +1977,7 @@ function UpdatePremiumHennaInfo(bool clear)
 	//branch121212
 	m_hPremiumHennaItemWindow.Clear(); //branch121212
 
-	if( clear || bIsPremiumHennaSlot == false ) //branch GD35_0828 2014-2-10 luciper3 - ½½·ÔÀ» »ç¿ëÇÏÁö ¾ÊÀ¸¸é ¾÷µ¥ÀÌÆ®µµ ÇÏÁö¾Ê´Â´Ù.
+	if( clear || bIsPremiumHennaSlot == false ) //branch GD35_0828 2014-2-10 luciper3 -    ? ?.
 		return;
 	
 	if( class'HennaAPI'.static.GetPremiumHennaInfo( HennaID, IsActive ) )
@@ -1942,7 +2001,7 @@ function UpdatePremiumHennaInfo(bool clear)
 	}
 }
 
-// ¹®½Å
+// 
 function UpdateHennaInfo()
 {
 	local int i;
@@ -2004,7 +2063,7 @@ function UpdateHennaInfo()
 	}
 }
 
-// ¾ÆÀÌÅÛ ¾÷µ¥ÀÌÆ®  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//  ?  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function HandleUpdateUserEquipSlotInfo()
 {
 	EarItemUpdate();
@@ -2019,9 +2078,9 @@ function HandleUpdateUserEquipSlotInfo()
 
 
 /********************************************************************************************
- * Àåºñ ÇØÁ¦
+ *  
  * ******************************************************************************************/
-//Àåºñ ÇØÁ¦ ½Ã Å»¸®½º¸¸, º¸¼® ¿¹¿Ü Ã³¸®
+//   ?,   
 function handleRequestUnequipItem( String DragSrcName, itemID infoID, int64 slotbitType )
 {	
 	local string  tmpSlotbitType;
@@ -2114,14 +2173,14 @@ function EquipItemDelete( ItemID sID )
 		{
 			m_equipItem[ i ].Clear();
 
-			//ttp 63832·Î Ãß°¡ ÅøÆÁÀ» º¸¿©ÁÖ±â À§ÇØ enable ½ÃÅ´
+			//ttp 63832 ?  ?  enable ?
 			m_equipItem[ i ].EnableWindow();
 
 			//m_equipItem[ i ].HideWindow();
 			//m_equipItem[ i ].AddItem( TooltipItem );
 			//m_equipItem[ i ].DisableWindow();			
 
-			// È­»ìÀ» ¹ö¸®´Â °æ¿ì, ºóÀÚ¸®¿¡ È° ¸ğ¾çÀÌ Ç¥½ÃµÇ¾î¾ßÇÑ´Ù.
+			// ?  , ? ?  ???.
 			if( i == EQUIPITEM_LHand )
 			{
 				if( m_equipItem[ EQUIPITEM_RHand ].GetItem( 0, TheItemInfo ) )
@@ -2135,7 +2194,7 @@ function EquipItemDelete( ItemID sID )
 					
 				}
 			}
-			//ºê·ÎÄ¡ °°ÀÌ »èÁ¦
+			//?  
 			else if ( i == EQUIPITEM_Brooch ) 
 			{
 				m_equipItem_brooch.Clear();				
@@ -2146,7 +2205,7 @@ function EquipItemDelete( ItemID sID )
 }
 
 /********************************************************************************************
- * ¾ÆÀÌÅÛ »èÁ¦
+ *  
  * ******************************************************************************************/
 function InvenDelete( ItemInfo item )
 {
@@ -2160,7 +2219,7 @@ function InvenDelete( ItemInfo item )
 	
 	ClearItemID( ClearItem.ID );
 	
-	//¾ÆÀÌÄÜ È°¼ºÈ­ ºÎºĞ ÅØ½ºÃÄ Ã³¸®
+	// ?? ? ? 
 	ClearItem.IconName = "L2ui_ct1.emptyBtn";
 	FindIdx = m_invenItem.FindItem( item.ID );
 	DetailFindIdx = detailItemWindow.FindItem( item.ID );
@@ -2182,7 +2241,7 @@ function QuestInvenDelete( ItemInfo item )
 	FindIdx = m_questItem.FindItem( item.ID );
 	if( FindIdx != -1 )
 	{
-		//Áö¿ì°í ´Ù½Ã ºó ½½·Ô ¾ÆÀÌÅÛÀ¸·Î Ã¤¿öÁØ´Ù.
+		// ?    ??.
 		m_questItem.DeleteItem(FindIdx);
 		m_QuestInvenCount--;
 
@@ -2193,11 +2252,11 @@ function QuestInvenDelete( ItemInfo item )
 }
 
 /********************************************************************************************
- * ¾ÆÀÌÅÛ À©µµ¿ì  Å¬¸®¾î
+ *    ?
  * ******************************************************************************************/
 function HandleClear()
 {
-	// tt 61481 µîÀÇ ¹®Á¦ º¸¿©Áö°í ÀÖÀ» ¶§´Â À§Ä¡ °ªÀ» ÀúÀå ÇÕ´Ï´Ù.
+	// tt 61481      ?   ??.
 	if ( m_hOwnerWnd.IsShowWindow() ) saveLocalItemOrder();	
 
 	InvenClear();
@@ -2217,7 +2276,7 @@ function HandleClear()
 	bIsQuestItemList = false;
 }
 
-// Àåºñ ¾ÆÀÌÅÛ Å¬¸®¾î 
+//   ? 
 function EquipItemClear()
 {
 	local int i;
@@ -2229,7 +2288,7 @@ function EquipItemClear()
 	m_BroochEquiped.HideWindow();
 }
 
-// ÀÏ¹İ ÀÎº¥ Å¬¸®¾î
+// ? ? ?
 function InvenClear()
 {	
 	m_invenItem.Clear();	
@@ -2263,10 +2322,10 @@ function invenItem_4Clear()
 }
 
 /********************************************************************************************
- * ¾ÆÀÌÅÛ À§Ä¡ ÀúÀå
+ *  ? 
  * ******************************************************************************************/
-// ¾ÆÀÌÅÛÀÇ ¼ø¼­¸¦ local·Î ÀúÀå ÇØ µÒ.
-// ¾ÆÀÌÅÛÀ» ¿Å±ä ÈÄ À§Ä¡°¡ ·ÎÄÃ¿¡ ÀúÀå µÇµµ·Ï Ã³¸®
+//   local   .
+//  ?  ?   ? 
 function saveLocalItemOrder() 
 {
 	local int  i ;	
@@ -2305,7 +2364,7 @@ function saveServerID ( ItemWindowHandle targetWindow, int idx,  out array<int> 
 }
 
 
-// ¾ÆÀÌÅÛ orderÀ» Ã£À½
+//  order ?
 function int getLocalItemOrder( int serverID, array<int> serverIDList, array<int> SwapedIdx, int defaultOrder  ) 
 {
 	local int i ;
@@ -2336,7 +2395,7 @@ function int getLocalItemOrderByItemWindow ( itemWindowHandle targetWindow, int 
 	return defaultOrder ;
 }
 
-// ¾ÆÀÌÅÛ À§Ä¡¸¦ ¼­¹ö¿¡ ÀúÀå ÇÔ.
+//  ?   .
 function SaveInventoryOrder()
 {
 	local int idx;
@@ -2364,10 +2423,10 @@ function SaveInventoryOrder()
 	if( IDList.Length > 0 )
 		RequestSaveInventoryOrder( IDList, OrderList );
 
-	// ÇöÀç 6, 12°³ °¡·Î¿­ ÀÎº¥Åä¸® ¾ÆÀÌÅÛ ¼ö¸¦ ÀúÀå ½ÃÅ²´Ù.
+	//  6, 12 ? ??    ?.
 	SetOptionInt( "Game", "ItemInventoryCol",  currentInvenCol);
 
-	// ÀÎº¥Åä¸® ÀúÀå ÈÄ false Ã³¸® ÇÑ´Ù.	
+	// ??   false  ?.	
 	bIsSavedLocalItemIdx = false;
 	itemSwapedIdx.Length = 0 ;
 	itemSwapedIdx_1.Length = 0 ;
@@ -2384,22 +2443,22 @@ function SaveInventoryOrder()
 }
 
 /********************************************************************************************
- * ÆÇº° ÇÔ¼ö µé
+ * ? ? 
  * ******************************************************************************************/
 
-// Àåºñ ÀÎ°¡
+//  ?
 function bool IsEquipItem( out ItemInfo info )
 {
 	return info.bEquipped;
 }
 
-// Äù½ºÆ® ¾ÆÀÌÅÛ ÀÎ°¡?
+// ?  ??
 function bool IsQuestItem( out ItemInfo info )
 {
 	return EItemtype(info.ItemType) == ITEM_QUESTITEM;
 }
 
-// ±Í°ÉÀÌ ÀÎ°¡?
+// ? ??
 function int IsLOrREar( ItemID sID )
 {
 	local ItemID LEar;
@@ -2417,7 +2476,7 @@ function int IsLOrREar( ItemID sID )
 		return 0;
 }
 
-// ¹İÁö ÀÎ°¡?
+//  ??
 function int IsLOrRFinger( ItemID sID )
 {
 	local ItemID LEar;
@@ -2435,24 +2494,24 @@ function int IsLOrRFinger( ItemID sID )
 		return 0;
 }
 
-//³¬½Ã ´ë ÀÎ°¡?
+//  ??
 function bool IsBowOrFishingRod( ItemInfo a_Info )
 {
-	 //~ debug("º¸¿ì°ÇÀÇ ¹øÈ£?"@  a_Info.WeaponType);
-	// È°, …ú½Ã´ë, Å©·Î½ºº¸¿ì, ¾ç¼Õ Å©·Î½ºº¸¿ì
+	 //~ debug(" ??"@  a_Info.WeaponType);
+	// ?, , ??,  ??
 	if( 6 == a_Info.WeaponType || 10 == a_Info.WeaponType || 12 == a_Info.WeaponType || 17 == a_Info.WeaponType)	
 		return true;
 
 	return false;
 }
 
-// È­»ì ÀÎ°¡?
+// ? ??
 function bool IsArrow( ItemInfo a_Info )
 {
 	return a_Info.bArrow;
 }
 
-// µå·¡±× ¼Ò½º°¡ ÀÎº¥Åä¸® ÀÎ°¡?
+// ? ? ?? ??
 function bool isDragSrcInventory ( string DragSrcName )
 {
 	switch ( DragSrcName ) 
@@ -2473,15 +2532,15 @@ function bool isDragSrcInventory ( string DragSrcName )
 }
 
 /*
-* »ç¿ë ÇÏ´Â °÷ÀÌ ¾øÀ½
-// Àå½Ä ¾ÆÀÌÅÛ ÀÎ°¡???? 
-function INT64 IsDecoItem( ItemInfo a_Info )	// INT -> INT64, Jewel Ãß°¡ - by y2jinc (2013. 9. 2)
+*  ?  
+//   ????? 
+function INT64 IsDecoItem( ItemInfo a_Info )	// INT -> INT64, Jewel ? - by y2jinc (2013. 9. 2)
 {
 	return a_Info.SlotBitType;
 }
 
-//°³ÀÎÃ¢°í, Ç÷¸ÍÃ¢°í, È­¹°Ã¢°í, ±³È¯Ã¢, »óÁ¡±¸¸Å, ÆÇ¸ÅÃ¢, °³ÀÎÆÇ¸Å, °³ÀÎ±¸¸Å, ÆÇ¸Å´ëÇà Ã¢ÀÌ ¶°ÀÖÀ» °æ¿ì ¹«½ÃÇÏ´Â ·çÆ¾
-//´Ù¸¥»ç¶÷ÀÇ °³ÀÎ»óÁ¡ Ã¢¿¡¼­ ³»°¡ ±¸¸ÅÇÒ¶§´Â ¿­·Á¾ßÇÔ --;; - innowind
+//?, ?, ??, ?, , ?, ?, ?, ?? ?   ? ?
+//? ? ?  ?  --;; - innowind
 function bool IsShowInventoryWndUponEvent()
 {
 	local WindowHandle m_warehouseWnd;
@@ -2495,12 +2554,12 @@ function bool IsShowInventoryWndUponEvent()
 
 	local WindowHandle m_sellingAgencyWnd;
 	
-	m_warehouseWnd = GetWindowHandle( "WarehouseWnd" );					//°³ÀÎÃ¢°í, Ç÷¸ÍÃ¢°í, È­¹°Ã¢°í
-	m_privateShopWnd = GetWindowHandle( "PrivateShopWnd" );					//°³ÀÎÆÇ¸Å, °³ÀÎ±¸¸Å
-	m_tradeWnd = GetWindowHandle( "TradeWnd" );							//±³È¯
-	m_shopWnd = GetWindowHandle( "ShopWnd" );							//»óÁ¡±¸¸Å, ÆÇ¸Å
-	m_multiSellWnd = GetWindowHandle( "MultiSellWnd" );						//»óÁ¡±¸¸Å, ÆÇ¸Å
-	m_deliverWnd = GetWindowHandle( "DeliverWnd" );							//È­¹°¼­ºñ½º
+	m_warehouseWnd = GetWindowHandle( "WarehouseWnd" );					//?, ?, ??
+	m_privateShopWnd = GetWindowHandle( "PrivateShopWnd" );					//?, ?
+	m_tradeWnd = GetWindowHandle( "TradeWnd" );							//?
+	m_shopWnd = GetWindowHandle( "ShopWnd" );							//, ?
+	m_multiSellWnd = GetWindowHandle( "MultiSellWnd" );						//, ?
+	m_deliverWnd = GetWindowHandle( "DeliverWnd" );							//?
 	m_scriptPrivateShopWnd = PrivateShopWnd( GetScript("PrivateShopWnd") );
 
 	m_PostBoxWnd = GetWindowHandle( "PostBoxWnd" );
@@ -2508,7 +2567,7 @@ function bool IsShowInventoryWndUponEvent()
 	m_PostDetailWnd_General = GetWindowHandle( "PostDetailWnd_General" );
 	m_PostDetailWnd_SafetyTrade = GetWindowHandle( "PostDetailWnd_SafetyTrade" );
 
-	m_sellingAgencyWnd = GetWindowHandle( "SellingAgencyWnd" ); // ÆÇ¸Å´ëÇà
+	m_sellingAgencyWnd = GetWindowHandle( "SellingAgencyWnd" ); // ??
 
 
 	if( m_warehouseWnd.IsShowWindow() )
@@ -2547,7 +2606,7 @@ function bool IsShowInventoryWndUponEvent()
 /********************************************************************************************
  * data
  * ******************************************************************************************/
-// Àåºñ ¾ÆÀÌÅÛ ¼ö·®
+//   
 function int EquipItemGetItemNum()
 {
 	local int i;
@@ -2555,7 +2614,7 @@ function int EquipItemGetItemNum()
 
 	for( i = 0; i < EQUIPITEM_Max; ++i )
 	{
-		if(m_equipItem[ i ].IsEnableWindow())	// ¼¼Æ®¾ÆÀÌÅÛÀº ÇÏ³ª¸¸ ¼¾´Ù. 
+		if(m_equipItem[ i ].IsEnableWindow())	// ? ? . 
 		{
 			ItemNum = ItemNum + m_equipItem[ i ].GetItemNum();
 		}
@@ -2564,7 +2623,7 @@ function int EquipItemGetItemNum()
 	return ItemNum;
 }
 
-// ¼­¹ö ¾ÆÀÌµğ¿¡ µû¶ó ¾ÆÀÌÅÛ À©µµ¿ì¸¦ Ã£À½
+//  ?   ? ?
 function bool EquipItemFind( ItemID sID )
 {
 	local int i;
@@ -2581,13 +2640,13 @@ function bool EquipItemFind( ItemID sID )
 }
 
 
-// ¿ÜºÎ¿¡¼­ ÀÎº¥Åä¸® Ä«¿îÆ®¸¦ ¹Ş¾Æ °¥¶§ »ç¿ë
+// ?? ?? ?? ?  
 function int getCurrentInventoryItemCount()
 {
 	return pInventoryItemCount;
 }
 
-//¿ÜºÎ¿¡¼­ ÀÎº¥Åä¸® ¾ÆÀÌÅÛ À©µµ¿ì ÅÇ ÀÌ¸§À» °¡Á®°¥¶§ »ç¿ë
+//?? ??    ?  
 function bool getInventoryItemWndName(string str)
 {
 	local int i;
@@ -2608,8 +2667,8 @@ function bool getInventoryItemWndName(string str)
 	return false;
 }
 
-// ¿ÜºÎ¿¡¼­, ¾ÆÀÌÅÛÀ» ÀÎº¥Åä¸®¿¡ °¡Áö°í ÀÖÀ¸¸é, ¾ÆÀÌÅÛ Á¤º¸¸¦ ¾ò¾î ¿Â´Ù. (2014.03.18, ¿ÜÇüº¯°æ¿¡¼­ »ç¿ëÇÏ·Á°í ¸¸µé¾î ³õÀ½)
-// onlyUseClassID = true·Î ³ÖÀ¸¸é serverID ¸¦ »ç¿ëÇÏÁö ¾Ê°í ¿ÀÁ÷ classID°¡ °°Àº°ÍÀ» Ã£´Â´Ù. (¼ö·®¼º ¾ÆÀÌÅÛ¸¸ »ç¿ëÇØ¾ß ÇÑ´Ù)
+// ??,  ??  ,    . (2014.03.18, ? ?  )
+// onlyUseClassID = true  serverID   ?  classID  ?. ( ? ? ?)
 function bool getInventoryItemInfo(ItemID id, out ItemInfo InvenItemInfo, optional bool onlyUseClassID)
 {
 	local bool bHasItem;
@@ -2618,17 +2677,17 @@ function bool getInventoryItemInfo(ItemID id, out ItemInfo InvenItemInfo, option
 
 	bHasItem = false;
 
-	// ¼ö·®¼º ¾ÆÀÌÅÛÀº findItem À¸·Î ¼­¹ö ¾ÆÀÌµğ Æ÷ÇÔÇØ¼­ Ã£À¸¸é ¾ÈµÇ°í, classID ¸¸À¸·Î °Ë»öÇØ¾ß ÇÑ´Ù.
+	//   findItem   ? ? ? ??, classID  ?? ?.
 	if (onlyUseClassID)	index = m_invenItem.FindItemByClassID(id);
 	else index = m_invenItem.FindItem(id);
 	
 	if (index > -1) { m_invenItem.GetItem(index, InvenItemInfo); bHasItem = true; }
 
-	// Äù½ºÆ® ¾ÆÀÌÅÛ 
+	// ?  
 	index = m_questItem.FindItem(id);
 	if (index > -1) { m_questItem.GetItem(index, InvenItemInfo); bHasItem = true; }
 
-	// Àåºñ ½½·Ô 
+	//   
 	for (i = 0; i < EQUIPITEM_Max; i++)
 	{
 		// index = m_equipItem[i].FindItem(id);
@@ -2641,20 +2700,20 @@ function bool getInventoryItemInfo(ItemID id, out ItemInfo InvenItemInfo, option
 
 			switch ( i ) 
 			{
-				// ¿À¸¥ ¼Õ ºñ±³ ÈÄ °°À¸¸é ³ÖÁö ¾ÊÀ½
+				//       
 				case EQUIPITEM_LHand :
 					m_equipItem[EQUIPITEM_RHand].GetItem(0,tmpItemInfo);
 				break;
-				// Çì¾î ¾Ç¼¼¼­¸® 1°ú ºñ±³ÈÄ °°À¸¸é ³ÖÁö ¾ÊÀ½
+				//  ? 1    
 				case EQUIPITEM_Hair2:
 					m_equipItem[EQUIPITEM_Hair].GetItem(0,tmpItemInfo);		
 				break;
 			}
 
 			
-			// 2015-06-03 µı°Å °íÄ¡´Ù º¸´Ï ÀÌ°Ô Àß¸ø µÇ¾î ÀÖ´Âµí ÇØ¼­ ¼öÁ¤.
+			// 2015-06-03  ?  ? ? ? ? ? .
 			if ( tempOutItemInfo.ID.serverID == tmpItemInfo.ID.serverID ) continue;
-			// ±âÁ¸²¨..
+			// ..
 			//if ( InvenItemInfo.ID.serverID == tmpItemInfo.ID.serverID ) continue;
 
 			InvenItemInfo = tempOutItemInfo;
@@ -2666,7 +2725,7 @@ function bool getInventoryItemInfo(ItemID id, out ItemInfo InvenItemInfo, option
 	return bHasItem;
 }
 
-// ÇØ´ç ÀÎº¥Åä¸®¿¡ ¾ÆÀÌÅÛÀÌ ¸î°³ ÀÖ³ª?
+// ? ??  ? ??
 function INT64 getItemCountByClassID(int classID)
 {
 	local int i, itemNum;
@@ -2678,7 +2737,7 @@ function INT64 getItemCountByClassID(int classID)
 
 	class'UIDATA_ITEM'.static.GetItemInfo( ID, info );
 
-	// ¼ö·®¼º ¾ÆÀÌÅÛÀÎ°¡?
+	//  ??
 	if(IsStackableItem( info.ConsumeType ))
 	{
 		if(getInventoryItemInfo(ID, tempOutItemInfo, true))
@@ -2688,13 +2747,13 @@ function INT64 getItemCountByClassID(int classID)
 	}
 	else
 	{
-		// ÀÎº¥Åä¸® Total
+		// ?? Total
 		totalCount = getItemWindowCountByClassID(classID, m_invenItem);
 		
-		// Äù½ºÆ® ¾ÆÀÌÅÛ 
+		// ?  
 		totalCount = totalCount + getItemWindowCountByClassID(classID, m_questItem);
 		
-		// Àåºñ ½½·Ô 
+		//   
 		for (i = 0; i < EQUIPITEM_Max; i++)
 		{
 			itemNum = m_equipItem[i].GetItemNum();
@@ -2705,11 +2764,11 @@ function INT64 getItemCountByClassID(int classID)
 
 			switch ( i ) 
 			{
-				// ¿À¸¥ ¼Õ ºñ±³ ÈÄ °°À¸¸é ³ÖÁö ¾ÊÀ½
+				//       
 				case EQUIPITEM_LHand :
 					m_equipItem[EQUIPITEM_RHand].GetItem(0,tmpItemInfo);
 				break;
-				// Çì¾î ¾Ç¼¼¼­¸® 1°ú ºñ±³ÈÄ °°À¸¸é ³ÖÁö ¾ÊÀ½
+				//  ? 1    
 				case EQUIPITEM_Hair2:
 					m_equipItem[EQUIPITEM_Hair].GetItem(0,tmpItemInfo);		
 				break;
@@ -2725,7 +2784,7 @@ function INT64 getItemCountByClassID(int classID)
 	return totalCount;
 }
 
-// ¾ÆÀÌÅÛ À©µµ¿ì¿¡¼­ ÇØ´ç ClassID ¾ÆÀÌÅÛÀÇ ¼ö·®À» ¾ò´Â´Ù.
+//  ? ? ClassID   .
 function INT64 getItemWindowCountByClassID(int ClassID, ItemWindowHandle targetItemWindow)
 {
 	local int i, cnt, index, totalItemNum;
@@ -2738,7 +2797,7 @@ function INT64 getItemWindowCountByClassID(int ClassID, ItemWindowHandle targetI
 
 	class'UIDATA_ITEM'.static.GetItemInfo( ID, info );
 
-	// ¼ö·®¼º ¾ÆÀÌÅÛÀÎ°¡?
+	//  ??
 	if(IsStackableItem( info.ConsumeType ))
 	{
 		index = m_invenItem.FindItemByClassID(ID);
@@ -2763,8 +2822,8 @@ function INT64 getItemWindowCountByClassID(int ClassID, ItemWindowHandle targetI
 }
 
 
-// ÀåºñµÈ ¾ÆÀÌÅÛÀ» Æ÷ÇÔÇÑ ¸ğµç ¾ÆÀÌÅÛÀ» ¹è¿­·Î ¸®ÅÏ ¹Ş´Â´Ù.
-// bExceptionEquipItem = true ¸é Àåºñ¸¦ Æ÷ÇÔÇÏÁö ¾Ê´Â´Ù.
+//      ?  ?.
+// bExceptionEquipItem = true    ?.
 function array<ItemInfo> getInventoryAllItemArray(optional bool bExceptionEquipItem)
 {
 	local int itemNum, index; //,i ;
@@ -2786,14 +2845,14 @@ function array<ItemInfo> getInventoryAllItemArray(optional bool bExceptionEquipI
 	
 	if (bExceptionEquipItem == false)
 	{
-		// Àåºñ ½½·Ô
+		//  
 		itemArray = L2Util(GetScript("L2Util")).pushItemInfoArray ( itemArray, getInventoryEquipItemArray());	
 	}
 
 	return itemArray;
 }
 
-// ÀåºñÃ¢¿¡ ÀÖ´Â ¾ÆÀÌÅÛµé¸¸ ¸®ÅÏ
+// ? ? ?? 
 function array<ItemInfo> getInventoryEquipItemArray()
 {
 	local int i, j ;//, itemNum ;
@@ -2804,7 +2863,7 @@ function array<ItemInfo> getInventoryEquipItemArray()
 
 	local ItemInfo InvenItemInfo ;//, tmpItemInfo;
 	
-	// ´ÙÅ© ¾î½ê½Å ·ùÀÇ ¾ÆÀÌÅÛ( °¡½¿ ÀåÂø ½Ã ´Ù¸¥ ¾ÆÀÌÅÛµµ ÀåÂøÀ¸·Î ÀÎ½Ä ) ¶§¹®¿¡ °¡½¿ ºÎÅÍ ÀÔ·Â 
+	// ?   (    ? ?  ? )    ? 
 	m_equipItem[EQUIPITEM_Chest].GetItem( 0, InvenItemInfo  ) ;
 	if ( IsValidItemID( InvenItemInfo.ID ) ) 
 	{
@@ -2812,7 +2871,7 @@ function array<ItemInfo> getInventoryEquipItemArray()
 		itemArray[ 0 ] = InvenItemInfo;
 	}
 
-	// Àåºñ ½½·Ô 
+	//   
 	for (i = 0; i < EQUIPITEM_Max; i++)
 	{	
 		ClearItemID( InvenItemInfo.ID );
@@ -2821,8 +2880,8 @@ function array<ItemInfo> getInventoryEquipItemArray()
 		
 		if ( !IsValidItemID ( InvenItemInfo.id ) ) CONTINUE ;
 
-		// TT 69146 : ÀÔ·Â µÈ ¾ÆÀÌÅÛ Áß °°Àº °ÍÀÌ ÀÖ´Â Áö °Ë»ç.
-		// ¾Ç¼¼¼­¸®, ¾ç¼Õ°Ë, µà¾ó¼Òµå, ¼ö¿µº¹, ¿øÇÇ½º µîµî
+		// TT 69146 : ?      ?  ?.
+		// ?, ?, ?, , ? 
 		isSameItem = false;
 
 		for ( j = 0 ; j < itemArray.Length ; j ++ )
@@ -2856,9 +2915,9 @@ function int GetQuestItemInventoryLimit()
 }
 
 /********************************************************************************************
- * ÁıÈ¥ ¾ÆÀÌÅÛ ¸®½ºÆ® ¹Ş±â
+ * ?  ? ?
  * ******************************************************************************************/
-// ÁıÈ¥(·é) ÇØÁ¦ °¡´É ¾ÆÀÌÅÛ ¸®ÅÏ ¹Ş±â
+// ?()     ?
 function array<ItemInfo> getInventoryEnSoulExtractEnableItemArray()
 {
 	local int i, itemNum, index;
@@ -2875,12 +2934,12 @@ function array<ItemInfo> getInventoryEnSoulExtractEnableItemArray()
 	{
 		m_invenItem.GetItem(index, InvenItemInfo);
 
-		// ÁıÈ¥Àº ¹«±â¸¸ °¡´É
+		// ? ? 
 		if (InvenItemInfo.Id.ClassID <= 0) continue;
 		if (InvenItemInfo.itemType != EItemType.ITEM_WEAPON) continue;
 		if ( InvenItemInfo.bSecurityLock ) continue;
 
-		// ÁıÈ¥ ÇØÁ¦°¡ °¡´ÉÇÑ ÁıÈ¥µÇ¾î ÀÖ´Â ¹«±â °ñ¶ó³»±â
+		// ?   ?? ?  ??
 		if(hasEnsoulOption(InvenItemInfo))
 		{
 			itemArray.Length = itemArray.Length + 1;
@@ -2888,22 +2947,22 @@ function array<ItemInfo> getInventoryEnSoulExtractEnableItemArray()
 		}
 	}
 
-	// Àåºñ ½½·Ô 
+	//   
 	for (i = 0; i < EQUIPITEM_Max; i++)
 	{
 		itemNum = m_equipItem[i].GetItemNum();
 		for (index = 0; index < itemNum; index++)
 		{
-			// ¹æÆĞÀÏ °æ¿ì ¹«½Ã, µà¾ó ¼Òµå µî ¶§¹®¿¡ ¿¹¿Ü Ã³¸®
+			//   ,  ?    
 			if (EQUIPITEM_LHand == i) continue;
 
 			m_equipItem[i].GetItem(index, InvenItemInfo);
 
-			// ÁıÈ¥Àº ¹«±â¸¸ °¡´É
+			// ? ? 
 			if (InvenItemInfo.Id.ClassID <= 0) continue;
 			if (InvenItemInfo.itemType != EItemType.ITEM_WEAPON) continue;  
 
-			// ÁıÈ¥ ÇØÁ¦°¡ °¡´ÉÇÑ ÁıÈ¥µÇ¾î ÀÖ´Â ¹«±â °ñ¶ó³»±â
+			// ?   ?? ?  ??
 			if(hasEnsoulOption(InvenItemInfo))
 			{
 				itemArray.Length = itemArray.Length + 1;
@@ -2916,7 +2975,7 @@ function array<ItemInfo> getInventoryEnSoulExtractEnableItemArray()
 }
 
 
-// ÁıÈ¥ °¡´É ¾ÆÀÌÅÛ ¸®ÅÏ ¹Ş±â
+// ?    ?
 function array<ItemInfo> getInventoryEnSoulEnableItemArray()
 {
 	local int i, itemNum, index;
@@ -2933,17 +2992,17 @@ function array<ItemInfo> getInventoryEnSoulEnableItemArray()
 	{
 		m_invenItem.GetItem(index, InvenItemInfo);
 
-		// ÁıÈ¥Àº ¹«±â¸¸ °¡´É
+		// ? ? 
 		if (InvenItemInfo.Id.ClassID <= 0) continue;
 		if (InvenItemInfo.itemType != EItemType.ITEM_WEAPON) continue;
 		if ( InvenItemInfo.bSecurityLock ) continue;
 
 
-		// ÁıÈ¥ ½½·ÔÀÌ ÀÖ´Â ¾ÆÀÌÅÛ °ñ¶ó ³»±â		
-		enSoulNormalCount = class'UIDATA_ENSOUL'.static.GetEnsoulSlotCount(InvenItemInfo.Id, EIST_NORMAL);   // ÀÏ¹İ ÁıÈ¥ ½½·Ô ¼ö
-		enSoulBmCount     = class'UIDATA_ENSOUL'.static.GetEnsoulSlotCount(InvenItemInfo.Id, EIST_BM);       // À¯·á ÁıÈ¥ ½½·Ô ¼ö
+		// ?  ?   		
+		enSoulNormalCount = class'UIDATA_ENSOUL'.static.GetEnsoulSlotCount(InvenItemInfo.Id, EIST_NORMAL);   // ? ?  
+		enSoulBmCount     = class'UIDATA_ENSOUL'.static.GetEnsoulSlotCount(InvenItemInfo.Id, EIST_BM);       //  ?  
 
-		// µÑÁß¿¡ ÇÏ³ª¶óµµ 1°³ ÀÌ»óÀÌ¸é ÁıÈ¥ ½½·ÔÀÌ ÀÖ´Â ¾ÆÀÌÅÛ)
+		// ? ? 1 ?? ?  ? )
 		if (enSoulNormalCount > 0 || enSoulBmCount > 0)
 		{
 			itemArray.Length = itemArray.Length + 1;
@@ -2951,13 +3010,13 @@ function array<ItemInfo> getInventoryEnSoulEnableItemArray()
 		}
 	}
 
-	// Àåºñ ½½·Ô 
+	//   
 	for (i = 0; i < EQUIPITEM_Max; i++)
 	{
 		itemNum = m_equipItem[i].GetItemNum();
 		for (index = 0; index < itemNum; index++)
 		{
-			// ¹æÆĞÀÏ °æ¿ì ¹«½Ã, µà¾ó ¼Òµå µî ¶§¹®¿¡ ¿¹¿Ü Ã³¸®
+			//   ,  ?    
 			if (EQUIPITEM_LHand == i) continue;
 
 			m_equipItem[i].GetItem(index, InvenItemInfo);
@@ -2965,16 +3024,16 @@ function array<ItemInfo> getInventoryEnSoulEnableItemArray()
 
 //			if ( InvenItemInfo.Id.ClassID > 0 ) Debug ( InvenItemInfo.Name @ InvenItemInfo.bSecurityLock ) ;
 
-			// ÁıÈ¥Àº ¹«±â¸¸ °¡´É
+			// ? ? 
 			if (InvenItemInfo.Id.ClassID <= 0) continue;
 			if (InvenItemInfo.itemType != EItemType.ITEM_WEAPON) continue;  
 			if ( InvenItemInfo.bSecurityLock ) continue;
 
-			// ÁıÈ¥ ½½·ÔÀÌ ÀÖ´Â ¾ÆÀÌÅÛ °ñ¶ó ³»±â
-			enSoulNormalCount = class'UIDATA_ENSOUL'.static.GetEnsoulSlotCount(InvenItemInfo.Id, EIST_NORMAL);  // ÀÏ¹İ ÁıÈ¥ ½½·Ô ¼ö
-			enSoulBmCount     = class'UIDATA_ENSOUL'.static.GetEnsoulSlotCount(InvenItemInfo.Id, EIST_BM);      // À¯·á ÁıÈ¥ ½½·Ô ¼ö
+			// ?  ?   
+			enSoulNormalCount = class'UIDATA_ENSOUL'.static.GetEnsoulSlotCount(InvenItemInfo.Id, EIST_NORMAL);  // ? ?  
+			enSoulBmCount     = class'UIDATA_ENSOUL'.static.GetEnsoulSlotCount(InvenItemInfo.Id, EIST_BM);      //  ?  
 
-			// µÑÁß¿¡ ÇÏ³ª¶óµµ 1°³ ÀÌ»óÀÌ¸é ÁıÈ¥ ½½·ÔÀÌ ÀÖ´Â ¾ÆÀÌÅÛ)
+			// ? ? 1 ?? ?  ? )
 			if (enSoulNormalCount > 0 || enSoulBmCount > 0)
 			{
 				itemArray.Length = itemArray.Length + 1;
@@ -2987,7 +3046,7 @@ function array<ItemInfo> getInventoryEnSoulEnableItemArray()
 }
 
 
-// ÁıÈ¥¼® ¾ÆÀÌÅÛ ¸®ÅÏ ¹Ş±â
+// ?   ?
 function array<ItemInfo> getInventoryEnSoulStoneArray()
 {
 	local int i, itemNum, index;
@@ -3001,7 +3060,7 @@ function array<ItemInfo> getInventoryEnSoulStoneArray()
 
 	itemNum = m_invenItem.GetItemNum();
 
-	// ÀÎº¥Åä¸®¿¡¼­ Ã£±â
+	// ?? ?
 	for (index = 0; index < itemNum; index++)
 	{
 		m_invenItem.GetItem(index, InvenItemInfo);
@@ -3013,7 +3072,7 @@ function array<ItemInfo> getInventoryEnSoulStoneArray()
 		}
 	}
 
-	// Àåºñ ½½·Ô¿¡¼­ Ã£±â
+	//  ? ?
 	for (i = 0; i < EQUIPITEM_Max; i++)
 	{
 		itemNum = m_equipItem[i].GetItemNum();
@@ -3021,7 +3080,7 @@ function array<ItemInfo> getInventoryEnSoulStoneArray()
 		{
 			m_equipItem[i].GetItem(index, InvenItemInfo);
 			
-			// Å¸ÀÔÀÌ °°´Ù¸é..
+			//  ?..
 			if (InvenItemInfo.ItemSubType == int(EEtcItemType.ITEME_ENSOUL_STONE))
 			{
 				itemArray.Length = itemArray.Length + 1;
@@ -3036,7 +3095,7 @@ function array<ItemInfo> getInventoryEnSoulStoneArray()
 
 //#ifdef CT26P3
 /********************************************************************************************
- * Á¤·Ä
+ * 
  * ******************************************************************************************/
 function SortQuestItem()
 {
@@ -3049,7 +3108,7 @@ function SortQuestItem()
 
 	invenLimit = m_questItem.GetItemNum();
 
-	// 1. ¾ÆÀÌÅÛµéÀ» 
+	// 1. ? 
 	for (i = 0; i < invenLimit; i++ )
 	{
 		m_questItem.GetItem(i, item);
@@ -3085,9 +3144,9 @@ function SortQuestItem()
 }
 
 /********************************************************************************************
- * ¼­ºê Ã¢, ½½·Ô È°¼º ºñÈ°¼º Ã³¸®
+ *  ,  ? ? 
  * ******************************************************************************************/
-// Å»¸®½º¸¸ ½½·Ô Ã³¸® 
+// ?   
 function UpdateTalismanSlotActivation()
 {
 
@@ -3127,7 +3186,7 @@ function UpdateTalismanSlotActivation()
 	}
 } 
 
-// ¾Æ°¡½Ã¿Â ½½·Ô Ã³¸® 
+// ?   
 function UpdateAgathionSlotActivation()
 {
 	local int Count;
@@ -3136,13 +3195,13 @@ function UpdateAgathionSlotActivation()
 	
 	if( GetPlayerInfo( user ) )
 	{	
-		// ¸ŞÀÎ »ç¿ëÀÌ °¡´É ÇÏ´Ù¸é, 		
+		//    ??, 		
 		if ( user.nAgathionMainNum > 0 ) 
 		{
 			m_Agathion_Disable[0].HideWindow();
 			m_equipItem[EQUIPITEM_AGATHION_MAIN].EnableWindow();
 		}
-		// °¡´É ÇÏÁö ¾Ê´Ù¸é 
+		//   ?? 
 		else 
 		{
 			m_Agathion_Disable[0].ShowWindow();
@@ -3176,7 +3235,7 @@ function UpdateAgathionSlotActivation()
 	}
 } 
 
-// º¸¼® ¾ÆÀÌÅÛ ½½·Ô Ã³¸® 
+//     
 function UpdateJewelSlotActivation()
 {
 	local int Count;
@@ -3189,7 +3248,7 @@ function UpdateJewelSlotActivation()
 	
 	if( GetPlayerInfo( user ) )
 	{
-		//¼öÁ¤
+		//
 		Count = user.nJewelNum;				
 		
 		if (Count > 0)
@@ -3219,17 +3278,17 @@ function UpdateJewelSlotActivation()
 } 
 
 /********************************************************************************************
- * ±â´É ¹× À©µµ¿ì º¯°æ
+ *    
  * ******************************************************************************************/
-// ÇÁ¸®¹Ì¾ö ¹®½Å Ã³¸® 
+// ?   
 function handlePremiumHenna ( ) 
 {
-	//branch GD35_0828 2014-2-10 luciper3 - À¯·á¹®½ÅÀº ÇØ¿Ü¿¡¼­¸¸ »ç¿ëÇÑ´Ù.
+	//branch GD35_0828 2014-2-10 luciper3 - ? ?? ?.
 	local int nUsePremiumHenna;
 	local TextureHandle PremiumHennaTex;
 	//end of branch
 
-	//branch GD35_0828 2014-2-10 luciper3 - À¯·á¹®½ÅÀº ÇØ¿Ü¿¡¼­¸¸ »ç¿ëÇÑ´Ù.
+	//branch GD35_0828 2014-2-10 luciper3 - ? ?? ?.
 	GetINIBool("Localize", "UsePremiumHennaSlot", nUsePremiumHenna, "L2.ini");
 
 	if( nUsePremiumHenna == 1 ) bIsPremiumHennaSlot = true;
@@ -3244,7 +3303,7 @@ function handlePremiumHenna ( )
 }
 
 
-// À¯Àú Á¤º¸¿¡ ¸ÂÃç À©µµ¿ì º¯°æ //////////////////////////////////////////////////////////////
+//      //////////////////////////////////////////////////////////////
 function HandleUpdateUserInfo()
 {
 	// Debug ( "HandleUpdateUserInfo" ); 
@@ -3269,7 +3328,7 @@ function handleNotifySubjob ( string param )
 	setAhclemyOpener();
 }
 
-// ¾ÆÀÌÅÛ °áÁ¤È­ ¹öÆ°  
+//  ? ?  
 function CheckShowCrystallizeButton()
 {
 	if( class'UIDATA_PLAYER'.static.HasCrystallizeAbility() )
@@ -3278,7 +3337,7 @@ function CheckShowCrystallizeButton()
 		m_hBtnCrystallize.HideWindow();
 }
 
-// Çì¾î ¾Ç¼¼¼­¸® ¹öÆ° showHide
+//  ? ? showHide
 function ReceiveHairAccessoryPriority(string param)
 {
 	local int priority;
@@ -3294,7 +3353,7 @@ function ReceiveHairAccessoryPriority(string param)
 		ViewAccessoryButton.ShowWindow();
 }
 
-// ¾Æ¸£Å×ÀÌ¾î ¿¬±İ¼ú È°¼ºÈ­.
+// ?? ? ??.
 function setAhclemyOpener ( ) 
 {
 	local userinfo info;	
@@ -3325,7 +3384,7 @@ function setAhclemyOpener ( )
 		AlchemyOpenerBtn.hideWindow();
 	}	
 }
-// ½ºÅ©·Ñ¹Ù ¼¼ÆÃ
+// ?? 
 function InitScrollBar()
 {
 	m_invenItem.SetScrollBarPosition( 0, 17, 0 );
@@ -3337,7 +3396,7 @@ function InitScrollBar()
 }
 
 
-// ¹öÆ° ¼ø¼­¿¡ µû¶ó ¹öÆ° À§Ä¡¸¦ º¯°æ ÇÔ 
+// ?   ? ?   
 function setBottomButtonPostion (out int num, ButtonHandle tmpBottomButton ) 
 {
 	local int startX, btnW;	
@@ -3348,7 +3407,7 @@ function setBottomButtonPostion (out int num, ButtonHandle tmpBottomButton )
 
 
 /**
- *  ÀÎº¥Åä¸®¸¦È®Àå, Ãà¼ÒÇÑ´Ù.
+ *  ???, ?.
  **/
 function extendInventory (bool flag)
 {
@@ -3360,10 +3419,10 @@ function extendInventory (bool flag)
 		currentInvenCol = 12;
 		toExpandWidth = 108 ;
 		
-		// ÀÎº¥Åä¸®ÅØ½ºÃÄ±³Ã¼(6, 12 °¡·Î)		
+		// ????(6, 12 )		
 		m_InventoryItembg_expand.ShowWindow();
 		
-		// È®´ë Ãà¼Ò ¹öÆ° ÅØ½ºÃÄ ±³Ã¼
+		// ?  ? ? 
 		m_BtnWindowExpand.SetTexture("L2UI_CT1.frames_df_Btn_Minimize",
 									 "L2UI_ct1.frames_df_btn_Minimize_down",
 									 "L2UI_ct1.frames_df_btn_Minimize_over");	
@@ -3371,15 +3430,15 @@ function extendInventory (bool flag)
 	}
 	else
 	{
-		//ÀÓ½Ã·Î ¼¼ Ä­À» ´Ã·Á º½
+		//?  ?  
 		currentInvenCol = 9;
 		toExpandWidth = 0 ;
-		//°¢ col ÀÇ Å©±â´Â 36 ÀÌ´Ù. colÀÌ ÇÏ³ª ´Ã¾î³¯ ¶§ ¸¶´Ù. 36 ¾¿ ´õÇØ Áü		
+		// col  ? 36 ?. col ? ?  . 36   		
 		
-		// ÀÎº¥Åä¸®ÅØ½ºÃÄ±³Ã¼(6, 12 °¡·Î)		
+		// ????(6, 12 )		
 		m_InventoryItembg_expand.HideWindow();
 
-		// È®´ë Ãà¼Ò ¹öÆ° ÅØ½ºÃÄ ±³Ã¼
+		// ?  ? ? 
 		m_BtnWindowExpand.SetTexture("L2UI_ct1.frames_df_btn_Expand",
 									 "L2UI_ct1.frames_df_btn_Expand_down",
 									 "L2UI_ct1.frames_df_btn_Expand_over");
@@ -3406,7 +3465,7 @@ function extendInventory (bool flag)
 	m_invenItem_4.SetCol( currentInvenCol );
 	m_questItem.SetCol( currentInvenCol );
 
-	// ½ºÅ©·Ñ¹Ù »óÀ§·Î, Æ÷Ä¿½º ÁöÁ¤
+	// ?? , ? 
 
 	if (m_selectedItemTab == INVENTORY_ITEM_TAB)
 	{
@@ -3438,7 +3497,7 @@ function extendInventory (bool flag)
 	tmpItemWindowHandle.SetFocus();
 }
 
-// Å¬·¡½Ä ¶óÀÌºê ¼­¹ö º¯°æ
+// ? ?  
 function checkClassicForm () 
 {	
 	m_EquipWindow.HideWindow();
@@ -3451,9 +3510,9 @@ function checkClassicForm ()
 
 
 /********************************************************************************************
- * ÀÎº¥ Á¤º¸ Ç¥½Ã 
+ * ?  ? 
  * ******************************************************************************************/
-// ¾Æµ¥³ª
+// ?
 function SetAdenaText()
 {
 	local string adenaString;
@@ -3463,7 +3522,7 @@ function SetAdenaText()
 	m_hAdenaTextBox.SetText(adenaString);
 	m_hAdenaTextBox.SetTooltipString( ConvertNumToText(string(GetAdena())) );
 }
-// ¾ÆÀÌÅÛ ¼ö·®
+//  
 function SetItemCount()
 {
 	local int limit;
@@ -3482,11 +3541,11 @@ function SetItemCount()
 	
 	m_itemCount.SetText("(" $ count $ "/" $ limit $ ")");
 
-	// ¿ÜºÎ Á¤º¸¿ë
+	// ? 
 	pInventoryItemCount = limit - count;
 }
 
-// ÀÎº¥Åä¸® ´«±İ Ç¥½Ã 
+// ??  ? 
 function InvenLimitUpdate()
 {
 	// Changed by JoeyPark 2010/09/09	
@@ -3502,7 +3561,7 @@ function InvenLimitUpdate()
 	// End changing
 }
 
-// ÃÖ´ë°ª ÀÌ»ó ´«±İ Ç¥½Ã 1
+// ?? ?  ? 1
 function ItemboxUpdate(ItemWindowHandle hItemWnd, int iInvenLimit)
 {
 	local int iCount;
@@ -3546,7 +3605,7 @@ function ItemboxUpdate(ItemWindowHandle hItemWnd, int iInvenLimit)
 	}
 }
 
-// ÃÖ´ë°ª ¼öÄ¡ º¯°æ
+// ?? ? 
 function HandleSetMaxCount(string param)
 {
 	local int ExtraBeltCount;
@@ -3562,7 +3621,7 @@ function HandleSetMaxCount(string param)
 
 
 /********************************************************************************************
- * °¢ À©µµ¿ì show<>hide ÇÚµé
+ *   show<>hide ?
  * ******************************************************************************************/
 function HandleToggleWindow()
 {
@@ -3573,9 +3632,9 @@ function HandleToggleWindow()
 	}
 	else
 	{		
-		// ¾ÆÀÌÅÛ ¸®Äù½ºÆ®°¡ ´Ù µé¾î ¿À¸é Ã¢À» ¿°
-		// ¾ÆÀÌÅÛÀ» ¿©·¯¹ø ¸®Äù½ºÆ® ÇÏÁö ¸øÇÏµµ·Ï ÇÔ.
-		// RequestItemList ¿¡ ÀÇÇØ ¸®½ºÆ® °»½ÅÀÎ °æ¿ì toggleWindow ·Î ¿ÀÇÂ µÇ¹Ç·Î Á¤·Ä ÇÑ´Ù. 		
+		//  ?    ? 
+		//   ?  ? .
+		// RequestItemList   ?   toggleWindow   ??  ?. 		
 		if ( bIsRequestItemList ) return;
 		bIsRequestItemList = true;		
 		RequestItemList();
@@ -3588,10 +3647,10 @@ function HandleOpenWindow(string param)
 {
 	local int open;
 
-	//ºäÆ¼˜Ş ½ºÅ×ÀÌÆ®ÀÏ °æ¿ì ¸®ÅÏ;
+	//? ?  ;
 	//Debug( "HandleOpenWindow"  @ cur_state  ) ;
 	if ( cur_state == "BEAUTYSHOPSTATE" ) return;
-	// ¸®Äù½ºÆ®¿¡ ÀÇÇØ¿­¸®´Â °æ¿ì ¸®½ºÆ® ¿£µå¿¡ show Ã³¸®
+	// ? ?  ? ? show 
 	if ( bIsRequestItemList ) return;
 
 	ParseInt(param, "Open", open);
@@ -3650,7 +3709,7 @@ function toggleAgathionWindow()
 			AgathionBtn.SetTexture("L2UI_CT1.button.BtnEditUp", "L2UI_CT1.button.BtnEditUp_down", "L2UI_CT1.button.BtnEditUp_over"); 			
 		else AgathionBtn.SetTexture("L2UI_CT1.button.BtnEditDown", "L2UI_CT1.button.BtnEditDown_down", "L2UI_CT1.button.BtnEditDown_over"); 		
 
-		// º¸¼® »óÀÚ¸¦ ´İÀ½
+		//  ? 
 		JewelWindow.HideWindow();
 		JewelButton.SetTexture("L2UI_CT1.button.Button_DF_right", "L2UI_CT1.button.Button_DF_right_down", "L2UI_CT1.button.Button_DF_right_over");
 
@@ -3668,7 +3727,7 @@ function toggleJewelWindow()
 	}
 	else 
 	{
-		// ¾Æ»ç½Ã¿ÂÀ» ´İÀ½
+		// ? 
 		AgathionWindow.HideWindow();
 		if ( getInstanceUIData().getIsClassicServer()  ) 
 			AgathionBtn.SetTexture("L2UI_CT1.button.BtnEditDown", "L2UI_CT1.button.BtnEditDown_down", "L2UI_CT1.button.BtnEditDown_over");
@@ -3690,110 +3749,110 @@ function HandleChangeCharacterPawn(string param)
 	switch (m_MeshType)
 	{
 		case 0:
-		// ÈŞ¸Õ_Àü»ç_³²
+		// ?__
 		m_ObjectViewport.SetCharacterScale(1.f);
 		m_ObjectViewport.SetCharacterOffsetX(-2);
 		m_ObjectViewport.SetCharacterOffsetY(-6);                                       
 		break;
 		case 1:
-		// ÈŞ¸Õ_Àü»ç_¿©
+		// ?__
 		m_ObjectViewport.SetCharacterScale(1.03f);
 		m_ObjectViewport.SetCharacterOffsetX(-2);
 		m_ObjectViewport.SetCharacterOffsetY(-8);                                       
 		break;
 		case 8:
-		// ÈŞ¸Õ_¹ı»ç_³²
+		// ?__
 		m_ObjectViewport.SetCharacterScale(1.047f);
 		m_ObjectViewport.SetCharacterOffsetX(2);
 		m_ObjectViewport.SetCharacterOffsetY(-8);                                       
 		break;
 		case 9:
-		// ÈŞ¸Õ_¹ı»ç_¿©
+		// ?__
 		m_ObjectViewport.SetCharacterScale(1.07f);
 		m_ObjectViewport.SetCharacterOffsetX(-1);
 		m_ObjectViewport.SetCharacterOffsetY(-9);                                       
 		break;
 		case 6:
-		// ¿¤ÇÁ_Àü»ç_³²
+		// __
 		m_ObjectViewport.SetCharacterScale(0.98f);
 		m_ObjectViewport.SetCharacterOffsetX(-2);
 		m_ObjectViewport.SetCharacterOffsetY(-7);                                       
 		break;
 		case 7:
-		// ¿¤ÇÁ_Àü»ç_¿©
+		// __
 		m_ObjectViewport.SetCharacterScale(1.04f);
 		m_ObjectViewport.SetCharacterOffsetX(-4);
 		m_ObjectViewport.SetCharacterOffsetY(-8);                                       
 		break;
 		// case q
-		// ¿¤ÇÁ_¹ı»ç_³²
+		// __
 		// SetCharacterOffsetX(-2);
 		// SetCharacterOffsetY(-7);
-		// ¿¤ÇÁ_¹ı»ç_¿©
+		// __
 		// SetCharacterOffsetX(-4);
 		// SetCharacterOffsetY(-8);
 		case 2:
-		// ´Ù¿¤_Àü»ç_³²
+		// ?__
 		m_ObjectViewport.SetCharacterScale(0.99f);
 		m_ObjectViewport.SetCharacterOffsetX(-1);
 		m_ObjectViewport.SetCharacterOffsetY(-7);                                       
 		break;
 		case 3:
-		// ´Ù¿¤_Àü»ç_¿©
+		// ?__
 		m_ObjectViewport.SetCharacterScale(1.015f);
 		m_ObjectViewport.SetCharacterOffsetX(-1);
 		m_ObjectViewport.SetCharacterOffsetY(-7);
 		break;
-		// ´Ù¿¤_¹ı»ç_³²
+		// ?__
 		// SetCharacterOffsetX(-1);
 		// SetCharacterOffsetY(-7);
-		// ´Ù¿¤_¹ı»ç_¿©
+		// ?__
 		// SetCharacterOffsetX(-1);
 		// SetCharacterOffsetY(-7);
 		case 10:
-		// ¿ÀÅ©_Àü»ç_³²                             
+		// ?__                             
 		m_ObjectViewport.SetCharacterScale(0.953f);
 		m_ObjectViewport.SetCharacterOffsetX(0);
 		m_ObjectViewport.SetCharacterOffsetY(-9);                                       
 		break;
 		case 11:
-		// ¿ÀÅ©_Àü»ç_¿©
+		// ?__
 		m_ObjectViewport.SetCharacterScale(0.97f);
 		m_ObjectViewport.SetCharacterOffsetX(2);
 		m_ObjectViewport.SetCharacterOffsetY(-8);                                       
 		break;
 		case 12:
-		// ¿ÀÅ©_¹ı»ç_³²
+		// ?__
 		m_ObjectViewport.SetCharacterScale(0.955f);
 		m_ObjectViewport.SetCharacterOffsetX(-2);
 		m_ObjectViewport.SetCharacterOffsetY(-8);                                       
 		break;
 		case 13:
-		// ¿ÀÅ©_¹ı»ç_¿©
+		// ?__
 		m_ObjectViewport.SetCharacterScale(0.985f);
 		m_ObjectViewport.SetCharacterOffsetX(0);
 		m_ObjectViewport.SetCharacterOffsetY(-8);                                       
 		break;
 		case 4:
-		// µå¿öÇÁ_³²
+		// _
 		m_ObjectViewport.SetCharacterScale(1.043f);
 		m_ObjectViewport.SetCharacterOffsetX(0);
 		m_ObjectViewport.SetCharacterOffsetY(-2);                                       
 		break;
 		case 5:
-		// µå¿öÇÁ_¿©
+		// _
 		m_ObjectViewport.SetCharacterScale(1.09f);
 		m_ObjectViewport.SetCharacterOffsetX(0);
 		m_ObjectViewport.SetCharacterOffsetY(-6);                                       
 		break;
 		case 14:
-		// Ä«¸¶¿¤_³²
+		// ?_
 		m_ObjectViewport.SetCharacterScale(0.993f);
 		m_ObjectViewport.SetCharacterOffsetX(-5);
 		m_ObjectViewport.SetCharacterOffsetY(-6);                                       
 		break;
 		case 15:
-		// Ä«¸¶¿¤_¿©
+		// ?_
 		m_ObjectViewport.SetCharacterScale(1.01f);
 		m_ObjectViewport.SetCharacterOffsetX(0);
 		m_ObjectViewport.SetCharacterOffsetY(-6);                                       
@@ -3802,11 +3861,11 @@ function HandleChangeCharacterPawn(string param)
 }
 
 /********************************************************************************************
- * Gfx ½ºÅ©¸° ¸Ş½ÃÁö¿¡ È¹µæ µÈ ¾ÆÀÌÅÛ ¾ÆÀÌÄÜ Ç¥½Ã
+ * Gfx ? ? ?    ?
  * ******************************************************************************************/
 /* 
- * 1. ¾ÆÀÌÅÛÀÌ »èÁ¦ µÇ´Â °æ¿ì
- * 2. ¾ÆÀÌÅÛÀÌ ÀÎº¥Åä¸®¿¡¼­ ºüÁö´Â °æ¿ì Á¦¿Ü
+ * 1.   ? 
+ * 2.  ??   
  */
 function showItemUpdateEffect ( string param )  
 {
@@ -3850,14 +3909,14 @@ function showItemUpdateEffect ( string param )
 
 
 /********************************************************************************************
- * ÅøÆÁ
+ * 
  * ******************************************************************************************/
 function CustomTooltip getAgathionTooltip (  string title, string desc ) 
 {
 	local CustomTooltip T;	
 	local L2Util util;
-	util = L2Util(GetScript("L2Util"));//bluesun Ä¿½ºÅÍ¸¶ÀÌÁî ÅøÆÁ 
-	util.setCustomTooltip(T);//bluesun Ä¿½ºÅÍ¸¶ÀÌÁî ÅøÆÁ
+	util = L2Util(GetScript("L2Util"));//bluesun ??  
+	util.setCustomTooltip(T);//bluesun ?? 
 	util.ToopTipInsertText( title , true, false, util.ETooltipTextType.COLOR_GRAY);
 	util.ToopTipInsertText( desc , true, true, util.ETooltipTextType.COLOR_GRAY);
 	return util.getCustomTooltip();
@@ -3870,8 +3929,8 @@ function setCustomTooltip ()
 	//local string tmpTooltipString;	
 
 	//T.MinimumWidth = 125;
-	util = L2Util(GetScript("L2Util"));//bluesun Ä¿½ºÅÍ¸¶ÀÌÁî ÅøÆÁ 
-	util.setCustomTooltip(T);//bluesun Ä¿½ºÅÍ¸¶ÀÌÁî ÅøÆÁ	
+	util = L2Util(GetScript("L2Util"));//bluesun ??  
+	util.setCustomTooltip(T);//bluesun ?? 	
 
 	util.ToopTipMinWidth(150);
 	util.ToopTipInsertText( GetSystemString (3265), true, false);
@@ -3880,7 +3939,7 @@ function setCustomTooltip ()
 	util.ToopTipInsertText( GetSystemString (3270), false, true,util.ETooltipTextType.COLOR_GRAY);			
 	AlchemyMixCubeWndBtn.SetTooltipCustomType(util.getCustomTooltip());	
 	
-	util.setCustomTooltip(T);//bluesun Ä¿½ºÅÍ¸¶ÀÌÁî ÅøÆÁ
+	util.setCustomTooltip(T);//bluesun ?? 
 	util.ToopTipMinWidth(150);
 	util.ToopTipInsertText( GetSystemString (3266), true, false);
 	util.TooltipInsertItemBlank(4);	
@@ -3888,7 +3947,7 @@ function setCustomTooltip ()
 	AlchemyItemConversionWndBtn.SetTooltipCustomType(util.getCustomTooltip());
 
 	AlchemyItemCreateWndBtn.DisableWindow();
-	util.setCustomTooltip(T);//bluesun Ä¿½ºÅÍ¸¶ÀÌÁî ÅøÆÁ	
+	util.setCustomTooltip(T);//bluesun ?? 	
 	util.ToopTipInsertText( GetSystemString (3312), true, false);
 	util.TooltipInsertItemBlank(4);
 	util.ToopTipInsertText( GetSystemString (3272), false, true,util.ETooltipTextType.COLOR_GRAY);
@@ -3900,8 +3959,8 @@ function toggleAlchemyOpenerTooltip ( bool isOn)
 	local L2Util util;
 	local CustomTooltip T;
 	
-	util = L2Util(GetScript("L2Util"));//bluesun Ä¿½ºÅÍ¸¶ÀÌÁî ÅøÆÁ
-	util.setCustomTooltip(T);//bluesun Ä¿½ºÅÍ¸¶ÀÌÁî ÅøÆÁ
+	util = L2Util(GetScript("L2Util"));//bluesun ?? 
+	util.setCustomTooltip(T);//bluesun ?? 
 	
 	util.ToopTipInsertText( GetSystemString (3257), true, false);
 
@@ -3918,12 +3977,12 @@ function toggleAlchemyOpenerTooltip ( bool isOn)
 /********************************************************************************************
  * etc, util
  * ******************************************************************************************/
-// int 64 ÀÌ»óÀÇ ¼ö´Â uc ¿¡ Àû¾îµµ int °ªÀ¸·Î ÀÎ½Ä µÈ´Ù. string À¸·Î ¹Ş¾Æ¼­ ¼ö½Ã·Î Çüº¯È¯ ÇØÁà¾ß ÇÔ.
+// int 64 ?  uc  ? int  ? ?. string  ??  ?  .
 function String getAgathionSlotBitTypeString ( String keyword) 
 {	
 	switch ( keyword ) 
 	{
-		// ¾Æ°¡½Ã¿Â ¸ŞÀÎ
+		// ? 
 		case "n":
 			return "68719476736";
 		break;
@@ -3943,7 +4002,7 @@ function String getAgathionSlotBitTypeString ( String keyword)
 	return "";
 }
 
-//Å¸°Ù ÀÌ¸§¿¡ µû¸¥ À©µµ¿ì ÇÚµé ¹Ş±â
+// ?   ? ?
 function itemWindowHandle getItemWindowHandleBystrTarget( string strTarget )
 {
 	switch ( strTarget )
@@ -3966,7 +4025,7 @@ function itemWindowHandle getItemWindowHandleBystrTarget( string strTarget )
 	}
 }
 
-//¾ÆÀÌÅÛ Å¸ÀÔ¿¡ µû¸¥ À©µµ¿ì ¹Ş±â
+// ?   ?
 function ItemWindowHandle getItemWindowHandleByItemType ( ItemInfo item )
 {
 	if(!IsValidItemID(item.ID))
@@ -3996,7 +4055,7 @@ function ItemWindowHandle getItemWindowHandleByItemType ( ItemInfo item )
 
 
 /**
- * À©µµ¿ì ESC Å°·Î ´İ±â Ã³¸® 
+ *  ESC ? ?  
  * "Esc" Key
  ***/
 function OnReceivedCloseUI()

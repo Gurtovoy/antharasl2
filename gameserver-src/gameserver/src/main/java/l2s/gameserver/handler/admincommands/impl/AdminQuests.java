@@ -11,6 +11,7 @@ import l2s.gameserver.model.quest.Quest;
 import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.network.l2.components.HtmlMessage;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
+import l2s.gameserver.network.l2.s2c.QuestListPacket;
 
 public class AdminQuests
 implements IAdminCommandHandler {
@@ -55,7 +56,25 @@ implements IAdminCommandHandler {
                 }
                 return this.cmd_Show(_quest, wordList, activeChar);
             }
+            case admin_clear_quest: {
+                return this.clearCompletedQuests(activeChar);
+            }
         }
+        return true;
+    }
+
+    private boolean clearCompletedQuests(Player activeChar) {
+        int cleared = 0;
+        for (QuestState qs : activeChar.getAllQuestsStates()) {
+            if (qs == null || !qs.isCompleted()) {
+                continue;
+            }
+            Quest.deleteQuestInDb(qs);
+            activeChar.removeQuestState(qs.getQuest());
+            ++cleared;
+        }
+        activeChar.sendPacket((IBroadcastPacket)new QuestListPacket(activeChar));
+        activeChar.sendMessage("Cleared completed quests: " + cleared);
         return true;
     }
 
@@ -183,7 +202,8 @@ implements IAdminCommandHandler {
 
     private static enum Commands {
         admin_quests,
-        admin_quest;
+        admin_quest,
+        admin_clear_quest;
 
     }
 }

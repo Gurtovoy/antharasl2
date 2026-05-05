@@ -1,17 +1,17 @@
 /******************************************************************************
-//                                             확장된 파티창 UI 관련 스크립트                                                                    //
+//                                             ???? ???? UI ???? ??????                                                                    //
 ******************************************************************************/
 class PartyWnd extends UICommonAPI;	
 
-//상수설정.  
-const NSTATUSICON_MAXCOL = 12;	    // status icon의 최대 가로.
-const NPARTYSTATUS_HEIGHT = 46;	    // status 상태창의 세로길이.
-const NPARTYPETSTATUS_HEIGHT = 18;	// status 상태창의 세로길이.
+//???????.  
+const NSTATUSICON_MAXCOL = 12;	    // status icon?? ??? ????.
+const NPARTYSTATUS_HEIGHT = 46;	    // status ??????? ????????.
+const NPARTYPETSTATUS_HEIGHT = 18;	// status ??????? ????????.
 
-const SMALL_BUF_ICON_SIZE = 6;	// 펫 버프 아이콘이 겹치므로 항상 작게 해준다. 
+const SMALL_BUF_ICON_SIZE = 6;	// ?? ???? ???????? ?????? ??? ??? ?????. 
 
-const MAX_ArrayNum = 10; // MAX_ArrayNum = MAX_PartyMemberCount + 1 -> 임시 저장을 추가한 수
-const MAX_BUFF_ICONTYPE = 4;//보여주고자 하는 버프 아이콘 타입 종류
+const MAX_ArrayNum = 10; // MAX_ArrayNum = MAX_PartyMemberCount + 1 -> ??? ?????? ????? ??
+const MAX_BUFF_ICONTYPE = 4;//????????? ??? ???? ?????? ??? ????
 
 struct VnameData
 {
@@ -22,21 +22,21 @@ struct VnameData
 	var string SummonVName;
 };
 
-var bool	m_bCompact;	//컴팩트창 오픈여부.
-var bool	m_bBuff;		//버프 표시상태 플래그.
+var bool	m_bCompact;	//?????? ????????.
+var bool	m_bBuff;		//???? ?????? ??????.
 
-var int		m_arrID[MAX_ArrayNum];	// 인덱스에 해당하는 파티원의 서버 ID.
-var int		m_arrPetID[MAX_ArrayNum];	// 인덱스에 해당하는 파티원의 펫의서버 ID.
-var int		m_arrSummonID[MAX_ArrayNum];	// 인덱스에 해당하는 파티원의 수환 주인 ID -> CT3 추가
-var int		m_arrPetIDOpen[MAX_ArrayNum];	// 인덱스에 해당하는 파티원의 펫의 창이 열려있는지 확인. 1이면 오픈, 2이면 닫힘. -1이면 없음
+var int		m_arrID[MAX_ArrayNum];	// ???????? ?????? ??????? ???? ID.
+var int		m_arrPetID[MAX_ArrayNum];	// ???????? ?????? ??????? ??????? ID.
+var int		m_arrSummonID[MAX_ArrayNum];	// ???????? ?????? ??????? ??? ???? ID -> CT3 ???
+var int		m_arrPetIDOpen[MAX_ArrayNum];	// ???????? ?????? ??????? ???? ??? ????????? ???. 1??? ????, 2??? ????. -1??? ????
 var int		m_CurCount;	
 var int 	m_CurBf;
 var int		m_TargetID;
 var int		m_LastChangeColor;
 
 var VnameData m_Vname[MAX_ArrayNum];
-var bool m_AmIRoomMaster; //자신이 파티방의 방장인지를 가지고 있다. PartyMatchRoomWnd에 의해서 파티방이 열리고 닫힐때 갱신된다
-//Handle 을 등록.
+var bool m_AmIRoomMaster; //????? ??????? ?????????? ?????? ???. PartyMatchRoomWnd?? ????? ??????? ?????? ?????? ??????
+//Handle ?? ???.
 var WindowHandle		m_wndTop;
 var WindowHandle		m_PartyStatus[MAX_ArrayNum];
 var WindowHandle		m_PartyOption;
@@ -70,39 +70,39 @@ var BarHandle			m_PetBarMP[MAX_ArrayNum];
 
 var TextureHandle		m_PetClassIcon[MAX_ArrayNum];
 
-// ct3 다중 소환 - 추가 
+// ct3 ???? ??? - ??? 
 var TextureHandle m_ClassIconSummon[MAX_ArrayNum];
 var TextureHandle m_ClassIconSummonNum[MAX_ArrayNum];
 // var TextureHandle m_ClassIconPet[MAX_ArrayNum];
 
 
-/**자동파티시스템 추가*/
-//자동파티아이콘텍스쳐
+/**??????????? ???*/
+//?????????????????
 //var TextureHandle m_AutoPartyMatchingIcon[MAX_ArrayNum];
-//자동파티아이콘버튼
+//??????????????
 //var ButtonHandle m_AutoPartyMatchingBtn[MAX_ArrayNum];
 
-//자동파티 선택된 index
+//?????? ????? index
 //var int autoPartyIndex[MAX_ArrayNum];
 
 var int partymasteridx;
 
 var L2Util util;
 
-//파티장 아이디
+//????? ?????
 var int PartyLeaderID;
 
-// 현재 이상상태 보기 (버프,송댄스 등) 버튼 상태를 저장합니다.
+// ???? ?????? ???? (????,????? ??) ??? ?????? ????????.
 // 45842 TTP 
 var string currentBuffButtonState;
 
-//클래식 서버에서 vp 아이콘이 없어서 생기는 offset
+//????? ???????? vp ???????? ???? ????? offset
 const ONCLASSICFORM_OFFSET_X = 12;
 var int iconsOffsetX ;
 
 function OnRegisterEvent()
 {
-	// 이벤트 (서버 혹은 클라이언트에서 오는) 핸들 등록.
+	// ???? (???? ??? ??????????? ????) ??? ???.
 	RegisterEvent( EV_ShowBuffIcon );
 	
 	RegisterEvent( EV_PartyAddParty);
@@ -112,7 +112,7 @@ function OnRegisterEvent()
 	RegisterEvent( EV_PartySpelledList );
 	RegisterEvent( EV_PartyRenameMember );
 	
-	// ct3 에서 소환수와 팻 분리
+	// ct3 ???? ??????? ?? ????
 	
 	RegisterEvent( EV_PartySummonAdd );
 	RegisterEvent( EV_PartySummonUpdate );
@@ -123,17 +123,17 @@ function OnRegisterEvent()
 	RegisterEvent( EV_PartyPetDelete );
 	
 	/*
-	 *20130219 현재 적혀있는 기획서에 따라. 소환수 버프는 보여주지 않는다.
+	 *20130219 ???? ??????? ??????? ????. ????? ?????? ???????? ?????.
 	 */
-	RegisterEvent( EV_PetStatusSpelledList );		// 펫 버프가 날라오는 이벤트
-	//RegisterEvent( EV_SummonedStatusSpelledList );	// 소환수  버프가 날라오는 이벤트
+	RegisterEvent( EV_PetStatusSpelledList );		// ?? ?????? ??????? ????
+	//RegisterEvent( EV_SummonedStatusSpelledList );	// ?????  ?????? ??????? ????
 	
 	RegisterEvent( EV_Restart );	
-	//RegisterEvent( EV_TargetUpdate );	// 타겟 업데이트 이벤트	
+	//RegisterEvent( EV_TargetUpdate );	// ??? ??????? ????	
 
-	// 파장의 대타 신청 성공유무
+	// ?????? ??? ??? ????????
 	RegisterEvent( EV_RegistPartySubstitute );
-	// 파장의 대타 취소 신청 성공유무
+	// ?????? ??? ??? ??? ????????
 	RegisterEvent( EV_DeletePartySubstitute );
 
 
@@ -177,7 +177,7 @@ function checkClassicForm()
 	}
 }
 
-// 특화 서버일 경우 서머너 개수가 보이지 않도록
+// ?? ?????? ??? ????? ?????? ?????? ?????
 function setHideClassIconSummonNum( int idx ) 
 {
 	if ( getInstanceUIData().getisClassicServer() )
@@ -186,16 +186,16 @@ function setHideClassIconSummonNum( int idx )
 		m_ClassIconSummonNum[idx].ShowWindow();
 }
 
-// 윈도우 생성시 불리는 함수.
+// ?????? ?????? ????? ???.
 function OnLoad()
 {
-	local int idx;	// 루프를 돌게될 int.
+	local int idx;	// ?????? ????? int.
 
 	util = L2Util(GetScript("L2Util"));
 
 	InitHandleCOD();
 
-	// 전역변수 초기화.
+	// ???????? ????.
 	partymasteridx = -1;
 	m_bCompact = false;
 	m_bBuff = false;
@@ -204,7 +204,7 @@ function OnLoad()
 	m_LastChangeColor = -1;
 	m_AmIRoomMaster = false;
 	
-	//Reset Anchor	// 버프와 디버프는 PartyWndCompact의 anchor point를 참조한다.
+	//Reset Anchor	// ?????? ??????? PartyWndCompact?? anchor point?? ???????.
 	for (idx=0; idx<MAX_ArrayNum; idx++)
 	{
 		m_StatusIconBuff[idx].SetAnchor("PartyWnd.PartyStatusWnd" $ idx, "TopRight", "TopLeft", 0, 5);
@@ -231,17 +231,17 @@ function OnLoad()
 	ResetVName();
 	ResetAutoParty();
 	
-	//Debug("다시 로드..");
+	//Debug("??? ????..");
 }
 /*
 function InitHandle()
 {
-	local int idx;	// 루프를 돌게될 int.
+	local int idx;	// ?????? ????? int.
 
 	//Init Handle
 	m_wndTop = GetHandle( "PartyWnd" );
-	m_PartyOption = GetHandle("PartyWndOption");	// 옵션창의 핸들 초기화.
-	for (idx=0; idx<MAX_ArrayNum; idx++)	// 최대파티원 수 만큼 각 데이터를 초기화해줌.
+	m_PartyOption = GetHandle("PartyWndOption");	// ?????? ??? ????.
+	for (idx=0; idx<MAX_ArrayNum; idx++)	// ???????? ?? ??? ?? ??????? ????????.
 	{
 		m_PartyStatus[idx] = GetHandle( "PartyWnd.PartyStatusWnd" $ idx );
 		m_PlayerName[idx] = NameCtrlHandle( GetHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".PlayerName" ) ); 
@@ -256,12 +256,12 @@ function InitHandle()
 		m_BarCP[idx] = BarHandle( GetHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".barCP" ) );
 		m_BarHP[idx] = BarHandle( GetHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".barHP" ) );
 		m_BarMP[idx] = BarHandle( GetHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".barMP" ) );
-		//if(idx != 0) // 첫번째 창의 버튼을 상속받은 모든 창에 버튼이 생겼지만 어쩔수 없다. 
+		//if(idx != 0) // ????? ??? ????? ?????? ??? ??? ????? ???????? ?????? ????. 
 		//{
 		//	m_petButtonTrash[idx] = ButtonHandle( GetHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".btnSummon0") );	
 		//	m_petButtonTrash[idx].HideWindow();
 		//}
-		m_petButton[idx] = ButtonHandle( GetHandle( "PartyWnd.btnSummon" $ idx) );	// 실제로 사용될 버튼		
+		m_petButton[idx] = ButtonHandle( GetHandle( "PartyWnd.btnSummon" $ idx) );	// ?????? ???? ???		
 		m_petButton[idx].HideWindow();
 		
 		m_PetPartyStatus[idx] = GetHandle( "PartyWnd.PartyStatusSummonWnd" $ idx );
@@ -280,7 +280,7 @@ function InitHandle()
 		m_arrPetIDOpen[idx] = -1;
 		m_arrID[idx] = 0;
 		
-		if(idx == 0) //첫번째 창은 레이아웃이 다르다. 
+		if(idx == 0) //????? ??? ???????? ?????. 
 		{
 			m_petButton[idx].SetAnchor("PartyWnd.PartyStatusWnd" $ idx, "TopLeft", "TopRight", 0, 32);
 		}
@@ -293,13 +293,13 @@ function InitHandle()
 */
 function InitHandleCOD()
 {
-	local int idx;	// 루프를 돌게될 int.
+	local int idx;	// ?????? ????? int.
 
 	//Init Handle
 	m_wndTop = GetWindowHandle( "PartyWnd" );
-	m_PartyOption = GetWindowHandle("PartyWndOption");	// 옵션창의 핸들 초기화.
+	m_PartyOption = GetWindowHandle("PartyWndOption");	// ?????? ??? ????.
 
-	for (idx=0; idx<MAX_ArrayNum; idx++)	// 최대파티원 수 만큼 각 데이터를 초기화해줌. ->  임시 데이터 용 한명을 더해 줍니다.
+	for (idx=0; idx<MAX_ArrayNum; idx++)	// ???????? ?? ??? ?? ??????? ????????. ->  ??? ?????? ?? ????? ???? ????.
 	{
 		m_PartyStatus[idx] = GetWindowHandle  ( "PartyWnd.PartyStatusWnd" $ idx );
 		m_PlayerName[idx]  = GetNameCtrlHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".PlayerName" ); 
@@ -316,7 +316,7 @@ function InitHandleCOD()
 		m_BarHP[idx] = GetBarHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".barHP" );
 		m_BarMP[idx] = GetBarHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".barMP" );
 
-		m_petButton[idx] = GetButtonHandle( "PartyWnd.btnSummon" $ idx);	// 실제로 사용될 버튼		
+		m_petButton[idx] = GetButtonHandle( "PartyWnd.btnSummon" $ idx);	// ?????? ???? ???		
 		m_petButton[idx].HideWindow();
 		
 		m_PetPartyStatus[idx] = GetWindowHandle( "PartyWnd.PartyStatusSummonWnd" $ idx );
@@ -333,11 +333,11 @@ function InitHandleCOD()
 
 		// m_PetClassIcon[idx] = GetTextureHandle( "PartyWnd.PartyStatusSummonWnd" $ idx $ ".ClassIcon" );
 
-		// ct 에 변경된 팻 클래스 아이콘
+		// ct ?? ????? ?? ????? ??????
 		m_PetClassIcon[idx] = GetTextureHandle( "PartyWnd.PartyStatusSummonWnd" $ idx $ ".ClassIconPet" );
 
 
-		// ct3 에 추가된 팻, 소환수 텍스쳐 (소환수 아이콘, 소환수 수, 팻 아이콘)
+		// ct3 ?? ????? ??, ????? ????? (????? ??????, ????? ??, ?? ??????)
 		m_ClassIconSummon[idx]    =  GetTextureHandle( "PartyWnd.PartyStatusSummonWnd" $ idx $ ".ClassIconSummon" );
 		
 		m_ClassIconSummonNum[idx] =  GetTextureHandle( "PartyWnd.PartyStatusSummonWnd" $ idx $ ".ClassIconSummonNum" );
@@ -349,7 +349,7 @@ function InitHandleCOD()
 		//m_AutoPartyMatchingIcon[idx]    = GetTextureHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".AutoPartyMatchingIcon" );
 		//m_AutoPartyMatchingBtn[idx]     = GetButtonHandle( "PartyWnd.PartyStatusWnd" $ idx $ ".AutoPartyMatchingBtn" );
 		
-		if(idx == 0) //첫번째 창은 레이아웃이 다르다. 
+		if(idx == 0) //????? ??? ???????? ?????. 
 		{
 			m_petButton[idx].SetAnchor("PartyWnd.PartyStatusWnd" $ idx, "TopLeft", "TopRight", 0, 32);
 		}
@@ -361,7 +361,7 @@ function InitHandleCOD()
 }
 
 /** 
- * 소환수 타입 받기   
+ * ????? ??? ???   
  **/
 function string getSummonSortString(int typeN)
 {
@@ -371,15 +371,15 @@ function string getSummonSortString(int typeN)
 
 	switch(typeN)
 	{
-		// 공격형 소환수
+		// ?????? ?????
 		case 0 : returnV = GetSystemString(2311); break;
-		// 방어형 소환수
+		// ????? ?????
 		case 1 : returnV = GetSystemString(2312); break;
-		// 보조형 소환수
+		// ?????? ?????
 		case 2 : returnV = GetSystemString(2313); break;
-		// 공성형 소환수
+		// ?????? ?????
 		case 3 : returnV = GetSystemString(2314); break;
-		// 소모형 소환수
+		// ????? ?????
 		case 4 : returnV = GetSystemString(2315); break;
 	}
 
@@ -400,16 +400,16 @@ function OnShow()
 		
 		if( bool ( tmpInt ) ) 	
 		{
-			if(m_arrPetIDOpen[i] > 0)	m_arrPetIDOpen[i] = 2;		//펫이 있을때 모두 닫아준다. 
+			if(m_arrPetIDOpen[i] > 0)	m_arrPetIDOpen[i] = 2;		//???? ?????? ??? ??????. 
 		}
 		else 
 		{
-			if(m_arrPetIDOpen[i] > 0)	m_arrPetIDOpen[i] = 1;		//펫이 있을때 모두 열어준다. 			
+			if(m_arrPetIDOpen[i] > 0)	m_arrPetIDOpen[i] = 1;		//???? ?????? ??? ???????. 			
 		}	
-		// 양쪽 스크립트에게 모두 전달.		
+		// ???? ?????????? ??? ????.		
 	}
-	//컷 신의 경우 실제로 show가 되지 않으나, onShow를 반복 실행 하게 됨
-	//showWindow를 뺀 리사이즈 를 만듬
+	//?? ???? ??? ?????? show?? ???? ??????, onShow?? ??? ???? ??? ??
+	//showWindow?? ?? ???????? ?? ????
 	
 
 	Debug ( "onShow partyWnd");
@@ -437,69 +437,69 @@ function OnEnterState( name a_PreStateName )
 	
 }
 
-// 이벤트 핸들 처리.
+// ???? ??? ???.
 function OnEvent(int Event_ID, string param)
 {
 	//Debug( "Event_ID>>>" $ string(Event_ID) $ "&&" $ param );
 
-	if (Event_ID == EV_PartyAddParty)	//파티원을 추가하는 이벤트.
+	if (Event_ID == EV_PartyAddParty)	//??????? ?????? ????.
 	{
 		HandlePartyAddParty(param);
 	}
-	else if (Event_ID == EV_PartyUpdateParty)	//파티 업데이트. 각종 HP 및 상태를 처리하기 위함.
+	else if (Event_ID == EV_PartyUpdateParty)	//??? ???????. ???? HP ?? ?????? ?????? ????.
 	{
 		HandlePartyUpdateParty(param);
 	}
-	else if (Event_ID == EV_PartyDeleteParty)	//파티원 삭제.
+	else if (Event_ID == EV_PartyDeleteParty)	//????? ????.
 	{
 		HandlePartyDeleteParty(param);
 	}
-	else if (Event_ID == EV_PartyDeleteAllParty)	//모든 파티원 삭제. 파티를 떠나거나 뽀갤때.
+	else if (Event_ID == EV_PartyDeleteAllParty)	//??? ????? ????. ????? ??????? ?????.
 	{
 		HandlePartyDeleteAllParty();
 	}
-	//20130221 최종 기획 내용은, 펫 이상상태는 표시 하지 않는 것으로 파악 됨. 우선 summon 만 막아 놓음
-	else if (Event_ID == EV_PartySpelledList || Event_ID == EV_PetStatusSpelledList )//|| Event_ID == EV_SummonedStatusSpelledList)	// 버프 혹은 디버프 처리.
+	//20130221 ???? ??? ??????, ?? ???????? ??? ???? ??? ?????? ??? ??. ??? summon ?? ???? ????
+	else if (Event_ID == EV_PartySpelledList || Event_ID == EV_PetStatusSpelledList )//|| Event_ID == EV_SummonedStatusSpelledList)	// ???? ??? ????? ???.
 	{
 		HandlePartySpelledList(param);
 		//Debug( EV_PartySpelledList @ "EV_PartySpelledList");
 	}
-	else if (Event_ID == EV_ShowBuffIcon)		// 버프, 디버프, 버프/디버프 보이기 모드를 전환.
+	else if (Event_ID == EV_ShowBuffIcon)		// ????, ?????, ????/????? ????? ??? ???.
 	{
 		HandleShowBuffIcon(param);
 	}
-	else if (Event_ID == EV_PartySummonAdd)	//파티원이 소환수를 소환했을 경우
+	else if (Event_ID == EV_PartySummonAdd)	//??????? ??????? ??????? ???
 	{
 		HandlePartySummonAdd(param);
 	}
-	else if (Event_ID == EV_PartyPetAdd)	//파티원이 팻을 소환했을 경우
+	else if (Event_ID == EV_PartyPetAdd)	//??????? ???? ??????? ???
 	{
 		HandlePartyPetAdd(param);
 	}
-	else if (Event_ID == EV_PartySummonUpdate)	//소환수 업데이트 HP나 뭐 그런거..
+	else if (Event_ID == EV_PartySummonUpdate)	//????? ??????? HP?? ?? ?????..
 	{
 		// Debug("EV_PartySummonUpdate:" @ param);
 		HandlePartySummonUpdate(param);
 		
 	}
-	else if (Event_ID == EV_PartyPetUpdate)	// 팻 업데이트 HP나 뭐 그런거..
+	else if (Event_ID == EV_PartyPetUpdate)	// ?? ??????? HP?? ?? ?????..
 	{		
 		HandlePartyPetUpdate(param);
 	}
-	else if (Event_ID == EV_PartySummonDelete)	// 소환 해제
+	else if (Event_ID == EV_PartySummonDelete)	// ??? ????
 	{
-		// Debug("소환수 해제"@ param);
+		// Debug("????? ????"@ param);
 		HandlePartySummonDelete(param);
 	}
-	else if (Event_ID == EV_PartyPetDelete)	    // 팻 소환 해제
+	else if (Event_ID == EV_PartyPetDelete)	    // ?? ??? ????
 	{
-		// Debug("팻 소환 해제" @ param);
+		// Debug("?? ??? ????" @ param);
 		HandlePartyPetDelete(param);
 	}
 
 	else if (Event_ID == EV_Restart)
 	{
-		// Debug("우윅");
+		// Debug("????");
 		HandleRestart();
 	}
 	/*
@@ -565,7 +565,7 @@ function HandlePartyRenameMember(string Param)
 
 
 
-// 타겟한 것이 파티원이면 색깔에 조금 변화를 준다.
+// ????? ???? ???????? ???? ???? ????? ???.
 function HandleCheckTarget()
 {
 	//~ local int idx;
@@ -577,7 +577,7 @@ function HandleCheckTarget()
 	
 	//~ if(idx == -1) 
 	//~ {
-		//~ if( m_LastChangeColor != -1) // 이전에 색을 바꿔준게 이으면 다시 원상 복귀
+		//~ if( m_LastChangeColor != -1) // ?????? ???? ?????? ?????? ??? ???? ????
 		//~ {	
 			//~ debug("qkRudigka");
 			//~ m_PartyStatus[m_LastChangeColor].SetBackTexture("L2UI_CT1.Windows.Windows_DF_Small_Vertical_SizeControl_Bg_Darker");
@@ -592,19 +592,19 @@ function HandleCheckTarget()
 	//~ }
 }
 
-//리스타트를 하면 올클리어
+//???????? ??? ???????
 function HandleRestart()
 {
 	Clear();
 }
 
-//초기화
+//????
 function Clear()
 {
 	local int idx;
 	for (idx=0; idx<MAX_ArrayNum; idx++)
 	{
-		ClearStatus(idx);		// 모든 상태를 초기화해준다. 
+		ClearStatus(idx);		// ??? ?????? ?????????. 
 		ClearPetStatus(idx);
 		ClearSummonStatus(idx);
 
@@ -615,11 +615,11 @@ function Clear()
 	m_LastChangeColor = -1;
 	ResizeWnd();
 
-	//Debug("AutoPartyMatchingStatusWnd 지워!!!!!");	
-	//HideWindow( "AutoPartyMatchingStatusWnd" ); 자동대타 삭제
+	//Debug("AutoPartyMatchingStatusWnd ????!!!!!");	
+	//HideWindow( "AutoPartyMatchingStatusWnd" ); ?????? ????
 }
 
-//상태창의 초기화
+//??????? ????
 function ClearStatus(int idx)
 {
 	m_StatusIconBuff[idx].Clear();
@@ -635,7 +635,7 @@ function ClearStatus(int idx)
 	m_arrID[idx] = 0;
 }
 
-// 펫 상태창의 초기화
+// ?? ??????? ????
 function ClearPetStatus(int idx)
 {
 	m_PetStatusIconBuff[idx].Clear();
@@ -648,14 +648,14 @@ function ClearPetStatus(int idx)
 	UpdateHPBar(idx + 100, 0, 0);
 	UpdateMPBar(idx + 100, 0, 0);
 	
-	//if(m_PetPartyStatus[idx].IsShowWindow()) m_PetPartyStatus[idx].HideWindow();	// 펫창 없애기
+	//if(m_PetPartyStatus[idx].IsShowWindow()) m_PetPartyStatus[idx].HideWindow();	// ??? ?????
 	// if(m_petButton[idx].IsShowWindow()) m_petButton[idx].HideWindow();
 	m_arrPetID[idx] = -1;
 	m_arrPetIDOpen[idx] = -1;
 	m_arrSummonID[idx] = -1;
 }
 
-// 펫 상태창의 초기화
+// ?? ??????? ????
 function ClearSummonStatus(int idx)
 {
 	m_arrSummonID[idx] = -1;
@@ -664,12 +664,12 @@ function ClearSummonStatus(int idx)
 	m_ClassIconSummonNum[idx].HideWindow();
 }
 
-//파티창의 복사 (목적이 되는 파티창의 인덱스, 복사할 파티창의 인덱스)
+//?????? ???? (?????? ??? ?????? ??????, ?????? ?????? ??????)
 function CopyStatus(int DesIndex, int SrcIndex)
 {
 	local string	strTmp;	
-	local int		MaxValue;	// CP, HP, MP의 최대값.
-	local int		CurValue;	// CP, HP, MP의 현재값.
+	local int		MaxValue;	// CP, HP, MP?? ???S.
+	local int		CurValue;	// CP, HP, MP?? ?????.
 	
 	local int		Width;
 	local int		Height;
@@ -697,20 +697,20 @@ function CopyStatus(int DesIndex, int SrcIndex)
 	m_ClassIcon[SrcIndex].GetTooltipCustomType(TooltipInfo);
 	m_ClassIcon[DesIndex].SetTooltipCustomType(TooltipInfo);
 	
-	//파티장 Texture
+	//????? Texture
 	strTmp = m_LeaderIcon[SrcIndex].GetTextureName();
 	m_LeaderIcon[DesIndex].SetTexture(strTmp);
 	if (Len(strTmp)>0)
 	{
-		//아이콘을 이름의 옆에 위치시켜준다.
+		//???????? ????? ???? ??????????.
 		strTmp = m_PlayerName[DesIndex].GetName();
 		GetTextSizeDefault(strTmp, Width, Height);
-		//주석위치 확인중
+		//?????? ?????
 		//m_LeaderIcon[DesIndex].SetAnchor("PartyWnd.PartyStatusWnd" $ DesIndex, "TopCenter", "TopLeft", -(Width/2)-18, 8);		
 		//SetTypePosition
 		m_LeaderIcon[DesIndex].ShowWindow();
 	}
-	//루팅 방식 툴팁
+	//???? ??? ????
 	m_LeaderIcon[SrcIndex].GetTooltipCustomType(TooltipInfo2);
 	m_LeaderIcon[DesIndex].SetTooltipCustomType(TooltipInfo2);
 	
@@ -722,7 +722,7 @@ function CopyStatus(int DesIndex, int SrcIndex)
 	m_BarMP[SrcIndex].GetValue(MaxValue, CurValue);
 	m_BarMP[DesIndex].SetValue(MaxValue, CurValue);
 
-	// vp 교체 
+	// vp ??? 
 	vpIconTextureName = m_VPIcon[DesIndex].GetTextureName();
 	vpToolTipString = m_VPIcon[DesIndex].GetTooltipText();
 
@@ -733,28 +733,28 @@ function CopyStatus(int DesIndex, int SrcIndex)
 	m_VPIcon[SrcIndex].SetTooltipText(vpToolTipString);
 
 
-	//자동 대타 버튼 교체.
+	//??? ??? ??? ???.
 	if( AmILeader() )
 	{	/*	
 		if( autoPartyIndex[DesIndex] == 0 )
 		{
-			//해지 꺼진 상태
+			//???? ???? ????
 			//m_AutoPartyMatchingBtn[SrcIndex].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off" );		
 		}
 		else
 		{
-			//자동파티 신청된상태
+			//?????? ????????
 			//m_AutoPartyMatchingBtn[SrcIndex].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On" );					
 		}
 			
 		if( autoPartyIndex[SrcIndex] == 0 )
 		{
-			//해지 꺼진 상태
+			//???? ???? ????
 			//m_AutoPartyMatchingBtn[DesIndex].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off" );
 		}
 		else
 		{
-			//자동파티 신청된상태
+			//?????? ????????
 			//m_AutoPartyMatchingBtn[DesIndex].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On" );					
 		}*/
 		SetTypePositionLeader( DesIndex );
@@ -767,13 +767,13 @@ function CopyStatus(int DesIndex, int SrcIndex)
 		/*
 		if( autoPartyIndex[DesIndex] == 0 )
 		{
-			//해지 꺼진 상태
+			//???? ???? ????
 			//m_AutoPartyMatchingIcon[SrcIndex].HideWindow();
 			SetTypePosition( SrcIndex, 0 );
 		}
 		else
 		{
-			//자동파티 신청된상태
+			//?????? ????????
 			//m_AutoPartyMatchingIcon[SrcIndex].ShowWindow();
 			//m_AutoPartyMatchingIcon[SrcIndex].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On" );
 			SetTypePosition( SrcIndex, 1 );
@@ -781,13 +781,13 @@ function CopyStatus(int DesIndex, int SrcIndex)
 			
 		if( autoPartyIndex[SrcIndex] == 0 )
 		{
-			//해지 꺼진 상태
+			//???? ???? ????
 			//m_AutoPartyMatchingIcon[DesIndex].HideWindow();
 			SetTypePosition( DesIndex, 0 );
 		}
 		else
 		{
-			//자동파티 신청된상태
+			//?????? ????????
 			//m_AutoPartyMatchingIcon[DesIndex].ShowWindow();
 			//m_AutoPartyMatchingIcon[DesIndex].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On" );
 			SetTypePosition( DesIndex, 1 );
@@ -802,13 +802,13 @@ function CopyStatus(int DesIndex, int SrcIndex)
 	/*
 	if( AmILeader() )
 	{		
-		//파티장일 경우 처리.
-		//자동파티 꺼진 상태
+		//??????? ??? ???.
+		//?????? ???? ????
 		if( iSubstatus == 0 )
 		{
 			m_AutoPartyMatchingBtn[idx].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off" );
 		}
-		//자동파티 신청된상태
+		//?????? ????????
 		else
 		{
 			m_AutoPartyMatchingBtn[idx].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On" );					
@@ -817,21 +817,21 @@ function CopyStatus(int DesIndex, int SrcIndex)
 		m_AutoPartyMatchingIcon[idx].HideWindow();
 
 		SetTypePositionLeader( idx );
-		//자동 파티 매칭 진행중
-		//여기서 다시 창이 나오는데.. 파티장을 업뎃이 안되는듯..;;
+		//??? ??? ??? ??????
+		//???? ??? ??? ???????.. ??????? ?????? ?????..;;
 		FindAllUserParty();		
 	}
 	else
 	{					
-		//파티원 경우 처리.		
-		//자동파티 꺼진 상태
+		//????? ??? ???.		
+		//?????? ???? ????
 		if( iSubstatus == 0 )
 		{
 			m_AutoPartyMatchingIcon[idx].HideWindow();
 			SetTypePosition( idx, 0 );
 			//m_AutoPartyMatchingIcon[idx].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off" );
 		}
-		//자동파티 신청된상태
+		//?????? ????????
 		else
 		{
 			m_AutoPartyMatchingIcon[idx].ShowWindow();
@@ -901,12 +901,12 @@ function CopyStatus(int DesIndex, int SrcIndex)
 	}
 	
 	
-	// -------------------------------------------펫도 옮겨준다. 
+	// -------------------------------------------??? ??????. 
 	//ServerID
 	m_arrPetID[DesIndex] = m_arrPetID[SrcIndex];
 	m_arrSummonID[DesIndex] = m_arrSummonID[SrcIndex];
 
-	// 팻 & 소환수 서브 창 열려 있는가 상태
+	// ?? & ????? ???? ? ???? ????? ????
 	m_arrPetIDOpen[DesIndex] = m_arrPetIDOpen[SrcIndex];;	
 	
 	//CP,HP,MP
@@ -986,7 +986,7 @@ function resizeOnly()
 
 	local int tmpInt;
 
-	// SetOptionBool과 페어. 이 변수는 PartyWndOption 에서 변경됨
+	// SetOptionBool?? ???. ?? ?????? PartyWndOption ???? ?????
 	GetINIInt( "PartyWnd", "e", tmpInt, "Windowsinfo.ini"  ) ;
 	bOption = bool ( tmpInt ) ;//GetOptionBool( "Game", "SmallPartyWnd" );
 	
@@ -997,15 +997,15 @@ function resizeOnly()
 		{
 			if (idx<=m_CurCount-1)
 			{
-				if(idx >0 )	 //1 이상일때의 anchor를 처리해준다.
+				if(idx >0 )	 //1 ???????? anchor?? ????????.
 				{
-					if(m_arrPetIDOpen[idx-1] == 1) // 앞 파티원의 소환수가 열려있다면
+					if(m_arrPetIDOpen[idx-1] == 1) // ?? ??????? ??????? ????????
 					{
-						m_PartyStatus[idx].SetAnchor("PartyWnd.PartyStatusSummonWnd" $ idx-1, "BottomLeft", "TopLeft", 0, -4);	// 펫 윈도우 밑으로 앵커
+						m_PartyStatus[idx].SetAnchor("PartyWnd.PartyStatusSummonWnd" $ idx-1, "BottomLeft", "TopLeft", 0, -4);	// ?? ?????? ?????? ????
 					}
-					else// 앞 파티원의 소환수가 닫혀있거나 소환수가 없으면
+					else// ?? ??????? ??????? ???????? ??????? ??????
 					{
-						m_PartyStatus[idx].SetAnchor("PartyWnd.PartyStatusWnd" $ idx-1, "BottomLeft", "TopLeft", 0, -4);	// 파티원 밑으로 앵커
+						m_PartyStatus[idx].SetAnchor("PartyWnd.PartyStatusWnd" $ idx-1, "BottomLeft", "TopLeft", 0, -4);	// ????? ?????? ????
 					}
 				}
 				if(m_arrID[idx]!= 0 )
@@ -1019,14 +1019,14 @@ function resizeOnly()
 				// if(m_arrPetIDOpen[idx] == 1) m_PetPartyStatus[idx].ShowWindow();
 
 				
-				// 파티원 정보
+				// ????? ????
 				GetPartyMemberInfo(m_arrID[idx], partyMemberInfo);
 
 				//Debug("RESIZE ---> partyMemberInfo.curSummonNum : "  @ partyMemberInfo.curSummonNum);
 				// Debug("RESIZE ---> partyMemberInfo.curHavePet   : "  @ partyMemberInfo.curHavePet);
 			
-				// 소환수가 1마리 이상 있거나, 팻이 있다면
-				// 보조창 열기
+				// ??????? 1???? ??? ????, ???? ????
+				// ????? ????
 				if (partyMemberInfo.curSummonNum > 0 || partyMemberInfo.curHavePet)
 				{
 					if (m_arrPetIDOpen[idx] == -1) 
@@ -1034,13 +1034,13 @@ function resizeOnly()
 						m_arrPetIDOpen[idx] = 1;
 					}
 					
-					// 보조창을 연다.
+					// ??????? ????.
 					m_PetPartyStatus[idx].ShowWindow();
 
 					// Debug("m_arrPetIDOpen[i] " @ m_arrPetIDOpen[idx]);
-					// Debug("-보조창을 연다 " @ idx @ "  - > "  @ partyMemberInfo.curSummonNum);
+					// Debug("-??????? ???? " @ idx @ "  - > "  @ partyMemberInfo.curSummonNum);
 
-					// 소환수가 한마리 라도 있다면..
+					// ??????? ????? ?? ????..
 					if (partyMemberInfo.curSummonNum > 0)
 					{						
 						m_ClassIconSummon[idx].ShowWindow();
@@ -1050,15 +1050,15 @@ function resizeOnly()
 					}
 					else
 					{
-						// 소환수가 없다면..
+						// ??????? ?????..
 						m_ClassIconSummon[idx].HideWindow();
 						m_ClassIconSummonNum[idx].HideWindow();
 					}
 
-					// 버튼을 눌러 팻&소환수 확장 창을 사용자가 닫아 놓은 상태가 아니라면..
+					// ????? ???? ??&????? ??? ??? ?????? ??? ???? ?????? ?????..
 					//if (m_arrPetIDOpen[idx] != 2)
 
-					// 팻이 존재 한다면..
+					// ???? ???? ????..
 					if (partyMemberInfo.curHavePet)
 					{
 						m_PetBarMP[idx].ShowWindow();
@@ -1067,7 +1067,7 @@ function resizeOnly()
 					}
 					else
 					{
-						// 팻이 없다면..
+						// ???? ?????..
 						m_PetBarMP[idx].HideWindow();
 						m_PetBarHP[idx].HideWindow();
 						m_PetClassIcon[idx].HideWindow();
@@ -1075,7 +1075,7 @@ function resizeOnly()
 				}
 				else
 				{
-					// 팻, 소환수 하나도 없다면.. 보조창 닫기 					
+					// ??, ????? ????? ?????.. ????? ??? 					
 					m_PetPartyStatus[idx].HideWindow();
 					m_arrPetIDOpen[idx] = -1;
 				}
@@ -1083,7 +1083,7 @@ function resizeOnly()
 			}
 			else
 			{
-				//Debug("창 닫기---rerere " @idx);
+				//Debug("? ???---rerere " @idx);
 				m_petButton[idx].HideWindow();
 				m_PartyStatus[idx].SetVirtualDrag( false );
 				m_PartyStatus[idx].HideWindow();
@@ -1091,7 +1091,7 @@ function resizeOnly()
 			}
 		}
 
-		// 전체 창 사이즈를 정렬한다.
+		// ??? ? ?????? ???????.
 		OpenPetCount=0;
 		for(i=0; i<MAX_ArrayNum; i++)
 		{
@@ -1100,7 +1100,7 @@ function resizeOnly()
 			{   
 				OpenPetCount++;
 			}
-			else 	// 열려있는 상태가 아닌데..
+			else 	// ??????? ?????? ????..
 			{
 				 if(m_PetPartyStatus[i].IsShowWindow()) m_PetPartyStatus[i].HideWindow();
 			}
@@ -1108,21 +1108,21 @@ function resizeOnly()
 
 		// Debug("OpenPetCount : " @ OpenPetCount);
 		
-		//윈도우 사이즈 변경
+		//?????? ?????? ????
 		rectWnd = m_wndTop.GetRect();
 		m_wndTop.SetWindowSize(rectWnd.nWidth, NPARTYSTATUS_HEIGHT*m_CurCount + OpenPetCount * NPARTYPETSTATUS_HEIGHT);	
-		// 펫창이 열려진 만큼 윈도우 사이즈에서 더해준다. 
+		// ????? ?????? ??? ?????? ???????? ???????. 
 		m_wndTop.SetResizeFrameSize(10, NPARTYSTATUS_HEIGHT*m_CurCount  + OpenPetCount * NPARTYPETSTATUS_HEIGHT);
 		
 	}
-	else	// 파티원이 존재하지 않으면 이 윈도우는 보이지 않는다.
+	else	// ??????? ???????? ?????? ?? ??????? ?????? ?????.
 	{
 		m_wndTop.HideWindow();
 	}
 }
 
 
-//윈도우의 사이즈 조정
+//???????? ?????? ????
 function ResizeWnd()
 {
 	local int idx;
@@ -1135,7 +1135,7 @@ function ResizeWnd()
 
 	local int tmpInt;
 
-	// SetOptionBool과 페어. 이 변수는 PartyWndOption 에서 변경됨
+	// SetOptionBool?? ???. ?? ?????? PartyWndOption ???? ?????
 	GetINIInt( "PartyWnd", "e", tmpInt, "Windowsinfo.ini"  ) ;
 	bOption = bool ( tmpInt ) ;//GetOptionBool( "Game", "SmallPartyWnd" );
 	
@@ -1146,15 +1146,15 @@ function ResizeWnd()
 		{
 			if (idx<=m_CurCount-1)
 			{
-				if(idx >0 )	 //1 이상일때의 anchor를 처리해준다.
+				if(idx >0 )	 //1 ???????? anchor?? ????????.
 				{
-					if(m_arrPetIDOpen[idx-1] == 1) // 앞 파티원의 소환수가 열려있다면
+					if(m_arrPetIDOpen[idx-1] == 1) // ?? ??????? ??????? ????????
 					{
-						m_PartyStatus[idx].SetAnchor("PartyWnd.PartyStatusSummonWnd" $ idx-1, "BottomLeft", "TopLeft", 0, -4);	// 펫 윈도우 밑으로 앵커
+						m_PartyStatus[idx].SetAnchor("PartyWnd.PartyStatusSummonWnd" $ idx-1, "BottomLeft", "TopLeft", 0, -4);	// ?? ?????? ?????? ????
 					}
-					else// 앞 파티원의 소환수가 닫혀있거나 소환수가 없으면
+					else// ?? ??????? ??????? ???????? ??????? ??????
 					{
-						m_PartyStatus[idx].SetAnchor("PartyWnd.PartyStatusWnd" $ idx-1, "BottomLeft", "TopLeft", 0, -4);	// 파티원 밑으로 앵커
+						m_PartyStatus[idx].SetAnchor("PartyWnd.PartyStatusWnd" $ idx-1, "BottomLeft", "TopLeft", 0, -4);	// ????? ?????? ????
 					}
 				}
 				if(m_arrID[idx]!= 0 )
@@ -1168,14 +1168,14 @@ function ResizeWnd()
 				// if(m_arrPetIDOpen[idx] == 1) m_PetPartyStatus[idx].ShowWindow();
 
 				
-				// 파티원 정보
+				// ????? ????
 				GetPartyMemberInfo(m_arrID[idx], partyMemberInfo);
 
 				//Debug("RESIZE ---> partyMemberInfo.curSummonNum : "  @ partyMemberInfo.curSummonNum);
 				// Debug("RESIZE ---> partyMemberInfo.curHavePet   : "  @ partyMemberInfo.curHavePet);
 			
-				// 소환수가 1마리 이상 있거나, 팻이 있다면
-				// 보조창 열기
+				// ??????? 1???? ??? ????, ???? ????
+				// ????? ????
 				if (partyMemberInfo.curSummonNum > 0 || partyMemberInfo.curHavePet)
 				{
 					if (m_arrPetIDOpen[idx] == -1) 
@@ -1183,13 +1183,13 @@ function ResizeWnd()
 						m_arrPetIDOpen[idx] = 1;
 					}
 					
-					// 보조창을 연다.
+					// ??????? ????.
 					m_PetPartyStatus[idx].ShowWindow();
 
 					// Debug("m_arrPetIDOpen[i] " @ m_arrPetIDOpen[idx]);
-					// Debug("-보조창을 연다 " @ idx @ "  - > "  @ partyMemberInfo.curSummonNum);
+					// Debug("-??????? ???? " @ idx @ "  - > "  @ partyMemberInfo.curSummonNum);
 
-					// 소환수가 한마리 라도 있다면..
+					// ??????? ????? ?? ????..
 					if (partyMemberInfo.curSummonNum > 0)
 					{						
 						m_ClassIconSummon[idx].ShowWindow();
@@ -1199,15 +1199,15 @@ function ResizeWnd()
 					}
 					else
 					{
-						// 소환수가 없다면..
+						// ??????? ?????..
 						m_ClassIconSummon[idx].HideWindow();
 						m_ClassIconSummonNum[idx].HideWindow();
 					}
 
-					// 버튼을 눌러 팻&소환수 확장 창을 사용자가 닫아 놓은 상태가 아니라면..
+					// ????? ???? ??&????? ??? ??? ?????? ??? ???? ?????? ?????..
 					//if (m_arrPetIDOpen[idx] != 2)
 
-					// 팻이 존재 한다면..
+					// ???? ???? ????..
 					if (partyMemberInfo.curHavePet)
 					{
 						m_PetBarMP[idx].ShowWindow();
@@ -1216,7 +1216,7 @@ function ResizeWnd()
 					}
 					else
 					{
-						// 팻이 없다면..
+						// ???? ?????..
 						m_PetBarMP[idx].HideWindow();
 						m_PetBarHP[idx].HideWindow();
 						m_PetClassIcon[idx].HideWindow();
@@ -1224,7 +1224,7 @@ function ResizeWnd()
 				}
 				else
 				{
-					// 팻, 소환수 하나도 없다면.. 보조창 닫기 					
+					// ??, ????? ????? ?????.. ????? ??? 					
 					m_PetPartyStatus[idx].HideWindow();
 					m_arrPetIDOpen[idx] = -1;
 				}
@@ -1232,7 +1232,7 @@ function ResizeWnd()
 			}
 			else
 			{
-				//Debug("창 닫기---rerere " @idx);
+				//Debug("? ???---rerere " @idx);
 				m_petButton[idx].HideWindow();
 				m_PartyStatus[idx].SetVirtualDrag( false );
 				m_PartyStatus[idx].HideWindow();
@@ -1240,7 +1240,7 @@ function ResizeWnd()
 			}
 		}
 
-		// 전체 창 사이즈를 정렬한다.
+		// ??? ? ?????? ???????.
 		OpenPetCount=0;
 		for(i=0; i<MAX_ArrayNum; i++)
 		{
@@ -1249,7 +1249,7 @@ function ResizeWnd()
 			{   
 				OpenPetCount++;
 			}
-			else 	// 열려있는 상태가 아닌데..
+			else 	// ??????? ?????? ????..
 			{
 				 if(m_PetPartyStatus[i].IsShowWindow()) m_PetPartyStatus[i].HideWindow();
 			}
@@ -1257,23 +1257,23 @@ function ResizeWnd()
 
 		// Debug("OpenPetCount : " @ OpenPetCount);
 		
-		//윈도우 사이즈 변경
+		//?????? ?????? ????
 		rectWnd = m_wndTop.GetRect();
 		m_wndTop.SetWindowSize(rectWnd.nWidth, NPARTYSTATUS_HEIGHT*m_CurCount + OpenPetCount * NPARTYPETSTATUS_HEIGHT);	
-		// 펫창이 열려진 만큼 윈도우 사이즈에서 더해준다. 
+		// ????? ?????? ??? ?????? ???????? ???????. 
 		m_wndTop.SetResizeFrameSize(10, NPARTYSTATUS_HEIGHT*m_CurCount  + OpenPetCount * NPARTYPETSTATUS_HEIGHT);
-		if (!bOption)	// 옵션창에 체크가 되어있지 않으면 현재 (확장된) 윈도우를 활성화
+		if (!bOption)	// ?????? ???? ??????? ?????? ???? (????) ??????? ????
 			m_wndTop.ShowWindow();
 		else
 			m_wndTop.HideWindow();
 	}
-	else	// 파티원이 존재하지 않으면 이 윈도우는 보이지 않는다.
+	else	// ??????? ???????? ?????? ?? ??????? ?????? ?????.
 	{
 		m_wndTop.HideWindow();
 	}
 }
 
-//ID로 몇번째 표시되는 파티원인지 구한다
+//ID?? ????? ????? ????????? ?????
 function int FindPartyID(int ID)
 {
 	local int idx;
@@ -1287,7 +1287,7 @@ function int FindPartyID(int ID)
 	return -1;
 }
 
-//ID로 몇번째 표시되는 펫인지 구한다
+//ID?? ????? ????? ?????? ?????
 function int FindPetID(int ID)
 {
 	local int idx;
@@ -1301,7 +1301,7 @@ function int FindPetID(int ID)
 	return -1;
 }
 
-//ID로 몇번째 표시되는 소환수 마스터인지 구한다
+//ID?? ????? ????? ????? ?????????? ?????
 function int FindSummonMasterID(int ID)
 {
 	local int idx;
@@ -1315,7 +1315,7 @@ function int FindSummonMasterID(int ID)
 	return -1;
 }
 
-//ADD	파티원 추가.
+//ADD	????? ???.
 function HandlePartyAddParty(string param)
 {
 	local int ID;
@@ -1327,9 +1327,9 @@ function HandlePartyAddParty(string param)
 	local string VName;
 	local string SummonVName;
 
-	// 파티 맴버 정보
+	// ??? ??? ????
 	local PartyMemberInfo    partyMemberInfo;
-	// 파티 맴버 팻 정보
+	// ??? ??? ?? ????
 	local PartyMemberPetInfo partyMemberPetInfo;
 
 	local int index, i, summonClassID;
@@ -1338,7 +1338,7 @@ function HandlePartyAddParty(string param)
 
 //	debug("HandlePartyAddParty>>" $ param);
 
-	ParseInt(param, "ID", ID);	// ID를 파싱한다.
+	ParseInt(param, "ID", ID);	// ID?? ??????.
 	ParseInt(param, "SummonID", SummonID);
 	ParseInt(Param, "UseVName",UseVName);
 	ParseInt(Param, "DominionIDForVName", DominionIDForVName);
@@ -1347,7 +1347,7 @@ function HandlePartyAddParty(string param)
 	
 	GetPartyMemberInfo(ID, partyMemberInfo);
 
-	// 소환수 수를 얻는다.
+	// ????? ???? ?????.
 	// ParseInt(Param, "SummonCount", summonCount);
 	GetPartyMemberPetInfo(ID, partyMemberPetInfo);
 
@@ -1366,17 +1366,17 @@ function HandlePartyAddParty(string param)
 		m_arrID[m_CurCount-1] = ID;
 		UpdateStatus(m_CurCount-1, param);
 
-		// Debug("====================> param 팻 정보 " @ param);
+		// Debug("====================> param ?? ???? " @ param);
 		// Debug(":::: m_CurCount ====> " @ m_CurCount);
 		// Debug("partyMemberInfo.curSummonNum: " @ partyMemberInfo.curSummonNum);
 		// Debug("partyMemberInfo.curHavePet  : " @ partyMemberInfo.curHavePet);
-		// if(SummonID > 0)	// 소환수가 있으면 소환수도 보여줌
-		// 소환수가 있다면
+		// if(SummonID > 0)	// ??????? ?????? ??????? ??????
+		// ??????? ????
 		
-		// 소환수가 한마리 이상, 또는 팻이 존재 한다면..
+		// ??????? ????? ???, ??? ???? ???? ????..
 		if (partyMemberInfo.curSummonNum > 0)
 		{
-			// 소환수 마스터 ID 를 넣고 소환수 UI 갱신
+			// ????? ?????? ID ?? ??? ????? UI ????
 			PartySummonProcess(ID);
 
 			for (i = 0; i < SummonCount; i++)
@@ -1384,30 +1384,30 @@ function HandlePartyAddParty(string param)
 				ParseInt(param, "SummonType" $ i, summonType);
 				ParseInt(param, "SummonClassID" $ i, summonClassID);
 
-				// 소환수와 같다면..
+				// ??????? ?????..
 				if (summonType == 1)
 				{
-					// 공격형 소환수, 방어형 소환수 같은 툴팁을 세팅한다.
+					// ?????? ?????, ????? ????? ???? ?????? ???????.
 					m_ClassIconSummon[m_CurCount - 1].SetTooltipText(GetSystemString(505));//getSummonSortString(class'UIDATA_NPC'.static.GetSummonSort(summonClassID)));
 					//Debug( "npc : "@ class'UIDATA_NPC'.static.GetSummonSort(summonClassID) );
 					
 					break;
-					// 루프 캔슬 
+					// ???? ??? 
 				}				
 			}
 		}
 
 		if ( partyMemberInfo.curHavePet == true)
 		{			
-			// 팻이 새롭게 추가 
+			// ???? ????? ??? 
 			index = FindPartyID(ID);
-			// Debug("추가 추가 팻 " @ index);
-			// 바로 hp, mp 바를 갱신 하기 위해서
+			// Debug("??? ??? ?? " @ index);
+			// ??? hp, mp ??? ???? ??? ?????
 
 			ParseInt(param, "SummonCount", SummonCount);
 
-			// summonType 가 2인 것이 팻이다. 팻을 찾아서..
-			// HP, MP바를 갱신 시킨다. 
+			// summonType ?? 2?? ???? ?????. ???? ????..
+			// HP, MP??? ???? ?????. 
 			for (i = 0; i < SummonCount; i++)
 			{
 				ParseInt(param, "SummonType" $ i, summonType);
@@ -1419,7 +1419,7 @@ function HandlePartyAddParty(string param)
 					ParseInt(param, "SummonHP"    $ i, SummonHP);
 					ParseInt(param, "SummonMP"    $ i, SummonMP);
 
-					// Debug("팻 업데이트 -> 추가 -> "@ SummonMaxHP);
+					// Debug("?? ??????? -> ??? -> "@ SummonMaxHP);
 					UpdateHPBar(index + 100, SummonHP, SummonMaxHP);
 					UpdateMPBar(index + 100, SummonMP, SummonMaxMP);
 				}
@@ -1435,31 +1435,31 @@ function HandlePartyAddParty(string param)
 }
 
 
-//UPDATE	특정 파티원 업데이트.
+//UPDATE	??? ????? ???????.
 function HandlePartyUpdateParty(string param)
 {
 	local int	ID;
 	local int	idx;
 	
-	//Debug("파티 :" @ param);
+	//Debug("??? :" @ param);
 
 	ParseInt(param, "ID", ID);	
 
 	if (ID>0)
 	{
 		idx = FindPartyID(ID);
-		UpdateStatus(idx, param);	// 해당 인덱스의 파티원 정보를 갱신
+		UpdateStatus(idx, param);	// ??? ???????? ????? ?????? ????
 	}
 }
 
-//DELETE	특정 파티원을 삭제.
+//DELETE	??? ??????? ????.
 function HandlePartyDeleteParty(string param)
 {
 	local int	ID;
 	local int	idx;
 	local int	i;
 	
-	//Debug("특정 파티원을 삭제 :" @ param);
+	//Debug("??? ??????? ???? :" @ param);
 	
 	ParseInt(param, "ID", ID);
 	if (ID>0)
@@ -1467,25 +1467,25 @@ function HandlePartyDeleteParty(string param)
 		idx = FindPartyID(ID);
 		if (idx>-1)
 		{	
-			for (i=idx; i<m_CurCount-1; i++)	// 삭제하려는 파티원 아래의 파티원들을 땡겨준다. 
+			for (i=idx; i<m_CurCount-1; i++)	// ????????? ????? ????? ????????? ???????. 
 			{
 				CopyStatus(i, i+1);
 			}
 			ClearStatus(m_CurCount-1);
 			ClearPetStatus(m_CurCount-1);
 			m_CurCount--;
-			ResizeWnd();	// 만약 파티원이 자신밖에 없다면 알아서 파티윈도우는 사라짐.
+			ResizeWnd();	// ???? ??????? ????? ????? ???? ?????????? ?????.
 		}
 	}
 }
 
-//DELETE ALL	그저 모두 지울뿐..
+//DELETE ALL	???? ??? ?????..
 function HandlePartyDeleteAllParty()
 {
 	Clear();
 }
 
-//Set Info	특정 인덱스의 파티원의 정보 갱신. 서버 아이디 정보는 확인을 위해 필요하다.
+//Set Info	??? ???????? ??????? ???? ????. ???? ????? ?????? ????? ???? ??????.
 
 function SetMasterTooltip(int lootingtype)
 {
@@ -1496,6 +1496,7 @@ function SetMasterTooltip(int lootingtype)
 function UpdateStatus(int idx, string param)
 {
 	local string	Name;
+	local string	DisplayName;
 	local int		MasterID;
 	local int		RoutingType;
 	local int		ID;
@@ -1508,6 +1509,8 @@ function UpdateStatus(int idx, string param)
 	local int		ClassID;
 	local int		Level;
 	local int		Vitality;
+	local int       IsBRPremium;
+	local string    premiumText;
 	local userinfo 	TargetUser;
 	//~ local int		SummonID;
 	
@@ -1520,14 +1523,14 @@ function UpdateStatus(int idx, string param)
 	local string VName;
 	//local string SummonVName;
 	
-	//소환수 수 
+	//????? ?? 
 	local int SummonCount; 
-	// 소환수 툴팁 
+	// ????? ???? 
 	//local string SummonTooltipStr;
-	// 소환수 닉네임 
+	// ????? ?????? 
 	//local string SummonNickName; 
 	
-	//현재파티원의 자동파티 신청상태
+	//??????????? ?????? ???????
 	local int iSubstatus;
 
 	ParseInt(param, "SubStitute", iSubstatus);
@@ -1548,14 +1551,25 @@ function UpdateStatus(int idx, string param)
 	ParseInt(param, "ClassID", ClassID);
 	ParseInt(param, "Level", Level);
 	ParseInt(param, "Vitality", Vitality);
+	if (!ParseInt(param, "IsBRPremium", IsBRPremium))
+	{
+		if (!ParseInt(param, "isBRPremium", IsBRPremium))
+		{
+			if (!ParseInt(param, "Premium", IsBRPremium))
+			{
+				if (!ParseInt(param, "IsPremium", IsBRPremium))
+					IsBRPremium = 0;
+			}
+		}
+	}
 
 	ParseInt(param, "SummonCount", SummonCount);
 
-	//파티장 아이디.
+	//????? ?????.
 	ParseInt(param, "MasterID", PartyLeaderID);
 	
 
-	//펫이 없다면 0
+	//???? ????? 0
 	/*
 	for(i = 0; i < SummonCount; i++) 
 	{
@@ -1572,7 +1586,7 @@ function UpdateStatus(int idx, string param)
 	}
 	*/
 
-	// 소환수가 존재 한다면..
+	// ??????? ???? ????..
 	/*
 	if (SummonCount > 0)
 	{
@@ -1586,14 +1600,22 @@ function UpdateStatus(int idx, string param)
 	
 	if (UseVName == 1)
 	{
-		m_PlayerName[idx].SetName(VName, NCT_Normal,TA_Left);
+		DisplayName = VName;
 	}
 	else
 	{
-		m_PlayerName[idx].SetName(Name, NCT_Normal,TA_Left);
+		DisplayName = Name;
 	}
+
+	// Show premium marker and level in party row.
+	if (IsBRPremium > 0)
+	{
+		DisplayName = "[PA] " $ DisplayName;
+	}
+	DisplayName = DisplayName $ " Lv." $ string(Level);
+	m_PlayerName[idx].SetName(DisplayName, NCT_Normal,TA_Left);
 	
-	//팟장 아이콘
+	//???? ??????
 	if (ParseInt(param, "MasterID", MasterID))
 	{
 		if (MasterID>0 && MasterID==ID)
@@ -1603,7 +1625,7 @@ function UpdateStatus(int idx, string param)
 			m_LeaderIcon[idx].SetTexture("L2UI_CH3.PartyWnd.party_leadericon");
 			m_LeaderIcon[idx].SetTooltipCustomType(MakeTooltipSimpleText(GetRoutingString(RoutingType)));
 			
-			//아이콘을 이름의 옆에 위치시켜준다.
+			//???????? ????? ???? ??????????.
 			GetTextSizeDefault(Name, Width, Height);
 			//m_LeaderIcon[idx].SetAnchor("PartyWnd.PartyStatusWnd" $ idx, "TopCenter", "TopLeft", -(Width/2)-18, 8);
 			//SetTypePosition( idx, 1 );
@@ -1616,26 +1638,31 @@ function UpdateStatus(int idx, string param)
 		}
 	}
 	
-	//직업 아이콘
+	if (IsBRPremium > 0)
+		premiumText = "Premium: ON";
+	else
+		premiumText = "Premium: OFF";
+
+	//???? ??????
 	m_ClassIcon[idx].SetTexture(GetClassRoleIconName(ClassID));
-	m_ClassIcon[idx].SetTooltipCustomType(MakeTooltipSimpleText(GetClassRoleName(ClassID) $ " - " $ GetClassType(ClassID)));
+	m_ClassIcon[idx].SetTooltipCustomType(MakeTooltipSimpleText(GetClassRoleName(ClassID) $ " - " $ GetClassType(ClassID) $ " / Lv." $ string(Level) $ " / " $ premiumText));
 	
-	//각종 게이지
+	//???? ??????
 	UpdateCPBar(idx, CP, MaxCP);
 	UpdateHPBar(idx, HP, MaxHP);
 	UpdateMPBar(idx, MP, MaxMP);
 
-	//파티원 추가일 때는 Vitality값 없음, 파티원 update일때는 있음.???
+	//????? ????? ???? Vitality?? ????, ????? update????? ????.???
 	UpdateVpIcon(idx, Vitality, GetMaxVitality());
 	SetPartyAutoStatus( idx, iSubstatus );
 }
 
 
 /** 
- *    파티원 활력 업데이트
- *    idx : 순서
- *    vp : 활력 값
- *    MaxVP : 활력 맥스 값
+ *    ????? ??? ???????
+ *    idx : ????
+ *    vp : ??? ??
+ *    MaxVP : ??? ??? ??
  **/ 
 function UpdateVpIcon(int idx, int vp, int MaxVP)
 {	
@@ -1644,13 +1671,13 @@ function UpdateVpIcon(int idx, int vp, int MaxVP)
 	local int per;
 	local string vpString;
 
-	// 최대 vp (72000 == 20시간, 3600초 == 1시간,  5칸 활력처리)
+	// ??? vp (72000 == 20????, 3600?? == 1????,  5? ??????)
 	per = MaxVP / 3600 / 5;
 
 	time = vpSec / 3600;
 	vpStep = (time / per);
 	
-	//  예외 처리 
+	//  ???? ??? 
 	if (vpStep >= 5) vpStep = 4;
 	else if (vpStep == 0 && vpSec > 0) vpStep = 1;
 	else if (vpSec <= 0) vpStep = 0;
@@ -1659,17 +1686,17 @@ function UpdateVpIcon(int idx, int vp, int MaxVP)
 		vpStep = vpStep + 1;
 	}
 	
-	// 파티 활력 0 ~ 4 텍스쳐 변경
+	// ??? ??? 0 ~ 4 ????? ????
 	m_VPIcon[idx].SetTexture("L2UI_Ct1.PartyStatusWnd_DF_VPIcon_" $ vpStep);	
 
 	vpString = util.getTimeStringBySec(vpSec, true);
 
-	// 0시간 미만과 같은 스트링이 넘어 온다면.. 
-	// if     "활력이 다 소진되었습니다" 라는 메세지가 나오도록 한다.
-	// else   "$1 남음" ("1시간 남음" 같은 표현)
+	// 0???? ????? ???? ??????? ??? ?????.. 
+	// if     "????? ?? ????????????" ??? ??????? ???????? ???.
+	// else   "$1 ????" ("1???? ????" ???? ???)
 	if (MakeFullSystemMsg(GetSystemMessage(3407 ), "0") == vpString) vpString = GetSystemMessage(2317);
 	else vpString = MakeFullSystemMsg(GetSystemMessage(3360 ), vpString);
-	// 툴팁 적용 
+	// ???? ???? 
 	m_VPIcon[idx].SetTooltipCustomType(MakeTooltipSimpleText( vpString ));
 	*/
 	local int vpStep;
@@ -1678,27 +1705,27 @@ function UpdateVpIcon(int idx, int vp, int MaxVP)
 
 	division = MaxVP / 4;
 
-	//105000 포인트 초과 ~ 140000 포인트 : 네 칸 표시
+	//105000 ????? ??? ~ 140000 ????? : ?? ? ???
 	if( vp > MaxVP - division )
 	{
 		vpStep = 4;
 	}
-	//70000 포인트 초과 ~ 105000 포인트 이하 : 세 칸 표시
+	//70000 ????? ??? ~ 105000 ????? ???? : ?? ? ???
 	else if( vp <= MaxVP - division && vp > MaxVP - ( division * 2 ) )
 	{
 		vpStep = 3;
 	}
-	//35000 포인트 초과 ~ 70000 포인트 이하 : 두 칸 표시
+	//35000 ????? ??? ~ 70000 ????? ???? : ?? ? ???
 	else if( vp <= MaxVP - (division * 2) && vp > MaxVP - ( division * 3 ) )
 	{
 		vpStep = 2;
 	}
-	//0포인트 초과 ~ 35000 포인트 이하 : 한 칸 표시
+	//0????? ??? ~ 35000 ????? ???? : ?? ? ???
 	else if( vp <= MaxVP - (division * 3) && vp > MaxVP - ( division * 4 ) )
 	{
 		vpStep = 1;
 	}
-	//0 일 경우 0칸
+	//0 ?? ??? 0?
 	else
 	{
 		vpStep = 0;
@@ -1706,7 +1733,7 @@ function UpdateVpIcon(int idx, int vp, int MaxVP)
 
 	m_VPIcon[idx].SetTexture("L2UI_Ct1.PartyStatusWnd_DF_VPIcon_" $ vpStep);
 
-	//활력 0일 경우
+	//??? 0?? ???
 	if (vp <= 0)
 	{
 		vpString = GetSystemString(2496);		
@@ -1724,19 +1751,19 @@ function HandlePartyPetAdd( string param )
 	local int	ID;
 	local int	i;
 
-	// 소환수 1, 팻 2
+	// ????? 1, ?? 2
 	local int   type;
 	local int	MasterIndex;
 	
-	ParseInt(param, "Type", type);	// 마스터 ID를 파싱한다.
+	ParseInt(param, "Type", type);	// ?????? ID?? ??????.
 
-	// Debug("팻 추가 @" @ param);
+	// Debug("?? ??? @" @ param);
 	if (type == 2)
 	{
-		// 마스터 ID를 파싱한다.
+		// ?????? ID?? ??????.
 		ParseInt(param, "MasterID", MasterID);	
 
-		// ID를 파싱한다.
+		// ID?? ??????.
 		ParseInt(param, "ID", ID);	
 
 		if (MasterID>0)
@@ -1771,19 +1798,19 @@ function HandlePartyPetUpdate( string param )
 	
 	//debug(" PartySummonUpdate !! ");
 
-	// 소환수 1, 팻 2 
+	// ????? 1, ?? 2 
 	ParseInt(param, "Type", type);
 
 	ParseInt(param, "ID", id);
-	// Debug("팻 업데이트"@ param);
+	// Debug("?? ???????"@ param);
 	
-	// 팻 
+	// ?? 
 	if (type == 2)
 	{	
 		idx = FindPetID(id);
 
 		// Debug("idx " @ idx);
-		// 해당 인덱스의 펫 정보를 갱신
+		// ??? ???????? ?? ?????? ????
 		UpdatePetStatus(idx, param);	
 	}
 }
@@ -1802,7 +1829,7 @@ function HandlePartyPetDelete( string param )
 		if (idx>-1)
 		{	
 			ClearPetStatus(idx);
-			ResizeWnd();	// 만약 파티원이 자신밖에 없다면 알아서 파티윈도우는 사라짐.
+			ResizeWnd();	// ???? ??????? ????? ????? ???? ?????????? ?????.
 		}
 	}
 }
@@ -1810,11 +1837,11 @@ function HandlePartyPetDelete( string param )
 
 function UpdatePetStatus(int idx, string param)
 {
-	local int		ID;			// 펫 ID
-	local int		ClassID;	// 펫 종류
-	local int		Type;		// 펫 타입 1-소환수 2-펫
-	local int		MasterID;	// 주인의 ID
-	// local string	NickName;  	// 펫 이름
+	local int		ID;			// ?? ID
+	local int		ClassID;	// ?? ????
+	local int		Type;		// ?? ??? 1-????? 2-??
+	local int		MasterID;	// ?????? ID
+	// local string	NickName;  	// ?? ???
 		
 	local int		HP;
 	local int		MaxHP;
@@ -1835,22 +1862,22 @@ function UpdatePetStatus(int idx, string param)
 	ParseInt(param, "MaxMP", MaxMP);
 	ParseInt(param, "Level", Level);
 	
-	//툴팁
+	//????
 	// m_PetClassIcon[idx].SetTexture("L2UI_CT1.Icon.ICON_DF_PETICON");
 	//m_PetClassIcon[idx].SetTooltipCustomType(MakeTooltipSimpleText(m_PetName[idx].GetName()));
 			
-	//펫 아이콘
+	//?? ??????
 	//m_ClassIcon[idx].SetTexture(GetClassRoleIconName(SummonClassID));
 	//m_ClassIcon[idx].SetTooltipCustomType(MakeTooltipSimpleText(GetClassRoleName(ClassID) $ " - " $ GetClassType(ClassID)));
 	
 	// debug(" idx :MaxHP" @ idx @ "__" @MaxHP);
-	//각종 게이지
+	//???? ??????
 	UpdateHPBar(idx + 100, HP, MaxHP);
 	UpdateMPBar(idx + 100, MP, MaxMP);
 }
 
 /**
- *  파티원의 소환수 추가
+ *  ??????? ????? ???
  **/
 function HandlePartySummonAdd( string param )
 {
@@ -1858,7 +1885,7 @@ function HandlePartySummonAdd( string param )
 	local int	ID;
 	local int	idx;
 
-	// 소환수 1, 팻 2
+	// ????? 1, ?? 2
 	local int   type;
 
 	local SummonInfo m_SummonInfo; 
@@ -1869,7 +1896,7 @@ function HandlePartySummonAdd( string param )
 
 	GetSummonInfo(ID, m_SummonInfo);
 	// debug("class " @  m_SummonInfo.nClassID);
-	// Debug("소환수 추가 @" @ param);
+	// Debug("????? ??? @" @ param);
 
 	idx = FindSummonMasterID(MasterID);
 	if (idx > 0)
@@ -1884,7 +1911,7 @@ function HandlePartySummonAdd( string param )
 }
 
 /**
- *  파티의 소환수의 정보를 받아서 보조창에서 표현 
+ *  ????? ??????? ?????? ???? ????????? ??? 
  **/
 function PartySummonProcess( int MasterID ) 
 {
@@ -1916,39 +1943,39 @@ function PartySummonProcess( int MasterID )
 
 		if (partyMemberInfo.curSummonNum > 0)
 		{
-			// 팻 소환수 보조 창 열기
-			// 소환수 마스터 ID 넣기
+			// ?? ????? ???? ? ????
+			// ????? ?????? ID ???
 			m_arrSummonID[MasterIndex] = MasterID;
 		}
 		else
 		{
-			// 닫기
-			// 소환수 마스터 ID 넣기
+			// ???
+			// ????? ?????? ID ???
 			m_arrSummonID[MasterIndex] = -1;			
 		}
 		
-		// 창 갱신 
+		// ? ???? 
 		ResizeWnd();		
 	}
 }
 
 /**
- *  파티원의 소환수 업데이트
+ *  ??????? ????? ???????
  **/
 function HandlePartySummonUpdate( string param )
 {
 	local int	MasterID;
 
-	// 소환수 1, 팻 2
+	// ????? 1, ?? 2
 	local int   type;
 
-	// 맴버 아이디르 통해서 소환수 수를 얻고 그걸 갱신 해주는 코드를 넣어야 함
-	// debug("수환수 업데이트 !" @param);
+	// ??? ????? ????? ????? ???? ??? ??? ???? ????? ??? ???? ??
+	// debug("????? ??????? !" @param);
 
 	ParseInt(param, "MasterID", MasterID);
 	ParseInt(param, "Type", type);	
 
-	// 소환수 
+	// ????? 
 	if (type == 1)
 	{	
 		PartySummonProcess(MasterID);
@@ -1969,13 +1996,13 @@ function HandlePartySummonDelete( string param )
 	if (SummonMasterID>0)
 	{
 
-		// 소환수 마스터의 index 를 찾는다.
+		// ????? ???????? index ?? ?????.
 		idx = FindSummonMasterID(SummonMasterID);
 
 		GetPartyMemberInfo(SummonMasterID, partyMemberInfo);
-		// Debug("해제.. ---> partyMemberInfo.curSummonNum : "  @ partyMemberInfo.curSummonNum);
+		// Debug("????.. ---> partyMemberInfo.curSummonNum : "  @ partyMemberInfo.curSummonNum);
 
-		// 소환수가 한마리 라도 있다면..
+		// ??????? ????? ?? ????..
 		if (partyMemberInfo.curSummonNum > 0)
 		{						
 			m_ClassIconSummon[idx].ShowWindow();
@@ -1985,7 +2012,7 @@ function HandlePartySummonDelete( string param )
 		}
 		else
 		{
-			// 소환수가 없다면..
+			// ??????? ?????..
 			ClearSummonStatus(idx);
 		}		
 		ResizeWnd();			
@@ -1993,15 +2020,15 @@ function HandlePartySummonDelete( string param )
 }
 
 /**
- *  소환수 상태 업데이트 
+ *  ????? ???? ??????? 
  **/
 function UpdateSummonStatus(int idx, string param)
 {
-	local int		ID;			// 펫 ID
-	local int		ClassID;		// 펫 종류
-	local int		Type;		    // 펫 타입 1-소환수 2-펫
-	local int		MasterID;	    // 주인의 ID
-	// local string	NickName;  	// 펫 이름
+	local int		ID;			// ?? ID
+	local int		ClassID;		// ?? ????
+	local int		Type;		    // ?? ??? 1-????? 2-??
+	local int		MasterID;	    // ?????? ID
+	// local string	NickName;  	// ?? ???
 		
 	local int		HP;
 	local int		MaxHP;
@@ -2024,15 +2051,15 @@ function UpdateSummonStatus(int idx, string param)
 	
 	
 	// debug(":MaxHP" @MaxHP);
-	//각종 게이지
+	//???? ??????
 
-	// 각 소환수는 현재 상태 정보를 표현 하지 않음 (단지 수만 표시)
+	// ?? ??????? ???? ???? ?????? ??? ???? ???? (???? ???? ???)
 	// UpdateHPBar(idx + 100, HP, MaxHP);
 	// UpdateMPBar(idx + 100, MP, MaxMP);
 }
 
 
-//버프리스트정보
+//?????????????
 function HandlePartySpelledList(string param)
 {
 	local int i;
@@ -2052,7 +2079,7 @@ function HandlePartySpelledList(string param)
 	local int TriggerSkillCnt;
 	local int TriggerSkillCurRow;
 	
-	local bool isPC;	//pc인지 펫인지 체크하는 함수
+	local bool isPC;	//pc???? ?????? ????? ???
 	
 	local StatusIconInfo info;
 	
@@ -2071,19 +2098,19 @@ function HandlePartySpelledList(string param)
 	idx = FindPartyID(ID);
 	if(idx >=0)
 	{
-		//버프 초기화
+		//???? ????
 		m_StatusIconBuff[idx].Clear();
 		m_StatusIconDeBuff[idx].Clear();
 		m_StatusIconSongDance[idx].Clear();
 		m_StatusIconTriggerSkill[idx].Clear();
 		isPC = true;
 	}
-	else	// 파티원이면 여긴 그냥 패스
+	else	// ???????? ???? ??? ????
 	{
-		idx = FindPetID(ID);	// 파티원이 아니라면, 펫인지 살펴본다. 
+		idx = FindPetID(ID);	// ??????? ?????, ?????? ????a??. 
 		if(idx >= 0)
 		{
-			//버프 초기화
+			//???? ????
 			m_PetStatusIconBuff[idx].Clear();
 			m_PetStatusIconDeBuff[idx].Clear();
 			m_PetStatusIconSongDance[idx].Clear();
@@ -2092,11 +2119,11 @@ function HandlePartySpelledList(string param)
 		}
 		else
 		{
-			return;	// 펫 아이디마저 없다면 걍 무시무시
+			return;	// ?? ??????? ????? ?? ???????
 		}
 	}
 		
-	//info 초기화
+	//info ????
 	if ( isPC ) 
 	{
 		info.Size = 16;
@@ -2115,7 +2142,7 @@ function HandlePartySpelledList(string param)
 		ParseInt(param, "Level_" $ i, info.Level);
 		ParseInt(param, "SubLevel_" $ i, info.SubLevel);
 
-		// 토핑 버프인 경우 add 하지 않음.
+		// ???? ?????? ??? add ???? ????.
 		if ( class'UIDATA_SKILL'.static.IsToppingSkill( info.ID, info.Level, info.SubLevel) ) 
 		{			
 			continue ;
@@ -2158,7 +2185,7 @@ function HandlePartySpelledList(string param)
 			}
 			else if (IsSongDance( info.ID, info.Level, info.SubLevel) == true )
 			{
-				//~ debug("송댄스입니까?");
+				//~ debug("??????????");
 				//~ SongDanceCurRow++;
 				if(isPC)	
 				{					
@@ -2181,7 +2208,7 @@ function HandlePartySpelledList(string param)
 			}
 			else if (IsTriggerSkill( info.ID, info.Level, info.SubLevel) == true )
 			{
-				//~ debug("발동버프입니까?");
+				//~ debug("????????????");
 				if (TriggerSkillCnt % NSTATUSICON_MAXCOL == 0)
 				{
 					TriggerSkillCurRow++;
@@ -2207,7 +2234,7 @@ function HandlePartySpelledList(string param)
 			}
 			else
 			{
-				//~ debug("일반 버프입니까?");
+				//~ debug("??? ?????????");
 				if (BuffCnt%NSTATUSICON_MAXCOL == 0)
 				{
 					BuffCurRow++;
@@ -2237,7 +2264,7 @@ function HandlePartySpelledList(string param)
 
 
 
-//버프리스트삭제
+//?????????????
 function HandlePartySpelledListDelete(string param)
 {
 	local int i;		
@@ -2265,7 +2292,7 @@ function HandlePartySpelledListDelete(string param)
 
 	for (i=0; i<Max; i++)
 	{
-		//버프 종류를 알기 위한 ID, Level
+		//???? ?????? ??? ???? ID, Level
 		ParseItemIDWithIndex(param, info.ID, i );
 		ParseInt(param, "Level_" $ i, info.Level );
 		ParseInt(param, "SubLevel_" $ i, info.SubLevel );
@@ -2277,25 +2304,25 @@ function HandlePartySpelledListDelete(string param)
 		
 		if (IsValidItemID(info.ID))
 		{	
-			//디버프이면 
+			//???????? 
 			if (GetDebuffType( info.ID, info.Level, info.SubLevel) != 0 )
 			{
 				if ( isPC ) deleteBuff ( m_StatusIconDeBuff[idx], info.Level, info.ID.ClassID, info.SpellerID ); 
 				else 		deleteBuff ( m_PetStatusIconDeBuff[idx], info.Level, info.ID.ClassID, info.SpellerID ); 							
 			}
-			//송댄스
+			//?????
 			else if (IsSongDance( info.ID, info.Level, info.SubLevel) == true )
 			{	
 				if ( isPC ) deleteBuff ( m_StatusIconSongDance[idx], info.Level, info.ID.ClassID, info.SpellerID );
 				else        deleteBuff ( m_PetStatusIconSongDance[idx], info.Level, info.ID.ClassID, info.SpellerID );
 			}
-			//디버프
+			//?????
 			else if (IsTriggerSkill( info.ID, info.Level, info.SubLevel) == true )
 			{								
 				if ( isPC ) deleteBuff ( m_StatusIconTriggerSkill[idx], info.Level, info.ID.ClassID, info.SpellerID );
 				else        deleteBuff ( m_PetStatusIconTriggerSkill[idx], info.Level, info.ID.ClassID, info.SpellerID ); 
 			}
-			//일반 버프 
+			//??? ???? 
 			else
 			{				
 				if ( isPC ) deleteBuff ( m_StatusIconBuff[idx], info.Level, info.ID.ClassID, info.SpellerID ); 
@@ -2308,8 +2335,8 @@ function HandlePartySpelledListDelete(string param)
 	UpdateBuff();
 }
 
-//받은 정보의 버프를 찾아 삭제 하는 함수
-//ttp 60079 로 SpellerID 추가.
+//???? ?????? ?????? ??? ???? ??? ???
+//ttp 60079 ?? SpellerID ???.
 function deleteBuff( StatusIconHandle tmpStatusIcon , int level, int classID, int SpellerID )
 {
 	local int row;	
@@ -2330,7 +2357,7 @@ function deleteBuff( StatusIconHandle tmpStatusIcon , int level, int classID, in
 		}
 	}
 }
-//버프가 두 줄 이상 들어갈 경우 버프를 한 칸씩 땡겨 주는 함수
+//?????? ?? ?? ??? ??? ??? ?????? ?? ??? ???? ??? ???
 function refreshPostion ( StatusIconHandle tmpStatusIcon , int deletedRow  )
 {
 	local int row;
@@ -2338,13 +2365,13 @@ function refreshPostion ( StatusIconHandle tmpStatusIcon , int deletedRow  )
 
 	for ( row = deletedRow ; row < tmpStatusIcon.GetRowCount() -1 ; row ++ )
 	{
-		tmpStatusIcon.GetItem (row + 1 ,   0,  info );//다음 줄에 있는 것 중 맨 앞의 것을 가져 오고 
-		tmpStatusIcon.addCol( row, info);// 그 아이템을 지워진 줄에 채워 넣은 다음
-		tmpStatusIcon.DelItem( row + 1, 0 ); // 지운다.
+		tmpStatusIcon.GetItem (row + 1 ,   0,  info );//???? ??? ??? ?? ?? ?? ???? ???? ???? ???? 
+		tmpStatusIcon.addCol( row, info);// ?? ???????? ?????? ??? ??? ???? ????
+		tmpStatusIcon.DelItem( row + 1, 0 ); // ?????.
 	}
 }
 
-//버프리스트추가
+//????????????
 function HandlePartySpelledListInsert(string param)
 {
 	local int i;	
@@ -2371,7 +2398,7 @@ function HandlePartySpelledListInsert(string param)
 
 	if ( idx < 0 ) return;
 		
-	//info 초기화
+	//info ????
 	if ( isPC ) 
 	{
 		info.Size = 16;
@@ -2393,7 +2420,7 @@ function HandlePartySpelledListInsert(string param)
 		ParseInt(param, "Level_" $ i, info.Level);
 		ParseInt(param, "SubLevel_" $ i, info.SubLevel);
 		
-		// 토핑 버프인 경우 add 하지 않음.
+		// ???? ?????? ??? add ???? ????.
 		if ( class'UIDATA_SKILL'.static.IsToppingSkill( info.ID, info.Level, info.SubLevel) ) 
 		{			
 			continue ;
@@ -2410,36 +2437,36 @@ function HandlePartySpelledListInsert(string param)
 			info.IconName = class'UIDATA_SKILL'.static.GetIconName(info.ID, info.Level, info.SubLevel);
 			info.bHideRemainTime = true;
 
-			//디버프이면 
+			//???????? 
 			if (GetDebuffType( info.ID, info.Level, info.SubLevel) != 0 )
 			{
 				if ( isPC ) tmpStatusIcon = m_StatusIconDeBuff[idx];
 				else 		tmpStatusIcon = m_PetStatusIconDeBuff[idx];				
 				
 			}
-			//송댄스
+			//?????
 			else if (IsSongDance( info.ID, info.Level, info.SubLevel) == true )
 			{	
 				if ( isPC ) tmpStatusIcon = m_StatusIconSongDance[idx];	
 				else        tmpStatusIcon = m_PetStatusIconSongDance[idx];
 			}
-			//디버프
+			//?????
 			else if (IsTriggerSkill( info.ID, info.Level, info.SubLevel) == true )
 			{								
 				if ( isPC ) tmpStatusIcon = m_StatusIconTriggerSkill[idx];
 				else        tmpStatusIcon = m_PetStatusIconTriggerSkill[idx];
 			}
-			//일반 버프 
+			//??? ???? 
 			else 
 			{				
 				if ( isPC ) tmpStatusIcon = m_StatusIconBuff[idx];
 				else        tmpStatusIcon = m_PetStatusIconBuff[idx];
 			} 	
 			
-			//삭제 부분
+			//???? ????
 			deleteBuff ( tmpStatusIcon, info.Level, info.ID.ClassID, info.SpellerID ); 
 
-			//추가 부분			
+			//??? ????			
 			if ( tmpStatusIcon.GetRowCount() == 0 || tmpStatusIcon.GetColCount( tmpStatusIcon.GetRowCount() -1 ) % NSTATUSICON_MAXCOL == 0 )
 			{				
 				tmpStatusIcon.AddRow();
@@ -2450,7 +2477,7 @@ function HandlePartySpelledListInsert(string param)
 	UpdateBuff();
 }
 
-//버프아이콘 표시
+//?????????? ???
 function HandleShowBuffIcon(string param)
 {
 	local int nShow;
@@ -2482,7 +2509,7 @@ function HandleShowBuffIcon(string param)
 	//~ }
 }
 
-// 버튼클릭 이벤트
+// ?????? ????
 function OnClickButton( string strID )
 {
 	local int idx;
@@ -2491,16 +2518,16 @@ function OnClickButton( string strID )
 	
 	switch( strID )
 	{
-	case "btnBuff":		//버프버튼 클릭시 
+	case "btnBuff":		//??????? ????? 
 		OnBuffButton();
 		//script.OnBuffButton();
 		break;
-	case "btnCompact":	// 옵션 버튼 클릭시
+	case "btnCompact":	// ??? ??? ?????
 		OnOpenPartyWndOption();
 		//OnCompactButton();
 		break;	
-	case "btnSummon":	// 소환수 버튼 클릭시
-		//debug("ERROR - you can't enter here");	// 여기로 들어오면 에러 -_-;
+	case "btnSummon":	// ????? ??? ?????
+		//debug("ERROR - you can't enter here");	// ????? ?????? ???? -_-;
 		break;
 	}
 
@@ -2510,7 +2537,7 @@ function OnClickButton( string strID )
 		// Debug("idx===> " @idx);
 		if(m_PetPartyStatus[idx].isShowwindow())
 		{
-			// Debug(" 소환수 창을 닫아라! ");
+			// Debug(" ????? ??? ????! ");
 			m_PetPartyStatus[idx].HideWindow();
 
 			m_arrPetIDOpen[idx] = 2;
@@ -2554,18 +2581,18 @@ function OnClickButtonWithHandle( ButtonHandle a_ButtonHandle )
 		Debug("m_Vname[2].ID>>" $ string(m_Vname[2].ID) );
 		*/
 
-		//자동 파티가 신청 되어 있는 경우.
+		//??? ????? ??? ??? ??? ???.
 		if( FindAutoParty(idx) )
 		{
-			//자동 파티를 삭제 한다.
-			//debug( "자동 파티를 삭제 한다" );
+			//??? ????? ???? ???.
+			//debug( "??? ????? ???? ???" );
 			RequestDeletePartySubstitute( m_arrID[idx] );
 		}
-		//자동 파티가 신청 안된 경우.
+		//??? ????? ??? ??? ???.
 		else
 		{
-			//자동 파티를 신청한다.
-			//debug( "자동 파티를 신청한다" );
+			//??? ????? ??????.
+			//debug( "??? ????? ??????" );
 			RequestRegistPartySubstitute( m_arrID[idx] );
 			GetPartyMemberInfo( m_arrID[idx], info);
 			//Debug( info.Name );
@@ -2573,14 +2600,14 @@ function OnClickButtonWithHandle( ButtonHandle a_ButtonHandle )
 	}*/
 }
 
-// 옵션버튼 클릭시 불리는 함수
+// ????? ????? ????? ???
 function OnOpenPartyWndOption()
 {
 	local int i;
 	local PartyWndOption script;
 	script = PartyWndOption( GetScript("PartyWndOption") );
 	
-	// 열려있는 소환수 창 정보를 옵션 윈도우 , 작은 윈도우로 전달한다. 
+	// ??????? ????? ? ?????? ??? ?????? , ???? ??????? ???????. 
 	for(i=0; i<MAX_ArrayNum; i++)
 	{
 		script.m_arrPetIDOpen[i] = m_arrPetIDOpen[i];
@@ -2592,7 +2619,7 @@ function OnOpenPartyWndOption()
 	
 }
 
-// 사용되지 않는 함수인듯.  PartyWnd, PartyWndCompact, PartyWndOption 에서 사용하지 않음
+// ?????? ??? ???????.  PartyWnd, PartyWndCompact, PartyWndOption ???? ??????? ????
 
 //		function OnCompactButton()
 //		{
@@ -2616,12 +2643,12 @@ function OnOpenPartyWndOption()
 //			}
 //		}
 
-// 버프버튼을 눌렀을 경우 실행되는 함수
+// ????????? ?????? ??? ?????? ???
 function OnBuffButton()
 {
 	m_CurBf = m_CurBf + 1;
 	
-	//3가지 모드가 전환된다.
+	//3???? ??? ??????.
 	if (m_CurBf > MAX_BUFF_ICONTYPE)
 	{
 		m_CurBf = 0;
@@ -2633,7 +2660,7 @@ function OnBuffButton()
 	UpdateBuff();
 }
 
-// 버프표시, 디버프 표시,  끄기 3가지모드를 전환한다.
+// ???????, ????? ???,  ???? 3??????? ??????.
 function UpdateBuff()
 {
 	local int idx;
@@ -2710,13 +2737,13 @@ function UpdateBuff()
 	//m_bBuff = bShow;
 }
 
-//CP바 갱신
+//CP?? ????
 function UpdateCPBar(int idx, int Value, int MaxValue)
 {
 	m_BarCP[idx].SetValue(MaxValue, Value);
 }
 
-//HP바 갱신
+//HP?? ????
 function UpdateHPBar(int idx, int Value, int MaxValue)
 {
 	if(idx < 100)
@@ -2725,22 +2752,22 @@ function UpdateHPBar(int idx, int Value, int MaxValue)
 		m_PetBarHP[idx - 100].SetValue(MaxValue, Value);
 }
 
-//MP바 갱신
+//MP?? ????
 function UpdateMPBar(int idx, int Value, int MaxValue)
 {
 	if(idx < 100)
 		m_BarMP[idx].SetValue(MaxValue, Value);
-	else 	// 100보다 크면 펫이 보낸거라는..
+	else 	// 100???? ??? ???? ????????..
 		m_PetBarMP[idx - 100].SetValue(MaxValue, Value);
 }
 
-//파티원 클릭 했을시..
+//????? ??? ??????..
 function OnLButtonDown( WindowHandle a_WindowHandle, int X, int Y )
 {
 	local Rect rectWnd, rectPetClassIcon;
 	local UserInfo userinfo;
 	local int idx;
-	//자동 대타 버튼일 경우 예외 처리용으로 사용.
+	//??? ??? ????? ??? ???? ????????? ???.
 	//local Rect rectAutoPart;		
 
 	rectWnd = m_wndTop.GetRect();	
@@ -2749,12 +2776,12 @@ function OnLButtonDown( WindowHandle a_WindowHandle, int X, int Y )
 	{
 		if (GetPlayerInfo(userinfo))
 		{
-			//idx = (Y-rectWnd.nY) / NPARTYSTATUS_HEIGHT;	//펫보여주기 개편 전의 코드
+			//idx = (Y-rectWnd.nY) / NPARTYSTATUS_HEIGHT;	//???????? ???? ???? ???
 			idx = GetIdx( Y-rectWnd.nY );
 			//debug("OnLButtonDown : " $ idx);			
 			//rectAutoPart = m_AutoPartyMatchingBtn[idx].GetRect();	
 /*
-			//자동 대타 버튼일 경우 타겟 잡지 않음.
+			//??? ??? ????? ??? ??? ???? ????.
 			if( X > rectAutoPart.nX && X < rectAutoPart.nX + rectAutoPart.nWidth )
 			{
 				if( Y > rectAutoPart.nY && Y <  ( rectAutoPart.nY + rectAutoPart.nHeight ) )
@@ -2796,7 +2823,7 @@ function OnLButtonDown( WindowHandle a_WindowHandle, int X, int Y )
 	}
 }
 
-//파티원의 어시스트
+//??????? ?????
 function OnRButtonDown( WindowHandle a_WindowHandle, int X, int Y )
 {
 	local Rect rectWnd;
@@ -2808,7 +2835,7 @@ function OnRButtonDown( WindowHandle a_WindowHandle, int X, int Y )
 	{
 		if (GetPlayerInfo(userinfo))
 		{
-			//idx = (Y-rectWnd.nY) / NPARTYSTATUS_HEIGHT;	//펫보여주기 개편 전의 코드
+			//idx = (Y-rectWnd.nY) / NPARTYSTATUS_HEIGHT;	//???????? ???? ???? ???
 			idx = GetIdx( Y-rectWnd.nY );
 			//debug("OnRButtonUp : " $ idx);
 			if(idx <100)
@@ -2819,10 +2846,10 @@ function OnRButtonDown( WindowHandle a_WindowHandle, int X, int Y )
 	}
 }
 
-// Y 좌표를 이용해 배열의 인덱스 값을 구한다. 펫의 경우에는 + 100을 하여 리턴해준다. 
+// Y ????? ????? ????? ?????? ???? ?????. ???? ?????? + 100?? ??? ?????????. 
 function int GetIdx(int y)
 {
-	local int tempY;	// 이변수는 배열을 위에서부터 훑고 내려가면서 누적 감소시킨다. 
+	local int tempY;	// ??????? ????? ?????????? ??? ???????? ???? ????????. 
 	local int i;
 	local int idx;
 	
@@ -2833,17 +2860,17 @@ function int GetIdx(int y)
 	{
 		tempY = tempY - NPARTYSTATUS_HEIGHT;
 		
-		if(tempY <0)	// 0보다 작으면 해당 i가 IDX가 된다. 
+		if(tempY <0)	// 0???? ?????? ??? i?? IDX?? ???. 
 		{
-			idx = i;	//필요할까 싶지만, 안전장치 차원에서..
+			idx = i;	//?????? ??????, ??????? ????????..
 			return idx;
 		}
-		else if( m_arrPetIDOpen[i] == 1) // 해당 인덱스의 펫이 열려있다면
+		else if( m_arrPetIDOpen[i] == 1) // ??? ???????? ???? ????????
 		{
 			tempY = tempY - NPARTYPETSTATUS_HEIGHT;			
-			if(tempY <0)	// 0보다 작으면 해당 i가 IDX가 된다. 
+			if(tempY <0)	// 0???? ?????? ??? i?? IDX?? ???. 
 			{
-				idx = i + 100;	//펫일 경우 100을 더하여 보내준다. 
+				idx = i + 100;	//???? ??? 100?? ????? ???????. 
 				return idx;
 			}
 		}		
@@ -2852,7 +2879,7 @@ function int GetIdx(int y)
 	return idx;
 }
 
-// 버프 툴팁을 설정한다.
+// ???? ?????? ???????.
 function SetBuffButtonTooltip()
 {
 	local int idx;
@@ -2877,8 +2904,8 @@ function OnDropWnd( WindowHandle hTarget, WindowHandle hDropWnd, int x, int y )
 	local string sTargetName, sDropName ,sTargetParent;
 	local int dropIdx, targetIdx, i;
 	
-	//local  PartyWnd script1;			// 확장된 파티창의 클래스
-	local PartyWndCompact script2;	// 축소된 파티창의 클래스
+	//local  PartyWnd script1;			// ???? ?????? ?????
+	local PartyWndCompact script2;	// ???? ?????? ?????
 	
 	//script1 = PartyWnd( GetScript("PartyWnd") );
 	script2 = PartyWndCompact( GetScript("PartyWndCompact") );
@@ -2893,7 +2920,7 @@ function OnDropWnd( WindowHandle hTarget, WindowHandle hDropWnd, int x, int y )
 	sDropName = hDropWnd.GetWindowName();
 	sTargetParent = hTarget.GetParentWindowName();
 	
-	// PartyStatusWnd에만 드래그 엔 드롭을 할 수 있다. 
+	// PartyStatusWnd???? ????? ?? ????? ?? ?? ???. 
 	//if(( InStr( "PartyStatusWnd", sTargetName ) == -1 ) || ( InStr( "PartyStatusWnd" ,sDropName) == -1 ))
 	if( (( InStr( sTargetName , "PartyStatusWnd" ) == -1 ) && ( InStr( sTargetParent , "PartyStatusWnd" ) == -1 )   ) || ( InStr( sDropName, "PartyStatusWnd") == -1 ))
 	{
@@ -2905,9 +2932,9 @@ function OnDropWnd( WindowHandle hTarget, WindowHandle hDropWnd, int x, int y )
 	{
 		dropIdx = int(Right(sDropName , 1));
 		
-		if( InStr( sTargetName , "PartyStatusWnd" ) > -1 ) 	//타겟 네임이 있을 겨우
+		if( InStr( sTargetName , "PartyStatusWnd" ) > -1 ) 	//??? ?????? ???? ???
 			targetIdx = int(Right(sTargetName , 1));
-		else									//타겟 네임은 없지만 부모의 이름이 PartyStatusWnd 일때
+		else									//??? ?????? ?????? ?????? ????? PartyStatusWnd ???
 			targetIdx = int(Right(sTargetParent , 1));
 		
 		if( dropIdx <0 || targetIdx <0 )
@@ -2915,13 +2942,13 @@ function OnDropWnd( WindowHandle hTarget, WindowHandle hDropWnd, int x, int y )
 			//Debug( "ERROR IDX: " $ dropIdx $ " / " $  targetIdx);
 		}
 		
-		// 아래 혹은 위로 밀어주는 코드
+		// ??? ??? ???? ??????? ???
 		if( dropIdx > targetIdx)
 		{
-			CopyStatus ( MAX_PartyMemberCount , dropIdx );		//타겟을 옮겨놓고
-			script2.CopyStatus ( MAX_PartyMemberCount , dropIdx );		//타겟을 옮겨놓고
+			CopyStatus ( MAX_PartyMemberCount , dropIdx );		//????? ??????
+			script2.CopyStatus ( MAX_PartyMemberCount , dropIdx );		//????? ??????
 			
-			for (i=dropIdx-1; i>targetIdx-1; i--)	// 아래로 밀어준다. 
+			for (i=dropIdx-1; i>targetIdx-1; i--)	// ????? ???????. 
 			{
 				CopyStatus(i+1, i);
 				script2.CopyStatus(i+1, i);
@@ -2931,10 +2958,10 @@ function OnDropWnd( WindowHandle hTarget, WindowHandle hDropWnd, int x, int y )
 		}
 		else if(dropIdx < targetIdx)
 		{
-			CopyStatus ( MAX_PartyMemberCount, dropIdx );		//타겟을 옮겨놓고
-			script2.CopyStatus ( MAX_PartyMemberCount , dropIdx );		//타겟을 옮겨놓고
+			CopyStatus ( MAX_PartyMemberCount, dropIdx );		//????? ??????
+			script2.CopyStatus ( MAX_PartyMemberCount , dropIdx );		//????? ??????
 			
-			for (i=dropIdx+1; i<targetIdx+1; i++)	// 위로 땡겨준다.
+			for (i=dropIdx+1; i<targetIdx+1; i++)	// ???? ???????.
 			{
 				CopyStatus(i-1, i);
 				script2.CopyStatus(i-1, i);
@@ -3004,7 +3031,7 @@ function HandleDeletePartySubstitute( string param )
 }
 
 /**
- * 자동파티 상태 정보 업뎃 및 정보 저장.
+ * ?????? ???? ???? ???? ?? ???? ????.
  */
 
 function SetPartyAutoStatus( int idx, int iSubstatus )
@@ -3012,16 +3039,16 @@ function SetPartyAutoStatus( int idx, int iSubstatus )
 	//autoPartyIndex[idx] = iSubstatus;
 
 	//debug( "m_PlayerName[idx]" $ m_PlayerName[idx].GetName() );
-	//Debug( "파티장인가??" $ string( AmILeader() ) );
+	//Debug( "??????????" $ string( AmILeader() ) );
 	if( AmILeader() )
 	{		
-		//파티장일 경우 처리.
-		//자동파티 꺼진 상태
+		//??????? ??? ???.
+		//?????? ???? ????
 		if( iSubstatus == 0 )
 		{
 			//m_AutoPartyMatchingBtn[idx].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off" );
 		}
-		//자동파티 신청된상태
+		//?????? ????????
 		else
 		{
 			//m_AutoPartyMatchingBtn[idx].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On", "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_On" );					
@@ -3030,21 +3057,21 @@ function SetPartyAutoStatus( int idx, int iSubstatus )
 		//m_AutoPartyMatchingIcon[idx].HideWindow();
 
 		SetTypePositionLeader( idx );
-		//자동 파티 매칭 진행중
-		//여기서 다시 창이 나오는데.. 파티장을 업뎃이 안되는듯..;;
+		//??? ??? ??? ??????
+		//???? ??? ??? ???????.. ??????? ?????? ?????..;;
 		//FindAllUserParty();		
 	}
 	else
 	{					
-		//파티원 경우 처리.		
-		//자동파티 꺼진 상태
+		//????? ??? ???.		
+		//?????? ???? ????
 		if( iSubstatus == 0 )
 		{
 			//m_AutoPartyMatchingIcon[idx].HideWindow();
 			SetTypePosition( idx, 0 );
 			//m_AutoPartyMatchingIcon[idx].SetTexture( "l2ui_ct1.AutoPartyMatchingWnd_DF_StatusWndMatchingBtn_Off" );
 		}
-		//자동파티 신청된상태
+		//?????? ????????
 		else
 		{
 			//m_AutoPartyMatchingIcon[idx].ShowWindow();
@@ -3067,18 +3094,18 @@ function bool FindAllUserParty()
 		//Debug( "autoPartyIndex[i]>>>" $ string(autoPartyIndex[i]) );
 		if ( autoPartyIndex[i] == 1 )
 		{
-			//ShowWindow( "AutoPartyMatchingStatusWnd" ); 자동대타 삭제
+			//ShowWindow( "AutoPartyMatchingStatusWnd" ); ?????? ????
 			return true;
 			//return false;
 		}
 	}
-	//HideWindow( "AutoPartyMatchingStatusWnd" ); 자동대타 삭제
+	//HideWindow( "AutoPartyMatchingStatusWnd" ); ?????? ????
 	return false;
 }
 */
 
 /**
- * 자동 파티가 등록되어 있는가 확인
+ * ??? ????? ????? ????? ???
  */
 /*
 function bool FindAutoParty( int idx )
@@ -3100,7 +3127,7 @@ function bool FindAutoParty( int idx )
 	}
 }
 */
-//자동 대타 선택
+//??? ??? ????
 /*
 function SetAutoParty( int num )
 {
@@ -3123,7 +3150,7 @@ function SetAutoParty( int num )
 }
 */
 
-//자신이 파티장일 경우 항상 자동 파티 버튼이 존재.
+//????? ??????? ??? ??? ??? ??? ????? ????.
 function SetTypePositionLeader( int idx )
 {
 	m_PlayerName[idx].SetWindowSizeRel( 1.0f, 0, - 48 + iconsOffsetX, 14 );
@@ -3131,12 +3158,12 @@ function SetTypePositionLeader( int idx )
 }
 
 
-//자신이 파티장이 아닐 경우.
+//????? ??????? ??? ???.
 function SetTypePosition( int idx, int iauto )
 {
 	if(m_LeaderIcon[idx].GetTextureName() != "")
 	{
-		//윈도우 사이즈에 맞춰 텍스트 필드 사이즈 조절
+		//?????? ?????? ???? ???? ??? ?????? ????
 		m_PlayerName[idx].SetWindowSizeRel( 1.0f, 0, -48 + iconsOffsetX, 14 );
 		m_PlayerName[idx].SetAnchor( "PartyWnd.PartyStatusWnd" $ idx, "TopLeft", "TopLeft", 42 - iconsOffsetX, 8 );	
 	}
@@ -3158,13 +3185,13 @@ function SetTypePosition( int idx, int iauto )
 /*
  	if( iauto == 0 )
 	{
-		//파티장 O, 자동 대타 신청 X
+		//????? O, ??? ??? ??? X
 		if(m_LeaderIcon[idx].GetTextureName() != "")
 		{
 			m_PlayerName[idx].SetWindowSizeRel( 1.0f, 0, -48, 14 );
 			m_PlayerName[idx].SetAnchor( "PartyWnd.PartyStatusWnd" $ idx, "TopLeft", "TopLeft", 40, 8 );		
 		}
-		//파티장 X, 자동 대타 신청 X
+		//????? X, ??? ??? ??? X
 		else
 		{
 			m_PlayerName[idx].SetWindowSizeRel( 1.0f, 0, -38, 14 );
@@ -3173,12 +3200,12 @@ function SetTypePosition( int idx, int iauto )
 	}
 	else
 	{
-		//파티장 O, 자동 대타 신청 O
+		//????? O, ??? ??? ??? O
 		if(m_LeaderIcon[idx].GetTextureName() != "")
 		{
 
 		}
-		//파티장 X, 자동 대타 신청 O
+		//????? X, ??? ??? ??? O
 		else
 		{
 			m_PlayerName[idx].SetWindowSizeRel( 1.0f, 0, -52, 14 );

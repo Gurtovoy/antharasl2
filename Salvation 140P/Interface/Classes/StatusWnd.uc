@@ -949,8 +949,7 @@ function OnEvent( int a_EventID, string a_Param )
 	//end of branch
 	//branch
 	case EV_BR_PREMIUM_STATE:
-		//HandlePremiumState(a_Param);
-		//debug("get EV_BR_PREMIUM_STATE");
+		HandlePremiumState(a_Param);
 		break;
 	//end of branch
 	case EV_NeedResetUIData :

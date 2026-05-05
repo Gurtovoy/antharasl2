@@ -5,7 +5,7 @@ const TOOLTIP_MINIMUM_SETITEM_WIDTH = 200;
 
 const TOOLTIP_SETITEM_MAX = 3;
 
-// ÅøÆÁ°£ÀÇ ÁÙ°£°Ý
+// ???????? ?????
 const TOOLTIP_LINE_HGAP = 6;
 
 const ATTRIBUTE_FIRE 	= 0;
@@ -24,11 +24,11 @@ var DrawItemInfo m_Info;
 
 var Array<int> AttackAttLevel;
 var Array<int> AttackAttCurrValue;
-var Array<int> AttackAttMaxValue; //¸ðµç °ø°Ý ¼Ó¼ºÀÇ ·¹º§, ÇöÀç·¹º§¿¡¼­ÀÇ °ª, ÇöÀç·¹º§¿¡¼­ÀÇ ÃÖ´ë°ªÀ» ¿©±â¿¡ ÀúÀåÇÑ´Ù.
+var Array<int> AttackAttMaxValue; //??? ???? ????? ????, ???????????? ??, ???????????? ??“S?? ???? ???????.
 
 var Array<int> DefAttLevel;
 var Array<int> DefAttCurrValue;
-var Array<int> DefAttMaxValue; //¸ðµç ¹æ¾î ¼Ó¼ºÀÇ ·¹º§, ÇöÀç·¹º§¿¡¼­ÀÇ °ª, ÇöÀç·¹º§¿¡¼­ÀÇ ÃÖ´ë°ªÀ» ¿©±â¿¡ ÀúÀåÇÑ´Ù.
+var Array<int> DefAttMaxValue; //??? ??? ????? ????, ???????????? ??, ???????????? ??“S?? ???? ???????.
 
 var int NowAttrLv;
 var int NowMaxValue;
@@ -36,10 +36,10 @@ var int NowValue;
 
 var bool BoolSelect;
 
-//¼¼Æ® ¾ÆÀÌÅÛÀÏ °æ¿ì ÃÖ¼Ò Width°ª TOOLTIP_MINIMUM_SETITEM_WIDTHÀ¸·Î ¼öÁ¤.
+//??? ???????? ??? ??? Width?? TOOLTIP_MINIMUM_SETITEM_WIDTH???? ????.
 var bool BSetItem;
 
-//¹æ¾î±¸ ¹× ¸ÁÅä 6°³ ¼Ó¼º¿¡ ´ëÇÑ ÅøÆÁ °¡·Î¼± ÇÑ°³·Î ¸¸µé±â À§ÇÑ º¯¼ö
+//??? ?? ???? 6?? ????? ???? ???? ???¥ì? ????? ????? ???? ????
 var bool BLine;
 
 var TextBoxHandle ItemCountText;
@@ -52,9 +52,9 @@ function OnRegisterEvent()
 
 function OnLoad()
 {
-	// ¼ôÄÆ ÅøÆÁ ÄÑ±â/²ô±â ±âº»°ªÀ» ÄÑ±â·Î(TTP#41925) 2010.8.23 - winkey
+	// ???? ???? ???/???? ?????? ????(TTP#41925) 2010.8.23 - winkey
 	BoolSelect = true;
-	// ¼¼Æ® ¾ÆÀÌÅÛ ±¸ºÐ.
+	// ??? ?????? ????.
 	BSetItem = false; 
 
 	util = L2Util(GetScript("L2Util"));
@@ -65,7 +65,7 @@ function OnEvent(int Event_ID, string param)
 	switch( Event_ID )
 	{
 	case EV_RequestTooltipInfo:
-		//debug("ÅøÆÁÀÌº¥Æ® ³Ñ¾î¿À³Ä");
+		//debug("???????? ??????");
 		HandleRequestTooltipInfo(param);
 		break;
 	}
@@ -95,7 +95,7 @@ function HandleRequestTooltipInfo(string param)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////// Normal Tooltip /////////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
-	//debug("TooltipÅ¸ÀÔ:"$TooltipType);
+	//debug("Tooltip???:"$TooltipType);
 	if (TooltipType == "Text")
 	{
 		ReturnTooltip_NTT_TEXT(param, eSourceType, false);
@@ -154,10 +154,10 @@ function HandleRequestTooltipInfo(string param)
 			|| TooltipType == "InventoryPrice1HideEnchantStackable"
 			|| TooltipType == "InventoryPrice2PrivateShop"
 			|| TooltipType == "InventoryWithIcon"
-			|| TooltipType == "InventoryPawnViewer" // PawnViewer¿ë Ãß°¡ - lancelot 2007. 10. 16.
-			|| TooltipType == "HtmlViewer" // Html ÅøÆÁ¿ë Ãß°¡ - y2jinc 2011. 11. 16.
-			|| TooltipType == "InventoryPet"// Æê ¿ë ÅøÆÁ Ãß°¡ ( ¼Ó¼º °ªÀÌ º¸ÀÌÁö ¾Êµµ·Ï Ã³¸® )			
-			|| TooltipType == "EnsoulSlot" // ½Å±Ô ÁýÈ¥ ½½·Ô. ÅøÆÁÀ» ¹«½Ã ÇÏ´Â ¼Ó¼ºÀ» Ãß°¡ÇÏ±â À§ÇØ¼­.. - Á¶Èñ¿µ ¶§¹®
+			|| TooltipType == "InventoryPawnViewer" // PawnViewer?? ??? - lancelot 2007. 10. 16.
+			|| TooltipType == "HtmlViewer" // Html ?????? ??? - y2jinc 2011. 11. 16.
+			|| TooltipType == "InventoryPet"// ?? ?? ???? ??? ( ??? ???? ?????? ????? ??? )			
+			|| TooltipType == "EnsoulSlot" // ??? ??? ????. ?????? ???? ??? ????? ?????? ?????.. - ???? ????
 
 			)		
 	{		
@@ -166,7 +166,7 @@ function HandleRequestTooltipInfo(string param)
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////// ListCtrl Tooltip ///////////////////////////////////
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
-	//¼±ÁØ ¼öÁ¤(2010.02.22 ~ 03.08) ¿Ï·á
+	//???? ????(2010.02.22 ~ 03.08) ???
 	else if ( TooltipType == "RoomList" )
 	{
 		ReturnTooltip_NTT_ROOMLIST(param, eSourceType);
@@ -201,33 +201,33 @@ function HandleRequestTooltipInfo(string param)
 	}
 	else if (TooltipType == "FriendInfo")
 	{
-		// ÀÎ¸Æ°ü¸® ¿¡¼­ friendList  BlockList 
+		// ?¥è???? ???? friendList  BlockList 
 		ReturnTooltip_NTT_FRIENDINFO(param, eSourceType);
 	}
-	// 10.09.20 Ç÷¸ÍÀü ¸®½ºÆ® ÅøÆÁ Ãß°¡ by Dongland		
+	// 10.09.20 ?????? ????? ???? ??? by Dongland		
 	else if (TooltipType == "ClanWarInfo")
 	{
 		ReturnTooltip_NTT_CLANWARINFO(param, eSourceType);
 	}
 	else if (TooltipType == "SellItemList")
 	{
-		// ÆÇ¸Å ´ëÇà 
+		// ??? ???? 
 		ReturnTooltip_NTT_SellItemList(param, eSourceType);
 	}
 	else if (TooltipType == "EnsoulOptionType")
 	{
-		// ÁýÈ¥ ¿É¼Ç - 2015-03-02 Ãß°¡
+		// ??? ??? - 2015-03-02 ???
 		ReturnTooltip_NTT_EnsoulOptionList(param, eSourceType);
 	}
 	else if (TooltipType == "AgitDecoListType")
 	{
-		// ¾ÆÁöÆ® µ¥ÄÚ ¸®½ºÆ® (2015-08-04 Ãß°¡)
+		// ????? ???? ????? (2015-08-04 ???)
 		ReturnTooltip_NTT_AgitDecoList(param, eSourceType);
 	}
 	
 
-	//¼±ÁØ ¼öÁ¤( 10.03.30 ) ¿Ï·á
-	//¿ìÆíÇÔ¿¡ ÅøÆÁ Ãß°¡.
+	//???? ????( 10.03.30 ) ???
+	//??????? ???? ???.
 	else if (TooltipType == "PostInfo")
 	{
 		ReturnTooltip_NTT_POSTINFO(param, eSourceType);
@@ -243,7 +243,7 @@ function HandleRequestTooltipInfo(string param)
 	{
 		ReturnTooltip_NTT_MANOR(param, TooltipType, eSourceType);
 	}
-	// [Äù½ºÆ® ¾ÆÀÌÅÛ ÅøÆÁ Ãß°¡]
+	// [????? ?????? ???? ???]
 	else if (TooltipType == "QuestItem")
 	{
 		ReturnTooltip_NTT_QUESTREWARDS(param, eSourceType);
@@ -252,7 +252,7 @@ function HandleRequestTooltipInfo(string param)
 	{
 		ReturnTooltip_NTT_GFXCARD(param, eSourceType);
 	}
-	//Ã¤ÆÃ »ç±â¹æÁö ÅøÆÁ Ãß°¡
+	//??? ?????? ???? ???
 	else if(TooltipType == "UserFakeInfo")
 	{
 		ReturnTooltip_NTT_CHAT_USERFAKEINFO(param, eSourceType);
@@ -261,21 +261,21 @@ function HandleRequestTooltipInfo(string param)
 	{
 		//ReturnTooltip_NTT_NORMALITEM(param);
 		ReturnTooltip_NTT_LOOCKCHANGEITEM(param);
-	// °³ÀÎ»óÁ¡ ¼ö·®¼º °³º° °¡°Ý°ú ÃÑ°¡°Ý º¸¿©ÁÖ±â 2015.1.20
+	// ???¥ë??? ?????? ???? ????? ????? ??????? 2015.1.20
 	}
 	else if ( TooltipType == "InventoryStackableUnitPrice" )
 	{
-		//°³ÀÎ »óÁ¡ ÅøÆÁ°ú °°°Ô º¸ÀÌµµ·Ï eSourceTypeÀ» ¾ÆÀÌÅÛ Å¸ÀÔÀ¸·Î ¹Ù²ã º¸³»ÁÙ °Í.
+		//???? ???? ?????? ???? ??????? eSourceType?? ?????? ??????? ??? ?????? ??.
 		ReturnTooltip_NTT_ITEM(param, TooltipType, NTST_ITEM);
 	}
-	// ¿ùµå¸Ê ÅøÆÁ
+	// ????? ????
 	else if ( TooltipType == "RegionInfo")
 	{
 		ReturnTooltip_NTT_MAP_REGIONINFO(param, eSourceType);
 	}
 	else if ( TooltipType == "GfxCustomTooltip" ) 
 	{
-		//Gfx¿¡¼­ º¸³»´Â Ä¿½ºÅÒ ÅøÆÁ 
+		//Gfx???? ?????? ¨¨???? ???? 
 		ReturnTooltip_NTT_GFxTooltip( param );		
 	}
 	else if ( TooltipType == "privateShopHistory" ) 
@@ -286,7 +286,7 @@ function HandleRequestTooltipInfo(string param)
 
 
 /////////////////////////////////////////////////////////////////////////////////
-// Gfx¿¡¼­ º¸³»´Â Ä¿½ºÅÒ ÅøÆÁ 
+// Gfx???? ?????? ¨¨???? ???? 
 function ReturnTooltip_NTT_GFxTooltip (string param )
 {
 	//local string tooltipInfo ;
@@ -347,7 +347,7 @@ function ReturnTooltip_NTT_GFxTooltip (string param )
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-// ¿ùµå¸Ê Áöµµ ÅøÆÁ
+// ????? ???? ????
 function ReturnTooltip_NTT_MAP_REGIONINFO(string param, ETooltipSourceType eSourceType)
 {
 //	local ItemInfo Item;
@@ -389,82 +389,82 @@ function ReturnTooltip_NTT_MAP_REGIONINFO(string param, ETooltipSourceType eSour
 
 		if (nType == EMinimapRegionType.MRT_Castle)
 		{
-			ParseString(param, "CastleName", CastleName);               // ¼ºÀÌ¸§ 
+			ParseString(param, "CastleName", CastleName);               // ????? 
 
-			ParseString(param, "OwnerClanNameToolTip", OwnerClanNameToolTip);  // xx Ç÷¸Í ¼ÒÀ¯ Áß
-			ParseString(param, "OwnerClanName", OwnerClanName);         // ¼ÒÀ¯ Ç÷¸Í¸í
-			ParseString(param, "NextSiegeTime", NextSiegeTime);         // ´ÙÀ½ °ø¼ºÀü ½Ã°£
-			ParseString(param, "SiegeState", SiegeState);               // ÆòÈ­»óÅÂ, °ø¼ºÁß
-			ParseString(param, "CastleType", CastleType);               // ¾øÀ½, ºû, ¾îµÒ
-			ParseString(param, "TaxRate", TaxRate);                     // ¼¼À²
+			ParseString(param, "OwnerClanNameToolTip", OwnerClanNameToolTip);  // xx ???? ???? ??
+			ParseString(param, "OwnerClanName", OwnerClanName);         // ???? ?????
+			ParseString(param, "NextSiegeTime", NextSiegeTime);         // ???? ?????? ?©£?
+			ParseString(param, "SiegeState", SiegeState);               // ???????, ??????
+			ParseString(param, "CastleType", CastleType);               // ????, ??, ???
+			ParseString(param, "TaxRate", TaxRate);                     // ????
 			
-			AddTooltipColorText(CastleName, getInstanceL2Util().White, false, false, true); // ¼º ÀÌ¸§
-			//CastleType = "Å×½ºÆ®";
-			if (CastleType != "") AddTooltipColorText(" (" $ CastleType $ ")", getInstanceL2Util().ColorLightBrown, false, false, true); // ºû, ¾îµÒ
+			AddTooltipColorText(CastleName, getInstanceL2Util().White, false, false, true); // ?? ???
+			//CastleType = "????";
+			if (CastleType != "") AddTooltipColorText(" (" $ CastleType $ ")", getInstanceL2Util().ColorLightBrown, false, false, true); // ??, ???
 
 			AddCrossLine(); 
-			AddTooltipColorText(GetSystemString(1607) $ " : " $ OwnerClanName, getInstanceL2Util().ColorYellow, true, true, false);  // ¼ÒÀ¯ Ç÷¸Í
-			AddTooltipColorText(GetSystemString(1612) $ " : " $ SiegeState, getInstanceL2Util().ColorYellow, true, true, false);     // ÇöÈ²: ÀüÀïÁß, ÆòÈ­
-			AddTooltipColorText(GetSystemString(1608) $ " : " $ TaxRate, getInstanceL2Util().ColorYellow, true, true, false);        // ¼¼±Ý
-			AddTooltipColorText(GetSystemString(1609) $ " : " $ NextSiegeTime, getInstanceL2Util().ColorYellow, true, true, false);  // ´ÙÀ½ °ø¼ºÀÏ
+			AddTooltipColorText(GetSystemString(1607) $ " : " $ OwnerClanName, getInstanceL2Util().ColorYellow, true, true, false);  // ???? ????
+			AddTooltipColorText(GetSystemString(1612) $ " : " $ SiegeState, getInstanceL2Util().ColorYellow, true, true, false);     // ???: ??????, ???
+			AddTooltipColorText(GetSystemString(1608) $ " : " $ TaxRate, getInstanceL2Util().ColorYellow, true, true, false);        // ????
+			AddTooltipColorText(GetSystemString(1609) $ " : " $ NextSiegeTime, getInstanceL2Util().ColorYellow, true, true, false);  // ???? ??????
 
-			// ¶óÀÎ ÅØ½ºÃÄ¸¦ ÃÖÁ¾ ÅøÆÁ °¡·Î »çÀÌÁî¿¡ ¸Âµµ·Ï º¸Á¤
+			// ???? ????©§? ???? ???? ???? ?????? ????? ????
 			setTooltipMinimumWidth ();
 		}
-		// ¿ä»õ
+		// ???
 		else if (nType == EMinimapRegionType.MRT_Fortress)
 		{
-			ParseString(param, "CastleName", CastleName);               // ¼º(¿ä»õ) ÀÌ¸§ 
-			ParseString(param, "OwnerClanName", OwnerClanName);         // ¼ÒÀ¯ Ç÷¸Í¸í
-			ParseString(param, "SiegeState", SiegeState);               // ÆòÈ­»óÅÂ, ÀüÀï Áß
-			ParseString(param, "DateTotal", DateTotal);                 // Á¡·É ½Ã°£
-			ParseString(param, "LocationName", LocationName);           // ¼Ò¼Ó¿µÁö
+			ParseString(param, "CastleName", CastleName);               // ??(???) ??? 
+			ParseString(param, "OwnerClanName", OwnerClanName);         // ???? ?????
+			ParseString(param, "SiegeState", SiegeState);               // ???????, ???? ??
+			ParseString(param, "DateTotal", DateTotal);                 // ???? ?©£?
+			ParseString(param, "LocationName", LocationName);           // ??????
 				
-			AddTooltipColorText(CastleName $ " | " $ MakeFullSystemMsg( GetSystemMessage(4436), LocationName), getInstanceL2Util().White, true, true, true); // ¼ºÀÌ¸§
+			AddTooltipColorText(CastleName $ " | " $ MakeFullSystemMsg( GetSystemMessage(4436), LocationName), getInstanceL2Util().White, true, true, true); // ?????
 			AddCrossLine();
-			AddTooltipColorText(GetSystemString(1607) $ " : " $ OwnerClanName, getInstanceL2Util().ColorYellow, true, true, false); // ¼ÒÀ¯ Ç÷¸Í
-			AddTooltipColorText(GetSystemString(1612) $ " : " $ SiegeState, getInstanceL2Util().ColorYellow, true, true, false);    // ÇöÈ²: ÀüÀïÁß, ÆòÈ­
-			if (DateTotal != "") AddTooltipColorText(GetSystemString(1615) $ " : " $ DateTotal, getInstanceL2Util().ColorYellow, true, true, false); // Á¡·É ½Ã°£
+			AddTooltipColorText(GetSystemString(1607) $ " : " $ OwnerClanName, getInstanceL2Util().ColorYellow, true, true, false); // ???? ????
+			AddTooltipColorText(GetSystemString(1612) $ " : " $ SiegeState, getInstanceL2Util().ColorYellow, true, true, false);    // ???: ??????, ???
+			if (DateTotal != "") AddTooltipColorText(GetSystemString(1615) $ " : " $ DateTotal, getInstanceL2Util().ColorYellow, true, true, false); // ???? ?©£?
 			
-			// ¶óÀÎ ÅØ½ºÃÄ¸¦ ÃÖÁ¾ ÅøÆÁ °¡·Î »çÀÌÁî¿¡ ¸Âµµ·Ï º¸Á¤
+			// ???? ????©§? ???? ???? ???? ?????? ????? ????
 			setTooltipMinimumWidth ();
 		}
-		// ¾ÆÁöÆ®
+		// ?????
 		else if (nType == EMinimapRegionType.MRT_Agit)
 		{  
-			ParseString(param, "AgitName", AgitName);                           // ¾ÆÁöÆ® ÀÌ¸§ 
-			ParseString(param, "OwnerClanName", OwnerClanName);                 // ¼ÒÀ¯ Ç÷¸Í¸í
-			ParseString(param, "OwnerClanMasterName", OwnerClanMasterName);     // ¼ÒÀ¯ÁÖ
-			ParseString(param, "NextSiegeTime", NextSiegeTime);                 // ´ÙÀ½ ¾ÆÁöÆ® Àü
-			ParseString(param, "LocationName", LocationName);           // ¼Ò¼Ó¿µÁö
+			ParseString(param, "AgitName", AgitName);                           // ????? ??? 
+			ParseString(param, "OwnerClanName", OwnerClanName);                 // ???? ?????
+			ParseString(param, "OwnerClanMasterName", OwnerClanMasterName);     // ??????
+			ParseString(param, "NextSiegeTime", NextSiegeTime);                 // ???? ????? ??
+			ParseString(param, "LocationName", LocationName);           // ??????
 
-			AddTooltipColorText(AgitName $ " | " $ MakeFullSystemMsg( GetSystemMessage(4436), LocationName), getInstanceL2Util().White, true, true, true); // ¼ºÀÌ¸§
+			AddTooltipColorText(AgitName $ " | " $ MakeFullSystemMsg( GetSystemMessage(4436), LocationName), getInstanceL2Util().White, true, true, true); // ?????
 			AddCrossLine();
 
-			// Á¡·É Ç÷¸Í			
+			// ???? ????			
 			if (OwnerClanName == "") OwnerClanName = GetSystemString(27);
 			AddTooltipColorText(GetSystemString(1607) $ " : " $ OwnerClanName, getInstanceL2Util().ColorYellow, true, true, false); 
 
-			// Ç÷¸ÍÁÖ 342
+			// ?????? 342
 			if (OwnerClanMasterName != "") AddTooltipColorText(GetSystemString(342) $ " : " $ OwnerClanMasterName, getInstanceL2Util().ColorYellow, true, true, false); 
 
 			//OwnerClanMasterName
 
 			if (NextSiegeTime != "") 
 			{
-				// ´ÙÀ½ ¾ÆÁöÆ®Àü Á¤º¸
+				// ???? ??????? ????
 				AddTooltipColorText(GetSystemString(3545)$ " : " $ NextSiegeTime, getInstanceL2Util().ColorYellow, true, true, false); 
 			}
 
-			// ¶óÀÎ ÅØ½ºÃÄ¸¦ ÃÖÁ¾ ÅøÆÁ °¡·Î »çÀÌÁî¿¡ ¸Âµµ·Ï º¸Á¤
+			// ???? ????©§? ???? ???? ???? ?????? ????? ????
 			setTooltipMinimumWidth ();
 		}
-		// »ç³ÉÅÍ 
+		// ????? 
 		else if (nType == EMinimapRegionType.MRT_HuntingZone_Base || nType == EMinimapRegionType.MRT_HuntingZone_Mission)
 		{
 			ParseString( param, "SeedMessage", seedMessage);
 
-			// »ç³ÉÅÍ Á¤º¸¸¦ °¡Á®¿Â´Ù.
+			// ????? ?????? ?????¢¥?.
 			class'UIDATA_HUNTINGZONE'.static.GetHuntingZoneData(index, huntingZoneData);
 			
 			tmpStr = class'UIDATA_HUNTINGZONE'.static.GetHuntingZoneName(huntingZoneData.nSearchZoneID);
@@ -473,34 +473,34 @@ function ReturnTooltip_NTT_MAP_REGIONINFO(string param, ETooltipSourceType eSour
 
 			AddCrossLine();
 
-			// Áø¸êÀÇ ¾¾¾Ñ »óÅÂ
+			// ?????? ???? ????
 			if(seedMessage != "") 
 				AddTooltipColorText(seedMessage, getColor(255,204,0,255), true, true, false);
 
 			//Debug("huntingZoneData.nMinLevel:" @ huntingZoneData.nMinLevel);
 			//Debug("huntingZoneData.nMaxLevel:" @ huntingZoneData.nMaxLevel);
-			// ÃßÃµ·¹º§ : xx~xx
+			// ??????? : xx~xx
 			if (huntingZoneData.nMinLevel != 0 && huntingZoneData.nMaxLevel != 0)
 				AddTooltipColorText(GetSystemString(922) $ " : "$ huntingZoneData.nMinLevel $ "~" $ huntingZoneData.nMaxLevel, getColor(255,204,0,255), true, true, false);
 
 			nHuntingZoneType = huntingZoneData.nType;
 			//nHuntingZoneType = class'UIDATA_HUNTINGZONE'.static.GetHuntingZoneType(index);
 
-			// »ç³ÉÅÍ À¯Çü
+			// ????? ????
 			tmpStr = getHuntingZoneTypeString(nHuntingZoneType); 
 			if (tmpStr != "") AddTooltipColorText(tmpStr, getColor(255,204,0,255), true, true, false);
 		
-			// ¶óÀÎ ÅØ½ºÃÄ¸¦ ÃÖÁ¾ ÅøÆÁ °¡·Î »çÀÌÁî¿¡ ¸Âµµ·Ï º¸Á¤
+			// ???? ????©§? ???? ???? ???? ?????? ????? ????
 			setTooltipMinimumWidth ();
 		}
-		//// »ç³ÉÅÍ ±ê¹ß (ÃßÃµ »ç³ÉÅÍ¶ó°í¸¸ ÂïÀ½)
+		//// ????? ??? (??? ????????? ????)
 		//else if (nType == EMinimapRegionType.MRT_HuntingZone_Mission)
 		//{
-		//	// ÃßÃµ »ç³ÉÅÍ
+		//	// ??? ?????
 		//	m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH / 4;
 		//	AddTooltipColorText(GetSystemString(3544), getInstanceL2Util().White, true, true, true);
 		//}
-		// ¼¼·Â ¾ÆÀÌÄÜ
+		// ???? ??????
 		else if (nType == EMinimapRegionType.MRT_Faction)
 		{
 			ParseInt( param, "nFactionID", nFactionID);
@@ -532,7 +532,7 @@ function ReturnTooltip_NTT_MAP_REGIONINFO(string param, ETooltipSourceType eSour
 			}
 		}
 
-		// ·¹ÀÌµå 
+		// ????? 
 		else if (nType == EMinimapRegionType.MRT_Raid)
 		{
 			//pRaidUIData = getInstanceUIData().getRaidUIDataByIndex(index);
@@ -541,13 +541,13 @@ function ReturnTooltip_NTT_MAP_REGIONINFO(string param, ETooltipSourceType eSour
 			AddTooltipColorText(pRaidUIData.raidMonsterName $ " | " $ pRaidUIData.RaidMonsterZoneName, getInstanceL2Util().White, true, true, true);
 			AddCrossLine();
 
-			// xx ·¹º§ ·¹ÀÌµå ¸ó½ºÅÍ 
+			// xx ???? ????? ???? 
 			Language = GetLanguage();
 			if(Language == LANG_Russia || Language == LANG_Euro || Language == LANG_English)
 				AddTooltipColorText(MakeFullSystemMsg(GetSystemMessage(4425),GetSystemString(537) $ " " $ pRaidUIData.nRaidMonsterLevel),getColor(255,204,0,255),true,true,false);
 			else
 				AddTooltipColorText(MakeFullSystemMsg(GetSystemMessage(4425), pRaidUIData.nRaidMonsterLevel $ GetSystemString(537)), getColor(255,204,0,255), true, true, false);
-			// ¸®Á¨ »óÅÂ)
+			// ???? ????)
 			if (nActive > 0)
 			{
 				tmpStr = GetSystemString(3525);
@@ -557,19 +557,19 @@ function ReturnTooltip_NTT_MAP_REGIONINFO(string param, ETooltipSourceType eSour
 				tmpStr = GetSystemString(3526);
 			}
 			
-			// ÇöÀç »óÅÂ : ¸®Á¨ or ´ë±âÁß 
+			// ???? ???? : ???? or ????? 
 			AddTooltipColorText(GetSystemString(3524) $ " : " $ tmpStr, getColor(255,204,0,255), true, true, false);
 		
-			// ¶óÀÎ ÅØ½ºÃÄ¸¦ ÃÖÁ¾ ÅøÆÁ °¡·Î »çÀÌÁî¿¡ ¸Âµµ·Ï º¸Á¤
+			// ???? ????©§? ???? ???? ???? ?????? ????? ????
 			setTooltipMinimumWidth ();
 		}
 
-		// ÀÎ½ºÅÏ½º Á¸ 
+		// ?¥í???? ?? 
 		else if (nType == EMinimapRegionType.MRT_InstantZone)
 		{
 			ParseInt( param, "Active", nActive);
 
-			// »ç³ÉÅÍ Á¤º¸¸¦ °¡Á®¿Â´Ù.
+			// ????? ?????? ?????¢¥?.
 			class'UIDATA_HUNTINGZONE'.static.GetHuntingZoneData(index, huntingZoneData);
 
 			tmpStr = class'UIDATA_HUNTINGZONE'.static.GetHuntingZoneName(huntingZoneData.nSearchZoneID);
@@ -579,21 +579,21 @@ function ReturnTooltip_NTT_MAP_REGIONINFO(string param, ETooltipSourceType eSour
 
 			AddCrossLine();
 
-			// »ç³ÉÅÍ À¯Çü			
+			// ????? ????			
 			nHuntingZoneType = huntingZoneData.nType;
 			//nHuntingZoneType = class'UIDATA_HUNTINGZONE'.static.GetHuntingZoneType(index);
 
 			tmpStr = getHuntingZoneTypeString(nHuntingZoneType); 
 			if (tmpStr != "") AddTooltipColorText(tmpStr, getColor(255,204,0,255), true, true, false);
 
-			// ÃßÃµ·¹º§ : xx~xx
+			// ??????? : xx~xx
 			if (huntingZoneData.nMinLevel != 0 && huntingZoneData.nMaxLevel != 0)
 				AddTooltipColorText(GetSystemString(922) $ " : "$ huntingZoneData.nMinLevel $ "~" $ huntingZoneData.nMaxLevel, getColor(255,204,0,255), true, true, false);
 
-			// °ø·« ¸ñÇ¥
+			// ???? ???
 			AddTooltipColorText(GetSystemString(3522) $ " : " $ class'UIDATA_HUNTINGZONE'.static.GetHuntingDescription(index), getColor(255,204,0,255), true, true, false);
 			
-			// °ü·Ã Äù½ºÆ®
+			// ???? ?????
 			if (huntingZoneData.arrQuestIDs.Length > 0)
 			{
 				AddTooltipColorText(GetSystemString(3523) $ " : ", getColor(255,204,0,255), true, true, false);
@@ -607,14 +607,14 @@ function ReturnTooltip_NTT_MAP_REGIONINFO(string param, ETooltipSourceType eSour
 				}
 			}
 
-			// ÀÌ¿ë ºÒ°¡
+			// ??? ???
 			if(nActive <= 0) 
 			{
-				// ÇöÀç ÇöÈ² : ÀÌ¿ë ºÒ°¡ 
+				// ???? ??? : ??? ??? 
 				AddTooltipColorText(GetSystemString(3524) $ " : " $GetSystemString(5099) , getColor(255,204,0,255), true, true, false);
 			}
 
-			// ¶óÀÎ ÅØ½ºÃÄ¸¦ ÃÖÁ¾ ÅøÆÁ °¡·Î »çÀÌÁî¿¡ ¸Âµµ·Ï º¸Á¤
+			// ???? ????©§? ???? ???? ???? ?????? ????? ????
 			setTooltipMinimumWidth ();		
 		}
 		else if (nType == EMinimapRegionType.MRT_Etc) 
@@ -638,9 +638,9 @@ function ReturnTooltip_NTT_MAP_REGIONINFO(string param, ETooltipSourceType eSour
 		//	var array<int>	arrQuestIDs;
 		//	var int			nInstantZoneID;
 		//};
-		//Debug("¸Ê ÅøÆÁ" @ param);
+		//Debug("?? ????" @ param);
 
-		////¼³¸í
+		////????
 		//if (Len(Item.Description)>0)
 		//{
 		//	StartItem();
@@ -721,12 +721,12 @@ function ReturnTooltip_NTT_TEXT(string param, ETooltipSourceType eSourceType, bo
 
 function bool addItemIcon(ItemInfo Item, string ForeTexture) //, optional int nOffSetX, optional int nOffSetX )
 {
-	// ¾ÆÀÌÄÜ ÀÌ¹ÌÁö
+	// ?????? ?????
 	// ParseString(param, "iconPanel", iconPanel);
 
 	if (Item.IconName == "") return false;
 
-	// µÞ ¾ÆÀÌÄÜ ¹è°æ
+	// ?? ?????? ???
 	StartItem();
 	m_Info.eType = DIT_TEXTURE;
 	m_Info.u_nTextureWidth   = 34;
@@ -750,7 +750,7 @@ function bool addItemIcon(ItemInfo Item, string ForeTexture) //, optional int nO
 	m_Info.u_strTexture = Item.IconName;
 	EndItem();
 
-	// ¾ÆÀÌÄÜ ÆÐ³Î (±âº» º´±âµî »ó´Ü ÆÐ³Î)
+	// ?????? ?¬Ô? (?? ????? ??? ?¬Ô?)
 	StartItem();
 	m_Info.eType = DIT_TEXTURE;
 	m_Info.u_nTextureWidth   = 32;
@@ -763,7 +763,7 @@ function bool addItemIcon(ItemInfo Item, string ForeTexture) //, optional int nO
 	m_Info.u_strTexture = Item.iconPanel;
 	EndItem();
 
-	// ÀåÂø ÁßÀÎ ¾ÆÀÌÅÛ ÆÐ³Î °°Àº ÃÖ»óÀ§ ÆÐ³Î
+	// ???? ???? ?????? ?¬Ô? ???? ????? ?¬Ô?
 	if (ForeTexture != "")
 	{
 		StartItem();
@@ -781,7 +781,7 @@ function bool addItemIcon(ItemInfo Item, string ForeTexture) //, optional int nO
 	
 	if ( Item.bSecurityLock ) 
 	{
-		// ¾ÆÀÌÅÛ lock »óÅÂ Ã¼Å©
+		// ?????? lock ???? ??
 		StartItem();
 		m_Info.eType = DIT_TEXTURE;
 		m_Info.u_nTextureWidth   = 32;
@@ -813,7 +813,7 @@ function addItemIconSmallType(ItemInfo Item, string ForeTexture) //, optional in
 	m_Info.u_strTexture = Item.IconName;
 	EndItem();
 
-	// ¾ÆÀÌÄÜ ÆÐ³Î (±âº» º´±âµî »ó´Ü ÆÐ³Î)
+	// ?????? ?¬Ô? (?? ????? ??? ?¬Ô?)
 	StartItem();
 	m_Info.eType = DIT_TEXTURE;
 	m_Info.u_nTextureWidth   = 16;
@@ -826,7 +826,7 @@ function addItemIconSmallType(ItemInfo Item, string ForeTexture) //, optional in
 	m_Info.u_strTexture = Item.iconPanel;
 	EndItem();
 
-	// ÀåÂø ÁßÀÎ ¾ÆÀÌÅÛ ÆÐ³Î °°Àº ÃÖ»óÀ§ ÆÐ³Î
+	// ???? ???? ?????? ?¬Ô? ???? ????? ?¬Ô?
 	if (ForeTexture != "")
 	{
 		StartItem();
@@ -858,7 +858,7 @@ function addTexture(string IconName, int u_nTextureWidth, int u_nTextureHeight, 
 	EndItem();
 }
 
-// Ã¢ / ¾ç¼Õ, °©¿Ê °°Àº Àåºñ ¾ÆÀÌÅÛÀÇ Å¸ÀÔÀ» ¸®ÅÏÇÑ´Ù.
+// ? / ???, ???? ???? ??? ???????? ????? ???????.
 function string getSlotTypeWithItemTypeString(ItemInfo Item)
 {
 	local string SlotString, strTmp;
@@ -896,32 +896,32 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 	local string ItemName;
 	local int ItemNameClass;
 	
-	//¾Æµ¥³ªÀÐ¾îÁÖ±â
+	//??????¬à????
 	local string strAdena;
 	local string strAdenaComma;
 	local color	 AdenaColor;	
 	
-	//ÀÎÃ¾Æ®¿ë.
+	//??©­???.
 	local ItemEnchantBonusValue rValue; 
 	
 	// [EP3019]
-	// ¹«±â ÀÎÃ¦Æ® °³¼± ÀÛ¾÷
+	// ???? ??©¡? ???? ???
 	local bool  bMagicWeapon;
 	local float fSoulShotPower, fSpiritShotPower;
 
-	// ¹«±â Ãß°¡ ´ë¹ÌÁö
+	// ???? ??? ?????
 	local int   nEnchantedPhysicalDamageBonus, nEnchantedMagicalDamageBonus;
 
-	// ¹æ¾î±¸ Ãß°¡ ¹æ¾î, ¸¶¹ý¹æ¾î(ÀúÇ×)
+	// ??? ??? ???, ???????(????)
 	local int   nEnchantedMagicalDefenseBonus, nEnchantedPhysicalDefenseBonus, nEnchantedShieldDefenseBonus;
 
-	// ÀÎº¥Åä¸® ºä¾î ÀåÂø µÈ ¾ÆÀÌÅÛ ÆÐ³Î Ç¥½Ã
+	// ?¥ê??? ??? ???? ?? ?????? ?¬Ô? ???
 	local string ForeTexture;
 
-	//  ¾ÆÀÌÅÛ ½½·Ô, ¾ÆÀÌÅÛ Å¸ÀÔ
+	//  ?????? ????, ?????? ???
 	local string ItemSlotWithItemTypeStr;
 
-	// ¾ÆÀÌÅÛ ºñ±³
+	// ?????? ??
 	local int IsCompareItem, IsComparingEquip;
 
 	local int nEnchantValueTextGap, nSimpleLineCountAdd;
@@ -939,11 +939,11 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 		//Debug("IsCompareItem : " @ IsCompareItem);
 		//Debug("IsComparingEquip : " @ IsComparingEquip);
 
-		//if (IsCompareItem == 1) Debug("ºñ±³ ¾ÆÀÌÅÛÀÌ´Ù " @ Item.Name) ;
-		//if (IsComparingEquip == 1) Debug("ÀåÂøÇÑ ¾ÆÀÌÅÛÀÌ´Ù " @ Item.Name) ;
-		//if (IsComparingEquip == 1 && IsCompareItem == 1) Debug("==== ÀåÂøÇÑ ºñ±³ ¾ÆÀÌÅÛÀÌ´Ù " @ Item.Name) ;
+		//if (IsCompareItem == 1) Debug("?? ????????? " @ Item.Name) ;
+		//if (IsComparingEquip == 1) Debug("?????? ????????? " @ Item.Name) ;
+		//if (IsComparingEquip == 1 && IsCompareItem == 1) Debug("==== ?????? ?? ????????? " @ Item.Name) ;
 
-		// ÁýÈ¥ ½½·Ô ¿É¼ÇÀ¸·Î ´õ¹Ì ¾ÆÀÌÅÛÀ» ³ÖÀ»¶§, ÅøÆÁÀÌ ¾È³ª¿Àµµ·Ï ÇÏ±â À§ÇØ¼­.. EnsoulWnd¿¡¼­ »ç¿ë.
+		// ??? ???? ??????? ???? ???????? ??????, ?????? ????????? ??? ?????.. EnsoulWnd???? ???.
 		if (TooltipType == "EnsoulSlot") 
 		{
 			if (Item.Id.ClassID <= 0) return;
@@ -954,29 +954,29 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 		eItemType = EItemType(Item.ItemType);
 		eEtcItemType = EEtcItemType(Item.ItemSubType);
 		
-		// ÀÎÃ¦Æ®¿¡ µû¸¥ ¹æÆÐ, ¹°¸®, ¸¶¹ý¹æ¾î(ÀúÇ×), º¸³Ê½º ¼öÄ¡ 
+		// ??©¡??? ???? ????, ????, ???????(????), ????? ??? 
 		nEnchantedShieldDefenseBonus   = GetEnchantedShieldDefenseBonus  (Item.CrystalType, Item.Enchanted, Item.Attribution);		
 		nEnchantedMagicalDefenseBonus  = GetEnchantedMagicalDefenseBonus (Item.CrystalType, Item.Enchanted, Item.Attribution);
 		nEnchantedPhysicalDefenseBonus = GetEnchantedPhysicalDefenseBonus(Item.CrystalType, Item.Enchanted, Item.Attribution);
 
-		// ÀÎÃ¦Æ®µÈ ¹°¸® °ø°Ý·Â Ãß°¡ ¼öÄ¡
+		// ??©¡??? ???? ????? ??? ???
 		nEnchantedPhysicalDamageBonus   = GetEnchantedPhysicalDamageBonus(Item.WeaponType, Item.SlotBitType, Item.CrystalType, Item.Enchanted, Item.Attribution);
 
-		// ÀÎÃ¦Æ®µÈ ¹°¸® °ø°Ý·Â Ãß°¡ ¼öÄ¡
+		// ??©¡??? ???? ????? ??? ???
 		nEnchantedMagicalDamageBonus    = GetEnchantedMagicalDamageBonus(Item.WeaponType, Item.SlotBitType, Item.CrystalType, Item.Enchanted, Item.Attribution);
 		
-		//¾ÆÀÌÅÛ ÀÌ¸§ Ãëµæ
+		//?????? ??? ???
 		ItemName = class'UIDATA_ITEM'.static.GetRefineryItemName( Item.Name, Item.RefineryOp1, Item.RefineryOp2 );
 		ItemNameClass = class'UIDATA_ITEM'.static.GetItemNameClass( Item.ID );
 		
-		// ÀÎº¥Åä¸® ºä¾îÀÇ "[ÀåÂøÁß]" Ç¥½Ã	
-		// ParamToItemInfo À¸·Î´Â ÇØ´ç param À» µûÁö ¾Ê´Â´Ù.
+		// ?¥ê??? ????? "[??????]" ???	
+		// ParamToItemInfo ???¥ä? ??? param ?? ???? ??¢¥?.
 		parseString ( param, "ForeTexture", ForeTexture ) ;
 		if ( ForeTexture == "L2UI_CT1.Icon.WearPanel" || IsCompareItem == 1) 
 		{
 			if (IsComparingEquip == 1 || ForeTexture == "L2UI_CT1.Icon.WearPanel")
 			{	
-				// ÀåÂø ¾ÆÀÌÅÛ
+				// ???? ??????
 				AddTooltipColorText("[" $ GetSystemString(3556) $ "]", getColor(255,204,0,255),true, true, true);
 				nSimpleLineCountAdd = 2;
 				AddTooltipItemBlank(0);
@@ -984,7 +984,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			}
 			else
 			{
-				// ¼±ÅÃ ¾ÆÀÌÅÛ
+				// ???? ??????
 				AddTooltipColorText("[" $ GetSystemString(3555) $ "]", getColor(153,153,153,255), true, true, true);				
 				nSimpleLineCountAdd = 2;
 				AddTooltipItemBlank(0);
@@ -992,40 +992,40 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			}
 		}
 
-		// ¾ÆÀÌÅÛ ¾ÆÀÌÄÜÀ» Âï´Â´Ù.
+		// ?????? ???????? ??¢¥?.
 		if(addItemIcon(Item, ForeTexture))
 		{
 			bMainIconGap = 3;
 		}
 
-		// ÇØ¿Ü¿ë? "P" ÇÁ¸®¹Ì¾ö ¾ÆÀÌÅÛ ¾ÆÀÌÄÜ
+		// ????? "P" ??????? ?????? ??????
 		AddPrimeItemSymbol(Item, true);
 
-		//ÀÎÃ¾Æ® Ç¥½Ã ex) "+10"		
+		//??©­? ??? ex) "+10"		
 		if (TooltipType != "InventoryPrice1HideEnchant" && TooltipType != "InventoryPrice1HideEnchantStackable") 
 		{
 			AddTooltipItemEnchant(Item, true, "chatFontSize11", 6, 1);	
 			nEnchantValueTextGap = 3;
 		}
 		
-		//¾ÆÀÌÅÛ ÀÌ¸§
+		//?????? ???
 		AddTooltipItemName(ItemName, Item, ItemNameClass, "chatFontSize11", bMainIconGap + nEnchantValueTextGap, 1);
 
-		//¾ÆÀÌÅÛ °¹¼ö
+		//?????? ????
 		if (TooltipType != "InventoryPrice1HideEnchantStackable")
 		{
-			// Äù½ºÆ® º¸»ó ¾ÆÀÌÅÛ Å¸ÀÔÀÌ¸é ¾ÆÀÌÅÛ °³¼ö¸¦ Ç¥±â ÇÏÁö ¾Ê´Â´Ù.
+			// ????? ???? ?????? ?????? ?????? ?????? ??? ???? ??¢¥?.
 			if (TooltipType != "QuestReward") if( Item.ItemNum > 0 ) AddTooltipItemCount(Item, 0, 1);
 		}
 
 		//Grade Mark
 		AddTooltipItemGrade(Item, 0, 1);
 
-		// ¾ÆÀÌÅÛ Å¸ÀÔ , ex) Ã¢ / ¾ç¼Õ
+		// ?????? ??? , ex) ? / ???
 		ItemSlotWithItemTypeStr = getSlotTypeWithItemTypeString(Item);
 		if(ItemSlotWithItemTypeStr != "")
 		{
-			// SimpleLineCount Àº ÀÎº¥Åä¸® µî¿¡ °£·«È­ ÅøÆÁ, º¸¿© ÁÙ ¶óÀÎ¼ö
+			// SimpleLineCount ?? ?¥ê??? ?? ????? ????, ???? ?? ???¥ì?
 			m_Tooltip.SimpleLineCount = 2 + nSimpleLineCountAdd;
 			AddTooltipItemBlank(1);
 			AddTooltipColorText(ItemSlotWithItemTypeStr, getColor(176,155,121,255), false, true, false, "", 38, -19);
@@ -1034,41 +1034,41 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 		//Debug("nSimpleLineCountAdd" @ nSimpleLineCountAdd);
 		//Debug("m_Tooltip.SimpleLineCount" @ m_Tooltip.SimpleLineCount);
 
-		//¾ÆÀÌÅÛÀÌ ¾Æµ¥³ª¸é, ÀÐ¾îÁÖ±â ½ºÆ®¸µ (4¸¸ 4000¾Æµ¥³ª °°ÀÌ ÀÐ¾îÁÖ´Â ¹®ÀÚ¿­·Î)
+		//???????? ???????, ?¬à???? ????? (4?? 4000????? ???? ?¬à???? ???????)
 		if (IsAdena(Item.ID) && Item.ItemNum > 0)
 		{
-			//SimpleTooltipÀ» ÀÐ¾îÁÖ±â½ºÆ®¸µ±îÁö º¸¿©ÁØ´Ù.
+			//SimpleTooltip?? ?¬à??????????? ???????.
 			m_Tooltip.SimpleLineCount = 3 + nSimpleLineCountAdd;
 			AddTooltipText("(" $ ConvertNumToText(String(Item.ItemNum)) $ ")", true, true);
 		}
 		
-		// °³ÀÎ»óÁ¡ µî¿¡¼­ °³º° ¾ÆÀÌÅÛÀÇ °¡°Ý°ú ÃÑ °¡°ÝÀ» º¸¿©ÁÙ¶§ »ç¿ë
+		// ???¥ë??? ???? ???? ???????? ????? ?? ?????? ??????? ???
 		if (TooltipType == "InventoryStackableUnitPrice" && !Item.bEquipped )
 		{
-			// Debug ( " °³ÀÎ »óÁ¡ InventoryStackableUnitPrice" ) ;
+			// Debug ( " ???? ???? InventoryStackableUnitPrice" ) ;
 			strAdena = String(Item.Price);
 			strAdenaComma = MakeCostString(strAdena);
 			AdenaColor = GetNumericColor(strAdenaComma);
 			
-			// ¼ö·®¼º ¾ÆÀÌÅÛÀÌ°í, ¾ÆÀÌÅÛÀÌ 1º¸´Ù Å©´Ù¸é °³´ç °¡°ÝÀ¸·Î Ç¥½Ã
+			// ?????? ?????????, ???????? 1???? ???? ???? ???????? ???
 			if (IsStackableItem(Item.ConsumeType) && Item.ItemNum > 1)
 			{
-				//1°³´ç x ¾Æµ¥³ª : xxx,xxx,xxx
+				//1???? x ????? : xxx,xxx,xxx
 				// AddTooltipItemOption2(2511, 468, true, true, false);
 				AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
 				AddTooltipColorText(GetSystemString(2511) $ " : ", getColor(255,180,0,255), true, true, false);
 				AddTooltipColorText(strAdenaComma $ " " $ GetSystemString(469), AdenaColor, false, true, ,"", 0, 0);
 				//SetTooltipItemColor(AdenaColor.R, AdenaColor.G, AdenaColor.B, 0);
-				////"¾Æµ¥³ª"
+				////"?????"
 				//AddTooltipColorText(GetSystemString(469), AdenaColor, false, true, false, "", 0, 0);
 			}
 			else
 			{
-				//°¡°Ý : xxx,xxx,xxx
+				//???? : xxx,xxx,xxx
 				AddTooltipItemOption(322, strAdenaComma $ " " $ GetSystemString(469), true, true, false,,,,,AdenaColor);
 			}
 			
-			// ÃÑ ÆÇ¸Å°¡°Ý 
+			// ?? ?????? 
 			if (IsStackableItem(Item.ConsumeType) && Item.ItemNum > 1)
 			{
 				strAdena = string(Item.Price * Item.ItemNum);
@@ -1078,14 +1078,14 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				AddTooltipItemOption(2595, strAdenaComma $ " " $ GetSystemString(469), true, true, false,,,,,AdenaColor);
 
 				//SetTooltipItemColor(AdenaColor.R, AdenaColor.G, AdenaColor.B, 0);
-				//"¾Æµ¥³ª"
+				//"?????"
 				//AddTooltipColorText(GetSystemString(469), AdenaColor, false, true);
 			}
 
-			//SimpleTooltipÀ» °¡°Ý±îÁö º¸¿©ÁØ´Ù.
+			//SimpleTooltip?? ??????? ???????.
 			//m_Tooltip.SimpleLineCount++
 			
-			//ÀÐ¾îÁÖ±â ½ºÆ®¸µ
+			//?¬à???? ?????
 			if (Item.Price>0)
 			{
 				// m_Tooltip.SimpleLineCount = 3;
@@ -1094,24 +1094,24 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			}
 		}	
 		
-		//InventoryPrice1 Å¸ÀÔ
+		//InventoryPrice1 ???
 		if ((TooltipType == "InventoryPrice1" || TooltipType == "InventoryPrice1HideEnchant" || TooltipType == "InventoryPrice1HideEnchantStackable") && !Item.bEquipped)
 		{
 			strAdena = String(Item.Price);
 			strAdenaComma = MakeCostString(strAdena);
 			AdenaColor = GetNumericColor(strAdenaComma);
 			
-			//°¡°Ý : xxx,xxx,xxx
+			//???? : xxx,xxx,xxx
 			AddTooltipItemOption(322, strAdenaComma $ " " $ GetSystemString(469), true, true, false);
 			//SetTooltipItemColor(AdenaColor.R, AdenaColor.G, AdenaColor.B, 0);
 			
-			//"¾Æµ¥³ª"
+			//"?????"
 			//AddTooltipColorText(GetSystemString(469), AdenaColor, false, true);
 
-			//SimpleTooltipÀ» °¡°Ý±îÁö º¸¿©ÁØ´Ù.
+			//SimpleTooltip?? ??????? ???????.
 			m_Tooltip.SimpleLineCount = 3 + nSimpleLineCountAdd;
 			
-			//ÀÐ¾îÁÖ±â ½ºÆ®¸µ
+			//?¬à???? ?????
 			if (Item.Price>0)
 			{
 				m_Tooltip.SimpleLineCount = 4 + nSimpleLineCountAdd;
@@ -1121,7 +1121,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 		}
 		
 
-		//InventoryPrice2 Å¸ÀÔ, °³ÀÎ»óÁ¡ ±¸¸Åµî
+		//InventoryPrice2 ???, ???¥ë??? ?????
 		if (TooltipType == "InventoryPrice2"
 			|| TooltipType == "InventoryPrice2PrivateShop")
 		{
@@ -1129,49 +1129,49 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			strAdenaComma = MakeCostString(strAdena);
 			AdenaColor = GetNumericColor(strAdenaComma);
 			
-			//°¡°Ý : 1°³´ç
+			//???? : 1????
 			AddTooltipItemOption2(322, 468, true, true, false);
 			SetTooltipItemColor(AdenaColor.R, AdenaColor.G, AdenaColor.B, 0);
 			
-			//"¾Æµ¥³ª"
+			//"?????"
 			//"xxx,xxx,xxx "
 			AddTooltipColorText(" " $ strAdenaComma $ " " $ GetSystemString(469), AdenaColor, false, true,,,,TOOLTIP_LINE_HGAP);
 			
-			//SimpleTooltipÀ» °¡°Ý±îÁö º¸¿©ÁØ´Ù.
+			//SimpleTooltip?? ??????? ???????.
 			m_Tooltip.SimpleLineCount = 3 + nSimpleLineCountAdd;
 			
-			//ÀÐ¾îÁÖ±â ½ºÆ®¸µ
+			//?¬à???? ?????
 			if (Item.Price>0)
 			{
 				m_Tooltip.SimpleLineCount = 4 + nSimpleLineCountAdd;
 				//"("
 				AddTooltipColorText("(", AdenaColor, true, true);
-				//"1°³´ç"
+				//"1????"
 				AddTooltipColorText(GetSystemString(468), AdenaColor, false, true);
 				//")"
 				AddTooltipColorText(" " $ ConvertNumToText(strAdena) $ ")", AdenaColor, false, true);
 			}
 		}
 		
-		//InventoryPrice2PrivateShop Å¸ÀÔ
+		//InventoryPrice2PrivateShop ???
 		if (TooltipType == "InventoryPrice2PrivateShop")
 		{
 			if (IsStackableItem(Item.ConsumeType) && Item.Reserved64 > 0)
 			{
-				//"±¸¸Å°³¼ö : xx"
+				//"??????? : xx"
 				AddTooltipItemOption(808, String(Item.Reserved64), true, true, false);
 			}
 		}
 
 
-		// ¾ÆÀÌÅÛ ºÀÀÎ »óÅÂ 
+		// ?????? ???? ???? 
 		if ( item.bSecurityLock )
 		{
 			AddTooltipColorText(GetSystemString(3775),  getInstanceL2Util().HotPink, true, true,,"chatFontSize12",,TOOLTIP_LINE_HGAP);
 		}
 
 		/////////////////////////////////////////////////////////////////////////////////////////
-		// ¾ÆÀÌÅÛ¿¡ µû¸¥ °¢Á¾ Á¤º¸
+		// ??????? ???? ???? ????
 		SlotString = ""; //branch 111109
 		SlotString = GetSlotTypeString(Item.ItemType, Item.SlotBitType, Item.ArmorType);
 		//Debug(">>>>" $ string(eItemType) $ "::" $ ItemName @ SlotString);
@@ -1186,10 +1186,10 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			//	AddTooltipItemOption(0, strTmp $ " / " $ SlotString, false, true, false);
 			//}
 			
-			//ºó°ø°£
+			//?????
 			//AddTooltipItemBlank(6);
 			
-			//"[¹«±â Á¦¿ø]"
+			//"[???? ????]"
 			//AddTooltipItemOption(1489, "", true, false, false);
 			// SetTooltipItemColor(255, 255, 255, 0);			
 
@@ -1197,31 +1197,31 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 
 			//Physical Damage
 			//AddTooltipItemOption(94, String(GetPhysicalDamage(Item.WeaponType, Item.SlotBitType, Item.CrystalType, Item.Enchanted, Item.pAttack, Item.Attribution)), true, true, false);
-			//°ø°Ý·Â(:10)
+			//?????(:10)
 
 			if( rValue.PhysicalDamage != 0 )
 			{					
 				AddTooltipItemOption( 94, string( GetPhysicalDamage(Item.WeaponType, Item.SlotBitType, Item.CrystalType, Item.Enchanted, Item.pAttack, Item.Attribution) + rValue.PhysicalDamage),
 										  true, true, false, "chatFontSize12", 0, 0, getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 	
-				// (50 + 54)    <-- (±âº»°ø°Ý·Â + ÀÎÃ¦Æ®º¸³Ê½º°ø°Ý·Â)
+				// (50 + 54)    <-- (??????? + ??©¡???????????)
 				AddTooltipItemBonus(Item.pAttack, nEnchantedPhysicalDamageBonus, 0, 7);
 			}
 			else
 			{
-				//°ø°Ý·Â[¹°¸® µ¥¹ÌÁö]
+				//?????[???? ??????]
 				if( Item.pAttack != 0 )
 				{
 					AddTooltipItemOption(94, string( GetPhysicalDamage(Item.WeaponType, Item.SlotBitType, Item.CrystalType, Item.Enchanted, Item.pAttack, Item.Attribution) ), true, true, false, "chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 
-					// (50 + 54)    <-- (±âº»°ø°Ý·Â + ÀÎÃ¦Æ®º¸³Ê½º°ø°Ý·Â)
+					// (50 + 54)    <-- (??????? + ??©¡???????????)
 					AddTooltipItemBonus(Item.pAttack, nEnchantedPhysicalDamageBonus, 0, 7);
 				}
 			}
 
 			//Masical Damage
 			//AddTooltipItemOption(98, String(GetMagicalDamage(Item.WeaponType, Item.SlotBitType, Item.CrystalType, Item.Enchanted, Item.mAttack, Item.Attribution)), true, true, false);						
-			//¸¶¹ý °ø°Ý·Â(  : 10 )
+			//???? ?????(  : 10 )
 
 			if( rValue.MagicalDamage != 0 )
 			{	
@@ -1233,7 +1233,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			}
 			else
 			{
-				//¸¶¹ý·Â[¸¶¹ý µ¥ÀÌÁö]
+				//??????[???? ??????]
 				if( Item.mAttack != 0 )
 				{
 					AddTooltipItemOption(98, string( GetMagicalDamage(Item.WeaponType, Item.SlotBitType, Item.CrystalType, Item.Enchanted, Item.mAttack, Item.Attribution) ), true, true, false, "chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
@@ -1244,88 +1244,88 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			//Attack Speed
 			AddTooltipItemOption(111, GetAttackSpeedString(Item.pAttackSpeed), true, true, false);
  
-			//Ãß°¡!!!!!!!!!!!!!!!!!!
-			//¹æ¾î·Â[¹°¸®¹æ¾î]			
+			//???!!!!!!!!!!!!!!!!!!
+			//????[???????]			
 			if( Item.pDefense > 0 )
 			{
 				AddTooltipItemOption(54, string( Item.pDefense ), true, true, false, "chatFontSize12",0, 0, getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 			}
 				
-			//¸¶¹ý¹æ¾î[¸¶¹ýÀúÇ×]
+			//???????[????????]
 			if( Item.mDefense > 0 )	
 			{
 				AddTooltipItemOption(99, string( Item.mDefense ), true, true, false);
 			}
 
-			//¸íÁß
+			//????
 			if( Item.pHitRate + rValue.PhysicalHitRate != 0 )
 				AddTooltipItemOption(96, string( Item.pHitRate + rValue.PhysicalHitRate ), true, true, false);
-				//¹°¸®¸íÁß
+				//????????
 				//AddTooltipItemOption(2360, string( Item.pHitRate + rValue.PhysicalHitRate ), true, true, false);
 
-			//Å©¸®Æ¼ÄÃ
+			//??????
 			if( Item.pCriRate + rValue.PhysicalCriRate > 0 )
 				AddTooltipItemOption(113, string( Item.pCriRate + rValue.PhysicalCriRate ), true, true, false);
-				//¹°¸®Å©¸®Æ¼ÄÃ
+				//??????????
 				//AddTooltipItemOption(2362, string( Item.pCriRate + rValue.PhysicalCriRate ), true, true, false);
 
-			//ÀÌµ¿¼Óµµ
+			//??????
 			if( Item.MoveSpeed + rValue.MoveSpeed != 0 )
 				AddTooltipItemOption(432, string( Item.MoveSpeed + rValue.MoveSpeed ), true, true, false);
 
-			//¹æ¾î·Â(¹æÆÐ)			
+			//????(????)			
 			if( Item.ShieldDefense > 0 )
 			{
 				AddTooltipItemOption(95, string( Item.ShieldDefense ), true, true, false, "chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 			}
 
-			//¹æ¾î¼º°ø
+			//?????
 			if( Item.ShieldDefenseRate > 0 )
 				AddTooltipItemOption(317, string( Item.ShieldDefenseRate ), true, true, false);
 
-			//¹°¸®È¸ÇÇ
+			//???????
 			if( Item.pAvoid + rValue.PhysicalAvoid > 0 )
 				AddTooltipItemOption(2361, string( Item.pAvoid + rValue.PhysicalAvoid ), true, true, false);
 
-			//¸¶¹ýÈ¸ÇÇ
+			//???????
 			if( Item.mAvoid + rValue.MagicalAvoid > 0 )
 				AddTooltipItemOption(2364, string( Item.mAvoid + rValue.MagicalAvoid ), true, true, false);
 
-			//TTP 48614·Î Á¦°Å.
-			//°ø°Ý¼Óµµ[¹°¸®°ø°Ý¼Óµµ] 
+			//TTP 48614?? ????.
+			//??????[??????????] 
 			//if( Item.pAttackSpeed + rValue.PhysicalAttackSpeed > 0 )
 			//	AddTooltipItemOption(111, string( Item.pAttackSpeed + rValue.PhysicalAttackSpeed ), true, true, false);
-			//¸¶¹ýÀûÁß[¸¶¹ý¸íÁß]
+			//????????[????????]
 			//if( Item.mHitRate + rValue.MagicalHitRate > 0 )
 			//	AddTooltipItemOption(2363, string( Item.mHitRate + rValue.MagicalHitRate ), true, true, false);
-			//¸¶¹ýÅ©¸®Æ¼ÄÃ
+			//??????????
 			//if( Item.mCriRate + rValue.MagicalCriRate > 0 )
 			//	AddTooltipItemOption(2365, string( Item.mCriRate ), true, true, false);
 
-			//¸¶¹ý¼Óµµ[¸¶¹ý°ø°Ý¼Óµµ]
+			//???????[??????????]
 			if( Item.mAttackSpeed + rValue.MagicalAttackSpeed > 0 )
 				AddTooltipItemOption(112, string( Item.mAttackSpeed + rValue.MagicalAttackSpeed ), true, true, false);
 
-			// ¸¶¹ý ¹«±âÀÎ°¡?
+			// ???? ????????
 			bMagicWeapon = class'UIDATA_ITEM'.static.IsMagicWeapon(Item.ID);
 
-			//SoulShot Count, Á¤·ÉÅº¼Ò¸ð
+			//SoulShot Count, ????????
 			if (Item.SoulshotCount>0) AddTooltipItemOption(404, "X" $ String(Item.SoulshotCount), true, true, false);
-			//SpiritShot Count, ¸¶Á¤Åº¼Ò¸ð
+			//SpiritShot Count, ????????
 			if (Item.SpiritShotCount>0) AddTooltipItemOption(496, "X" $ String(Item.SpiritshotCount), true, true, false);
 
 			//if ((Item.SoulshotCount>0 || Item.SpiritShotCount>0 ) && !getInstanceUIData().getIsClassicServer() ) 
 			if ((Item.SoulshotCount>0 || Item.SpiritShotCount>0 )) 
 			{
-				// Á¤·ÉÅº ÁõÆø È¿°ú ¼öÄ¡(float)
+				// ????? ???? ??? ???(float)
 				fSoulShotPower   = GetSoulShotPower(Item.CrystalType, Item.Enchanted, Item.weaponType, bMagicWeapon);   
-				// ¸¶Á¤Åº ÁõÆø È¿°ú ¼öÄ¡(float)
+				// ????? ???? ??? ???(float)
 				fSpiritShotPower = GetSpiritShotPower(Item.CrystalType, Item.Enchanted, Item.weaponType, bMagicWeapon);  
 				
-				// Á¤·ÉÅº, ¸¶Á¤Åº Ãß°¡ ´ë¹ÌÁö°¡ °°´Ù¸é ÇÏ³ª·Î Ç¥Çö
+				// ?????, ????? ??? ??????? ????? ????? ???
 				if (fSoulShotPower == fSpiritShotPower)
 				{
-					// 0ÀÌ¸é ±âº»Ä®¶ó, 0º¸´Ù Å©¸é °­Á¶
+					// 0??? ?????, 0???? ??? ????
 					if (fSoulShotPower > 0)
 					{
 						AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
@@ -1333,7 +1333,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 						AddTooltipColorText("+" $ string(fSoulShotPower) $ "%", getColor(238, 170, 34, 255), false, true);							
 					}
 				}
-				// Á¤·ÉÅº, ¸¶Á¤Åº Ãß°¡ ´ë¹ÌÁö°¡ ´Ù¸£¸é 1.4%, 3%  "," ·Î ±¸ºÐÇØ¼­..
+				// ?????, ????? ??? ??????? ????? 1.4%, 3%  "," ?? ???????..
 				else
 				{
 					AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
@@ -1355,7 +1355,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				AddTooltipItemOption(320, String(Item.MpConsume), true, true, false);
 			}
 			
-			//Á¦·ÃÈ¿°ú ¼³¸í
+			//??????? ????
 			AddTooltipRefinery(Item);
 
 		break;
@@ -1366,7 +1366,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			//	AddTooltipItemOption(0, SlotString, false, true, false);
 
 			//setTooltipItemInfo( ItemValue, item, eItemType );
-			//Debug("¾Æ¸Ó" @ Item.SlotBitType @ IsMagicalArmor(Item.ID));
+			//Debug("???" @ Item.SlotBitType @ IsMagicalArmor(Item.ID));
 			
 			// Sheild
 			if ( Item.SlotBitType == 256 && Item.ArmorType == 4 ) // ArmorType == 4 is sigil.. 
@@ -1374,7 +1374,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				//if (Len(SlotString)>0)
 				//	AddTooltipItemOption(0, SlotString, false, true, false);
 	
-				//¹æ¾î·Â[¹°¸®¹æ¾î]
+				//????[???????]
 				if (Item.pDefense != 0)
 				{
 					AddTooltipItemOption(95, String(GetPhysicalDefense(Item.CrystalType, Item.Enchanted, Item.pDefense, Item.Attribution)), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
@@ -1382,64 +1382,64 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				}
 
 				//Avoid Modify
-				//¹°¸®È¸ÇÇ( ¹°¸®È¸ÇÇ : 10 )
+				//???????( ??????? : 10 )
 				if( rValue.PhysicalAvoid != 0 )
 				{	
 					AddTooltipItemOption( 2361, string( Item.pAvoid + rValue.PhysicalAvoid ), true, true, false);
 				}
 				else
 				{
-					//¹°¸®È¸ÇÇ
+					//???????
 					if( Item.pAvoid != 0 )
 						AddTooltipItemOption(2361, string( Item.pAvoid ), true, true, false);
 				}
-				//Ãß°¡!!!!
-				//°ø°Ý·Â[¹°¸® µ¥¹ÌÁö]
+				//???!!!!
+				//?????[???? ??????]
 				if( Item.pAttack + rValue.PhysicalDamage > 0 )
 					AddTooltipItemOption(94, string( Item.pAttack + rValue.PhysicalDamage ), true, true, false);		
-				//¸¶¹ý·Â[¸¶¹ý µ¥ÀÌÁö]
+				//??????[???? ??????]
 				if( Item.mAttack + rValue.MagicalDamage > 0 )
 					AddTooltipItemOption(98, string( Item.mAttack + rValue.MagicalDamage ), true, true, false);	
-				//¸¶¹ý¼Óµµ[¸¶¹ý°ø°Ý¼Óµµ]
+				//???????[??????????]
 				if( Item.mAttackSpeed + rValue.MagicalAttackSpeed > 0 )
 					AddTooltipItemOption(112, string( Item.mAttackSpeed + rValue.MagicalAttackSpeed ), true, true, false);
-				//¹°¸®¸íÁß
+				//????????
 				if( Item.pHitRate + rValue.PhysicalHitRate > 0 )
 					AddTooltipItemOption(2360, string( Item.pHitRate + rValue.PhysicalHitRate ), true, true, false);
-				//¸¶¹ýÀûÁß[¸¶¹ý¸íÁß]
+				//????????[????????]
 				if( Item.mHitRate + rValue.MagicalHitRate > 0 )
 					AddTooltipItemOption(2363, string( Item.mHitRate + rValue.MagicalHitRate ), true, true, false);
-				//¹°¸®Å©¸®Æ¼ÄÃ
+				//??????????
 				if( Item.pCriRate + rValue.PhysicalCriRate > 0 )
 					AddTooltipItemOption(2362, string( Item.pCriRate + rValue.PhysicalCriRate ), true, true, false);
-				//¸¶¹ýÅ©¸®Æ¼ÄÃ
+				//??????????
 				if( Item.mCriRate + rValue.MagicalCriRate > 0 )
 					AddTooltipItemOption(2365, string( Item.mCriRate + rValue.MagicalCriRate ), true, true, false);
-				//ÀÌµ¿¼Óµµ
+				//??????
 				if( Item.MoveSpeed + rValue.MoveSpeed != 0 )
 					AddTooltipItemOption(432, string( Item.MoveSpeed + rValue.MoveSpeed ), true, true, false);
 
-				//¹æ¾î·Â
+				//????
 				if( Item.ShieldDefense > 0 )
 				{
 					AddTooltipItemOption(95, string( Item.ShieldDefense ), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);	
 				}
-				//¹æ¾î¼º°ø
+				//?????
 				if( Item.ShieldDefenseRate > 0 )
 					AddTooltipItemOption(317, string( Item.ShieldDefenseRate ), true, true, false);
-				//¹°¸®È¸ÇÇ
+				//???????
 				if( Item.pAvoid + rValue.PhysicalAvoid > 0 )
 					AddTooltipItemOption(2361, string( Item.pAvoid + rValue.PhysicalAvoid ), true, true, false);
-				//¸¶¹ýÈ¸ÇÇ
+				//???????
 				if( Item.mAvoid + rValue.MagicalAvoid > 0 )
 					AddTooltipItemOption(2364, string( Item.mAvoid + rValue.MagicalAvoid ), true, true, false);
-				//¸¶¹ý¹æ¾î[¸¶¹ýÀúÇ×]
+				//???????[????????]
 				
 				if( Item.mDefense > 0 )			
 					AddTooltipItemOption(99, string( int ( Item.mDefense ) ), true, true, false);
 
-				//TTP 48614·Î Á¦°Å.
-				//°ø°Ý¼Óµµ[¹°¸®°ø°Ý¼Óµµ]
+				//TTP 48614?? ????.
+				//??????[??????????]
 				//if( Item.pAttackSpeed + rValue.PhysicalAttackSpeed > 0 )
 				//	AddTooltipItemOption(111, string( Item.pAttackSpeed + rValue.PhysicalAttackSpeed ), true, true, false);
 
@@ -1447,14 +1447,14 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				if (Item.Weight != 0)
 					AddTooltipItemOption(52, String(Item.Weight), true, true, false);
 			}
-			// Àå°©
+			// ??
 			else if (Item.SlotBitType == 256 || Item.SlotBitType == 128)	//SBT_LHAND or SBT_RHAND
 			{
 				//if (Len(SlotString)>0)
 				//	AddTooltipItemOption(0, SlotString, false, true, false);
 
 				//Shield Defense
-				//¹æ¾î·Â
+				//????
 				if( Item.ShieldDefense != 0 )
 				{
 					AddTooltipItemOption(95, string( GetShieldDefense(Item.CrystalType, Item.Enchanted, Item.ShieldDefense, Item.Attribution) ), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
@@ -1463,63 +1463,63 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				//Avoid Modify
 				//if (Item.pAvoid != 0)
 				//AddTooltipItemOption(97, String(Item.pAvoid), true, true, false);
-				//¹°¸®È¸ÇÇ( ¹°¸®È¸ÇÇ : 10 )
+				//???????( ??????? : 10 )
 				if( rValue.PhysicalAvoid != 0 )
 				{	
 					AddTooltipItemOption( 2361, string( Item.pAvoid + rValue.PhysicalAvoid ), true, true, false);
 				}
 				else
 				{
-					//¹°¸®È¸ÇÇ
+					//???????
 					if( Item.pAvoid != 0 )
 						AddTooltipItemOption(2361, string( Item.pAvoid ), true, true, false);
 				}
-				//Ãß°¡!!!!
-				//¹æ¾î·Â[¹°¸®¹æ¾î]
+				//???!!!!
+				//????[???????]
 				if( Item.pDefense >0 )
 				{
 					AddTooltipItemOption(54, string( Item.pDefense ), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);	
 				}
-				//¸¶¹ý¹æ¾î[¸¶¹ýÀúÇ×]
+				//???????[????????]
 				if( Item.mDefense > 0 )
 				{
 					AddTooltipItemOption(99, string( int ( Item.mDefense )), true, true, false);
 				}
-				//°ø°Ý·Â[¹°¸® µ¥¹ÌÁö]
+				//?????[???? ??????]
 				if( Item.pAttack + rValue.PhysicalDamage > 0 )
 					AddTooltipItemOption(94, string( Item.pAttack + rValue.PhysicalDamage ), true, true, false);		
-				//¸¶¹ý·Â[¸¶¹ý µ¥ÀÌÁö]
+				//??????[???? ??????]
 				if( Item.mAttack + rValue.MagicalDamage > 0 )
 					AddTooltipItemOption(98, string( Item.mAttack + rValue.MagicalDamage ), true, true, false);	
-				//¸¶¹ý¼Óµµ[¸¶¹ý°ø°Ý¼Óµµ]
+				//???????[??????????]
 				if( Item.mAttackSpeed + rValue.MagicalAttackSpeed > 0 )
 					AddTooltipItemOption(112, string( Item.mAttackSpeed + rValue.MagicalAttackSpeed ), true, true, false);
-				//¹°¸®¸íÁß
+				//????????
 				if( Item.pHitRate + rValue.PhysicalHitRate > 0 )
 					AddTooltipItemOption(2360, string( Item.pHitRate + rValue.PhysicalHitRate ), true, true, false);
-				//¸¶¹ýÀûÁß[¸¶¹ý¸íÁß]
+				//????????[????????]
 				if( Item.mHitRate + rValue.MagicalHitRate > 0 )
 					AddTooltipItemOption(2363, string( Item.mHitRate + rValue.MagicalHitRate ), true, true, false);
-				//¹°¸®Å©¸®Æ¼ÄÃ
+				//??????????
 				if( Item.pCriRate + rValue.PhysicalCriRate > 0 )
 					AddTooltipItemOption(2362, string( Item.pCriRate + rValue.PhysicalCriRate ), true, true, false);
-				//¸¶¹ýÅ©¸®Æ¼ÄÃ
+				//??????????
 				if( Item.mCriRate + rValue.MagicalCriRate > 0 )
 					AddTooltipItemOption(2365, string( Item.mCriRate + rValue.MagicalCriRate ), true, true, false);
-				//ÀÌµ¿¼Óµµ
+				//??????
 				if( Item.MoveSpeed + rValue.MoveSpeed != 0 )
 					AddTooltipItemOption(432, string( Item.MoveSpeed + rValue.MoveSpeed ), true, true, false);
-				//¹æ¾î¼º°ø
+				//?????
 				if( Item.ShieldDefenseRate > 0 )
 					AddTooltipItemOption(317, string( Item.ShieldDefenseRate ), true, true, false);
-				//¹°¸®È¸ÇÇ
+				//???????
 				if( Item.pAvoid + rValue.PhysicalAvoid > 0 )
 					AddTooltipItemOption(2361, string( Item.pAvoid + rValue.PhysicalAvoid ), true, true, false);
-				//¸¶¹ýÈ¸ÇÇ
+				//???????
 				if( Item.mAvoid + rValue.MagicalAvoid > 0 )
 					AddTooltipItemOption(2364, string( Item.mAvoid + rValue.MagicalAvoid ), true, true, false);
-				//TTP 48614·Î Á¦°Å.
-				//°ø°Ý¼Óµµ[¹°¸®°ø°Ý¼Óµµ]
+				//TTP 48614?? ????.
+				//??????[??????????]
 				//if( Item.pAttackSpeed + rValue.PhysicalAttackSpeed > 0 )
 				//	AddTooltipItemOption(111, string( Item.pAttackSpeed + rValue.PhysicalAttackSpeed ), true, true, false);
 
@@ -1541,9 +1541,9 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 					AddTooltipItemOption(388, String(Item.MpBonus), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 				
 				//Physical Defense
-				if (Item.SlotBitType == 65536 || Item.SlotBitType == 524288 || Item.SlotBitType == 262144 ) //½½·Ô ºñÆ® Å¸ÀÔÀÌ Çì¾î ¾Ç¼¼»ç¸® À­, µÑ´Ù, ¾Æ·¡ ÀÏ °æ¿ì 
+				if (Item.SlotBitType == 65536 || Item.SlotBitType == 524288 || Item.SlotBitType == 262144 ) //???? ??? ????? ??? ????õê ??, ???, ??? ?? ??? 
 				{
-					//Çì¾î ¾Ç¼¼»ç¸® ÀÎÃ¾Æ® µÈ ¹æ¾î·Â Ç¥½Ã
+					//??? ????õê ??©­? ?? ???? ???
 					if ( GetPhysicalDefense(Item.CrystalType, Item.Enchanted, Item.pDefense, Item.Attribution) != 0 )
 					{
 						AddTooltipItemOption(95, String(GetPhysicalDefense(Item.CrystalType, Item.Enchanted, Item.pDefense, Item.Attribution)), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);					
@@ -1552,64 +1552,64 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				}
 				else
 				{
-					//¹æ¾î·Â[¹°¸®¹æ¾î]
+					//????[???????]
 					if (Item.pDefense != 0)
 					{
-						// Debug("¹°¸®¹æ¾î "@ String(GetPhysicalDefense(Item.CrystalType, Item.Enchanted, Item.pDefense, Item.Attribution)));
+						// Debug("??????? "@ String(GetPhysicalDefense(Item.CrystalType, Item.Enchanted, Item.pDefense, Item.Attribution)));
 						AddTooltipItemOption(95, String(GetPhysicalDefense(Item.CrystalType, Item.Enchanted, Item.pDefense, Item.Attribution)), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);	
 						AddTooltipItemBonus(Item.pDefense, nEnchantedPhysicalDefenseBonus, 0, 7);
 					}
-					//¸¶¹ý¹æ¾î[¸¶¹ýÀúÇ×]
+					//???????[????????]
 					if( Item.mDefense > 0 )
 					{
-						// Debug("¸¶¹ýÀúÇ× "@ String(GetMagicalDefense(Item.CrystalType, Item.Enchanted, Item.mDefense, Item.Attribution)));
+						// Debug("???????? "@ String(GetMagicalDefense(Item.CrystalType, Item.Enchanted, Item.mDefense, Item.Attribution)));
 						AddTooltipItemOption(99, string( int ( Item.mDefense )), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 					}
-					//Ãß°¡!!!!
-					//°ø°Ý·Â[¹°¸® µ¥¹ÌÁö]
+					//???!!!!
+					//?????[???? ??????]
 					if( Item.pAttack + rValue.PhysicalDamage > 0 )
 						AddTooltipItemOption(94, string( Item.pAttack + rValue.PhysicalDamage ), true, true, false);		
-					//¸¶¹ý·Â[¸¶¹ý µ¥ÀÌÁö]
+					//??????[???? ??????]
 					if( Item.mAttack + rValue.MagicalDamage > 0 )
 						AddTooltipItemOption(98, string( Item.mAttack + rValue.MagicalDamage ), true, true, false);	
-					//¸¶¹ý¼Óµµ[¸¶¹ý°ø°Ý¼Óµµ]
+					//???????[??????????]
 					if( Item.mAttackSpeed + rValue.MagicalAttackSpeed > 0 )
 						AddTooltipItemOption(112, string( Item.mAttackSpeed + rValue.MagicalAttackSpeed ), true, true, false);
-					//¹°¸®¸íÁß
+					//????????
 					if( Item.pHitRate + rValue.PhysicalHitRate > 0 )
 						AddTooltipItemOption(2360, string( Item.pHitRate + rValue.PhysicalHitRate ), true, true, false);
-					//¸¶¹ýÀûÁß[¸¶¹ý¸íÁß]
+					//????????[????????]
 					if( Item.mHitRate + rValue.MagicalHitRate > 0 )
 						AddTooltipItemOption(2363, string( Item.mHitRate + rValue.MagicalHitRate ), true, true, false);
-					//¹°¸®Å©¸®Æ¼ÄÃ
+					//??????????
 					if( Item.pCriRate + rValue.PhysicalCriRate > 0 )
 						AddTooltipItemOption(2362, string( Item.pCriRate + rValue.PhysicalCriRate ), true, true, false);
-					//¸¶¹ýÅ©¸®Æ¼ÄÃ
+					//??????????
 					if( Item.mCriRate + rValue.MagicalCriRate > 0 )
 						AddTooltipItemOption(2365, string( Item.mCriRate + rValue.MagicalCriRate ), true, true, false);
-					//ÀÌµ¿¼Óµµ
+					//??????
 					if( Item.MoveSpeed + rValue.MoveSpeed != 0 )
 						AddTooltipItemOption(432, string( Item.MoveSpeed + rValue.MoveSpeed ), true, true, false);
-					//¹æ¾î¼º°ø
+					//?????
 					if( Item.ShieldDefenseRate > 0 )
 						AddTooltipItemOption(317, string( Item.ShieldDefenseRate ), true, true, false);
-					//¹°¸®È¸ÇÇ
+					//???????
 					if( Item.pAvoid + rValue.PhysicalAvoid > 0 )
 						AddTooltipItemOption(2361, string( Item.pAvoid + rValue.PhysicalAvoid ), true, true, false);
-					//¸¶¹ýÈ¸ÇÇ
+					//???????
 					if( Item.mAvoid + rValue.MagicalAvoid > 0 )
 						AddTooltipItemOption(2364, string( Item.mAvoid + rValue.MagicalAvoid ), true, true, false);
-					//¹æ¾î·Â
+					//????
 					if( Item.ShieldDefense > 0 )
 					{
 						AddTooltipItemOption(95, string( Item.ShieldDefense ), true, true, false);
 					}
 
-					//¹æ¾î¼º°ø
+					//?????
 					if( Item.ShieldDefenseRate > 0 )
 						AddTooltipItemOption(317, string( Item.ShieldDefenseRate ), true, true, false);
-					//TTP 48614·Î Á¦°Å.
-					//°ø°Ý¼Óµµ[¹°¸®°ø°Ý¼Óµµ]
+					//TTP 48614?? ????.
+					//??????[??????????]
 					//if( Item.pAttackSpeed + rValue.PhysicalAttackSpeed > 0 )
 					//	AddTooltipItemOption(111, string( Item.pAttackSpeed + rValue.PhysicalAttackSpeed ), true, true, false);
 				}
@@ -1628,9 +1628,9 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				//	AddTooltipItemOption(0, SlotString, false, true, false);
 				
 				//Physical Defense
-				if (Item.SlotBitType == 65536 || Item.SlotBitType == 524288 || Item.SlotBitType == 262144 ) //½½·Ô ºñÆ® Å¸ÀÔÀÌ Çì¾î ¾Ç¼¼»ç¸® À­, µÑ´Ù, ¾Æ·¡ ÀÏ °æ¿ì 
+				if (Item.SlotBitType == 65536 || Item.SlotBitType == 524288 || Item.SlotBitType == 262144 ) //???? ??? ????? ??? ????õê ??, ???, ??? ?? ??? 
 				{
-					//Çì¾î ¾Ç¼¼»ç¸® ÀÎÃ¾Æ® µÈ ¹æ¾î·Â Ç¥½Ã
+					//??? ????õê ??©­? ?? ???? ???
 					if ( GetPhysicalDefense(Item.CrystalType, Item.Enchanted, Item.pDefense, Item.Attribution) != 0 )					
 					{
 						AddTooltipItemOption(95, String(GetPhysicalDefense(Item.CrystalType, Item.Enchanted, Item.pDefense, Item.Attribution)), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);					
@@ -1639,62 +1639,62 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				}				
 				else
 				{
-					//¹æ¾î·Â[¹°¸®¹æ¾î]
+					//????[???????]
 					if (Item.pDefense != 0)
 					{
 						AddTooltipItemOption(95, String(GetPhysicalDefense(Item.CrystalType, Item.Enchanted, Item.pDefense, Item.Attribution)), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 						AddTooltipItemBonus(Item.pDefense, nEnchantedPhysicalDefenseBonus, 0, 7);
 					}
-					//¸¶¹ý¹æ¾î[¸¶¹ýÀúÇ×]
+					//???????[????????]
 					if( Item.mDefense > 0 )
 					{
 						AddTooltipItemOption(99, string( int (Item.mDefense) ), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 					}
 
-					//Ãß°¡!!!!
-					//°ø°Ý·Â[¹°¸® µ¥¹ÌÁö]
+					//???!!!!
+					//?????[???? ??????]
 					if( Item.pAttack + rValue.PhysicalDamage > 0 )
 						AddTooltipItemOption(94, string( Item.pAttack + rValue.PhysicalDamage ), true, true, false);		
-					//¸¶¹ý·Â[¸¶¹ý µ¥ÀÌÁö]
+					//??????[???? ??????]
 					if( Item.mAttack + rValue.MagicalDamage > 0 )
 						AddTooltipItemOption(98, string( Item.mAttack + rValue.MagicalDamage ), true, true, false);	
-					//¸¶¹ý¼Óµµ[¸¶¹ý°ø°Ý¼Óµµ]
+					//???????[??????????]
 					if( Item.mAttackSpeed + rValue.MagicalAttackSpeed > 0 )
 						AddTooltipItemOption(112, string( Item.mAttackSpeed + rValue.MagicalAttackSpeed ), true, true, false);
-					//¹°¸®¸íÁß
+					//????????
 					if( Item.pHitRate + rValue.PhysicalHitRate > 0 )
 						AddTooltipItemOption(2360, string( Item.pHitRate + rValue.PhysicalHitRate ), true, true, false);
-					//¸¶¹ýÀûÁß[¸¶¹ý¸íÁß]
+					//????????[????????]
 					if( Item.mHitRate + rValue.MagicalHitRate > 0 )
 						AddTooltipItemOption(2363, string( Item.mHitRate + rValue.MagicalHitRate ), true, true, false);
-					//¹°¸®Å©¸®Æ¼ÄÃ
+					//??????????
 					if( Item.pCriRate + rValue.PhysicalCriRate > 0 )
 						AddTooltipItemOption(2362, string( Item.pCriRate + rValue.PhysicalCriRate ), true, true, false);
-					//¸¶¹ýÅ©¸®Æ¼ÄÃ
+					//??????????
 					if( Item.mCriRate + rValue.MagicalCriRate > 0 )
 						AddTooltipItemOption(2365, string( Item.mCriRate + rValue.MagicalCriRate ), true, true, false);
-					//ÀÌµ¿¼Óµµ
+					//??????
 					if( Item.MoveSpeed + rValue.MoveSpeed != 0 )
 						AddTooltipItemOption(432, string( Item.MoveSpeed + rValue.MoveSpeed ), true, true, false);
-					//¹æ¾î¼º°ø
+					//?????
 					if( Item.ShieldDefenseRate > 0 )
 						AddTooltipItemOption(317, string( Item.ShieldDefenseRate ), true, true, false);
-					//¹°¸®È¸ÇÇ
+					//???????
 					if( Item.pAvoid + rValue.PhysicalAvoid > 0 )
 						AddTooltipItemOption(2361, string( Item.pAvoid + rValue.PhysicalAvoid ), true, true, false);
-					//¸¶¹ýÈ¸ÇÇ
+					//???????
 					if( Item.mAvoid + rValue.MagicalAvoid > 0 )
 						AddTooltipItemOption(2364, string( Item.mAvoid + rValue.MagicalAvoid ), true, true, false);
-					//¹æ¾î·Â
+					//????
 					if( Item.ShieldDefense > 0 )
 					{
 						AddTooltipItemOption(95, string( Item.ShieldDefense ), true, true, false);	
 					}
-					//¹æ¾î¼º°ø
+					//?????
 					if( Item.ShieldDefenseRate > 0 )
 						AddTooltipItemOption(317, string( Item.ShieldDefenseRate ), true, true, false);
-					//TTP 48614·Î Á¦°Å.
-					//°ø°Ý¼Óµµ[¹°¸®°ø°Ý¼Óµµ]
+					//TTP 48614?? ????.
+					//??????[??????????]
 					//if( Item.pAttackSpeed + rValue.PhysicalAttackSpeed > 0 )
 					//	AddTooltipItemOption(111, string( Item.pAttackSpeed + rValue.PhysicalAttackSpeed ), true, true, false);
 				}
@@ -1703,7 +1703,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 					AddTooltipItemOption(52, String(Item.Weight), true, true, false);
 			}			
 
-			//Á¦·ÃÈ¿°ú ¼³¸í, ¹æ¾î±¸´Â Á¦·ÃÀÌ ÇöÀç ¾ÈµÇ´Â °É·Î ¾Ë°í ÀÖÀ½, ÄÚµå°¡ ±âÁ¸¿¡ ÀÖ¾ú¾î¼­ ³²°Ü³õÀ½.
+			//??????? ????, ????? ?????? ???? ???? ??? ??? ????, ??? ?????? ????? ???????.
 			AddTooltipRefinery(Item);
 		break;
 		
@@ -1720,19 +1720,19 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			}
 		
 			//Magical Defense
-			// Å»¸®½º¸¸Àº ¾ÆÀÌÅÛ ¸¶¹æÀ» º¸¿©ÁÖÁö ¾Ê´Â´Ù.
-			// ¿ÞÆÈÂî ¿À¸¥ÆÈÂîµµ ¸¶¹æÀ» º¸¿©ÁÖÁö ¾Ê´Â´Ù. 
-			// Áê¾óµµ ¸¶¹æÀ» º¸¿©ÁÖÁö ¾Ê´Â´Ù.
+			// ????????? ?????? ?????? ???????? ??¢¥?.
+			// ?????? ???????? ?????? ???????? ??¢¥?. 
+			// ??? ?????? ???????? ??¢¥?.
 			//Debug( Item.CrystalType @  String(GetMagicalDefense(Item.CrystalType, Item.Enchanted, Item.mDefense, Item.Attribution) ));
-			//Å¬·¡½Ä 
-			// ttp 72362, Å¬·¡½Ä ÀÌ¼ÒÁ¤ ¿äÃ» (ºê·ÎÄ¡ ¾ÆÀÌÅÛ ÅøÆÁ, ¸¶¹ý ÀúÇ×ÀÌ Ç¥½Ã ¾ÈµÇ°Ô)
-			// ¾Æ°¡½Ã¿Â ¾ÆÀÌÅÛµéÀº ¸¶¹ý ÀúÇ×ÀÌ Ç¥½Ã ¾È µÇ°Ô  201612¿ù ¹öÁ¯
+			//????? 
+			// ttp 72362, ????? ????? ??? (???? ?????? ????, ???? ?????? ??? ????)
+			// ?????? ????????? ???? ?????? ??? ?? ???  201612?? ????
 			if ( getInstanceUIData().getIsClassicServer() ) 
 			{
 				// (Item.SlotBitType != int64("206158430208")) &&
-				if(  ( Item.SlotBitType != 536870912) && (Item.SlotBitType != 1073741824 ) &&  (Item.SlotBitType != 4194304 ) && (Item.SlotBitType != 1048576 ) && (Item.SlotBitType != 2097152 ) ) //&& Item.CrystalType > 0) //branch 111109 > ÇØ¿Ü ÆÀÀÌ ¼öÁ¤ ÇßÀ¸³ª, ¹«±Þ ¾ÆÀÌÅÛ ¹æ¾î·ÂÀÌ Ç¥½Ã µÇÁö ¾ÊÀ¸¹Ç·Î ¼öÁ¤
+				if(  ( Item.SlotBitType != 536870912) && (Item.SlotBitType != 1073741824 ) &&  (Item.SlotBitType != 4194304 ) && (Item.SlotBitType != 1048576 ) && (Item.SlotBitType != 2097152 ) ) //&& Item.CrystalType > 0) //branch 111109 > ??? ???? ???? ??????, ???? ?????? ?????? ??? ???? ??????? ????
 				{
-					// ¸¶¹ý ÀúÇ×·ÂÀÌ 0º¸´Ù Å« °æ¿ì¸¸ Ç¥½Ã 
+					// ???? ??????? 0???? ? ??¯I ??? 
 					if ( GetMagicalDefense(Item.CrystalType, Item.Enchanted, Item.mDefense, Item.Attribution) > 0 )  AddTooltipItemOption(99, String(GetMagicalDefense(Item.CrystalType, Item.Enchanted, Item.mDefense, Item.Attribution)), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);				
 					AddTooltipItemBonus(Item.mDefense, nEnchantedMagicalDefenseBonus, 0, 7);
 				}
@@ -1740,9 +1740,9 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			else
 			{
 				//(Item.SlotBitType != int64("206158430208")) &&
-				if(  (Item.SlotBitType != 1073741824 ) &&  (Item.SlotBitType != 4194304 ) && (Item.SlotBitType != 1048576 ) && (Item.SlotBitType != 2097152 ) ) //&& Item.CrystalType > 0) //branch 111109 > ÇØ¿Ü ÆÀÀÌ ¼öÁ¤ ÇßÀ¸³ª, ¹«±Þ ¾ÆÀÌÅÛ ¹æ¾î·ÂÀÌ Ç¥½Ã µÇÁö ¾ÊÀ¸¹Ç·Î ¼öÁ¤
+				if(  (Item.SlotBitType != 1073741824 ) &&  (Item.SlotBitType != 4194304 ) && (Item.SlotBitType != 1048576 ) && (Item.SlotBitType != 2097152 ) ) //&& Item.CrystalType > 0) //branch 111109 > ??? ???? ???? ??????, ???? ?????? ?????? ??? ???? ??????? ????
 				{
-					// ¸¶¹ý ÀúÇ×·ÂÀÌ 0º¸´Ù Å« °æ¿ì¸¸ Ç¥½Ã 
+					// ???? ??????? 0???? ? ??¯I ??? 
 					if ( GetMagicalDefense(Item.CrystalType, Item.Enchanted, Item.mDefense, Item.Attribution) > 0 )  AddTooltipItemOption(99, String(GetMagicalDefense(Item.CrystalType, Item.Enchanted, Item.mDefense, Item.Attribution)), true, true, false,"chatFontSize12",0,0,getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);				
 					AddTooltipItemBonus(Item.mDefense, nEnchantedMagicalDefenseBonus, 0, 7);
 				}
@@ -1753,7 +1753,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			else 
 				AddTooltipItemOption(52, String(Item.Weight), true, true, false);
 			
-			//Á¦·ÃÈ¿°ú
+			//???????
 			AddTooltipRefinery(Item);
 			break;
 		
@@ -1766,7 +1766,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 		
 		// 5. ETC
 		case ITEM_ETCITEM:
-			// Ä«µåÀÌº¥Æ® Á¤¿ì±Õ Ãß°¡(2013.01.28)
+			// ??????? ????? ???(2013.01.28)
 
 			//Debug ( "ITEM_ETCITEM" @ eEtcItemType  )  ;
 			if(eEtcItemType == ITEME_CARD_EVENT)
@@ -1792,23 +1792,23 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			}
 			else if (eEtcItemType == ITEME_LOTTO)
 			{
-				// º¹±Ç¿¡¼­´Â bless°¡ È¸Â÷, ¸ó½ºÅÍ·¹ÀÌ½º¿¡¼­´Â Enchant°¡ È¸Â÷ÀÔ´Ï´Ù. ÁÖÀÇÇÏ¼¼¿ä! - lancelot 2008. 11. 11.
-				// È¸Â÷
+				// ????????? bless?? ???, ?????????????? Enchant?? ???????. ?????????! - lancelot 2008. 11. 11.
+				// ???
 				AddTooltipItemOption(670, String(Item.Blessed), true, true, false);
 				
-				//branch GD35_0828 2013-12-18 luciper3 - ÆÐÅ¶ ÃÖÀûÈ­ ÀÛ¾÷À¸·Î ÀÎÇÏ¿© ÀÎÃ¦Æ®¿Í µ¥¹ÌÁö º¯¼ö¿¡ °ªÀÌ Àß¸ø¿Â´Ù.. 
-				//                                       ¼Ò¶ó¾¾°¡ ¹«±â¿ÜÇüÁ¤º¸ º¯¼ö¿¡ ³Ö¾î¼­ º¸³»ÁÜÀ¸·Î½á º¯°æµÊ.
-				// ¼±ÅÃ¹øÈ£
+				//branch GD35_0828 2013-12-18 luciper3 - ??? ????? ??????? ????? ??©¡??? ?????? ?????? ???? ????¢¥?.. 
+				//                                       ???? ??????????? ?????? ??? ?????????¥í? ?????.
+				// ??????
 				//AddTooltipItemOption(671, GetLottoString(Item.Enchanted, Item.Damaged), true, true, false);
 				AddTooltipItemOption(671, GetLottoString(Item.LookChangeItemID), true, true, false);
 				//end of branch
 			}
 			else if (eEtcItemType == ITEME_RACE_TICKET)
 			{
-				// È¸Â÷
+				// ???
 				AddTooltipItemOption(670, String(Item.Enchanted), true, true, false);
 				
-				// ¼±ÅÃ¹øÈ£
+				// ??????
 				AddTooltipItemOption(671, GetRaceTicketString(Item.Blessed), true, true, false);
 				
 				//Money
@@ -1817,21 +1817,21 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			//Weight
 			//~ if (Item.Price!=0)
 
-			// »ç¿ë °¡´É È¸¼ö°¡ 0 º¸´Ù Å« °æ¿ì 
+			// ??? ???? ????? 0 ???? ? ??? 
 			else if ( item.MaxUseCount > 0 ) 
 			{
 				AddCrossLine();
 		        AddTooltipItemBlank(0);
 
-				// Å¥ºê ¾ÆÀÌÅÛ
+				// ??? ??????
 				AddTooltipText("<" $ GetSystemString (3801)  $ ">", true, true);
 				
-				// Àç»ç¿ë ½Ã°£
+				// ???? ?©£?
 				AddTooltipItemBlank(0);
 				addTexture("l2ui_ct1.SkillWnd_DF_ListIcon_use", 12, 11, 12, 11, 3, 7);
-				// ³²Àº ½Ã°£ 
+				// ???? ?©£? 
 				AddTooltipColorText(GetSystemString(2378) $ " : ", getColor(163,163,163,255), false, true, false, "", 0, TOOLTIP_LINE_HGAP);
-				// ParamAdd ºÎºÐ ¶§¹®¿¡ ±×´ë·Î ³ªµÒ.
+				// ParamAdd ?¥ê? ?????? ???? ????.
 
 
 				StartItem();
@@ -1848,13 +1848,13 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				
 
 				//Debug ( Item.RemainReuseDelay @ Item.MaxReuseDelay ) ;
-				// MaxReuseDelay°¡ -1ÀÌ¸é, ³²Àº ½Ã°£À» Ãâ·ÂÇÏÁö ¾Ê°í "1ÀÏ 1È¸ »ç¿ë(¸ÅÀÏ ¿ÀÀü 6:30 ÃÊ±âÈ­) °íÁ¤ ¹®ÀÚ¿­À» Ãâ·Â)
+				// MaxReuseDelay?? -1???, ???? ?©£??? ??????? ??? "1?? 1? ???(???? ???? 6:30 ????) ???? ??????? ???)
 
 				//Debug ( Item.RemainReuseDelay $ Item.MaxReuseDelay ) ;
 				if (Item.MaxReuseDelay < 0) m_Info.t_strText = GetSystemString ( 3804 ) ;
 				else 
 				{				
-					// Condition TypeÀ» "ReuseDelay" ¼³Á¤ÇÏ¸é Å¬¶ó¿¡¼­ ¸Å ÇÁ·¹ÀÓ¸¶´Ù ³²Àº ½Ã°£À» °è»êÇØ¼­ m_Info.t_strText¿¡ ³Ö¾î¼­ Ãâ·Â
+					// Condition Type?? "ReuseDelay" ??????? ???? ?? ????????? ???? ?©£??? ?????? m_Info.t_strText?? ??? ???
 					if ( Item.RemainReuseDelay == 0 )  m_Info.t_strText = GetSystemString ( 3537 ) ;
 					else 
 					{
@@ -1865,14 +1865,14 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 				
 				EndItem();
 
-				// »ç¿ë °¡´É È½¼ö
+				// ??? ???? ???
 				AddTooltipItemBlank(0);
 				addTexture("l2ui_ct1.Icon.Tooltip_CubeIcon", 12, 11, 12, 11, 3, 7);
 				AddTooltipColorText(GetSystemString(3802) $ " : ", getColor(163,163,163,255), false, true, false, "", 0, TOOLTIP_LINE_HGAP);
 				AddTooltipColorText((item.MaxUseCount - item.CurUseCount)$"/"$item.MaxUseCount , getColor(176,155,121,255), false, true, false, "", 0, TOOLTIP_LINE_HGAP);
 //				AddTooltipItemOption(3802, item.CurUseCount$"/"$item.MaxUseCount, false, true, false);
 				
-				// ¾ÆÀÌÅÛ ¼Ò¸ê ¾È³»
+				// ?????? ??? ???
 				AddTooltipColorText("  ("$ GetSystemString (3803) $")", getColor(238,170,34,255), true, true);
 
 				AddCrossLine();
@@ -1891,19 +1891,19 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 		}
 
 		//------------------------------------------------------------------------------------
-		//  Ãß°¡ ¾ÆÀÌÅÛ Á¤º¸µé
+		//  ??? ?????? ??????
 		//------------------------------------------------------------------------------------
 		
-		// Ä¥¿ùÄ¥¼®, ¹æ¾î±¸ °¢ÀÎ (<ÀÎÃ¦Æ® È¿°ú> ¹× ¼³¸í)
+		// ??????, ??? ???? (<??©¡? ???> ?? ????)
 		AddTooltipEventSeventhdayOfSeventhMonth(Item);
 
-		// Åõ¿µº´±â Ç¥½Ã, ³»±¸µµ ¾ÆÀÌÅÛ
+		// ???????? ???, ?????? ??????
 		AddTooltipItemDurability(Item);
 		
-		//¿¡³ÊÁö Á¤º¸
+		//?????? ????
 		AddTooltipBR_MaxEnergy(Item);
 
-		// ¾ÆÀÌÅÛ ¼³¸í 
+		// ?????? ???? 
 		if (Len(Item.Description)>0) 
 		{
 			AddCrossLine();
@@ -1912,16 +1912,16 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			AddTooltipColorText(Item.Description, getColor(178,190,207,255), true, false);
 		}	
 		
-		// ¼ÂÆ® ¾ÆÀÌÅÛ Á¤º¸
+		// ??? ?????? ????
 		addSetitemTooltip( Item );
 		
-		//Äù½ºÆ® Á¤º¸¸¦ Ç¥½ÃÇÑ´Ù.
+		//????? ?????? ??????.
 		AddTooltipItemQuestList(Item);
 		
-		//ÁýÈ¥È¿°ú ÅøÆÁ (2015-03-11)
+		//?????? ???? (2015-03-11)
 		AddWeaponEnsoulOption(Item);
 
-		// ¾ÆÀÌÅÛ ºÀÀÎ »óÅÂ 
+		// ?????? ???? ???? 
 		if ( item.bSecurityLock ) 
 		{
 			AddCrossLine();
@@ -1929,13 +1929,13 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 			AddTooltipColorText(GetSystemString (3806 ) ,   getColor(178,190,207,255), true, true,,,,TOOLTIP_LINE_HGAP);			
 		}
 
-		// ¼Ó¼º °ÔÀÌÁö¸¦ ±×·ÁÁØ´Ù. Æê ÀÎº¥Åä¸®¿¡¼­´Â ±×¸®Áö ¾Ê´Â´Ù.
+		// ??? ???????? ??????. ?? ?¥ê????????? ????? ??¢¥?.
 		if ( TooltipType != "InventoryPet") AddTooltipItemAttributeGage(Item);
 		
-		// ¹«±â¿ÜÇüº¯°æ³Ö±â
+		// ?????????????
 		AddTooltipItemWeaponLookChange(Item); //branch 110824
 		
-		// ±â°£Á¦ ¾ÆÀÌÅÛ, ±â°£Á¦ °¡°ø 
+		// ???? ??????, ???? ???? 
 		AddTooltipItemCurrentPeriod(Item);		
 	}
 	else
@@ -1943,19 +1943,21 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 		return;		
 	}
 
-	// PawnViewer¿ë Ãß°¡ - lancelot 2007. 10. 16.
-	if(TooltipType == "InventoryPawnViewer") AddTooltipText("ID : "$string(Item.Id.classID), true, true);
+	if (TooltipType == "Inventory" && IsBuilderPC())
+	{
+		AddTooltipText("ID : "$string(Item.Id.classID), true, true);
+	}
 
-	// ¾Æµ¥³ª¸¸, ÃÖ¼Ò »çÀÌÁî¸¦ Àû¿ëÇÏÁö ¾Ê°í, ³ª¸ÓÁöµéÀº ÃÖ¼Ò »çÀÌÁî¸¦ Àû¿ë ½ÃÅ²´Ù.
-	// ¾Æµ¥³ª¸¸ ºÒ°¡Ç¥½Ã¸¦ »ç¿ëÇÏÁö ¾ÊÀ½
+	// ???????, ??? ?????? ???????? ???, ?????????? ??? ?????? ???? ?????.
+	// ??????? ?????©ª? ??????? ????
 	if (!IsAdena(Item.ID)) 
 	{
-		// ºÒ°¡Ç¥½Ã »ç¿ëÇÏ°í, Å¸ÀÌÆ² ±æÀÌ°¡ Âª´Ù¸é, ÃÖ¼Ò ÆøÀ» ÀÏÁ¤ ±æÀÌ·Î À¯Áö ½ÃÅ°´Ù.
+		// ?????? ??????, ???? ????? ¨£???, ??? ???? ???? ????? ???? ?????.
 		addForbidItemDesc(Item.ID);
 		m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
 	}
 
-	//±â°£Á¦ ¾ÆÀÌÅÛÀÌ ÀÖ´Â °æ¿ì ±â°£Á¦ ¾ÆÀÌÅÛ¿¡ ¸ÂÃç ÃÖ¼Ò ³ÐÀÌ °ªÀ» ÀÏ´Ü Àâ¾Æ ÁÜ.
+	//???? ???????? ??? ??? ???? ??????? ???? ??? ???? ???? ??? ??? ??.
 	if ( item.CurrentPeriod > 0 ) setMakeTimeStrMaxWidth();
 	setTooltipMinimumWidth ();
 	
@@ -1967,7 +1969,7 @@ function ReturnTooltip_NTT_ITEM(string param, String TooltipType, ETooltipSource
 
 function setTooltipMinimumWidth ()
 {
-	m_Tooltip.MinimumWidth = getMaxWidth(); //±â°£Á¦ ¾ÆÀÌÅÛ ID
+	m_Tooltip.MinimumWidth = getMaxWidth(); //???? ?????? ID
 	toolTipLineWidthRefresh();
 }
 
@@ -2000,12 +2002,12 @@ function int getMaxWidth (  )
 		
 		if ( m_Tooltip.DrawList[i].eType == DIT_TEXT || m_Tooltip.DrawList[i].eType == DIT_TEXTLINK) 
 		{		
-			//ÇÑ ÁÙÀÏ ¶§ ¸¸ Ãâ·Â ±× ¿Ü¿¡´Â ÀÚµ¿ µé¿©¾²±â ±â´ÉÀ¸·Î Ã³¸® µÊ.
+			//?? ???? ?? ?? ??? ?? ????? ??? ?????? ??????? ??? ??.
 			if ( m_Tooltip.DrawList[i].t_bDrawOneLine )
 			{
 				GetTextSizeDefault ( m_Tooltip.DrawList[i].t_strText , Width, Height ) ;
 
-				//bLineBreak Ã³¸® µÇÁö ¾Ê´Â °æ¿ì ´ÙÀ½ ÁÙ·Î ³Ñ¾î°¡Áö ¾ÊÀ½.
+				//bLineBreak ??? ???? ??? ??? ???? ??? ????? ????.
 				if ( !m_Tooltip.DrawList[i].bLineBreak ) 
 				{
 					Width = Width + tmpWidth;
@@ -2036,24 +2038,24 @@ function int getMaxWidth (  )
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
-// ÄÁÅÙÃ÷¿Í ¿¬°ü µÈ ÇÔ¼öµé ¸ðÀ½
+// ???????? ???? ?? ????? ????
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
-// ¾ÆÀÌÅÛ ±ÝÁö »çÇ×, °¡´É »çÇ×, Ç¥±â 
-// EP1.0 [0319] Ãß°¡
+// ?????? ???? ????, ???? ????, ??? 
+// EP1.0 [0319] ???
 function bool addForbidItemDesc(ItemID pItemID)
 {
 	local string forbidItemDesc, enableItemDesc;
 	local bool flag;
 
-	//Å¬·¡½Ä ¼­¹ö ÀÏ °æ¿ì µ¡ºÙÀÌÁö ¾Ê´Â´Ù.
+	//????? ???? ?? ??? ???????? ??¢¥?.
 	if ( getInstanceUIData().getIsClassicServer() ) return false;
 
 	flag = false;
 	
-	// ºÒ°¡Ç¥½Ã, °¡´É Ç¥½Ã ½ºÆ®¸µÀ» ¾ò´Â´Ù
+	// ??????, ???? ??? ??????? ??¢¥?
 	class'UIDATA_ITEM'.static.GetItemDescriptionAdditionData(pItemID, forbidItemDesc, enableItemDesc);
-	//enableItemDesc = "°³ÀÎ/Ç÷¸Í Ã¢°í °¡´É"; // class'UIDATA_ITEM'.static.GetItemDescriptionAdditionData(pItemID);
+	//enableItemDesc = "????/???? ??? ????"; // class'UIDATA_ITEM'.static.GetItemDescriptionAdditionData(pItemID);
 	
 	if (forbidItemDesc != "" || enableItemDesc != "")
 	{
@@ -2061,14 +2063,14 @@ function bool addForbidItemDesc(ItemID pItemID)
 
 		AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
 
-		// °¡´ÉÇÑ ¸ñ·Ï 
+		// ?????? ??? 
 		if (enableItemDesc != "")
 		{
 			AddTooltipColorText(enableItemDesc, getColor(158, 127, 87, 255), true, false);
 		}
 
 		//getColor(138, 47, 47, 255)
-		// Ã¢°í, Ç÷¸ÍÃ¢°í, ±³È¯, µå¶ø ºÒ°¡ °°Àº °ÍÀ» Ãâ·Â.
+		// ???, ???????, ???, ??? ??? ???? ???? ???.
 		if (forbidItemDesc != "")
 		{
 			AddTooltipColorText(forbidItemDesc, getColor(152, 83, 45, 200), true, false);
@@ -2094,19 +2096,19 @@ function CardEventImgTooltip(ItemInfo Item, optional string sender)
 	m_Info.u_strTexture = Item.tooltipTexutre;
 	EndItem();
 	
-	/*______10ÁÖ³â ÀÌº¥Æ® Ä«µå__________
+	/*______10??? ???? ???__________
 	 * | 38915 | 38916 | 38917 | 38918 |
 	 * ---------------------------------
 	 * | 38919 | 38920 | 38921 | 38922 |
 	 * ---------------------------------
 	 * 
-	 * * ¾Æ¸£Å×ÀÌ¾Æ Á¶°¢
+	 * * ???????? ????
 	 * _________________________________
 	 * | 38907 | 38908 | 38909 | 38910 |
 	 * ---------------------------------
 	 * | 38911 | 38912 | 38913 | 38914 |
 	 */
-	// *´õºíÅ¬¸¯ÇÏ¸é »ó¼¼ ÆäÀÌÁö°¡ ¶á´Ù´Â ¼³¸íÀ» ³Ö¾îÁÖ±â À§ÇÑ ¿¹¿ÜÃ³¸®
+	// *?????????? ?? ???????? ???? ?????? ?????? ???? ???????
 	if(sender == "inventory")
 	{
 		if(Item.ID.ClassID >= 38907 && Item.ID.ClassID <= 38922)
@@ -2127,7 +2129,7 @@ function CardEventImgTooltip(ItemInfo Item, optional string sender)
 	ReturnTooltipInfo(m_Tooltip);
 }
 
-//Ä«µåÀÌº¥Æ® gfx¿ë ÅøÆÁ Ç¥½Ã  Á¤¿ì±Õ Ãß°¡ 2013.01.29
+//??????? gfx?? ???? ???  ????? ??? 2013.01.29
 function ReturnTooltip_NTT_GFXCARD(string param, ETooltipSourceType eSourceType)
 {
 	local ItemInfo Item;
@@ -2138,7 +2140,7 @@ function ReturnTooltip_NTT_GFXCARD(string param, ETooltipSourceType eSourceType)
 	{
 		ParamToItemInfo(param, Item);
 		
-		//¾ÆÀÌÅÛ ÀÌ¸§ Ãëµæ
+		//?????? ??? ???
 		ItemName = class'UIDATA_ITEM'.static.GetRefineryItemName( Item.Name, Item.RefineryOp1, Item.RefineryOp2 );
 		ItemNameClass = class'UIDATA_ITEM'.static.GetItemNameClass( Item.ID );
 
@@ -2148,7 +2150,7 @@ function ReturnTooltip_NTT_GFXCARD(string param, ETooltipSourceType eSourceType)
 	}
 }
 
-//»ç±â¹æÁö À¯Àú ÅøÆÁ Á¤º¸
+//?????? ???? ???? ????
 function ReturnTooltip_NTT_CHAT_USERFAKEINFO(string param, ETooltipSourceType eSourceType)
 {
 	if (eSourceType == NTST_TEXT)
@@ -2169,7 +2171,7 @@ function ChatUserFakeInfoTooltip(String param)
 	ParseInt( param,   "IsAlliance",    isAlliance );
 	ParseInt( param,   "IsGM",          isGM );
 	
-	//Ä£±¸
+	//???
 	if(isFriend != 0)
 	{
 		AddTooltipItemColorOption(2273, GetSystemString(3175), 77, 255, 99, true, true, true);
@@ -2179,7 +2181,7 @@ function ChatUserFakeInfoTooltip(String param)
 		AddTooltipItemColorOption(2273, GetSystemString(3176), 255, 66, 66, true, true, true);
 	}
 	
-	//Ç÷¸Í
+	//????
 	if(isPledge != 0)
 	{
 		AddTooltipItemColorOption(314, GetSystemString(3179), 77, 255, 99, true, true, false);
@@ -2192,7 +2194,7 @@ function ChatUserFakeInfoTooltip(String param)
 		
 
 	
-	//¸àÅä, Å¬·¡½Ä ¼­¹ö¿¡¼­´Â ³ëÃâ µÇ¸é ¾ÈµÊ.
+	//????, ????? ?????????? ???? ??? ???.
 	if(isMentoring != 0 && !getInstanceUIData().getIsClassicServer() )
 	{
 		AddTooltipItemColorOption(2767, GetSystemString(3177), 77, 255, 99, true, true, false);
@@ -2202,7 +2204,7 @@ function ChatUserFakeInfoTooltip(String param)
 		AddTooltipItemColorOption(2767, GetSystemString(3178), 255, 66, 66, true, true, false);
 	}
 		
-	//µ¿¸Í
+	//????
 	if(isAlliance != 0)
 	{
 		AddTooltipItemColorOption(490, GetSystemString(3181), 77, 255, 99, true, true, false);
@@ -2215,7 +2217,7 @@ function ChatUserFakeInfoTooltip(String param)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-// Macro , 2015-10-26, ¸ÅÅ©·Î °³Æí, ¸ÅÅ©·Î Ä¿¸àµå ¸ðµÎ ÅøÆÁ¿¡ º¸ÀÌµµ·Ï Ãß°¡
+// Macro , 2015-10-26, ????? ????, ????? ¨¨??? ??? ?????? ??????? ???
 function ReturnTooltip_NTT_MACRO(string param, ETooltipSourceType eSourceType, optional bool bUseUserMacro)
 {
 	local ItemInfo Item;
@@ -2243,20 +2245,20 @@ function ReturnTooltip_NTT_MACRO(string param, ETooltipSourceType eSourceType, o
 
 		//Item.IconName = macroInfo.IconName;
 
-		// ¾ÆÀÌÅÛ ¾ÆÀÌÄÜÀ» Âï´Â´Ù.
+		// ?????? ???????? ??¢¥?.
 		addItemIcon(Item, "");
 
 		m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
-		// ÀÌ¸§
+		// ???
 		AddTooltipText(Item.Name, false, true, true, "chatFontSize11", 5, 1);
 		
-		//¼³¸í
-		// ¾ÆÀÌÅÛ ¼³¸í 
+		//????
+		// ?????? ???? 
 		if (Len(Item.Description) > 0) AddTooltipColorText(Item.Description, getColor(178,190,207,255), true, false);
 
 		// Debug("Item.MacroCommand" @ Item.MacroCommand);
 
-		// ÇÁ¸®¼Â
+		// ??????
 		if (Item.MacroCommand != "" && !bUseUserMacro)
 		{
 			//Split(Item.MacroCommand, "\n", commandArray);
@@ -2268,17 +2270,17 @@ function ReturnTooltip_NTT_MACRO(string param, ETooltipSourceType eSourceType, o
 				if (commandArray[idx] != "") AddTooltipColorText(commandArray[idx], getColor(176,155,121,255), true, true);
 			}
 		}
-		// À¯Àú°¡ Á¤ÀÇÇÑ ¸ÅÅ©·Î
+		// ?????? ?????? ?????
 		else
 		{			
-			// ¸ÅÅ©·Î ¸ñ·Ï
+			// ????? ???
 			if (bCustomMacro)
 			{
 				for (idx = 0; idx < MACROCOMMAND_MAX_COUNT; idx++)
 				{
 					if (trim(macroInfo.CommandList[idx]) != "")
 					{
-						// ³Ê¹« ±æ¾î Áö¸é .. Ã³¸® (À¯Àú°¡ Á¤ÀÇÇÑ ¸ÅÅ©·Î ½ºÆ®¸µ¸¸ Àû¿ë)
+						// ??? ??? ???? .. ??? (?????? ?????? ????? ??????? ????)
 						AddTooltipColorText(makeShortStringByPixel(macroInfo.CommandList[idx], 300, ".."), getColor(176,155,121,255), true, true);
 					}
 				}
@@ -2289,7 +2291,7 @@ function ReturnTooltip_NTT_MACRO(string param, ETooltipSourceType eSourceType, o
 	{
 		return;
 	}
-		
+
 	ReturnTooltipInfo(m_Tooltip);
 }
 
@@ -2306,10 +2308,10 @@ function ReturnTooltip_NTT_ACTION(string param, ETooltipSourceType eSourceType)
 		//ParseString( param, "Description", Item.Description);
 		ParamToItemInfo(param, Item);
 		
-		// ¾ÆÀÌÅÛ ¾ÆÀÌÄÜÀ» Âï´Â´Ù.
+		// ?????? ???????? ??¢¥?.
 		addItemIcon(Item, "");
 
-		//¾×¼Ç ÀÌ¸§
+		//??? ???
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_bDrawOneLine    = true;
@@ -2321,7 +2323,7 @@ function ReturnTooltip_NTT_ACTION(string param, ETooltipSourceType eSourceType)
 		
 		AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
 
-		//¾×¼Ç ¼³¸í
+		//??? ????
 		if (Len(Item.Description)>0)
 		{
 			m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
@@ -2343,7 +2345,7 @@ function ReturnTooltip_NTT_ACTION(string param, ETooltipSourceType eSourceType)
 	{
 		return;
 	}
-		
+
 	ReturnTooltipInfo(m_Tooltip);
 }
 
@@ -2370,7 +2372,7 @@ function ReturnTooltip_NTT_SKILL(string param, ETooltipSourceType eSourceType)
 		ParseInt( param, "Level", Item.Level);
 		ParseInt( param, "SubLevel", Item.SubLevel);
 
-		//Debug ( "ÀÎÃ¦Æ® ³»¿ëÀ» »Ñ·ÁÁÖ´Â °÷Àº ÀÌ°÷" @  Item.AdditionalName @ Item.Level );
+		//Debug ( "??©¡? ?????? ?????? ???? ???" @  Item.AdditionalName @ Item.Level );
 
 		GetSkillInfo( Item.ID.ClassID , Item.Level, Item.SubLevel, skillInfo );
 
@@ -2382,10 +2384,10 @@ function ReturnTooltip_NTT_SKILL(string param, ETooltipSourceType eSourceType)
 		
 		m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
 		
-		//¾ÆÀÌÄÜ Ãß°¡ 
+		//?????? ??? 
 		addItemIcon(Item, "");
 
-		//¾ÆÀÌÅÛ ÀÌ¸§
+		//?????? ???
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_bDrawOneLine = true;
@@ -2394,7 +2396,7 @@ function ReturnTooltip_NTT_SKILL(string param, ETooltipSourceType eSourceType)
 		m_Info.t_strFontName = "chatFontSize11";
 		EndItem();
 		
-		// ÀÎÃ¦Æ®½Ã º¯È¯µÈ ·¹º§À» ¿ø·¡ ·¹º§·Î º¯È¯½ÃÄÑÁØ´Ù. 
+		// ??©¡??? ????? ?????? ???? ?????? ??????????. 
 		/*
 		if (Len(Item.AdditionalName)>0)
 		{			
@@ -2420,7 +2422,7 @@ function ReturnTooltip_NTT_SKILL(string param, ETooltipSourceType eSourceType)
 		m_Info.t_ID = 88;
 		EndItem();
 		
-		//½ºÅ³ ·¹º§
+		//??? ????
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_bDrawOneLine = true;
@@ -2432,7 +2434,7 @@ function ReturnTooltip_NTT_SKILL(string param, ETooltipSourceType eSourceType)
 		m_Info.t_strText = " " $ SkillLevel;
 		EndItem();
 
-		// ÀÎÃ¦Æ® ³»¿ëÀ» »Ñ·ÁÁÖ´Â °÷Àº ÀÌ°÷
+		// ??©¡? ?????? ?????? ???? ???
 
 		
 		if (Len(Item.AdditionalName)>0)
@@ -2454,42 +2456,42 @@ function ReturnTooltip_NTT_SKILL(string param, ETooltipSourceType eSourceType)
 		AddTooltipItemBlank(1);
 		AddTooltipColorText(class'UIDATA_SKILL'.static.GetOperateType( Item.ID, Item.Level, Item.SubLevel ), getColor(176,155,121,255), true, true, false, "", 38, -19);
 
-		//¼Ò¸ðHP
+		//???HP
 		nTmp = class'UIDATA_SKILL'.static.GetHpConsume( Item.ID, Item.Level, item.SubLevel );
 		if (nTmp>0)
 		{			
 			AddTooltipItemOption(1195, string(nTmp), true, true, false);//, "chatFontSize12", 0, 0, getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 		}
 		
-		//¼Ò¸ðMP
+		//???MP
 		nTmp = class'UIDATA_SKILL'.static.GetMpConsume( Item.ID, Item.Level, Item.SubLevel );
 		if (nTmp>0)
 		{
 			AddTooltipItemOption(320, String(nTmp), true, true, false, "chatFontSize12", 0, 0, getInstanceL2Util().BrightWhite, getInstanceL2Util().ColorYellow);
 		}
 		
-		//À¯È¿°Å¸®
+		//??????
 		nTmp = class'UIDATA_SKILL'.static.GetCastRange( Item.ID, Item.Level, Item.SubLevel );
 		if (nTmp >= 0)
 		{
 			AddTooltipItemOption(321, String(nTmp), true, true, false);
 		}
 
-		////½ºÅ³ ½ÃÀü ½Ã°£
+		////??? ???? ?©£?
 		if ((skillInfo.HitTime + skillInfo.CoolTime) > 0)
 		{
-			// luciper3 - ½ºÅ³¹è¿ì±â¿Í °°ÀÌ ¼Ò¼öÁ¡µµ Ç¥½ÃÇÑ´Ù.
+			// luciper3 - ???????? ???? ??????? ??????.
 			//AddTooltipItemOption(2377, MakeBuffTimeStr(int(skillInfo.HitTime + skillInfo.CoolTime)), true, true, false);
 			AddTooltipItemOption(2377,util.MakeTimeString(skillInfo.HitTime,skillInfo.CoolTime),true,true,false);
 		}
 		
-		////½ºÅ³ Àç»ç¿ë ½Ã°£
+		////??? ???? ?©£?
 		if (skillInfo.ReuseDelay > 0)
 		{
 			AddTooltipItemOption(2378, MakeBuffTimeStr(int(skillInfo.ReuseDelay)), true, true, false);
 		}
 		
-		//¼³¸í
+		//????
 		if (Len(Item.Description) > 0) 
 		{
 			AddCrossLine();
@@ -2497,25 +2499,30 @@ function ReturnTooltip_NTT_SKILL(string param, ETooltipSourceType eSourceType)
 			AddTooltipColorText(Item.Description, getColor(178,190,207,255), true, false);
 		}
 
-		// 2014.08.04 ½ºÅ³ÀÎÃ¦Æ® ÀüÃ¼ °³Æí¿¡ µû¸¥ ÅøÆÁ Ãß°¡
-		// ½ºÅ³ ÀÎÃ¦Æ® Á¤º¸ Ç¥½Ã
+		// 2014.08.04 ?????©¡? ??? ?????? ???? ???? ???
+		// ??? ??©¡? ???? ???
 		if (Len(item.AdditionalName)>0) 
 		{
 			AddCrossLine();
 			AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
-			// °­È­ È¿°ú 
+			// ??? ??? 
 
 			AddTooltipColorText(GetSystemString(3350) $ " : ", getColor(163,163,163,255), true, false);			
 			AddTooltipColorText(item.AdditionalName, getColor(255,217,105,255), false, true);
 			AddTooltipColorText(skillInfo.EnchantDesc, getColor(178,190,207,255), true, false);
 
-			// ¶óÀÎ ÅØ½ºÃÄ¸¦ ÃÖÁ¾ ÅøÆÁ °¡·Î »çÀÌÁî¿¡ ¸Âµµ·Ï º¸Á¤
+			// ???? ????©§? ???? ???? ???? ?????? ????? ????
 			setTooltipMinimumWidth ();
 		}
 	}
 	else
 	{
 		return;
+	}
+
+	if (IsBuilderPC())
+	{
+		AddTooltipText("Skill ID : "$string(Item.Id.classID), true, true);
 	}
 		
 	ReturnTooltipInfo(m_Tooltip);
@@ -2554,7 +2561,7 @@ function ReturnTooltip_NTT_ABNORMALSTATUS(string param, ETooltipSourceType eSour
 		
 		m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
 		
-		//¾ÆÀÌÅÛ ÀÌ¸§
+		//?????? ???
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_bDrawOneLine = true;
@@ -2564,7 +2571,7 @@ function ReturnTooltip_NTT_ABNORMALSTATUS(string param, ETooltipSourceType eSour
 		ShowLevel = Item.Level;		
 		
 		//ex) " Lv "
-		// ÅäÇÎ ¼­ºñ½ºÀÏ °æ¿ì ·¹º§ Ç¥½Ã¸¦ ÇÏÁö ¾Ê´Â´Ù. 
+		// ???? ?????? ??? ???? ??©ª? ???? ??¢¥?. 
 		if ( !isToppingSkill )
 		{
 			StartItem();
@@ -2583,7 +2590,7 @@ function ReturnTooltip_NTT_ABNORMALSTATUS(string param, ETooltipSourceType eSour
 			m_Info.t_ID = 88;
 			EndItem();
 			
-			//½ºÅ³ ·¹º§		
+			//??? ????		
 			StartItem();
 			m_Info.eType = DIT_TEXT;
 			m_Info.t_bDrawOneLine = true;
@@ -2611,10 +2618,10 @@ function ReturnTooltip_NTT_ABNORMALSTATUS(string param, ETooltipSourceType eSour
 			//ShowLevel = class'UIDATA_SKILL'.static.GetEnchantSkillLevel( Item.ID, Item.Level, Item.SubLevel );
 		}
 		
-		//³²Àº½Ã°£
-		// ct3 ¼ÒÈ¯¼ö °ü·Ã - ¼öÁ¤
+		//?????©£?
+		// ct3 ????? ???? - ????
 		//if ((GetDebuffType(Item.ID, Item.Level) == 0) && Item.Reserved>=0)
-		//µð¹öÇÁÀÏ¶§ ¼öÁ¤.
+		//???????? ????.
 		if (Item.Reserved >= 0 )
 		{
 			StartItem();
@@ -2654,8 +2661,8 @@ function ReturnTooltip_NTT_ABNORMALSTATUS(string param, ETooltipSourceType eSour
 			if ( isToppingSkill ) 
 			{
 				m_Info.t_strText = MakeToppingBuffTimeStr ( Item.Reserved ) ;	
-				// Å¸ÀÔÀ» ToppingRemainTime, RemainTime À¸·Î ¼³Á¤ÇØ ³õÀ¸¸é, Å¬¶óÀÌ¾ðÆ®¿¡¼­ ½Ã°£À» Ã¼Å© Å¸ÀÓ ½ºÆ®¸µÀ» Á¶ÇÕ ÇÔ.
-				//Debug ( "ToppingRemainTime ·Î type ¼³Á¤");
+				// ????? ToppingRemainTime, RemainTime ???? ?????? ??????, ??????????? ?©£??? ?? ??? ??????? ???? ??.
+				//Debug ( "ToppingRemainTime ?? type ????");
 				ParamAdd(m_Info.Condition, "Type", "ToppingRemainTime");
 			}
 			else
@@ -2667,7 +2674,7 @@ function ReturnTooltip_NTT_ABNORMALSTATUS(string param, ETooltipSourceType eSour
 			EndItem();
 		}
 		
-		//¼³¸í
+		//????
 		if (Len(Item.Description)>0)
 		{
 			StartItem();
@@ -2682,18 +2689,18 @@ function ReturnTooltip_NTT_ABNORMALSTATUS(string param, ETooltipSourceType eSour
 			EndItem();	
 		}		
 
-		// 2014.08.04 ½ºÅ³ÀÎÃ¦Æ® ÀüÃ¼ °³Æí¿¡ µû¸¥ ÅøÆÁ Ãß°¡
-		// ½ºÅ³ ÀÎÃ¦Æ® Á¤º¸ Ç¥½Ã
+		// 2014.08.04 ?????©¡? ??? ?????? ???? ???? ???
+		// ??? ??©¡? ???? ???
 		if (Len(item.AdditionalName)>0) 
 		{
 			AddCrossLine();
-			// °­È­ È¿°ú 
+			// ??? ??? 
 
 			AddTooltipColorText(GetSystemString(3350) $ " : ", getColor(163,163,163,255), true, false);			
 			AddTooltipColorText(item.AdditionalName, getColor(255,217,105,255), false, true);
 			AddTooltipColorText(skillInfo.EnchantDesc, getColor(178,190,207,255), true, false);
 
-			// ¶óÀÎ ÅØ½ºÃÄ¸¦ ÃÖÁ¾ ÅøÆÁ °¡·Î »çÀÌÁî¿¡ ¸Âµµ·Ï º¸Á¤
+			// ???? ????©§? ???? ???? ???? ?????? ????? ????
 			setTooltipMinimumWidth ();
 		}
 	}
@@ -2707,7 +2714,7 @@ function ReturnTooltip_NTT_ABNORMALSTATUS(string param, ETooltipSourceType eSour
 
 
 /////////////////////////////////////////////////////////////////////////////////
-// LOOCKCHANGEITEM ¿ÜÇü º¯°æ¿ë ÅøÆÁ 
+// LOOCKCHANGEITEM ???? ????? ???? 
 function ReturnTooltip_NTT_LOOCKCHANGEITEM(string param )
 {
 	local String Name;
@@ -2733,13 +2740,13 @@ function ReturnTooltip_NTT_NORMALITEM(string param, ETooltipSourceType eSourceTy
 		ParseString( param, "AdditionalName", Item.AdditionalName);
 		ParseInt( param, "CrystalType", Item.CrystalType);
 		
-		//¾ÆÀÌÅÛ ÀÌ¸§
+		//?????? ???
 		AddTooltipItemName(Item.Name, Item, 1);
 		
 		//Grade Mark
 		AddTooltipItemGrade(Item);
 		
-		//¼³¸í
+		//????
 		if (Len(Item.Description)>0)
 		{
 			m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
@@ -2778,13 +2785,13 @@ function ReturnTooltip_NTT_PREMIUMNORMALITEM(string param, ETooltipSourceType eS
 		ParseInt( param, "CrystalType", Item.CrystalType);
 		ParseInt( param, "CurrentPeriod", Item.CurrentPeriod);
 		
-		//¾ÆÀÌÅÛ ÀÌ¸§
+		//?????? ???
 		AddTooltipItemName(Item.Name, Item, 1);
 		
 		//Grade Mark
 		AddTooltipItemGrade(Item);
 				
-		//¼³¸í
+		//????
 		if (Len(Item.Description)>0)
 		{
 			m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
@@ -2869,24 +2876,24 @@ function ReturnTooltip_NTT_RECIPE(string param, ETooltipSourceType eSourceType, 
 		ParseInt( param, "Weight", Item.Weight);
 		ParseINT64( param, "Price", Item.Price);
 		
-		//¾ÆÀÌÅÛ ÀÌ¸§
+		//?????? ???
 		AddTooltipItemName(Item.Name, Item, 1);
 		
 		//Grade Mark
 		AddTooltipItemGrade(Item);
 		
-		//°¡°Ý
+		//????
 		if (bShowPrice)
 		{
 			strAdena = String(Item.Price);
 			strAdenaComma = MakeCostString(strAdena);
 			AdenaColor = GetNumericColor(strAdenaComma);
 			
-			//°¡°Ý : xxx,xxx,xxx
+			//???? : xxx,xxx,xxx
 			AddTooltipItemOption(641, strAdenaComma $ " ", true, true, false);
 			SetTooltipItemColor(AdenaColor.R, AdenaColor.G, AdenaColor.B, 0);
 			
-			//"¾Æµ¥³ª"
+			//"?????"
 			StartItem();
 			m_Info.eType = DIT_TEXT;
 			m_Info.nOffSetY = TOOLTIP_LINE_HGAP;
@@ -2895,7 +2902,7 @@ function ReturnTooltip_NTT_RECIPE(string param, ETooltipSourceType eSourceType, 
 			m_Info.t_ID= 469;
 			EndItem();
 			
-			//ÀÐ¾îÁÖ±â ½ºÆ®¸µ
+			//?¬à???? ?????
 			if  (strAdena != "")
 			{
 				AddTooltipItemOption(0, "(" $ ConvertNumToText(strAdena) $ ")", false, true, false);
@@ -2906,7 +2913,7 @@ function ReturnTooltip_NTT_RECIPE(string param, ETooltipSourceType eSourceType, 
 		//Weight
 		AddTooltipItemOption(52, String(Item.Weight), true, true, false);
 		
-		//¼³¸í
+		//????
 		if (Len(Item.Description)>0)
 		{
 			m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
@@ -2960,7 +2967,7 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 			ParseInt( param, "RefineryOp1", Item.RefineryOp1);
 			ParseInt( param, "RefineryOp2", Item.RefineryOp2);
 			eShortCutType = EShortCutItemType(Item.ItemSubType);
-			//¾ÆÀÌÅÛ ÀÌ¸§ Ãëµæ
+			//?????? ??? ???
 			ItemName = class'UIDATA_ITEM'.static.GetRefineryItemName( Item.Name, Item.RefineryOp1, Item.RefineryOp2 );
 			switch (eShortCutType)
 			{
@@ -2983,14 +2990,14 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 					
 					m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
 
-					//¾×¼Ç ÀÌ¸§
+					//??? ???
 					StartItem();
 					m_Info.eType = DIT_TEXT;
 					m_Info.t_bDrawOneLine = true;
 					m_Info.t_strText = Item.Name;
 					EndItem();
 					
-					//¾×¼Ç ¼³¸í
+					//??? ????
 					if (Len(Item.Description)>0)
 					{						
 						StartItem();
@@ -3016,7 +3023,7 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 				break;
 			case SCIT_RECIPE:
 			case SCIT_BOOKMARK:
-				//¾ÆÀÌÅÛ ÀÌ¸§
+				//?????? ???
 				m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
 				StartItem();
 				m_Info.eType = DIT_TEXT;
@@ -3040,7 +3047,7 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 			}
 			
 			
-			//´ÜÃàÅ° ¼³¸í...
+			//????? ????...
 			if( commandItem.subkey1 != "" )
 			{
 				strShort = strShort $ Script.GetUserReadableKeyName( commandItem.subkey1 ) $ "+";
@@ -3059,7 +3066,7 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 				strShort = strShort $ GetSystemString(27) $ ">";
 			}
 			
-			//ÁÙÃß°¡~
+			//?????~
 			AddTooltipItemBlank(6);		
 
 			StartItem();
@@ -3108,7 +3115,7 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 			eShortCutType = EShortCutItemType(Item.ItemSubType);
 			eItemParamType = EItemParamType(Item.ItemType);
 
-			//¾ÆÀÌÅÛ ÀÌ¸§ Ãëµæ
+			//?????? ??? ???
 			ItemName = class'UIDATA_ITEM'.static.GetRefineryItemName( Item.Name, Item.RefineryOp1, Item.RefineryOp2 );
 
 			switch (eShortCutType)
@@ -3117,21 +3124,21 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 				//branch
 				AddPrimeItemSymbol(Item);
 				//end of branch
-				//ÀÎÃ¾Æ® ex) "+10"
+				//??©­? ex) "+10"
 				AddTooltipItemEnchant(Item);
 
-				//¾ÆÀÌÅÛ ÀÌ¸§
+				//?????? ???
 				AddTooltipItemName(ItemName, Item, 1);
 
 				//Grade Mark
 				AddTooltipItemGrade(Item);
 
-				//¾ÆÀÌÅÛ °¹¼ö
+				//?????? ????
 				AddTooltipItemCount(Item);
 				break;
 			case SCIT_SKILL:
 			case SCIT_ATTRIBUTE:
-				//¾ÆÀÌÅÛ ÀÌ¸§
+				//?????? ???
 				StartItem();
 				m_Info.eType = DIT_TEXT;
 				m_Info.t_bDrawOneLine = true;
@@ -3155,7 +3162,7 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 				m_Info.t_ID = 88;
 				EndItem();
 
-				//½ºÅ³ ·¹º§
+				//??? ????
 				/*
 				if (Len(Item.AdditionalName) > 0)
 					Item.Level = class'UIDATA_SKILL'.static.GetEnchantSkillLevel( Item.ID, Item.Level, Item.SubLevel );
@@ -3186,7 +3193,7 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 				}
 
 				//AddTooltipItemBlank(1);
-				//MP¼Ò¸ð·®
+				//MP???
 				StartItem();
 				m_Info.eType = DIT_TEXT;
 				m_Info.nOffSetX = -4;
@@ -3212,7 +3219,7 @@ function ReturnTooltip_NTT_SHORTCUT(string param, ETooltipSourceType eSourceType
 			case SCIT_MACRO:
 			case SCIT_RECIPE:
 			case SCIT_BOOKMARK:
-				//¾ÆÀÌÅÛ ÀÌ¸§
+				//?????? ???
 				StartItem();
 				m_Info.eType = DIT_TEXT;
 				m_Info.t_bDrawOneLine = true;
@@ -3247,19 +3254,19 @@ function ReturnTooltip_NTT_RECIPE_MANUFACTURE(string param, ETooltipSourceType e
 		
 		m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
 		
-		//¾ÆÀÌÅÛ ÀÌ¸§
+		//?????? ???
 		AddTooltipItemName(Item.Name, Item, 1);
 		
 		//Grade Mark
 		AddTooltipItemGrade(Item);
 		
-		//ex) "ÇÊ¿ä¼ö : 2"
+		//ex) "???? : 2"
 		AddTooltipItemOption(736, String(Item.Reserved64), true, true, false);
 		
-		//ex) "º¸À¯¼ö : 0"
+		//ex) "?????? : 0"
 		AddTooltipItemOption(737, String(Item.ItemNum), true, true, false);
 		
-		//¼³¸í
+		//????
 		if (Len(Item.Description)>0)
 		{
 			StartItem();
@@ -3292,10 +3299,10 @@ function ReturnTooltip_NTT_FRIENDINFO(string param, ETooltipSourceType eSourceTy
 	{
 		ParamToRecord( param, record );
 		
-		//ex) "Á÷¾÷ : ¿¤ºì¸ÞÀÌÁö"
+		//ex) "???? : ?????????"
 		AddTooltipItemOption(391, GetClassType(int(record.LVDataList[2].szData)), true, true, true);
-		// ¸Þ¸ð Ãâ·Â 
-		//ex) "¸Þ¸ð : ³Ê´Â ³ª»Û ³ðÀÌ¾ß! " 
+		// ??? ??? 
+		//ex) "??? : ??? ???? ?????! " 
 		if (record.szReserved != "")
 		{
 			AddTooltipItemOption(403, record.szReserved, true, true, true);
@@ -3319,7 +3326,7 @@ function ReturnTooltip_NTT_CLANINFO(string param, ETooltipSourceType eSourceType
 	{
 		ParamToRecord( param, record );
 		
-		//ex) "Á÷¾÷ : ¿¤ºì¸ÞÀÌÁö"
+		//ex) "???? : ?????????"
 		AddTooltipItemOption(391, GetClassType(int(record.LVDataList[2].szData)), true, true, true);
 	}
 	else
@@ -3345,10 +3352,10 @@ function ReturnTooltip_NTT_AgitDecoList (string param, ETooltipSourceType eSourc
 		ParamToRecord( param, record );
 
 
-		// »ç¿ë ¾È ÇÔ
+		// ??? ?? ??
 		if (record.LVDataList[0].szData == GetSystemString(869))
 		{
-			// »ç¿ë ¾ÈÇÏ´Â ¼³¸íÀ» ³Ö´Â´Ù.
+			// ??? ????? ?????? ??¢¥?.
 			addToolTipDrawList(m_Tooltip, addDrawItemText(GetSystemString(3440), getInstanceL2Util().White, "", false));
 			ReturnTooltipInfo(m_Tooltip);
 			return;
@@ -3366,7 +3373,7 @@ function ReturnTooltip_NTT_AgitDecoList (string param, ETooltipSourceType eSourc
 		ParseInt(toolTipParam, "period", period);
 		ParseString(toolTipParam, "desc", desc);
 
-		// ¹èÄ¡ Áß (»ç¿ë Áß)
+		// ??? ?? (??? ??)
 		nUse = record.LVDataList[0].nReserved2;
 
 		if (nUse > 0)
@@ -3383,17 +3390,17 @@ function ReturnTooltip_NTT_AgitDecoList (string param, ETooltipSourceType eSourc
 		AddCrossLine();
 		//desc
 
-		// ±â´É
+		// ???
 		addToolTipDrawList(m_Tooltip, addDrawItemText(GetSystemString(3430), getInstanceL2Util().Yellow, "", true));
 
-		// ¼³¸í desc 
+		// ???? desc 
 		addToolTipDrawList(m_Tooltip, addDrawItemText(desc, getInstanceL2Util().ColorDesc, "", true));
 		AddTooltipItemBlank(10);
 
-		// ¹èÄ¡ ºñ¿ë
+		// ??? ???
 		addToolTipDrawList(m_Tooltip, addDrawItemText(GetSystemString(3442), getInstanceL2Util().ColorYellow, "", true, true));
 
-		// ¹èÄ¡ ºñ¿ë, ÁÖ·Î ¾Æµ¥³ª ¶Ç´Â ÅäÅ«
+		// ??? ???, ??? ????? ??? ???
 		for (i = 0; i < totalCnt; i++)
 		{			
 			ParseInt(toolTipParam, "item_"  $ String(i), nItemID);
@@ -3402,8 +3409,8 @@ function ReturnTooltip_NTT_AgitDecoList (string param, ETooltipSourceType eSourc
 			addToolTipDrawList(m_Tooltip, addDrawItemBlank(5));
 			addToolTipDrawList(m_Tooltip, addDrawItemText(class'UIDATA_ITEM'.static.GetItemName( GetItemID(nItemID) ), getInstanceL2Util().White, "", true, true));
 			addToolTipDrawList(m_Tooltip, addDrawItemText("x" @ MakeCostString(String(nItemCount)), getInstanceL2Util().White, "", true, true));
-			//Debug("ÅøÆÁºñ¿ë nItemID " @ nItemID);
-			//Debug("ÅøÆÁºñ¿ë nItemCount" @ nItemCount);
+			//Debug("??????? nItemID " @ nItemID);
+			//Debug("??????? nItemCount" @ nItemCount);
 		}
 		if (totalCnt <= 0)
 		{
@@ -3412,7 +3419,7 @@ function ReturnTooltip_NTT_AgitDecoList (string param, ETooltipSourceType eSourc
 
 		addToolTipDrawList(m_Tooltip, addDrawItemBlank(10));
 
-		// ¹èÄ¡ ±â°£
+		// ??? ??
 		addToolTipDrawList(m_Tooltip, addDrawItemText(GetSystemString(3431), getInstanceL2Util().ColorYellow, "", true));
 		addToolTipDrawList(m_Tooltip, addDrawItemText(MakeFullSystemMsg(GetSystemMessage(3418), String(period)), getInstanceL2Util().White, "", true));
 
@@ -3427,7 +3434,7 @@ function ReturnTooltip_NTT_AgitDecoList (string param, ETooltipSourceType eSourc
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-// ÁýÈ¥ ¿É¼Ç - ¸®½ºÆ® - ¿É¼Ç Å¸ÀÔ nReserved1 ¿¡ ÀúÀåµÈ°É ÀÌ¿ëÇØ¼­ ¸®½ºÆ®ÀÇ ÅøÆÁÀ» º¸¿©ÁÜ.
+// ??? ??? - ????? - ??? ??? nReserved1 ?? ?????? ?????? ??????? ?????? ??????.
 function ReturnTooltip_NTT_EnsoulOptionList (string param, ETooltipSourceType eSourceType)
 {	
 	local EnsoulOptionUIInfo optionInfo;
@@ -3478,12 +3485,12 @@ function ReturnTooltip_NTT_EnsoulOptionList (string param, ETooltipSourceType eS
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-// ÆÇ¸Å ´ëÇà - ¸®½ºÆ® ¾ÆÀÌÅÛ ÅøÆÁ 
+// ??? ???? - ????? ?????? ???? 
 function ReturnTooltip_NTT_SellItemList (string param, ETooltipSourceType eSourceType)
 {
 	if (eSourceType == NTST_LIST)
 	{
-		// ÆÇ¸Å ¸®½ºÆ®¿¡¼­ ÀÎº¥Åä¸® ÇüÅÂÀÇ ÅøÆÁÀ» º¸¿©ÁØ´Ù	
+		// ??? ????????? ?¥ê??? ?????? ?????? ???????	
 		ReturnTooltip_NTT_ITEM(param, "SellItemList", NTST_ITEM);		
 	}
 	else
@@ -3511,7 +3518,7 @@ function ReturnTooltip_NTT_CLANWARINFO(string param, ETooltipSourceType eSourceT
 	{
 		ParamToRecord( param, record );
 		//m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
-		//Width°áÁ¤!
+		//Width????!
 
 		GetTextSizeDefault(getWarSituationString(record.LVDataList[2].nReserved1), Width1, Height);
 		GetTextSizeDefault(GetSystemString(2968) $ record.LVDataList[4].nReserved1, Width2, Height);
@@ -3523,13 +3530,13 @@ function ReturnTooltip_NTT_CLANWARINFO(string param, ETooltipSourceType eSourceT
 
 		
 
-		// ÀüÀï Á¶°ÇÀÌ ÀÖÀ»¶§¸¸
+		// ???? ?????? ????????
 		if(record.LVDataList[5].nReserved1 > 0)
 		{
 			StartItem();
 			m_Info.eType = DIT_TEXT;
 			m_Info.bLineBreak = true;	
-			//³²Àº ½Ã°£
+			//???? ?©£?
 			m_Info.t_strText = GetSystemString(1108) $ ":" $ getSecToDateStr(record.LVDataList[6].nReserved1, false);
 			EndItem();
 			toolTipLineCount++;
@@ -3537,7 +3544,7 @@ function ReturnTooltip_NTT_CLANWARINFO(string param, ETooltipSourceType eSourceT
 			StartItem();
 			m_Info.eType = DIT_TEXT;
 			m_Info.bLineBreak = true;	
-			//ÀüÀï Á¶°Ç
+			//???? ????
 			m_Info.t_strText = GetSystemString(2986) $ ":" $ record.LVDataList[5].nReserved1 $ GetSystemString(1013);
 			EndItem();
 			toolTipLineCount++;
@@ -3545,7 +3552,7 @@ function ReturnTooltip_NTT_CLANWARINFO(string param, ETooltipSourceType eSourceT
 		else
 		{		
 			// 0,1,2,3,4 
-			// ÀüÀï »óÈ² , ¸Å¿ì ¿ì¼¼, ¿­¼¼ °°Àº.. °ªÀÌ ¾ø´Ù¸é ÅøÆÁ Ç¥Çö ¾ÈÇÔ
+			// ???? ??? , ??? ?±r, ???? ????.. ???? ????? ???? ??? ????
 			if (record.LVDataList[2].nReserved1 < 5)
 			{
 				StartItem();
@@ -3560,7 +3567,7 @@ function ReturnTooltip_NTT_CLANWARINFO(string param, ETooltipSourceType eSourceT
 				toolTipLineCount++;
 			}
 			
-			// ³²Àº½Ã°£ -> Á¡¼öÇ¥½Ã
+			// ?????©£? -> ???????
 			if (record.LVDataList[3].nReserved1 > -500)
 			{
 				StartItem();
@@ -3570,13 +3577,13 @@ function ReturnTooltip_NTT_CLANWARINFO(string param, ETooltipSourceType eSourceT
 				m_Info.t_color.G = 152;
 				m_Info.t_color.B = 120;
 				m_Info.t_color.A = 255;
-				//ÃÖ±ÙÁ¡¼öº¯µ¿:Á¡¼ö
+				//???????????:????
 				m_Info.t_strText = GetSystemString(2968) $ record.LVDataList[4].nReserved1;
 				EndItem();
 				toolTipLineCount++;
 			}
 		}
-		// ÅøÆÁÀ» ¸¸µéÁö ¾Ê¾Ò´Ù¸é.. ³ª¿ÀÁö ¾Ê´Â´Ù
+		// ?????? ?????? ?????.. ?????? ??¢¥?
 		if (toolTipLineCount == 0)
 		{
 			return;
@@ -3590,7 +3597,7 @@ function ReturnTooltip_NTT_CLANWARINFO(string param, ETooltipSourceType eSourceT
 	ReturnTooltipInfo(m_Tooltip);
 }
 
-//¼±ÁØ ¼öÁ¤(2010.03.30) ¿Ï·á
+//???? ????(2010.03.30) ???
 function ReturnTooltip_NTT_POSTINFO(string param, ETooltipSourceType eSourceType)
 {
 	local LVDataRecord record;
@@ -3599,7 +3606,7 @@ function ReturnTooltip_NTT_POSTINFO(string param, ETooltipSourceType eSourceType
 	{
 		ParamToRecord( param, record );
 
-		//ex) "Á÷¾÷ : ¿¤ºì¸ÞÀÌÁö"
+		//ex) "???? : ?????????"
 		AddTooltipItemOption(391, GetClassType(int(record.LVDataList[1].szData)), true, true, true);
 	}
 	else
@@ -3611,7 +3618,7 @@ function ReturnTooltip_NTT_POSTINFO(string param, ETooltipSourceType eSourceType
 }
 
 
-//¼±ÁØ ¼öÁ¤(2010.02.22 ~ 03.08) ¿Ï·á
+//???? ????(2010.02.22 ~ 03.08) ???
 /////////////////////////////////////////////////////////////////////////////////
 // ROOMLIST
 function ReturnTooltip_NTT_ROOMLIST(string param, ETooltipSourceType eSourceType)
@@ -3652,7 +3659,7 @@ function ReturnTooltip_NTT_ROOMLIST(string param, ETooltipSourceType eSourceType
 			}
 		}
 
-		//ex) "Á÷¾÷ : ¿¤ºì¸ÞÀÌÁö"
+		//ex) "???? : ?????????"
 		//AddTooltipItemOption(391, GetClassType(int(record.LVDataList[2].szData)), true, true, true);
 	}
 	else
@@ -3674,7 +3681,7 @@ function ReturnTooltip_NTT_PrivateShopHistory(string param )
 	ParamToRecord( param, record );		
 	
 	if ( record.szReserved == "" ) return;
-	//ex)±Í¼Ó Áö¿ª : 
+	//ex)??? ???? : 
 	StartItem();
 	m_Info.eType = DIT_TEXT;
 	m_Info.t_color.R = int (Record.nReserved1);
@@ -3703,11 +3710,11 @@ function ReturnTooltip_NTT_USERLIST(string param, ETooltipSourceType eSourceType
 	{
 		ParamToRecord( param, record );
 		
-		//ex) "Á÷¾÷ : ¿¤ºì¸ÞÀÌÁö"
+		//ex) "???? : ?????????"
 		AddTooltipItemOption(391, GetClassType(int(record.LVDataList[1].szData)), true, true, true);
 		
 		AddTooltipItemBlank(0);
-		//ex)±Í¼Ó Áö¿ª : 
+		//ex)??? ???? : 
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_color.R = 163;
@@ -3717,7 +3724,7 @@ function ReturnTooltip_NTT_USERLIST(string param, ETooltipSourceType eSourceType
 		m_Info.t_strText = GetSystemString( 2276 ) $ " : ";
 		EndItem();
 		
-		//¼³¸í
+		//????
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_color.R = 176;
@@ -3757,16 +3764,16 @@ function ReturnTooltip_NTT_PARTYMATCH(string param, ETooltipSourceType eSourceTy
 	{
 		ParamToRecord( param, record );
 		
-		//ex) "Á÷¾÷ : ¿¤ºì¸ÞÀÌÁö"
+		//ex) "???? : ?????????"
 		AddTooltipItemOption(391, GetClassType(int(record.LVDataList[1].szData)), true, true, true);
 		
-		//¼±ÁØ ¼öÁ¤(2010.02.22 ~ 03.08) ¿Ï·á
-		//ex)ÇöÀç À§Ä¡ : ±Û·çµð¿À
+		//???? ????(2010.02.22 ~ 03.08) ???
+		//ex)???? ??? : ?????
 		//AddTooltipItemOption(471, GetZoneNameWithZoneID(int(record.LVDataList[3].szData)), true, true, true);
 		
 		/*
 		AddTooltipItemBlank(0);
-		//±Í¼ÓÁö¿ª
+		//???????
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_bDrawOneLine = false;
@@ -3777,7 +3784,7 @@ function ReturnTooltip_NTT_PARTYMATCH(string param, ETooltipSourceType eSourceTy
 		m_Info.t_strText = GetSystemString( 2276 ) @ ":";
 		EndItem();		
 		
-		//¼³¸í
+		//????
 		
 		StartItem();
 		m_Info.eType = DIT_TEXT;		
@@ -3800,7 +3807,7 @@ function ReturnTooltip_NTT_PARTYMATCH(string param, ETooltipSourceType eSourceTy
 
 		
 		AddTooltipItemBlank(0);
-		//ex)±Í¼Ó Áö¿ª : 
+		//ex)??? ???? : 
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_color.R = 163;
@@ -3808,10 +3815,10 @@ function ReturnTooltip_NTT_PARTYMATCH(string param, ETooltipSourceType eSourceTy
 		m_Info.t_color.B = 163;
 		m_Info.t_color.A = 255;
 		m_Info.t_strText = GetSystemString( 2276 ) $ " : ";
-		//m_Info.t_strText = "±Í¼Ó Áö¿ª : ";
+		//m_Info.t_strText = "??? ???? : ";
 		EndItem();
 		
-		//¼³¸í
+		//????
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_color.R = 176;
@@ -3839,7 +3846,7 @@ function ReturnTooltip_NTT_PARTYMATCH(string param, ETooltipSourceType eSourceTy
 	ReturnTooltipInfo(m_Tooltip);
 }
 
-//¼±ÁØ Ãß°¡ UNION ¿¹Àü Á÷¾÷¸¸ ³ª¿À´Â °æ¿ì.
+//???? ??? UNION ???? ?????? ?????? ???.
 /////////////////////////////////////////////////////////////////////////////////
 // UINONLIST
 function ReturnTooltip_NTT_UNIONLIST(string param, ETooltipSourceType eSourceType)
@@ -3850,7 +3857,7 @@ function ReturnTooltip_NTT_UNIONLIST(string param, ETooltipSourceType eSourceTyp
 	{
 		ParamToRecord( param, record );
 		
-		//ex) "Á÷¾÷ : ¿¤ºì¸ÞÀÌÁö"
+		//ex) "???? : ?????????"
 		AddTooltipItemOption(391, GetClassType(int(record.LVDataList[1].szData)), true, true, true);
 	}
 	else
@@ -3874,10 +3881,10 @@ function ReturnTooltip_NTT_QUESTLIST(string param, ETooltipSourceType eSourceTyp
 	{
 		ParamToRecord( param, record );
 		
-		//Äù½ºÆ® ÀÌ¸§
+		//????? ???
 		AddTooltipItemOption(1200, record.LVDataList[0].szData, true, true, true);
 		
-		//¹Ýº¹¼º
+		//?????
 		switch(record.LVDataList[3].nReserved1)
 		{
 		case 0:
@@ -3914,7 +3921,7 @@ function ReturnTooltip_NTT_RAIDLIST(string param, ETooltipSourceType eSourceType
 		
 		m_Tooltip.MinimumWidth = TOOLTIP_MINIMUM_WIDTH;
 		
-		//·¹ÀÌµå ¼³¸í
+		//????? ????
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.t_bDrawOneLine = false;
@@ -3948,13 +3955,13 @@ function ReturnTooltip_NTT_QUESTINFO(string param, ETooltipSourceType eSourceTyp
 	{
 		ParamToRecord( param, record );
 		
-		//Äù½ºÆ® ÀÌ¸§
+		//????? ???
 		AddTooltipItemOption(1200, record.LVDataList[0].szData, true, true, true);
 		
-		//¼öÇàÁ¶°Ç
+		//????????
 		AddTooltipItemOption(1201, record.LVDataList[1].szData, true, true, false);
 		
-		//Width°áÁ¤!
+		//Width????!
 		GetTextSizeDefault(GetSystemString(1200) $ " : " $ record.LVDataList[0].szData, Width1, Height);
 		GetTextSizeDefault(GetSystemString(1201) $ " : " $ record.LVDataList[1].szData, Width2, Height);
 		if (Width2>Width1)
@@ -3963,10 +3970,10 @@ function ReturnTooltip_NTT_QUESTINFO(string param, ETooltipSourceType eSourceTyp
 			Width1 = TOOLTIP_MINIMUM_WIDTH;
 		m_Tooltip.MinimumWidth = Width1 + 30;
 		
-		//ÃßÃµ·¹º§
+		//???????
 		AddTooltipItemOption(922, record.LVDataList[2].szData, true, true, false);
 		
-		//¹Ýº¹¼º
+		//?????
 		switch(record.LVDataList[3].nReserved1)
 		{
 		case 0:
@@ -3980,7 +3987,7 @@ function ReturnTooltip_NTT_QUESTINFO(string param, ETooltipSourceType eSourceTyp
 		}
 		AddTooltipItemOption2(1202, nTmp, true, true, false);
 		
-		//Äù½ºÆ®¼³¸í
+		//?????????
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.nOffSetY = TOOLTIP_LINE_HGAP;
@@ -4052,16 +4059,16 @@ function ReturnTooltip_NTT_MANOR(string param, string TooltipType, ETooltipSourc
 			idx3 = 9;
 		}
 		
-		// ¾¾¾Ñ or ÀÛ¹° ÀÌ¸§
+		// ???? or ??? ???
 		AddTooltipItemOption(0, record.LVDataList[0].szData, false, true, true);
 		
-		// ·¹º§
+		// ????
 		AddTooltipItemOption(537, record.LVDataList[idx1].szData, true, true, false);
 
-		// º¸»ó Å¸ÀÔ1
+		// ???? ???1
 		AddTooltipItemOption(1134, record.LVDataList[idx2].szData, true, true, false);
 		
-		// º¸»ó Å¸ÀÔ2
+		// ???? ???2
 		AddTooltipItemOption(1135, record.LVDataList[idx3].szData, true, true, false);
 	}
 	else
@@ -4072,16 +4079,16 @@ function ReturnTooltip_NTT_MANOR(string param, string TooltipType, ETooltipSourc
 	ReturnTooltipInfo(m_Tooltip);
 }
 
-// [Äù½ºÆ® ¾ÆÀÌÅÛ ÅøÆÁ Ãß°¡]
+// [????? ?????? ???? ???]
 function ReturnTooltip_NTT_QUESTREWARDS(string param, ETooltipSourceType eSourceType)
 {
-	// [Äù½ºÆ® ¾ÆÀÌÅÛ ÅøÆÁ Ãß°¡] ÀÌ ºÎºÐ¿¡ Äù½ºÆ® ¾ÆÀÌÅÛ ÅøÆÁ¿¡ °É¸Â´Â ÄÚµå°¡ µé¾î°¡¸é µÉ °Í °°½À´Ï´Ù.
+	// [????? ?????? ???? ???] ?? ?¥ê¬á? ????? ?????? ?????? ??¢¥? ??? ????? ?? ?? ???????.
 	// 2009.10.14
 	// ReturnTooltip_NTT_ITEM(param, "Inventoty", eSourceType);
 	ReturnTooltip_NTT_ITEM(param, "QuestReward", eSourceType);
 }
 
-//¾ÆÀÌÅÛÀÇ »ö»óÀ» ´Ù½Ã ¼³Á¤ÇØÁØ´Ù.
+//???????? ?????? ??? ?????????.
 function SetTooltipItemColor(int R, int G, int B, int Offset)
 {
 	local int idx;
@@ -4092,7 +4099,7 @@ function SetTooltipItemColor(int R, int G, int B, int Offset)
 	m_Tooltip.DrawList[idx].t_color.A = 255;
 }
 
-//ÀÎÃ¾Æ®(¼±ÁØ »ö»ó º¯°æ)
+//??©­?(???? ???? ????)
 function int AddTooltipItemEnchant(ItemInfo Item, optional bool bFirstLineWidthCount, optional string fontName, optional int offsetX, optional int offsetY)
 {
 	local int nSumWidth, sizeWidth, sizeHeight;
@@ -4127,7 +4134,7 @@ function int AddTooltipItemEnchant(ItemInfo Item, optional bool bFirstLineWidthC
 	return nSumWidth;
 }
 
-//¾ÆÀÌÅÛ ÀÌ¸§ + AdditionalName
+//?????? ??? + AdditionalName
 function AddTooltipItemName(string Name, ItemInfo Item, int AddTooltipItemName, optional string fontName, optional int offsetX, optional int offsetY)
 {
 	local string tmStr;
@@ -4137,37 +4144,37 @@ function AddTooltipItemName(string Name, ItemInfo Item, int AddTooltipItemName, 
 	m_Info.t_bDrawOneLine = true;
 	switch (AddTooltipItemName)
 	{
-		case 0: //È¸»ö
+		case 0: //???
 		m_Info.t_color.R = 137;
 		m_Info.t_color.G = 137;
 		m_Info.t_color.B = 137;
 		m_Info.t_color.A = 255;
 		break;
-		case 1: //Èò»ö
+		case 1: //???
 		m_Info.t_color.R = 255;
 		m_Info.t_color.G = 255;
 		m_Info.t_color.B = 255;
 		m_Info.t_color.A = 255;
 		break;
-		case 2: //³ë¶û
+		case 2: //???
 		m_Info.t_color.R = 255;
 		m_Info.t_color.G = 251;
 		m_Info.t_color.B = 4;
 		m_Info.t_color.A = 255;
 		break;
-		case 3: //»¡°­
+		case 3: //????
 		m_Info.t_color.R = 240;
 		m_Info.t_color.G = 68;
 		m_Info.t_color.B = 68;
 		m_Info.t_color.A = 255;
 		break;
-		case 4: //ÆÄ¶û
+		case 4: //???
 		m_Info.t_color.R = 33;
 		m_Info.t_color.G = 164;
 		m_Info.t_color.B = 255;
 		m_Info.t_color.A = 255;
 		break;
-		case 5: //º¸¶ó
+		case 5: //????
 		m_Info.t_color.R = 255;
 		m_Info.t_color.G = 0;
 		m_Info.t_color.B = 255;
@@ -4201,7 +4208,7 @@ function AddTooltipItemName(string Name, ItemInfo Item, int AddTooltipItemName, 
 		EndItem();
 	}
 
-	// ÁýÈ¥ ÀÌ¸§ 
+	// ??? ??? 
 	tmStr = GetEnsoulOptionNameAll(Item);
 
 	if (Len(tmStr) > 0)
@@ -4242,8 +4249,8 @@ function AddTooltipItemGrade(ItemInfo Item, optional int offsetX, optional int o
 		//m_Info.nOffSetX = 8;
 		//m_Info.nOffSetY = 0;
 		
-		// S80 ±×·¹ÀÌµåÀÏ °æ¿ì¿¡ ÇÑÇØ ¾ÆÀÌÄÜ ÅØ½ºÃÄ Å©±â¸¦ 2¹è·Î ´Ã¸°´Ù. 6, 7
-		// R95, R99 ±×·¹ÀÌµåÀÏ °æ¿ì¿¡ ÇÑÇØ ¾ÆÀÌÄÜ ÅØ½ºÃÄ Å©±â¸¦ 2¹è·Î ´Ã¸°´Ù. 9, 10
+		// S80 ???????? ??Äî ???? ?????? ????? ??? 2??? ?©ª???. 6, 7
+		// R95, R99 ???????? ??Äî ???? ?????? ????? ??? 2??? ?©ª???. 9, 10
 		m_Info.u_nTextureHeight = 16;
 		m_Info.u_nTextureUHeight = 16;
 		if( Item.CrystalType == CrystalType.CRT_S80 || Item.CrystalType == CrystalType.CRT_S84 || Item.CrystalType == CrystalType.CRT_R95 || Item.CrystalType == CrystalType.CRT_R99 )
@@ -4259,7 +4266,7 @@ function AddTooltipItemGrade(ItemInfo Item, optional int offsetX, optional int o
 
 		EndItem();
 
-//		nSumWidth = nSumWidth + m_Info.nOffSetX + m_Info.u_nTextureWidth; ¾²ÀÌÁö ¾Ê´Â °Í °°¾Æ »èÁ¦
+//		nSumWidth = nSumWidth + m_Info.nOffSetX + m_Info.u_nTextureWidth; ?????? ??? ?? ???? ????
 	}
 
 //	return nSumWidth;
@@ -4284,7 +4291,7 @@ function AddTooltipItemCount(ItemInfo Item, optional int offsetX, optional int o
 	}	
 }
 
-//Á¦·Ã »ö»ó
+//???? ????
 function GetRefineryColor(int Quality, out int R, out int G, out int B)
 {
 	switch (Quality)
@@ -4317,7 +4324,7 @@ function GetRefineryColor(int Quality, out int R, out int G, out int B)
 	}
 }
 
-//¼Ó¼º °ÔÀÌÁö ±×·ÁÁÖ±â
+//??? ?????? ??????
 function AddTooltipItemAttributeGage(ItemInfo Item)
 {
 	local int i;
@@ -4335,7 +4342,7 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 	NowValue =0;
 
 	//Debug ( " !! Attribute "  @ Item.AttackAttributeValue );
-	// °ø°Ý ¾ÆÀÌÅÛ ¼Ó¼º
+	// ???? ?????? ???
 	if (Item.AttackAttributeValue  > 0)
 	{	
 		AddCrossLine();
@@ -4344,7 +4351,7 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 		SetAttackAttribute(Item.AttackAttributeValue,ATTRIBUTE_WIND);
 		SetAttackAttribute(Item.AttackAttributeValue,ATTRIBUTE_EARTH);
 		SetAttackAttribute(Item.AttackAttributeValue,ATTRIBUTE_HOLY);
-		SetAttackAttribute(Item.AttackAttributeValue,ATTRIBUTE_UNHOLY); //·¹º§°ú ÇöÁ¦°ªµîÀ» ±¸ÇÑ´Ù.		
+		SetAttackAttribute(Item.AttackAttributeValue,ATTRIBUTE_UNHOLY); //?????? ?????????? ?????.		
 
 		switch(Item.AttackAttributeType)
 		{
@@ -4380,16 +4387,16 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 				break;
 		}
 	}
-	else	// ¹æ¾î ¾ÆÀÌÅÛ ¼Ó¼º
+	else	// ??? ?????? ???
 	{
 		SetDefAttribute(Item.DefenseAttributeValueFire,ATTRIBUTE_FIRE);
 		SetDefAttribute(Item.DefenseAttributeValueWater,ATTRIBUTE_WATER);
 		SetDefAttribute(Item.DefenseAttributeValueWind,ATTRIBUTE_WIND);
 		SetDefAttribute(Item.DefenseAttributeValueEarth,ATTRIBUTE_EARTH);
 		SetDefAttribute(Item.DefenseAttributeValueHoly,ATTRIBUTE_HOLY);
-		SetDefAttribute(Item.DefenseAttributeValueUnholy,ATTRIBUTE_UNHOLY); //·¹º§°ú ÇöÁ¦°ªµîÀ» ±¸ÇÑ´Ù.
+		SetDefAttribute(Item.DefenseAttributeValueUnholy,ATTRIBUTE_UNHOLY); //?????? ?????????? ?????.
 
-		if(Item.DefenseAttributeValueFire != 0) //ÆÄÀÌ¾î ¼Ó¼º ÅøÆÁ ±×¸®±â
+		if(Item.DefenseAttributeValueFire != 0) //????? ??? ???? ?????
 		{
 			if( BLine == false )
 			{
@@ -4399,7 +4406,7 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			textureName[ATTRIBUTE_FIRE] = "L2UI_CT1.Gauges.Gauge_DF_Attribute_FIRE";
 			tooltipStr[ATTRIBUTE_FIRE] =GetSystemString(1623) $ " Lv " $ String(DefAttLevel[ATTRIBUTE_FIRE]) $ " ("$ GetSystemString(1622) $ " " $ GetSystemString(54) $ " " $ String(Item.DefenseAttributeValueFire) $")";
 		}
-		if(Item.DefenseAttributeValueWater != 0) //¹° ¼Ó¼º ÅøÆÁ ±×¸®±â
+		if(Item.DefenseAttributeValueWater != 0) //?? ??? ???? ?????
 		{
 			if( BLine == false )
 			{
@@ -4409,7 +4416,7 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			textureName[ATTRIBUTE_WATER] = "L2UI_CT1.Gauges.Gauge_DF_Attribute_WATER";
 			tooltipStr[ATTRIBUTE_WATER] =GetSystemString(1622) $ " Lv " $ String(DefAttLevel[ATTRIBUTE_WATER]) $ " ("$ GetSystemString(1623) $ " " $ GetSystemString(54) $ " " $String(Item.DefenseAttributeValueWater) $ ")";
 		}
-		if(Item.DefenseAttributeValueWind != 0) //¹Ù¶÷ ¼Ó¼º ÅøÆÁ ±×¸®±â
+		if(Item.DefenseAttributeValueWind != 0) //??? ??? ???? ?????
 		{
 			if( BLine == false )
 			{
@@ -4419,7 +4426,7 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			textureName[ATTRIBUTE_WIND] = "L2UI_CT1.Gauges.Gauge_DF_Attribute_WIND";
 			tooltipStr[ATTRIBUTE_WIND] =GetSystemString(1625) $ " Lv " $ String(DefAttLevel[ATTRIBUTE_WIND]) $ " ("$ GetSystemString(1624) $ " " $ GetSystemString(54) $ " " $String(Item.DefenseAttributeValueWind) $")";
 		}
-		if(Item.DefenseAttributeValueEarth != 0) //¶¥ ¼Ó¼º ÅøÆÁ ±×¸®±â
+		if(Item.DefenseAttributeValueEarth != 0) //?? ??? ???? ?????
 		{
 			if( BLine == false )
 			{
@@ -4429,7 +4436,7 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			textureName[ATTRIBUTE_EARTH] = "L2UI_CT1.Gauges.Gauge_DF_Attribute_EARTH";
 			tooltipStr[ATTRIBUTE_EARTH] =GetSystemString(1624) $ " Lv " $ String(DefAttLevel[ATTRIBUTE_EARTH]) $ " ("$ GetSystemString(1625) $ " " $ GetSystemString(54) $ " " $String(Item.DefenseAttributeValueEarth) $ ")";
 		}
-		if(Item.DefenseAttributeValueHoly != 0) //½Å¼º ¼Ó¼º ÅøÆÁ ±×¸®±â
+		if(Item.DefenseAttributeValueHoly != 0) //??? ??? ???? ?????
 		{
 			if( BLine == false )
 			{
@@ -4439,7 +4446,7 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			textureName[ATTRIBUTE_HOLY] = "L2UI_CT1.Gauges.Gauge_DF_Attribute_DIVINE";
 			tooltipStr[ATTRIBUTE_HOLY] =GetSystemString(1627) $ " Lv " $ String(DefAttLevel[ATTRIBUTE_HOLY]) $ " ("$ GetSystemString(1626) $ " " $ GetSystemString(54) $ " " $ String(Item.DefenseAttributeValueHoly) $")";
 		}
-		if(Item.DefenseAttributeValueUnholy != 0) //¾ÏÈæ ¼Ó¼º ÅøÆÁ ±×¸®±â
+		if(Item.DefenseAttributeValueUnholy != 0) //???? ??? ???? ?????
 		{
 			if( BLine == false )
 			{
@@ -4449,11 +4456,11 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			textureName[ATTRIBUTE_UNHOLY] = "L2UI_CT1.Gauges.Gauge_DF_Attribute_DARK";
 			tooltipStr[ATTRIBUTE_UNHOLY] =GetSystemString(1626) $ " Lv " $ String(DefAttLevel[ATTRIBUTE_UNHOLY]) $ " ("$ GetSystemString(1627) $ " " $ GetSystemString(54) $ " " $String(Item.DefenseAttributeValueUnholy) $ ")";
 		}
-		// ¹æ¾î ¾ÆÀÌÅÛ ¼Ó¼º
+		// ??? ?????? ???
 		BLine = false;
 	}
 
-	if (Item.AttackAttributeValue  > 0)//°ø°Ý¼Ó¼ºÀÏ°æ¿ì
+	if (Item.AttackAttributeValue  > 0)//??????????
 	{
 		for(i = 0; i < 6; i++)
 		{
@@ -4467,10 +4474,10 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			m_Info.t_strText = tooltipStr[i];
 			EndItem();
 			
-			// ¼Ó¼º ¾ÆÀÌÄÜ 
+			// ??? ?????? 
 			//addTooltipTexture(GetAttributeIcon(i),16,16, 13,13, true, false, 2,2);
 
-			//ÅØ½ºÃÄ µÎÀåÀ» °ãÃÄ ±×·Á¾ß ÇÑ´Ù. 
+			//????? ?????? ???? ????? ???. 
 			StartItem();
 			m_Info.eType = DIT_TEXTURE;
 			m_Info.bLineBreak = true;
@@ -4489,14 +4496,14 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			m_Info.nOffSetX = 0;
 			m_Info.nOffSetY = -7;
 			m_Info.u_nTextureWidth = AttackAttCurrValue[i] * 140 / AttackAttMaxValue[i] ;
-			if( m_Info.u_nTextureWidth > 140) m_Info.u_nTextureWidth = 140;	//³Ñ¾î°¡¸é °Á 140ÀÌ¶ó´Â.. ¤»
+			if( m_Info.u_nTextureWidth > 140) m_Info.u_nTextureWidth = 140;	//????? ?? 140????.. ??
 			m_Info.u_nTextureHeight = 7;
 			m_Info.u_strTexture = textureName[i];
 			EndItem();
 		}
 	
 	}
-	else{ //¹æ¾î ¼Ó¼ºÀÏ °æ¿ì
+	else{ //??? ????? ???
 		for(i = 0; i < 6; i++)
 		{
 			if(tooltipStr[i] == "") continue;			
@@ -4510,7 +4517,7 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			m_Info.t_strText = tooltipStr[i];
 			EndItem();
 			
-			//ÅØ½ºÃÄ µÎÀåÀ» °ãÃÄ ±×·Á¾ß ÇÑ´Ù. 
+			//????? ?????? ???? ????? ???. 
 			StartItem();
 			m_Info.eType = DIT_TEXTURE;
 			m_Info.bLineBreak = true;
@@ -4530,7 +4537,7 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 			m_Info.nOffSetY = -7;
 			
 			m_Info.u_nTextureWidth = DefAttCurrValue[i] * 140 / DefAttMaxValue[i] ;
-			if( m_Info.u_nTextureWidth > 140) m_Info.u_nTextureWidth = 140;	//³Ñ¾î°¡¸é °Á 140ÀÌ¶ó´Â.. ¤»
+			if( m_Info.u_nTextureWidth > 140) m_Info.u_nTextureWidth = 140;	//????? ?? 140????.. ??
 			m_Info.u_nTextureHeight = 7;
 			m_Info.u_strTexture = textureName[i];
 			EndItem();
@@ -4539,26 +4546,26 @@ function AddTooltipItemAttributeGage(ItemInfo Item)
 }
 
 
-// ±â°£Á¦ ¾ÆÀÌÅÛ, ±â°£Á¦ °¡°ø 
+// ???? ??????, ???? ???? 
 function  AddTooltipItemCurrentPeriod(ItemInfo Item)
 {
-	// ±â°£Á¦ ¾ÆÀÌÅÛ
+	// ???? ??????
 	if ( Item.CurrentPeriod > 0)
 	{
-		//ºó°ø°£
+		//?????
 		AddCrossLine();
 		AddTooltipItemBlank(0);
 		
-		//<±â°£Á¦ °¡°ø>
+		//<???? ????>
 		//branch120516
-		if(Item.LookChangeItemID > 0 && Item.Id.ClassID != 4442) //branch GD35_0828 2013-12-18 luciper3 - º¹±ÇÀÌ ¾Æ´Ñ°æ¿ì..
+		if(Item.LookChangeItemID > 0 && Item.Id.ClassID != 4442) //branch GD35_0828 2013-12-18 luciper3 - ?????? ?????..
 		{
-			// ±â°£Á¦ °¡°ø
+			// ???? ????
 			AddTooltipItemOption(5144, "", true, false, false);
 		}
 		else
 		{
-			// <±â°£Á¦ ¾ÆÀÌÅÛ>
+			// <???? ??????>
 			AddTooltipItemOption(1739, "", true, false, false,);
 		}			
 		SetTooltipItemColor(255, 255, 255, 0);
@@ -4566,10 +4573,10 @@ function  AddTooltipItemCurrentPeriod(ItemInfo Item)
 		
 		AddTooltipItemBlank(0);
 		addTexture("l2ui_ct1.SkillWnd_DF_ListIcon_use", 12, 11, 12, 11, 3, 7);
-		// ³²Àº ½Ã°£ 
+		// ???? ?©£? 
 		AddTooltipColorText(GetSystemString(1199) $ " : ", getColor(163,163,163,255), false, true, false, "", 0, TOOLTIP_LINE_HGAP);
 		
-		// ParamAdd ºÎºÐ ¶§¹®¿¡ ±×´ë·Î ³ªµÒ.
+		// ParamAdd ?¥ê? ?????? ???? ????.
 		StartItem();
 		m_Info.eType = DIT_TEXT;
 		m_Info.nOffSetY = TOOLTIP_LINE_HGAP;
@@ -4581,15 +4588,15 @@ function  AddTooltipItemCurrentPeriod(ItemInfo Item)
 		m_Info.t_color.A = 255;
 		m_Info.t_strText = MakeTimeStr(Item.CurrentPeriod);
 		
-		// ÀÌ°É ³ÖÀ¸¸é ÅøÆÁ ½Ã°£ÀÌ °»½Å µÇ°Ô µÇ´Âµ¥ ¹®Á¦´Â bDrawOneLineÀ» ¼³Á¤ ÇØ³õ¾Æµµ ÅøÆÁ °¡·ÎÆø¿¡ ´ëÇÑ 
-		// ¾÷µ¥ÀÌÆ®°¡ ¾ÈµÇ´Â ¹ö±×°¡ ÀÖ´Ù. 
+		// ??? ?????? ???? ?©£??? ???? ??? ???? ?????? bDrawOneLine?? ???? ?????? ???? ???????? ???? 
+		// ????????? ???? ????? ???. 
 		ParamAdd(m_Info.Condition, "Type", "PeriodTime");
 		EndItem();
 		
 	}
 }
 
-// ±â°£Á¦ ¾ÆÀÌÅÛ ³²Àº ±â°£ : 22ÀÏ 22½Ã°£ 22ºÐ ±âÁØÀ¸·Î ÅøÆÁ »çÀÌÁî¸¦ ¼³Á¤
+// ???? ?????? ???? ?? : 22?? 22?©£? 22?? ???????? ???? ?????? ????
 function setMakeTimeStrMaxWidth()
 {
 	local string timeStr;
@@ -4610,18 +4617,18 @@ function AddTooltipItemWeaponLookChange(ItemInfo Item)
 {
 	local ItemInfo tmpInfo;
 
- 	if(Item.LookChangeItemID > 0 && Item.Id.ClassID != 4442 ) //branch GD35_0828 2013-12-18 luciper3 - º¹±ÇÀÌ ¾Æ´Ñ°æ¿ì..
+ 	if(Item.LookChangeItemID > 0 && Item.Id.ClassID != 4442 ) //branch GD35_0828 2013-12-18 luciper3 - ?????? ?????..
  	{
-		//ºó°ø°£
+		//?????
 		AddCrossLine();
 		
-		//<±â°£Á¦ ¾ÆÀÌÅÛ>
+		//<???? ??????>
 		//branch 111109
 
 		//SetTooltipTextColor( 230, 230, 230, 255 );
 		//getColor(230, 230, 230, 255)
 				
-		if(Item.BodyPart == 25 || Item.BodyPart == 26 || Item.BodyPart == 10 ) //Çì¾î¾Ç¼¼¼­¸®
+		if(Item.BodyPart == 25 || Item.BodyPart == 26 || Item.BodyPart == 10 ) //?????????
 		{
 			AddTooltipItemOption(5115, "", true, false, false,,,,getColor(230, 230, 230, 255));
 		}
@@ -4659,7 +4666,7 @@ function AddTooltipItemWeaponLookChange(ItemInfo Item)
 // 	m_Tooltip.DrawList[m_Tooltip.DrawList.Length-1] = m_Info;
 // }
 
-//Äù½ºÆ® ¾ÆÀÌÅÛÀÇ Äù½ºÆ® ÀÌ¸§ Ç¥½Ã
+//????? ???????? ????? ??? ???
 function AddTooltipItemQuestList(ItemInfo Item)
 {
 	local int i, count, questType;
@@ -4672,7 +4679,7 @@ function AddTooltipItemQuestList(ItemInfo Item)
 		if(Item.RelatedQuestID[i] > 0)
 		{
 			questTypeStr = "";
-			//Äù½ºÆ® Å¸ÀÔ (¼Ö·Î, ÆÄÆ¼, ÀÏÀÏ, ¹Ýº¹ ±¸ºÐ)			
+			//????? ??? (???, ???, ????, ??? ????)			
 			switch (Class'UIDATA_QUEST'.static.GetQuestIscategory( Item.RelatedQuestID[i], 1 ))
 			{
 				case 0:
@@ -4682,7 +4689,7 @@ function AddTooltipItemQuestList(ItemInfo Item)
 				case 1:
 					questType = class'UIDATA_QUEST'.static.GetQuestType(Item.RelatedQuestID[i], 1);
 					if ( questType == 4 || questType == 5 )
-						questTypeStr = GetSystemString( 2788 ); //ÀÏÀÏ Äù½ºÆ® 
+						questTypeStr = GetSystemString( 2788 ); //???? ????? 
 					else 
 						questTypeStr = GetSystemString(861);
 
@@ -4708,7 +4715,7 @@ function AddTooltipItemQuestList(ItemInfo Item)
 
 			if (class'UIDATA_QUEST'.static.GetQuestName(Item.RelatedQuestID[i]) != "")
 			{
-				//<°ü·Ã Äù½ºÆ®>
+				//<???? ?????>
 				if(count == 0)
 				{
 					StartItem();
@@ -4728,53 +4735,53 @@ function AddTooltipItemQuestList(ItemInfo Item)
 }
 
 
-// ¼Ó¼ºÀÇ ·¹º§°ªÀ» Àü¿ªº¯¼ö¿¡ ÀúÀå	//ÀÚ·á°¡ ¸¹¾Æ¼­ Àü¿ªº¯¼ö¿¡ Áý¾î³Ö´Â´Ù. 
+// ????? ???????? ?????????? ????	//??? ????? ?????????? ?????¢¥?. 
 
 function SetAttackAttribute(int Attvalue, int type)
 {
-	if( AttValue >= 375)	// 9·¾	375 ~ 450
+	if( AttValue >= 375)	// 9??	375 ~ 450
 	{
 		AttackAttLevel[type] = 9;
 		AttackAttMaxValue[type] = 75;
 		AttackAttCurrValue[type] = AttValue - 375;
 	}
-	else if( AttValue >= 325)	// 8·¾	325 ~ 375
+	else if( AttValue >= 325)	// 8??	325 ~ 375
 	{
 		AttackAttLevel[type] = 8;
 		AttackAttMaxValue[type] = 50;
 		AttackAttCurrValue[type] = AttValue - 325;
 	}
-	else if( AttValue >= 300)	// 7·¾	300 ~ 325
+	else if( AttValue >= 300)	// 7??	300 ~ 325
 	{
 		AttackAttLevel[type] = 7;
 		AttackAttMaxValue[type] = 25;
 		AttackAttCurrValue[type] = AttValue - 300;
 	}
-	else if( AttValue >= 225)	// 6·¾	225 ~ 300
+	else if( AttValue >= 225)	// 6??	225 ~ 300
 	{
 		AttackAttLevel[type] = 6;
 		AttackAttMaxValue[type] = 75;
 		AttackAttCurrValue[type] = AttValue - 225;
 	}
-	else if( AttValue >= 175)	// 5·¾	175 ~ 225
+	else if( AttValue >= 175)	// 5??	175 ~ 225
 	{
 		AttackAttLevel[type] = 5;
 		AttackAttMaxValue[type] = 50;
 		AttackAttCurrValue[type] = AttValue - 175;
 	}
-	else if( AttValue >= 150)	// 4·¾	150 ~ 175
+	else if( AttValue >= 150)	// 4??	150 ~ 175
 	{
 		AttackAttLevel[type] = 4;
 		AttackAttMaxValue[type] = 25;
 		AttackAttCurrValue[type] = AttValue - 150;
 	}
-	else if( AttValue >= 75)	// 3·¾	75 ~ 150
+	else if( AttValue >= 75)	// 3??	75 ~ 150
 	{
 		AttackAttLevel[type] = 3;
 		AttackAttMaxValue[type] = 75;
 		AttackAttCurrValue[type] = AttValue - 75;
 	}
-	else if( AttValue >= 25)	// 2·¾	25~ 75
+	else if( AttValue >= 25)	// 2??	25~ 75
 	{
 		AttackAttLevel[type] = 2;
 		AttackAttMaxValue[type] = 50;
@@ -4787,54 +4794,54 @@ function SetAttackAttribute(int Attvalue, int type)
 		AttackAttCurrValue[type] = AttValue;
 	}	
 }
-// ¼Ó¼ºÀÇ ·¹º§°ªÀ» Àü¿ªº¯¼ö¿¡ ÀúÀå	//ÀÚ·á°¡ ¸¹¾Æ¼­ Àü¿ªº¯¼ö¿¡ Áý¾î³Ö´Â´Ù. 
+// ????? ???????? ?????????? ????	//??? ????? ?????????? ?????¢¥?. 
 
 
 function SetDefAttribute(int Defvalue, int type)
 {
-	if( DefValue >= 150)	// 9·¾		150~180
+	if( DefValue >= 150)	// 9??		150~180
 	{
 		DefAttLevel[type] = 9;
 		DefAttMaxValue[type] = 30;
 		DefAttCurrValue[type] = DefValue - 150;
 	}
-	else if( DefValue >= 132)	// 8·¾	132 ~ 150
+	else if( DefValue >= 132)	// 8??	132 ~ 150
 	{
 		DefAttLevel[type] = 8;
 		DefAttMaxValue[type] = 18;
 		DefAttCurrValue[type] = DefValue - 132;
 	}
-	else if( DefValue >= 120)	// 7·¾	120 ~ 132
+	else if( DefValue >= 120)	// 7??	120 ~ 132
 	{
 		DefAttLevel[type] = 7;
 		DefAttMaxValue[type] = 12;
 		DefAttCurrValue[type] = DefValue - 120;
 	}
-	else if( DefValue >= 90)	// 6·¾	90 ~ 120
+	else if( DefValue >= 90)	// 6??	90 ~ 120
 	{
 		DefAttLevel[type] = 6;
 		DefAttMaxValue[type] = 30;
 		DefAttCurrValue[type] = DefValue - 90;
 	}
-	else if( DefValue >= 72)	// 5·¾	72 ~ 90
+	else if( DefValue >= 72)	// 5??	72 ~ 90
 	{
 		DefAttLevel[type] = 5;
 		DefAttMaxValue[type] = 18;
 		DefAttCurrValue[type] = DefValue - 72;
 	}
-	else if( DefValue >= 60)	// 4·¾	60 ~ 72
+	else if( DefValue >= 60)	// 4??	60 ~ 72
 	{
 		DefAttLevel[type] = 4;
 		DefAttMaxValue[type] = 12;
 		DefAttCurrValue[type] = DefValue - 60;
 	}
-	else if( DefValue >= 30)	// 3·¾	30 ~ 60
+	else if( DefValue >= 30)	// 3??	30 ~ 60
 	{
 		DefAttLevel[type] = 3;
 		DefAttMaxValue[type] = 30;
 		DefAttCurrValue[type] = DefValue - 30;
 	}
-	else if( DefValue >= 12)	// 2·¾	// 12 ~ 30
+	else if( DefValue >= 12)	// 2??	// 12 ~ 30
 	{
 		DefAttLevel[type] = 2;
 		DefAttMaxValue[type] = 18;
@@ -4848,15 +4855,15 @@ function SetDefAttribute(int Defvalue, int type)
 	}	
 }
 
-// BR ¿¡³ÊÁö Á¤º¸
+// BR ?????? ????
 function AddTooltipBR_MaxEnergy(ItemInfo item)
 {
-	//¿¡³ÊÁö Á¤º¸
+	//?????? ????
 	if (Item.BR_MaxEnergy > 0)
 	{
-		//ºó°ø°£
+		//?????
 		AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
-		//<¿¡³ÊÁö Á¤º¸>
+		//<?????? ????>
 		AddTooltipItemOption(5065, "", true, false, false);
 		SetTooltipItemColor(255, 255, 255, 0);
 
@@ -4886,25 +4893,25 @@ function AddTooltipBR_MaxEnergy(ItemInfo item)
 	}
 }
 
-// Á¦·Ã È¿°ú 
+// ???? ??? 
 function AddTooltipRefinery(ItemInfo item)
 {
 	local string strDesc1, strDesc2, strDesc3;
 	local int ColorR, ColorG, ColorB, Quality;	
 	
-	//Á¦·ÃÈ¿°ú
+	//???????
 	if (Item.RefineryOp1 != 0 || Item.RefineryOp2 != 0)
 	{
-		//ºó°ø°£
+		//?????
 		AddTooltipItemBlank(2);
 		
-		//"[Á¦·ÃÈ¿°ú]"
+		//"[???????]"
 		//AddSectionTitleBoader();
 		AddTooltipItemOption(1490, "", true, false, false);
 		SetTooltipItemColor(255, 255, 255, 0);
 		AddTooltipItemBlank(2);
 		
-		//ÄÃ·¯°ª Ãëµæ
+		//?¡À??? ???
 		if(Item.SlotBitType == 8192)
 		{
 			Quality = class'UIDATA_REFINERYOPTION'.static.GetQuality(Item.RefineryOp1);
@@ -4944,7 +4951,7 @@ function AddTooltipRefinery(ItemInfo item)
 			}
 		}	
 		
-		if(Item.SlotBitType == 8192) // ¸ÁÅä´Â »öÀ» ´Ù¸£°Ô ÁöÁ¤ÇÒ¼öµµ ÀÖ°Ô ¼öÁ¤..
+		if(Item.SlotBitType == 8192) // ????? ???? ????? ????????? ??? ????..
 		{
 			Quality = class'UIDATA_REFINERYOPTION'.static.GetQuality(Item.RefineryOp2);
 			GetRefineryColor(Quality,ColorR,ColorG,ColorB);
@@ -4979,20 +4986,20 @@ function AddTooltipRefinery(ItemInfo item)
 			}
 		}
 
-		//"¶óÀÌºê¿¡¼­´Â ±³È¯/µå·Ó ºÒ°¡"
-		//"¸ÁÅä´Â µå¶ø °¡´É ¿©ºÎ ÆÇº° ÇØ¾ß ÇÔ.
+		//"????…Z???? ???/??? ???"
+		//"????? ??? ???? ???? ??? ??? ??.
 		if(!getInstanceUIData().getIsClassicServer() && Item.SlotBitType != 8192)
 		{
 			AddTooltipItemOption(1491, "", true, false, false);
 			SetTooltipItemColor(ColorR, ColorG, ColorB, 0);
 		}
 
-		//ºó°ø°£
+		//?????
 		AddTooltipItemBlank(2);
 	}	
 }
 
-// ÁýÈ¥ È¿°ú Ãß°¡ (2015-03-11)
+// ??? ??? ??? (2015-03-11)
 function AddWeaponEnsoulOption(ItemInfo weaponInfo)
 {
 	local EnsoulOptionUIInfo optionInfo;
@@ -5002,7 +5009,7 @@ function AddWeaponEnsoulOption(ItemInfo weaponInfo)
 	if (weaponInfo.itemType != EItemType.ITEM_WEAPON) return;
 
 	bUseTitle = true;
-	// ÁýÈ¥ ½Ã½ºÅÛ °³Æí (2015-02-09 Ãß°¡)
+	// ??? ????? ???? (2015-02-09 ???)
 	for(i=EIST_NORMAL; i<EIST_MAX; i++)
 	{
 		cnt = weaponInfo.EnsoulOption[i - EIST_NORMAL].OptionArray.Length;
@@ -5017,7 +5024,7 @@ function AddWeaponEnsoulOption(ItemInfo weaponInfo)
 			{
 				if (bUseTitle)
 				{
-					//ºó°ø°£
+					//?????
 					AddTooltipItemBlank(6);
 					AddCrossLine();
 					AddTooltipItemBlank(5);
@@ -5059,14 +5066,14 @@ function AddWeaponEnsoulOption(ItemInfo weaponInfo)
 	}
 }
 
-// <ÀÎÃ¦Æ®È¿°ú> ,(<ÀÎÃ¦Æ® È¿°ú> ¹× ¼³¸í),  (Ä¥¿ùÄ¥¼®, ¹æ¾î±¸ °¢ÀÎµî) 
+// <??©¡????> ,(<??©¡? ???> ?? ????),  (??????, ??? ???¥å?) 
 function AddTooltipEventSeventhdayOfSeventhMonth(ItemInfo item)
 {
 	//local string strDesc1, strDesc2, strDesc3;
 	//local int ColorR, ColorG, ColorB;
 	local int useHeadTitle;
 	
-	// [Ä¥¿ùÄ¥¼®, ¹æ¾î±¸ °¢ÀÎ] item enchant option - by jin 09/08/05
+	// [??????, ??? ????] item enchant option - by jin 09/08/05
 	if (Item.EnchantOption1 != 0 || Item.EnchantOption2 != 0 || Item.EnchantOption3 != 0)
 	{
 		addDescEventSeventhday(Item.EnchantOption1, useHeadTitle);
@@ -5075,9 +5082,9 @@ function AddTooltipEventSeventhdayOfSeventhMonth(ItemInfo item)
 	}
 }
 
-// <ÀÎÃ¦Æ®È¿°ú>, AddTooltipEventSeventhdayOfSeventhMonth ºÎ¼Ó ÇÔ¼ö, 
-// useHeadTitle ´Â <ÀÎÃ¦Æ® È¿°ú> ÅøÆÁ Çìµå¸¦ Ãâ·ÂÇÑ »óÅÂ¸é ´Ù½Ã ¾ÈÇÏ·Á°í.
-// ±âÁ¸ Áßº¹ ÄÚµå Á¦°Å ¹× ÀÎÃ¦Æ® È¿°ú°¡ ¾ø¾îµµ ±Û¾¾ ³ª¿À´Â ¹®Á¦ ¼öÁ¤
+// <??©¡????>, AddTooltipEventSeventhdayOfSeventhMonth ?¥ì? ???, 
+// useHeadTitle ?? <??©¡? ???> ???? ??? ????? ???¢¬? ??? ???????.
+// ???? ??? ??? ???? ?? ??©¡? ????? ???? ??? ?????? ???? ????
 function addDescEventSeventhday(int nEnchantOption, out int useHeadTitle)
 {
 	local string strDesc1, strDesc2, strDesc3;
@@ -5097,17 +5104,17 @@ function addDescEventSeventhday(int nEnchantOption, out int useHeadTitle)
 					useHeadTitle = 1;
 					AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
 					
-					//"[ÀÎÃ¦Æ®È¿°ú]"
+					//"[??©¡????]"
 					AddTooltipItemOption(2214, "", true, false, false);
 					SetTooltipItemColor(255, 255, 255, 0);
 					AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
 				}
 			}
 
-			//ÄÃ·¯°ª Ãëµæ
+			//?¡À??? ???
 			if (nEnchantOption != 0)
 			{
-				// [Ä¥¿ùÄ¥¼®, ¹æ¾î±¸°¢ÀÎ] °¢ÀÎ È¿°ú´Â ÀÏ´Ü ¹«Á¶°Ç 1¹ø »ö»óÀ» »ç¿ë. - by jin 09/08/06
+				// [??????, ???????] ???? ????? ??? ?????? 1?? ?????? ???. - by jin 09/08/06
 				GetRefineryColor(1, ColorR, ColorG, ColorB);
 			}
 
@@ -5127,42 +5134,42 @@ function addDescEventSeventhday(int nEnchantOption, out int useHeadTitle)
 	}	
 }
 
-// Åõ¿µº´±â, ³»±¸µµ
+// ????????, ??????
 function AddTooltipItemDurability(ItemInfo item)
 {
 	local Color tempColor;
 
-	// Åõ¿µº´±â Ç¥½Ã, ³»±¸µµ ¾ÆÀÌÅÛ, ÇÔ¼ö·Î »©¸é µÊ
+	// ???????? ???, ?????? ??????, ????? ???? ??
 	if (Item.CurrentDurability >= 0 && Item.Durability > 0)
 	{
-		//ºó°ø°£
+		//?????
 		AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
 		
-		//<Åõ¿µ º´±â Á¤º¸>
+		//<???? ???? ????>
 		AddTooltipItemOption(1492, "", true, false, false);
 		SetTooltipItemColor(255, 255, 255, 0);
 		
-		// ÀÜÁ¸¸¶·Â/ÃÑ¸¶·Â:
+		// ????????/?????:
 		AddTooltipColorText(GetSystemString(1493), getColor(163,163,163,255), true, true);
 
 		if (Item.CurrentDurability+1 <= 5)
 			tempColor = getColor(255,0,0,255);
 		else
 			tempColor = getColor(176,155,121,255);
-		// ÀÜÁ¸¸¶·Â/ÃÑ¸¶·Â   <- ¼öÄ¡
+		// ????????/?????   <- ???
 		AddTooltipColorText(" " $ Item.CurrentDurability $ "/" $ Item.Durability, tempColor, false, true);
 		AddTooltipItemBlank(TOOLTIP_LINE_HGAP);
 
-		//"±³È¯/µå·Ó ºÒ°¡"
+		//"???/??? ???"
 		// AddTooltipItemOption(1491, "", true, false, false);
 		
-		//ºó°ø°£
+		//?????
 		//if (Len(Item.Description)>0) AddTooltipItemBlank(12);
 	}
 }
 
 
-//branch, p¸¶Å© 13 x 13 ½Éº¼, ÇØ¿Ü ÂÊ Ä³½¬ ¾ÆÀÌÅÛ¿¡ ºÙ´Â µí.
+//branch, p??? 13 x 13 ???, ??? ?? ©¦?? ??????? ??? ??.
 function int AddPrimeItemSymbol(ItemInfo Item, optional bool bFirstLineWidthCount)
 {
 	local int nSumWidth;
@@ -5195,7 +5202,7 @@ function int AddPrimeItemSymbol(ItemInfo Item, optional bool bFirstLineWidthCoun
 //end of branch
 
 
-//¼¼Æ® ¾ÆÀÌÅÛ.
+//??? ??????.
 function addSetitemTooltip( ItemInfo Item )
 {
 	local int i;
@@ -5203,34 +5210,34 @@ function addSetitemTooltip( ItemInfo Item )
 	local string strTmp;
 	local ItemID tmpItemID;
 	local int SetID;
-	//ÃÑ ¼¼Æ® ¾ÆÀÌÅÛ °³¼ö
+	//?? ??? ?????? ????
 	local int totalNum;
 
 	local bool IsSigil;	
 	local ItemInfo tmpInfo;
 	
-	//¾ÆÀÌÅÛÀÎÁö È®ÀÎ.
+	//?????????? ???.
 	if( IsValidItemID(Item.ID) )
 	{
 		SetItemLineInsert( Item.ID, 0 );
 		AddTooltipItemBlank(4);
 		//AddCrossLine();
 
-		//TOOLTIP_SETITEM_MAX ÃÑ 3Á¾·ùÀÇ setitemÀÌ Á¸Àç ÇÔ.
-		//0 -> 5¼¼Æ®·Î ¸¸µé¾îÁø ¾ÆÀÌÅÛ (Çï¸ä, °¢¹Ý, Èä°©, °ÇÆ²·¿, ºÎÃ÷)
-		//1 -> ½¯µå, ½Ã±æÀÌ Ãß°¡µÈ ¼¼Æ®
-		//2 -> ?? ÀÖ´ÂÁö ¸ð¸§. ³ªÁßÀ» À§ÇØ ¸¸µé¾îÁøµí.
+		//TOOLTIP_SETITEM_MAX ?? 3?????? setitem?? ???? ??.
+		//0 -> 5????? ??????? ?????? (???, ????, ??, ?????, ????)
+		//1 -> ????, ????? ????? ???
+		//2 -> ?? ????? ??. ?????? ???? ?????????.
 
 		for ( i = 0; i < TOOLTIP_SETITEM_MAX ; i++ )
 		{
-			//¼¼Æ®¾ÆÀÌÅÛ ¸®½ºÆ®
-			//GetSetItemNum °¢ ¼ÂÆ® ¾ÆÀÌÅÛÀÇ °³¼ö.
+			//????????? ?????
+			//GetSetItemNum ?? ??? ???????? ????.
 			
-			for ( SetID = 0 ; SetID < class'UIDATA_ITEM'.static.GetSetItemNum(Item.ID, i) ; SetID++ ) //0,1,2¹ø ¼¼Æ®¾ÆÀÌÅÛÈ¿°ú ¿¡ ´ëÇØ¼­ °¢°¢ ¸î°¡ÁöÀÇ ¼¼Æ®°¡ ¿ÏºñµÇ¾ßÇÏ³ª..
+			for ( SetID = 0 ; SetID < class'UIDATA_ITEM'.static.GetSetItemNum(Item.ID, i) ; SetID++ ) //0,1,2?? ???????????? ?? ????? ???? ?????? ????? ????????..
 			{ 					
 				tmpItemID.classID = class'UIDATA_ITEM'.static.GetSetItemFirstID( Item.ID, i, SetID );
 				
-				//¼¼Æ®¾ÆÀÌÅÛÀÇ Á¾·ù Ãß°¡ ¹× ÀÛ¿ëÇÑ ¼¼Æ® ¾ÆÀÌÅÛ Å¬¶óÀÌ¾ðÆ®¿¡¼­ È®ÀÎ.
+				//??????????? ???? ??? ?? ????? ??? ?????? ??????????? ???.
 				if (tmpItemID.classID > 0)
 				{
 					strTmp = class'UIDATA_ITEM'.static.GetItemName(tmpItemID);
@@ -5247,7 +5254,7 @@ function addSetitemTooltip( ItemInfo Item )
 					m_Info.t_bDrawOneLine = false;						
 					SetTooltipTextColor( 100, 100, 65, 255 );
 
-					//0 -> 5¼¼Æ®·Î ¸¸µé¾îÁø ¾ÆÀÌÅÛ (Çï¸ä, °¢¹Ý, Èä°©, °ÇÆ²·¿, ºÎÃ÷)
+					//0 -> 5????? ??????? ?????? (???, ????, ??, ?????, ????)
 					if( i == 0 )
 					{
 						//m_Info.t_strText = "- "$strTmp;
@@ -5255,19 +5262,19 @@ function addSetitemTooltip( ItemInfo Item )
 						ParamAdd(m_info.Condition, "SetItemNum", string(i));
 						ParamAdd(m_Info.Condition, "Type", "Equip");
 						ParamAddItemID(m_Info.Condition, Item.ID);
-						ParamAdd(m_Info.Condition, "CurTypeID", string(SetID));		//ºñ±³ÇÒ ¾ÆÀÌÅÛÀÇ Type ¿¹(0¹ø:Èä°© 1¹ø:°¢¹Ý 2¹ø:Çï¸ä 3¹ø:ÆÈ 4¹ø ´Ù¸® ..ItemName.txt¿¡ µé¾îÀÖ´Â¼ø¼­
+						ParamAdd(m_Info.Condition, "CurTypeID", string(SetID));		//???? ???????? Type ??(0??:?? 1??:???? 2??:??? 3??:?? 4?? ??? ..ItemName.txt?? ?????¨ù???
 						ParamAdd(m_Info.Condition, "NormalColor", "100,100,65");
 						ParamAdd(m_Info.Condition, "EnableColor", "255,250,160");
 						totalNum = SetID;
 					}
-					//1 -> ½¯µå, ½Ã±æÀÌ Ãß°¡µÈ ¼¼Æ®
+					//1 -> ????, ????? ????? ???
 					else if( i == 1 )
 					{
 						m_Info.t_strText = "- (+) "$strTmp;
 						ParamAdd(m_info.Condition, "SetItemNum", string(i));
 						ParamAdd(m_Info.Condition, "Type", "Equip");
 						ParamAddItemID(m_Info.Condition, Item.ID);						
-						ParamAdd(m_Info.Condition, "CurTypeID", string(SetID));		//ºñ±³ÇÒ ¾ÆÀÌÅÛÀÇ Type ¿¹(0¹ø:Èä°© 1¹ø:°¢¹Ý 2¹ø:Çï¸ä 3¹ø:ÆÈ 4¹ø ´Ù¸® ..ItemName.txt¿¡ µé¾îÀÖ´Â¼ø¼­
+						ParamAdd(m_Info.Condition, "CurTypeID", string(SetID));		//???? ???????? Type ??(0??:?? 1??:???? 2??:??? 3??:?? 4?? ??? ..ItemName.txt?? ?????¨ù???
 						ParamAdd(m_Info.Condition, "NormalColor", "100,70,0");
 						ParamAdd(m_Info.Condition, "EnableColor", "255,180,0");
 						IsSigil = IsSigilArmor(tmpItemID);
@@ -5280,7 +5287,7 @@ function addSetitemTooltip( ItemInfo Item )
 
 		for ( i = 0; i < TOOLTIP_SETITEM_MAX ; i++ )
 		{	
-			//¼ÂÆ®È¿°ú			
+			//??????			
 			for( j = 0; j < class'UIDATA_ITEM'.static.GetSetItemPeaceEffectNum( Item.ID, i ) ; j++ )
 			{
 				StartItem();
@@ -5289,12 +5296,12 @@ function addSetitemTooltip( ItemInfo Item )
 				m_Info.bLineBreak = true;
 				m_Info.t_bDrawOneLine = true;
 				SetTooltipTextColor( 100, 70, 0, 255 );
-				//0 -> 5¼¼Æ®·Î ¸¸µé¾îÁø ¾ÆÀÌÅÛ (Çï¸ä, °¢¹Ý, Èä°©, °ÇÆ²·¿, ºÎÃ÷)
+				//0 -> 5????? ??????? ?????? (???, ????, ??, ?????, ????)
 				if( i == 0 )
 				{
 					m_Info.t_strText = string( j+2 ) $ GetSystemString(2345) $ " : ";
 				}
-				//1 -> ½¯µå, ½Ã±æÀÌ Ãß°¡µÈ ¼¼Æ®
+				//1 -> ????, ????? ????? ???
 				else if( i == 1 )
 				{	
 					//branch 110824
@@ -5334,7 +5341,7 @@ function addSetitemTooltip( ItemInfo Item )
 
 		for( j = 0; j < class'UIDATA_ITEM'.static.GetItemSetEnchantEffectNum( Item.ID ) ; j++ )
 		{
-			//ÀÎÃ¾Æ® ¼ÂÆ®È¿°ú
+			//??©­? ??????
 			strTmp = class'UIDATA_ITEM'.static.GetSetItemEnchantEffectDescription(Item.ID, j);
 			if (Len(strTmp) > 0)
 			{
@@ -5352,7 +5359,7 @@ function addSetitemTooltip( ItemInfo Item )
 				
 				ParamAdd(m_Info.Condition, "NormalColor", "74,92,104");
 				ParamAdd(m_Info.Condition, "EnableColor", "110,140,170");
-				ParamAdd(m_Info.Condition, "SetEnchantEffectIndex", string(j));  //Ãß°¡µÊ 2013.01.23 Á¤¿ì±Õ
+				ParamAdd(m_Info.Condition, "SetEnchantEffectIndex", string(j));  //????? 2013.01.23 ?????
 
 				EndItem();
 			}
@@ -5362,7 +5369,7 @@ function addSetitemTooltip( ItemInfo Item )
 
 function SetItemLineInsert( ItemID id, int setID )
 {
-	//¼¼Æ® ¾ÆÀÌÅÛÀÎÁö È®ÀÎ..
+	//??? ?????????? ???..
 	if( class'UIDATA_ITEM'.static.GetSetItemPeaceEffectNum( Id, setID ) != 0 )
 	{
 		// Debug( string ( class'UIDATA_ITEM'.static.GetSetItemPeaceEffectNum( Id, setID ) ) );
@@ -5393,8 +5400,8 @@ function SetItemLineInsert( ItemID id, int setID )
 }
 
 /**
- * Ç÷¸ÍÀüÀï ¿ë 
- * ÃÊ¸¦ ³Ö¾î¼­ 1ÀÏ/11:33 °°Àº ½ºÆ®¸µ Å¸ÀÔÀ¸·Î ¹ÝÈ¯
+ * ???????? ?? 
+ * ??? ??? 1??/11:33 ???? ????? ??????? ???
  **/
 function string getSecToDateStr(int sec, bool onlyDayFlag)
 {
@@ -5407,13 +5414,13 @@ function string getSecToDateStr(int sec, bool onlyDayFlag)
 	local int m_timeMin;
 	//local int m_timeSec;
 
-	// (ÀÏ day)
+	// (?? day)
 	m_timeDay = sec / 86400;
 	remainSec = sec % 86400;
 	
-	m_timeHour = (remainSec / 60 / 60);		// ½Ã
-	m_timeMin = (remainSec / 60) % 60;		// ºÐ
-	// m_timeSec = remainSec % 60;	// ÃÊ
+	m_timeHour = (remainSec / 60 / 60);		// ??
+	m_timeMin = (remainSec / 60) % 60;		// ??
+	// m_timeSec = remainSec % 60;	// ??
 
 	// debug(" m_timeHour : " $ m_timeHour $ "m_timeMin : "  $ m_timeMin$ "m_timeSec : "  $ m_timeSec);	
 	returnStr = "";
@@ -5424,10 +5431,10 @@ function string getSecToDateStr(int sec, bool onlyDayFlag)
 
 	if (onlyDayFlag == false)
 	{
-		// ÀÏ day ÀÌ ¾ø´Ù¸é / À» ÇØÁÖÁö ¾Ê´Â´Ù. 
+		// ?? day ?? ????? / ?? ?????? ??¢¥?. 
 		if (returnStr != "") returnStr = returnStr $ "/";
 
-		// ½Ã¸¦ ±×·ÁÁØ´Ù.
+		// ?©ª? ??????.
 		if(m_timeHour > 0)
 		{
 			if (m_timeHour < 10 ) returnStr = returnStr $ "0" $ string( m_timeHour );
@@ -5438,7 +5445,7 @@ function string getSecToDateStr(int sec, bool onlyDayFlag)
 			returnStr = returnStr $ "00";
 		}
 
-		// ºÐ
+		// ??
 		if(m_timeMin > 0)
 		{
 			if (m_timeMin < 10 ) returnStr =  returnStr $ ":0" $ string( m_timeMin );
@@ -5454,8 +5461,8 @@ function string getSecToDateStr(int sec, bool onlyDayFlag)
 }
 
 /**
- * ÀüÀï »óÅÂ¿¡ µû¸¥ ½ºÆ®¸µ ¸®ÅÏ 
- * 0, 1, 2, 3, 4  (¸Å¿ì¿­¼¼, ¿­¼¼, ´ëÀÀ, ¿ì¼¼, ¸Å¿ì°­¼¼)
+ * ???? ???¢¯? ???? ????? ???? 
+ * 0, 1, 2, 3, 4  (??³d??, ????, ????, ?±r, ??ªE??)
  **/
 function string getWarSituationString(int warSituation)
 {
@@ -5475,7 +5482,7 @@ function string getWarSituationString(int warSituation)
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
-//  ÅøÆÁ Á¶°Ç °Ë»ç ÇÔ¼öµé ¸ðÀ½ 
+//  ???? ???? ??? ????? ???? 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function bool IsEnchantableItem(EItemParamType Type)
@@ -5484,7 +5491,7 @@ function bool IsEnchantableItem(EItemParamType Type)
 }
 
 //----------------------------------------------------------------------------------------------------------------------------------------------------
-//  ÅøÆÁ »ý¼º, ±âº» ÇÔ¼ö (°¡Àå ±âº»ÀÌ µÇ´Â °Íµé¸¸ ³ÖÀ» °Í)
+//  ???? ????, ?? ??? (???? ???? ??? ??? ???? ??)
 //----------------------------------------------------------------------------------------------------------------------------------------------------
 
 function ClearTooltip()
@@ -5507,7 +5514,7 @@ function EndItem()
 }
 
 
-//ÅøÆÁ Text »ö»ó º¯°æ.
+//???? Text ???? ????.
 function SetTooltipTextColor( int R, int G, int B, int A )
 {
 	m_Info.t_color.R = R;
@@ -5516,7 +5523,7 @@ function SetTooltipTextColor( int R, int G, int B, int A )
 	m_Info.t_color.A = A;
 }
 
-//ÅøÆÁ Text 
+//???? Text 
 function SetTooltipText( string strDesc, bool bLineBreak, bool t_bDrawOneLine, optional bool isFirstLine)
 {
 	m_Info.eType = DIT_TEXT;
@@ -5526,7 +5533,7 @@ function SetTooltipText( string strDesc, bool bLineBreak, bool t_bDrawOneLine, o
 	m_Info.t_bDrawOneLine = t_bDrawOneLine;
 }
 
-// ÁÙ ±×¸®±â, ÃÖ¼Ò »çÀÌÁî¸¦ ÁöÁ¤ °¡´ÉÇÏµµ·Ï ¼öÁ¤ (2016-04)
+// ?? ?????, ??? ?????? ???? ????????? ???? (2016-04)
 function AddCrossLine(optional int minimum_width)
 {
 	AddTooltipItemBlank(4);
@@ -5565,7 +5572,7 @@ function AddCrossLine(optional int minimum_width)
 //}
 
 
-// ±âº»ÀûÀÎ ÅØ½ºÆ®¸¦ ³Ö½À´Ï´Ù. 
+// ?????? ?????? ??????. 
 function AddTooltipText(string strDesc, bool bLineBreak, bool t_bDrawOneLine, optional bool isFirstLine, optional string fontName, optional int offSetX, optional int offSetY)
 {
 	StartItem();
@@ -5581,7 +5588,7 @@ function AddTooltipText(string strDesc, bool bLineBreak, bool t_bDrawOneLine, op
 	EndItem();
 }
 
-// ±âº»ÀûÀÎ Ä®¶ó ÅØ½ºÆ®¸¦ ³Ö½À´Ï´Ù.
+// ?????? ??? ?????? ??????.
 function AddTooltipColorText(string strDesc, Color textColor, bool bLineBreak, bool t_bDrawOneLine, optional bool isFirstLine, optional string fontName, optional int offSetX, optional int offSetY)
 {
 	StartItem();
@@ -5600,7 +5607,7 @@ function AddTooltipColorText(string strDesc, Color textColor, bool bLineBreak, b
 	EndItem();
 }
 
-// ¾Æ°¡½Ã¿Â ½ºÅ³ ÅøÆÁ
+// ?????? ??? ????
 function AddAgathionSkillTooltip ( itemInfo info ) 
 {
 	local array<SkillInfo> mainSkillList, subSkillList ;	
@@ -5608,12 +5615,12 @@ function AddAgathionSkillTooltip ( itemInfo info )
 	local color titleColor, descColor;	
 	
 	GetAgathionMainSkillList(info.ID.classID, info.Enchanted, mainSkillList ) ;	
-	//Debug ( "¾Æ°¡½Ã¿Â ¾ÆÀÌÅÛ ¸ÞÀÎ " @  mainSkillList.Length ) ;//getAgathionIndex ( info.ID ) @ info.Enchanted);		
+	//Debug ( "?????? ?????? ???? " @  mainSkillList.Length ) ;//getAgathionIndex ( info.ID ) @ info.Enchanted);		
 
 	GetAgathionSubSkillList(info.ID.classID, info.Enchanted, subSkillList) ;
-	//Debug ( "¾Æ°¡½Ã¿Â ¾ÆÀÌÅÛ ¼­ºê " @ subSkillList.Length ) ;
+	//Debug ( "?????? ?????? ???? " @ subSkillList.Length ) ;
 	
-	// ÇØ´ç ¾ÆÀÌÅÛÀÌ ¸ÞÀÎ ÀÎ °æ¿ì ¸ÞÀÎ°ú ¼­ºê ¸ðµÎ È°¼ºÈ­ ÄÃ·¯ 		
+	// ??? ???????? ???? ?? ??? ????? ???? ??? ???? ?¡À? 		
 
 	if ( mainSkillList.Length > 0 )
 	{   		
@@ -5689,7 +5696,7 @@ function AddAgathionSkillTooltip ( itemInfo info )
 }
 
 
-//ºó°ø°£ (³ôÀÌ) ¸¦ »ý¼º ÇÑ´Ù.
+//????? (????) ?? ???? ???.
 function AddTooltipItemBlank(int Height)
 {
 	StartItem();
@@ -5698,7 +5705,7 @@ function AddTooltipItemBlank(int Height)
 	EndItem();
 }
 
-// ±âº» ÅØ½ºÆ® Ãß°¡ 
+// ?? ???? ??? 
 function AddTooltipSimpleText(string strText, optional int offsetX, optional int offsetY)
 {
 	StartItem();
@@ -5713,7 +5720,7 @@ function AddTooltipSimpleText(string strText, optional int offsetX, optional int
 }
 
 
-//"XXX : YYYY" ÇüÅÂÀÇ TooltipItemÀ» ÆíÇÏ°Ô Ãß°¡ÇØ ÁØ´Ù
+//"XXX : YYYY" ?????? TooltipItem?? ????? ????? ???
 function AddTooltipItemOption(int TitleID, string Content, bool bTitle, bool bContent, bool isFirstLine, optional string fontName, optional int offsetX, optional int offsetY, optional Color titleTextColor, optional Color contentTextColor)//, optional string addIconStr)
 {
 	//if (addIconStr != "")
@@ -5726,7 +5733,7 @@ function AddTooltipItemOption(int TitleID, string Content, bool bTitle, bool bCo
 	{
 		StartItem();
 		m_Info.eType = DIT_TEXT;
-		if (!isFirstLine) m_Info.nOffSetY = TOOLTIP_LINE_HGAP; // ÅøÆÁ Ã¹¹øÂ° ¶óÀÎÀÌ ¾Æ´Ï¶ó¸é, ¼¼·Î °£°ÝÀ» 6ÇÈ¼¿ ÁØ´Ù.(±âº»ÀûÀ¸·Î ÀÏÁ¤ÇÏ°Ô ¾²´Â GAP)
+		if (!isFirstLine) m_Info.nOffSetY = TOOLTIP_LINE_HGAP; // ???? ???¡Æ ?????? ?????, ???? ?????? 6??? ???.(???????? ??????? ???? GAP)
 		//if (addIconStr == "") m_Info.bLineBreak = true;
 		m_Info.bLineBreak = true;
 		m_Info.t_bDrawOneLine = true;
@@ -5806,7 +5813,7 @@ function AddTooltipItemOption(int TitleID, string Content, bool bTitle, bool bCo
 }
 
 
-//"XXX : YYYY" ÇüÅÂÀÇ TooltipItemÀ» ÆíÇÏ°Ô Ãß°¡ÇØ ÁØ´Ù
+//"XXX : YYYY" ?????? TooltipItem?? ????? ????? ???
 function AddTooltipItemOptionString(string TitleContent, string Content, bool bTitle, bool bContent, bool isFirstLine)
 {
 	if (bTitle)
@@ -5857,7 +5864,7 @@ function AddTooltipItemOptionString(string TitleContent, string Content, bool bT
 	}
 }
 
-//"XXX : YYYY" ÇüÅÂÀÇ TooltipItemÀ» ÆíÇÏ°Ô Ãß°¡ÇØ ÁØ´Ù.
+//"XXX : YYYY" ?????? TooltipItem?? ????? ????? ???.
 //SYSSTRING : SYSSTRING
 function AddTooltipItemOption2(int TitleID, int ContentID, bool bTitle, bool bContent, bool isFirstLine)
 {
@@ -5906,7 +5913,7 @@ function AddTooltipItemOption2(int TitleID, int ContentID, bool bTitle, bool bCo
 	}
 }
 
-//"XXX : YYYY" ÇüÅÂÀÇ TooltipItemÀ» ÆíÇÏ°Ô Ãß°¡ÇØ ÁØ´Ù. »ö±ò Á¶Á¤ °¡´É( Å¸ÀÌÆ²°ú ÄÁÅÙÃ÷ »ö±òÀÌ ´Ù¸¥ °æ¿ì¿¡ »ç¿ë. ±Ó¼Ó¸»¿¡ ¾²°íÀÖÀ½)
+//"XXX : YYYY" ?????? TooltipItem?? ????? ????? ???. ???? ???? ????( ?????? ?????? ?????? ??? ??Äî ???. ?????? ????????)
 function AddTooltipItemColorOption(int TitleID, string Content, int r, int g, int b, bool bTitle, bool bContent, bool isFirstLine)
 {
 	if (bTitle)
@@ -5957,10 +5964,10 @@ function AddTooltipItemColorOption(int TitleID, string Content, int r, int g, in
 	}
 }
 
-// nBasic ±âº»°ª, ÀÎÃ¦Æ® º¸³Ê½º °ª nBonus   (100+50)  <- ÀÌ·±½Ä Ç¥Çö (Ä®¶ó ´Ù¸£°Ô)
+// nBasic ????, ??©¡? ????? ?? nBonus   (100+50)  <- ????? ??? (??? ?????)
 function AddTooltipItemBonus(int nBasic, int nBonus, optional int offSetX, optional int offSetY)
 {
-	//Å¬·¡½Ä ¼­¹ö ÀÏ °æ¿ì µ¡ºÙÀÌÁö ¾Ê´Â´Ù.
+	//????? ???? ?? ??? ???????? ??¢¥?.
 	//if (nBonus > 0 && !getInstanceUIData().getIsClassicServer())
 	if (nBonus > 0)
 	{					
@@ -5986,7 +5993,7 @@ function addTooltipTexture ( string Texture, int width, int height, int uWidth, 
 	EndItem();
 }
 
-// ¼Ó¼º, ¹°, ºÒ, ¹Ù¶÷,µîµî ¼Ó¼º ¾ÆÀÌÄÜ
+// ???, ??, ??, ???,??? ??? ??????
 function string GetAttributeIcon(int nAttributeType)
 {
 	local string rStr;
@@ -6005,7 +6012,7 @@ function string GetAttributeIcon(int nAttributeType)
 }
 
 
-// Å×½ºÆ®Áß..
+// ??????..
 //function int getToolTipWidthMaxSize()
 //{
 //	local int i, widthSize, textSizeW, textSizeH, maxWidthSize;
@@ -6045,14 +6052,14 @@ function string GetAttributeIcon(int nAttributeType)
 
 
 
-// t_bDrawOneLine  : ÇÑÁÙ·Î ±×·Á ÁÙ¶§ (ÀÚµ¿À¸·Î ÅøÆÁ width°¡ Ä¿Áø´Ù)
-// bLineBreak      : ÁÙ ³»¸² 
+// t_bDrawOneLine  : ????? ??? ??? (??????? ???? width?? ¨¨????)
+// bLineBreak      : ?? ???? 
 
 //------------------------------------------------------------------------------------------------------------------------
-// ÅøÆÁ ¾ÆÀÌÅÛ ±¸¼º °ü·Ã À¯Æ¿
+// ???? ?????? ???? ???? ???
 //------------------------------------------------------------------------------------------------------------------------	
 
-//// ¹«±â¿¡ Àû¿ëµÈ ÁýÈ¥¼® ¿É¼ÇÀÇ ÀÌ¸§ ÀüÃ¼¸¦ ¹Þ¾Æ¿Â´Ù.
+//// ???? ????? ????? ????? ??? ????? ???¢¥?.
 //function string GetEnsoulOptionNameAll(ItemInfo weaponInfo)
 //{
 //	local EnsoulOptionUIInfo eOptionInfo;
@@ -6060,7 +6067,7 @@ function string GetAttributeIcon(int nAttributeType)
 
 //	local string allName;
 
-//	// ÁýÈ¥ ½Ã½ºÅÛ °³Æí (2015-02-09 Ãß°¡)
+//	// ??? ????? ???? (2015-02-09 ???)
 //	for(i=EIST_NORMAL; i<EIST_MAX; i++)
 //	{
 //		cnt = weaponInfo.EnsoulOption[i - EIST_NORMAL].OptionArray.Length;

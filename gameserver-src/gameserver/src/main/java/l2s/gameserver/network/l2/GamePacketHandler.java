@@ -463,6 +463,10 @@ IMMOExecutor<GameClient> {
                                     msg = new RequestKeyMapping();
                                     break block1;
                                 }
+                                case 34: {
+                                    msg = new RequestSaveKeyMapping();
+                                    break block1;
+                                }
                                 case 51: {
                                     msg = new GotoLobby();
                                     break block1;

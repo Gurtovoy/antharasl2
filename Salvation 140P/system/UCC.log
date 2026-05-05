@@ -1,20 +1,20 @@
-Log: Log file open, 12/13/23 12:07:01
+Log: Log file open, 05/05/26 19:20:17
 Init: Name subsystem initialized
 Init: Detected: Microsoft Windows NT 6.2 (Build: 9200)
 Init: Version: 3016 (123.0)
 Init: Compiled: May 14 2016 20:42:29
 Init: Command line: -NoBind
-Init: Base directory: C:\LUSECompiler7\CompilerDefault\Salvation 140P\system\
+Init: Base directory: C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\system\
 Init: Character set: Unicode
 Warning: Build label absent!
 Log: Bound to Core.dll
 Init: Object subsystem initialized
-Init: Computer: DESKTOP1UBR5EV
-Init: User: Renat
-Init: CPU Page size=4096, Processors=28
-Init: CPU Detected: PentiumPro-class processor (GenuineIntel)
+Init: Computer: DESKTOPEDJR3CK
+Init: User: Night
+Init: CPU Page size=4096, Processors=12
+Init: CPU Detected: Unknown processor (AuthenticAMD)
 Init: CPU Features: CMov FPU RDTSC PAE MMX SSE
-Init: CPU Speed=2599.152025 MHz
+Init: CPU Speed=3493.475645 MHz
 Init: Memory total: Phys=2097151K Pagef=4194303K Virt=2097024K
 Init: Working set: 32000 / 159000
 Log: Bound to Editor.dll
@@ -205,7 +205,7 @@ Log: Success: Compiled 851 line(s), 258 statement(s).
 
 Log: Unreal file tag: -1641380927
 Log: Unreal file tag: -1641380927
-Log: Save=6.278403
+Log: Save=3.839017
 Log: Moving 'Save.tmp' to 'Core.u'
 Heading: ---------------------------Engine - Release---------------------------
 Warning: Failed to load 'Engine.u': Can't find file 'Engine.u'
@@ -1119,14 +1119,14 @@ Log: Imported Texture Engine.S_ZoneInfo
 Log: Parsing WarpZoneInfo
 Log: Parsing SkyZoneInfo
 Log: Parsing LevelInfo
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\WireframeTexture.tga" -m DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\WireframeTexture.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\WireframeTexture.tga" -m DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\WireframeTexture.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\WireframeTexture.tga)
 Log: Imported Texture Engine.WireframeTexture
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\WhiteSquareTexture.pcx)
 Log: Replaced palette Palette57 with Palette31
 Log: Imported Texture Engine.WhiteSquareTexture
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\S_Vertex.tga" -m DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\S_Vertex.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\S_Vertex.tga" -m DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\S_Vertex.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\S_Vertex.tga)
 Log: Imported Texture Engine.LargeVertex
@@ -1149,11 +1149,11 @@ Log: Parsing MatDemoActor
 Log: Parsing Projector
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\Proj_IconMasked.pcx)
 Log: Imported Texture Engine.Proj_Icon
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\GRADIENT_Fade.tga" DXT3 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\GRADIENT_Fade.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\GRADIENT_Fade.tga" DXT3 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\GRADIENT_Fade.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\GRADIENT_Fade.tga)
 Log: Imported Texture Engine.GRADIENT_Fade
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\GRADIENT_Clip.tga" DXT3 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\GRADIENT_Clip.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\GRADIENT_Clip.tga" DXT3 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\GRADIENT_Clip.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\GRADIENT_Clip.tga)
 Log: Imported Texture Engine.GRADIENT_Clip
@@ -1269,7 +1269,7 @@ Log: Parsing Ammunition
 Log: Parsing Powerups
 Log: Parsing Armor
 Log: Parsing Weapon
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Weapon.tga" DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Weapon.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Weapon.tga" DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Weapon.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\Weapon.tga)
 Log: Imported Texture Engine.S_Weapon
@@ -1311,14 +1311,14 @@ Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\S_KBSJoint.p
 Log: Replaced palette Palette105 with Palette99
 Log: Imported Texture Engine.S_KBSJoint
 Log: Parsing xWeatherEffect
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\S_Wind.tga" DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\S_Wind.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\S_Wind.tga" DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\S_Wind.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\S_Wind.tga)
 Log: Imported Texture Engine.S_Wind
 Log: Parsing xProcMesh
 Log: Parsing xPickUpBase
 Log: Parsing xEmitter
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\S_Emitter.tga" DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\S_Emitter.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\S_Emitter.tga" DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\S_Emitter.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\S_Emitter.tga)
 Log: Imported Texture Engine.S_Emitter
@@ -1358,7 +1358,7 @@ Log: Parsing ColorMask
 Log: Parsing ColorWheel
 Log: Parsing MaskTexture
 Log: Parsing ShadowBitmapMaterial
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\blobshadow.tga" -m DXT3 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\blobshadow.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\blobshadow.tga" -m DXT3 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\blobshadow.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\blobshadow.tga)
 Log: Imported Texture Engine.BlobTexture
@@ -1435,15 +1435,15 @@ Log: Parsing Interactions
 Log: Parsing InteractionMaster
 Log: Parsing Interaction
 Log: Parsing BaseGUIController
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\White.tga" DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\White.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\White.tga" DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\White.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\White.tga)
 Log: Imported Texture Engine.MenuWhite
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Black.tga" DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Black.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Black.tga" DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Black.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\Black.tga)
 Log: Imported Texture Engine.MenuBlack
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Gray.tga" DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Gray.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Gray.tga" DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Gray.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\Gray.tga)
 Log: Imported Texture Engine.MenuGray
@@ -1454,15 +1454,15 @@ Log: Parsing PlayerInput
 Log: Parsing XBoxPlayerInput
 Log: Parsing CheatManager
 Log: Parsing Canvas
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\White.tga" DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\White.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\White.tga" DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\White.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\White.tga)
 Log: Imported Texture Engine.WhiteTexture
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Black.tga" DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Black.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Black.tga" DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Black.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\Black.tga)
 Log: Imported Texture Engine.BlackTexture
-Log: Shelling xDxTex.exe "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Gray.tga" DXT1 "C:\LUSECompiler7\CompilerDefault\Salvation 140P\Engine\Textures\Gray.dds"
+Log: Shelling xDxTex.exe "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Gray.tga" DXT1 "C:\Users\Night\Desktop\scropts\l2classic\Salvation 140P\Engine\Textures\Gray.dds"
 Log: *** Error spawning xDxTex.exe errno: 2
 Log: FactoryCreateBinary: Texture with TextureFactory (0 0 Textures\Gray.tga)
 Log: Imported Texture Engine.GrayTexture
@@ -2049,7 +2049,7 @@ Log: Autogenerating C++ header: ..\Engine\Inc\EngineClasses.h
 Log: Not replacing ..\Engine\Inc\EngineClasses.h because identical
 Log: Unreal file tag: -1641380927
 Log: Unreal file tag: -1641380927
-Log: Save=130.665637
+Log: Save=77.718046
 Log: Moving 'Save.tmp' to 'Engine.u'
 Heading: --------------------------NWindow - Release---------------------------
 Warning: Failed to load 'NWindow.u': Can't find file 'NWindow.u'
@@ -2835,7 +2835,7 @@ Log: Autogenerating C++ header: ..\NWindow\Inc\NWindowClasses.h
 Log: Not replacing ..\NWindow\Inc\NWindowClasses.h because identical
 Log: Unreal file tag: -1641380927
 Log: Unreal file tag: -1641380927
-Log: Save=55.948439
+Log: Save=28.748846
 Log: Moving 'Save.tmp' to 'NWindow.u'
 Heading: -------------------------Interface - Release--------------------------
 Warning: Failed to load 'Interface.u': Can't find file 'Interface.u'
@@ -5463,11 +5463,11 @@ Log: Importing Defaults for XMasSealWnd
 Log: Importing Defaults for ZoneQuestAlarmWnd
 Log: Importing Defaults for ZoneQuestSituationWnd
 Log: Importing Defaults for ZoneTitleWnd
-Log: Success: Compiled 351587 line(s), 29248 statement(s).
+Log: Success: Compiled 352585 line(s), 29336 statement(s).
 
 Log: Unreal file tag: -1641380927
 Log: Unreal file tag: -1641380927
-Log: Save=728.515874
+Log: Save=451.919330
 Log: Moving 'Save.tmp' to 'Interface.u'
 Log: Success - 0 error(s), 0 warning(s)
 Exit: Preparing to exit.
@@ -5476,11 +5476,11 @@ Log: Unbound to Core.dll
 Log: Unbound to Editor.dll
 Log: Unbound to Engine.dll
 Exit: Editor shut down
-Log: Garbage: objects: 51055->0; refs: 0
+Log: Garbage: objects: 51170->0; refs: 0
 Exit: Object subsystem successfully closed.
 Exit: Exiting.
 Log: Waiting for file streaming thread to finish...
 Init: CPU FP precision changed from 53 to 64-bit
 Uninitialized: Name subsystem shut down
 Uninitialized: Allocation checking disabled
-Uninitialized: Log file closed, 12/13/23 12:07:18
+Uninitialized: Log file closed, 05/05/26 19:20:27

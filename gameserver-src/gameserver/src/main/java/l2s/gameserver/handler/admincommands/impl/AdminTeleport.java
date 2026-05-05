@@ -24,6 +24,7 @@ import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.network.l2.components.HtmlMessage;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
 import l2s.gameserver.network.l2.components.SystemMsg;
+import l2s.gameserver.utils.MovementRecorder;
 import l2s.gameserver.utils.Util;
 
 public class AdminTeleport
@@ -145,6 +146,15 @@ implements IAdminCommandHandler {
                     break;
                 }
                 activeChar.setTeleMode(1);
+                break;
+            }
+            case admin_loc_now: {
+                String filePath = MovementRecorder.toggle(activeChar);
+                if (MovementRecorder.isRecording(activeChar)) {
+                    activeChar.sendMessage("Path recording started: " + filePath);
+                } else {
+                    activeChar.sendMessage("Path recording stopped.");
+                }
                 break;
             }
             case admin_tonpc: 
@@ -432,6 +442,7 @@ implements IAdminCommandHandler {
         admin_tonpc,
         admin_to_npc,
         admin_toobject,
+        admin_loc_now,
         admin_setref,
         admin_getref;
 

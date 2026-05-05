@@ -1,6 +1,6 @@
 /*****************************************************************************************************************************
-   제목 : System폴더 UIDEV.ini 을 만들고, 아래와 같은 식으로 추가를 하면 작동 한다.
- - 개발망에서만 작동 하도록 한다 - 
+   ???? : System???? UIDEV.ini ?? ?????, ????? ???? ?????? ????? ??? ??? ???.
+ - ??????????? ??? ????? ??? - 
 
 [EASYLOGIN]
 use=1
@@ -10,19 +10,23 @@ id2=ui2@a.a
 pw2=aaaa1111
 id3=ui3@a.a
 
-use=1 로 하면 개발망에서 작동 하도록 세팅 하는 것 
-예제와 같이 아이디, 암호를 넣어 두고.. 최대 50개 까지 저장 가능.
+use=1 ?? ??? ????????? ??? ????? ???? ??? ?? 
+?????? ???? ?????, ????? ??? ???.. ??? 50?? ???? ???? ????.
 
 
-lastLoginIndex 마지막 로그인한 아이디 위치를 기억 시킨다. 
+lastLoginIndex ?????? ???????? ????? ????? ??? ?????. 
 
-Ctrl 를 누르면 로그인으로 들어감
+Ctrl ?? ?????? ?????????? ???
  
  ****************************************************************************************************************************/
 class UIEasyLoginWnd extends UICommonAPI;
 
 const TIMER_ID_CHANGETEXT    = 10234599;
 const TIMER_ID               = 10234510;
+const TIMER_ID_LOGIN_SYNC    = 10234511;
+const MAX_LOGIN_COUNT        = 15;
+const EASYLOGIN_INI_FILE     = "EasyLogin.ini";
+const EASYLOGIN_XOR_KEY      = "L2Salvation";
 
 var WindowHandle Me;
 var ListCtrlHandle idList;
@@ -35,6 +39,7 @@ var bool isEditMode;
 function OnRegisterEvent()
 {
 	RegisterEvent( EV_LoginBegin );
+	RegisterEvent( EV_LoginOK );
 }
 
 function OnLoad()
@@ -57,7 +62,7 @@ function OnShow()
 
 	Language = GetLanguage();
 
-	if( Language == LANG_Korean) descTxt.SetText("편한 로그인 툴!");
+	if( Language == LANG_Korean) descTxt.SetText("???? ?????? ??!");
 }
 
 function AddList (string id, string pw, string server, string character)
@@ -71,7 +76,7 @@ function AddList (string id, string pw, string server, string character)
 	record.LVDataList[1].szData = server;
 	record.LVDataList[2].szData = character;
 
-	// 리스트에 추가 
+	// ??????? ??? 
 	idList.InsertRecord(record);
 }
 
@@ -91,15 +96,17 @@ function OnEvent(int Event_ID, string param)
 {	
 	if( Event_ID == EV_LoginBegin )
 	{
-		// 개발망만 작동 하도록..
-		switch ( GetReleaseMode() ) 
+		if( Me.IsShowWindow() == false )
 		{
-			case RM_DEV :
-			if( Me.IsShowWindow() == false )
-			{
-				checkAndShowEasyLogin();
-			}
+			checkAndShowEasyLogin();
 		}
+	}
+	else if (Event_ID == EV_LoginOK)
+	{
+		// Login.uc can write success credentials slightly after EV_LoginOK dispatch.
+		// Defer sync to reliably read freshly saved values from EasyLogin.ini.
+		Me.KillTimer(TIMER_ID_LOGIN_SYNC);
+		Me.SetTimer(TIMER_ID_LOGIN_SYNC, 200);
 	}
 }
 
@@ -120,7 +127,7 @@ function Initialize()
 	serverEditBox = GetEditBoxHandle("UIEasyLoginWnd.serverEditBox");
 	charEditBox = GetEditBoxHandle("UIEasyLoginWnd.charEditBox");
 	
-	Me.SetWindowTitle("UITools - EasyLogin");
+	Me.SetWindowTitle("AutoLogin");
 }
 
 function OnHide()
@@ -141,14 +148,14 @@ function OnTimer(int TimerID)
 		{	
 			switch(Rand(8))
 			{
-				case  1 : descTxt.SetText("- 리지니2 System폴더에 UIDEV.ini 파일에서, [EASYLOGIN] 항목을 직접 편집하여도 된니다."); break;
-				case  2 : descTxt.SetText("- 버그나 요청이 있으면 dongland@ncsoft.com 으로 메일주세요."); break;
-				case  3 : descTxt.SetText("- dongland에게 Donation 하셔도 됩니다. -_-"); break;
-				case  4 : descTxt.SetText("- (-_-)/~~~~이 글은 한글 버전에서만 보입니다~ "); break;
-				case  5 : descTxt.SetText("- 로그인과 암호를 매번 넣기 힘들어서 만든 로그인 툴입니다."); break;
-				case  6 : descTxt.SetText("- 최대 50개의 아이디 암호를 저장 할 수 있습니다."); break;
-				case  7 : descTxt.SetText("- Server와 Char(캐릭터 선택)는 숫자로 입력 해야 됩니다."); break;
-				default : descTxt.SetText("- 추가 기능이 꼭 필요하면 알려주세요. "); break;
+				case  1 : descTxt.SetText("- ??????2 System?????? UIDEV.ini ???????, [EASYLOGIN] ????? ???? ????????? ????."); break;
+				case  2 : descTxt.SetText("- ????? ????? ?????? dongland@ncsoft.com ???? ?????????."); break;
+				case  3 : descTxt.SetText("- dongland???? Donation ???? ????. -_-"); break;
+				case  4 : descTxt.SetText("- (-_-)/~~~~?? ???? ??? ?????????? ??????~ "); break;
+				case  5 : descTxt.SetText("- ??????? ????? ??? ??? ????? ???? ?????? ??????."); break;
+				case  6 : descTxt.SetText("- ??? 50???? ????? ????? ???? ?? ?? ??????."); break;
+				case  7 : descTxt.SetText("- Server?? Char(?????? ????)?? ????? ??? ??? ????."); break;
+				default : descTxt.SetText("- ??? ????? ?? ?????? ????????. "); break;
 			}
 		}
 	}
@@ -158,6 +165,11 @@ function OnTimer(int TimerID)
 		{
 			OnLoginButtonClickHandler();
 		}
+	}
+	else if (TimerID == TIMER_ID_LOGIN_SYNC)
+	{
+		Me.KillTimer(TIMER_ID_LOGIN_SYNC);
+		SyncLastSuccessAccount();
 	}
 }
 
@@ -186,14 +198,21 @@ function OnClickButton( string Name )
 function OnAddButtonClickHandler()
 {
 	local int nMax;
+	local string encPw;
 	
 	if (idEditBox.GetString() != "" && pwEditBox.GetString() != "")
 	{
 		nMax = idList.GetRecordCount();
-		SetINIString("EASYLOGIN", "id"  $ nMax + 1, idEditBox.GetString() , "UIDEV.ini");
-		SetINIString("EASYLOGIN", "pw"  $ nMax + 1, pwEditBox.GetString() , "UIDEV.ini");
-		SetINIString("EASYLOGIN", "server"  $ nMax + 1, serverEditBox.GetString() , "UIDEV.ini");
-		SetINIString("EASYLOGIN", "char"  $ nMax + 1, charEditBox.GetString() , "UIDEV.ini");
+		if (nMax >= MAX_LOGIN_COUNT)
+			return;
+
+		encPw = EncryptPassword(pwEditBox.GetString());
+
+		SetINIString("EASYLOGIN", "id"  $ nMax + 1, idEditBox.GetString(), EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pwEnc"  $ nMax + 1, encPw, EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pw"  $ nMax + 1, "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "server"  $ nMax + 1, serverEditBox.GetString(), EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "char"  $ nMax + 1, charEditBox.GetString(), EASYLOGIN_INI_FILE);
 
 		AddList(idEditBox.GetString(), pwEditBox.GetString(), serverEditBox.GetString(), charEditBox.GetString());
 	}
@@ -213,19 +232,20 @@ function OnDelButtonClickHandler()
 	if (idx > -1) 
 	{
 		idList.DeleteRecord(idx);
-		SetINIString("EASYLOGIN", "id"  $ idx + 1, "" , "UIDEV.ini");
-		SetINIString("EASYLOGIN", "pw"  $ idx + 1, "" , "UIDEV.ini");
-		SetINIString("EASYLOGIN", "server"  $ idx + 1, "" , "UIDEV.ini");
-		SetINIString("EASYLOGIN", "char"  $ idx + 1, "" , "UIDEV.ini");
+		SetINIString("EASYLOGIN", "id"  $ idx + 1, "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pwEnc"  $ idx + 1, "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pw"  $ idx + 1, "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "server"  $ idx + 1, "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "char"  $ idx + 1, "", EASYLOGIN_INI_FILE);
 
-		// ini 에 정리하여 저장하기 
-		for (i = 1; i < 51; i++)
+		// ini ?? ??????? ??????? 
+		for (i = 1; i <= MAX_LOGIN_COUNT; i++)
 		{
 			if (idList.GetRecordCount() >= i)
 			{
 				idList.GetRec(i - 1, record);
 				id = record.LVDataList[0].szData;
-				pw = record.LVDataList[0].szReserved;
+				pw = EncryptPassword(record.LVDataList[0].szReserved);
 				server = record.LVDataList[1].szData;
 				character = record.LVDataList[2].szData;
 			}
@@ -238,20 +258,21 @@ function OnDelButtonClickHandler()
 			}
 
 			if(id == "")
-				GetINIString("EASYLOGIN", "id" $ i, oldid, "UIDEV.ini");
+				GetINIString("EASYLOGIN", "id" $ i, oldid, EASYLOGIN_INI_FILE);
 				
 			if(id != "" || oldid != "")
 			{
-				SetINIString("EASYLOGIN", "id" $ i, id, "UIDEV.ini");
-				SetINIString("EASYLOGIN", "pw" $ i, pw, "UIDEV.ini");
-				SetINIString("EASYLOGIN", "server" $ i, server, "UIDEV.ini");
-				SetINIString("EASYLOGIN", "char" $ i, character, "UIDEV.ini");
+				SetINIString("EASYLOGIN", "id" $ i, id, EASYLOGIN_INI_FILE);
+				SetINIString("EASYLOGIN", "pwEnc" $ i, pw, EASYLOGIN_INI_FILE);
+				SetINIString("EASYLOGIN", "pw" $ i, "", EASYLOGIN_INI_FILE);
+				SetINIString("EASYLOGIN", "server" $ i, server, EASYLOGIN_INI_FILE);
+				SetINIString("EASYLOGIN", "char" $ i, character, EASYLOGIN_INI_FILE);
 			}
 		}
 	}
 }
 
-// 매니저 버튼을 누르면 윈도우 폭을 늘리고 줄이고 하여, 아이디, 암호를 넣는 곳을 보였다 안보였다 한다.
+// ????? ????? ?????? ?????? ???? ?????? ????? ???, ?????, ????? ??? ???? ?????? ??????? ???.
 function OnManagerButtonClickHandler(optional bool bUseBasicUI)
 {
 	local int w, h;
@@ -308,7 +329,7 @@ function OnManagerButtonClickHandler(optional bool bUseBasicUI)
 	}
 }
 
-//레코드를 더블클릭하면....
+//????? ??????????....
 function OnDBClickListCtrlRecord( string ListCtrlID )
 {
 	switch(ListCtrlID)
@@ -322,22 +343,22 @@ function OnDBClickListCtrlRecord( string ListCtrlID )
 	}
 }
 
-// 로그인시 해당 UI를 나오게 할 것인지를 정한다.
+// ???????? ??? UI?? ?????? ?? ???????? ?????.
 function setUseEasyLogin(bool flag)
 {
-	SetINIString("EASYLOGIN", "use", String(boolToNum(flag)) , "UIDEV.ini");
+	SetINIString("EASYLOGIN", "use", String(boolToNum(flag)), EASYLOGIN_INI_FILE);
 }
 
-// 로그인시 해당 UI를 나오게 할 것인지를 정한다.
+// ???????? ??? UI?? ?????? ?? ???????? ?????.
 function bool getUseEasyLogin()
 {
 	local string stringValue;
-	GetINIString("EASYLOGIN", "use", stringValue, "UIDEV.ini");
+	GetINIString("EASYLOGIN", "use", stringValue, EASYLOGIN_INI_FILE);
 
 	return numToBool(int(stringValue));
 }
 
-// 로그인 시도
+// ?????? ???
 function OnLoginButtonClickHandler()
 {
 	local LVDataRecord	record;	
@@ -352,10 +373,10 @@ function OnLoginButtonClickHandler()
  													"ID=" $ record.LVDataList[0].szData $ " " $
  													"pass=" $ record.LVDataList[0].szReserved);
 
-		// 로그인한 항목의 인덱스를 저장 
-		SetINIString("EASYLOGIN", "lastLoginIndex", String(idList.GetSelectedIndex()) , "UIDEV.ini");
+		// ???????? ????? ???????? ???? 
+		SetINIString("EASYLOGIN", "lastLoginIndex", String(idList.GetSelectedIndex()), EASYLOGIN_INI_FILE);
 		
-		// 서버와 캐릭터 자동 로그인
+		// ?????? ?????? ??? ??????
 		if(record.LVDataList[1].szData != "")
 		{
 			serverNum = int(record.LVDataList[1].szData);
@@ -373,7 +394,12 @@ function OnLoginButtonClickHandler()
 function checkAndShowEasyLogin()
 {
 	local string stringValue;
-	GetINIString("EASYLOGIN", "use", stringValue, "UIDEV.ini");
+	GetINIString("EASYLOGIN", "use", stringValue, EASYLOGIN_INI_FILE);
+	if (stringValue == "")
+	{
+		stringValue = "1";
+		SetINIString("EASYLOGIN", "use", stringValue, EASYLOGIN_INI_FILE);
+	}
 
 	if (int(stringValue) > 0)
 	{		
@@ -385,34 +411,162 @@ function checkAndShowEasyLogin()
 
 function loadListByINI()
 {
-	local string id, pw, server, character, listIndex;
+	local string id, pw, pwEnc, server, character, listIndex;
 	local int i;
 
 	
 	idList.DeleteAllItem();
-	for (i = 1; i < 51; i++)
+	for (i = 1; i <= MAX_LOGIN_COUNT; i++)
 	{
 		id = "";
 		pw = "";
+		pwEnc = "";
 		server = "";
 		character = "";
-		GetINIString("EASYLOGIN", "id" $ i, id, "UIDEV.ini");
-		GetINIString("EASYLOGIN", "pw" $ i, pw, "UIDEV.ini");
-		GetINIString("EASYLOGIN", "server" $ i, server, "UIDEV.ini");
-		GetINIString("EASYLOGIN", "char" $ i, character, "UIDEV.ini");
+		GetINIString("EASYLOGIN", "id" $ i, id, EASYLOGIN_INI_FILE);
+		GetINIString("EASYLOGIN", "pwEnc" $ i, pwEnc, EASYLOGIN_INI_FILE);
+		GetINIString("EASYLOGIN", "pw" $ i, pw, EASYLOGIN_INI_FILE);
+		GetINIString("EASYLOGIN", "server" $ i, server, EASYLOGIN_INI_FILE);
+		GetINIString("EASYLOGIN", "char" $ i, character, EASYLOGIN_INI_FILE);
 
 		if (id != "")
+		{
+			if (pwEnc != "")
+			{
+				pw = DecryptPassword(pwEnc);
+			}
+			else
+			{
+				// Backward compatibility with legacy plain-text entries.
+				SetINIString("EASYLOGIN", "pwEnc" $ i, EncryptPassword(pw), EASYLOGIN_INI_FILE);
+				SetINIString("EASYLOGIN", "pw" $ i, "", EASYLOGIN_INI_FILE);
+			}
+
 			AddList(id, pw, server, character);
+		}
 	}
 
-	// 마지막에 로그인한 항목으로 리스트 선택
-	GetINIString("EASYLOGIN", "lastLoginIndex", listIndex , "UIDEV.ini");
+	// ???????? ???????? ??????? ????? ????
+	GetINIString("EASYLOGIN", "lastLoginIndex", listIndex, EASYLOGIN_INI_FILE);
 	idList.SetSelectedIndex(int(listIndex), true);
 
 }
 
+function int FindAccountIndexByID(string accountID)
+{
+	local int i;
+	local LVDataRecord record;
+
+	for (i = 0; i < idList.GetRecordCount(); i++)
+	{
+		idList.GetRec(i, record);
+		if (record.LVDataList.Length > 0 && record.LVDataList[0].szData == accountID)
+			return i;
+	}
+
+	return -1;
+}
+
+function SyncLastSuccessAccount()
+{
+	local string id, pwEnc, pw;
+	local int idx;
+	local LVDataRecord record;
+
+	GetINIString("EASYLOGIN", "lastSuccessID", id, EASYLOGIN_INI_FILE);
+	GetINIString("EASYLOGIN", "lastSuccessPWEnc", pwEnc, EASYLOGIN_INI_FILE);
+
+	if (id == "" || pwEnc == "")
+		return;
+
+	pw = DecryptPassword(pwEnc);
+	idx = FindAccountIndexByID(id);
+
+	if (idx >= 0)
+	{
+		idList.GetRec(idx, record);
+		record.LVDataList[0].szReserved = pw;
+		idList.ModifyRecord(idx, record);
+		SetINIString("EASYLOGIN", "pwEnc" $ string(idx + 1), pwEnc, EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pw" $ string(idx + 1), "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "lastLoginIndex", String(idx), EASYLOGIN_INI_FILE);
+	}
+	else if (idList.GetRecordCount() < MAX_LOGIN_COUNT)
+	{
+		AddList(id, pw, "", "");
+		SetINIString("EASYLOGIN", "id" $ string(idList.GetRecordCount()), id, EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pwEnc" $ string(idList.GetRecordCount()), pwEnc, EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pw" $ string(idList.GetRecordCount()), "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "server" $ string(idList.GetRecordCount()), "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "char" $ string(idList.GetRecordCount()), "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "lastLoginIndex", String(idList.GetRecordCount() - 1), EASYLOGIN_INI_FILE);
+	}
+}
+
+function string EncryptPassword(string plain)
+{
+	local int i, keyLen, ch, keyCh;
+	local string out;
+
+	keyLen = Len(EASYLOGIN_XOR_KEY);
+	if (keyLen <= 0)
+		return plain;
+
+	out = "";
+	for (i = 0; i < Len(plain); i++)
+	{
+		ch = Asc(Mid(plain, i, 1));
+		keyCh = Asc(Mid(EASYLOGIN_XOR_KEY, i % keyLen, 1));
+		out = out $ ByteToHex((ch ^ keyCh) & 255);
+	}
+
+	return out;
+}
+
+function string DecryptPassword(string enc)
+{
+	local int i, keyLen, ch, keyCh;
+	local string out, cur;
+
+	keyLen = Len(EASYLOGIN_XOR_KEY);
+	if (keyLen <= 0)
+		return enc;
+
+	out = "";
+	for (i = 0; i + 1 < Len(enc); i += 2)
+	{
+		cur = Mid(enc, i, 2);
+		ch = HexToByte(cur);
+		keyCh = Asc(Mid(EASYLOGIN_XOR_KEY, (i / 2) % keyLen, 1));
+		out = out $ Chr((ch ^ keyCh) & 255);
+	}
+
+	return out;
+}
+
+function string ByteToHex(int v)
+{
+	local string digits;
+	digits = "0123456789ABCDEF";
+	return Mid(digits, (v / 16) & 15, 1) $ Mid(digits, v & 15, 1);
+}
+
+function int HexToByte(string hexPair)
+{
+	local string digits;
+	local int hi, lo;
+
+	digits = "0123456789ABCDEF";
+	hi = InStr(digits, Caps(Mid(hexPair, 0, 1)));
+	lo = InStr(digits, Caps(Mid(hexPair, 1, 1)));
+	if (hi < 0 || lo < 0)
+		return 0;
+
+	return hi * 16 + lo;
+}
+
 /**
- * 윈도우 ESC 키로 닫기 처리 
+ * ?????? ESC ??? ??? ??? 
  * "Esc" Key
  ***/
 function OnReceivedCloseUI()

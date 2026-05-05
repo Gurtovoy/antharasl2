@@ -10,6 +10,7 @@ import l2s.gameserver.network.l2.c2s.ValidatePosition;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ActionFailPacket;
+import l2s.gameserver.utils.MovementRecorder;
 
 public class MoveBackwardToLocation
 extends L2GameClientPacket {
@@ -48,6 +49,9 @@ extends L2GameClientPacket {
                 activeChar.sendActionFailed();
             }
             return;
+        }
+        if (!this._keyboardMovement) {
+            MovementRecorder.recordClickMove(activeChar, this._targetLoc, this._originLoc);
         }
         if (ValidatePosition.validatePosition(activeChar, this._originLoc.x, this._originLoc.y, this._originLoc.z, -1)) {
             return;

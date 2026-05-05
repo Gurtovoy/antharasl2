@@ -1,22 +1,28 @@
 //------------------------------------------------------------------------------------------------------------------------
 //
-// Á¦¸ñ         : LogIn ½ºÄÉÀÏÆû ¹öÀü - SCALEFORM UI
-//                °ÔÀÓ ·Î±×ÀÎ
+//          : LogIn   - SCALEFORM UI
+//                 ?
 //
 //------------------------------------------------------------------------------------------------------------------------
 class LogIn extends GFxUIScript;
 
-//ÇÃ·¡½¬ ¿É¼Â ÁÂÇ¥
+// ? ?
 const FLASH_XPOS = 0;
 const FLASH_YPOS = 0;
 
-//Gfx @ uc ¿¬µ¿À» À§ÇÑ ÇÔ¼ö
+//Gfx @ uc   ?
 var array<GFxValue> args;
 var GFxValue invokeResult;
 
 var string logInID;
+var string m_LastTryID;
+var string m_LastTryPass;
 
-//UI¿ë UC
+const EASYLOGIN_INI_FILE     = "EasyLogin.ini";
+const EASYLOGIN_XOR_KEY      = "L2Salvation";
+const MAX_LOGIN_COUNT        = 15;
+
+//UI UC
 var L2Util util;
 
 function OnRegisterEvent()
@@ -24,7 +30,7 @@ function OnRegisterEvent()
 	RegisterEvent( EV_LoginBegin );
 	RegisterEvent( EV_LoginFail );
 	RegisterEvent( EV_LoginOK );
-	//5700 ¹øÀÎµ¥ ¿¡·¯°¡ ³²
+	//5700 ?  
 	RegisterEvent( EV_LoginUIGetFocus );
 }
 
@@ -45,7 +51,7 @@ function OnLoad()
 }
 
 function OnShow(){
-//	RequestLogin( "admin12DD34", "FFsadmin12DD34", 7 ); //Âîéäåì â èãğó!
+//	RequestLogin( "admin12DD34", "FFsadmin12DD34", 7 ); //  !
  }
 function OnFlashLoaded(){}	
 function OnHide()
@@ -71,15 +77,23 @@ function onCallUCFunction( String funcName , string param )
 	switch (funcName ) 
 	{
 		case "setLogin":
-			//¾ÆÀÌµğ
+			//?
 			ParseString(param, "ID", id);
 			SaveLastLoginID( id );
-			//ÆĞ½º¿öµå
+			m_LastTryID = id;
+			//?
 			ParseString(param, "pass", pass);
+			if (pass == "")
+			{
+				ParseString(param, "pw", pass);
+			}
+			m_LastTryPass = pass;
+			SetINIString("EASYLOGIN", "pendingID", m_LastTryID, EASYLOGIN_INI_FILE);
+			SetINIString("EASYLOGIN", "pendingPWEnc", EncryptPassword(m_LastTryPass), EASYLOGIN_INI_FILE);
 			//OPT
 			Parseint(param, "ncopt", ncopt);
 			
-			//·Î±×ÀÎ ¿äÃ» API
+			//?  API
 			RequestLogin( ID, pass, ncopt );
 			
 			delString = "";
@@ -138,21 +152,21 @@ function OnCallUCLogic( int logicID, string param )
 	local int ncopt;
 	
 	Debug("OnCallUCLogic" @ logicID @ param);
-	//·Î±×ÀÎ Á¤º¸¸¦ ¹ŞÀ½
+	//?  
 	if( logicID == 0 )
 	{
-		//¾ÆÀÌµğ
+		//?
 		ParseString(param, "ID", id);
 		SaveLastLoginID( id );
-		//ÆĞ½º¿öµå
+		//?
 		ParseString(param, "pass", pass);
 		//OPT
 		Parseint(param, "ncopt", ncopt);
 		
-		//·Î±×ÀÎ ¿äÃ» API
+		//?  API
 		RequestLogin( ID, pass, ncopt );
 	}
-	//³ª°¡±â
+	//
 	else if( logicID == 1 )
 	{		
 		
@@ -179,6 +193,7 @@ function OnEvent(int Event_ID, string param)
 	}
 	else if( Event_ID == EV_LoginOK )
 	{		
+		SaveLastSuccessfulLogin();
 		SendLogInSuccess();
 	}
 	else if( Event_ID == EV_LoginFail )
@@ -188,16 +203,16 @@ function OnEvent(int Event_ID, string param)
 	}
 }
 
-//½ÃÀÛ ½Ã.
+// .
 function FlashInit()
 {
 	local string param;	
-	// gfx3.0 ¹öÁ¯ /////////////////////////////////////////////////////////////////////
-	// ÇÃ·¡½Ã Å¸ÀÔ µ¥ÀÌÅ¸ ÀÎ½ºÅÏ½º »ı¼º
+	// gfx3.0  /////////////////////////////////////////////////////////////////////
+	//    ?? 
 	//AllocGFxValues(args, 2);		
 	//AllocGFxValue(invokeResult);
 
-	// °¢¼º ¾Ë¶÷ : ÀÌº¥Æ® ¹øÈ£ 0¹ø
+	//  ? : ?? ? 0
 	//args[0].SetInt( 0 );
 	//CreateObject(args[1]);	
 
@@ -211,9 +226,10 @@ function FlashInit()
 //	DeallocGFxValue( invokeResult );
 //	DeallocGFxValues( args );
 
-	// gfx4.0 ¹öÁ¯ /////////////////////////////////////////////////////////////////////	
+	// gfx4.0  /////////////////////////////////////////////////////////////////////	
 	//Debug("111111GetLastLoginID() " @ GetLastLoginID() );
 	param = makeVar2Str( "logInID", GetLastLoginID() );
+	param = param @ makeVar2Str( "logInPW", GetLastSuccessfulPassword() );
 	param = param @ makeVar2Str( "isOTP", string( IsUseOTP()) );
 	param = param @ makeVar2Str( "optMsg", GetSystemMessage( 5068 ) );
 	param = param @ makeVar2Str( "isUseEMailAccount", String( isUseEMailAccount() ) );	
@@ -221,22 +237,153 @@ function FlashInit()
 }
 
 /*
- * gfx4.0 ¹öÁ¯
+ * gfx4.0 
  */
 function string makeVar2Str(string varName, string vars)
 {
 	return varName $ "=" $ vars;
 }
 
+function SaveLastSuccessfulLogin()
+{
+	local string pendingID;
+	local string pendingPWEnc;
+
+	if (m_LastTryID == "" || m_LastTryPass == "")
+	{
+		GetINIString("EASYLOGIN", "pendingID", pendingID, EASYLOGIN_INI_FILE);
+		GetINIString("EASYLOGIN", "pendingPWEnc", pendingPWEnc, EASYLOGIN_INI_FILE);
+		if (m_LastTryID == "")
+			m_LastTryID = pendingID;
+		if (m_LastTryPass == "" && pendingPWEnc != "")
+			m_LastTryPass = DecryptPassword(pendingPWEnc);
+	}
+
+	if (m_LastTryID != "" && m_LastTryPass != "")
+	{
+		SetINIString("EASYLOGIN", "lastSuccessID", m_LastTryID, EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "lastSuccessPWEnc", EncryptPassword(m_LastTryPass), EASYLOGIN_INI_FILE);
+		SyncAutoLoginList(m_LastTryID, m_LastTryPass);
+		SetINIString("EASYLOGIN", "pendingID", "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pendingPWEnc", "", EASYLOGIN_INI_FILE);
+	}
+}
+
+function SyncAutoLoginList(string accountID, string plainPW)
+{
+	local int i;
+	local int emptyIdx;
+	local string curID;
+	local string enc;
+
+	enc = EncryptPassword(plainPW);
+	emptyIdx = -1;
+
+	for (i = 1; i <= MAX_LOGIN_COUNT; i++)
+	{
+		GetINIString("EASYLOGIN", "id" $ i, curID, EASYLOGIN_INI_FILE);
+		if (curID == accountID)
+		{
+			SetINIString("EASYLOGIN", "pwEnc" $ i, enc, EASYLOGIN_INI_FILE);
+			SetINIString("EASYLOGIN", "pw" $ i, "", EASYLOGIN_INI_FILE);
+			SetINIString("EASYLOGIN", "lastLoginIndex", String(i - 1), EASYLOGIN_INI_FILE);
+			return;
+		}
+
+		if (emptyIdx < 0 && curID == "")
+		{
+			emptyIdx = i;
+		}
+	}
+
+	if (emptyIdx > 0)
+	{
+		SetINIString("EASYLOGIN", "id" $ emptyIdx, accountID, EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pwEnc" $ emptyIdx, enc, EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "pw" $ emptyIdx, "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "server" $ emptyIdx, "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "char" $ emptyIdx, "", EASYLOGIN_INI_FILE);
+		SetINIString("EASYLOGIN", "lastLoginIndex", String(emptyIdx - 1), EASYLOGIN_INI_FILE);
+	}
+}
+
+function string GetLastSuccessfulPassword()
+{
+	local string enc;
+	GetINIString("EASYLOGIN", "lastSuccessPWEnc", enc, EASYLOGIN_INI_FILE);
+	if (enc == "")
+		return "";
+	return DecryptPassword(enc);
+}
+
+function string EncryptPassword(string plain)
+{
+	local int i, keyLen, ch, keyCh;
+	local string out;
+
+	keyLen = Len(EASYLOGIN_XOR_KEY);
+	if (keyLen <= 0)
+		return plain;
+
+	out = "";
+	for (i = 0; i < Len(plain); i++)
+	{
+		ch = Asc(Mid(plain, i, 1));
+		keyCh = Asc(Mid(EASYLOGIN_XOR_KEY, i % keyLen, 1));
+		out = out $ ByteToHex((ch ^ keyCh) & 255);
+	}
+	return out;
+}
+
+function string DecryptPassword(string enc)
+{
+	local int i, keyLen, ch, keyCh;
+	local string out, cur;
+
+	keyLen = Len(EASYLOGIN_XOR_KEY);
+	if (keyLen <= 0)
+		return enc;
+
+	out = "";
+	for (i = 0; i + 1 < Len(enc); i += 2)
+	{
+		cur = Mid(enc, i, 2);
+		ch = HexToByte(cur);
+		keyCh = Asc(Mid(EASYLOGIN_XOR_KEY, (i / 2) % keyLen, 1));
+		out = out $ Chr((ch ^ keyCh) & 255);
+	}
+	return out;
+}
+
+function string ByteToHex(int v)
+{
+	local string digits;
+	digits = "0123456789ABCDEF";
+	return Mid(digits, (v / 16) & 15, 1) $ Mid(digits, v & 15, 1);
+}
+
+function int HexToByte(string hexPair)
+{
+	local string digits;
+	local int hi, lo;
+
+	digits = "0123456789ABCDEF";
+	hi = InStr(digits, Caps(Mid(hexPair, 0, 1)));
+	lo = InStr(digits, Caps(Mid(hexPair, 1, 1)));
+	if (hi < 0 || lo < 0)
+		return 0;
+	return hi * 16 + lo;
+}
+
 function SendLogInSuccess()
 {
-	// gfx3.0 ¹öÁ¯ /////////////////////////////////////////////////////////////////////
-	// ÇÃ·¡½Ã Å¸ÀÔ µ¥ÀÌÅ¸ ÀÎ½ºÅÏ½º »ı¼º
+	// gfx3.0  /////////////////////////////////////////////////////////////////////
+	//    ?? 
 	/*
 	AllocGFxValues(args, 1);		
 	AllocGFxValue(invokeResult);
 
-	// °¢¼º ¾Ë¶÷ : ÀÌº¥Æ® ¹øÈ£ 5¹ø
+	//  ? : ?? ? 5
 	args[0].SetInt( 5 );
 
 	Invoke( "_root.onEvent", args, invokeResult );
@@ -245,22 +392,22 @@ function SendLogInSuccess()
 	DeallocGFxValues( args );
 */
 
-	// gfx4.0 ¹öÁ¯ /////////////////////////////////////////////////////////////////////
+	// gfx4.0  /////////////////////////////////////////////////////////////////////
 	HideWindow();
 	callGFxFunction("LogIn","loginSuccess", "");
 }
 
 
-//¿¡·¯ ¸Ş½ÃÁö º¸³¿.
+// ? .
 function SendErrorMsg( string ErrorMsg )
 {
-	// gfx3.0 ¹öÁ¯ /////////////////////////////////////////////////////////////////////
-	// ÇÃ·¡½Ã Å¸ÀÔ µ¥ÀÌÅ¸ ÀÎ½ºÅÏ½º »ı¼º
+	// gfx3.0  /////////////////////////////////////////////////////////////////////
+	//    ?? 
 	/*
 	AllocGFxValues(args, 2);		
 	AllocGFxValue(invokeResult);
 
-	// °¢¼º ¾Ë¶÷ : ÀÌº¥Æ® ¹øÈ£ 10¹ø
+	//  ? : ?? ? 10
 	args[0].SetInt( 10 );
 	CreateObject(args[1]);
 
@@ -270,19 +417,19 @@ function SendErrorMsg( string ErrorMsg )
 	DeallocGFxValue( invokeResult );
 	DeallocGFxValues( args );
 	*/
-	// gfx4.0 ¹öÁ¯ /////////////////////////////////////////////////////////////////////
+	// gfx4.0  /////////////////////////////////////////////////////////////////////
 	callGFxFunction("LogIn","ErrorMsg", ErrorMsg);
 }
 
-//Flash¿¡ ¸¶¿ì½º ¿À¹ö½Ã ÀÌº¥Æ® ¹ß»ı.
+//Flash ?  ?? ?.
 event OnMouseOver( WindowHandle w )
 {	
 	
 }
-//Flash¿¡ ¸¶¿ì½º ¾Æ¿ô½Ã ÀÌº¥Æ® ¹ß»ı.
+//Flash ? ? ?? ?.
 event OnMouseOut( WindowHandle w )
 {
-	//°­Á¦·Î ¸¶¿ì½º À§Ä¡¸¦ 0,0À¸·Î.
+	// ? ? 0,0.
 	ForceToMoveMousePos( 0, 0 );
 }
 defaultproperties

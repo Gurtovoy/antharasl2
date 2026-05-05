@@ -23,6 +23,8 @@ var CheckBoxHandle  m_showSmallPartyWndChek;
 function OnLoad()
 {
 	m_OptionShow = false;	// 디폴트는 false 
+	// Force big(main) party window by default.
+	SetINIInt( "PartyWnd", "e", 0, "Windowsinfo.ini" );
 
 
 	
