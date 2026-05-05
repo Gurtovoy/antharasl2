@@ -1123,3 +1123,72 @@
 [05.05.26 07:27:23] SUCCESS TopDed[268461562] -> WildStar[268478610] admin_character_list WildStar
 [05.05.26 07:27:24] SUCCESS TopDed[268461562] -> WildStar[268478610] admin_character_actions
 [05.05.26 07:27:25] SUCCESS TopDed[268461562] admin_teleportto WildStar
+[05.05.26 12:37:54] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 12:37:55] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 12:37:56] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 12:38:01] SUCCESS TopDed[268461562] admin_show_characters 1
+[05.05.26 12:38:08] SUCCESS TopDed[268461562] admin_show_characters 2
+[05.05.26 12:38:12] SUCCESS TopDed[268461562] -> LunarGrove[268480063] admin_character_list LunarGrove
+[05.05.26 12:38:14] SUCCESS TopDed[268461562] -> LunarGrove[268480063] admin_character_actions
+[05.05.26 12:38:15] SUCCESS TopDed[268461562] admin_teleportto LunarGrove
+[05.05.26 12:38:33] SUCCESS TopDed[268461562] -> LunarFire[268479665] admin_set_level 12
+[05.05.26 12:39:21] SUCCESS TopDed[268461562] -> 20525 Gray Wolf admin_admin
+[05.05.26 12:39:22] SUCCESS TopDed[268461562] -> 20525 Gray Wolf admin_show_moves
+[05.05.26 12:39:23] SUCCESS TopDed[268461562] -> 20525 Gray Wolf admin_show_html teleports/town.htm
+[05.05.26 14:09:44] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 14:09:45] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 14:09:46] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 14:09:47] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 14:09:48] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 14:09:50] SUCCESS TopDed[268461562] -> IronCrest[268475935] admin_character_list IronCrest
+[05.05.26 14:09:52] SUCCESS TopDed[268461562] -> IronCrest[268475935] admin_character_actions
+[05.05.26 14:09:53] SUCCESS TopDed[268461562] admin_teleportto IronCrest
+[05.05.26 15:49:33] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 15:49:35] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 15:49:36] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 15:49:40] SUCCESS TopDed[268461562] -> IronCrest[268475935] admin_character_list IronCrest
+[05.05.26 15:49:42] SUCCESS TopDed[268461562] -> IronCrest[268475935] admin_character_actions
+[05.05.26 15:49:42] SUCCESS TopDed[268461562] admin_teleportto IronCrest
+[05.05.26 15:50:10] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_set_level 12
+[05.05.26 15:50:57] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 15:50:58] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 15:50:59] SUCCESS TopDed[268461562] admin_show_html teleports/town.htm
+[05.05.26 15:51:06] SUCCESS TopDed[268461562] admin_show_html teleports/town/giran.htm
+[05.05.26 15:51:07] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 15:51:09] FAIL    TopDed[268461562] admin_events
+[05.05.26 15:51:10] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 15:51:11] FAIL    TopDed[268461562] admin_events
+[05.05.26 15:51:19] FAIL    TopDed[268461562] admin_start_event normal 2
+[05.05.26 15:51:21] FAIL    TopDed[268461562] admin_start_event normal 3
+[05.05.26 15:51:22] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 15:51:23] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 15:51:24] SUCCESS TopDed[268461562] admin_show_html teleports/town.htm
+[05.05.26 15:51:25] SUCCESS TopDed[268461562] admin_show_html teleports/town/giran.htm
+[05.05.26 15:51:26] SUCCESS TopDed[268461562] admin_move_to 82698 148638 -3473
+[05.05.26 15:51:56] SUCCESS TopDed[268461562] -> 33888 Santa Claus admin_admin
+[05.05.26 15:51:57] SUCCESS TopDed[268461562] -> 33888 Santa Claus admin_char_manage
+[05.05.26 15:51:58] FAIL    TopDed[268461562] -> 33888 Santa Claus admin_events
+[05.05.26 15:51:59] FAIL    TopDed[268461562] -> 33888 Santa Claus admin_stop_event normal 2
+[05.05.26 15:52:03] SUCCESS TopDed[268461562] -> 33888 Santa Claus admin_admin
+[05.05.26 15:52:04] FAIL    TopDed[268461562] -> 33888 Santa Claus admin_events
+[05.05.26 15:52:05] FAIL    TopDed[268461562] -> 33888 Santa Claus admin_start_event normal 1
+[05.05.26 15:52:08] FAIL    TopDed[268461562] admin_stop_event normal 3
+[05.05.26 15:52:19] SUCCESS TopDed[268461562] -> 9000 Rosalia admin_admin
+[05.05.26 15:52:20] SUCCESS TopDed[268461562] -> 9000 Rosalia admin_show_moves
+[05.05.26 15:52:22] SUCCESS TopDed[268461562] -> 9000 Rosalia admin_show_html teleports/townarea.htm
+[05.05.26 15:52:24] SUCCESS TopDed[268461562] -> 9000 Rosalia admin_show_html teleports/townarea/talkingisland.htm
+[05.05.26 15:52:27] SUCCESS TopDed[268461562] admin_move_to 48736 248463 -6162
+[05.05.26 16:08:17] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 16:08:19] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 16:08:19] SUCCESS TopDed[268461562] admin_show_html teleports/town.htm
+[05.05.26 16:08:20] SUCCESS TopDed[268461562] admin_show_html teleports/town/giran.htm
+[05.05.26 16:08:22] SUCCESS TopDed[268461562] admin_move_to 80385 147867 -3512
+[05.05.26 16:11:01] SUCCESS TopDed[268461562] -> 9000 Rosalia admin_admin
+[05.05.26 16:11:02] SUCCESS TopDed[268461562] -> 9000 Rosalia admin_gmshop
+[05.05.26 16:11:03] SUCCESS TopDed[268461562] -> 9000 Rosalia admin_show_html gmstore/gear/weapons.htm
+[05.05.26 16:11:04] SUCCESS TopDed[268461562] -> 9000 Rosalia admin_buy 9002
+[05.05.26 16:11:46] SUCCESS TopDed[268461562] -> 9000 Rosalia admin_invis
+[05.05.26 16:52:39] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 16:52:52] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 16:52:54] SUCCESS TopDed[268461562] admin_itemcreate
+[05.05.26 16:52:59] SUCCESS TopDed[268461562] admin_create_item 57 111111111111
