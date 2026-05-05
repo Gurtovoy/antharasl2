@@ -114,5 +114,6 @@ l2s\commons\time\cron\AddPattern.class
 l2s\commons\geometry\AbstractShape.class
 l2s\commons\util\TroveUtils$TIntObjectHashMapEmpty.class
 l2s\commons\time\cron\SchedulingPattern.class
+l2s\commons\dbcp\BasicDataSource.class
 l2s\commons\time\cron\SchedulingPattern$SimpleValueParser.class
 l2s\commons\net\nio\impl\IClientFactory.class

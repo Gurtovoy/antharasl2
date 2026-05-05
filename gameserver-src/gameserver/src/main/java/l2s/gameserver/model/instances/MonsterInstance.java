@@ -296,7 +296,7 @@ extends NpcInstance {
                 this.rollRewards(rewardList, lastAttacker, topDamager);
             }
             Player player = topDamager.getPlayer();
-            if (player != null && Math.abs(this.getLevel() - player.getLevel()) < 9) {
+            if (player != null && !player.isFakePlayer() && Math.abs(this.getLevel() - player.getLevel()) < 9) {
                 for (RewardItemData rewardItemData : player.getPremiumAccount().getRewards()) {
                     if (!Rnd.chance((double)rewardItemData.getChance())) continue;
                     ItemFunctions.addItem(player, rewardItemData.getId(), Rnd.get((long)rewardItemData.getMinCount(), (long)rewardItemData.getMaxCount()));
@@ -458,6 +458,9 @@ extends NpcInstance {
         Creature activeChar = type == RewardType.SWEEP ? lastAttacker : topDamager;
         Player activePlayer = activeChar.getPlayer();
         if (activePlayer == null) {
+            return;
+        }
+        if (activePlayer.isFakePlayer()) {
             return;
         }
         double penaltyMod = Experience.penaltyModifier(this.calculateLevelDiffForDrop(topDamager.getLevel()), 9.0);

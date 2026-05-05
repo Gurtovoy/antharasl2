@@ -62,6 +62,10 @@ public class WebServer
 			HttpContext tradeCtx = _server.createContext("/api/trade", new TradeApiHandler());
 			tradeCtx.getFilters().add(authFilter);
 
+			// Server config files (properties): GET/PUT under /api/server/config-files
+			HttpContext configFilesCtx = _server.createContext("/api/server/config-files", new ServerConfigFilesApiHandler());
+			configFilesCtx.getFilters().add(authFilter);
+
 			// Server status API
 			HttpContext statusCtx = _server.createContext("/api/server/status", new ServerStatusApiHandler());
 			statusCtx.getFilters().add(authFilter);

@@ -91,6 +91,7 @@ import l2s.gameserver.instancemanager.OfflineBufferManager;
 import l2s.gameserver.instancemanager.PartySubstituteManager;
 import l2s.gameserver.instancemanager.PvPRewardManager;
 import l2s.gameserver.instancemanager.ReflectionManager;
+import l2s.gameserver.instancemanager.ServerStagesManager;
 import l2s.gameserver.instancemanager.TrainingCampManager;
 import l2s.gameserver.listener.actor.player.OnAnswerListener;
 import l2s.gameserver.listener.actor.player.OnPlayerChatMessageReceive;
@@ -1637,7 +1638,18 @@ implements PlayerGroup {
     }
 
     public long getMaxExp() {
-        return this.getActiveSubClass() == null ? Experience.getExpForLevel(Experience.getMaxLevel() + 1) : this.getActiveSubClass().getMaxExp();
+        if (this.getActiveSubClass() == null) {
+            return Experience.getExpForLevel(Experience.getMaxLevel() + 1);
+        }
+        long mx = this.getActiveSubClass().getMaxExp();
+        int cap = ServerStagesManager.getInstance().getEffectiveMaxPlayerLevelForCap();
+        if (cap > 0) {
+            long capExp = Experience.getExpForLevel(cap + 1) - 1L;
+            if (capExp < mx) {
+                mx = capExp;
+            }
+        }
+        return mx;
     }
 
     public void setEnchantScroll(ItemInstance scroll) {
@@ -2393,6 +2405,10 @@ implements PlayerGroup {
     }
 
     public void doAutoLootOrDrop(ItemInstance item, NpcInstance fromNpc) {
+        if (this.isFakePlayer()) {
+            item.deleteMe();
+            return;
+        }
         boolean forceAutoloot;
         boolean bl = forceAutoloot = fromNpc.isFlying() || this.getReflection().isAutolootForced();
         if (fromNpc.isRaid() && !Config.AUTO_LOOT_FROM_RAIDS && !item.isHerb() && !forceAutoloot) {

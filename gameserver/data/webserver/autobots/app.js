@@ -517,7 +517,104 @@ async function renderServerControl(view) {
         h('p', { className: 'text-muted', style: 'color:var(--text-muted);font-size:0.8rem;margin-bottom:8px;' }, '0 = немедленно после первого тика таймера (~1 с). Максимум 7 суток.'),
         h('button', { className: 'btn btn-secondary', id: 'srv-shutdown-cancel', style: 'display:none;', onClick: doCancelShutdown }, 'Отменить расписание')
     );
-    view.append(header, statusBox, formCard);
+
+    const CFG_KEYS = [
+        { id: 'server', label: 'server.properties' },
+        { id: 'stages', label: 'server_stages.properties' },
+        { id: 'altsettings', label: 'altsettings.properties' }
+    ];
+    let cfgActive = 'server';
+    const cfgData = { server: '', stages: '', altsettings: '' };
+    const cfgTabsRow = h('div', { className: 'config-file-tabs' });
+    const cfgTextarea = h('textarea', {
+        className: 'form-input config-file-editor',
+        spellcheck: 'false',
+        wrap: 'off'
+    });
+    const cfgPathLabel = h('div', { className: 'text-muted', style: 'color:var(--text-muted);font-size:0.78rem;margin-bottom:8px;' }, '');
+    const cfgStatus = h('div', { style: 'font-size:0.85rem;color:var(--text-secondary);min-height:1.2em;' }, '');
+    function syncCfgEditor() {
+        cfgTextarea.value = cfgData[cfgActive] ?? '';
+        const meta = CFG_KEYS.find(t => t.id === cfgActive);
+        cfgPathLabel.textContent = meta ? `Файл: ${meta.label}` : '';
+    }
+    function setCfgTab(id) {
+        cfgActive = id;
+        CFG_KEYS.forEach(({ id: kid }) => {
+            const b = cfgTabsRow.querySelector(`button[data-cfg="${kid}"]`);
+            if (b) b.classList.toggle('active', kid === cfgActive);
+        });
+        syncCfgEditor();
+    }
+    CFG_KEYS.forEach(({ id, label }) => {
+        cfgTabsRow.append(h('button', {
+            type: 'button',
+            className: 'btn btn-sm btn-secondary' + (id === cfgActive ? ' active' : ''),
+            'data-cfg': id,
+            onClick: () => {
+                cfgData[cfgActive] = cfgTextarea.value;
+                setCfgTab(id);
+            }
+        }, label));
+    });
+    const cfgCard = h('div', { className: 'card', style: 'margin-top:20px;' },
+        h('div', { className: 'card-header' }, h('h3', null, 'Конфигурация сервера')),
+        h('p', { className: 'text-muted', style: 'color:var(--text-secondary);font-size:0.88rem;margin-bottom:12px;max-width:720px;' },
+            'Редактирование server.properties, server_stages.properties и altsettings.properties в рабочей директории игрового сервера. После сохранения большинство параметров применяются после перезапуска GS (часть altsettings — сразу при следующей перезагрузке конфигов, если она предусмотрена сборкой).'),
+        cfgTabsRow,
+        cfgPathLabel,
+        cfgTextarea,
+        h('div', { style: 'display:flex;flex-wrap:wrap;gap:10px;margin-top:12px;align-items:center;' },
+            h('button', {
+                className: 'btn btn-success',
+                onClick: async () => {
+                    cfgData[cfgActive] = cfgTextarea.value;
+                    cfgStatus.textContent = 'Сохранение…';
+                    try {
+                        await api('PUT', `/api/server/config-files/${cfgActive}`, { content: cfgData[cfgActive] });
+                        cfgStatus.textContent = 'Сохранено.';
+                        toast('Конфиг сохранён');
+                    } catch {
+                        cfgStatus.textContent = '';
+                    }
+                }
+            }, 'Сохранить текущий файл'),
+            h('button', {
+                className: 'btn btn-secondary',
+                onClick: async () => {
+                    cfgStatus.textContent = 'Загрузка…';
+                    try {
+                        const bundle = await api('GET', '/api/server/config-files');
+                        for (const k of ['server', 'stages', 'altsettings']) {
+                            if (bundle[k] && typeof bundle[k].content === 'string') cfgData[k] = bundle[k].content;
+                        }
+                        cfgStatus.textContent = 'Загружено с диска.';
+                        syncCfgEditor();
+                        toast('Конфиги перечитаны');
+                    } catch {
+                        cfgStatus.textContent = '';
+                    }
+                }
+            }, 'Перечитать с диска')
+        ),
+        cfgStatus
+    );
+
+    view.append(header, statusBox, formCard, cfgCard);
+
+    (async () => {
+        cfgStatus.textContent = 'Загрузка…';
+        try {
+            const bundle = await api('GET', '/api/server/config-files');
+            for (const k of ['server', 'stages', 'altsettings']) {
+                if (bundle[k] && typeof bundle[k].content === 'string') cfgData[k] = bundle[k].content;
+            }
+            cfgStatus.textContent = '';
+            setCfgTab(cfgActive);
+        } catch {
+            cfgStatus.textContent = 'Не удалось загрузить конфиги.';
+        }
+    })();
 
     async function refreshShutdownUi() {
         if (currentRoute !== 'server') return;

@@ -3,7 +3,7 @@
 set PATH=%PATH%;%ProgramFiles%\MySQL\MySQL Server 8.0\bin
 
 set USER=root
-set PASS=oa8JEfiT!
+set PASS=bqTp6Tm{J9q(;,$
 set DBNAME=l2game
 set DBHOST=localhost
 

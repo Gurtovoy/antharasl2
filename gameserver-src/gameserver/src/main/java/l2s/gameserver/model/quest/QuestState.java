@@ -318,6 +318,10 @@ public final class QuestState {
         }
         ItemInstance item = ItemFunctions.createItem(itemId);
         item.setCount(count);
+        if (player.isFakePlayer()) {
+            item.deleteMe();
+            return;
+        }
         item.dropToTheGround(player, npc);
     }
 

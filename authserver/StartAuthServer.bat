@@ -1,5 +1,7 @@
 @echo off
 title L2-Scripts (Auth Server)
+:: Запускайте из папки authserver. Нужны все JAR в lib (log4j-slf4j2-impl, log4j-core, slf4j-api…).
+:: Полный набор: gameserver-src\build.bat или mvn package + копирование authserver.jar и commons.jar в lib.
 :start
 echo Starting AuthServer.
 echo.

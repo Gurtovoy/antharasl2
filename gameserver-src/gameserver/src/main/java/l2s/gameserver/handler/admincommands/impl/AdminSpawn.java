@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import l2s.commons.collections.MultiValueSet;
+import l2s.gameserver.Config;
 import l2s.gameserver.ai.CharacterAI;
 import l2s.gameserver.dao.SpawnsDAO;
 import l2s.gameserver.data.xml.holder.NpcHolder;
@@ -313,7 +314,9 @@ implements IAdminCommandHandler {
             activeChar.sendMessage("Target is not ingame.");
             return;
         }
-        SpawnsDAO.getInstance().insert(template.getId(), loc.x, loc.y, loc.z, heading, respawnTime, mobCount);
+        if (Config.SAVE_ADMIN_SPAWN_TO_DATABASE) {
+            SpawnsDAO.getInstance().insert(template.getId(), loc.x, loc.y, loc.z, heading, respawnTime, mobCount);
+        }
     }
 
     private static enum Commands {

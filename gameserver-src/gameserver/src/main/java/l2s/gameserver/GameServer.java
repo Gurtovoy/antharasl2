@@ -64,6 +64,7 @@ import l2s.gameserver.instancemanager.PlayerMessageStack;
 import l2s.gameserver.instancemanager.RaidBossSpawnManager;
 import l2s.gameserver.instancemanager.SpawnManager;
 import l2s.gameserver.instancemanager.StarterPackManager;
+import l2s.gameserver.instancemanager.ServerStagesManager;
 import l2s.gameserver.instancemanager.TrainingCampManager;
 import l2s.gameserver.instancemanager.clansearch.ClanSearchManager;
 import l2s.gameserver.instancemanager.games.MiniGameScoreManager;
@@ -204,6 +205,7 @@ public class GameServer {
         EnchantHPBonusTable.getInstance();
         FencesDAO.getInstance().restore();
         StaticObjectHolder.getInstance().spawnAll();
+        ServerStagesManager.getInstance().init();
         SpawnManager.getInstance().spawnAll();
         RaidBossSpawnManager.getInstance();
         ConfigParsers.parseAllOnInit();

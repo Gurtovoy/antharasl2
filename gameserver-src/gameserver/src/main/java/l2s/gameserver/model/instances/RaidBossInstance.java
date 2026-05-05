@@ -113,7 +113,7 @@ extends MonsterInstance {
             box.setSpawnedLoc(this.getLoc());
             box.startDeleteTask(60000L);
         }
-        if (killer != null && killer.getPlayer() != null && Config.RAID_DROP_GLOBAL_ITEMS && this.getLevel() >= Config.MIN_RAID_LEVEL_TO_DROP) {
+        if (killer != null && killer.getPlayer() != null && !killer.getPlayer().isFakePlayer() && Config.RAID_DROP_GLOBAL_ITEMS && this.getLevel() >= Config.MIN_RAID_LEVEL_TO_DROP) {
             for (Config.RaidGlobalDrop drop_inf : Config.RAID_GLOBAL_DROP) {
                 int id = drop_inf.getId();
                 long count = drop_inf.getCount();

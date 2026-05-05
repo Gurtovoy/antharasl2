@@ -1,6 +1,6 @@
 @echo off
 title L2-Scripts Classic: Saviors (Antharas) (Game Server)
-
+:: Запуск из папки gameserver. Нужен полный ./lib (mvn package копирует зависимости, либо gameserver-src\build.bat).
 :start
 echo Starting GameServer.
 echo.

@@ -180,6 +180,29 @@
                     </archive>
                 </configuration>
             </plugin>
+            <!-- Runtime JARs into ../authserver/lib (SLF4J→Log4j2 bridge, log4j-core, …) — без этого SLF4J пишет NOP / StaticLoggerBinder -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>3.7.1</version>
+                <executions>
+                    <execution>
+                        <id>copy-runtime-to-authserver-lib</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${authserver.lib}</outputDirectory>
+                            <!-- runtime: и compile-зависимости, и log4j-core / log4j-slf4j2-impl (у них scope runtime) -->
+                            <includeScope>runtime</includeScope>
+                            <excludeGroupIds>l2s</excludeGroupIds>
+                            <overWriteReleases>true</overWriteReleases>
+                            <overWriteSnapshots>true</overWriteSnapshots>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>

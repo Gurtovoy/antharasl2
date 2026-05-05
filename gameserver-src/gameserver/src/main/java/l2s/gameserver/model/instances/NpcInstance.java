@@ -396,6 +396,9 @@ extends Creature {
         if (itemCount == 0L || lastAttacker == null) {
             return;
         }
+        if (lastAttacker.isFakePlayer()) {
+            return;
+        }
         for (long i = 0L; i < itemCount; ++i) {
             ItemInstance item = ItemFunctions.createItem(itemId);
             for (Event e : this.getEvents()) {
@@ -425,6 +428,10 @@ extends Creature {
 
     public void dropItem(Player lastAttacker, ItemInstance item) {
         if (item.getCount() == 0L) {
+            return;
+        }
+        if (lastAttacker != null && lastAttacker.isFakePlayer()) {
+            item.deleteMe();
             return;
         }
         if (this.isRaid()) {

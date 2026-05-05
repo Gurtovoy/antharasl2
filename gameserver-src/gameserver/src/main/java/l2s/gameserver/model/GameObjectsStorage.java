@@ -15,9 +15,9 @@ import org.napile.primitive.maps.IntObjectMap;
 import org.napile.primitive.maps.impl.CHashIntObjectMap;
 
 public class GameObjectsStorage {
-    private static IntObjectMap<GameObject> _objects = new CHashIntObjectMap((int)(60000.0 * Config.RATE_MOB_SPAWN + (double)GameServer.getInstance().getOnlineLimit() + (double)Config.FAKE_PLAYERS_COUNT + 1000.0));
+    private static IntObjectMap<GameObject> _objects = new CHashIntObjectMap((int)(60000.0 * Config.maxMobSpawnMultiplierForStorage() + (double)GameServer.getInstance().getOnlineLimit() + (double)Config.FAKE_PLAYERS_COUNT + 1000.0));
     private static IntObjectMap<StaticObjectInstance> _staticObjects = new CHashIntObjectMap(1000);
-    private static IntObjectMap<NpcInstance> _npcs = new CHashIntObjectMap((int)(60000.0 * Config.RATE_MOB_SPAWN));
+    private static IntObjectMap<NpcInstance> _npcs = new CHashIntObjectMap((int)(60000.0 * Config.maxMobSpawnMultiplierForStorage()));
     private static IntObjectMap<Player> _players = new CHashIntObjectMap(GameServer.getInstance().getOnlineLimit());
     private static IntObjectMap<Player> _offlinePlayers = new CHashIntObjectMap(1000);
     private static IntObjectMap<FenceInstance> _fences = new CHashIntObjectMap(1000);

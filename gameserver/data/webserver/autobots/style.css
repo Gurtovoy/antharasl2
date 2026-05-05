@@ -181,6 +181,31 @@ a:hover { color: #44e0ff; }
 .btn-sm { padding: 4px 10px; font-size: 0.78rem; }
 .btn-group { display: flex; gap: 6px; flex-wrap: wrap; }
 
+/* Config file editor (Server page) */
+.config-file-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.config-file-tabs .btn.active {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 12px var(--accent-glow);
+}
+textarea.config-file-editor {
+    width: 100%;
+    min-height: 420px;
+    max-height: 62vh;
+    resize: vertical;
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    font-size: 12px;
+    line-height: 1.45;
+    white-space: pre;
+    overflow: auto;
+    tab-size: 4;
+}
+
 /* === Inputs === */
 input, select, textarea {
     background: var(--bg-input);

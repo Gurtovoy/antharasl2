@@ -245,6 +245,7 @@ l2s\gameserver\handler\items\impl\SkillsReduceItemHandler.class
 l2s\gameserver\model\entity\events\impl\DuelEvent$OnPlayerExitListenerImpl.class
 l2s\gameserver\data\xml\parser\PetitionGroupParser.class
 l2s\gameserver\instancemanager\BotReportManager$ResetPointTask.class
+l2s\gameserver\instancemanager\ServerStagesManager$StageDeathListener.class
 l2s\gameserver\skills\skillclasses\DebuffRenewal.class
 l2s\gameserver\data\xml\parser\ItemParser.class
 l2s\gameserver\network\l2\c2s\RequestAquireSkill.class
@@ -620,6 +621,7 @@ l2s\gameserver\network\l2\c2s\RequestExMPCCShowPartyMembersInfo.class
 l2s\gameserver\network\l2\c2s\RequestReplyStartPledgeWar.class
 l2s\gameserver\network\l2\c2s\RequestTargetCanceld.class
 l2s\gameserver\network\l2\s2c\GMViewWarehouseWithdrawListPacket.class
+l2s\gameserver\instancemanager\ServerStagesManager$StageDef.class
 l2s\gameserver\stats\conditions\ConditionGameTime$CheckGameTime.class
 l2s\gameserver\data\string\SkillNameHolder.class
 l2s\gameserver\model\quest\QuestState$1.class
@@ -807,6 +809,7 @@ l2s\gameserver\model\pledge\ClanWar$ClanWarPeriod.class
 l2s\gameserver\network\telnet\commands\TelnetBan$1.class
 l2s\gameserver\network\l2\c2s\RequestPledgeJoinSys.class
 l2s\gameserver\model\entity\boat\Vehicle.class
+l2s\gameserver\network\webserver\ServerConfigFilesApiHandler$ConfigFilePayload.class
 l2s\gameserver\listener\CharListener.class
 l2s\gameserver\network\authcomm\gs2as\ChangePassword.class
 l2s\gameserver\handler\usercommands\impl\CommandChannel.class
@@ -814,6 +817,7 @@ l2s\gameserver\instancemanager\BotReportManager.class
 l2s\gameserver\network\l2\s2c\DiePacket.class
 l2s\gameserver\model\GameObjectTasks$DeleteTask.class
 l2s\gameserver\network\l2\s2c\ManagePledgePowerPacket.class
+l2s\gameserver\network\webserver\ServerConfigFilesApiHandler.class
 l2s\gameserver\network\l2\c2s\RequestSaveBookMarkSlot.class
 l2s\gameserver\network\l2\s2c\ExBlockAddResult.class
 l2s\gameserver\network\l2\s2c\SysMsgContainer$ResidenceArgument.class
@@ -1147,6 +1151,7 @@ l2s\gameserver\geometry\Territory.class
 l2s\gameserver\network\l2\c2s\RequestChangeNicknameColor.class
 l2s\gameserver\model\GameObjectTasks$PvPFlagTask.class
 l2s\gameserver\network\l2\s2c\ExRegenMaxPacket.class
+l2s\gameserver\instancemanager\ServerStagesManager.class
 l2s\gameserver\skills\skillclasses\CPDam.class
 l2s\gameserver\model\entity\events\objects\SpawnSimpleObject.class
 l2s\gameserver\network\l2\s2c\SunRise.class
@@ -1407,6 +1412,7 @@ l2s\gameserver\network\l2\s2c\SnoopPacket.class
 l2s\gameserver\network\l2\s2c\TradePressOwnOkPacket.class
 l2s\gameserver\skills\skillclasses\LethalShot.class
 l2s\gameserver\handler\admincommands\impl\AdminAdmin.class
+l2s\gameserver\handler\admincommands\impl\AdminServerStages.class
 l2s\gameserver\network\l2\c2s\RequestConfirmRefinerItem.class
 l2s\gameserver\templates\npc\WalkerRoute.class
 l2s\gameserver\network\l2\s2c\ExSendUIEventPacket.class
@@ -1712,6 +1718,7 @@ l2s\gameserver\network\authcomm\gs2as\BanRequest.class
 l2s\gameserver\skills\TimeStamp.class
 l2s\gameserver\network\telnet\commands\TelnetConfig.class
 l2s\gameserver\dao\VoteRewardRecordsDAO.class
+l2s\gameserver\instancemanager\ServerStagesManager$StageSpawnListener.class
 l2s\gameserver\skills\SkillTrait$16.class
 l2s\gameserver\network\l2\s2c\PledgeCrestPacket.class
 l2s\gameserver\handler\items\impl\BeastBlessedSpiritShotItemHandler.class
@@ -1755,6 +1762,7 @@ l2s\gameserver\network\l2\s2c\HennaInfoPacket.class
 l2s\gameserver\scripts\annotation\OnScriptLoad.class
 l2s\gameserver\templates\item\RecipeTemplate.class
 l2s\gameserver\skills\EffectTargetType$3.class
+l2s\gameserver\instancemanager\ServerStagesManager$StagePlayerEnterListener.class
 l2s\gameserver\network\l2\c2s\RequestRegistPartySubstitute.class
 l2s\gameserver\skills\SkillTrait$23.class
 l2s\gameserver\model\FakePlayer$DeleteMeTimer.class
@@ -1912,6 +1920,7 @@ l2s\gameserver\network\authcomm\gs2as\PlayerLogout.class
 l2s\gameserver\network\l2\s2c\ExNotifyFlyMoveStart.class
 l2s\gameserver\stats\Formulas$AttackInfo.class
 l2s\gameserver\model\actor\recorder\ServitorStatsChangeRecorder.class
+l2s\gameserver\handler\admincommands\impl\AdminServerStages$Commands.class
 l2s\gameserver\network\l2\c2s\Logout.class
 l2s\gameserver\network\l2\s2c\ExEnterWorldPacket.class
 l2s\gameserver\network\l2\s2c\ExBrBroadcastEventState.class

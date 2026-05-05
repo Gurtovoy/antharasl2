@@ -28,6 +28,10 @@ import l2s.commons.string.StringArrayUtils;
 import l2s.commons.time.cron.SchedulingPattern;
 import l2s.gameserver.model.base.AcquireType;
 import l2s.gameserver.model.base.PlayerAccess;
+import l2s.gameserver.model.instances.MonsterInstance;
+import l2s.gameserver.model.instances.SaveableMonsterInstance;
+import l2s.gameserver.model.instances.SpecialMonsterInstance;
+import l2s.gameserver.templates.npc.NpcTemplate;
 import l2s.gameserver.network.authcomm.ServerType;
 import l2s.gameserver.skills.AbnormalEffect;
 import l2s.gameserver.utils.Language;
@@ -140,6 +144,10 @@ public class Config {
     public static int CLAN_WAR_KILLS_COUNT_TO_CONFIRM_MUTUAL_WAR;
     public static int CLAN_WAR_CANCEL_REPUTATION_PENALTY;
     public static boolean DONTLOADSPAWN;
+    /**
+     * Если true — спавн через админ-команды //spawn пишется в БД (таблица spawns) и восстанавливается после рестарта.
+     */
+    public static boolean SAVE_ADMIN_SPAWN_TO_DATABASE;
     public static boolean DONTLOADQUEST;
     public static int MAX_REFLECTIONS_COUNT;
     public static int SHIFT_BY;
@@ -481,6 +489,14 @@ public class Config {
     public static double RATE_MOB_SPAWN;
     public static int RATE_MOB_SPAWN_MIN_LEVEL;
     public static int RATE_MOB_SPAWN_MAX_LEVEL;
+    /**
+     * Множители количества мобов по диапазонам уровней 1–5, 6–10, … 41–45 (индекс 0..8).
+     */
+    public static final double[] RATE_MOB_SPAWN_BY_LEVEL_TIER = new double[9];
+    /**
+     * Делители времени респа по тем же диапазонам (2 = респ в 2 раза быстрее).
+     */
+    public static final double[] RATE_MOB_RESPAWN_DIVISOR_BY_LEVEL_TIER = new double[9];
     public static boolean KARMA_DROP_GM;
     public static boolean KARMA_NEEDED_TO_DROP;
     public static int RATE_KARMA_LOST_STATIC;
@@ -1222,6 +1238,12 @@ public class Config {
         RATE_MOB_SPAWN = serverSettings.getProperty("RateMobSpawn", 1.0);
         RATE_MOB_SPAWN_MIN_LEVEL = serverSettings.getProperty("RateMobMinLevel", 1);
         RATE_MOB_SPAWN_MAX_LEVEL = serverSettings.getProperty("RateMobMaxLevel", 100);
+        String[] mobTierSpawnKeys = new String[]{"Level1-5", "Level6-10", "Level11-15", "Level16-20", "Level21-25", "Level26-30", "Level31-35", "Level36-40", "Level41-45"};
+        String[] mobTierRespKeys = new String[]{"Resp1-5", "Resp6-10", "Resp11-15", "Resp16-20", "Resp21-25", "Resp26-30", "Resp31-35", "Resp36-40", "Resp41-45"};
+        for (int i = 0; i < 9; ++i) {
+            RATE_MOB_SPAWN_BY_LEVEL_TIER[i] = serverSettings.getProperty(mobTierSpawnKeys[i], 1.0);
+            RATE_MOB_RESPAWN_DIVISOR_BY_LEVEL_TIER[i] = serverSettings.getProperty(mobTierRespKeys[i], 1.0);
+        }
         RATE_RAID_REGEN = serverSettings.getProperty("RateRaidRegen", 1.0);
         RATE_RAID_DEFENSE = serverSettings.getProperty("RateRaidDefense", 1.0);
         RATE_RAID_ATTACK = serverSettings.getProperty("RateRaidAttack", 1.0);
@@ -1316,6 +1338,7 @@ public class Config {
         WEDDING_FORMALWEAR = serverSettings.getProperty("WeddingFormalWear", true);
         WEDDING_DIVORCE_COSTS = serverSettings.getProperty("WeddingDivorceCosts", 20);
         DONTLOADSPAWN = serverSettings.getProperty("StartWithoutSpawn", false);
+        SAVE_ADMIN_SPAWN_TO_DATABASE = serverSettings.getProperty("SaveAdminSpawnToDatabase", false);
         DONTLOADQUEST = serverSettings.getProperty("StartWithoutQuest", false);
         MAX_REFLECTIONS_COUNT = serverSettings.getProperty("MaxReflectionsCount", 300);
         WEAR_DELAY = serverSettings.getProperty("WearDelay", 5);
@@ -2519,6 +2542,65 @@ public class Config {
         return text;
     }
 
+    public static int mobLevelTierIndex(int level) {
+        if (level < 1 || level > 45) {
+            return -1;
+        }
+        return (level - 1) / 5;
+    }
+
+    public static double getMobSpawnMultiplierForLevel(int level) {
+        int idx = Config.mobLevelTierIndex(level);
+        if (idx < 0) {
+            return 1.0;
+        }
+        double m = RATE_MOB_SPAWN_BY_LEVEL_TIER[idx];
+        return m > 0.0 ? m : 1.0;
+    }
+
+    public static double getMobRespawnDivisorForLevel(int level) {
+        int idx = Config.mobLevelTierIndex(level);
+        if (idx < 0) {
+            return 1.0;
+        }
+        double d = RATE_MOB_RESPAWN_DIVISOR_BY_LEVEL_TIER[idx];
+        return d > 0.0 ? d : 1.0;
+    }
+
+    /**
+     * Уменьшает задержку респа в divisor раз (как в Spawner.MIN_RESPAWN_DELAY).
+     */
+    public static int scaleMobRespawnDelaySeconds(int seconds, double divisor) {
+        if (seconds <= 0 || divisor <= 0.0) {
+            return seconds;
+        }
+        int scaled = (int)Math.round((double)seconds / divisor);
+        return Math.max(20, scaled);
+    }
+
+    public static double maxMobSpawnMultiplierForStorage() {
+        double max = RATE_MOB_SPAWN > 0.0 ? RATE_MOB_SPAWN : 1.0;
+        for (double v : RATE_MOB_SPAWN_BY_LEVEL_TIER) {
+            if (v > max) {
+                max = v;
+            }
+        }
+        return max > 0.0 ? max : 1.0;
+    }
+
+    /**
+     * Множители Level* / Resp* (1–45) применяются только к обычным мобам ({@link MonsterInstance}) и квестовым ({@link SpecialMonsterInstance}).
+     */
+    public static boolean isMobTierSpawnConfigApplicable(NpcTemplate template) {
+        if (template.isRaid || template.isInstanceOf(SaveableMonsterInstance.class)) {
+            return false;
+        }
+        if (template.getInstanceClass() == MonsterInstance.class) {
+            return true;
+        }
+        return template.isInstanceOf(SpecialMonsterInstance.class);
+    }
+
     static {
         BAN_CHANNEL_LIST = new int[18];
         ABUSEWORD_PATTERN = null;
@@ -2539,6 +2621,10 @@ public class Config {
         APPEARANCE_STONE_CHECK_ARMOR_TYPE = true;
         BUFF_STORE_ALLOWED_CLASS_LIST = new TIntHashSet();
         BUFF_STORE_ALLOWED_SKILL_LIST = new TIntHashSet();
+        for (int i = 0; i < 9; ++i) {
+            RATE_MOB_SPAWN_BY_LEVEL_TIER[i] = 1.0;
+            RATE_MOB_RESPAWN_DIVISOR_BY_LEVEL_TIER[i] = 1.0;
+        }
     }
 
     public static class RaidGlobalDrop {

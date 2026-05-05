@@ -56,11 +56,31 @@ public class SpawnManager {
             NpcTemplate npcTemplate = NpcHolder.getInstance().getTemplate(spawner.getMainNpcId());
             boolean saveable = npcTemplate.isRaid || npcTemplate.isInstanceOf(SaveableMonsterInstance.class);
             int count = template.getCount();
-            if (Config.RATE_MOB_SPAWN > 0.0 && npcTemplate.isInstanceOf(MonsterInstance.class) && !saveable && npcTemplate.level >= Config.RATE_MOB_SPAWN_MIN_LEVEL && npcTemplate.level <= Config.RATE_MOB_SPAWN_MAX_LEVEL) {
+            boolean legacyMob = npcTemplate.isInstanceOf(MonsterInstance.class) && !saveable;
+            boolean tierMob = Config.isMobTierSpawnConfigApplicable(npcTemplate);
+            int lvl = npcTemplate.level;
+            if (tierMob) {
+                if (lvl >= 1 && lvl <= 45) {
+                    count = (int)Math.max(1.0, (double)count * Config.getMobSpawnMultiplierForLevel(lvl));
+                }
+            } else if (legacyMob && Config.RATE_MOB_SPAWN > 0.0 && lvl >= Config.RATE_MOB_SPAWN_MIN_LEVEL && lvl <= Config.RATE_MOB_SPAWN_MAX_LEVEL) {
                 count = (int)Math.max(1.0, (double)count * Config.RATE_MOB_SPAWN);
             }
             spawner.setAmount(count);
-            spawner.setRespawnDelay(template.getRespawn(), template.getRespawnRandom());
+            int respawn = template.getRespawn();
+            int respawnRnd = template.getRespawnRandom();
+            if (tierMob && lvl >= 1 && lvl <= 45 && template.getRespawnPattern() == null) {
+                double div = Config.getMobRespawnDivisorForLevel(npcTemplate.level);
+                if (div > 0.0 && div != 1.0) {
+                    if (respawn > 0) {
+                        respawn = Config.scaleMobRespawnDelaySeconds(respawn, div);
+                    }
+                    if (respawnRnd > 0) {
+                        respawnRnd = Config.scaleMobRespawnDelaySeconds(respawnRnd, div);
+                    }
+                }
+            }
+            spawner.setRespawnDelay(respawn, respawnRnd);
             spawner.setRespawnPattern(template.getRespawnPattern());
             spawner.setReflection(ReflectionManager.MAIN);
             spawner.setRespawnTime(0);

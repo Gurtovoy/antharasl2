@@ -47,6 +47,7 @@ import l2s.gameserver.handler.admincommands.impl.AdminRes;
 import l2s.gameserver.handler.admincommands.impl.AdminRide;
 import l2s.gameserver.handler.admincommands.impl.AdminScripts;
 import l2s.gameserver.handler.admincommands.impl.AdminServer;
+import l2s.gameserver.handler.admincommands.impl.AdminServerStages;
 import l2s.gameserver.handler.admincommands.impl.AdminShop;
 import l2s.gameserver.handler.admincommands.impl.AdminShutdown;
 import l2s.gameserver.handler.admincommands.impl.AdminSkill;
@@ -108,6 +109,7 @@ extends AbstractHolder {
         this.registerAdminCommandHandler(new AdminRes());
         this.registerAdminCommandHandler(new AdminRide());
         this.registerAdminCommandHandler(new AdminServer());
+        this.registerAdminCommandHandler(new AdminServerStages());
         this.registerAdminCommandHandler(new AdminShop());
         this.registerAdminCommandHandler(new AdminShutdown());
         this.registerAdminCommandHandler(new AdminSkill());

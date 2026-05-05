@@ -1,0 +1,91 @@
+<!-- Server stages — wide + colorful -->
+<html><body><title>Server stages</title><center>
+<br>
+<table width=800 border=0 cellpadding=12 cellspacing=0 background="L2UI_CT1.Tab_DF_bg">
+<tr><td align=center>
+	<table width=780 border=0 cellpadding=0 cellspacing=0>
+		<tr>
+			<td width=97 align=center><button value="Home" action="bypass _bbspage:index" width=97 height=25 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=97 align=center><button value="Statistics" action="bypass _cbbsstatistic_pk" width=97 height=25 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=98 align=center background="L2UI_CT1.Tab_DF_Tab_Selected"><font color=FFCC66>Stages</font></td>
+			<td width=97 align=center><button value="Shop" action="bypass _bbspage:shop" width=97 height=25 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=97 align=center><button value="Buffer" action="bypass _cbbsbuffer 0" width=97 height=25 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=97 align=center><button value="Teleport" action="bypass _cbbsteleport" width=97 height=25 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+			<td width=97 align=center><button value="Career" action="bypass _bbspage:career" width=97 height=25 back="L2UI_CT1.Tab_DF_Tab_Unselected_Over" fore="L2UI_CT1.Tab_DF_Tab_Unselected"></td>
+		</tr>
+	</table>
+	<br>
+	<table width=780 border=0 cellpadding=0 cellspacing=2 background="L2UI_CT1.Windows_DF_Drawer_Bg">
+		<tr>
+			<td height=6 colspan=3></td>
+		</tr>
+		<tr>
+			<td width=20></td>
+			<td align=center>
+				<table width=740 border=0 cellpadding=4 cellspacing=0>
+					<tr>
+						<td align=left><font color=FFCC66>◆ </font><font color=FFDD99>Stage: </font><font color=33FF99><?stage?></font><font color=FFDD99> / 4</font></td>
+						<td align=right><font color=FF6699>Overall: </font><font color=FFFF66><?total_pct?>%</font></td>
+					</tr>
+				</table>
+			</td>
+			<td width=20></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td align=center>
+				<table width=740 border=0 cellpadding=8 cellspacing=0 bgcolor=1a1025>
+					<tr><td align=center><font color=AAAAFF><?status?></font></td></tr>
+				</table>
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td align=center>
+				<table width=740 border=0 cellpadding=6 cellspacing=1 bgcolor=000000>
+					<tr bgcolor=2d1f3d>
+						<td width=260 align=center><font color=66CCFF>Goal</font></td>
+						<td width=120 align=center><font color=FFCC66>Current</font></td>
+						<td width=120 align=center><font color=FF9966>Target</font></td>
+						<td width=100 align=center><font color=99FF66>%</font></td>
+					</tr>
+					<tr bgcolor=251a30>
+						<td align=left><font color=FFD700>Player level cap</font></td>
+						<td align=center><font color=FFFFFF><?cap?></font></td>
+						<td align=center><font color=888888>—</font></td>
+						<td align=center><font color=66FFAA>—</font></td>
+					</tr>
+					<tr bgcolor=1f1530>
+						<td align=left><font color=FF88AA>PK (gain / stage)</font></td>
+						<td align=center><font color=FFFFFF><?pk_c?></font></td>
+						<td align=center><font color=CCCCFF><?pk_t?></font></td>
+						<td align=center><font color=66FFCC><?pk_p?>%</font></td>
+					</tr>
+					<tr bgcolor=251a30>
+						<td align=left><font color=88CCFF>PvP (gain / stage)</font></td>
+						<td align=center><font color=FFFFFF><?pvp_c?></font></td>
+						<td align=center><font color=CCCCFF><?pvp_t?></font></td>
+						<td align=center><font color=FFAA66><?pvp_p?>%</font></td>
+					</tr>
+					<tr bgcolor=1f1530>
+						<td align=left><font color=AAFF88>Raid bosses</font></td>
+						<td align=center><font color=FFFFFF><?raid_c?></font></td>
+						<td align=center><font color=CCCCFF><?raid_t?></font></td>
+						<td align=center><font color=FFEE66><?raid_p?>%</font></td>
+					</tr>
+					<tr bgcolor=251a30>
+						<td align=left><font color=DDAAFF>Average level</font></td>
+						<td align=center><font color=FFFFFF><?avg_c?></font></td>
+						<td align=center><font color=CCCCFF><?avg_t?></font></td>
+						<td align=center><font color=66FFFF><?avg_p?>%</font></td>
+					</tr>
+				</table>
+			</td>
+			<td></td>
+		</tr>
+		<tr><td height=8 colspan=3></td></tr>
+	</table>
+</td></tr>
+</table>
+</center></body></html>

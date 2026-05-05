@@ -690,3 +690,436 @@
 [04.05.26 22:59:15] SUCCESS admin[268461367] -> NightGrove[268463635] admin_character_list NightGrove
 [04.05.26 22:59:16] SUCCESS admin[268461367] -> NightGrove[268463635] admin_character_actions
 [04.05.26 22:59:17] SUCCESS admin[268461367] admin_teleportto NightGrove
+[05.05.26 00:49:35] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 00:49:36] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 00:49:37] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 00:49:40] SUCCESS TopDed[268461562] -> StormFlash[268464062] admin_character_list StormFlash
+[05.05.26 00:49:42] SUCCESS TopDed[268461562] -> StormFlash[268464062] admin_character_actions
+[05.05.26 00:49:42] SUCCESS TopDed[268461562] admin_teleportto StormFlash
+[05.05.26 00:49:46] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 00:49:47] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 00:49:48] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 00:49:50] SUCCESS TopDed[268461562] admin_show_characters 9
+[05.05.26 00:49:53] SUCCESS TopDed[268461562] admin_show_characters 12
+[05.05.26 00:49:56] SUCCESS TopDed[268461562] -> FrostClaw[268463319] admin_character_list FrostClaw
+[05.05.26 00:49:57] SUCCESS TopDed[268461562] -> FrostClaw[268463319] admin_character_actions
+[05.05.26 00:49:58] SUCCESS TopDed[268461562] admin_teleportto FrostClaw
+[05.05.26 01:06:22] SUCCESS TopDed[268461562] admin_loc
+[05.05.26 01:23:48] SUCCESS TopDed[268461562] -> ShadowCore[268461706] admin_admin
+[05.05.26 01:23:50] SUCCESS TopDed[268461562] -> ShadowCore[268461706] admin_char_manage
+[05.05.26 01:23:51] SUCCESS TopDed[268461562] -> ShadowCore[268461706] admin_show_characters 0
+[05.05.26 01:23:59] SUCCESS TopDed[268461562] -> ShadowCore[268461706] admin_find_character topded
+[05.05.26 01:24:02] SUCCESS TopDed[268461562] -> ShadowCore[268461706] admin_find_character TopDed
+[05.05.26 01:24:04] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_character_list TopDed
+[05.05.26 01:24:05] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_skills
+[05.05.26 01:24:06] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_give_all_skills
+[05.05.26 01:24:07] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_admin
+[05.05.26 01:24:08] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_char_manage
+[05.05.26 01:24:08] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_characters 0
+[05.05.26 01:24:12] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_find_character TopDed
+[05.05.26 01:24:14] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_character_list TopDed
+[05.05.26 01:24:15] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_skills
+[05.05.26 01:24:19] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_skill_list
+[05.05.26 01:24:20] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_html skills/Special/GM_Skills.htm
+[05.05.26 01:24:21] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_add_skill 7029 4
+[05.05.26 01:26:18] SUCCESS TopDed[268461562] -> 20525 Gray Wolf admin_spawn 20525
+[05.05.26 01:26:20] SUCCESS TopDed[268461562] -> 20525 Gray Wolf admin_spawn 20525
+[05.05.26 01:26:23] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:23] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:24] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:25] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:26] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:27] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:28] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:29] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:30] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:31] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:31] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:32] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:33] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:34] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:35] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:36] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:37] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:38] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:39] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:26:41] SUCCESS TopDed[268461562] admin_spawn 20525
+[05.05.26 01:27:01] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:02] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:04] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:05] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:06] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:07] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:08] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:10] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:11] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:12] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:14] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:15] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:17] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:19] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:27] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:28] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:35] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:35] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:37] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:39] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:42] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 01:27:43] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:06:19] SUCCESS TopDed[268461562] -> ShadowSerpent[268462669] admin_admin
+[05.05.26 02:06:21] SUCCESS TopDed[268461562] -> ShadowSerpent[268462669] admin_show_html pledgemanage.htm
+[05.05.26 02:06:25] FAIL    TopDed[268461562] -> ShadowSerpent[268462669] admin_pledge create 123
+[05.05.26 02:06:26] SUCCESS TopDed[268461562] -> ShadowSerpent[268462669] admin_admin
+[05.05.26 02:06:28] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_html pledgemanage.htm
+[05.05.26 02:06:29] FAIL    TopDed[268461562] -> TopDed[268461562] admin_pledge setlevel 6
+[05.05.26 02:06:38] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_set_level 40
+[05.05.26 02:06:39] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_admin
+[05.05.26 02:06:41] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_html setclass.htm
+[05.05.26 02:06:43] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_html classes/setclass_dwarf.htm
+[05.05.26 02:06:44] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_setclass 57
+[05.05.26 02:06:45] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_admin
+[05.05.26 02:06:46] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_html pledgemanage.htm
+[05.05.26 02:06:53] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_pledge create testAdminSide
+[05.05.26 02:06:54] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_admin
+[05.05.26 02:06:56] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_html pledgemanage.htm
+[05.05.26 02:06:58] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_pledge setlevel 6
+[05.05.26 02:06:59] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_admin
+[05.05.26 02:07:03] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_residence_list
+[05.05.26 02:07:06] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_residence 5
+[05.05.26 02:07:14] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_set_owner 5 testAdminSide
+[05.05.26 02:14:17] SUCCESS TopDed[268461562] -> NeonRidge[268467390] admin_spawn 20325
+[05.05.26 02:14:18] SUCCESS TopDed[268461562] -> NeonRidge[268467390] admin_spawn 20325
+[05.05.26 02:14:19] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:20] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:21] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:21] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:22] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:22] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:23] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:24] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:24] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:24] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:25] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:25] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:25] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:26] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:26] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:26] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:27] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:27] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:27] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:27] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:28] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:28] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:28] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:29] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:29] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:29] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:30] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:30] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:30] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:30] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:31] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:31] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:31] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:31] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:32] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:33] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:33] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:33] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:34] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:34] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:36] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:36] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:37] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:38] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:39] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:40] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:45] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:45] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:46] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:47] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:48] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:49] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:50] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:51] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:52] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:53] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:54] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:55] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:56] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:14:57] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:01] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:01] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:02] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:03] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:04] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:05] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:06] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:07] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:08] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:15:09] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:40:51] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 02:40:53] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 02:40:53] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 02:41:03] SUCCESS TopDed[268461562] admin_find_character NeonDrake
+[05.05.26 02:41:04] SUCCESS TopDed[268461562] -> NeonDrake[268467406] admin_character_list NeonDrake
+[05.05.26 02:41:05] SUCCESS TopDed[268461562] -> NeonDrake[268467406] admin_character_actions
+[05.05.26 02:41:06] SUCCESS TopDed[268461562] admin_teleportto NeonDrake
+[05.05.26 02:41:23] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:24] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:24] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:24] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:25] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:25] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:26] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:26] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:26] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:26] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:28] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:29] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:29] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:41:29] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:27] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:27] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:28] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:29] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:31] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:32] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:33] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:34] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:35] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:36] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:37] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:38] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:39] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:40] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:42] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:43] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:44] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:45] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:45] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:46] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:48] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:49] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:50] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:53] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:55] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:56] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:57] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:58] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:48:59] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:01] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:02] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:03] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:04] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:05] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:06] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:07] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:09] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:10] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:11] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:13] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:22] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:25] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:28] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:30] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:31] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:34] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:35] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:36] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 02:49:37] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:33] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:33] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:34] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:34] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:36] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:36] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:37] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:40] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:40] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:40] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:44] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:45] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:45] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:49] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:50] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:50] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:51] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:51] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:52] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:55] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:55] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:56] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:57] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:58] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:10:59] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:00] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:00] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:01] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:02] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:02] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:03] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:03] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:04] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:04] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:05] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:05] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:05] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:06] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:11:06] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:12:05] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:12:05] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:12:06] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:12:07] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:12:07] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:12:08] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:12:09] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:12:09] SUCCESS TopDed[268461562] admin_spawn 20325
+[05.05.26 03:24:07] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 03:24:08] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 03:24:10] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 03:24:14] SUCCESS TopDed[268461562] admin_find_character Void
+[05.05.26 03:24:19] SUCCESS TopDed[268461562] -> VoidMarsh[268466781] admin_character_list VoidMarsh
+[05.05.26 03:24:20] SUCCESS TopDed[268461562] -> VoidMarsh[268466781] admin_character_actions
+[05.05.26 03:24:21] SUCCESS TopDed[268461562] admin_teleportto VoidMarsh
+[05.05.26 03:25:22] SUCCESS TopDed[268461562] -> VoidMarsh[268466781] admin_debug VoidMarsh
+[05.05.26 03:52:57] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 03:52:58] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 03:52:59] SUCCESS TopDed[268461562] admin_show_html teleports/town.htm
+[05.05.26 03:53:01] SUCCESS TopDed[268461562] admin_show_html teleports/town/orc_starting.htm
+[05.05.26 03:53:02] SUCCESS TopDed[268461562] admin_move_to -44133 -113911 -244
+[05.05.26 03:53:09] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 03:53:10] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 03:53:11] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 03:53:23] SUCCESS TopDed[268461562] admin_find_character DarkStar
+[05.05.26 03:53:25] SUCCESS TopDed[268461562] -> DarkStar[268463851] admin_character_list DarkStar
+[05.05.26 03:53:26] SUCCESS TopDed[268461562] -> DarkStar[268463851] admin_character_actions
+[05.05.26 03:53:27] SUCCESS TopDed[268461562] admin_teleportto DarkStar
+[05.05.26 03:53:56] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:53:56] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:53:57] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:00] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:00] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:01] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:02] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:03] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:04] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:05] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:06] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:07] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:08] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:09] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:10] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:11] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:12] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:14] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:14] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:15] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:16] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:17] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:18] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:19] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:20] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:22] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:22] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:23] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:24] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:25] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:26] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:27] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:28] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:29] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:30] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:31] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:32] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:35] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:35] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:36] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:37] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:38] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:39] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:40] SUCCESS TopDed[268461562] admin_spawn 20535
+[05.05.26 03:54:41] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 03:54:42] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 03:54:43] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 03:54:48] SUCCESS TopDed[268461562] -> NeonField[268467338] admin_character_list NeonField
+[05.05.26 03:54:49] SUCCESS TopDed[268461562] -> NeonField[268467338] admin_character_actions
+[05.05.26 03:54:50] SUCCESS TopDed[268461562] admin_teleportto NeonField
+[05.05.26 04:35:17] SUCCESS TopDed[268461562] -> NightZone[268462450] admin_admin
+[05.05.26 04:35:18] SUCCESS TopDed[268461562] -> NightZone[268462450] admin_char_manage
+[05.05.26 04:35:19] SUCCESS TopDed[268461562] -> NightZone[268462450] admin_show_characters 0
+[05.05.26 04:35:22] SUCCESS TopDed[268461562] -> DarkZone[268463004] admin_character_list DarkZone
+[05.05.26 04:35:23] SUCCESS TopDed[268461562] -> DarkZone[268463004] admin_character_actions
+[05.05.26 04:35:24] SUCCESS TopDed[268461562] admin_teleportto DarkZone
+[05.05.26 05:23:53] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_set_level 5
+[05.05.26 05:30:50] SUCCESS TopDed[268461562] -> 20325 Goblin Raider admin_admin
+[05.05.26 05:30:51] SUCCESS TopDed[268461562] -> 20325 Goblin Raider admin_show_moves
+[05.05.26 05:30:53] SUCCESS TopDed[268461562] admin_show_html teleports/raid.htm
+[05.05.26 05:30:54] SUCCESS TopDed[268461562] admin_show_html teleports/raid/raid_20.htm
+[05.05.26 05:30:56] SUCCESS TopDed[268461562] admin_move_to -54096 84288 -3512
+[05.05.26 05:31:09] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_set_level 20
+[05.05.26 05:31:20] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_admin
+[05.05.26 05:31:21] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_moves
+[05.05.26 05:31:22] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_html teleports/raid.htm
+[05.05.26 05:31:23] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_show_html teleports/raid/raid_20.htm
+[05.05.26 05:31:26] SUCCESS TopDed[268461562] admin_move_to -3456 112864 -3456
+[05.05.26 05:31:51] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_admin
+[05.05.26 05:31:52] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_enchant
+[05.05.26 05:31:56] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_setew 127
+[05.05.26 05:32:14] SUCCESS TopDed[268461562] -> 25787 Death Knight admin_admin
+[05.05.26 05:32:15] SUCCESS TopDed[268461562] -> 25787 Death Knight admin_show_moves
+[05.05.26 05:32:16] SUCCESS TopDed[268461562] -> 25787 Death Knight admin_show_html teleports/raid.htm
+[05.05.26 05:32:17] SUCCESS TopDed[268461562] -> 25787 Death Knight admin_show_html teleports/raid/raid_40.htm
+[05.05.26 05:32:19] SUCCESS TopDed[268461562] admin_move_to 73520 66912 -3728
+[05.05.26 05:33:00] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 05:33:01] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 05:33:02] SUCCESS TopDed[268461562] admin_show_html teleports/raid.htm
+[05.05.26 05:33:04] SUCCESS TopDed[268461562] admin_show_html teleports/raid/raid_50.htm
+[05.05.26 05:33:05] SUCCESS TopDed[268461562] admin_move_to 23800 119500 -8976
+[05.05.26 05:33:14] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 05:33:16] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 05:33:17] SUCCESS TopDed[268461562] admin_show_html teleports/raid.htm
+[05.05.26 05:33:22] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 05:33:23] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 05:33:26] SUCCESS TopDed[268461562] admin_show_html teleports/raid.htm
+[05.05.26 05:33:26] SUCCESS TopDed[268461562] admin_show_html teleports/raid/raid_special.htm
+[05.05.26 05:33:28] SUCCESS TopDed[268461562] admin_move_to 17723 108915 -6493
+[05.05.26 05:34:56] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 05:34:57] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 05:34:57] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 05:35:01] SUCCESS TopDed[268461562] -> ShadowStrike[268476317] admin_character_list ShadowStrike
+[05.05.26 05:35:02] SUCCESS TopDed[268461562] -> ShadowStrike[268476317] admin_character_actions
+[05.05.26 05:35:03] SUCCESS TopDed[268461562] admin_teleportto ShadowStrike
+[05.05.26 05:35:22] SUCCESS TopDed[268461562] -> 20005 Imp Elder admin_admin
+[05.05.26 05:35:24] SUCCESS TopDed[268461562] -> 20005 Imp Elder admin_char_manage
+[05.05.26 05:35:24] SUCCESS TopDed[268461562] -> 20005 Imp Elder admin_show_characters 0
+[05.05.26 05:35:28] SUCCESS TopDed[268461562] -> IronVeil[268477743] admin_character_list IronVeil
+[05.05.26 05:35:30] SUCCESS TopDed[268461562] -> IronVeil[268477743] admin_character_actions
+[05.05.26 05:35:31] SUCCESS TopDed[268461562] admin_teleportto IronVeil
+[05.05.26 05:40:18] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 05:40:20] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 05:40:21] SUCCESS TopDed[268461562] admin_show_html teleports/town.htm
+[05.05.26 05:40:21] SUCCESS TopDed[268461562] admin_show_html teleports/town/giran.htm
+[05.05.26 05:40:22] SUCCESS TopDed[268461562] admin_move_to 82698 148638 -3473
+[05.05.26 05:40:38] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 05:40:39] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 05:40:42] SUCCESS TopDed[268461562] admin_show_html teleports/raid.htm
+[05.05.26 05:40:44] SUCCESS TopDed[268461562] admin_show_html teleports/raid/raid_40.htm
+[05.05.26 05:40:45] SUCCESS TopDed[268461562] admin_move_to 128352 138464 -3467
+[05.05.26 05:40:57] SUCCESS TopDed[268461562] -> 25415 Nakondas admin_admin
+[05.05.26 05:41:01] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_enchant
+[05.05.26 05:41:05] SUCCESS TopDed[268461562] -> TopDed[268461562] admin_setew 127
+[05.05.26 05:55:56] SUCCESS TopDed[268461562] admin_stage_reset
+[05.05.26 05:56:35] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 05:56:36] SUCCESS TopDed[268461562] admin_show_moves
+[05.05.26 05:56:37] SUCCESS TopDed[268461562] admin_show_html teleports/town.htm
+[05.05.26 05:56:39] SUCCESS TopDed[268461562] admin_show_html teleports/town/elven_starting.htm
+[05.05.26 05:56:40] SUCCESS TopDed[268461562] admin_move_to 45873 49288 -3064
+[05.05.26 05:57:27] SUCCESS TopDed[268461562] -> NightField[268473926] admin_kill
+[05.05.26 07:27:13] SUCCESS TopDed[268461562] admin_admin
+[05.05.26 07:27:14] SUCCESS TopDed[268461562] admin_char_manage
+[05.05.26 07:27:15] SUCCESS TopDed[268461562] admin_show_characters 0
+[05.05.26 07:27:23] SUCCESS TopDed[268461562] -> WildStar[268478610] admin_character_list WildStar
+[05.05.26 07:27:24] SUCCESS TopDed[268461562] -> WildStar[268478610] admin_character_actions
+[05.05.26 07:27:25] SUCCESS TopDed[268461562] admin_teleportto WildStar
