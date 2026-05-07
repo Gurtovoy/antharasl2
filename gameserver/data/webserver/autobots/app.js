@@ -3,8 +3,8 @@
    ============================================================ */
 
 const BASE_URL = window.location.origin;
-const RACES = ['Human', 'Elf', 'Dark Elf', 'Orc', 'Dwarf', 'Kamael'];
-const SEXES = ['Male', 'Female'];
+const RACES = ['Люди', 'Эльфы', 'Тёмные эльфы', 'Орки', 'Гномы', 'Камаэль'];
+const SEXES = ['Муж.', 'Жен.'];
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
 let refreshTimer = null;
@@ -104,10 +104,10 @@ async function checkConnection() {
     try {
         await api('GET', '/api/server/status');
         document.getElementById('connection-status').className = 'status-indicator online';
-        document.getElementById('conn-text').textContent = 'Connected';
+        document.getElementById('conn-text').textContent = 'Подключено';
     } catch {
         document.getElementById('connection-status').className = 'status-indicator offline';
-        document.getElementById('conn-text').textContent = 'Disconnected';
+        document.getElementById('conn-text').textContent = 'Отключено';
     }
 }
 
@@ -159,10 +159,10 @@ function h(tag, attrs, ...children) {
 }
 
 function loading() { return h('div', { className: 'loading-center' }, h('div', { className: 'spinner' })); }
-function raceName(id) { return RACES[id] || `Race ${id}`; }
-function sexName(id) { return SEXES[id] || `Sex ${id}`; }
+function raceName(id) { return RACES[id] || `Раса ${id}`; }
+function sexName(id) { return SEXES[id] || `Пол ${id}`; }
 function statusBadge(online) {
-    return h('span', { className: `badge ${online ? 'badge-online' : 'badge-offline'}` }, online ? 'Online' : 'Offline');
+    return h('span', { className: `badge ${online ? 'badge-online' : 'badge-offline'}` }, online ? 'Онлайн' : 'Оффлайн');
 }
 function pad2(n) { return String(n).padStart(2, '0'); }
 
@@ -347,7 +347,7 @@ function dashMountChartsCard(metricsPayload) {
 async function renderDashboard(view) {
     view.innerHTML = '';
     view.append(
-        h('div', { className: 'page-header' }, h('h2', null, 'Dashboard')),
+        h('div', { className: 'page-header' }, h('h2', null, 'Дашборд')),
         loading()
     );
     try {
@@ -360,33 +360,33 @@ async function renderDashboard(view) {
         view.innerHTML = '';
         // Stats
         const grid = h('div', { className: 'stats-grid' },
-            statCard('Total Bots', status.totalBots, 'accent'),
-            statCard('Bot online', status.onlineBots, 'success'),
-            statCard('Bot offline', status.offlineBots, 'danger'),
-            statCard('Players (world)', playersWorld, ''),
-            statCard('Uptime', formatUptime(upSec), '')
+            statCard('Всего ботов', status.totalBots, 'accent'),
+            statCard('Боты онлайн', status.onlineBots, 'success'),
+            statCard('Боты оффлайн', status.offlineBots, 'danger'),
+            statCard('Игроков (мир)', playersWorld, ''),
+            statCard('Аптайм', formatUptime(upSec), '')
         );
         const chartsCard = dashMountChartsCard(metrics);
         // Quick actions
         const actions = h('div', { className: 'card' },
-            h('div', { className: 'card-header' }, h('h3', null, 'Quick Actions')),
+            h('div', { className: 'card-header' }, h('h3', null, 'Быстрые действия')),
             h('div', { className: 'btn-group' },
-                quickBtn('Spawn 10 Random', () => spawnRandom(10)),
-                quickBtn('Spawn 25 Random', () => spawnRandom(25)),
-                quickBtn('Spawn 50 Random', () => spawnRandom(50)),
-                h('button', { className: 'btn btn-danger', onClick: despawnAll }, 'Despawn All')
+                quickBtn('Запустить 10 случайных', () => spawnRandom(10)),
+                quickBtn('Запустить 25 случайных', () => spawnRandom(25)),
+                quickBtn('Запустить 50 случайных', () => spawnRandom(50)),
+                h('button', { className: 'btn btn-danger', onClick: despawnAll }, 'Убрать всех')
             )
         );
         // Mini bot list
         const miniCard = h('div', { className: 'card' },
-            h('div', { className: 'card-header' }, h('h3', null, 'Recently Online Bots')),
+            h('div', { className: 'card-header' }, h('h3', null, 'Недавно онлайн')),
             loading()
         );
         const shutdownBanner = h('div', { id: 'dash-shutdown-banner', className: 'card', style: 'display:none;margin-bottom:12px;border-left:3px solid var(--warning);' },
             h('div', { style: 'padding:10px 14px;font-size:0.9rem;' }, h('span', { id: 'dash-shutdown-text' }, ''))
         );
         view.append(
-            h('div', { className: 'page-header' }, h('h2', null, 'Dashboard')),
+            h('div', { className: 'page-header' }, h('h2', null, 'Дашборд')),
             shutdownBanner,
             grid,
             chartsCard,
@@ -398,14 +398,14 @@ async function renderDashboard(view) {
             const data = await api('GET', '/api/autobots?page=1&pageSize=5');
             const bots = (data.bots || []).filter(b => b.isOnline).slice(0, 5);
             miniCard.innerHTML = '';
-            miniCard.append(h('div', { className: 'card-header' }, h('h3', null, 'Online Bots')));
+            miniCard.append(h('div', { className: 'card-header' }, h('h3', null, 'Боты онлайн')));
             if (bots.length === 0) {
-                miniCard.append(h('p', { className: 'text-muted', style: 'color:var(--text-muted);padding:8px 0;' }, 'No bots currently online.'));
+                miniCard.append(h('p', { className: 'text-muted', style: 'color:var(--text-muted);padding:8px 0;' }, 'Сейчас нет ботов онлайн.'));
             } else {
                 const tbl = h('div', { className: 'table-wrap' },
                     h('table', null,
                         h('thead', null, h('tr', null,
-                            h('th', null, 'Name'), h('th', null, 'Level'), h('th', null, 'Class'), h('th', null, 'Status')
+                            h('th', null, 'Имя'), h('th', null, 'Уровень'), h('th', null, 'Класс'), h('th', null, 'Статус')
                         )),
                         h('tbody', null, ...bots.map(b =>
                             h('tr', { style: 'cursor:pointer', onClick: () => location.hash = `#bot/${b.objId}` },
@@ -419,7 +419,7 @@ async function renderDashboard(view) {
                 );
                 miniCard.append(tbl);
             }
-        } catch { miniCard.innerHTML = '<p style="color:var(--text-muted);padding:8px;">Could not load bot list.</p>'; }
+        } catch { miniCard.innerHTML = '<p style="color:var(--text-muted);padding:8px;">Не удалось загрузить список ботов.</p>'; }
 
         async function refreshDashShutdownBanner() {
             try {
@@ -429,7 +429,7 @@ async function renderDashboard(view) {
                 if (ban && txt) {
                     if (sd.active) {
                         const modeRu = sd.mode === 'restart' ? 'Рестарт' : 'Выключение';
-                        txt.innerHTML = `<strong>${modeRu}</strong> через ${formatCountdown(sd.secondsRemaining)}. <a href="#server">Открыть вкладку Server</a>`;
+                        txt.innerHTML = `<strong>${modeRu}</strong> через ${formatCountdown(sd.secondsRemaining)}. <a href="#server">Открыть вкладку "Сервер"</a>`;
                         ban.style.display = '';
                     } else ban.style.display = 'none';
                 }
@@ -456,7 +456,7 @@ async function renderDashboard(view) {
             await refreshDashShutdownBanner();
         }, 10000);
     } catch {
-        view.innerHTML = '<p style="color:var(--text-muted);padding:40px 0;">Failed to load dashboard. Check connection.</p>';
+        view.innerHTML = '<p style="color:var(--text-muted);padding:40px 0;">Не удалось загрузить дашборд. Проверьте подключение.</p>';
     }
 }
 
@@ -468,12 +468,12 @@ function statCard(label, value, cls) {
 }
 function quickBtn(text, fn) { return h('button', { className: 'btn btn-success', onClick: fn }, text); }
 async function spawnRandom(count) {
-    try { await api('POST', '/api/autobots/spawn-random', { count }); toast(`Spawned ${count} random bots`); route(); }
+    try { await api('POST', '/api/autobots/spawn-random', { count }); toast(`Запущено ${count} случайных ботов`); route(); }
     catch {}
 }
 async function despawnAll() {
-    if (!await showConfirm('Despawn All', 'Despawn ALL online bots?')) return;
-    try { await api('POST', '/api/autobots/despawn-all'); toast('All bots despawned'); route(); }
+    if (!await showConfirm('Убрать всех', 'Убрать ВСЕХ ботов онлайн?')) return;
+    try { await api('POST', '/api/autobots/despawn-all'); toast('Все боты убраны'); route(); }
     catch {}
 }
 function formatUptime(sec) {
@@ -495,7 +495,7 @@ function formatCountdown(sec) {
 async function renderServerControl(view) {
     view.innerHTML = '';
     const header = h('div', { className: 'page-header' },
-        h('h2', null, 'Server'),
+        h('h2', null, 'Сервер'),
         h('p', { className: 'text-muted', style: 'color:var(--text-secondary);font-size:0.9rem;margin-top:6px;max-width:640px;' },
             'Запланировать выключение или рестарт игрового сервера через заданное число секунд. Игрокам уйдут стандартные объявления (если включены в конфиге). Отмена сбрасывает таймер.')
     );
@@ -686,10 +686,10 @@ async function renderBotsList(view) {
     view.innerHTML = '';
     selectedBots.clear();
     const header = h('div', { className: 'page-header' },
-        h('h2', null, 'Bot Management'),
-        h('a', { href: '#create', className: 'btn btn-primary' }, '+ Create Bot')
+        h('h2', null, 'Управление ботами'),
+        h('a', { href: '#create', className: 'btn btn-primary' }, '+ Создать бота')
     );
-    const filterInput = h('input', { type: 'text', placeholder: 'Filter by name...', value: botsFilter });
+    const filterInput = h('input', { type: 'text', placeholder: 'Фильтр по имени...', value: botsFilter });
     let debounce;
     filterInput.addEventListener('input', () => {
         clearTimeout(debounce);
@@ -701,11 +701,11 @@ async function renderBotsList(view) {
     pageSizeSel.addEventListener('change', () => { botsPageSize = +pageSizeSel.value; botsPage = 1; loadBots(); });
 
     const bulkBar = h('div', { className: 'btn-group', style: 'margin-bottom:12px;' },
-        h('button', { className: 'btn btn-sm btn-success', onClick: bulkSpawn }, 'Spawn Selected'),
-        h('button', { className: 'btn btn-sm btn-warning', onClick: bulkDespawn }, 'Despawn Selected'),
-        h('button', { className: 'btn btn-sm btn-danger', onClick: bulkDelete }, 'Delete Selected')
+        h('button', { className: 'btn btn-sm btn-success', onClick: bulkSpawn }, 'Запустить выбранных'),
+        h('button', { className: 'btn btn-sm btn-warning', onClick: bulkDespawn }, 'Убрать выбранных'),
+        h('button', { className: 'btn btn-sm btn-danger', onClick: bulkDelete }, 'Удалить выбранных')
     );
-    const toolbar = h('div', { className: 'toolbar' }, filterInput, h('span', { style: 'color:var(--text-muted);font-size:0.8rem' }, 'Page size:'), pageSizeSel);
+    const toolbar = h('div', { className: 'toolbar' }, filterInput, h('span', { style: 'color:var(--text-muted);font-size:0.8rem' }, 'Размер страницы:'), pageSizeSel);
     const tableWrap = h('div', null, loading());
     const paginationEl = h('div', { className: 'pagination' });
     view.append(header, toolbar, bulkBar, tableWrap, paginationEl);
@@ -743,28 +743,28 @@ async function renderBotsList(view) {
                                 e.stopPropagation();
                                 try {
                                     await api('POST', `/api/autobots/${b.objId}/${b.isOnline ? 'despawn' : 'spawn'}`);
-                                    toast(b.isOnline ? `${b.name} despawned` : `${b.name} spawned`);
+                                    toast(b.isOnline ? `${b.name}: убран` : `${b.name}: запущен`);
                                     loadBots();
                                 } catch {}
-                            }}, b.isOnline ? 'Despawn' : 'Spawn'),
+                            }}, b.isOnline ? 'Убрать' : 'Запустить'),
                             h('button', { className: 'btn btn-sm btn-danger', onClick: async (e) => {
                                 e.stopPropagation();
-                                if (!await showConfirm('Delete Bot', `Delete "${b.name}" permanently?`)) return;
-                                try { await api('DELETE', `/api/autobots/${b.objId}`); toast(`${b.name} deleted`); loadBots(); } catch {}
-                            }}, 'Del')
+                                if (!await showConfirm('Удаление бота', `Удалить "${b.name}" навсегда?`)) return;
+                                try { await api('DELETE', `/api/autobots/${b.objId}`); toast(`${b.name}: удален`); loadBots(); } catch {}
+                            }}, 'Удалить')
                         )
                     )
                 );
             }));
             if (bots.length === 0) {
-                tableWrap.append(h('p', { style: 'color:var(--text-muted);padding:20px;text-align:center;' }, 'No bots found.'));
+                tableWrap.append(h('p', { style: 'color:var(--text-muted);padding:20px;text-align:center;' }, 'Боты не найдены.'));
             } else {
                 tableWrap.append(h('div', { className: 'table-wrap' },
                     h('table', null,
                         h('thead', null, h('tr', null,
                             h('th', null, selAll),
-                            h('th', null, 'Name'), h('th', null, 'Lvl'), h('th', null, 'Class'),
-                            h('th', null, 'Race'), h('th', null, 'Status'), h('th', null, 'Position'), h('th', null, 'Actions')
+                            h('th', null, 'Имя'), h('th', null, 'Ур.'), h('th', null, 'Класс'),
+                            h('th', null, 'Раса'), h('th', null, 'Статус'), h('th', null, 'Позиция'), h('th', null, 'Действия')
                         )),
                         tbody
                     )
@@ -773,31 +773,31 @@ async function renderBotsList(view) {
             // Pagination
             paginationEl.innerHTML = '';
             if (pages > 1) {
-                const prevBtn = h('button', { className: 'btn btn-sm btn-secondary', disabled: botsPage <= 1, onClick: () => { botsPage--; loadBots(); } }, '\u25C0 Prev');
-                const nextBtn = h('button', { className: 'btn btn-sm btn-secondary', disabled: botsPage >= pages, onClick: () => { botsPage++; loadBots(); } }, 'Next \u25B6');
-                paginationEl.append(prevBtn, h('span', null, `Page ${botsPage} of ${pages} (${total} bots)`), nextBtn);
+                const prevBtn = h('button', { className: 'btn btn-sm btn-secondary', disabled: botsPage <= 1, onClick: () => { botsPage--; loadBots(); } }, '\u25C0 Назад');
+                const nextBtn = h('button', { className: 'btn btn-sm btn-secondary', disabled: botsPage >= pages, onClick: () => { botsPage++; loadBots(); } }, 'Вперёд \u25B6');
+                paginationEl.append(prevBtn, h('span', null, `Страница ${botsPage} из ${pages} (${total} ботов)`), nextBtn);
             } else {
-                paginationEl.append(h('span', null, `${total} bot${total !== 1 ? 's' : ''}`));
+                paginationEl.append(h('span', null, `${total} ботов`));
             }
-        } catch { tableWrap.innerHTML = '<p style="color:var(--text-muted);padding:20px;">Failed to load bots.</p>'; }
+        } catch { tableWrap.innerHTML = '<p style="color:var(--text-muted);padding:20px;">Не удалось загрузить ботов.</p>'; }
     }
     loadBots();
 
     async function bulkSpawn() {
-        if (!selectedBots.size) return toast('No bots selected', 'error');
+        if (!selectedBots.size) return toast('Боты не выбраны', 'error');
         for (const id of selectedBots) { try { await api('POST', `/api/autobots/${id}/spawn`); } catch {} }
-        toast(`Spawned ${selectedBots.size} bots`); loadBots();
+        toast(`Запущено ${selectedBots.size} ботов`); loadBots();
     }
     async function bulkDespawn() {
-        if (!selectedBots.size) return toast('No bots selected', 'error');
+        if (!selectedBots.size) return toast('Боты не выбраны', 'error');
         for (const id of selectedBots) { try { await api('POST', `/api/autobots/${id}/despawn`); } catch {} }
-        toast(`Despawned ${selectedBots.size} bots`); loadBots();
+        toast(`Убрано ${selectedBots.size} ботов`); loadBots();
     }
     async function bulkDelete() {
-        if (!selectedBots.size) return toast('No bots selected', 'error');
-        if (!await showConfirm('Bulk Delete', `Delete ${selectedBots.size} bots permanently?`)) return;
+        if (!selectedBots.size) return toast('Боты не выбраны', 'error');
+        if (!await showConfirm('Массовое удаление', `Удалить ${selectedBots.size} ботов навсегда?`)) return;
         for (const id of selectedBots) { try { await api('DELETE', `/api/autobots/${id}`); } catch {} }
-        toast(`Deleted ${selectedBots.size} bots`); selectedBots.clear(); loadBots();
+        toast(`Удалено ${selectedBots.size} ботов`); selectedBots.clear(); loadBots();
     }
 }
 
@@ -1448,7 +1448,7 @@ async function renderTrade(view) {
 async function renderStarterPack(view) {
     view.innerHTML = '';
     view.append(
-        h('div', { className: 'page-header' }, h('h2', null, '\u2694 Starter Pack')),
+        h('div', { className: 'page-header' }, h('h2', null, '\u2694 Старт-пак')),
         loading()
     );
 
@@ -1467,6 +1467,10 @@ async function renderStarterPack(view) {
         type: 'number', value: '50', min: '1', max: String(statusData.maxBots || 250),
         style: 'width:140px;'
     });
+    const typeSel = h('select', { style: 'width:220px;' },
+        h('option', { value: 'starter_pack' }, 'Боты старт-пака'),
+        h('option', { value: 'quest_human_fighter' }, 'Квестовые Human Fighter')
+    );
 
     const startSpinner = h('span', { className: 'spinner', style: 'width:14px;height:14px;display:none;margin-right:6px;' });
     const startBtn = h('button', {
@@ -1474,40 +1478,45 @@ async function renderStarterPack(view) {
         disabled: hasActiveBots || undefined,
         onClick: async () => {
             const count = +countInp.value;
-            if (!count || count < 1) return toast('Enter a valid count', 'error');
+            if (!count || count < 1) return toast('Введите корректное количество', 'error');
+            const type = typeSel.value || 'starter_pack';
             startBtn.disabled = true;
             startSpinner.style.display = '';
             try {
-                await api('POST', '/api/starterpack/start', { count });
-                toast(`Spawning ${count} starter bots...`);
+                await api('POST', '/api/starterpack/start', { count, type });
+                toast(`Запуск ${count} ботов (${type})...`);
                 refreshStatus();
             } catch {}
             startSpinner.style.display = 'none';
             startBtn.disabled = false;
         }
-    }, startSpinner, '\u25B6 Start Spawning');
+    }, startSpinner, '\u25B6 Запустить');
 
     const stopBtn = h('button', {
         className: 'btn btn-danger',
         disabled: !hasActiveBots || undefined,
         onClick: async () => {
-            if (!await showConfirm('Stop All', 'Stop and despawn all starter pack bots?')) return;
+            if (!await showConfirm('Остановить всех', 'Остановить и убрать всех ботов старт-пака?')) return;
             stopBtn.disabled = true;
             try {
                 await api('POST', '/api/starterpack/stop');
-                toast('All starter bots stopped');
+                toast('Все боты старт-пака остановлены');
                 refreshStatus();
             } catch {}
             stopBtn.disabled = false;
         }
-    }, '\u23F9 Stop All');
+    }, '\u23F9 Остановить всех');
 
     const controlsCard = h('div', { className: 'card' },
-        h('div', { className: 'card-header' }, h('h3', null, 'Spawn Controls')),
+        h('div', { className: 'card-header' }, h('h3', null, 'Управление спавном')),
         h('div', { className: 'sp-controls' },
             h('div', { className: 'form-group', style: 'margin-bottom:0;' },
-                h('label', null, 'Spawn Count'),
+                h('label', null, 'Количество'),
                 countInp
+            ),
+            h('div', { className: 'form-group', style: 'margin-bottom:0;' },
+                h('label', null, 'Тип'),
+                typeSel
             ),
             h('div', { className: 'btn-group', style: 'align-items:flex-end;' }, startBtn, stopBtn)
         )
@@ -1522,10 +1531,10 @@ async function renderStarterPack(view) {
         );
     };
 
-    const cardTotal = makeSpCard('\u2694', statusData.total, 'Total', 'sp-accent');
-    const cardFarming = makeSpCard('\uD83D\uDDE1', statusData.farming, 'Farming', 'sp-orange');
-    const cardWalking = makeSpCard('\uD83D\uDEB6', statusData.walking, 'Walking to Town', 'sp-blue');
-    const cardTown = makeSpCard('\uD83C\uDFE0', statusData.inTown, 'In Town', 'sp-green');
+    const cardTotal = makeSpCard('\u2694', statusData.total, 'Всего', 'sp-accent');
+    const cardFarming = makeSpCard('\uD83D\uDDE1', statusData.farming, 'Фарм', 'sp-orange');
+    const cardWalking = makeSpCard('\uD83D\uDEB6', statusData.walking, 'Идут в город', 'sp-blue');
+    const cardTown = makeSpCard('\uD83C\uDFE0', statusData.inTown, 'В городе', 'sp-green');
 
     const statusGrid = h('div', { className: 'sp-status-grid' },
         cardTotal, cardFarming, cardWalking, cardTown
@@ -1537,7 +1546,7 @@ async function renderStarterPack(view) {
     const progressLabel = h('span', { className: 'sp-progress-label' }, `${progressPct}%`);
     const progressBar = h('div', { className: 'sp-progress-wrap' },
         h('div', { className: 'sp-progress-header' },
-            h('span', null, 'Progress (In Town / Total)'),
+            h('span', null, 'Прогресс (в городе / всего)'),
             progressLabel
         ),
         h('div', { className: 'sp-progress-bar' }, progressFill)
@@ -1559,7 +1568,7 @@ async function renderStarterPack(view) {
     const makeBreakdownList = (title, obj) => {
         const entries = Object.entries(obj || {});
         if (!entries.length) {
-            return h('div', { style: 'font-size:.9rem;color:var(--text-muted);' }, `${title}: no data`);
+            return h('div', { style: 'font-size:.9rem;color:var(--text-muted);' }, `${title}: нет данных`);
         }
         return h('div', { style: 'margin-top:10px;' },
             h('div', { style: 'font-size:.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;' }, title),
@@ -1579,10 +1588,10 @@ async function renderStarterPack(view) {
     const makeStageDetails = (obj) => {
         const entries = Object.entries(obj || {});
         if (!entries.length) {
-            return h('div', { style: 'font-size:.9rem;color:var(--text-muted);margin-top:10px;' }, 'Stage details: no data');
+            return h('div', { style: 'font-size:.9rem;color:var(--text-muted);margin-top:10px;' }, 'Детали стадий: нет данных');
         }
         return h('div', { style: 'margin-top:10px;' },
-            h('div', { style: 'font-size:.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;' }, 'Stage Details (From XML)'),
+            h('div', { style: 'font-size:.78rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;' }, 'Детали стадий (из XML)'),
             h('div', { style: 'display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:8px;' },
                 ...entries
                     .sort((a, b) => String(a[0]).localeCompare(String(b[0])))
@@ -1609,25 +1618,28 @@ async function renderStarterPack(view) {
     };
 
     const breakdownWrap = h('div', { style: 'margin-top:10px;' },
-        makeBreakdownList('By Race', statusData.byRace),
-        makeBreakdownList('By Stage', statusData.byFarmStage),
-        makeBreakdownList('By Race + Stage', statusData.byRaceAndStage),
+        makeBreakdownList('По режиму', statusData.byMode),
+        makeBreakdownList('По расе', statusData.byRace),
+        makeBreakdownList('По стадии', statusData.byFarmStage),
+        makeBreakdownList('По расе + стадии', statusData.byRaceAndStage),
+        makeBreakdownList('Квест: по стадии', statusData.byQuestStage),
+        makeBreakdownList('Квест: по стадии + состоянию', statusData.byQuestStageAndState),
         makeStageDetails(statusData.byRaceAndStageDetails)
     );
 
     // ── Info line ──
     const infoLine = h('div', { className: 'sp-info-line' },
-        h('span', null, `Max bots: ${statusData.maxBots}`),
+        h('span', null, `Макс. ботов: ${statusData.maxBots}`),
         h('span', null,
-            `System: ${statusData.enabled ? 'Enabled' : 'Disabled'} `,
+            `Система: ${statusData.enabled ? 'Включена' : 'Выключена'} `,
             h('span', { className: statusData.enabled ? 'sp-enabled' : 'sp-disabled' }, statusData.enabled ? '\u2713' : '\u2717')
         )
     );
 
     const statusCard = h('div', { className: 'card' },
         h('div', { className: 'card-header' },
-            h('h3', null, 'Status'),
-            h('span', { style: 'font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;' }, 'Auto-refresh 5s')
+            h('h3', null, 'Статус'),
+            h('span', { style: 'font-size:0.72rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;' }, 'Автообновление 5с')
         ),
         statusGrid,
         progressBar,
@@ -1636,7 +1648,7 @@ async function renderStarterPack(view) {
     );
 
     view.append(
-        h('div', { className: 'page-header' }, h('h2', null, '\u2694 Starter Pack')),
+        h('div', { className: 'page-header' }, h('h2', null, '\u2694 Старт-пак')),
         controlsCard,
         statusCard
     );
@@ -1659,18 +1671,21 @@ async function renderStarterPack(view) {
             // Update info
             infoLine.innerHTML = '';
             infoLine.append(
-                h('span', null, `Max bots: ${s.maxBots}`),
+                h('span', null, `Макс. ботов: ${s.maxBots}`),
                 h('span', null,
-                    `System: ${s.enabled ? 'Enabled' : 'Disabled'} `,
+                    `Система: ${s.enabled ? 'Включена' : 'Выключена'} `,
                     h('span', { className: s.enabled ? 'sp-enabled' : 'sp-disabled' }, s.enabled ? '\u2713' : '\u2717')
                 )
             );
 
             breakdownWrap.innerHTML = '';
             breakdownWrap.append(
-                makeBreakdownList('By Race', s.byRace),
-                makeBreakdownList('By Stage', s.byFarmStage),
-                makeBreakdownList('By Race + Stage', s.byRaceAndStage),
+                makeBreakdownList('По режиму', s.byMode),
+                makeBreakdownList('По расе', s.byRace),
+                makeBreakdownList('По стадии', s.byFarmStage),
+                makeBreakdownList('По расе + стадии', s.byRaceAndStage),
+                makeBreakdownList('Квест: по стадии', s.byQuestStage),
+                makeBreakdownList('Квест: по стадии + состоянию', s.byQuestStageAndState),
                 makeStageDetails(s.byRaceAndStageDetails)
             );
 
@@ -1691,38 +1706,38 @@ async function renderStarterPack(view) {
 
 function renderSettings(view) {
     view.innerHTML = '';
-    const keyInp = h('input', { type: 'password', value: getApiKey(), placeholder: 'API Key' });
+    const keyInp = h('input', { type: 'password', value: getApiKey(), placeholder: 'API-ключ' });
     const saveBtn = h('button', { className: 'btn btn-primary', onClick: () => {
         const key = keyInp.value.trim();
-        if (!key) return toast('Key cannot be empty', 'error');
+        if (!key) return toast('Ключ не может быть пустым', 'error');
         localStorage.setItem('l2_api_key', key);
-        toast('API key updated');
+        toast('API-ключ обновлён');
         checkConnection();
-    }}, 'Save Key');
+    }}, 'Сохранить ключ');
     const clearBtn = h('button', { className: 'btn btn-danger', onClick: async () => {
-        if (!await showConfirm('Clear Data', 'Remove API key from local storage?')) return;
+        if (!await showConfirm('Очистка данных', 'Удалить API-ключ из local storage?')) return;
         localStorage.removeItem('l2_api_key');
-        toast('API key cleared');
+        toast('API-ключ удалён');
         keyInp.value = '';
         checkConnection();
-    }}, 'Clear Key');
+    }}, 'Очистить ключ');
 
     view.append(
-        h('div', { className: 'page-header' }, h('h2', null, 'Settings')),
+        h('div', { className: 'page-header' }, h('h2', null, 'Настройки')),
         h('div', { className: 'card settings-section' },
-            h('div', { className: 'card-header' }, h('h3', null, 'API Configuration')),
-            h('div', { className: 'form-group' }, h('label', null, 'API Key'), keyInp),
+            h('div', { className: 'card-header' }, h('h3', null, 'Настройка API')),
+            h('div', { className: 'form-group' }, h('label', null, 'API-ключ'), keyInp),
             h('div', { className: 'btn-group' }, saveBtn, clearBtn)
         ),
         h('div', { className: 'card settings-section', style: 'margin-top:16px;' },
-            h('div', { className: 'card-header' }, h('h3', null, 'Connection Test')),
+            h('div', { className: 'card-header' }, h('h3', null, 'Проверка подключения')),
             h('button', { className: 'btn btn-secondary', onClick: async () => {
                 try {
                     const s = await api('GET', '/api/server/status');
                     const up = s.uptimeSeconds != null ? s.uptimeSeconds : Math.floor((s.serverUptime || 0) / 1000);
-                    toast(`Connected! ${s.onlineBots} bots online, uptime ${formatUptime(up)}`);
-                } catch { toast('Connection failed', 'error'); }
-            }}, 'Test Connection')
+                    toast(`Подключено! Ботов онлайн: ${s.onlineBots}, аптайм ${formatUptime(up)}`);
+                } catch { toast('Ошибка подключения', 'error'); }
+            }}, 'Проверить подключение')
         )
     );
 }

@@ -120,8 +120,8 @@ extends L2GameClientPacket {
             activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOU_CANNOT_SEND_A_MAIL_TO_YOURSELF);
             return;
         }
-        if (this._count > 0 && !activeChar.isInPeaceZone()) {
-            activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOU_CANNOT_FORWARD_IN_A_NONPEACE_ZONE_LOCATION);
+        if (activeChar.isInJail()) {
+            activeChar.sendMessage("You cannot send mail while in jail.");
             return;
         }
         if (activeChar.isFishing()) {

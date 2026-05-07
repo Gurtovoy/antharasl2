@@ -1,0 +1,2 @@
+ALTER TABLE `items_to_delete`
+	MODIFY COLUMN `item_id` INT UNSIGNED NOT NULL;

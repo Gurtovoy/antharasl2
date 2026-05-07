@@ -105,7 +105,7 @@ public class InstantClanHallManagerInstance extends MerchantInstance
 				SkillEntry skillEntry = SkillEntry.makeSkillEntry(SkillEntryType.NONE, SkillUtils.getSkillIdFromPTSHash((int) reply), SkillUtils.getSkillLevelFromPTSHash((int) reply));
 				if(skillEntry == null)
 				{
-					_log.warn("Cannot use skill ID[" + skillEntry.getId() + "] LEVEL[" + skillEntry.getLevel() + "]!");
+					_log.warn("Cannot build buff skill entry for hash [{}].", reply);
 					return;
 				}
 
@@ -141,7 +141,7 @@ public class InstantClanHallManagerInstance extends MerchantInstance
 					if(skillEntry != null)
 						altUseSkill(skillEntry, player);
 					else
-						_log.warn("Cannot use skill ID[" + skillEntry.getId() + "] LEVEL[" + skillEntry.getLevel() + "]!");
+						_log.warn("Cannot use skill ID[{}] LEVEL[1]!", TELEPORT_SKILL_ID);
 					getAI().addTask(giran_tel_time, player, 1500);
 				}
 				else
@@ -155,7 +155,7 @@ public class InstantClanHallManagerInstance extends MerchantInstance
 					if(skillEntry != null)
 						altUseSkill(skillEntry, player);
 					else
-						_log.warn("Cannot use skill ID[" + skillEntry.getId() + "] LEVEL[" + skillEntry.getLevel() + "]!");
+						_log.warn("Cannot use skill ID[{}] LEVEL[1]!", TELEPORT_SKILL_ID);
 					getAI().addTask(aden_tel_time, player, 1500);
 				}
 				else

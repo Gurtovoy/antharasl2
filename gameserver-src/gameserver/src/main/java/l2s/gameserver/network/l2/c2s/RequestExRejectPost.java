@@ -43,8 +43,8 @@ extends L2GameClientPacket {
             activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOU_CANNOT_CANCEL_DURING_AN_ITEM_ENHANCEMENT_OR_ATTRIBUTE_ENHANCEMENT);
             return;
         }
-        if (!activeChar.isInPeaceZone()) {
-            activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOU_CANNOT_CANCEL_IN_A_NONPEACE_ZONE_LOCATION);
+        if (activeChar.isInJail()) {
+            activeChar.sendMessage("You cannot manage mail while in jail.");
             return;
         }
         if (activeChar.isFishing()) {

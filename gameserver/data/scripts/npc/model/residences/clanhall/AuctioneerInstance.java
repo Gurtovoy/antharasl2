@@ -786,7 +786,7 @@ public class AuctioneerInstance extends NpcInstance
 					msg.replace("<?Ehour?>", String.valueOf(eA.getEndAuctionDate().get(Calendar.HOUR_OF_DAY)));
 					msg.replace("<?Emin?>", String.valueOf(eA.getEndAuctionDate().get(Calendar.MINUTE)));
 
-					double chance = rA.getMaxCount() / Math.max(rA.getMaxCount(), eA.getParticipantsCount());
+					double chance = getInstantClanHallChance(rA.getMaxCount(), eA.getParticipantsCount());
 					int parcent = (int) chance;
 					int floatPercent = (int) ((parcent - chance) * 100);
 					if((floatPercent % 10) == 0)
@@ -794,7 +794,7 @@ public class AuctioneerInstance extends NpcInstance
 					msg.replace("<?int_percent_A?>", String.valueOf(parcent));
 					msg.replace("<?int_float_A?>", String.valueOf(floatPercent));
 
-					chance = rB.getMaxCount() / Math.max(rB.getMaxCount(), eB.getParticipantsCount());
+					chance = getInstantClanHallChance(rB.getMaxCount(), eB.getParticipantsCount());
 					parcent = (int) chance;
 					floatPercent = (int) ((parcent - chance) * 100);
 					if((floatPercent % 10) == 0)
@@ -802,7 +802,7 @@ public class AuctioneerInstance extends NpcInstance
 					msg.replace("<?int_percent_B?>", String.valueOf(parcent));
 					msg.replace("<?int_float_B?>", String.valueOf(floatPercent));
 
-					chance = rC.getMaxCount() / Math.max(rC.getMaxCount(), eC.getParticipantsCount());
+					chance = getInstantClanHallChance(rC.getMaxCount(), eC.getParticipantsCount());
 					parcent = (int) chance;
 					floatPercent = (int) ((parcent - chance) * 100);
 					if((floatPercent % 10) == 0)
@@ -875,6 +875,22 @@ public class AuctioneerInstance extends NpcInstance
 		return true;
 	}
 
+	private double getInstantClanHallChance(int maxCount, int participantsCount)
+	{
+		return (double) maxCount / Math.max(maxCount, participantsCount);
+	}
+
+	private boolean hasActiveInstantClanHallBid(Clan clan)
+	{
+		for(InstantClanHall instantClanHall : ResidenceHolder.getInstance().getResidenceList(InstantClanHall.class))
+		{
+			InstantClanHallAuctionEvent siegeEvent = instantClanHall.getSiegeEvent();
+			if(siegeEvent != null && siegeEvent.isInProgress() && siegeEvent.getSiegeClan(SiegeEvent.ATTACKERS, clan) != null)
+				return true;
+		}
+		return false;
+	}
+
 	private String getMapDialog()
 	{
 		//"gludio", "gludin", "dion", "giran", "adena", "rune", "goddard", "schuttgart"
@@ -899,7 +915,7 @@ public class AuctioneerInstance extends NpcInstance
 			return;
 		}
 
-		if(clan.getHasHideout() != 0 || clanHall.getSiegeEvent().getSiegeClan(SiegeEvent.ATTACKERS, clan) != null)
+		if(clan.getHasHideout() != 0 || hasActiveInstantClanHallBid(clan))
 		{
 			// Вы уже внесли ставку за наградной холл.
 			player.sendPacket(SystemMsg.YOU_ALREADY_MADE_A_BID_FOR_THE_PROVISIONAL_CLAN_HALL);

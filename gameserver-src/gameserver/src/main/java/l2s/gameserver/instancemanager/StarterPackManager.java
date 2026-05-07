@@ -239,7 +239,36 @@ public class StarterPackManager
 		_log.info("StarterPackManager: Scheduling spawn of " + maxNew + " starter bots.");
 	}
 
+	public void spawnHumanFighterQuestBots(int count)
+	{
+		if(!Config.STARTER_PACK_ENABLED)
+			return;
+
+		cleanStarterPackDB();
+		int maxNew = Math.min(count, Config.STARTER_PACK_MAX_BOTS);
+		for(int i = 0; i < maxNew; i++)
+		{
+			final int delay = i * 500;
+			ThreadPoolManager.getInstance().schedule(() -> {
+				try
+				{
+					spawnSingleBot(0, StarterBotState.Mode.QUEST_HUMAN_FIGHTER);
+				}
+				catch(Exception e)
+				{
+					_log.error("StarterPackManager: Error spawning quest bot: " + e.getMessage(), e);
+				}
+			}, delay);
+		}
+		_log.info("StarterPackManager: Scheduling spawn of " + maxNew + " human fighter quest bots.");
+	}
+
 	private void spawnSingleBot(int classId)
+	{
+		spawnSingleBot(classId, StarterBotState.Mode.STARTER_PACK);
+	}
+
+	private void spawnSingleBot(int classId, StarterBotState.Mode mode)
 	{
 		String name = getNextAvailableName();
 		if(name == null)
@@ -346,6 +375,7 @@ public class StarterPackManager
 			state.setClassId(classId);
 			state.setSex(sex);
 			state.setCurrentState(StarterBotState.State.FARMING);
+			state.setMode(mode);
 			state.setSpawnTime(System.currentTimeMillis());
 			state.setTownLocation(randomTownLoc);
 

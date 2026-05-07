@@ -13,6 +13,7 @@ import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExBuySellListPacket;
+import l2s.gameserver.network.l2.s2c.SystemMessagePacket;
 import l2s.gameserver.utils.Log;
 import l2s.gameserver.utils.NpcUtils;
 import org.apache.commons.lang3.ArrayUtils;
@@ -120,6 +121,9 @@ extends L2GameClientPacket {
         }
         tax = (long)((double)totalPrice * taxRate);
         activeChar.addAdena(totalPrice -= tax);
+        if (totalPrice > 0L) {
+            activeChar.sendPacket(new SystemMessagePacket(SystemMsg.YOU_HAVE_EARNED_S1_ADENA).addLong(totalPrice));
+        }
         if (castle != null && tax > 0L && castle.getOwnerId() > 0 && activeChar.getReflection().isMain()) {
             castle.addToTreasury(tax, true);
         }

@@ -404,6 +404,11 @@ public class SquashAI extends DefaultAI
 		if(actor == null || actor != target)
 			return;
 
+		// On some cores nectar already triggers onEvtAttacked by itself.
+		// Forwarding it from onEvtSeeSpell causes double growth processing.
+		if(skill != null && skill.getId() == s_gourd_nectar)
+			return;
+
 		onEvtAttacked(caster, skill, 0);
 	}
 

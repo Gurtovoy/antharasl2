@@ -51,6 +51,9 @@ public class StarterPackApiHandler extends ApiHandler
 		Map<String, Integer> stageCounts = new LinkedHashMap<>();
 		Map<String, Integer> raceStageCounts = new LinkedHashMap<>();
 		Map<String, Integer> raceStateCounts = new LinkedHashMap<>();
+		Map<String, Integer> modeCounts = new LinkedHashMap<>();
+		Map<String, Integer> questStageCounts = new LinkedHashMap<>();
+		Map<String, Integer> questStageStateCounts = new LinkedHashMap<>();
 		Map<String, Object> raceStageDetails = new LinkedHashMap<>();
 
 		for(StarterBotState state : mgr.getActiveBots().values())
@@ -61,12 +64,23 @@ public class StarterPackApiHandler extends ApiHandler
 
 			String stageKey = toStageKey(state.getFarmStage());
 			String stateKey = state.getCurrentState().toString().toLowerCase();
+			String modeKey = state.getMode() != null ? state.getMode().toString().toLowerCase() : "unknown";
 
 			inc(raceCounts, raceKey);
 			inc(stageCounts, stageKey);
 			inc(raceStageCounts, raceKey + ":" + stageKey);
 			inc(raceStateCounts, raceKey + ":" + stateKey);
+			inc(modeCounts, modeKey);
 			raceStageDetails.put(raceKey + ":" + stageKey, buildStageDetails(raceKey, state.getFarmStage()));
+
+			if(state.getMode() == StarterBotState.Mode.QUEST_HUMAN_FIGHTER)
+			{
+				String questStageKey = state.getQuestStageKey();
+				if(questStageKey == null || questStageKey.isEmpty())
+					questStageKey = "unknown";
+				inc(questStageCounts, questStageKey);
+				inc(questStageStateCounts, questStageKey + ":" + stateKey);
+			}
 		}
 
 		Map<String, Object> response = new LinkedHashMap<>();
@@ -79,6 +93,9 @@ public class StarterPackApiHandler extends ApiHandler
 		response.put("byRaceAndStage", raceStageCounts);
 		response.put("byRaceAndStageDetails", raceStageDetails);
 		response.put("byRaceAndState", raceStateCounts);
+		response.put("byMode", modeCounts);
+		response.put("byQuestStage", questStageCounts);
+		response.put("byQuestStageAndState", questStageStateCounts);
 		response.put("maxBots", Config.STARTER_PACK_MAX_BOTS);
 		response.put("enabled", Config.STARTER_PACK_ENABLED);
 
@@ -161,6 +178,7 @@ public class StarterPackApiHandler extends ApiHandler
 
 		Map<?, ?> body = parseJson(exchange, Map.class);
 		int count = 50; // default
+		String type = "starter_pack";
 		if(body != null && body.containsKey("count"))
 		{
 			Object val = body.get("count");
@@ -168,6 +186,12 @@ public class StarterPackApiHandler extends ApiHandler
 			{
 				count = ((Number) val).intValue();
 			}
+		}
+		if(body != null && body.containsKey("type"))
+		{
+			Object val = body.get("type");
+			if(val != null)
+				type = String.valueOf(val);
 		}
 
 		if(count <= 0)
@@ -179,11 +203,18 @@ public class StarterPackApiHandler extends ApiHandler
 			return;
 		}
 
-		StarterPackManager.getInstance().spawnStarterBots(count);
+		if("quest_human_fighter".equalsIgnoreCase(type))
+		{
+			StarterPackManager.getInstance().spawnHumanFighterQuestBots(count);
+		}
+		else
+		{
+			StarterPackManager.getInstance().spawnStarterBots(count);
+		}
 
 		Map<String, Object> resp = new LinkedHashMap<>();
 		resp.put("success", true);
-		resp.put("message", "Spawning " + count + " starter bots");
+		resp.put("message", "Spawning " + count + " bots, type=" + type);
 		sendJson(exchange, 200, resp);
 	}
 

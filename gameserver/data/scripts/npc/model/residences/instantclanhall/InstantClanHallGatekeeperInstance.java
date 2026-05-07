@@ -62,7 +62,7 @@ public class InstantClanHallGatekeeperInstance extends NpcInstance
 					if(skillEntry != null)
 						altUseSkill(skillEntry, player);
 					else
-						_log.warn("Cannot use skill ID[" + skillEntry.getId() + "] LEVEL[" + skillEntry.getLevel() + "]!");
+						_log.warn("Cannot use skill ID[{}] LEVEL[1]!", TELEPORT_SKILL_ID);
 				}
 				else
 					showChatWindow(player, "residence2/instant_clanhall/AgitJanitorHi_02.htm", false);

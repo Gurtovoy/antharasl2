@@ -1,9 +1,11 @@
 package l2s.gameserver.ai;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -41,21 +43,54 @@ public class StarterPackAI extends PlayerAI implements Runnable
 
 	private static final int THINK_INTERVAL = 1000;
 	private static final int THINK_INTERVAL_WALKING = 250;
+	private static final int THINK_INTERVAL_QUEST = 250;
 	private static final int FARM_RADIUS = 800;
 	private static final int FARM_HEIGHT = 200;
+	private static final int SOULSHOT_NOVICE = 5789;
+	private static final long MIN_SOULSHOT_STOCK = 500L;
 	private static final int BASE_MAX_MOB_LEVEL = 5;
 	private static final int WAYPOINT_JITTER_XY = 42;
 	private static final int RANDOM_WALK_RADIUS = 300;
 	private static final int TOWN_ARRIVAL_DIST = 100;
 	private static final int WAYPOINT_ARRIVAL_DIST = 150;
+	private static final int ROUTE_LATERAL_JITTER = 70;
 	private static final int TOWN_IDLE_WALK_RADIUS = 200;
 	private static final long REVIVE_DELAY = 5000L;
 	private static final long STUCK_TIMEOUT = 30000L;
 	private static final long TOWN_IDLE_MIN = 30000L;
 	private static final long TOWN_IDLE_MAX = 60000L;
-	private static final int MAX_BOTS_PER_TARGET = 4;
+	private static final int MIN_BOTS_PER_TARGET_SOFT = 2;
+	private static final int MAX_BOTS_PER_TARGET_SOFT = 5;
+	private static final int MAX_BOTS_PER_TARGET_HARD = 6;
+	private static final int QUEST_FARM_RADIUS = 4000;
+	private static final int QUEST_FARM_HEIGHT = 500;
 
 	private static final ConcurrentHashMap<Integer, AtomicInteger> _targetCounts = new ConcurrentHashMap<>();
+	private static final int[][] ROUTE_TO_NEWBIE_GUIDE = {
+		{-71508, 258180, -3135}, {-71663, 258003, -3128}, {-72176, 257387, -3141}, {-72459, 257065, -3141},
+		{-72830, 256611, -3141}, {-73389, 256123, -3152}, {-73840, 255604, -3179}, {-74197, 255080, -3249},
+		{-75076, 254068, -3355}, {-75236, 253905, -3357}, {-75748, 253180, -3357}, {-76539, 252287, -3352},
+		{-76900, 251791, -3353}, {-77362, 251347, -3383}, {-77699, 250882, -3445}, {-78443, 250062, -3599},
+		{-78892, 249412, -3599}, {-79422, 248925, -3599}, {-80193, 247847, -3671}, {-81034, 247160, -3680},
+		{-81600, 246167, -3722}, {-82346, 245139, -3745}, {-82824, 244462, -3755}, {-83663, 243685, -3755},
+		{-84025, 243292, -3755}
+	};
+	private static final int[][] ROUTE_TO_ALTRAN = {
+		{-84364, 243282, -3755}, {-84621, 242952, -3755}, {-84856, 242667, -3755}, {-85016, 242668, -3755}
+	};
+	private static final int[][] ROUTE_TO_WOLVES = {
+		{-85375, 242031, -3755}, {-85878, 241436, -3755}, {-86410, 240930, -3750}, {-87266, 241152, -3653},
+		{-88003, 241588, -3632}, {-88662, 241639, -3602}, {-89089, 241795, -3608}
+	};
+	private static final int[][] ROUTE_TO_ORCS = {
+		{-90518, 241355, -3557}, {-91684, 241203, -3504}, {-92600, 240824, -3449}, {-92963, 240154, -3442},
+		{-93470, 239777, -3441}
+	};
+	private static final int[][] ROUTE_TO_WEREWOLVES_ORCS = {
+		{-94754, 241265, -3370}, {-94577, 242169, -3571}, {-94772, 243316, -3571}, {-94574, 244809, -3643},
+		{-94810, 245463, -3599}, {-95004, 246176, -3656}, {-94979, 246879, -3684}, {-95151, 247258, -3655},
+		{-95535, 247888, -3686}, {-95708, 248401, -3644}, {-96092, 248537, -3612}
+	};
 
 	private final StarterBotState _botState;
 	private final int _targetLevel;
@@ -90,6 +125,33 @@ public class StarterPackAI extends PlayerAI implements Runnable
 	private int _currentTargetId = 0;
 	private boolean _level10LoadoutApplied = false;
 	private long _lastRebuffUse = 0L;
+	private QuestHumanFighterStage _questStage = QuestHumanFighterStage.START_TUTORIAL;
+	private long _questNextActionTime = 0L;
+	private int _questRecoveryRouteStep = 0;
+	private int[][] _questRouteRef = null;
+	private int _questRouteIndex = 0;
+	private int _targetCrowdTolerance = Rnd.get(MIN_BOTS_PER_TARGET_SOFT, MAX_BOTS_PER_TARGET_SOFT);
+	private long _nextTargetCrowdRetuneAt = 0L;
+	private int _lastAutoLearnLevel = 0;
+
+	private enum QuestHumanFighterStage
+	{
+		START_TUTORIAL,
+		FARM_GEMSTONE,
+		TUTORIAL_MASTER_AND_LEVEL3,
+		TO_NEWBIE_GUIDE,
+		START_TOMBS,
+		TO_ALTRAN,
+		FARM_WOLVES,
+		TO_ORCS,
+		FARM_ORCS,
+		TO_WEREWOLVES_ORCS,
+		FARM_WEREWOLVES_ORCS,
+		GRIND_TO_10,
+		USE_SOE_AND_REST,
+		TO_ALTRAN_FINAL,
+		FINISH_QUEST
+	}
 
 	public StarterPackAI(Player player, StarterBotState botState, int targetLevel, Location spawnLoc, Location townLoc)
 	{
@@ -99,6 +161,8 @@ public class StarterPackAI extends PlayerAI implements Runnable
 		_farmCenter = spawnLoc.clone();
 		_townLoc = townLoc;
 		_townPath = StarterPackTownPaths.getPathForClass(_botState.getClassId());
+		if(isQuestHumanFighterMode())
+			updateQuestStage(QuestHumanFighterStage.START_TUTORIAL);
 	}
 
 	// =============================================
@@ -197,6 +261,15 @@ public class StarterPackAI extends PlayerAI implements Runnable
 		Player player = getActor();
 		if(player == null)
 			return;
+		ensureAutoLearnSkills(player);
+		ensureWarriorSoulshots(player);
+
+		if(isQuestHumanFighterMode())
+		{
+			ensureThinkInterval(THINK_INTERVAL_QUEST);
+			thinkQuestHumanFighter(player);
+			return;
+		}
 
 		ensureLevel10Loadout(player);
 
@@ -276,9 +349,7 @@ public class StarterPackAI extends PlayerAI implements Runnable
 
 		if(target != null)
 		{
-			// Claim the new target
 			_currentTargetId = target.getObjectId();
-			_targetCounts.computeIfAbsent(_currentTargetId, k -> new AtomicInteger(0)).incrementAndGet();
 
 			player.setTarget(target);
 
@@ -322,6 +393,7 @@ public class StarterPackAI extends PlayerAI implements Runnable
 				}
 				else
 				{
+					useItemNow(player, SOULSHOT_NOVICE);
 					Attack(target, true, false);
 				}
 			}
@@ -335,36 +407,59 @@ public class StarterPackAI extends PlayerAI implements Runnable
 
 	private NpcInstance findNearestMonster(Player player)
 	{
+		retuneTargetCrowdTolerance();
 		List<NpcInstance> npcs = player.getAroundNpc(_farmRadius, _farmHeight);
-		NpcInstance closest = null;
-		int closestDist = Integer.MAX_VALUE;
+		Set<Integer> triedTargetIds = new HashSet<Integer>();
 
-		for(NpcInstance npc : npcs)
+		while(true)
 		{
-			if(!npc.isMonster())
-				continue;
-			if(npc.isDead() || npc.isAlikeDead())
-				continue;
-			if(npc.getLevel() > _maxMobLevel)
-				continue;
-			if(npc.isInvisible(player))
-				continue;
-			// Skip monsters already targeted by too many bots
-			AtomicInteger cnt = _targetCounts.get(npc.getObjectId());
-			if(cnt != null && cnt.get() >= MAX_BOTS_PER_TARGET)
-				continue;
-			if(!GeoEngine.canMoveToCoord(player.getX(), player.getY(), player.getZ(),
-				npc.getX(), npc.getY(), npc.getZ(), player.getGeoIndex()))
-				continue;
+			NpcInstance closest = null;
+			int closestDist = Integer.MAX_VALUE;
 
-			int dist = player.getDistance(npc);
-			if(dist < closestDist)
+			for(NpcInstance npc : npcs)
 			{
-				closestDist = dist;
-				closest = npc;
+				if(!npc.isMonster())
+					continue;
+				if(npc.isDead() || npc.isAlikeDead())
+					continue;
+				if(npc.getLevel() > _maxMobLevel)
+					continue;
+				if(npc.isInvisible(player))
+					continue;
+				if(triedTargetIds.contains(npc.getObjectId()))
+					continue;
+				AtomicInteger cnt = _targetCounts.get(npc.getObjectId());
+				if(cnt != null && cnt.get() >= _targetCrowdTolerance)
+					continue;
+				if(!GeoEngine.canMoveToCoord(player.getX(), player.getY(), player.getZ(),
+					npc.getX(), npc.getY(), npc.getZ(), player.getGeoIndex()))
+					continue;
+
+				int dist = player.getDistance(npc);
+				if(dist < closestDist)
+				{
+					closestDist = dist;
+					closest = npc;
+				}
 			}
+
+			if(closest == null)
+				return null;
+
+			if(tryClaimTarget(closest.getObjectId(), _targetCrowdTolerance))
+				return closest;
+
+			triedTargetIds.add(closest.getObjectId());
 		}
-		return closest;
+	}
+
+	private void retuneTargetCrowdTolerance()
+	{
+		long now = System.currentTimeMillis();
+		if(now < _nextTargetCrowdRetuneAt)
+			return;
+		_targetCrowdTolerance = Rnd.get(MIN_BOTS_PER_TARGET_SOFT, MAX_BOTS_PER_TARGET_SOFT);
+		_nextTargetCrowdRetuneAt = now + Rnd.get(15000, 45000);
 	}
 
 	// =============================================
@@ -403,6 +498,11 @@ public class StarterPackAI extends PlayerAI implements Runnable
 				_moveRetryCount = 0;
 				_nextTownWalkTime = System.currentTimeMillis() + Rnd.get((int) TOWN_IDLE_MIN, (int) TOWN_IDLE_MAX);
 				teleBot(player, getTownDestination());
+				if(isQuestHumanFighterMode())
+				{
+					_questRecoveryRouteStep = resolveQuestRecoveryStep(_questStage);
+					questDelay(3000);
+				}
 			}
 			catch(Exception e)
 			{
@@ -412,6 +512,27 @@ public class StarterPackAI extends PlayerAI implements Runnable
 			{
 				_deathTime = 0L;
 			}
+		}
+	}
+
+	private int resolveQuestRecoveryStep(QuestHumanFighterStage stage)
+	{
+		switch(stage)
+		{
+			case FARM_WOLVES:
+			case TO_ORCS:
+				return 1;
+			case FARM_ORCS:
+			case TO_WEREWOLVES_ORCS:
+				return 2;
+			case FARM_WEREWOLVES_ORCS:
+			case GRIND_TO_10:
+			case USE_SOE_AND_REST:
+			case TO_ALTRAN_FINAL:
+			case FINISH_QUEST:
+				return 3;
+			default:
+				return 0;
 		}
 	}
 
@@ -516,7 +637,8 @@ public class StarterPackAI extends PlayerAI implements Runnable
 		// Move toward town if not already moving
 		if(!player.getMovement().isMoving() && !player.isMovementDisabled())
 		{
-			if(!player.getMovement().moveToLocation(destination, 0, true))
+			Location moveTarget = withLateralJitter(player, destination, ROUTE_LATERAL_JITTER);
+			if(!player.getMovement().moveToLocation(moveTarget, 0, true))
 			{
 				_moveRetryCount++;
 				if(_moveRetryCount < MAX_MOVE_RETRIES)
@@ -639,6 +761,20 @@ public class StarterPackAI extends PlayerAI implements Runnable
 		if(count != null && count.decrementAndGet() <= 0)
 		{
 			_targetCounts.remove(objectId);
+		}
+	}
+
+	private static boolean tryClaimTarget(int objectId, int softLimit)
+	{
+		AtomicInteger count = _targetCounts.computeIfAbsent(objectId, k -> new AtomicInteger(0));
+		while(true)
+		{
+			int current = count.get();
+			int effectiveSoft = Math.max(1, Math.min(softLimit, MAX_BOTS_PER_TARGET_HARD));
+			if(current >= effectiveSoft || current >= MAX_BOTS_PER_TARGET_HARD)
+				return false;
+			if(count.compareAndSet(current, current + 1))
+				return true;
 		}
 	}
 
@@ -791,6 +927,392 @@ public class StarterPackAI extends PlayerAI implements Runnable
 		if(classId >= 0 && classId < ClassId.VALUES.length && ClassId.VALUES[classId] != null)
 			return ClassId.VALUES[classId].getRace();
 		return Race.HUMAN;
+	}
+
+	private boolean isQuestHumanFighterMode()
+	{
+		return _botState.getMode() == StarterBotState.Mode.QUEST_HUMAN_FIGHTER && _botState.getClassId() == 0;
+	}
+
+	private void thinkQuestHumanFighter(Player player)
+	{
+		if(player.isDead())
+		{
+			handleDeath(player);
+			return;
+		}
+		if(System.currentTimeMillis() < _questNextActionTime)
+			return;
+		if(ensureQuestRecoveryRoute(player))
+			return;
+
+		switch(_questStage)
+		{
+			case START_TUTORIAL:
+				if(talkToNpc(player, 30009, null) && talkToNpc(player, 30009, null))
+					updateQuestStage(QuestHumanFighterStage.FARM_GEMSTONE);
+				break;
+			case FARM_GEMSTONE:
+				if(player.getInventory().getCountOf(6353) > 0)
+					updateQuestStage(QuestHumanFighterStage.TUTORIAL_MASTER_AND_LEVEL3);
+				else
+					questFarmInRadius(player, new int[] {18342});
+				break;
+			case TUTORIAL_MASTER_AND_LEVEL3:
+				if(player.getInventory().getCountOf(1067) <= 0)
+				{
+					if(talkToNpc(player, 30009, null))
+						questDelay(800);
+				}
+				else if(talkToNpc(player, 30008, "QuestEvent 999 30008-3.htm"))
+					updateQuestStage(QuestHumanFighterStage.TO_NEWBIE_GUIDE);
+				break;
+			case TO_NEWBIE_GUIDE:
+				if(player.getLevel() < 3)
+				{
+					questFarmInRadius(player, new int[] {18342});
+					break;
+				}
+				if(walkRoute(player, ROUTE_TO_NEWBIE_GUIDE))
+					updateQuestStage(QuestHumanFighterStage.START_TOMBS);
+				break;
+			case START_TOMBS:
+				if(talkToNpc(player, 30598, "QuestEvent 11001 GID2.htm"))
+					updateQuestStage(QuestHumanFighterStage.TO_ALTRAN);
+				break;
+			case TO_ALTRAN:
+				if(walkRoute(player, ROUTE_TO_ALTRAN) && talkToNpc(player, 30283, "QuestEvent 11001 alt2.htm"))
+					updateQuestStage(QuestHumanFighterStage.FARM_WOLVES);
+				break;
+			case FARM_WOLVES:
+				_questRecoveryRouteStep = 1;
+				if(player.getInventory().getCountOf(90200) >= 10)
+					updateQuestStage(QuestHumanFighterStage.TO_ORCS);
+				else
+					questFarmInRadius(player, new int[] {20120});
+				break;
+			case TO_ORCS:
+				_questRecoveryRouteStep = 1;
+				if(walkRoute(player, ROUTE_TO_ORCS))
+					updateQuestStage(QuestHumanFighterStage.FARM_ORCS);
+				break;
+			case FARM_ORCS:
+				_questRecoveryRouteStep = 2;
+				if(player.getInventory().getCountOf(90201) >= 10)
+					updateQuestStage(QuestHumanFighterStage.TO_WEREWOLVES_ORCS);
+				else
+					questFarmInRadius(player, new int[] {20130, 20131});
+				break;
+			case TO_WEREWOLVES_ORCS:
+				_questRecoveryRouteStep = 2;
+				if(walkRoute(player, ROUTE_TO_WEREWOLVES_ORCS))
+					updateQuestStage(QuestHumanFighterStage.FARM_WEREWOLVES_ORCS);
+				break;
+			case FARM_WEREWOLVES_ORCS:
+				_questRecoveryRouteStep = 3;
+				if(player.getInventory().getCountOf(90202) >= 10 && player.getInventory().getCountOf(90203) >= 10)
+					updateQuestStage(QuestHumanFighterStage.GRIND_TO_10);
+				else
+					questFarmInRadius(player, new int[] {20132, 20093});
+				break;
+			case GRIND_TO_10:
+				_questRecoveryRouteStep = 3;
+				if(player.getLevel() >= 10)
+				{
+					useItemNow(player, 10650);
+					questDelay(120000);
+					updateQuestStage(QuestHumanFighterStage.USE_SOE_AND_REST);
+				}
+				else
+					questFarmInRadius(player, new int[] {20132, 20093});
+				break;
+			case USE_SOE_AND_REST:
+				if(player.getDistance(new Location(-84008, 243272, -3728)) > 3000)
+					teleBot(player, new Location(-84008, 243272, -3728));
+				updateQuestStage(QuestHumanFighterStage.TO_ALTRAN_FINAL);
+				break;
+			case TO_ALTRAN_FINAL:
+				if(walkRoute(player, ROUTE_TO_ALTRAN))
+					updateQuestStage(QuestHumanFighterStage.FINISH_QUEST);
+				break;
+			case FINISH_QUEST:
+				if(talkToNpc(player, 30283, "QuestEvent 11001 alt6.htm"))
+				{
+					ensureItemCount(player, 49403, 1);
+					ItemInstance sw = player.getInventory().getItemByItemId(49403);
+					if(sw != null && !sw.isEquipped())
+						player.getInventory().equipItem(sw);
+					ensureLevel10Loadout(player);
+					questDelay(10000);
+				}
+				break;
+		}
+	}
+
+	private void updateQuestStage(QuestHumanFighterStage nextStage)
+	{
+		_questStage = nextStage;
+		String key = nextStage != null ? nextStage.name().toLowerCase() : "";
+		_botState.setQuestStageKey(key);
+	}
+
+	private boolean ensureQuestRecoveryRoute(Player player)
+	{
+		if(_questRecoveryRouteStep <= 0)
+			return false;
+		if(player.getLevel() < 3)
+			return false;
+		if(player.getDistance(new Location(-84008, 243272, -3728)) > 3500 && _questRecoveryRouteStep == 0)
+			return false;
+		// Recover only to the current required segment.
+		// Using >= (cascading checks) can pull bots backwards to previous route chains.
+		if(_questRecoveryRouteStep == 1 && !isNearRouteEnd(player, ROUTE_TO_WOLVES))
+		{
+			walkRoute(player, ROUTE_TO_WOLVES);
+			return true;
+		}
+		if(_questRecoveryRouteStep == 2 && !isNearRouteEnd(player, ROUTE_TO_ORCS))
+		{
+			walkRoute(player, ROUTE_TO_ORCS);
+			return true;
+		}
+		if(_questRecoveryRouteStep == 3 && !isNearRouteEnd(player, ROUTE_TO_WEREWOLVES_ORCS))
+		{
+			walkRoute(player, ROUTE_TO_WEREWOLVES_ORCS);
+			return true;
+		}
+		return false;
+	}
+
+	private boolean isNearRouteEnd(Player player, int[][] route)
+	{
+		if(route == null || route.length == 0)
+			return true;
+		int[] end = route[route.length - 1];
+		return player.getDistance(new Location(end[0], end[1], end[2])) <= 500;
+	}
+
+	private boolean talkToNpc(Player player, int npcId, String bypass)
+	{
+		NpcInstance npc = findClosestNpc(player, npcId, 2500);
+		if(npc == null)
+			return false;
+		if(player.getDistance(npc) > 160)
+		{
+			player.getMovement().moveToLocation(Location.findAroundPosition(npc, 40, 100), 0, true);
+			return false;
+		}
+		player.setTarget(npc);
+		npc.onAction(player, false);
+		if(bypass != null)
+			npc.onBypassFeedback(player, bypass);
+		questDelay(1500);
+		return true;
+	}
+
+	private NpcInstance findClosestNpc(Player player, int npcId, int radius)
+	{
+		NpcInstance found = null;
+		for(NpcInstance n : player.getAroundNpc(radius, 400))
+		{
+			if(n.getNpcId() != npcId)
+				continue;
+			if(found == null || player.getDistance(n) < player.getDistance(found))
+				found = n;
+		}
+		return found;
+	}
+
+	private boolean walkRoute(Player player, int[][] route)
+	{
+		if(route == null || route.length == 0)
+			return true;
+		Location end = new Location(route[route.length - 1][0], route[route.length - 1][1], route[route.length - 1][2]);
+		if(player.getDistance(end) <= 220)
+		{
+			_questRouteRef = null;
+			_questRouteIndex = 0;
+			return true;
+		}
+		if(player.isMovementDisabled())
+			return false;
+
+		if(_questRouteRef != route)
+		{
+			_questRouteRef = route;
+			int nearest = 0;
+			int nearestDist = Integer.MAX_VALUE;
+			for(int i = 0; i < route.length; i++)
+			{
+				Location p = new Location(route[i][0], route[i][1], route[i][2]);
+				int d = player.getDistance(p);
+				if(d < nearestDist)
+				{
+					nearestDist = d;
+					nearest = i;
+				}
+			}
+			_questRouteIndex = Math.min(route.length - 1, nearest + 1);
+		}
+
+		while(_questRouteIndex < route.length)
+		{
+			Location p = new Location(route[_questRouteIndex][0], route[_questRouteIndex][1], route[_questRouteIndex][2]);
+			if(player.getDistance(p) > WAYPOINT_ARRIVAL_DIST)
+				break;
+			_questRouteIndex++;
+		}
+
+		if(_questRouteIndex >= route.length)
+			return player.getDistance(end) <= 220;
+
+		if(player.getMovement().isMoving())
+			return false;
+
+		Location nextWp = new Location(route[_questRouteIndex][0], route[_questRouteIndex][1], route[_questRouteIndex][2]);
+		player.getMovement().moveToLocation(withLateralJitter(player, nextWp, ROUTE_LATERAL_JITTER), 0, true);
+		return false;
+	}
+
+	private Location withLateralJitter(Player player, Location destination, int maxJitter)
+	{
+		if(maxJitter <= 0 || player == null || destination == null)
+			return destination;
+
+		long dx = destination.x - player.getX();
+		long dy = destination.y - player.getY();
+		double len = Math.sqrt(dx * dx + dy * dy);
+		if(len < 220.0)
+			return destination; // near target: avoid overshoot and zig-zag
+
+		double nx = -dy / len;
+		double ny = dx / len;
+		int lateral = Rnd.get(-maxJitter, maxJitter);
+		int tx = destination.x + (int) Math.round(nx * lateral);
+		int ty = destination.y + (int) Math.round(ny * lateral);
+		int tz = GeoEngine.getLowerHeight(tx, ty, destination.z, player.getGeoIndex());
+
+		if(GeoEngine.canMoveToCoord(player.getX(), player.getY(), player.getZ(), tx, ty, tz, player.getGeoIndex()))
+			return new Location(tx, ty, tz);
+		return destination;
+	}
+
+	private void questFarmInRadius(Player player, int[] preferredNpcIds)
+	{
+		if(player.getMovement().isMoving() || player.isMovementDisabled())
+			return;
+		NpcInstance target = findPreferredMonster(player, preferredNpcIds);
+		if(target != null)
+		{
+			player.setTarget(target);
+			if(player.getDistance(target) > player.getPhysicalAttackRange() + 50)
+				player.getMovement().moveToLocation(Location.findAroundPosition(target, 30, 80), 0, true);
+			else
+			{
+				useItemNow(player, SOULSHOT_NOVICE);
+				Attack(target, true, false);
+			}
+			return;
+		}
+		// Keep roaming around the intended farm area when mobs are scarce,
+		// instead of drifting away from the route/farm zone over time.
+		randomWalkNear(player, getQuestFarmCenter(player), QUEST_FARM_RADIUS / 2);
+	}
+
+	private Location getQuestFarmCenter(Player player)
+	{
+		switch(_questStage)
+		{
+			case FARM_WOLVES:
+				return routeEnd(ROUTE_TO_WOLVES);
+			case FARM_ORCS:
+				return routeEnd(ROUTE_TO_ORCS);
+			case FARM_WEREWOLVES_ORCS:
+			case GRIND_TO_10:
+				return routeEnd(ROUTE_TO_WEREWOLVES_ORCS);
+			default:
+				return player.getLoc();
+		}
+	}
+
+	private static Location routeEnd(int[][] route)
+	{
+		if(route == null || route.length == 0)
+			return new Location(0, 0, 0);
+		int[] end = route[route.length - 1];
+		return new Location(end[0], end[1], end[2]);
+	}
+
+	private NpcInstance findPreferredMonster(Player player, int[] preferredNpcIds)
+	{
+		List<NpcInstance> npcs = player.getAroundNpc(QUEST_FARM_RADIUS, QUEST_FARM_HEIGHT);
+		NpcInstance chosen = null;
+		int bestPriority = Integer.MAX_VALUE;
+		int bestDist = Integer.MAX_VALUE;
+		for(NpcInstance npc : npcs)
+		{
+			if(!npc.isMonster() || npc.isDead() || npc.isAlikeDead() || npc.isInvisible(player))
+				continue;
+			int pri = 1000;
+			for(int i = 0; i < preferredNpcIds.length; i++)
+			{
+				if(npc.getNpcId() == preferredNpcIds[i])
+				{
+					pri = i;
+					break;
+				}
+			}
+			boolean aggroMe = npc.getAI().getAttackTarget() == player || npc.getAI().getCastTarget() == player;
+			if(aggroMe)
+				pri = -1;
+			int d = player.getDistance(npc);
+			if(pri < bestPriority || (pri == bestPriority && d < bestDist))
+			{
+				chosen = npc;
+				bestPriority = pri;
+				bestDist = d;
+			}
+		}
+		return chosen;
+	}
+
+	private void useItemNow(Player player, int itemId)
+	{
+		ItemInstance item = player.getInventory().getItemByItemId(itemId);
+		if(item != null)
+			player.useItem(item, false, false);
+	}
+
+	private void ensureWarriorSoulshots(Player player)
+	{
+		if(player.isMageClass())
+			return;
+		long count = player.getInventory().getCountOf(SOULSHOT_NOVICE);
+		if(count < MIN_SOULSHOT_STOCK)
+			player.getInventory().addItem(SOULSHOT_NOVICE, MIN_SOULSHOT_STOCK - count);
+	}
+
+	private void ensureAutoLearnSkills(Player player)
+	{
+		int level = player.getLevel();
+		if(level <= _lastAutoLearnLevel)
+			return;
+
+		try
+		{
+			// Bots should always keep class skills up-to-date by level.
+			player.rewardSkills(false, true, true, false);
+			_lastAutoLearnLevel = level;
+		}
+		catch(Exception e)
+		{
+			_log.warn("StarterPackAI: failed to auto-learn skills for {} at level {}", player.getName(), level, e);
+		}
+	}
+
+	private void questDelay(long ms)
+	{
+		_questNextActionTime = System.currentTimeMillis() + ms;
 	}
 
 	private boolean hasAnyPositiveBuff(Player player)

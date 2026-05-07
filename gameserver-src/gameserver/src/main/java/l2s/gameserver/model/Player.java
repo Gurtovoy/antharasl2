@@ -6474,29 +6474,39 @@ implements PlayerGroup {
     }
 
     public double getRateItems() {
-        double rate = Config.RATE_DROP_ITEMS_BY_LVL[this.getLevel()];
-        rate *= this.isInParty() ? this._party.getRateDrop(this) : this.getPremiumAccount().getDropRate();
-        rate *= this.getVIP().getTemplate().getDropRate();
-        return rate *= 1.0 + this.getStat().calc(Stats.DROP_RATE_MULTIPLIER, 0.0, null, null);
+        double baseRate = Config.RATE_DROP_ITEMS_BY_LVL[this.getLevel()];
+        double premiumRate = this.isInParty() ? this._party.getRateDrop(this) : this.getPremiumAccount().getDropRate();
+        double vipRate = this.getVIP().getTemplate().getDropRate();
+        double statBonus = this.getStat().calc(Stats.DROP_RATE_MULTIPLIER, 0.0, null, null);
+        double totalBonus = premiumRate - 1.0 + (vipRate - 1.0) + statBonus;
+        return Math.max(0.0, baseRate * (1.0 + totalBonus));
     }
 
     public double getRateExp() {
-        double baseRate;
-        double rate = baseRate = Config.RATE_XP_BY_LVL[this.getLevel()] * (this.isInParty() ? this._party.getRateExp(this) : this.getPremiumAccount().getExpRate()) * this.getVIP().getTemplate().getExpRate();
-        return rate += baseRate * this.getStat().calc(Stats.EXP_RATE_MULTIPLIER, 0.0, null, null);
+        double baseRate = Config.RATE_XP_BY_LVL[this.getLevel()];
+        double premiumRate = this.isInParty() ? this._party.getRateExp(this) : this.getPremiumAccount().getExpRate();
+        double vipRate = this.getVIP().getTemplate().getExpRate();
+        double statBonus = this.getStat().calc(Stats.EXP_RATE_MULTIPLIER, 0.0, null, null);
+        double totalBonus = premiumRate - 1.0 + (vipRate - 1.0) + statBonus;
+        return Math.max(0.0, baseRate * (1.0 + totalBonus));
     }
 
     public double getRateSp() {
-        double baseRate;
-        double rate = baseRate = Config.RATE_SP_BY_LVL[this.getLevel()] * (this.isInParty() ? this._party.getRateSp(this) : this.getPremiumAccount().getSpRate()) * this.getVIP().getTemplate().getSpRate();
-        return rate += baseRate * this.getStat().calc(Stats.SP_RATE_MULTIPLIER, 0.0, null, null);
+        double baseRate = Config.RATE_SP_BY_LVL[this.getLevel()];
+        double premiumRate = this.isInParty() ? this._party.getRateSp(this) : this.getPremiumAccount().getSpRate();
+        double vipRate = this.getVIP().getTemplate().getSpRate();
+        double statBonus = this.getStat().calc(Stats.SP_RATE_MULTIPLIER, 0.0, null, null);
+        double totalBonus = premiumRate - 1.0 + (vipRate - 1.0) + statBonus;
+        return Math.max(0.0, baseRate * (1.0 + totalBonus));
     }
 
     public double getRateSpoil() {
-        double rate = Config.RATE_DROP_SPOIL_BY_LVL[this.getLevel()];
-        rate *= this.isInParty() ? this._party.getRateSpoil(this) : this.getPremiumAccount().getSpoilRate();
-        rate *= this.getVIP().getTemplate().getSpoilRate();
-        return rate *= 1.0 + this.getStat().calc(Stats.SPOIL_RATE_MULTIPLIER, 0.0, null, null);
+        double baseRate = Config.RATE_DROP_SPOIL_BY_LVL[this.getLevel()];
+        double premiumRate = this.isInParty() ? this._party.getRateSpoil(this) : this.getPremiumAccount().getSpoilRate();
+        double vipRate = this.getVIP().getTemplate().getSpoilRate();
+        double statBonus = this.getStat().calc(Stats.SPOIL_RATE_MULTIPLIER, 0.0, null, null);
+        double totalBonus = premiumRate - 1.0 + (vipRate - 1.0) + statBonus;
+        return Math.max(0.0, baseRate * (1.0 + totalBonus));
     }
 
     public double getRateQuestsDrop() {

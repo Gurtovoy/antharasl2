@@ -86,8 +86,8 @@ extends L2GameClientPacket {
                                 if (mail == null) break block30;
                                 activeChar.getInventory().writeLock();
                                 attachments = mail.getAttachments();
-                                if (attachments.size() <= 0 || activeChar.isInPeaceZone()) break block25;
-                                activeChar.sendPacket((IBroadcastPacket)SystemMsg.YOU_CANNOT_RECEIVE_IN_A_NONPEACE_ZONE_LOCATION);
+                                if (attachments.size() <= 0 || !activeChar.isInJail()) break block25;
+                                activeChar.sendMessage("You cannot receive mail while in jail.");
                                 activeChar.getInventory().writeUnlock();
                                 return;
                             }

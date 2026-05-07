@@ -412,6 +412,7 @@ l2s\gameserver\skills\skillclasses\Restoration.class
 l2s\gameserver\templates\InstantZoneEntryType$3.class
 l2s\gameserver\data\string\NpcStringHolder.class
 l2s\gameserver\network\l2\c2s\RequestPackageSend.class
+l2s\gameserver\ai\StarterPackAI$QuestHumanFighterStage.class
 l2s\gameserver\data\xml\parser\SynthesisDataParser.class
 l2s\gameserver\network\l2\c2s\RequestBookMarkSlotInfo.class
 l2s\gameserver\listener\actor\OnActorAct.class
@@ -876,6 +877,7 @@ l2s\gameserver\model\quest\QuestRepeatType.class
 l2s\gameserver\network\l2\s2c\SetupGaugePacket$Colors.class
 l2s\gameserver\idfactory\BitSetIDFactory.class
 l2s\gameserver\network\l2\s2c\ExTutorialList.class
+l2s\gameserver\model\autobot\StarterBotState$Mode.class
 l2s\gameserver\skills\effects\instant\i_get_exp.class
 l2s\gameserver\stats\StatFunctions$FuncMpRegenMul.class
 l2s\gameserver\model\actor\instances\player\Mount$FeedTask.class
@@ -2390,6 +2392,7 @@ l2s\gameserver\instancemanager\clansearch\ClanSearchTask.class
 l2s\gameserver\skills\SkillTrait$17.class
 l2s\gameserver\network\l2\s2c\ExDuelUpdateUserInfo.class
 l2s\gameserver\handler\admincommands\impl\AdminGeodata.class
+l2s\gameserver\utils\MovementRecorder.class
 l2s\gameserver\model\actor\flags\PlayerFlags.class
 l2s\gameserver\model\entity\events\impl\DuelEvent.class
 l2s\gameserver\model\Servitor$BroadcastCharInfoTask.class
