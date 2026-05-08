@@ -34,11 +34,12 @@ set "CM_TARGET=%~dp0commons\target"
 echo ============================================================
 echo  Сборка всех модулей (Java 25, multi-module)
 echo  Модули: commons, gameserver, authserver
+echo  Деплой: gameserver-src\Lib\... и ..\gameserver|authserver\lib
 echo ============================================================
 echo.
 
 :: Запуск полной сборки всех модулей
-echo [1/5] Запуск Maven сборки...
+echo [1/6] Запуск Maven сборки...
 echo.
 call "%MVN%" package -DskipTests -f "%~dp0pom.xml"
 
@@ -53,7 +54,7 @@ if %ERRORLEVEL% neq 0 (
 )
 
 echo.
-echo [2/5] Сборка успешна. Ищем JAR-ы для деплоя...
+echo [2/6] Сборка успешна. Ищем JAR-ы для деплоя...
 echo.
 
 :: --- Поиск gameserver JAR ---
@@ -109,7 +110,7 @@ echo   commons:    %CM_JAR%
 echo.
 
 :: Создаём директории деплоя если не существуют
-echo [3/5] Деплой основных JAR-ов...
+echo [3/6] Деплой основных JAR-ов в Lib\...
 if not exist "%GS_LIB%" mkdir "%GS_LIB%"
 if not exist "%AS_LIB%" mkdir "%AS_LIB%"
 
@@ -143,7 +144,7 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 
-echo [4/5] Копирование runtime-зависимостей в Lib, excludeGroupIds=l2s (commons.jar уже скопирован).
+echo [4/6] Копирование runtime-зависимостей в Lib, excludeGroupIds=l2s (commons.jar уже скопирован).
 echo.
 
 :: Удаляем устаревшие артефакты стека Log4j 1.x / DBCP (если остались от старых сборок)
@@ -170,7 +171,26 @@ if %ERRORLEVEL% neq 0 (
 echo   Примечание: артефакты со scope system в pom (ecj, trove, napile, …) Maven не копирует — при первой установке положите их в Lib вручную, если их ещё нет.
 
 echo.
-echo [5/5] Результаты деплоя (основные JAR-ы):
+echo [5/6] Синхронизация всех *.jar из Lib в каталоги рантайма ..\gameserver\lib и ..\authserver\lib ...
+if not exist "%~dp0..\gameserver\lib" mkdir "%~dp0..\gameserver\lib"
+if not exist "%~dp0..\authserver\lib" mkdir "%~dp0..\authserver\lib"
+robocopy "%GS_LIB%" "%~dp0..\gameserver\lib" *.jar /NFL /NDL /NJH /NJS /NC /NS
+set "RC=!ERRORLEVEL!"
+if !RC! GEQ 8 (
+    echo [ОШИБКА] robocopy gameserver lib, код !RC!
+    pause
+    exit /b 1
+)
+robocopy "%AS_LIB%" "%~dp0..\authserver\lib" *.jar /NFL /NDL /NJH /NJS /NC /NS
+set "RC=!ERRORLEVEL!"
+if !RC! GEQ 8 (
+    echo [ОШИБКА] robocopy authserver lib, код !RC!
+    pause
+    exit /b 1
+)
+
+echo.
+echo [6/6] Результаты деплоя (основные JAR-ы в Lib и в ..\gameserver|authserver\lib):
 echo.
 
 for %%f in ("%GS_LIB%\gameserver.jar") do (
@@ -192,7 +212,7 @@ for %%f in ("%AS_LIB%\commons.jar") do (
 
 echo.
 echo ============================================================
-echo  ГОТОВО! Сборка, основные JAR-ы и зависимости в Lib.
+echo  ГОТОВО! JAR-ы в gameserver-src\Lib\... и скопированы *.jar в ..\gameserver\lib, ..\authserver\lib
 echo ============================================================
 echo.
 
