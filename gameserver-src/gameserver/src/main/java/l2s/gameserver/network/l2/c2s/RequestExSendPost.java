@@ -11,6 +11,7 @@ import l2s.gameserver.model.Player;
 import l2s.gameserver.model.World;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.mail.Mail;
+import l2s.gameserver.model.mail.MailPeaceZone;
 import l2s.gameserver.network.l2.GameClient;
 import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
 import l2s.gameserver.network.l2.components.CustomMessage;
@@ -102,6 +103,9 @@ extends L2GameClientPacket {
         if (!Config.ALLOW_MAIL) {
             activeChar.sendMessage(new CustomMessage("mail.Disabled"));
             activeChar.sendActionFailed();
+            return;
+        }
+        if (MailPeaceZone.blockIfPeaceOnly(activeChar, SystemMsg.YOU_CANNOT_FORWARD_IN_A_NONPEACE_ZONE_LOCATION, true)) {
             return;
         }
         if (activeChar.isInStoreMode()) {

@@ -532,6 +532,13 @@ public class Config {
     public static int ALT_CHAMPION_TOP_LEVEL;
     public static boolean ALLOW_DISCARDITEM;
     public static boolean ALLOW_MAIL;
+    /** If true, in-game mail packets require {@link l2s.gameserver.model.Player#isInPeaceZone()}. Default false allows mail anywhere on the server. */
+    public static boolean MAIL_PEACE_ZONE_ONLY;
+    /**
+     * Many game clients only allow mail with attachments when {@link l2s.gameserver.network.l2.s2c.ExSetCompassZoneCode} reports a peace zone.
+     * When true, the server adds the peace flag to the compass mask in open world (not in PvP flag / siege / danger zones) so the client allows post items.
+     */
+    public static boolean MAIL_CLIENT_COMPASS_PEACE_OPEN_WORLD;
     public static boolean ALLOW_WAREHOUSE;
     public static boolean ALLOW_WATER;
     public static boolean ALLOW_NOBLE_TP_TO_ALL;
@@ -1263,6 +1270,8 @@ public class Config {
         }
         ALLOW_DISCARDITEM = serverSettings.getProperty("AllowDiscardItem", true);
         ALLOW_MAIL = serverSettings.getProperty("AllowMail", true);
+        MAIL_PEACE_ZONE_ONLY = serverSettings.getProperty("MailPeaceZoneOnly", false);
+        MAIL_CLIENT_COMPASS_PEACE_OPEN_WORLD = serverSettings.getProperty("MailClientCompassPeaceOpenWorld", true);
         ALLOW_WAREHOUSE = serverSettings.getProperty("AllowWarehouse", true);
         ALLOW_WATER = serverSettings.getProperty("AllowWater", true);
         ALLOW_ITEMS_REFUND = serverSettings.getProperty("ALLOW_ITEMS_REFUND", true);

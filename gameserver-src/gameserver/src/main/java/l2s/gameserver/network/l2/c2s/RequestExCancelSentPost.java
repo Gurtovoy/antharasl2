@@ -5,6 +5,7 @@ import l2s.gameserver.dao.MailDAO;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.mail.Mail;
+import l2s.gameserver.model.mail.MailPeaceZone;
 import l2s.gameserver.network.l2.GameClient;
 import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
@@ -34,6 +35,9 @@ extends L2GameClientPacket {
         }
         if (activeChar.isActionsDisabled()) {
             activeChar.sendActionFailed();
+            return;
+        }
+        if (MailPeaceZone.blockIfPeaceOnly(activeChar, SystemMsg.YOU_CANNOT_CANCEL_IN_A_NONPEACE_ZONE_LOCATION, true)) {
             return;
         }
         if (activeChar.isInStoreMode()) {

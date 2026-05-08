@@ -46,6 +46,11 @@ public class BBSConfig implements OnLoadScriptListener
 	public static boolean CAN_USE_FUNCTIONS_CLAN_LEADERS_ONLY;
 	public static boolean CAN_USE_FUNCTIONS_ON_SIEGE;
 	public static boolean CAN_USE_FUNCTIONS_IN_PEACE_ZONE_ONLY;
+	/**
+	 * When {@link #CAN_USE_FUNCTIONS_IN_PEACE_ZONE_ONLY} is true, community mail can still be used outside peace zones if this is false.
+	 */
+	public static boolean BBS_MAIL_RESPECT_GLOBAL_PEACE_ZONE_ONLY;
+
 	public static boolean CAN_USE_FUNCTIONS_IN_EVENTS;
 
 	public static boolean BUFF_SERVICE_ALLOW_RESTORE;
@@ -174,6 +179,7 @@ public class BBSConfig implements OnLoadScriptListener
 		CAN_USE_FUNCTIONS_CLAN_LEADERS_ONLY = properties.getProperty("CAN_USE_FUNCTIONS_CLAN_LEADERS_ONLY", false);
 		CAN_USE_FUNCTIONS_ON_SIEGE = properties.getProperty("CAN_USE_FUNCTIONS_ON_SIEGE", true);
 		CAN_USE_FUNCTIONS_IN_PEACE_ZONE_ONLY = properties.getProperty("CAN_USE_FUNCTIONS_IN_PEACE_ZONE_ONLY", false);
+		BBS_MAIL_RESPECT_GLOBAL_PEACE_ZONE_ONLY = properties.getProperty("BBS_MAIL_RESPECT_GLOBAL_PEACE_ZONE_ONLY", false);
 		CAN_USE_FUNCTIONS_IN_EVENTS = properties.getProperty("CAN_USE_FUNCTIONS_IN_EVENTS", false);
 
 		// Buff service

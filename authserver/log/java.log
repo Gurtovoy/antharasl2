@@ -1,3 +1,13 @@
-[08.05.26 00:22:58:082]ERROR gamecomm.GameServerCommunication: Gameserver I/O error: Connection reset
-[08.05.26 00:22:58:099] INFO gamecomm.GameServerConnection: Connection with gameserver IP[127.0.0.1] lost.
-[08.05.26 00:22:58:099] INFO gamecomm.GameServerConnection: Setting gameserver down.
+[08.05.26 12:23:09:308] INFO authserver.Config: Loaded 127 server names
+[08.05.26 12:23:09:343] INFO hikari.HikariDataSource: AuthServer - Starting...
+[08.05.26 12:23:09:526] INFO pool.HikariPool: AuthServer - Added connection com.mysql.cj.jdbc.ConnectionImpl@37911f88
+[08.05.26 12:23:09:528] INFO hikari.HikariDataSource: AuthServer - Start completed.
+[08.05.26 12:23:09:561] INFO authserver.AuthBanManager: AuthBanManager: Initialized.
+[08.05.26 12:23:09:562] INFO authserver.Config: Loaded whirlpool2 as default crypt.
+[08.05.26 12:23:09:587] INFO authserver.GameServerManager: Loaded 2 registered GameServer(s).
+[08.05.26 12:23:10:031] INFO authserver.Config: Cached 10 KeyPairs for RSA communication
+[08.05.26 12:23:10:036] INFO authserver.Config: Stored 20 keys for Blowfish communication
+[08.05.26 12:23:10:072] INFO authserver.AuthServer: Listening for gameservers on *:9014
+[08.05.26 12:23:10:074] INFO authserver.AuthServer: Listening for clients on *:2106
+[08.05.26 12:23:17:953] INFO gs2as.AuthRequest: Trying to register gameserver: IP[127.0.0.1]
+[08.05.26 12:23:17:964] INFO gs2as.AuthRequest: Gameserver registration successful.

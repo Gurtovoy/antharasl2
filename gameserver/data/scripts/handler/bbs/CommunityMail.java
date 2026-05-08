@@ -1,5 +1,7 @@
 package handler.bbs;
 
+import handler.bbs.custom.BBSConfig;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -38,6 +40,12 @@ public final class CommunityMail extends ScriptsCommunityHandler
 			CharListenerList.addGlobal(_listener);
 			_log.info("CommunityBoard: Private Mail service loaded.");
 		}
+	}
+
+	@Override
+	protected boolean appliesGlobalPeaceZoneRestriction()
+	{
+		return BBSConfig.BBS_MAIL_RESPECT_GLOBAL_PEACE_ZONE_ONLY;
 	}
 
 	@Override

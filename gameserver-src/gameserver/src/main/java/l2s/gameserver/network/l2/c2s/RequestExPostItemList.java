@@ -2,10 +2,12 @@ package l2s.gameserver.network.l2.c2s;
 
 import l2s.gameserver.Config;
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.mail.MailPeaceZone;
 import l2s.gameserver.network.l2.GameClient;
 import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
 import l2s.gameserver.network.l2.components.CustomMessage;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
+import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExReplyPostItemList;
 
 public class RequestExPostItemList
@@ -23,6 +25,10 @@ extends L2GameClientPacket {
         }
         if (activeChar.isActionsDisabled()) {
             activeChar.sendActionFailed();
+            return;
+        }
+        if (MailPeaceZone.blockIfPeaceOnly(activeChar, SystemMsg.YOU_CANNOT_FORWARD_IN_A_NONPEACE_ZONE_LOCATION, true)) {
+            return;
         }
         if (!Config.ALLOW_MAIL) {
             activeChar.sendMessage(new CustomMessage("mail.Disabled"));

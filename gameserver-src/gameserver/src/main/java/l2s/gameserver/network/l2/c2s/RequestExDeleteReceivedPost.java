@@ -4,9 +4,11 @@ import java.util.List;
 import l2s.gameserver.dao.MailDAO;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.mail.Mail;
+import l2s.gameserver.model.mail.MailPeaceZone;
 import l2s.gameserver.network.l2.GameClient;
 import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
+import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExShowReceivedPostList;
 import org.apache.commons.lang3.ArrayUtils;
 
@@ -33,6 +35,9 @@ extends L2GameClientPacket {
     protected void runImpl() {
         Player activeChar = ((GameClient)this.getClient()).getActiveChar();
         if (activeChar == null || this._count == 0) {
+            return;
+        }
+        if (MailPeaceZone.blockIfPeaceOnly(activeChar, SystemMsg.YOU_CANNOT_CANCEL_IN_A_NONPEACE_ZONE_LOCATION, true)) {
             return;
         }
         List<Mail> mails = MailDAO.getInstance().getReceivedMailByOwnerId(activeChar.getObjectId());

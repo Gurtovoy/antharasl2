@@ -3,9 +3,11 @@ package l2s.gameserver.network.l2.c2s;
 import l2s.gameserver.dao.MailDAO;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.mail.Mail;
+import l2s.gameserver.model.mail.MailPeaceZone;
 import l2s.gameserver.network.l2.GameClient;
 import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
+import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExReplySentPost;
 import l2s.gameserver.network.l2.s2c.ExShowSentPostList;
 
@@ -23,6 +25,9 @@ extends L2GameClientPacket {
     protected void runImpl() {
         Player activeChar = ((GameClient)this.getClient()).getActiveChar();
         if (activeChar == null) {
+            return;
+        }
+        if (MailPeaceZone.blockIfPeaceOnly(activeChar, SystemMsg.YOU_CANNOT_FORWARD_IN_A_NONPEACE_ZONE_LOCATION, true)) {
             return;
         }
         Mail mail = MailDAO.getInstance().getSentMailByMailId(activeChar.getObjectId(), this.postId);

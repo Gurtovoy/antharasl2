@@ -7,7 +7,7 @@
 		<!--id: server id in server list-->
 		<!--address: ip or domain-->
 		<!--port: gameserver port-->
-		<host id="1" address="194.28.31.130" port="7777" key="qwsaq_ffff_wlfsdkl">
+		<host id="2" address="127.0.0.1" port="7777" key="qwsaq_ffff_wlfsdkl">
 			<!--subnet properties-->
 			<advanced address="127.0.0.1" subnet="127.0.0.0/8"/>
 			<advanced address="10.0.0.0" subnet="10.0.0.0/8"/>

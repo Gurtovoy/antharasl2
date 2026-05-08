@@ -2696,6 +2696,7 @@ l2s\gameserver\templates\item\support\FailResultType.class
 l2s\gameserver\network\l2\c2s\RequestJoinPledge.class
 l2s\gameserver\network\l2\c2s\RequestPledgeRecruitBoardAccess.class
 l2s\gameserver\network\l2\c2s\ExRequestVipInfo.class
+l2s\gameserver\model\mail\MailPeaceZone.class
 l2s\gameserver\templates\fakeplayer\FakePlayerActionsHolder.class
 l2s\gameserver\network\l2\c2s\CannotMoveAnymore$Shuttle.class
 l2s\gameserver\network\l2\s2c\ExShowPetitionHtml.class

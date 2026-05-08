@@ -37,6 +37,11 @@ public abstract class ScriptsCommunityHandler implements IBbsHandler, OnInitScri
 		return false;
 	}
 
+	protected boolean appliesGlobalPeaceZoneRestriction()
+	{
+		return true;
+	}
+
 	protected boolean checkUseCondition(Player player)
 	{
 		if(player.getVar("jailed") != null)	// Если в тюрьме
@@ -109,7 +114,7 @@ public abstract class ScriptsCommunityHandler implements IBbsHandler, OnInitScri
 			if(player.isInSiegeZone())
 				return false;
 
-		if(BBSConfig.CAN_USE_FUNCTIONS_IN_PEACE_ZONE_ONLY)	// В мирной зоне
+		if(BBSConfig.CAN_USE_FUNCTIONS_IN_PEACE_ZONE_ONLY && appliesGlobalPeaceZoneRestriction())	// В мирной зоне
 			if(!player.isInPeaceZone())
 				return false;
 
