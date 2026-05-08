@@ -31,7 +31,9 @@ public class Compiler {
         options.add("-Xlint:all");
         options.add("-warn:none");
         options.add("-g");
-        options.add("-17");
+        // ecj-4.6.1 (used from lib) does not support "-17" shorthand.
+        // Keep scripts compilation compatible with legacy ECJ.
+        options.add("-1.8");
         StringWriter writer = new StringWriter();
         JavaCompiler.CompilationTask compile = javac.getTask(writer, this.memFileManager, this.listener, options, null, this.fileManager.getJavaFileObjects(files));
         return compile.call() != false;
@@ -52,7 +54,10 @@ public class Compiler {
 
         @Override
         public void report(Diagnostic<? extends JavaFileObject> diagnostic) {
-            _log.error(diagnostic.getSource().getName() + (diagnostic.getPosition() == -1L ? "" : ":" + diagnostic.getLineNumber() + "," + diagnostic.getColumnNumber()) + ": " + diagnostic.getMessage(Locale.getDefault()));
+            JavaFileObject source = diagnostic.getSource();
+            String sourceName = source != null ? source.getName() : "<unknown source>";
+            String position = diagnostic.getPosition() == -1L ? "" : ":" + diagnostic.getLineNumber() + "," + diagnostic.getColumnNumber();
+            _log.error("{}{}: {}", sourceName, position, diagnostic.getMessage(Locale.getDefault()));
         }
     }
 }

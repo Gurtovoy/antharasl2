@@ -1,0 +1,30 @@
+[07.05.26 03:50:04:347] INFO authserver.Config: Loaded 127 server names
+[07.05.26 03:50:04:378] INFO hikari.HikariDataSource: AuthServer - Starting...
+[07.05.26 03:50:04:523] INFO pool.HikariPool: AuthServer - Added connection com.mysql.cj.jdbc.ConnectionImpl@163370c2
+[07.05.26 03:50:04:525] INFO hikari.HikariDataSource: AuthServer - Start completed.
+[07.05.26 03:50:04:553] INFO authserver.AuthBanManager: AuthBanManager: Initialized.
+[07.05.26 03:50:04:554] INFO authserver.Config: Loaded whirlpool2 as default crypt.
+[07.05.26 03:50:04:579] INFO authserver.GameServerManager: Loaded 1 registered GameServer(s).
+[07.05.26 03:50:04:863] INFO authserver.Config: Cached 10 KeyPairs for RSA communication
+[07.05.26 03:50:04:868] INFO authserver.Config: Stored 20 keys for Blowfish communication
+[07.05.26 03:50:04:895] INFO authserver.AuthServer: Listening for gameservers on *:9014
+[07.05.26 03:50:04:896] INFO authserver.AuthServer: Listening for clients on *:2106
+[07.05.26 03:50:05:125] INFO gs2as.AuthRequest: Trying to register gameserver: IP[127.0.0.1]
+[07.05.26 03:50:05:140] INFO gs2as.AuthRequest: Gameserver registration successful.
+[07.05.26 05:00:00:317] INFO gamecomm.GameServerConnection: Connection with gameserver IP[127.0.0.1] lost.
+[07.05.26 05:00:00:318] INFO gamecomm.GameServerConnection: Setting gameserver down.
+[07.05.26 05:00:38:107] INFO gs2as.AuthRequest: Trying to register gameserver: IP[127.0.0.1]
+[07.05.26 05:00:38:111] INFO gs2as.AuthRequest: Gameserver registration successful.
+[07.05.26 18:22:38:252]ERROR gamecomm.GameServerCommunication: Gameserver I/O error: Connection reset
+[07.05.26 18:22:51:500]ERROR gamecomm.GameServerCommunication: Gameserver I/O error: Connection reset
+[07.05.26 18:23:01:766]ERROR gamecomm.ReceivablePacket: 
+java.nio.BufferUnderflowException: null
+	at java.base/java.nio.Buffer.nextGetIndex(Buffer.java:720) ~[?:?]
+	at java.base/java.nio.HeapByteBuffer.getInt(HeapByteBuffer.java:502) ~[?:?]
+	at l2s.commons.net.nio.ReceivablePacket.readD(ReceivablePacket.java:29) ~[commons.jar:?]
+	at l2s.authserver.network.gamecomm.gs2as.AuthRequest.readImpl(AuthRequest.java:26) ~[authserver.jar:?]
+	at l2s.authserver.network.gamecomm.ReceivablePacket.read(ReceivablePacket.java:37) [authserver.jar:?]
+	at l2s.authserver.network.gamecomm.GameServerCommunication.tryReadPacket(GameServerCommunication.java:145) [authserver.jar:?]
+	at l2s.authserver.network.gamecomm.GameServerCommunication.read(GameServerCommunication.java:127) [authserver.jar:?]
+	at l2s.authserver.network.gamecomm.GameServerCommunication.run(GameServerCommunication.java:79) [authserver.jar:?]
+[07.05.26 18:23:04:757]ERROR gamecomm.GameServerCommunication: Gameserver I/O error: Connection reset

@@ -100,50 +100,16 @@
             <groupId>org.eclipse.jdt.core.compiler</groupId>
             <artifactId>ecj</artifactId>
             <version>4.6.1</version>
-            <scope>system</scope>
-            <systemPath>${gameserver.lib}/ecj-4.6.1.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>net.sf.trove4j</groupId>
-            <artifactId>trove</artifactId>
-            <version>3.1a1</version>
-            <scope>system</scope>
-            <systemPath>${gameserver.lib}/trove-3.1a1.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.napile</groupId>
-            <artifactId>napile</artifactId>
-            <version>1.0.5b</version>
-            <scope>system</scope>
-            <systemPath>${gameserver.lib}/napile-1.0.5b.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>org.javolution</groupId>
-            <artifactId>javolution</artifactId>
-            <version>6.1.0</version>
-            <scope>system</scope>
-            <systemPath>${gameserver.lib}/javolution-6.1.0.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>jonelo</groupId>
-            <artifactId>jacksum</artifactId>
-            <version>1.7.0</version>
-            <scope>system</scope>
-            <systemPath>${gameserver.lib}/jacksum-1.7.0.jar</systemPath>
-        </dependency>
-        <dependency>
-            <groupId>net.sourceforge.mesp</groupId>
-            <artifactId>mesp</artifactId>
-            <version>1.02</version>
-            <scope>system</scope>
-            <systemPath>${gameserver.lib}/mesp-1.02.jar</systemPath>
+            <artifactId>trove4j</artifactId>
+            <version>3.0.3</version>
         </dependency>
         <dependency>
             <groupId>com.googlecode.juniversalchardet</groupId>
             <artifactId>juniversalchardet</artifactId>
             <version>1.0.3</version>
-            <scope>system</scope>
-            <systemPath>${gameserver.lib}/juniversalchardet-1.0.3.jar</systemPath>
         </dependency>
     </dependencies>
 </project>

@@ -2,14 +2,431 @@
 <!DOCTYPE list SYSTEM "multisell.dtd">
 <list>
 	<config show_all="true" no_tax="true" keep_enchanted="false" />
-	<!-- Party Mask - etc_party_mask_i00 -->
+
+	<!-- Artisan\'s Goggles [HAIR_ALL] -->
 	<item>
 		<ingredient id="57" count="75000000"/>
-		<production id="5808" count="1"/>
+		<production id="8186" count="1"/>
 	</item>
-	<!-- Red Party Mask - etc_party_mask_i01 -->
+	<!-- Red Horn of Victory [HAIR_ALL] -->
 	<item>
 		<ingredient id="57" count="75000000"/>
-		<production id="6394" count="1"/>
+		<production id="8187" count="1"/>
+	</item>
+	<!-- Teddy Bear Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="8560" count="1"/>
+	</item>
+	<!-- Piggy Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="8561" count="1"/>
+	</item>
+	<!-- Jester Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="8562" count="1"/>
+	</item>
+	<!-- Wizard Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="8563" count="1"/>
+	</item>
+	<!-- Dapper Cap [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="8564" count="1"/>
+	</item>
+	<!-- Half Face Mask [FACE] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="8569" count="1"/>
+	</item>
+	<!-- Santa\'s Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="9138" count="1"/>
+	</item>
+
+	<!-- Refined Romantic Chapeau [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="13501" count="1"/>
+	</item>
+	<!-- Event - Jindo Dog Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="13520" count="1"/>
+	</item>
+	<!-- Event - Shaggy Dog Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="13521" count="1"/>
+	</item>
+	<!-- Santa\'s Red Nose [FACE] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="14611" count="1"/>
+	</item>
+	<!-- Uniform Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="20020" count="1"/>
+	</item>
+	<!-- Assassin\'s Bamboo Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="20021" count="1"/>
+	</item>
+	<!-- Ruthless Tribe Mask [FACE] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="20022" count="1"/>
+	</item>
+	<!-- Ribbon Hairband [FACE] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="20023" count="1"/>
+	</item>
+	<!-- Gatekeeper Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="20678" count="1"/>
+	</item>
+	<!-- Wedding Veil [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="21162" count="1"/>
+	</item>
+	<!-- Sheep Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="21469" count="1"/>
+	</item>
+	<!-- Valkyrie Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="21566" count="1"/>
+	</item>
+	<!-- Brilliant Beach Sun Cap [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="22376" count="1"/>
+	</item>
+	<!-- Stylish Straw Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="22378" count="1"/>
+	</item>
+	<!-- Samurai Hair Accessory [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="23877" count="1"/>
+	</item>
+	<!-- Adventurer Hat - Event [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="29034" count="1"/>
+	</item>
+	<!-- Refined Romantic Chapeau: Red [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="29036" count="1"/>
+	</item>
+	<!-- Refined Angel Ring [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="29037" count="1"/>
+	</item>
+	<!-- Refined Wizard Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="29038" count="1"/>
+	</item>
+	<!-- Laborer Hat [FACE] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="29039" count="1"/>
+	</item>
+	<!-- Top Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="29040" count="1"/>
+	</item>
+	<!-- Vigilante Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="29041" count="1"/>
+	</item>
+	<!-- Refined Romantic Chapeau: Red [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="29048" count="1"/>
+	</item>
+	<!-- Refined Angel Ring [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="29049" count="1"/>
+	</item>
+	<!-- First Mate Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70358" count="1"/>
+	</item>
+	<!-- Warrior\'s Helmet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70359" count="1"/>
+	</item>
+	<!-- Chapeau [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70360" count="1"/>
+	</item>
+	<!-- Red Horn of Victory [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70361" count="1"/>
+	</item>
+	<!-- Refined Black Skeleton Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70362" count="1"/>
+	</item>
+	<!-- Refined Orange Skeleton Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70363" count="1"/>
+	</item>
+	<!-- Refined Green Skeleton Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70364" count="1"/>
+	</item>
+	<!-- Refined Brown Skeleton Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70365" count="1"/>
+	</item>
+	<!-- Gold Skeleton Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70366" count="1"/>
+	</item>
+	<!-- Silver Skeleton Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70367" count="1"/>
+	</item>
+	<!-- Red Skeleton Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70368" count="1"/>
+	</item>
+	<!-- Black Skeleton Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70369" count="1"/>
+	</item>
+	<!-- Chick Gold Horn Cap [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70370" count="1"/>
+	</item>
+	<!-- Chick Silver Horn Cap [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70371" count="1"/>
+	</item>
+	<!-- Refined Brown Turban [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70372" count="1"/>
+	</item>
+	<!-- Refined Yellow Turban [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70373" count="1"/>
+	</item>
+	<!-- Mining Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70374" count="1"/>
+	</item>
+	<!-- Enhanced Mining Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70375" count="1"/>
+	</item>
+	<!-- Search Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70376" count="1"/>
+	</item>
+	<!-- Enhanced Search Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70377" count="1"/>
+	</item>
+	<!-- Circlet of Flames [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70378" count="1"/>
+	</item>
+	<!-- Circlet of Ice [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70379" count="1"/>
+	</item>
+	<!-- Circlet of Storm [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70380" count="1"/>
+	</item>
+	<!-- Circlet of Earthquake [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70381" count="1"/>
+	</item>
+	<!-- Circlet of Darkness [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70382" count="1"/>
+	</item>
+	<!-- Circlet of Splendor [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70383" count="1"/>
+	</item>
+	<!-- Refined Carnival Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70384" count="1"/>
+	</item>
+	<!-- Refined Devil Horn [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70385" count="1"/>
+	</item>
+	<!-- Refined Carnival Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70386" count="1"/>
+	</item>
+	<!-- Demon Circlet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70387" count="1"/>
+	</item>
+	<!-- Medieval Party Mask [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70388" count="1"/>
+	</item>
+	<!-- Black Half Mask [FACE] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70389" count="1"/>
+	</item>
+	<!-- Eva\'s Mark [FACE] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70390" count="1"/>
+	</item>
+	<!-- Phantom Mask [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70391" count="1"/>
+	</item>
+	<!-- Black Phantom Mask [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70392" count="1"/>
+	</item>
+	<!-- Black Feather Mask [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70393" count="1"/>
+	</item>
+	<!-- Goblin Circlet [FACE] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70394" count="1"/>
+	</item>
+	<!-- Gold-rimmed Glasses [FACE] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70395" count="1"/>
+	</item>
+	<!-- Refined Romantic Chapeau: Blue [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70396" count="1"/>
+	</item>
+	<!-- Refined Romantic Chapeau: Gold [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70397" count="1"/>
+	</item>
+	<!-- Refined Romantic Chapeau: Green [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70398" count="1"/>
+	</item>
+	<!-- Refined Romantic Chapeau: Red [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70399" count="1"/>
+	</item>
+	<!-- Refined Romantic Chapeau: Yellow [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70400" count="1"/>
+	</item>
+	<!-- Stylish Straw Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70900" count="1"/>
+	</item>
+	<!-- Crown [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="70901" count="1"/>
+	</item>
+	<!-- Wedding Bouquet [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="71100" count="1"/>
+	</item>
+	<!-- Fairy Antennae [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="71113" count="1"/>
+	</item>
+	<!-- Little Angel Wings [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="71115" count="1"/>
+	</item>
+	<!-- Piggy Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="90770" count="1"/>
+	</item>
+	<!-- Frog Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="90771" count="1"/>
+	</item>
+	<!-- Fish Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="90772" count="1"/>
+	</item>
+	<!-- Chicken Hat [HAIR_ALL] -->
+	<item>
+		<ingredient id="57" count="75000000"/>
+		<production id="90773" count="1"/>
 	</item>
 </list>

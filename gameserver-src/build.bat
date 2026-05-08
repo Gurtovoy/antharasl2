@@ -21,9 +21,10 @@ if not exist "%MVN%" (
     exit /b 1
 )
 
-:: Пути деплоя
-set "GS_LIB=%~dp0..\gameserver\lib"
-set "AS_LIB=%~dp0..\authserver\lib"
+:: Пути деплоя (Windows output)
+set "WIN_LIB_ROOT=%~dp0Lib"
+set "GS_LIB=%WIN_LIB_ROOT%\gameserver\lib"
+set "AS_LIB=%WIN_LIB_ROOT%\authserver\lib"
 
 :: Пути к target-директориям
 set "GS_TARGET=%~dp0gameserver\target"
@@ -142,7 +143,7 @@ if %ERRORLEVEL% neq 0 (
     exit /b 1
 )
 
-echo [4/5] Копирование runtime-зависимостей в lib, excludeGroupIds=l2s (commons.jar уже скопирован).
+echo [4/5] Копирование runtime-зависимостей в Lib, excludeGroupIds=l2s (commons.jar уже скопирован).
 echo.
 
 :: Удаляем устаревшие артефакты стека Log4j 1.x / DBCP (если остались от старых сборок)
@@ -166,7 +167,7 @@ if %ERRORLEVEL% neq 0 (
     exit /b %ERRORLEVEL%
 )
 
-echo   Примечание: артефакты со scope system в pom (ecj, trove, napile, …) Maven не копирует — при первой установке положите их в lib вручную, если их ещё нет.
+echo   Примечание: артефакты со scope system в pom (ecj, trove, napile, …) Maven не копирует — при первой установке положите их в Lib вручную, если их ещё нет.
 
 echo.
 echo [5/5] Результаты деплоя (основные JAR-ы):
@@ -191,7 +192,7 @@ for %%f in ("%AS_LIB%\commons.jar") do (
 
 echo.
 echo ============================================================
-echo  ГОТОВО! Сборка, основные JAR-ы и зависимости в lib.
+echo  ГОТОВО! Сборка, основные JAR-ы и зависимости в Lib.
 echo ============================================================
 echo.
 

@@ -125,3 +125,6 @@
 [07.05.26 13:39:02] SUCCESS TopDed[268461562] -> 30120 Maximilian admin_admin
 [07.05.26 13:39:04] SUCCESS TopDed[268461562] -> 30120 Maximilian admin_itemcreate
 [07.05.26 13:39:08] SUCCESS TopDed[268461562] -> 30120 Maximilian admin_create_item 70024 1000
+[07.05.26 20:46:39] SUCCESS TopDed[268461562] -> 33359 Kerry admin_admin
+[07.05.26 20:46:40] SUCCESS TopDed[268461562] -> 33359 Kerry admin_char_manage
+[07.05.26 20:46:41] SUCCESS TopDed[268461562] -> 33359 Kerry admin_show_characters 0
