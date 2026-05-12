@@ -591,11 +591,11 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_spirit_shot">
+			<self_effect name="i_summon_spirit_shot">
 				<def name="power" value="#power"/>
 				<def name="unk_spiritshot_parameter" value="#unk_spiritshot_parameter"/>
 				<def name="heal_bonus" value="#heal_bonus"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="39240" levels="1" name="Sapphire">
@@ -611,11 +611,11 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_spirit_shot">
+			<self_effect name="i_summon_spirit_shot">
 				<def name="power" value="#power"/>
 				<def name="unk_spiritshot_parameter" value="#unk_spiritshot_parameter"/>
 				<def name="heal_bonus" value="#heal_bonus"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="39241" levels="1" name="Sapphire">
@@ -631,11 +631,11 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_spirit_shot">
+			<self_effect name="i_summon_spirit_shot">
 				<def name="power" value="#power"/>
 				<def name="unk_spiritshot_parameter" value="#unk_spiritshot_parameter"/>
 				<def name="heal_bonus" value="#heal_bonus"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="39242" levels="1" name="Sapphire">
@@ -651,11 +651,11 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_spirit_shot">
+			<self_effect name="i_summon_spirit_shot">
 				<def name="power" value="#power"/>
 				<def name="unk_spiritshot_parameter" value="#unk_spiritshot_parameter"/>
 				<def name="heal_bonus" value="#heal_bonus"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="39243" levels="1" name="Topaz Jewelry Box">

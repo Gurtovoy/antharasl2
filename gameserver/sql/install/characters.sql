@@ -41,6 +41,7 @@ CREATE TABLE `characters` (
 	`bot_rating` INT NOT NULL DEFAULT '0',
 	`used_world_chat_points` INT NOT NULL DEFAULT '0',
 	`hide_head_accessories` TINYINT UNSIGNED NOT NULL DEFAULT '0',
+	`hide_costume` TINYINT UNSIGNED NOT NULL DEFAULT '0',
 	`last_ip` VARCHAR(16) DEFAULT '',
 	`last_hwid` VARCHAR(128) DEFAULT '',
 	PRIMARY KEY (obj_Id),

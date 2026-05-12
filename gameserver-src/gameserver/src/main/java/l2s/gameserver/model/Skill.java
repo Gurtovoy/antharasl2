@@ -37,6 +37,7 @@ import l2s.gameserver.model.entity.events.Event;
 import l2s.gameserver.model.instances.ChestInstance;
 import l2s.gameserver.model.instances.NpcInstance;
 import l2s.gameserver.model.instances.SummonInstance;
+import l2s.gameserver.model.instances.residences.SiegeToggleNpcInstance;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
 import l2s.gameserver.network.l2.components.SystemMsg;
 import l2s.gameserver.network.l2.s2c.ExMagicAttackInfo;
@@ -75,6 +76,7 @@ import l2s.gameserver.skills.skillclasses.DrainSoul;
 import l2s.gameserver.skills.skillclasses.EffectsFromSkills;
 import l2s.gameserver.skills.skillclasses.EnergyReplenish;
 import l2s.gameserver.skills.skillclasses.ExtractStone;
+import l2s.gameserver.skills.skillclasses.HideCostume;
 import l2s.gameserver.skills.skillclasses.HideHairAccessories;
 import l2s.gameserver.skills.skillclasses.LethalShot;
 import l2s.gameserver.skills.skillclasses.MDam;
@@ -1101,7 +1103,7 @@ Cloneable {
                 return target != null && target.isPlayable() && target.isDead() ? target : null;
             }
             case TARGET_SIEGE: {
-                return target != null && !target.isDead() && target.isDoor() ? target : null;
+                return target != null && !target.isDead() && (target.isDoor() || target instanceof SiegeToggleNpcInstance) ? target : null;
             }
         }
         activeChar.sendMessage("Target type of skill is not currently handled");
@@ -2733,6 +2735,7 @@ Cloneable {
         HEAL_PERCENT(Continuous.class),
         HOT(Continuous.class),
         HIDE_HAIR_ACCESSORIES(HideHairAccessories.class),
+        HIDE_COSTUME(HideCostume.class),
         LETHAL_SHOT(LethalShot.class),
         LUCK,
         MANADAM(ManaDam.class),

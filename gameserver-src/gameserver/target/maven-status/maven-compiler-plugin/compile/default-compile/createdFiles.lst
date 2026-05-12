@@ -1733,6 +1733,7 @@ l2s\gameserver\network\l2\s2c\ExBettingLuckyGameResult.class
 l2s\gameserver\model\entity\events\impl\ClanHallAuctionEvent.class
 l2s\gameserver\network\l2\c2s\RequestExEscapeScene.class
 l2s\gameserver\model\entity\events\impl\SiegeEvent$DoorDeathListener.class
+l2s\gameserver\model\Player$AutoShotScope.class
 l2s\gameserver\network\l2\c2s\RequestExMagicSkillUseGround.class
 l2s\gameserver\stats\StatFunctions$FuncMCritLimit.class
 l2s\gameserver\network\l2\s2c\ExShowSentPostList.class
@@ -2633,6 +2634,7 @@ l2s\gameserver\network\l2\s2c\SysMsgContainer$NpcNameArgument.class
 l2s\gameserver\model\actor\instances\player\ShortCutList.class
 l2s\gameserver\handler\chat\ChatHandler.class
 l2s\gameserver\network\l2\c2s\RequestStopPledgeWar.class
+l2s\gameserver\skills\skillclasses\HideCostume.class
 l2s\gameserver\data\xml\parser\AttendanceRewardParser.class
 l2s\gameserver\model\entity\events\impl\SingleMatchEvent.class
 l2s\gameserver\stats\conditions\ConditionPlayerMaxSP.class

@@ -330,7 +330,7 @@ extends Inventory {
             for (ItemInstance item : items) {
                 this._items.add(item);
                 this.onRestoreItem(item);
-                if (item.getEquipSlot() >= 38 || !PcInventory.checkPaperdollItem(item, item.getEquipSlot()) || this.getPaperdollItem(item.getEquipSlot()) != null) {
+                if (item.getEquipSlot() >= PAPERDOLL_MAX || !PcInventory.checkPaperdollItem(item, item.getEquipSlot()) || this.getPaperdollItem(item.getEquipSlot()) != null) {
                     item.setLocation(this.getBaseLocation());
                     item.setLocData(0);
                     item.setEquipped(false);
@@ -400,6 +400,16 @@ extends Inventory {
     public void sendEquipInfo(int slot) {
         this.getActor().broadcastUserInfo(true);
         this.getActor().sendPacket((IBroadcastPacket)new ExUserInfoEquipSlot(this.getActor(), slot));
+        if (slot == PAPERDOLL_BROOCH) {
+            // Own client applies chest mesh from ExUserInfoEquipSlot(CHEST); costume only changes paperdoll 31,
+            // so push chest slot too so getPaperdollVisualId(CHEST) costume override reaches the local avatar.
+            ItemInstance chest = this.getPaperdollItem(PAPERDOLL_CHEST);
+            if (chest != null) {
+                this.sendModifyItem(chest);
+            }
+            this.getActor().broadcastCharInfo();
+            this.getActor().sendPacket((IBroadcastPacket)new ExUserInfoEquipSlot(this.getActor(), PAPERDOLL_CHEST));
+        }
     }
 
     @Override

@@ -17,8 +17,8 @@ import l2s.gameserver.listener.actor.door.OnOpenCloseListener;
 import l2s.gameserver.model.Creature;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.World;
+import l2s.gameserver.model.Servitor;
 import l2s.gameserver.model.entity.events.impl.SiegeEvent;
-import l2s.gameserver.model.instances.SummonInstance;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.network.l2.components.IBroadcastPacket;
 import l2s.gameserver.network.l2.s2c.DoorStatusUpdatePacket;
@@ -86,7 +86,7 @@ extends Creature {
         for (SiegeEvent siegeEvent : this.getEvents(SiegeEvent.class)) {
             switch (this.getDoorType()) {
                 case WALL: {
-                    if (!attacker.isSummon() || !siegeEvent.containsSiegeSummon((SummonInstance)attacker)) break;
+                    if (!attacker.isServitor() || !siegeEvent.containsSiegeSummon((Servitor)attacker)) break;
                     return true;
                 }
                 case DOOR: {

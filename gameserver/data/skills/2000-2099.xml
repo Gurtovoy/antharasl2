@@ -142,11 +142,11 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_spirit_shot">
+			<self_effect name="i_summon_spirit_shot">
 				<def name="power" value="100"/>
 				<def name="unk_spiritshot_parameter" value="40"/>
 				<def name="heal_bonus" value="1.0"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="2009" levels="1" name="Item - Blessed Beast Spiritshot">
@@ -162,11 +162,11 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_spirit_shot">
+			<self_effect name="i_summon_spirit_shot">
 				<def name="power" value="300"/>
 				<def name="unk_spiritshot_parameter" value="40"/>
 				<def name="heal_bonus" value="2.4"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="2010" levels="1" name="Endeavor Potion">
@@ -524,9 +524,9 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_soul_shot">
+			<self_effect name="i_summon_soul_shot">
 				<def name="power" value="100"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="2034" levels="1" name="Greater Wind Walk Potion">

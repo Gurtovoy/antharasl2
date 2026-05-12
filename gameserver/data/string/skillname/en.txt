@@ -29395,6 +29395,7 @@
 17113	1	Christmas Buff Set 2015
 17154	1	Love Potion
 17192	1	Change Hair Accessory
+17193	1	Toggle Costume
 17386	1	Fishing Shot
 17608	1	Energy of Delusion
 17613	1	Agathion - Aries

@@ -62,12 +62,13 @@ extends ItemContainer {
     public static final int PAPERDOLL_JEWEL4 = 35;
     public static final int PAPERDOLL_JEWEL5 = 36;
     public static final int PAPERDOLL_JEWEL6 = 37;
+    /** Max paperdoll index + 1 ({@code _paperdoll} length). Slots are {@code 0 .. PAPERDOLL_MAX-1}. */
     public static final int PAPERDOLL_MAX = 38;
     public static final int[] PAPERDOLL_ORDER = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 19, 20, 21, 22, 23};
     public static final int UPDATE_STATS_FLAG = 1;
     public static final int UPDATE_SKILLS_FLAG = 3;
     protected final int _ownerId;
-    protected final ItemInstance[] _paperdoll = new ItemInstance[38];
+    protected final ItemInstance[] _paperdoll = new ItemInstance[PAPERDOLL_MAX];
     private final ListenerList<Playable> _listeners = new ListenerList();
     protected int _totalWeight;
     protected long _wearedMask;
@@ -225,11 +226,42 @@ extends ItemContainer {
     }
 
     public int getPaperdollVisualId(int slot) {
+        // When formal wear (costume) is in the brooch slot, it visually replaces the chest for observers
+        // and the local client (see getActiveCostumeVisualId / packet writers).
+        if (slot == PAPERDOLL_CHEST) {
+            int costumeVisual = this.getActiveCostumeVisualId();
+            if (costumeVisual > 0) {
+                return costumeVisual;
+            }
+        }
         ItemInstance item = this.getPaperdollItem(slot);
         if (item != null && item.getVisualId() > 0) {
             return item.getVisualId();
         }
         return 0;
+    }
+
+    /**
+     * Formal wear (costume) is stored in the brooch paperdoll slot so the client sees a normal equip slot.
+     */
+    public ItemInstance getEquippedFormalWearCostume() {
+        ItemInstance broochSlot = this._paperdoll[PAPERDOLL_BROOCH];
+        if (broochSlot != null && broochSlot.getBodyPart() == ItemTemplate.SLOT_FORMAL_WEAR) {
+            return broochSlot;
+        }
+        return null;
+    }
+
+    /**
+     * @return item id of the equipped costume if any and if its visibility is not turned off; 0 otherwise.
+     *         Default implementation returns 0; PcInventory overrides it to honor the player's hideCostume flag.
+     */
+    public int getActiveCostumeVisualId() {
+        ItemInstance costume = this.getEquippedFormalWearCostume();
+        if (costume == null) {
+            return 0;
+        }
+        return costume.getItemId();
     }
 
     public int getPaperdollObjectId(int slot) {
@@ -341,8 +373,10 @@ extends ItemContainer {
             pdollSlot = 9;
         } else if (bodySlot == 2048L) {
             pdollSlot = 11;
-        } else if (bodySlot == 1024L || bodySlot == 32768L || bodySlot == 131072L) {
+        } else if (bodySlot == 1024L || bodySlot == 32768L) {
             pdollSlot = 10;
+        } else if (bodySlot == 131072L) {
+            pdollSlot = PAPERDOLL_BROOCH;
         } else if (bodySlot == 8192L) {
             pdollSlot = 13;
         } else if (bodySlot == 4096L) {
@@ -612,11 +646,12 @@ extends ItemContainer {
                 break;
             }
         } else if (bodySlot == 131072L) {
-            this.setPaperdollItem(11, null);
-            this.setPaperdollItem(6, null);
-            this.setPaperdollItem(12, null);
-            this.setPaperdollItem(9, null);
-            this.setPaperdollItem(10, item);
+            // Costume (FORMAL_WEAR): use brooch paperdoll slot so the client inventory shows it; chest stats stay on real chest.
+            // Same jewel clear as a real brooch when those slots are used.
+            this.setPaperdollItem(PAPERDOLL_BROOCH, item);
+            for (int p = PAPERDOLL_JEWEL1; p <= PAPERDOLL_JEWEL6; ++p) {
+                this.setPaperdollItem(p, null);
+            }
         } else if (bodySlot == 0x20000000L) {
             this.setPaperdollItem(31, item);
             for (int p = 32; p <= 37; ++p) {
@@ -793,8 +828,11 @@ extends ItemContainer {
         if (slot == 512L) {
             return new int[]{9};
         }
-        if (slot == 1024L || slot == 32768L || slot == 131072L) {
+        if (slot == 1024L || slot == 32768L) {
             return new int[]{10};
+        }
+        if (slot == 131072L) {
+            return new int[]{PAPERDOLL_BROOCH};
         }
         if (slot == 2048L) {
             return new int[]{11};
@@ -869,8 +907,11 @@ extends ItemContainer {
         if (slot == 512L) {
             return 9;
         }
-        if (slot == 1024L || slot == 32768L || slot == 131072L) {
+        if (slot == 1024L || slot == 32768L) {
             return 10;
+        }
+        if (slot == 131072L) {
+            return PAPERDOLL_BROOCH;
         }
         if (slot == 2048L) {
             return 11;

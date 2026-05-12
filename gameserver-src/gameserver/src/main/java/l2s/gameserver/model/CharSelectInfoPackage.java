@@ -5,6 +5,7 @@ import l2s.gameserver.Config;
 import l2s.gameserver.dao.CustomHeroDAO;
 import l2s.gameserver.dao.ItemsDAO;
 import l2s.gameserver.model.entity.Hero;
+import l2s.gameserver.model.items.Inventory;
 import l2s.gameserver.model.items.ItemInstance;
 
 public class CharSelectInfoPackage {
@@ -42,9 +43,11 @@ public class CharSelectInfoPackage {
         this.setObjectId(objectId);
         this._name = name;
         Collection<ItemInstance> items = ItemsDAO.getInstance().getItemsByOwnerIdAndLoc(objectId, ItemInstance.ItemLocation.PAPERDOLL);
-        this._paperdoll = new ItemInstance[38];
+        this._paperdoll = new ItemInstance[Inventory.PAPERDOLL_MAX];
         for (ItemInstance item : items) {
-            if (item.getEquipSlot() >= 38) continue;
+            if (item.getEquipSlot() < 0 || item.getEquipSlot() >= Inventory.PAPERDOLL_MAX) {
+                continue;
+            }
             this._paperdoll[item.getEquipSlot()] = item;
         }
     }

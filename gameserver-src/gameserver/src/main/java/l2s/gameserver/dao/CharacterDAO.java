@@ -59,7 +59,7 @@ public class CharacterDAO {
         PreparedStatement statement = null;
         try {
             con = DatabaseFactory.getInstance().getConnection();
-            statement = con.prepareStatement("INSERT INTO `characters` (account_name, obj_Id, char_name, face, beautyFace, hairStyle, beautyHairStyle, hairColor, beautyHairColor, sex, karma, pvpkills, pkkills, clanid, createtime, deletetime, title, accesslevel, online, leaveclan, deleteclan, nochannel, pledge_type, pledge_rank, lvl_joined_academy, apprentice, used_world_chat_points, hide_head_accessories) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+            statement = con.prepareStatement("INSERT INTO `characters` (account_name, obj_Id, char_name, face, beautyFace, hairStyle, beautyHairStyle, hairColor, beautyHairColor, sex, karma, pvpkills, pkkills, clanid, createtime, deletetime, title, accesslevel, online, leaveclan, deleteclan, nochannel, pledge_type, pledge_rank, lvl_joined_academy, apprentice, used_world_chat_points, hide_head_accessories, hide_costume) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
             statement.setString(1, player.getAccountName());
             statement.setInt(2, player.getObjectId());
             statement.setString(3, player.getName());
@@ -88,6 +88,7 @@ public class CharacterDAO {
             statement.setInt(26, player.getApprentice());
             statement.setInt(27, player.getUsedWorldChatPoints());
             statement.setInt(28, player.hideHeadAccessories() ? 1 : 0);
+            statement.setInt(29, player.hideCostume() ? 1 : 0);
             statement.executeUpdate();
         }
         catch (Exception e) {

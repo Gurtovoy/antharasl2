@@ -24,6 +24,7 @@ import l2s.gameserver.model.base.Experience;
 import l2s.gameserver.model.base.MountType;
 import l2s.gameserver.model.base.PetType;
 import l2s.gameserver.model.instances.PetBabyInstance;
+import l2s.gameserver.model.items.Inventory;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.items.PetInventory;
 import l2s.gameserver.model.items.attachment.FlagItemAttachment;
@@ -333,11 +334,27 @@ extends Servitor {
 
     @Override
     public ItemInstance getActiveWeaponInstance() {
-        return null;
+        PetInventory inv = this._inventory;
+        if (inv == null) {
+            return null;
+        }
+        ItemInstance weapon = inv.getPaperdollItem(Inventory.PAPERDOLL_RHAND);
+        if (weapon != null) {
+            return weapon;
+        }
+        return inv.getPaperdollItem(Inventory.PAPERDOLL_LRHAND);
     }
 
     @Override
     public WeaponTemplate getActiveWeaponTemplate() {
+        ItemInstance weapon = this.getActiveWeaponInstance();
+        if (weapon == null) {
+            return null;
+        }
+        ItemTemplate template = weapon.getTemplate();
+        if (template instanceof WeaponTemplate) {
+            return (WeaponTemplate)template;
+        }
         return null;
     }
 

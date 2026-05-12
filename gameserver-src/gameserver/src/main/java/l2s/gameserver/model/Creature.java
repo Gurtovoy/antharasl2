@@ -31,6 +31,7 @@ import l2s.gameserver.ai.CharacterAI;
 import l2s.gameserver.ai.CtrlEvent;
 import l2s.gameserver.ai.CtrlIntention;
 import l2s.gameserver.ai.PlayableAI;
+import l2s.gameserver.data.xml.holder.ItemHolder;
 import l2s.gameserver.data.xml.holder.LevelBonusHolder;
 import l2s.gameserver.data.xml.holder.SkillHolder;
 import l2s.gameserver.data.xml.holder.TransformTemplateHolder;
@@ -58,6 +59,7 @@ import l2s.gameserver.model.actor.listener.CharListenerList;
 import l2s.gameserver.model.actor.recorder.CharStatsChangeRecorder;
 import l2s.gameserver.model.actor.stat.CreatureStat;
 import l2s.gameserver.model.base.Element;
+import l2s.gameserver.model.base.SoulShotType;
 import l2s.gameserver.model.base.Sex;
 import l2s.gameserver.model.base.TeamType;
 import l2s.gameserver.model.base.TransformType;
@@ -115,6 +117,7 @@ import l2s.gameserver.stats.triggers.TriggerType;
 import l2s.gameserver.taskmanager.LazyPrecisionTaskManager;
 import l2s.gameserver.taskmanager.RegenTaskManager;
 import l2s.gameserver.templates.CreatureTemplate;
+import l2s.gameserver.templates.item.ItemTemplate;
 import l2s.gameserver.templates.item.WeaponTemplate;
 import l2s.gameserver.templates.npc.NpcTemplate;
 import l2s.gameserver.templates.player.transform.TransformTemplate;
@@ -799,6 +802,15 @@ extends GameObject {
             return;
         }
         this.getListeners().onAttack(target);
+        if (this.isServitor()) {
+            Servitor servitor = (Servitor)this;
+            if (servitor.getChargedSoulshotPower() <= 0.0) {
+                Player owner = servitor.getPlayer();
+                if (owner != null) {
+                    owner.refreshBeastAutoSoulshotIfNeeded();
+                }
+            }
+        }
         int sAtk = this.calculateAttackDelay();
         int ssGrade = 0;
         int attackReuseDelay = 0;
@@ -814,8 +826,33 @@ extends GameObject {
             if (weaponItem != null) {
                 attackReuseDelay = weaponItem.getAttackReuseDelay();
                 ssGrade = weaponItem.getGrade().extOrdinal();
+            } else if (this.isServitor()) {
+                Servitor servitor = (Servitor)this;
+                if (servitor.getChargedSoulshotPower() > 0.0) {
+                    Player owner = servitor.getPlayer();
+                    if (owner != null) {
+                        int beastSoulId = owner.getActiveAutoShotItemId(SoulShotType.BEAST_SOULSHOT);
+                        if (beastSoulId > 0) {
+                            ItemTemplate shotItem = ItemHolder.getInstance().getTemplate(beastSoulId);
+                            if (shotItem != null) {
+                                ssGrade = shotItem.getGrade().extOrdinal();
+                            }
+                        }
+                    }
+                }
             }
             boolean bl = ssEnabled = this.getChargedSoulshotPower() > 0.0;
+            if (ssEnabled && this.isServitor() && ssGrade == 0) {
+                Player owner = ((Servitor)this).getPlayer();
+                if (owner != null) {
+                    WeaponTemplate ownerWeapon = owner.getActiveWeaponTemplate();
+                    if (ownerWeapon != null) {
+                        ssGrade = ownerWeapon.getGrade().extOrdinal();
+                    } else {
+                        ssGrade = 1;
+                    }
+                }
+            }
         }
         if (attackReuseDelay > 0 && (reuse = (500000 + 333 * attackReuseDelay) / this.getPAtkSpd()) > 0) {
             this.sendPacket((IBroadcastPacket)new SetupGaugePacket(this, SetupGaugePacket.Colors.RED, reuse));

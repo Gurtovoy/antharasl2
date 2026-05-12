@@ -6,6 +6,7 @@ import l2s.gameserver.data.xml.holder.ItemHolder;
 import l2s.gameserver.model.Player;
 import l2s.gameserver.model.base.Element;
 import l2s.gameserver.model.base.MultiSellIngredient;
+import l2s.gameserver.model.items.Inventory;
 import l2s.gameserver.model.items.ItemInfo;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.network.l2.GameClient;
@@ -120,6 +121,22 @@ implements IBroadcastPacket {
         this.writeItemInfo(null, item, count);
     }
 
+    /**
+     * Returns the visual id we should emit for {@code item} when sending it on behalf of {@code player}.
+     * If the player has an active (and not toggled-off) costume in their virtual costume slot and we are about
+     * to write the equipped chest item, we substitute the costume's item id as the visual id so that the
+     * local client renders the costume on top of the actual armor (without losing any armor stats).
+     */
+    protected static int getEffectiveVisualId(Player player, ItemInstance item) {
+        if (player != null && item != null && item.isEquipped() && item.getEquipSlot() == Inventory.PAPERDOLL_CHEST) {
+            int costumeVisualId = player.getInventory().getActiveCostumeVisualId();
+            if (costumeVisualId > 0) {
+                return costumeVisualId;
+            }
+        }
+        return item == null ? 0 : item.getVisualId();
+    }
+
     protected void writeItemInfo(Player player, ItemInstance item, long count) {
         TimeStamp sts;
         int flags = 0;
@@ -141,7 +158,8 @@ implements IBroadcastPacket {
             flags |= 4;
             break;
         }
-        if (item.getVisualId() > 0) {
+        int effectiveVisualId = getEffectiveVisualId(player, item);
+        if (effectiveVisualId > 0) {
             flags |= 8;
         }
         Ensoul[] normalEnsouls = item.getNormalEnsouls();
@@ -192,7 +210,7 @@ implements IBroadcastPacket {
             this.writeD(item.getEnchantOptions()[2]);
         }
         if ((flags & 8) == 8) {
-            this.writeD(item.getVisualId());
+            this.writeD(effectiveVisualId);
         }
         if ((flags & 0x10) == 16) {
             this.writeC(normalEnsouls.length);

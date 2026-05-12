@@ -181,9 +181,9 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_soul_shot">
+			<self_effect name="i_summon_soul_shot">
 				<def name="power" value="#power"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="17889" levels="1" name="Ruby">
@@ -196,9 +196,9 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_soul_shot">
+			<self_effect name="i_summon_soul_shot">
 				<def name="power" value="105"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="17890" levels="1" name="Ruby">
@@ -211,9 +211,9 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_soul_shot">
+			<self_effect name="i_summon_soul_shot">
 				<def name="power" value="108"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="17891" levels="1" name="Ruby">
@@ -226,9 +226,9 @@
 		<set name="operate_type" value="A2"/>
 		<set name="isHandler" value="true"/>
 		<for>
-			<effect name="i_summon_soul_shot">
+			<self_effect name="i_summon_soul_shot">
 				<def name="power" value="112"/>
-			</effect>
+			</self_effect>
 		</for>
 	</skill>
 	<skill id="17896" levels="1" name="Orc Recovery Ban">

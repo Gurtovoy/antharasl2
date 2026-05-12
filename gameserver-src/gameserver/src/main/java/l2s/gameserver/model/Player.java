@@ -560,6 +560,7 @@ implements PlayerGroup {
     private int _armorSetEnchant = 0;
     private int _usedWorldChatPoints = 0;
     private boolean _hideHeadAccessories = false;
+    private boolean _hideCostume = false;
     private ItemInstance _synthesisItem1 = null;
     private ItemInstance _synthesisItem2 = null;
     private List<TrapInstance> _traps = Collections.emptyList();
@@ -3930,6 +3931,11 @@ implements PlayerGroup {
                 player.setFame(rset.getInt("fame"), null, false);
                 player.setUsedWorldChatPoints(rset.getInt("used_world_chat_points"));
                 player.setHideHeadAccessories(rset.getInt("hide_head_accessories") > 0);
+                try {
+                    player.setHideCostume(rset.getInt("hide_costume") > 0);
+                } catch (java.sql.SQLException ignoreMissingColumn) {
+                    player.setHideCostume(false);
+                }
                 player.restoreRecipeBook();
                 if (Config.ENABLE_OLYMPIAD) {
                     player.setHero(Hero.getInstance().isHero(player.getObjectId()));
@@ -4091,7 +4097,7 @@ implements PlayerGroup {
                     statement = null;
                     try {
                         con = DatabaseFactory.getInstance().getConnection();
-                        statement = con.prepareStatement("UPDATE characters SET face=?,beautyFace=?,hairStyle=?,beautyHairStyle=?,hairColor=?,beautyHairColor=?,sex=?,x=?,y=?,z=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,clanid=?,deletetime=?,title=?,accesslevel=?,online=?,leaveclan=?,deleteclan=?,nochannel=?,onlinetime=?,pledge_type=?,pledge_rank=?,lvl_joined_academy=?,apprentice=?,key_bindings=?,pcBangPoints=?,char_name=?,fame=?,bookmarks=?,bot_rating=?,used_world_chat_points=?,hide_head_accessories=? WHERE obj_Id=? LIMIT 1");
+                        statement = con.prepareStatement("UPDATE characters SET face=?,beautyFace=?,hairStyle=?,beautyHairStyle=?,hairColor=?,beautyHairColor=?,sex=?,x=?,y=?,z=?,karma=?,pvpkills=?,pkkills=?,rec_have=?,rec_left=?,clanid=?,deletetime=?,title=?,accesslevel=?,online=?,leaveclan=?,deleteclan=?,nochannel=?,onlinetime=?,pledge_type=?,pledge_rank=?,lvl_joined_academy=?,apprentice=?,key_bindings=?,pcBangPoints=?,char_name=?,fame=?,bookmarks=?,bot_rating=?,used_world_chat_points=?,hide_head_accessories=?,hide_costume=? WHERE obj_Id=? LIMIT 1");
                         statement.setInt(1, this.getFace());
                         statement.setInt(2, this.getBeautyFace());
                         statement.setInt(3, this.getHairStyle());
@@ -4134,7 +4140,8 @@ implements PlayerGroup {
                         statement.setInt(34, this.getBotRating());
                         statement.setInt(35, this.getUsedWorldChatPoints());
                         statement.setInt(36, this.hideHeadAccessories() ? 1 : 0);
-                        statement.setInt(37, this.getObjectId());
+                        statement.setInt(37, this.hideCostume() ? 1 : 0);
+                        statement.setInt(38, this.getObjectId());
                         statement.executeUpdate();
                         GameStats.increaseUpdatePlayerBase();
                         if (!fast) {
@@ -4613,7 +4620,7 @@ implements PlayerGroup {
         } else {
             weapon.setChargedSoulshotPower(0.0);
         }
-        this.autoShot();
+        this.autoShot(AutoShotScope.PLAYER_SHOTS_ONLY);
         return true;
     }
 
@@ -4623,20 +4630,79 @@ implements PlayerGroup {
             return false;
         }
         weapon.setChargedFishshotPower(0.0);
-        this.autoShot();
+        this.autoShot(AutoShotScope.PLAYER_SHOTS_ONLY);
         return true;
     }
 
+    public enum AutoShotScope {
+        ALL,
+        PLAYER_SHOTS_ONLY,
+        BEAST_SHOTS_ONLY
+    }
+
     public void autoShot() {
+        this.autoShot(AutoShotScope.ALL);
+    }
+
+    public void autoShot(AutoShotScope scope) {
         for (IntObjectPair entry : this._activeAutoShots.entrySet()) {
+            SoulShotType shotType = (SoulShotType)entry.getValue();
+            if (scope == AutoShotScope.PLAYER_SHOTS_ONLY) {
+                if (shotType == SoulShotType.BEAST_SOULSHOT || shotType == SoulShotType.BEAST_SPIRITSHOT) {
+                    continue;
+                }
+            } else if (scope == AutoShotScope.BEAST_SHOTS_ONLY && shotType != SoulShotType.BEAST_SOULSHOT && shotType != SoulShotType.BEAST_SPIRITSHOT) {
+                continue;
+            }
             int shotId = entry.getKey();
             ItemInstance item = this.getInventory().getItemByItemId(shotId);
             if (item == null) {
-                this.removeAutoShot(shotId, false, (SoulShotType)(entry.getValue()));
+                this.removeAutoShot(shotId, false, shotType);
                 continue;
             }
             item.getTemplate().useItem(this, item, false, false);
         }
+    }
+
+    public void refreshBeastAutoSoulshotIfNeeded() {
+        for (IntObjectPair entry : this._activeAutoShots.entrySet()) {
+            if (entry.getValue() != SoulShotType.BEAST_SOULSHOT) {
+                continue;
+            }
+            int shotId = entry.getKey();
+            ItemInstance item = this.getInventory().getItemByItemId(shotId);
+            if (item == null) {
+                this.removeAutoShot(shotId, false, SoulShotType.BEAST_SOULSHOT);
+                return;
+            }
+            item.getTemplate().useItem(this, item, false, false);
+            return;
+        }
+    }
+
+    public void refreshBeastAutoSpiritshotIfNeeded() {
+        for (IntObjectPair entry : this._activeAutoShots.entrySet()) {
+            if (entry.getValue() != SoulShotType.BEAST_SPIRITSHOT) {
+                continue;
+            }
+            int shotId = entry.getKey();
+            ItemInstance item = this.getInventory().getItemByItemId(shotId);
+            if (item == null) {
+                this.removeAutoShot(shotId, false, SoulShotType.BEAST_SPIRITSHOT);
+                return;
+            }
+            item.getTemplate().useItem(this, item, false, false);
+            return;
+        }
+    }
+
+    public int getActiveAutoShotItemId(SoulShotType type) {
+        for (IntObjectPair entry : this._activeAutoShots.entrySet()) {
+            if (entry.getValue() == type) {
+                return entry.getKey();
+            }
+        }
+        return 0;
     }
 
     @Override
@@ -8635,7 +8701,8 @@ implements PlayerGroup {
             case 1567: 
             case 1568: 
             case 1569: 
-            case 17192: {
+            case 17192: 
+            case 17193: {
                 return 1;
             }
         }
@@ -9230,6 +9297,14 @@ implements PlayerGroup {
 
     public void setHideHeadAccessories(boolean value) {
         this._hideHeadAccessories = value;
+    }
+
+    public boolean hideCostume() {
+        return this._hideCostume;
+    }
+
+    public void setHideCostume(boolean value) {
+        this._hideCostume = value;
     }
 
     public ItemInstance getSynthesisItem1() {

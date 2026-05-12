@@ -3,6 +3,7 @@ package l2s.gameserver.network.l2.s2c;
 import java.util.ArrayList;
 import java.util.List;
 import l2s.gameserver.model.Player;
+import l2s.gameserver.model.items.Inventory;
 import l2s.gameserver.model.items.ItemInfo;
 import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.network.l2.s2c.L2GameServerPacket;
@@ -32,6 +33,14 @@ extends L2GameServerPacket {
 
     private ItemInfo addItem(Player player, ItemInstance item) {
         ItemInfo info = new ItemInfo(item, item.getTemplate().isBlocked(player, item));
+        // Apply costume override: when an active costume should visually replace the chest, write the costume
+        // item id as the chest visual id so the local client (and any consumer of this ItemInfo) renders it.
+        if (player != null && item.isEquipped() && item.getEquipSlot() == Inventory.PAPERDOLL_CHEST) {
+            int costumeVisualId = player.getInventory().getActiveCostumeVisualId();
+            if (costumeVisualId > 0) {
+                info.setVisualId(costumeVisualId);
+            }
+        }
         this._items.add(info);
         return info;
     }

@@ -146,6 +146,19 @@ public class CreatureSkillCast {
             }
         }
         this._actor.getListeners().onMagicUse(skill, aimingTarget, false);
+        if (this._actor.isServitor() && skill.isSSPossible()) {
+            Player owner = this._actor.getPlayer();
+            if (owner != null) {
+                Servitor servitor = (Servitor)this._actor;
+                if (skill.isMagic()) {
+                    if (servitor.getChargedSpiritshotPower() <= 0.0 && servitor.getChargedSpiritshotHealBonus() <= 0.0) {
+                        owner.refreshBeastAutoSpiritshotIfNeeded();
+                    }
+                } else if (servitor.getChargedSoulshotPower() <= 0.0) {
+                    owner.refreshBeastAutoSoulshotIfNeeded();
+                }
+            }
+        }
         Location groundLoc = null;
         if (skill.getTargetType() == Skill.SkillTargetType.TARGET_GROUND) {
             if (this._actor.isPlayer() && (groundLoc = this._actor.getPlayer().getGroundSkillLoc()) != null) {

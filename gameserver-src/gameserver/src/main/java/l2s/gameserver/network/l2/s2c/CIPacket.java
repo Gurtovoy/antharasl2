@@ -9,6 +9,8 @@ import l2s.gameserver.model.Player;
 import l2s.gameserver.model.actor.instances.player.Cubic;
 import l2s.gameserver.model.base.TeamType;
 import l2s.gameserver.model.instances.DecoyInstance;
+import l2s.gameserver.model.items.Inventory;
+import l2s.gameserver.model.items.ItemInstance;
 import l2s.gameserver.model.matching.MatchingRoom;
 import l2s.gameserver.model.pledge.Alliance;
 import l2s.gameserver.model.pledge.Clan;
@@ -166,6 +168,14 @@ extends L2GameServerPacket {
             this._inv[PAPERDOLL_ID][1] = player.getInventory().getPaperdollVariation1Id(PAPERDOLL_ID);
             this._inv[PAPERDOLL_ID][2] = player.getInventory().getPaperdollVariation2Id(PAPERDOLL_ID);
             this._inv[PAPERDOLL_ID][3] = player.getInventory().getPaperdollVisualId(PAPERDOLL_ID);
+        }
+        // Viewer-side costume hiding: if the receiver has turned off "show other players' costumes",
+        // restore the chest's real visual id so the costume mesh is not drawn for this observer.
+        // The owner's own client renders the costume through ItemList/InventoryUpdate, so this only
+        // affects how others see them.
+        if (receiver.hideCostume() && player.getInventory().getEquippedFormalWearCostume() != null) {
+            ItemInstance chest = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_CHEST);
+            this._inv[Inventory.PAPERDOLL_CHEST][3] = chest != null ? chest.getVisualId() : 0;
         }
         this._mAtkSpd = player.getMAtkSpd();
         this._pAtkSpd = player.getPAtkSpd();

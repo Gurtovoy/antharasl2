@@ -19,6 +19,7 @@ import l2s.gameserver.model.instances.PetBabyInstance;
 import l2s.gameserver.model.instances.PetInstance;
 import l2s.gameserver.model.instances.SummonInstance;
 import l2s.gameserver.model.instances.residences.SiegeFlagInstance;
+import l2s.gameserver.model.instances.residences.SiegeToggleNpcInstance;
 import l2s.gameserver.model.quest.QuestState;
 import l2s.gameserver.network.l2.GameClient;
 import l2s.gameserver.network.l2.c2s.L2GameClientPacket;
@@ -414,7 +415,7 @@ extends L2GameClientPacket {
             }
             GameObject target = activeChar.getTarget();
             if (action.value > 0) {
-                if (action.id == 1000 && target != null && !target.isDoor()) {
+                if (action.id == 1000 && target != null && !target.isDoor() && !(target instanceof SiegeToggleNpcInstance)) {
                     activeChar.sendActionFailed();
                     return;
                 }

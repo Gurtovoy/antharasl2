@@ -482,12 +482,12 @@ extends Playable {
             if (this._chargedSpiritshotPower > 0.0 || this._chargedSpiritshotHealBonus > 0.0) {
                 this._chargedSpiritshotPower = 0.0;
                 this._chargedSpiritshotHealBonus = 0.0;
-                owner.autoShot();
+                owner.autoShot(Player.AutoShotScope.BEAST_SHOTS_ONLY);
                 return true;
             }
         } else if (this._chargedSoulshotPower > 0.0) {
             this._chargedSoulshotPower = 0.0;
-            owner.autoShot();
+            owner.autoShot(Player.AutoShotScope.BEAST_SHOTS_ONLY);
             return true;
         }
         return false;
@@ -886,7 +886,13 @@ extends Playable {
 
     @Override
     public int getAdditionalVisualSSEffect() {
-        return this.getPlayer().getAdditionalVisualSSEffect();
+        Player owner = this.getPlayer();
+        if (owner == null) {
+            return 0;
+        }
+        // Как у игрока без талисмана: третье поле Attack — 0; вспышка соска на цели идёт от ssGrade (грейд).
+        // ID зверососки (6645+) сюда не подставлять — клиент Interlude ожидает 0 или id талисмана хозяина.
+        return owner.getAdditionalVisualSSEffect();
     }
 
     @Override

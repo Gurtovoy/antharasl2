@@ -111,4 +111,15 @@
 		<set name="isReuseDelayPermanent" value="true"/>
 		<set name="isSkillTimePermanent" value="true"/>
 	</skill>
+	<skill id="17193" levels="1" name="Toggle Costume">
+		<set name="effectPoint" value="1"/>
+		<set name="icon" value="icon.skill0810"/>
+		<set name="reuseDelay" value="2000"/>
+		<set name="magicType" value="SPECIAL"/>
+		<set name="target" value="TARGET_SELF"/>
+		<set name="skillType" value="HIDE_COSTUME"/>
+		<set name="operate_type" value="A2"/>
+		<set name="isReuseDelayPermanent" value="true"/>
+		<set name="isSkillTimePermanent" value="true"/>
+	</skill>
 </list>
