@@ -6,11 +6,12 @@
 -->
 <list>
 	<!--
-		points_refill_percent - процент конвертации потраченых очков в итем-молле в VIP очки (В процентах)
-		points_consume_count - количество потребляемых очков
-		points_consume_delay - время через которое потребляются очки (в часах)
+		points_refill_percent — процент от суммы, потраченной в итем-молле (цена в монетах points_item_id из product_data.xml) при покупке; конвертация в VIP-очки.
+		100 = 1 единица цены (= 1 монета 4037 при таком points_item_id) даёт 1 VIP-очко. Порог VIP 7 (points="20000" ниже) = 20000 таких очков с покупок в молле.
+		Другие траты 4037 (сервисы BBS и т.д.) штатно VIP-очки не начисляют — только правкой XML это не расширить.
+		points_consume_count / points_consume_delay — опциональный «съём» VIP-очков со временем на уровнях VIP.
 	-->
-	<default points_refill_percent="7" points_consume_delay="720"/>
+	<default points_refill_percent="100" points_consume_delay="720"/>
 	<!--Все правила (лимиты и т.д.) распространяются ВСЕГДА по всему аккаунту только по ГЕЙМСЕРВЕРУ-->
 	<!-- AVAIABLE PARAMETERS:
 		<set name="name_color" value="FFFFFF"/>
@@ -44,7 +45,7 @@
 			<reward id="57" min_count="1" max_count="1" chance="0.5"/>
 		</rewards>
 	-->
-	<vip level="1" points="300" points_consume_count="150">	<!--VIP 1-->
+	<vip level="1" points="500" points_consume_count="150">	<!--VIP 1-->
 		<!---
 			1. Ежедневное получение Сундука VIP 1-го уровня (находится во внутриигровом магазине, обновление происходит каждое утро в 6:30).
 			2. Бонус опыта/SP +3%
@@ -106,7 +107,7 @@
 			<reward id="29983" min_count="1" max_count="1" chance="0.5"/>	<!--Silver Coin-->
 		</rewards>
 	</vip>
-	<vip level="4" points="3500" points_consume_count="650">	<!--VIP 4-->
+	<vip level="4" points="4000" points_consume_count="650">	<!--VIP 4-->
 		<!---
 			1. Ежедневное получение Сундука VIP 4-го уровня
 			2. Бонус опыта/SP +25%
@@ -136,7 +137,7 @@
 			<reward id="29983" min_count="1" max_count="1" chance="0.5"/>	<!--Silver Coin-->
 		</rewards>
 	</vip>
-	<vip level="5" points="7000" points_consume_count="1250">	<!--VIP 5-->
+	<vip level="5" points="6000" points_consume_count="1250">	<!--VIP 5-->
 		<!---
 			1. Ежедневное получение Сундука VIP 5-го уровня
 			2. Бонус опыта/SP +30%
@@ -171,7 +172,7 @@
 			<reward id="29984" min_count="1" max_count="1" chance="0.01"/>	<!--Rusty Coin-->
 		</rewards>
 	</vip>
-	<vip level="6" points="20000" points_consume_count="3500">	<!--VIP 6-->
+	<vip level="6" points="10000" points_consume_count="3500">	<!--VIP 6-->
 		<!---
 			1. Ежедневное получение Сундука VIP 6-го уровня
 			2. Бонус опыта/SP +30%
@@ -213,7 +214,7 @@
 			<reward id="29984" min_count="1" max_count="1" chance="0.01"/>	<!--Rusty Coin-->
 		</rewards>
 	</vip>
-	<vip level="7" points="40000" points_consume_count="7000">	<!--VIP 7-->
+	<vip level="7" points="20000" points_consume_count="7000">	<!--VIP 7-->
 		<!---
 			1. Ежедневное получение Сундука VIP 7-го уровня
 			2. Бонус опыта/SP +30%

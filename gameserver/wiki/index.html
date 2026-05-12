@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Antharas Classic - Wiki сервера</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar" aria-label="Навигация по wiki">
+        <a class="brand" href="#overview" aria-label="Antharas Classic wiki">
+          <img src="./assets/icons/accessory_necklace_of_valakas_i00.png" alt="">
+          <span>Antharas<br>Classic Wiki</span>
+        </a>
+
+        <label class="search">
+          <span>Поиск</span>
+          <input id="wiki-search" type="search" placeholder="Рейты, баффер, арена..." autocomplete="off">
+        </label>
+
+        <nav class="nav">
+          <a href="#rates">Рейты</a>
+          <a href="#start">Старт</a>
+          <a href="#instances">Подземелья</a>
+          <a href="#pvp">PvP и события</a>
+          <a href="#features">Фишки</a>
+          <a href="#services">Сервисы</a>
+          <a href="#stages">Стадии</a>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <section class="hero wiki-section" id="overview" data-keywords="antharas classic saviors 140 описание сервер wiki">
+          <div class="hero-copy">
+            <p class="eyebrow">Lineage 2 Classic: Saviors / Antharas, protocol 140</p>
+            <h1>Wiki сервера Antharas Classic</h1>
+            <p>
+              Собранная по текущим конфигам справка для игроков: рейты, стартовые условия,
+              подземелья, PvP-активности, сервисы и важные ограничения.
+            </p>
+          </div>
+          <div class="hero-panel" aria-label="Ключевые параметры">
+            <div>
+              <strong>x2</strong>
+              <span>EXP / Adena / Drop</span>
+            </div>
+            <div>
+              <strong>x3</strong>
+              <span>SP</span>
+            </div>
+            <div>
+              <strong>140</strong>
+              <span>Classic Antharas</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="wiki-section" id="rates" data-keywords="рейты exp sp adena drop spoil quest raid boss шанс количество">
+          <div class="section-heading">
+            <img src="./assets/icons/adena.png" alt="">
+            <div>
+              <p class="eyebrow">Базовая экономика</p>
+              <h2>Рейты сервера</h2>
+            </div>
+          </div>
+
+          <div class="rate-grid">
+            <article class="rate-card">
+              <span>EXP</span>
+              <strong>x2</strong>
+              <p>Базовый опыт за монстров.</p>
+            </article>
+            <article class="rate-card">
+              <span>SP</span>
+              <strong>x3</strong>
+              <p>Очки умений идут быстрее опыта.</p>
+            </article>
+            <article class="rate-card">
+              <span>Adena</span>
+              <strong>x2</strong>
+              <p>Множитель количества адены.</p>
+            </article>
+            <article class="rate-card">
+              <span>Drop</span>
+              <strong>x2</strong>
+              <p>Количество розыгрышей дропа.</p>
+            </article>
+            <article class="rate-card">
+              <span>Spoil</span>
+              <strong>x2</strong>
+              <p>Розыгрыши спойла и шанс спойла x2.</p>
+            </article>
+            <article class="rate-card">
+              <span>Quest Drop</span>
+              <strong>x2</strong>
+              <p>Квестовые предметы падают вдвое чаще.</p>
+            </article>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Категория</th>
+                  <th>Значение</th>
+                  <th>Комментарий</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Шанс дропа</td>
+                  <td>x2</td>
+                  <td>Модификатор влияет на шанс, не на количество.</td>
+                </tr>
+                <tr>
+                  <td>Количество дропа</td>
+                  <td>x1</td>
+                  <td>Количество предметов без дополнительного множителя.</td>
+                </tr>
+                <tr>
+                  <td>Raid EXP</td>
+                  <td>x1.5</td>
+                  <td>Опыт за убийство Raid Boss.</td>
+                </tr>
+                <tr>
+                  <td>Raid SP</td>
+                  <td>x2</td>
+                  <td>SP за Raid Boss выше обычного.</td>
+                </tr>
+                <tr>
+                  <td>Raid / Boss drop</td>
+                  <td>x2</td>
+                  <td>Количество розыгрышей дропа с рейдов и боссов.</td>
+                </tr>
+                <tr>
+                  <td>Siege Guard drop</td>
+                  <td>x3</td>
+                  <td>Дроп с осадных гвардов усилен отдельно.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="wiki-section split" id="start" data-keywords="старт новичок стартовый пак автоботы town outskirts уровень 4 9 autoloot">
+          <div>
+            <div class="section-heading">
+              <img src="./assets/icons/bm_nebit_exp_book.png" alt="">
+              <div>
+                <p class="eyebrow">Первые минуты</p>
+                <h2>Старт и прокачка</h2>
+              </div>
+            </div>
+            <div class="feature-list">
+              <article>
+                <h3>Starter Pack</h3>
+                <p>Включен стартовый сценарий: персонаж доводится до целевого 4 уровня и после первого визита в город направляется в пригородную фарм-зону до 9 уровня.</p>
+              </article>
+              <article>
+                <h3>Auto Loot</h3>
+                <p>Автоподбор включен для адены. Хербы, рейды и PK-лут остаются без автоподбора.</p>
+              </article>
+              <article>
+                <h3>Droplist</h3>
+                <p>Просмотр дроп-листа включен, поэтому игроку проще планировать фарм и спойл.</p>
+              </article>
+            </div>
+          </div>
+          <figure class="media-block">
+            <img src="../images/4005.png" alt="Игровая локация The Cemetery">
+            <figcaption>Контент подан как справочник, а не рекламная страница: игрок быстро находит нужное правило.</figcaption>
+          </figure>
+        </section>
+
+        <section class="wiki-section" id="instances" data-keywords="подземелья instance dungeon balthus antharas baium clan arena olympiad hall">
+          <div class="section-heading">
+            <img src="./assets/icons/crystal_cube_event_i00.png" alt="">
+            <div>
+              <p class="eyebrow">Инстансы и арены</p>
+              <h2>Подземелья</h2>
+            </div>
+          </div>
+
+          <div class="dungeon-grid">
+            <article class="dungeon-card">
+              <img src="../images/25238.png" alt="Рейдовая зона">
+              <div>
+                <h3>Balthus Knights - Antharas</h3>
+                <p>Уровни 70-84, командный формат 27-300 игроков, лимит 120 минут. Откат по расписанию в среду в 06:30.</p>
+              </div>
+            </article>
+            <article class="dungeon-card">
+              <img src="../images/25429.png" alt="Монстры в подземелье">
+              <div>
+                <h3>Balthus Knights - Baium</h3>
+                <p>Уровни 70-84, 27-300 игроков, лимит 120 минут. Общий ритм отката совпадает с Balthus-контентом.</p>
+              </div>
+            </article>
+            <article class="dungeon-card">
+              <img src="../images/25684.png" alt="Арена с магическими платформами">
+              <div>
+                <h3>Clan Arena</h3>
+                <p>От 1 игрока, до 40 участников. Внутри 4 стадии, 20 минут базового времени и до 5 продлений за адену.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="compact-list">
+            <span>Grand Olympiad Stadium</span>
+            <span>Three-branched Road</span>
+            <span>Stadium of Hero's Vestiges</span>
+            <span>Orbis Oval Arena</span>
+            <span>Orchid Hall</span>
+            <span>Ellia Hall</span>
+            <span>Laurell Hall</span>
+          </div>
+        </section>
+
+        <section class="wiki-section split" id="pvp" data-keywords="pvp pk tvt hasher duel lair antharas tower insolence clan war event reward">
+          <div>
+            <div class="section-heading">
+              <img src="./assets/icons/alliance_cloak_pvp01.png" alt="">
+              <div>
+                <p class="eyebrow">Конфликты и ивенты</p>
+                <h2>PvP-активности</h2>
+              </div>
+            </div>
+            <div class="timeline">
+              <article>
+                <span>01</span>
+                <div>
+                  <h3>Player vs Player Duel</h3>
+                  <p>Базовый PvP-ивент для быстрых боев.</p>
+                </div>
+              </article>
+              <article>
+                <span>02</span>
+                <div>
+                  <h3>Lair of Antharas / Tower of Insolence</h3>
+                  <p>Зоны для массового столкновения и контроля спотов.</p>
+                </div>
+              </article>
+              <article>
+                <span>03</span>
+                <div>
+                  <h3>TvT Relax / TvT Hard</h3>
+                  <p>Две вариации командного события под разные темпы игры.</p>
+                </div>
+              </article>
+              <article>
+                <span>04</span>
+                <div>
+                  <h3>Hasher Relax / Hasher Hard</h3>
+                  <p>Кастомные PvP-сценарии из папки проекта.</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="info-panel">
+            <h3>Клановые войны</h3>
+            <dl>
+              <div><dt>Минимальный уровень клана</dt><dd>3</dd></div>
+              <div><dt>Минимум участников</dt><dd>15</dd></div>
+              <div><dt>Лимит объявленных войн</dt><dd>30</dd></div>
+              <div><dt>Убийств до взаимной войны</dt><dd>5</dd></div>
+              <div><dt>Репутация за kill</dt><dd>1</dd></div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="wiki-section" id="features" data-keywords="фишки buffer buff offline trade lock ip hwid vitamin manager world chat mail warehouse">
+          <div class="section-heading">
+            <img src="./assets/icons/agathion_magmeld_teleport.png" alt="">
+            <div>
+              <p class="eyebrow">Удобство</p>
+              <h2>Фишки сервера</h2>
+            </div>
+          </div>
+
+          <div class="feature-grid">
+            <article>
+              <img src="./assets/icons/alchemy_master_scroll.png" alt="">
+              <h3>NPC Buffer</h3>
+              <p>Бесплатные баффы, резисты, песни, танцы, чанты, special-раздел, лечение и схемы. Минимальный уровень - 1, до 4 схем.</p>
+            </article>
+            <article>
+              <img src="./assets/icons/adena.png" alt="">
+              <h3>Offline Trade</h3>
+              <p>Команда `.offline` включена, вход бесплатный, минимальный уровень 40, восстановление после рестарта включено.</p>
+            </article>
+            <article>
+              <img src="./assets/icons/armor_blessed_gloves_i00.png" alt="">
+              <h3>Warehouse и Mail</h3>
+              <p>Склад, почта и возврат предметов разрешены. Персонажу доступно до 7 слотов на аккаунте.</p>
+            </article>
+            <article>
+              <img src="./assets/icons/bm_ensoulbox_PvP.png" alt="">
+              <h3>Аккаунт-защита</h3>
+              <p>Доступны ручные привязки аккаунта к IP и HWID через `.lock`; автоматическая привязка отключена.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="wiki-section" id="services" data-keywords="сервисы nick sex base separate sub inventory warehouse clan name enchant service">
+          <div class="section-heading">
+            <img src="./assets/icons/etc_scroll_of_enchant_weapon_i00.png" alt="">
+            <div>
+              <p class="eyebrow">BBS и услуги</p>
+              <h2>Сервисы</h2>
+            </div>
+          </div>
+
+          <div class="service-columns">
+            <div>
+              <h3>Доступны</h3>
+              <ul>
+                <li>Смена ника, пола, базового класса и имени питомца.</li>
+                <li>Отделение саб-класса.</li>
+                <li>Расширение инвентаря до 250 ячеек.</li>
+                <li>Расширение личного и кланового склада.</li>
+                <li>Смена имени клана.</li>
+                <li>Vitamin Manager включен.</li>
+              </ul>
+            </div>
+            <div>
+              <h3>Энчант-сервис</h3>
+              <ul>
+                <li>Оружие D-A: максимум +16.</li>
+                <li>Броня D-A: максимум +16.</li>
+                <li>Бижутерия D-A: максимум +16.</li>
+                <li>Цена +1: 200 000 адены.</li>
+                <li>Цена +10: 2 предмета ID 4037.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="wiki-section" id="stages" data-keywords="стадии progression stage максимальный уровень rewards pk pvp raid disabled">
+          <div class="section-heading">
+            <img src="./assets/icons/accessory_necklace_of_valakas_i00.png" alt="">
+            <div>
+              <p class="eyebrow">Прогрессия</p>
+              <h2>Стадии сервера</h2>
+            </div>
+          </div>
+
+          <p class="notice">
+            Система стадий есть в конфиге, но сейчас выключена. Ниже показаны подготовленные значения, чтобы игроки понимали возможную структуру прогрессии.
+          </p>
+
+          <div class="stage-track">
+            <article>
+              <span>Stage 1</span>
+              <strong>45</strong>
+              <p>Лимит уровня, цели по PK/PvP/RB: 11, средний уровень 15.</p>
+            </article>
+            <article>
+              <span>Stage 2</span>
+              <strong>61</strong>
+              <p>Лимит уровня, высокие цели по PK/PvP/RB и среднему уровню.</p>
+            </article>
+            <article>
+              <span>Stage 3</span>
+              <strong>70</strong>
+              <p>Лимит уровня без обязательных числовых целей.</p>
+            </article>
+            <article>
+              <span>Stage 4</span>
+              <strong>79</strong>
+              <p>Финальная подготовленная стадия.</p>
+            </article>
+          </div>
+        </section>
+
+        <p class="empty-state" id="empty-state" hidden>Ничего не найдено. Попробуй другой запрос.</p>
+      </main>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

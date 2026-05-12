@@ -1,0 +1,221 @@
+[CENTER][SIZE=7][B][COLOR=#E7BD58]ANTHARAS CLASSIC[/COLOR][/B][/SIZE]
+[SIZE=4]Lineage 2 Classic: Saviors / Antharas, protocol 140[/SIZE]
+
+[B]EXP x2  |  SP x3  |  Adena x2  |  Drop x2  |  Spoil x2[/B]
+[/CENTER]
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#E7BD58]Пост 1. Общая концепция[/COLOR][/B][/SIZE]
+
+[B]Antharas Classic[/B] - сервер для спокойного, понятного старта и живой конкуренции за контент. Основа проекта - Classic Antharas: умеренные рейты, командные подземелья, PvP-события, оффлайн-торговля, NPC Buffer и набор сервисов, которые снимают лишнюю рутину, но не ломают ценность прогресса.
+
+[TABLE]
+[TR][TD][B]Хроники[/B][/TD][TD]Classic: Saviors / Antharas[/TD][/TR]
+[TR][TD][B]Protocol[/B][/TD][TD]140[/TD][/TR]
+[TR][TD][B]Тип сервера[/B][/TD][TD]Classic[/TD][/TR]
+[TR][TD][B]PvP Server[/B][/TD][TD]Нет, сервер с классической логикой мира[/TD][/TR]
+[TR][TD][B]Персонажей на аккаунт[/B][/TD][TD]7[/TD][/TR]
+[/TABLE]
+
+[B]Главный акцент:[/B] сервер должен быстро объяснять игроку, куда идти, где фармить, какие активности доступны и что реально влияет на развитие.
+
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#E7BD58]Пост 2. Рейты и экономика[/COLOR][/B][/SIZE]
+
+[TABLE]
+[TR][TH]Параметр[/TH][TH]Рейт[/TH][TH]Описание[/TH][/TR]
+[TR][TD]EXP[/TD][TD][B]x2[/B][/TD][TD]Базовый опыт за монстров[/TD][/TR]
+[TR][TD]SP[/TD][TD][B]x3[/B][/TD][TD]SP развивается быстрее опыта[/TD][/TR]
+[TR][TD]Adena[/TD][TD][B]x2[/B][/TD][TD]Множитель количества адены[/TD][/TR]
+[TR][TD]Drop Items[/TD][TD][B]x2[/B][/TD][TD]Количество розыгрышей дропа[/TD][/TR]
+[TR][TD]Drop Chance[/TD][TD][B]x2[/B][/TD][TD]Отдельный множитель шанса дропа[/TD][/TR]
+[TR][TD]Spoil[/TD][TD][B]x2[/B][/TD][TD]Количество розыгрышей спойла[/TD][/TR]
+[TR][TD]Spoil Chance[/TD][TD][B]x2[/B][/TD][TD]Отдельный множитель шанса спойла[/TD][/TR]
+[TR][TD]Quest Reward[/TD][TD][B]x1[/B][/TD][TD]Награды за квесты без общего усиления[/TD][/TR]
+[TR][TD]Quest Drop[/TD][TD][B]x2[/B][/TD][TD]Квестовые предметы падают чаще[/TD][/TR]
+[/TABLE]
+
+[B]Raid Boss:[/B]
+[LIST]
+[*]EXP за Raid Boss: [B]x1.5[/B]
+[*]SP за Raid Boss: [B]x2[/B]
+[*]Drop Items Raid Boss: [B]x2[/B]
+[*]Drop Items Boss: [B]x2[/B]
+[/LIST]
+
+[B]Осады:[/B] дроп с осадных гвардов - [B]x3[/B].
+
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#E7BD58]Пост 3. Старт и комфорт игрока[/COLOR][/B][/SIZE]
+
+[B]Starter Pack[/B]
+[LIST]
+[*]Стартовый сценарий включен.
+[*]Целевой уровень старта: [B]4[/B].
+[*]После первого визита в город персонаж отправляется в пригородную фарм-зону.
+[*]Фарм-зона актуальна до [B]9 уровня[/B].
+[/LIST]
+
+[B]Auto Loot[/B]
+[LIST]
+[*]Автоподбор включен.
+[*]Автоподбор работает только для адены.
+[*]Хербы не подбираются автоматически.
+[*]Лут с рейдов и PK не подбирается автоматически.
+[/LIST]
+
+[B]NPC Buffer[/B]
+[LIST]
+[*]Минимальный уровень: [B]1[/B].
+[*]Бесплатные баффы включены.
+[*]Доступны heal, buffs, resist, songs, dances, chants, other, special.
+[*]Игрок может сохранять схемы.
+[*]Максимум схем на игрока: [B]4[/B].
+[*]Стоимость схемы: [B]100 000 аден[/B].
+[*]Buffer отключен внутри инстансов.
+[/LIST]
+
+[B]Дополнительно:[/B] просмотр droplist включен.
+
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#E7BD58]Пост 4. Подземелья и инстансы[/COLOR][/B][/SIZE]
+
+[B][COLOR=#E7BD58]Balthus Knights - Antharas[/COLOR][/B]
+[TABLE]
+[TR][TD]Уровень[/TD][TD]70-84[/TD][/TR]
+[TR][TD]Формат[/TD][TD]27-300 игроков[/TD][/TR]
+[TR][TD]Лимит времени[/TD][TD]120 минут[/TD][/TR]
+[TR][TD]Откат[/TD][TD]Среда, 06:30[/TD][/TR]
+[/TABLE]
+
+[B][COLOR=#E7BD58]Balthus Knights - Baium[/COLOR][/B]
+[TABLE]
+[TR][TD]Уровень[/TD][TD]70-84[/TD][/TR]
+[TR][TD]Формат[/TD][TD]27-300 игроков[/TD][/TR]
+[TR][TD]Лимит времени[/TD][TD]120 минут[/TD][/TR]
+[TR][TD]Откат[/TD][TD]Среда, 06:30[/TD][/TR]
+[/TABLE]
+
+[B][COLOR=#E7BD58]Clan Arena[/COLOR][/B]
+[TABLE]
+[TR][TD]Уровень[/TD][TD]от 1[/TD][/TR]
+[TR][TD]Формат[/TD][TD]1-40 игроков[/TD][/TR]
+[TR][TD]Базовый лимит[/TD][TD]20 минут[/TD][/TR]
+[TR][TD]Стадии[/TD][TD]4[/TD][/TR]
+[TR][TD]Продления[/TD][TD]до 5 раз[/TD][/TR]
+[TR][TD]Цена продления[/TD][TD]1 000 000 аден[/TD][/TR]
+[/TABLE]
+
+[B]Также в списке инстансов:[/B] Grand Olympiad Stadium, Three-branched Road, Stadium of Hero's Vestiges, Orbis Oval Arena, Orchid Hall, Ellia Hall, Laurell Hall.
+
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#E7BD58]Пост 5. PvP, события и клановые войны[/COLOR][/B][/SIZE]
+
+[B]PvP-события:[/B]
+[LIST]
+[*]Player vs Player Duel
+[*]Lair of Antharas
+[*]Tower of Insolence
+[*]TvT Relax
+[*]TvT Hard
+[*]Hasher Relax
+[*]Hasher Hard
+[/LIST]
+
+[B]Клановые войны:[/B]
+[TABLE]
+[TR][TD]Лимит объявленных войн[/TD][TD]30[/TD][/TR]
+[TR][TD]Минимальный уровень клана[/TD][TD]3[/TD][/TR]
+[TR][TD]Минимум участников для объявления[/TD][TD]15[/TD][/TR]
+[TR][TD]Подготовительный период[/TD][TD]7 дней[/TD][/TR]
+[TR][TD]Период неактивности[/TD][TD]7 дней[/TD][/TR]
+[TR][TD]Peace period[/TD][TD]5 дней[/TD][/TR]
+[TR][TD]Убийств до взаимной войны[/TD][TD]5[/TD][/TR]
+[TR][TD]Репутация за убийство врага[/TD][TD]1[/TD][/TR]
+[TR][TD]Штраф за отмену войны[/TD][TD]500 репутации[/TD][/TR]
+[/TABLE]
+
+[B]Олимпиада и арены[/B] вынесены в отдельные инстансы, чтобы PvP-контент было проще поддерживать и балансировать.
+
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#E7BD58]Пост 6. Сервисы и BBS[/COLOR][/B][/SIZE]
+
+[B]Доступные сервисы:[/B]
+[LIST]
+[*]Смена ника.
+[*]Смена имени питомца.
+[*]Обмен improved baby pets.
+[*]Смена пола.
+[*]Смена базового класса.
+[*]Отделение саб-класса.
+[*]Смена цвета ника.
+[*]Расширение инвентаря до [B]250[/B] ячеек.
+[*]Расширение личного склада.
+[*]Расширение кланового склада.
+[*]Смена имени клана.
+[/LIST]
+
+[B]Offline Trade[/B]
+[TABLE]
+[TR][TD]Команда .offline[/TD][TD]Включена[/TD][/TR]
+[TR][TD]Минимальный уровень[/TD][TD]40[/TD][/TR]
+[TR][TD]Цена входа в offline[/TD][TD]0[/TD][/TR]
+[TR][TD]Восстановление после рестарта[/TD][TD]Включено[/TD][/TR]
+[TR][TD]Лимит offline trade[/TD][TD]14 дней[/TD][/TR]
+[/TABLE]
+
+[B]Enchant Service[/B]
+[TABLE]
+[TR][TD]Оружие D-A[/TD][TD]до +16[/TD][/TR]
+[TR][TD]Броня D-A[/TD][TD]до +16[/TD][/TR]
+[TR][TD]Бижутерия D-A[/TD][TD]до +16[/TD][/TR]
+[TR][TD]Цена +1[/TD][TD]200 000 аден[/TD][/TR]
+[TR][TD]Цена +10[/TD][TD]2 предмета ID 4037[/TD][/TR]
+[/TABLE]
+
+[B]Аккаунт-защита:[/B] игроки могут использовать ручную привязку аккаунта к IP/HWID через `.lock`.
+
+
+[HR][/HR]
+
+[SIZE=5][B][COLOR=#E7BD58]Пост 7. Стадии, важные заметки и FAQ[/COLOR][/B][/SIZE]
+
+[B]Система стадий есть в конфиге, но сейчас выключена.[/B] Если ее включать, структура подготовлена так:
+
+[TABLE]
+[TR][TH]Стадия[/TH][TH]Лимит уровня[/TH][TH]Цели[/TH][TH]Награда[/TH][/TR]
+[TR][TD]Stage 1[/TD][TD]45[/TD][TD]PK 11 / PvP 11 / RB 11 / средний уровень 15[/TD][TD]57:1000[/TD][/TR]
+[TR][TD]Stage 2[/TD][TD]61[/TD][TD]PK 1111 / PvP 1111 / RB 1111 / средний уровень 1111[/TD][TD]57:2000[/TD][/TR]
+[TR][TD]Stage 3[/TD][TD]70[/TD][TD]Без обязательных целей[/TD][TD]57:3000[/TD][/TR]
+[TR][TD]Stage 4[/TD][TD]79[/TD][TD]Без обязательных целей[/TD][TD]57:5000[/TD][/TR]
+[/TABLE]
+
+[B]FAQ[/B]
+
+[B]Есть ли авто-лут?[/B]
+Да, но только для адены.
+
+[B]Баффер бесплатный?[/B]
+Да, основные баффы бесплатные. Схемы доступны за 100 000 аден.
+
+[B]Можно ли торговать offline?[/B]
+Да, с 40 уровня, бесплатно, с восстановлением после рестарта.
+
+[B]Есть ли сервисный энчант?[/B]
+Да, для D-A оружия, брони и бижутерии до +16.
+
+[B]Стадии включены?[/B]
+Нет, сейчас стадии выключены в конфиге.
+
+[CENTER][B][COLOR=#E7BD58]Добро пожаловать на Antharas Classic.[/COLOR][/B][/CENTER]
